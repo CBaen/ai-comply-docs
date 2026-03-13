@@ -119,6 +119,13 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="text-base leading-relaxed">
               {bodyNodes}
             </div>
+
+            {/* Legal disclaimer — appears on every blog post */}
+            <div className="mt-10 pt-6 border-t border-gray-200 text-xs text-gray-500 leading-relaxed">
+              <p>
+                <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute legal advice, legal representation, or an attorney-client relationship. Laws and regulations change frequently. You should consult a licensed attorney to verify that the information in this article is current, complete, and applicable to your specific situation before relying on it. AI Comply Docs is not a law firm and does not practice law.
+              </p>
+            </div>
           </div>
         </article>
 

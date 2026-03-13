@@ -125,9 +125,9 @@ export const regulations: Regulation[] = [
     price: 499,
     stripePriceId: "",
     documentCount: 7,
-    description: "Compliance documentation for Texas deployers of high-risk AI systems under TRAIGA. Covers impact assessments, governance frameworks, consumer disclosure, and incident response. Highest state penalties in the US at $200,000 per violation.",
-    penaltySummary: "Attorney General enforcement with civil penalties up to $200,000 per violation. 30-day cure period.",
-    maxPenalty: "$200,000 per violation",
+    description: "Compliance documentation for Texas deployers of high-risk AI systems under TRAIGA (HB 149). Covers impact assessments, governance frameworks, consumer disclosure, and incident response. Tiered penalties up to $200,000 for uncurable violations.",
+    penaltySummary: "Attorney General enforcement (exclusive, no private right of action). Curable violations: $10,000–$12,000 per violation. Uncurable violations: $80,000–$200,000 per violation. Continued violations: $2,000–$40,000 per day. Mandatory 60-day cure period before AG can file suit (Tex. Bus. & Com. Code § 552.104–105).",
+    maxPenalty: "$200,000 per uncurable violation",
     appliesToSummary: "Any deployer of a high-risk AI system operating in Texas that makes consequential decisions affecting Texans.",
     keywords: ["texas", "traiga", "hb149", "high-risk ai", "ai governance"],
     documents: [

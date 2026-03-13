@@ -56,7 +56,7 @@ const REGULATION_EMAIL: Record<
     title: "Your Vendor AI Due Diligence Kit",
     statute: "NIST AI RMF + State Deployer Requirements",
     description:
-      "vendor AI due diligence documents, aligned with the NIST AI RMF and state deployer requirements (CO SB205, IL HB3773, TX TRAIGA). All four documents are included.",
+      "vendor AI due diligence documents, aligned with the NIST AI RMF and state deployer requirements (CO SB205, IL HB3773, TX HB149). All four documents are included.",
     steps: [
       "<strong>Send the Due Diligence Questionnaire</strong> to each AI vendor before signing or renewing contracts.",
       "<strong>Use the Contract Addendum</strong> as a starting point for your legal team to negotiate AI-specific contract terms.",
