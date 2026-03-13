@@ -5,6 +5,14 @@
 
 ---
 
+## Scope Note (codebase slug: `education-k12-ai`)
+
+The codebase product at slug `education-k12-ai` covers "FERPA + COPPA (amended) + SOPIPA." This verification covers the FERPA component. COPPA (FTC enforcement, penalties up to $50,120 per violation) and SOPIPA (state-level student privacy laws) are separate and were not verified in this research. The `citationUrl` in the codebase (`https://studentprivacy.ed.gov/`) was tested and is accessible.
+
+The `status: "effective-soon"` in the codebase references "COPPA deadline April 22, 2026" — this refers to the FTC's amended COPPA Rule, not FERPA. FERPA itself has no pending effective date changes.
+
+---
+
 ## Framing Note
 
 This is NOT a standalone AI law. FERPA (the Family Educational Rights and Privacy Act) is a federal student privacy statute enacted in 1974. It applies to any educational agency or institution that receives federal education funding. FERPA has NO AI-specific provisions. The compliance obligation comes from applying FERPA's existing requirements to AI systems that process student education records.

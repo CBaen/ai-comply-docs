@@ -5,6 +5,14 @@
 
 ---
 
+## Scope Note (codebase slug: `healthcare-ai-compliance`)
+
+The codebase product at slug `healthcare-ai-compliance` covers "HIPAA + FDA AI/ML + COPPA." This verification covers the HIPAA component only. FDA AI/ML guidance (for AI/ML-based Software as a Medical Device) and COPPA were not researched here.
+
+**Penalty discrepancy to flag:** The codebase states `penaltySummary: "HIPAA penalties up to $2.1M per violation category per year."` and `maxPenalty: "$2.1M per HIPAA violation category"`. The statutory annual cap per identical violation type in the highest tier (willful neglect, uncorrected) is $1,500,000 — NOT $2.1M. The $2.1M figure likely reflects inflation-adjusted amounts. This must be verified against current HHS OCR published amounts before the $2.1M figure is used in customer-facing materials. See penalty section below.
+
+---
+
 ## Framing Note
 
 This is NOT a standalone AI law. HIPAA is a framework statute — the Privacy Rule, Security Rule, and Breach Notification Rule apply to any entity that handles protected health information (PHI), including entities that use AI to process PHI. There is no HIPAA section titled "AI compliance." The compliance obligation comes from applying HIPAA's existing requirements to AI systems that touch PHI.

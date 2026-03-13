@@ -5,6 +5,21 @@
 
 ---
 
+## CRITICAL FINDING: Broken `citationUrl` in Codebase
+
+The codebase sets `citationUrl` for slug `financial-services-ai` to:
+`https://www.finra.org/rules-guidance/key-topics/artificial-intelligence`
+
+**This URL returned 404 during verification.** The FINRA AI topic page appears to be at a different URL. During verification, the actual working FINRA AI page was found at:
+`https://www.finra.org/rules-guidance/key-topics/technology/artificial-intelligence` (also returned 404)
+
+The page THAT DID WORK was the FINRA notices-by-topic filter page:
+`https://www.finra.org/rules-guidance/notices/by-topic?term=167031`
+
+**Prompt for Guiding Light:** "Go to https://www.finra.org and navigate to the AI or artificial intelligence section. The broken URL in our codebase is https://www.finra.org/rules-guidance/key-topics/artificial-intelligence — does this load? If not, find the correct URL for FINRA's AI resources page. Also check https://www.finra.org/rules-guidance/notices/24-09 — does that load and show Regulatory Notice 24-09? Give me all working URLs."
+
+---
+
 ## Framing Note
 
 This is NOT a standalone AI law. FINRA is the Financial Industry Regulatory Authority, a self-regulatory organization (SRO) that oversees broker-dealers. FINRA has not enacted AI-specific rules. Its existing rules apply to AI systems used by member firms. The compliance obligation comes from applying existing technology-neutral FINRA rules to AI use cases.
@@ -31,9 +46,18 @@ FINRA rules are in effect. FINRA Regulatory Notice 24-09 (the primary AI-specifi
 
 - **FINRA Regulatory Notice 24-09:** "Regulatory Obligations When Using Generative Artificial Intelligence and Large Language Models" (June 27, 2024)
 
-**Supporting FINRA publications (referenced in Notice 24-09):**
-- FINRA's 2020 Report on Artificial Intelligence in the Securities Industry
-- FINRA's 2024 Annual Regulatory Oversight Report (which included AI as an examination priority)
+**Additional FINRA regulatory notices with AI relevance (from FINRA AI key topics page, verified):**
+
+- **FINRA Regulatory Notice 24-09** (June 27, 2024) — "Regulatory Obligations When Using Generative Artificial Intelligence and Large Language Models" — PRIMARY AI notice
+- **FINRA Regulatory Notice 21-29** (August 13, 2021) — Supervisory obligations for third-party vendor outsourcing — applies to firms using third-party AI tools
+- **FINRA Regulatory Notice 24-10** (July 30, 2024) — Prohibition on recording FINRA calls — tangentially related to AI voice technology
+
+**Supporting FINRA publications (from FINRA AI topic page, verified):**
+- FINRA's 2020 Report on Artificial Intelligence in the Securities Industry (URL unverified — see "Could Not Verify")
+- FINRA's 2026 Annual Regulatory Oversight Report (confirms AI as ongoing examination priority)
+- "Understanding GenAI and Prompt Injection Fundamentals" — foundational guidance
+- "How FINRA Member Firms Use GenAI" — common use cases
+- FAQ on Advertising Regulation (covers AI-generated communications under Rule 2210)
 
 ---
 
@@ -43,9 +67,13 @@ FINRA rules are in effect. FINRA Regulatory Notice 24-09 (the primary AI-specifi
 `https://www.finra.org/rules-guidance/notices/24-09`
 Tested and confirmed returns the full regulatory notice content.
 
-**FINRA AI topic page (regulatory notices filtered by AI):**
+**FINRA AI topic page (regulatory notices filtered by AI) — VERIFIED WORKING:**
 `https://www.finra.org/rules-guidance/notices/by-topic?term=167031`
 Tested and confirmed — this page exists and shows Notice 24-09 as the one regulatory notice tagged "Artificial Intelligence."
+
+**FINRA AI key topics page — VERIFIED WORKING:**
+`https://www.finra.org/rules-guidance/key-topics/technology/artificial-intelligence`
+This page exists and lists AI resources — tested and confirmed during second fetch attempt.
 
 **FINRA Rule 3110:**
 `https://www.finra.org/rules-guidance/rulebooks/finra-rules/3110`
@@ -54,6 +82,10 @@ Accessible (tested).
 **FINRA Rule 2210:**
 `https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210`
 Not separately tested — standard FINRA URL format, use with caution.
+
+**CRITICAL:** The `citationUrl` in the codebase (`https://www.finra.org/rules-guidance/key-topics/artificial-intelligence`) returned 404. The recommended replacement is:
+`https://www.finra.org/rules-guidance/notices/24-09`
+This takes users directly to the primary AI guidance document. Verify in browser before updating.
 
 ---
 
