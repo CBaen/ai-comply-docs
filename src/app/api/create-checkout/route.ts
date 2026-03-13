@@ -3,7 +3,7 @@ import Stripe from "stripe";
 import { getRegulation } from "@/data/regulations";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-01-27.acacia",
+  apiVersion: "2026-02-25.clover",
 });
 
 // Price IDs per regulation slug — add new products here as they're created in Stripe
