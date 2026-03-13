@@ -25,9 +25,9 @@ export function generateContractAddendum(data: ComplianceFormData): jsPDF {
 
   y = addWrappedText(
     doc,
-    "This AI System Contract Addendum ("Addendum") is incorporated into and made part of " +
+    "This AI System Contract Addendum (\u201cAddendum\u201d) is incorporated into and made part of " +
       "the Master Service Agreement, SaaS Agreement, or other applicable contract " +
-      "("Agreement") between the parties identified below. In the event of conflict between " +
+      "(\u201cAgreement\u201d) between the parties identified below. In the event of conflict between " +
       "this Addendum and the Agreement, the terms of this Addendum shall control with respect " +
       "to the subject matter herein. This Addendum is intended to address obligations arising " +
       "under the Colorado Artificial Intelligence Act (C.R.S. §§ 6-1-1701 through 6-1-1707), " +
