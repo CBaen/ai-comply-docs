@@ -5,7 +5,7 @@ import ProductLibrary from "@/components/ProductLibrary";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
-  title: "AI Comply Docs — AI Compliance Documents Generated in Minutes",
+  title: "AI Compliance Documents — AI Compliance Documents Generated in Minutes",
   description:
     "Generate state-specific AI compliance documents for Illinois, Colorado, Texas, California, and federal requirements. $299-$499 vs $5,000+ at a law firm. Instant download.",
   keywords: [
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     "ai compliance for small business",
   ],
   openGraph: {
-    title: "AI Comply Docs — AI Compliance Documents Generated in Minutes",
+    title: "AI Compliance Documents — AI Compliance Documents Generated in Minutes",
     description:
       "State AI regulations are here. Generate compliance documentation in minutes for a fraction of legal fees.",
-    url: "https://aicomplydocs.com",
+    url: "https://aicompliancedocuments.com",
     type: "website",
   },
 };
@@ -338,7 +338,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  Employment law attorneys typically charge $300&ndash;600 per hour. A custom AI compliance package can cost $5,000&ndash;$25,000 from a law firm. AI Comply Docs generates comparable documentation for $299&ndash;$499.
+                  Employment law attorneys typically charge $300&ndash;600 per hour. A custom AI compliance package can cost $5,000&ndash;$25,000 from a law firm. AI Compliance Documents generates comparable documentation for $299&ndash;$499.
                 </div>
               </details>
             </div>

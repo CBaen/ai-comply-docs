@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     "small business ai compliance",
   ],
   openGraph: {
-    title: "AI Compliance Blog — AI Comply Docs",
+    title: "AI Compliance Blog — AI Compliance Documents",
     description:
       "Plain-language guides to AI compliance. What the laws actually say, who they apply to, and what you need to do.",
-    url: "https://aicomplydocs.com/blog",
+    url: "https://aicompliancedocuments.com/blog",
   },
   alternates: {
-    canonical: "https://aicomplydocs.com/blog",
+    canonical: "https://aicompliancedocuments.com/blog",
   },
 };
 

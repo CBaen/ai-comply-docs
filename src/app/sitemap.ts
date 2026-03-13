@@ -2,7 +2,7 @@ import { regulations } from "@/data/regulations";
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://aicomplydocs.com";
+  const base = "https://aicompliancedocuments.com";
 
   const regulationPages = regulations.map((r) => ({
     url: `${base}/regulations/${r.slug}`,
