@@ -141,7 +141,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     lawUrl: "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook",
     lawLinkText: "Review the NIST AI RMF Playbook",
     acknowledgment:
-      "I understand that these are due diligence templates aligned with NIST AI RMF and applicable state laws, not legal advice. I should consult qualified legal counsel for my specific vendor contracts.",
+      "I have reviewed the NIST AI RMF Playbook and applicable state laws referenced in this product. I understand that these are due diligence templates, not legal advice. I should consult qualified legal counsel for my specific vendor contracts.",
     basePrice: 249,
     trainingKitAvailable: false,
     trainingKitPrice: 0,
@@ -182,7 +182,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     lawUrl: "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness-initiative",
     lawLinkText: "Review EEOC AI Guidance",
     acknowledgment:
-      "I understand that these are audit templates aligned with NYC LL144, EEOC adverse impact standards, and NIST AI RMF. They are not legal advice. I should consult qualified legal counsel and a qualified auditor for my specific situation.",
+      "I have reviewed the EEOC AI guidance and NYC LL144 requirements referenced in this product. I understand that these are audit templates, not legal advice. I should consult qualified legal counsel and a qualified auditor for my specific situation.",
     basePrice: 149,
     trainingKitAvailable: false,
     trainingKitPrice: 0,
@@ -222,7 +222,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
     lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
-      "I understand that these are incident response templates aligned with NIST AI RMF, California TFAIA, and EU AI Act requirements. They are not legal advice. I should consult qualified legal counsel for my specific regulatory obligations.",
+      "I have reviewed the NIST AI RMF, California TFAIA, and EU AI Act requirements referenced in this product. I understand that these are incident response templates, not legal advice. I should consult qualified legal counsel for my specific regulatory obligations.",
     basePrice: 149,
     trainingKitAvailable: false,
     trainingKitPrice: 0,
