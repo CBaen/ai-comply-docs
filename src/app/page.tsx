@@ -1,7 +1,32 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ProductLibrary from "@/components/ProductLibrary";
 import { regulations } from "@/data/regulations";
+
+export const metadata: Metadata = {
+  title: "AI Comply Docs — AI Compliance Documents Generated in Minutes",
+  description:
+    "Generate state-specific AI compliance documents for Illinois, Colorado, Texas, California, and federal requirements. $299-$499 vs $5,000+ at a law firm. Instant download.",
+  keywords: [
+    "ai compliance",
+    "ai regulation",
+    "ai compliance documents",
+    "illinois hb3773",
+    "colorado sb24-205",
+    "texas traiga",
+    "ai hiring compliance",
+    "ai law",
+    "ai compliance for small business",
+  ],
+  openGraph: {
+    title: "AI Comply Docs — AI Compliance Documents Generated in Minutes",
+    description:
+      "State AI regulations are here. Generate compliance documentation in minutes for a fraction of legal fees.",
+    url: "https://aicomplydocs.com",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (

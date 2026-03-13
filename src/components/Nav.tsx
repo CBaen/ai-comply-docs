@@ -32,30 +32,18 @@ export default function Nav() {
             >
               How It Works
             </a>
-            <a
-              href="#what-you-get"
+            <Link
+              href="/#products"
               className="text-gray-600 hover:text-blue-700 transition"
             >
-              Documents
-            </a>
+              Products
+            </Link>
             <a
-              href="#pricing"
-              className="text-gray-600 hover:text-blue-700 transition"
-            >
-              Pricing
-            </a>
-            <a
-              href="#faq"
+              href="/#faq"
               className="text-gray-600 hover:text-blue-700 transition"
             >
               FAQ
             </a>
-            <Link
-              href="/regulations"
-              className="text-gray-600 hover:text-blue-700 transition"
-            >
-              All Products
-            </Link>
             <Link
               href="/blog"
               className="text-gray-600 hover:text-blue-700 transition"
@@ -64,7 +52,7 @@ export default function Nav() {
             </Link>
             <DarkModeToggle />
             <a
-              href="#generator"
+              href="/#products"
               className="bg-blue-800 text-white px-5 py-2 rounded-lg hover:bg-blue-900 transition text-sm font-semibold"
             >
               Get Started
@@ -106,33 +94,19 @@ export default function Nav() {
               How It Works
             </a>
             <a
-              href="#what-you-get"
+              href="/#products"
               className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >
-              Documents
+              Products
             </a>
             <a
-              href="#pricing"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
-              onClick={() => setMobileOpen(false)}
-            >
-              Pricing
-            </a>
-            <a
-              href="#faq"
+              href="/#faq"
               className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >
               FAQ
             </a>
-            <Link
-              href="/regulations"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
-              onClick={() => setMobileOpen(false)}
-            >
-              All Products
-            </Link>
             <Link
               href="/blog"
               className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
@@ -145,7 +119,7 @@ export default function Nav() {
               <span className="text-gray-600 text-sm">Dark Mode</span>
             </div>
             <a
-              href="#generator"
+              href="/#products"
               className="block bg-blue-800 text-white px-5 py-2 rounded-lg text-center text-sm font-semibold"
               onClick={() => setMobileOpen(false)}
             >
