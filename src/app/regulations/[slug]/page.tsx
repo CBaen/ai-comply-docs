@@ -347,19 +347,6 @@ export default async function RegulationPage({
           );
         })()}
 
-        {/* Legal Disclaimer */}
-        <div className="bg-slate-50 border-t border-gray-200 py-8">
-          <div className="max-w-4xl mx-auto px-4">
-            <p className="text-gray-400 text-xs leading-relaxed">
-              <strong className="text-gray-600">Legal Disclaimer:</strong> AI
-              Comply Docs generates documentation templates based on published
-              regulatory text. This is not legal advice. Templates are based on
-              statutes and proposed rules current at the time of purchase.
-              Regulatory requirements may change. Consult qualified legal counsel
-              for formal compliance verification.
-            </p>
-          </div>
-        </div>
       </main>
       <Footer />
     </>
