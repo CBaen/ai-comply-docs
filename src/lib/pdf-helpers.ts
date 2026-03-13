@@ -82,6 +82,30 @@ const REGULATION_HEADER: Record<
     rules:
       "Enforcement: Colorado Attorney General (exclusive authority, \u00A7 6-1-1706). No AG implementing rules adopted as of March 2026.",
   },
+  "employee-ai-policy": {
+    statute:
+      "Framework: NIST AI Risk Management Framework (AI 100-1) + EEOC AI Guidance",
+    rules:
+      "Best practice templates aligned with federal frameworks. Not tied to a single statute.",
+  },
+  "vendor-ai-due-diligence": {
+    statute:
+      "Framework: NIST AI RMF MAP Function + State Deployer Requirements (CO, IL, TX)",
+    rules:
+      "Due diligence templates for AI vendor procurement and ongoing monitoring.",
+  },
+  "ai-bias-audit-template": {
+    statute:
+      "Framework: NYC LL144 Bias Audit Requirements + EEOC Uniform Guidelines (29 C.F.R. \u00A7 1607)",
+    rules:
+      "Audit templates aligned with the EEOC 4/5 (80%) adverse impact threshold and NYC annual audit mandate.",
+  },
+  "ai-incident-response-plan": {
+    statute:
+      "Framework: NIST AI RMF MANAGE Function + CA TFAIA (15-day reporting) + EU AI Act",
+    rules:
+      "Incident response templates covering detection, classification, response, and regulatory reporting.",
+  },
 };
 
 // AcroForm support detection

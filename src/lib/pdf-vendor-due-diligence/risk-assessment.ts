@@ -30,7 +30,7 @@ export function generateVendorRiskAssessment(
     doc,
     "This internal risk assessment is completed by " +
       data.company.name +
-      " ("Deployer") before procuring or renewing a contract for an AI system. " +
+      " (\"Deployer\") before procuring or renewing a contract for an AI system. " +
       "It fulfills part of the deployer's obligation to implement a risk management program " +
       "under C.R.S. § 6-1-1703(2) and supports the impact assessment required by " +
       "§ 6-1-1703(3). Assessors should use the Vendor Due Diligence Questionnaire responses " +

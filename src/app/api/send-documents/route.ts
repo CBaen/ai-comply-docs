@@ -39,6 +39,46 @@ const REGULATION_EMAIL: Record<
     reminder:
       "Colorado law requires deployers of high-risk AI systems to use reasonable care to protect consumers from algorithmic discrimination. This law takes effect June 30, 2026. Penalties: up to $20,000 per violation under CCPA.",
   },
+  "employee-ai-policy": {
+    title: "Your Employee AI Acceptable Use Policy",
+    statute: "NIST AI RMF + EEOC Guidance",
+    description:
+      "employee AI policy documents, aligned with the NIST AI Risk Management Framework and EEOC guidance. All three documents are included.",
+    steps: [
+      "<strong>Review the Acceptable Use Policy</strong> with your legal team, then distribute to all employees.",
+      "<strong>Schedule AI training</strong> and use the Training Acknowledgment form to track completion.",
+      "<strong>Make the Incident Reporting Form accessible</strong> &mdash; link it in your intranet, employee handbook, or Slack.",
+    ],
+    reminder:
+      "While no single federal law mandates an employee AI policy, multiple state laws (CO, IL, TX) and the NIST AI RMF recommend documented governance. A clear policy also protects against vicarious liability.",
+  },
+  "vendor-ai-due-diligence": {
+    title: "Your Vendor AI Due Diligence Kit",
+    statute: "NIST AI RMF + State Deployer Requirements",
+    description:
+      "vendor AI due diligence documents, aligned with the NIST AI RMF and state deployer requirements (CO SB205, IL HB3773, TX TRAIGA). All four documents are included.",
+    steps: [
+      "<strong>Send the Due Diligence Questionnaire</strong> to each AI vendor before signing or renewing contracts.",
+      "<strong>Use the Contract Addendum</strong> as a starting point for your legal team to negotiate AI-specific contract terms.",
+      "<strong>Complete the Risk Assessment</strong> for each vendor and file it with your procurement records.",
+      "<strong>Set calendar reminders</strong> for the quarterly and annual monitoring items in the Checklist.",
+    ],
+    reminder:
+      "Colorado SB205 and Texas TRAIGA require deployers to evaluate the AI systems they procure from vendors. These documents demonstrate the due diligence that regulators expect.",
+  },
+  "ai-bias-audit-template": {
+    title: "Your AI Bias Audit Templates",
+    statute: "NYC LL144 + EEOC Uniform Guidelines",
+    description:
+      "bias audit templates, aligned with NYC Local Law 144 annual audit requirements and EEOC Uniform Guidelines (29 C.F.R. § 1607). All three documents are included.",
+    steps: [
+      "<strong>Use the Impact Ratio Worksheet</strong> to calculate adverse impact ratios for each protected class.",
+      "<strong>Document results in the Bias Audit Report</strong> &mdash; NYC LL144 requires annual publication of audit summaries.",
+      "<strong>If adverse impact is found,</strong> use the Remediation Plan to document corrective actions and timelines.",
+    ],
+    reminder:
+      "NYC LL144 requires annual bias audits for automated employment decision tools. The EEOC 4/5 (80%) rule is the federal standard for evaluating adverse impact. Proactive auditing is the strongest evidence of good faith.",
+  },
   "ai-incident-response-plan": {
     title: "Your AI Incident Response Plan",
     statute: "NIST AI RMF + California TFAIA + EU AI Act",

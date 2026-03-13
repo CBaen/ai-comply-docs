@@ -26,7 +26,7 @@ export function generateVendorQuestionnaire(data: ComplianceFormData): jsPDF {
   y = addWrappedText(
     doc,
     data.company.name +
-      " ("Deployer") requires prospective AI system vendors to complete this questionnaire " +
+      " (\"Deployer\") requires prospective AI system vendors to complete this questionnaire " +
       "as part of the procurement due diligence process. Responses will be used to assess " +
       "alignment with the Colorado Artificial Intelligence Act (SB 24-205, C.R.S. §§ 6-1-1701 " +
       "through 6-1-1707), the Illinois Artificial Intelligence Video Interview Act and AI " +

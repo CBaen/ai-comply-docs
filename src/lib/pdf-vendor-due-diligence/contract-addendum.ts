@@ -372,7 +372,7 @@ export function generateContractAddendum(data: ComplianceFormData): jsPDF {
   y = addSectionHeader(doc, "9. Effective Date & Signatures", y);
   y = addWrappedText(
     doc,
-    "This Addendum is effective as of the date last signed below ("Effective Date").",
+    "This Addendum is effective as of the date last signed below (\"Effective Date\").",
     MARGIN,
     y,
     CONTENT_WIDTH,

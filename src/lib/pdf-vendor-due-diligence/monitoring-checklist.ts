@@ -29,7 +29,7 @@ export function generateMonitoringChecklist(
     doc,
     "This checklist is used by " +
       data.company.name +
-      " ("Deployer") to conduct ongoing oversight of active AI vendor relationships. " +
+      " (\"Deployer\") to conduct ongoing oversight of active AI vendor relationships. " +
       "Under C.R.S. § 6-1-1703(3)(a)(II), deployers must review impact assessments for " +
       "high-risk AI systems at least annually and after any substantial system modification. " +
       "This checklist supports that obligation and aligns with the NIST AI RMF MANAGE " +
