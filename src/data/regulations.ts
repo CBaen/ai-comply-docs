@@ -176,7 +176,7 @@ export const regulations: Regulation[] = [
     name: "Illinois HB3773 — AI in Employment Decisions",
     shortName: "Illinois HB3773",
     citation: "775 ILCS 5/2-102(L)",
-    citationUrl: "https://www.ilga.gov/legislation/ilcs/documents/077500050K2-102.htm",
+    citationUrl: "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
     status: "in-effect",
     effectiveDate: "January 1, 2026",
     tier: "state",
