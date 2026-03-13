@@ -27,7 +27,7 @@ export default function Nav() {
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a
-              href="#how-it-works"
+              href="/#how-it-works"
               className="text-gray-600 hover:text-blue-700 transition"
             >
               How It Works
@@ -99,7 +99,7 @@ export default function Nav() {
         >
           <div className="px-4 py-3 space-y-3">
             <a
-              href="#how-it-works"
+              href="/#how-it-works"
               className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >
