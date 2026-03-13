@@ -5,6 +5,17 @@
 
 ---
 
+## CRITICAL FINDING: Broken `citationUrl` in Codebase
+
+The codebase sets `citationUrl` for slug `eeoc-ai-hiring` to:
+`https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness-initiative`
+
+**This URL returned 404 during verification.** The link is broken. Customers clicking it before purchase will see a 404 error, which fails the PRODUCT-ONBOARDING.md requirement that `citationUrl` must work and show actual law/guidance text.
+
+**Prompt for Guiding Light:** "Go to https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness-initiative in your browser. Does it load, or does it show a 404 error? If 404, find the correct URL for the EEOC AI and Algorithmic Fairness Initiative — it may have moved to a new URL or been removed. Then search https://www.eeoc.gov for 'AI' and give me the best working URL for the EEOC's AI-related guidance and enforcement resources."
+
+---
+
 ## Framing Note
 
 The EEOC (Equal Employment Opportunity Commission) has NOT enacted AI-specific regulations. The EEOC enforces existing federal employment discrimination laws — Title VII of the Civil Rights Act (42 U.S.C. § 2000e et seq.), the Americans with Disabilities Act (ADA, 42 U.S.C. § 12111 et seq.), the Age Discrimination in Employment Act (ADEA, 29 U.S.C. § 621 et seq.), and others. The EEOC's position is that these laws apply fully to AI-based employment tools, just as they apply to any other employment selection procedure.
