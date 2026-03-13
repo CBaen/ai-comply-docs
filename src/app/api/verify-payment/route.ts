@@ -25,6 +25,7 @@ export async function POST(request: Request) {
   }
 
   try {
+    const stripe = getStripe();
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
     if (

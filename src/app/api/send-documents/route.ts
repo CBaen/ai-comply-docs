@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 const MAX_RECIPIENTS = 3;
 const FROM_ADDRESS = "AI Comply Docs <noreply@aicomplydocs.com>";
@@ -144,6 +146,7 @@ export async function POST(request: Request) {
 
     const reg =
       REGULATION_EMAIL[regulation] || REGULATION_EMAIL["illinois-hb3773"];
+    const resend = getResend();
     const { error } = await resend.emails.send({
       from: FROM_ADDRESS,
       to: emails,
