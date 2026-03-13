@@ -8,29 +8,14 @@ import * as fs from "fs";
 import * as path from "path";
 import type { ComplianceFormData } from "./src/lib/pdf-types";
 
-// Illinois generator imports
-import {
-  generateNotificationLetter,
-  generateSystemInventory,
-  generateImpactAssessment,
-  generateOversightProtocol,
-  generateComplianceChecklist,
-  generateAccommodationForm,
-  generateManagerTraining,
-  generateEmployeeFAQ,
-} from "./src/lib/pdf-illinois";
+// tsx resolves these as CJS interop — access via default
+import ilDefault from "./src/lib/pdf-illinois";
+import coDefault from "./src/lib/pdf-colorado";
 
-// Colorado generator imports
-import {
-  generateCORiskManagementPolicy,
-  generateCOImpactAssessment,
-  generateCOConsumerNotice,
-  generateCOAdverseDecisionKit,
-  generateCOTransparencyStatement,
-  generateCOIncidentResponse,
-  generateCORecordRetention,
-  generateCOComplianceChecklist,
-} from "./src/lib/pdf-colorado";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const il = ilDefault as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const co = coDefault as any;
 
 // ── Ensure output directory exists ────────────────────────────
 const OUTPUT_DIR = path.join(process.cwd(), "test-output");
@@ -70,7 +55,8 @@ const ilData: ComplianceFormData = {
   oversight: {
     aiRole: "screening",
     oversightRole: "advisory",
-    humanReview: "All AI recommendations reviewed by a licensed HR professional before any employment decision is finalized.",
+    humanReview:
+      "All AI recommendations reviewed by a licensed HR professional before any employment decision is finalized.",
     reviewFrequency: "quarterly",
   },
   contact: {
@@ -140,12 +126,13 @@ interface TestResult {
 
 function runGenerator(
   label: string,
-  fn: (data: ComplianceFormData) => jsPDF,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  fn: (data: ComplianceFormData) => any,
   data: ComplianceFormData,
   filename: string
 ): TestResult {
   try {
-    const doc = fn(data);
+    const doc: jsPDF = fn(data);
     const output = doc.output("arraybuffer");
     const bytes = new Uint8Array(output);
     const filePath = path.join(OUTPUT_DIR, filename);
@@ -165,52 +152,65 @@ function runGenerator(
   }
 }
 
-// ── Run all tests ──────────────────────────────────────────────
+// ── Run all Illinois tests ─────────────────────────────────────
 const results: TestResult[] = [];
 
 console.log("\n=== Illinois HB3773 Generators ===\n");
 
-const ilTests: [string, (data: ComplianceFormData) => jsPDF, string][] = [
-  ["IL-1: Notification Letter",    generateNotificationLetter, "IL_01_notification_letter.pdf"],
-  ["IL-2: System Inventory",       generateSystemInventory,    "IL_02_system_inventory.pdf"],
-  ["IL-3: Impact Assessment",      generateImpactAssessment,   "IL_03_impact_assessment.pdf"],
-  ["IL-4: Oversight Protocol",     generateOversightProtocol,  "IL_04_oversight_protocol.pdf"],
-  ["IL-5: Compliance Checklist",   generateComplianceChecklist,"IL_05_compliance_checklist.pdf"],
-  ["IL-6: Accommodation Form",     generateAccommodationForm,  "IL_06_accommodation_form.pdf"],
-  ["IL-7: Manager Training",       generateManagerTraining,    "IL_07_manager_training.pdf"],
-  ["IL-8: Employee FAQ",           generateEmployeeFAQ,        "IL_08_employee_faq.pdf"],
+const ilTests: [string, string, string][] = [
+  ["IL-1: Notification Letter",  "generateNotificationLetter",  "IL_01_notification_letter.pdf"],
+  ["IL-2: System Inventory",     "generateSystemInventory",     "IL_02_system_inventory.pdf"],
+  ["IL-3: Impact Assessment",    "generateImpactAssessment",    "IL_03_impact_assessment.pdf"],
+  ["IL-4: Oversight Protocol",   "generateOversightProtocol",   "IL_04_oversight_protocol.pdf"],
+  ["IL-5: Compliance Checklist", "generateComplianceChecklist", "IL_05_compliance_checklist.pdf"],
+  ["IL-6: Accommodation Form",   "generateAccommodationForm",   "IL_06_accommodation_form.pdf"],
+  ["IL-7: Manager Training",     "generateManagerTraining",     "IL_07_manager_training.pdf"],
+  ["IL-8: Employee FAQ",         "generateEmployeeFAQ",         "IL_08_employee_faq.pdf"],
 ];
 
-for (const [label, fn, filename] of ilTests) {
+for (const [label, fnName, filename] of ilTests) {
+  const fn = il[fnName];
+  if (typeof fn !== "function") {
+    results.push({ name: label, status: "FAIL", error: `Export '${fnName}' not found` });
+    console.log(`  x ${label} — FAIL: export '${fnName}' not found`);
+    continue;
+  }
   const result = runGenerator(label, fn, ilData, filename);
   results.push(result);
   if (result.status === "PASS") {
-    console.log(`  ✓ ${result.name} — ${result.pages} page(s), ${result.sizeKb} KB`);
+    console.log(`  ok ${result.name} — ${result.pages} page(s), ${result.sizeKb} KB`);
   } else {
-    console.log(`  ✗ ${result.name} — ERROR: ${result.error}`);
+    console.log(`  x ${result.name} — ERROR: ${result.error}`);
   }
 }
 
+// ── Run all Colorado tests ─────────────────────────────────────
 console.log("\n=== Colorado SB 24-205 Generators ===\n");
 
-const coTests: [string, (data: ComplianceFormData) => jsPDF, string][] = [
-  ["CO-1: Risk Management Policy",  generateCORiskManagementPolicy,  "CO_01_risk_management_policy.pdf"],
-  ["CO-2: Impact Assessment",       generateCOImpactAssessment,      "CO_02_impact_assessment.pdf"],
-  ["CO-3: Consumer Notice",         generateCOConsumerNotice,        "CO_03_consumer_notice.pdf"],
-  ["CO-4: Adverse Decision Kit",    generateCOAdverseDecisionKit,    "CO_04_adverse_decision_kit.pdf"],
-  ["CO-5: Transparency Statement",  generateCOTransparencyStatement, "CO_05_transparency_statement.pdf"],
-  ["CO-6: Incident Response",       generateCOIncidentResponse,      "CO_06_incident_response.pdf"],
-  ["CO-7: Record Retention",        generateCORecordRetention,       "CO_07_record_retention.pdf"],
-  ["CO-8: Compliance Checklist",    generateCOComplianceChecklist,   "CO_08_compliance_checklist.pdf"],
+const coTests: [string, string, string][] = [
+  ["CO-1: Risk Management Policy", "generateCORiskManagementPolicy",  "CO_01_risk_management_policy.pdf"],
+  ["CO-2: Impact Assessment",      "generateCOImpactAssessment",      "CO_02_impact_assessment.pdf"],
+  ["CO-3: Consumer Notice",        "generateCOConsumerNotice",        "CO_03_consumer_notice.pdf"],
+  ["CO-4: Adverse Decision Kit",   "generateCOAdverseDecisionKit",    "CO_04_adverse_decision_kit.pdf"],
+  ["CO-5: Transparency Statement", "generateCOTransparencyStatement", "CO_05_transparency_statement.pdf"],
+  ["CO-6: Incident Response",      "generateCOIncidentResponse",      "CO_06_incident_response.pdf"],
+  ["CO-7: Record Retention",       "generateCORecordRetention",       "CO_07_record_retention.pdf"],
+  ["CO-8: Compliance Checklist",   "generateCOComplianceChecklist",   "CO_08_compliance_checklist.pdf"],
 ];
 
-for (const [label, fn, filename] of coTests) {
+for (const [label, fnName, filename] of coTests) {
+  const fn = co[fnName];
+  if (typeof fn !== "function") {
+    results.push({ name: label, status: "FAIL", error: `Export '${fnName}' not found` });
+    console.log(`  x ${label} — FAIL: export '${fnName}' not found`);
+    continue;
+  }
   const result = runGenerator(label, fn, coData, filename);
   results.push(result);
   if (result.status === "PASS") {
-    console.log(`  ✓ ${result.name} — ${result.pages} page(s), ${result.sizeKb} KB`);
+    console.log(`  ok ${result.name} — ${result.pages} page(s), ${result.sizeKb} KB`);
   } else {
-    console.log(`  ✗ ${result.name} — ERROR: ${result.error}`);
+    console.log(`  x ${result.name} — ERROR: ${result.error}`);
   }
 }
 
