@@ -607,7 +607,7 @@ export const regulations: Regulation[] = [
       "Incident Report Template",
       "Post-Incident Review Checklist",
     ],
-    ready: false,
+    ready: true,
   },
 
   // ═══════════════════════════════════════════
