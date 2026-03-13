@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Merriweather, Source_Sans_3 } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -68,6 +69,14 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-slate-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased font-sans transition-colors">
+        <Script id="dark-mode-init" strategy="beforeInteractive">{`
+          (function() {
+            var stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+              document.documentElement.classList.add('dark');
+            }
+          })();
+        `}</Script>
         {children}
       </body>
     </html>
