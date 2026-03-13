@@ -117,7 +117,7 @@ export const regulations: Regulation[] = [
     name: "Texas TRAIGA — Responsible AI Governance Act",
     shortName: "Texas TRAIGA",
     citation: "Tex. Bus. & Com. Code Ch. 551–554",
-    citationUrl: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
+    citationUrl: "https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00149F.htm",
     status: "in-effect",
     effectiveDate: "January 1, 2026",
     tier: "state",

@@ -5,7 +5,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     name: "Illinois HB3773",
     statute: "775 ILCS 5/2-102(L)",
     lawUrl:
-      "https://www.ilga.gov/legislation/ilcs/documents/077500050K2-102.htm",
+      "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
     lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
       'I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I understand that the IDHR implementing rules (Subpart J) are proposed and pending formal adoption, and that I should verify the current regulatory status and consult qualified legal counsel.',
@@ -101,7 +101,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
     lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
-      "I understand that these are policy templates based on NIST AI RMF and EEOC guidance, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
+      "I have reviewed the NIST AI Risk Management Framework and EEOC AI guidance referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     basePrice: 199,
     trainingKitAvailable: false,
     trainingKitPrice: 0,
