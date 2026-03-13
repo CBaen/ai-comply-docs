@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <span className="text-lg font-bold font-display text-gray-900">
-              AI Comply Docs
+              AI Compliance Documents
             </span>
             <p className="text-gray-600 text-sm mt-2 leading-relaxed">
               AI compliance documentation for state and federal regulations.
@@ -48,7 +48,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:info@aicomplydocs.com"
+                  href="mailto:info@aicompliancedocuments.com"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   Contact Us
@@ -76,14 +76,14 @@ export default function Footer() {
         <div className="border-t border-gray-200 pt-8">
           <p className="text-gray-400 text-xs leading-relaxed mb-4">
             <strong className="text-gray-600">Legal Disclaimer:</strong> AI
-            Comply Docs generates documentation templates based on published
+            Compliance Documents generates documentation templates based on published
             regulatory text. This is not legal advice. Templates are based on
             statutes and proposed rules current at the time of purchase.
             Regulatory requirements may change. Consult qualified legal counsel
             for formal compliance verification.
           </p>
           <p className="text-gray-400 text-xs">
-            &copy; {new Date().getFullYear()} AI Comply Docs. All rights
+            &copy; {new Date().getFullYear()} AI Compliance Documents. All rights
             reserved. All sales final.
           </p>
         </div>

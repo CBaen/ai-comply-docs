@@ -6,7 +6,7 @@ function getResend() {
 }
 
 const MAX_RECIPIENTS = 3;
-const FROM_ADDRESS = "AI Comply Docs <noreply@aicomplydocs.com>";
+const FROM_ADDRESS = "AI Compliance Documents <noreply@aicompliancedocuments.com>";
 
 const REGULATION_EMAIL: Record<
   string,
@@ -135,11 +135,11 @@ function buildEmailHtml(
         </p>
       </div>
       <p style="color:#6b7280;font-size:13px;line-height:1.6;margin:0;">
-        Questions? Reach us at <a href="mailto:info@aicomplydocs.com" style="color:#2563eb;">info@aicomplydocs.com</a>.
+        Questions? Reach us at <a href="mailto:info@aicompliancedocuments.com" style="color:#2563eb;">info@aicompliancedocuments.com</a>.
       </p>
     </div>
     <div style="background:#f1f5f9;border-radius:0 0 12px 12px;padding:20px 24px;text-align:center;border:1px solid #e2e8f0;border-top:none;">
-      <p style="color:#94a3b8;font-size:12px;margin:0;">AI Comply Docs &bull; <a href="https://aicomplydocs.com" style="color:#64748b;">aicomplydocs.com</a></p>
+      <p style="color:#94a3b8;font-size:12px;margin:0;">AI Compliance Documents &bull; <a href="https://aicompliancedocuments.com" style="color:#64748b;">aicompliancedocuments.com</a></p>
       <p style="color:#cbd5e1;font-size:11px;margin:8px 0 0;">These documents are templates for compliance planning purposes. They do not constitute legal advice.</p>
     </div>
   </div>

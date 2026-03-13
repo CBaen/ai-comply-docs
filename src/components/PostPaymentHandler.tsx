@@ -242,7 +242,7 @@ export default function PostPaymentHandler({
       <div className="fixed top-0 left-0 right-0 bg-red-600 text-white p-4 text-center z-50 shadow-lg">
         <p className="font-semibold">{errorMessage}</p>
         <p className="text-sm mt-1 text-red-100">
-          Contact: info@aicomplydocs.com (include your Stripe receipt)
+          Contact: info@aicompliancedocuments.com (include your Stripe receipt)
         </p>
         <button
           onClick={() => setStatus("idle")}

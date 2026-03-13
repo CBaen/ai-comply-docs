@@ -22,7 +22,7 @@ export default function Nav() {
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
             <span className="text-xl font-bold font-display text-gray-900">
-              AI Comply Docs
+              AI Compliance Documents
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">

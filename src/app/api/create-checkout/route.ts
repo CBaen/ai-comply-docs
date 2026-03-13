@@ -43,7 +43,7 @@ export async function POST(request: Request) {
       lineItems.push({ price: prices.trainingKit, quantity: 1 });
     }
 
-    const origin = request.headers.get("origin") || "https://aicomplydocs.com";
+    const origin = request.headers.get("origin") || "https://aicompliancedocuments.com";
 
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({
