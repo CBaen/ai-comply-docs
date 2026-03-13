@@ -6,7 +6,7 @@
 import { jsPDF } from "jspdf";
 import * as fs from "fs";
 import * as path from "path";
-import type { ComplianceFormData } from "./src/lib/pdf-types.js";
+import type { ComplianceFormData } from "./src/lib/pdf-types";
 
 // Illinois generator imports
 import {
@@ -18,7 +18,7 @@ import {
   generateAccommodationForm,
   generateManagerTraining,
   generateEmployeeFAQ,
-} from "./src/lib/pdf-illinois.js";
+} from "./src/lib/pdf-illinois";
 
 // Colorado generator imports
 import {
@@ -30,7 +30,7 @@ import {
   generateCOIncidentResponse,
   generateCORecordRetention,
   generateCOComplianceChecklist,
-} from "./src/lib/pdf-colorado.js";
+} from "./src/lib/pdf-colorado";
 
 // ── Ensure output directory exists ────────────────────────────
 const OUTPUT_DIR = path.join(process.cwd(), "test-output");
