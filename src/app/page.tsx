@@ -1,30 +1,7 @@
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ProductLibrary from "@/components/ProductLibrary";
 import { regulations } from "@/data/regulations";
-
-function StatusBadge({ status }: { status: string }) {
-  const styles = {
-    "in-effect": "bg-red-100 text-red-800",
-    "effective-soon": "bg-amber-100 text-amber-800",
-    proposed: "bg-slate-100 text-slate-600",
-  };
-  const labels = {
-    "in-effect": "IN EFFECT",
-    "effective-soon": "EFFECTIVE SOON",
-    proposed: "PROPOSED",
-  };
-  return (
-    <span
-      className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded font-semibold ${styles[status as keyof typeof styles] || styles.proposed}`}
-    >
-      <span
-        className={`inline-block w-1.5 h-1.5 rounded-sm ${status === "in-effect" ? "bg-red-500" : status === "effective-soon" ? "bg-amber-500" : "bg-slate-400"}`}
-      />
-      {labels[status as keyof typeof labels] || "PROPOSED"}
-    </span>
-  );
-}
 
 export default function Home() {
   return (
@@ -259,49 +236,7 @@ export default function Home() {
                 State-specific and universal AI compliance packages. Each includes customized documentation, instant download.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {regulations.map((reg) => (
-                <div
-                  key={reg.slug}
-                  className="bg-white rounded border border-gray-200 p-6 hover:border-blue-700 hover:shadow-md transition flex flex-col"
-                >
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="font-bold text-lg font-display text-gray-900">
-                        {reg.shortName}
-                      </h3>
-                      <p className="text-gray-600 text-xs mt-0.5">{reg.citation}</p>
-                    </div>
-                    <StatusBadge status={reg.status} />
-                  </div>
-                  <p className="text-gray-700 text-sm mb-4 leading-relaxed flex-1">
-                    {reg.description.length > 150
-                      ? reg.description.slice(0, 150) + "..."
-                      : reg.description}
-                  </p>
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-2xl font-bold text-blue-700 font-display">
-                      ${reg.price}
-                    </span>
-                    <span className="text-gray-600 text-xs">
-                      {reg.documentCount} documents
-                    </span>
-                  </div>
-                  {reg.ready ? (
-                    <Link
-                      href={`/regulations/${reg.slug}`}
-                      className="block text-center bg-blue-800 text-white py-3 rounded-lg font-semibold text-sm hover:bg-blue-900 transition"
-                    >
-                      View Package
-                    </Link>
-                  ) : (
-                    <span className="block text-center bg-slate-100 text-slate-500 py-3 rounded-lg font-semibold text-sm cursor-default">
-                      Coming Soon
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
+            <ProductLibrary regulations={regulations} />
           </div>
         </section>
 

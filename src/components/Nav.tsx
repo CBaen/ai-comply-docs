@@ -56,6 +56,12 @@ export default function Nav() {
             >
               All Products
             </Link>
+            <Link
+              href="/blog"
+              className="text-gray-600 hover:text-blue-700 transition"
+            >
+              Blog
+            </Link>
             <DarkModeToggle />
             <a
               href="#generator"
@@ -126,6 +132,13 @@ export default function Nav() {
               onClick={() => setMobileOpen(false)}
             >
               All Products
+            </Link>
+            <Link
+              href="/blog"
+              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              onClick={() => setMobileOpen(false)}
+            >
+              Blog
             </Link>
             <div className="flex items-center gap-3">
               <DarkModeToggle />
