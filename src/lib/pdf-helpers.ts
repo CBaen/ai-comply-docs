@@ -78,7 +78,7 @@ const REGULATION_HEADER: Record<
   },
   "colorado-sb24-205": {
     statute:
-      "Statute: C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 \u2014 Consumer Protections for AI (SB 24-205, eff. 2-1-26)",
+      "Statute: C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 \u2014 Consumer Protections for AI (SB 24-205, eff. 6-30-26)",
     rules:
       "Enforcement: Colorado Attorney General (exclusive authority, \u00A7 6-1-1706). No AG implementing rules adopted as of March 2026.",
   },
