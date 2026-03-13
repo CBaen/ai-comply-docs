@@ -18,10 +18,10 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aicomplydocs.com"),
+  metadataBase: new URL("https://aicompliancedocuments.com"),
   title: {
-    default: "AI Comply Docs — AI Compliance Documentation Generator",
-    template: "%s | AI Comply Docs",
+    default: "AI Compliance Documents — AI Compliance Documentation Generator",
+    template: "%s | AI Compliance Documents",
   },
   description:
     "Generate AI compliance documents for state and federal regulations. Self-service, instant download, fraction of legal fees. Illinois, Colorado, Texas, California, and more.",
