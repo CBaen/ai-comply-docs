@@ -82,12 +82,25 @@ Every product must complete ALL items before `ready: true` is set in `regulation
 - [ ] **Help texts are accurate** — Reference correct statute sections.
 - [ ] **Help texts don't make legal claims** — Guide the user, don't advise them.
 
-## 9. Final Verification
+## 9. Stripe Setup (done by the instance via Stripe MCP)
+
+The instance must complete ALL Stripe steps — Guiding Light does not do this.
+
+- [ ] **Create Stripe Product** — Use the Stripe MCP to create a product in Stripe with the correct name, description, and metadata matching `regulations.ts`.
+- [ ] **Create Stripe Price** — Attach a one-time price to the product matching the `price` field in `regulations.ts`. Use USD currency.
+- [ ] **Copy Price ID to `regulations.ts`** — Set the `stripePriceId` field to the live Stripe price ID (starts with `price_`).
+- [ ] **Verify checkout redirect works** — The checkout flow must redirect to Stripe with the correct price ID, then return to the product page with `?payment=success`.
+- [ ] **Verify payment verification endpoint** — The `/api/verify-payment` route must correctly verify the Stripe session for this product.
+- [ ] **Test with Stripe test card** — Complete a full test purchase using Stripe test mode (card 4242 4242 4242 4242) and verify PDFs generate and download.
+- [ ] **Activate product in Stripe** — Ensure the product and price are active (not archived or draft) in the Stripe dashboard.
+
+## 10. Final Verification
 
 - [ ] **Build passes** — `npx next build` completes with no errors.
 - [ ] **Product page renders correctly** — Check `/regulations/[slug]` in dev.
 - [ ] **Questionnaire loads and all steps work.**
-- [ ] **Stripe product exists** — Price ID set in `regulations.ts`.
+- [ ] **Stripe product and price are active** — Verified via Stripe MCP.
+- [ ] **Full purchase flow tested** — Questionnaire → Stripe checkout → payment verification → PDF download/email all work end to end.
 - [ ] **All internal cross-references are consistent** — Same effective date, same penalty amounts, same enforcement mechanism across `regulations.ts`, `regulation-config.ts`, `pdf-helpers.ts`, `route.ts`, and any blog posts.
 
 ---
