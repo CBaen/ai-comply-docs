@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Questionnaire from "@/components/Questionnaire";
+import PostPaymentHandler from "@/components/PostPaymentHandler";
 
 export async function generateStaticParams() {
   return regulations.map((r) => ({ slug: r.slug }));
