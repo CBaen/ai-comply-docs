@@ -289,6 +289,20 @@ export default async function RegulationPage({
           </div>
         </div>
 
+        {/* Questionnaire & Payment Flow */}
+        {reg.ready && (
+          <>
+            <PostPaymentHandler regulationSlug={reg.slug} />
+            <div className="border-t border-gray-200">
+              <Questionnaire
+                regulationSlug={reg.slug}
+                regulationName={reg.shortName}
+                price={reg.price}
+              />
+            </div>
+          </>
+        )}
+
         {/* Related Products */}
         {(() => {
           const related = regulations
