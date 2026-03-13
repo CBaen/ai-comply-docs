@@ -10,6 +10,34 @@ Every mistake we make becomes a mistake our customers make. That is why this doc
 
 ---
 
+## Before You Start: How to Get Information You Can't Find
+
+Your web fetch tools will sometimes fail — government websites return 404s, URLs change, legislative databases have inconsistent structures. **"I couldn't find the information" is not acceptable.** When your tools fail, you must ask Guiding Light to use Claude in the browser to find what you need.
+
+**How this works:**
+1. You write a specific, detailed prompt for Claude in the browser — not vague ("find Texas AI law") but precise ("Search for Texas HB 149 from the 89th Regular Session on capitol.texas.gov. I need the enrolled text URL, the penalty section numbers, the effective date, and which chapters of the Business & Commerce Code it creates.").
+2. You present this prompt to Guiding Light and ask them to paste it into Claude in their web browser.
+3. Guiding Light shares the results back with you.
+4. You use those results to complete the verification.
+
+**Every previous instance that produced incorrect data did so because they relied on training knowledge, summaries, or partial web fetches instead of reading primary sources.** When an ILGA URL returned 404, an instance wrote the penalty amounts from memory instead of finding the correct URL. When a bill search failed, an instance assumed the bill number in the codebase was correct instead of verifying. These assumptions created the errors this document exists to prevent.
+
+**You are never allowed to:**
+- Use training knowledge as a substitute for reading the enacted text
+- Assume a fact is correct because it appears in the codebase (previous instances put it there and they were wrong)
+- Write "could not verify" and move on — if you can't verify it, ask Guiding Light to help you find the source
+- Guess at a URL format and assume the page exists without testing it
+
+**You are always required to:**
+- Test every URL you put in the codebase by fetching it
+- When a URL fails, try alternative URL patterns for that legislature's website
+- When all URL attempts fail, write a specific prompt for Guiding Light to use with Claude in the browser
+- Wait for the verified information before proceeding with that section of the onboarding
+
+This applies to every step in this document that involves reading a primary source, verifying a citation, or confirming a URL works.
+
+---
+
 ## 1. Legal Foundation — Verify the Law Actually Exists
 
 **Why this matters:** A previous instance cited Texas HB 1709 as enacted law with a September 2025 effective date and $200,000 penalties. HB 1709 died in committee — it was never voted on, never signed, never became law. The actual TRAIGA law passed as HB 149 under completely different code sections (Ch. 551-554, not Ch. 120), a different effective date (January 1, 2026, not September 1, 2025), and a different penalty structure (tiered: $10K-$12K for curable violations, $80K-$200K for uncurable, with a 60-day cure period — not a flat $200K). If that product had launched, we would have been selling compliance documents for a law that does not exist, citing code sections that were never created, with penalty amounts that were wrong in every dimension.
