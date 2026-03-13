@@ -2,9 +2,11 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getRegulation } from "@/data/regulations";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2026-02-25.clover",
-});
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY!, {
+    apiVersion: "2026-02-25.clover",
+  });
+}
 
 // Price IDs per regulation slug — add new products here as they're created in Stripe
 const PRICE_MAP: Record<string, { base: string; trainingKit?: string }> = {
@@ -43,6 +45,7 @@ export async function POST(request: Request) {
 
     const origin = request.headers.get("origin") || "https://aicomplydocs.com";
 
+    const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: lineItems,
