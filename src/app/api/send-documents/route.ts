@@ -39,6 +39,20 @@ const REGULATION_EMAIL: Record<
     reminder:
       "Colorado law requires deployers of high-risk AI systems to use reasonable care to protect consumers from algorithmic discrimination. This law takes effect June 30, 2026. Penalties: up to $20,000 per violation under CCPA.",
   },
+  "ai-incident-response-plan": {
+    title: "Your AI Incident Response Plan",
+    statute: "NIST AI RMF + California TFAIA + EU AI Act",
+    description:
+      "AI incident response documents, aligned with the NIST AI RMF Manage function, California TFAIA 15-day reporting requirements, and EU AI Act serious incident obligations. All four documents are included.",
+    steps: [
+      "<strong>Assign your Incident Response Team.</strong> Fill in the Roles &amp; Responsibilities section of the Incident Response Plan and make sure every team member has a copy.",
+      "<strong>Print and distribute the Classification Matrix.</strong> Anyone who might identify an AI incident should know how to use it.",
+      "<strong>Store the Incident Report Template</strong> where it's accessible day or night — your ticketing system, SharePoint, or a shared drive.",
+      "<strong>Schedule your first tabletop exercise.</strong> The plan requires one annually. Set the date now.",
+    ],
+    reminder:
+      "California TFAIA requires incident reporting within 15 days of identification. EU AI Act Article 73 requires serious incident notification as soon as possible. Document your response process before you need it.",
+  },
 };
 
 function buildEmailHtml(

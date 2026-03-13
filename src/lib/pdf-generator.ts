@@ -7,6 +7,29 @@ export async function generateDocuments(
     .replace(/[^a-zA-Z0-9]/g, "_")
     .substring(0, 30);
 
+  if (data.regulation === "ai-incident-response-plan") {
+    const ir = await import("./pdf-incident-response");
+    const docs: GeneratedDoc[] = [
+      {
+        doc: ir.generateAIIncidentResponsePlan(data),
+        name: `${companySlug}_AI_Incident_Response_Plan.pdf`,
+      },
+      {
+        doc: ir.generateClassificationMatrix(data),
+        name: `${companySlug}_Incident_Classification_Matrix.pdf`,
+      },
+      {
+        doc: ir.generateIncidentReportTemplate(data),
+        name: `${companySlug}_Incident_Report_Template.pdf`,
+      },
+      {
+        doc: ir.generatePostIncidentReview(data),
+        name: `${companySlug}_Post_Incident_Review_Checklist.pdf`,
+      },
+    ];
+    return docs;
+  }
+
   if (data.regulation === "colorado-sb24-205") {
     const co = await import("./pdf-colorado");
     const docs: GeneratedDoc[] = [
