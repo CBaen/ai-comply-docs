@@ -2,6 +2,31 @@
 
 **Read this entire document before starting work on any new product.**
 
+---
+
+## THE ABSOLUTE RULE — NO EXCEPTIONS
+
+**TRAINING DATA IS NEVER AN ACCEPTABLE SOURCE FOR ANY LEGAL FACT.**
+
+The ONLY acceptable source for statute citations, penalty amounts, effective dates, bill numbers, code sections, enforcement mechanisms, or applicability definitions is the **enacted statute text** fetched from the state legislature's official .gov website.
+
+Not a summary. Not an overview page. Not what you "know" from training. Not what another instance wrote in the codebase. THE ENACTED TEXT.
+
+**What previous instances did wrong:**
+- CA TFAIA: Cited a **firearms storage law** (SB 53 from 2023-2024 session) instead of the AI bill (SB 53 from 2025-2026 session). Different law entirely.
+- CA AB 2013: **Fabricated penalty data.** Wrote "injunctive relief + actual damages" — the actual statute has NO penalty provision at all. Made up from nothing.
+- CA SB 942: Cited **§ 22770** — a section about a completely different topic. Actual sections are §§ 22757-22757.6.
+- NY RAISE Act: Cited **S2544** — a bill about blighted property. The actual AI bill is S6953B. Also wrote Art. 43 when the law creates Art. 44-B.
+- TX TRAIGA: Cited **HB 1709** — a bill that died in committee and was never voted on. The actual law is HB 149 with different code sections, different effective date, and different penalties.
+- CO SB24-205: Stamped **"eff. 2-1-26"** on every customer PDF. The actual date is June 30, 2026 (changed by an amending bill). Customers received documents with the wrong date.
+- IL HB3773: Wrote the law **"went into effect in 2023"** — three years off. Actual date is January 1, 2026.
+
+Every one of these errors came from training knowledge, not from reading the statute. Every one put the business owner in legal jeopardy.
+
+**If you cannot fetch the statute text with your tools, you must ask Guiding Light to look it up using Claude in their web browser. You must WAIT for the answer. You must NOT fill in data from training knowledge while you wait. Leave the field blank or mark it "UNVERIFIED — REQUIRES PRIMARY SOURCE" until a primary source is confirmed.**
+
+---
+
 This is not a simple checklist. Every requirement exists because a previous instance made a mistake that put the business owner in legal jeopardy. If you skip a step or take a shortcut, you are passing risk to a real person who cannot afford it.
 
 AI Compliance Documents sells compliance documentation templates. Customers pay real money and make real business decisions based on what we tell them. If we get a penalty amount wrong, a customer calculates their risk exposure incorrectly. If we cite a law that doesn't exist, a customer spends money complying with nothing. If we say a law took effect in 2023 when it took effect in 2026, a customer panics about a deadline that hasn't arrived.
