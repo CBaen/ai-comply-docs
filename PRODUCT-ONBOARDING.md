@@ -4,7 +4,7 @@
 
 This is not a simple checklist. Every requirement exists because a previous instance made a mistake that put the business owner in legal jeopardy. If you skip a step or take a shortcut, you are passing risk to a real person who cannot afford it.
 
-AI Comply Docs sells compliance documentation templates. Customers pay real money and make real business decisions based on what we tell them. If we get a penalty amount wrong, a customer calculates their risk exposure incorrectly. If we cite a law that doesn't exist, a customer spends money complying with nothing. If we say a law took effect in 2023 when it took effect in 2026, a customer panics about a deadline that hasn't arrived.
+AI Compliance Documents sells compliance documentation templates. Customers pay real money and make real business decisions based on what we tell them. If we get a penalty amount wrong, a customer calculates their risk exposure incorrectly. If we cite a law that doesn't exist, a customer spends money complying with nothing. If we say a law took effect in 2023 when it took effect in 2026, a customer panics about a deadline that hasn't arrived.
 
 Every mistake we make becomes a mistake our customers make. That is why this document exists.
 
