@@ -220,7 +220,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
     "You have the right to be free from discriminatory effects of AI in employment decisions, including discrimination through the use of zip codes as proxies for protected classes.",
     "Consistent with IDHR's proposed implementing rules and existing IHRA reasonable accommodation obligations, you may request a reasonable accommodation regarding AI-assisted employment processes.",
     "You may file a charge of discrimination with the Illinois Department of Human Rights (IDHR) if you believe AI has been used in a manner that has the effect of subjecting you to discrimination. (775 ILCS 5/7A-102)",
-    "You may also pursue a civil action under the Illinois Human Rights Act. Remedies in court may include actual damages, back pay, and attorneys' fees. (775 ILCS 5/8A-104) Separately, IDHR may assess civil penalties against employers found in violation. (SB 2487)",
+    "You may also pursue a civil action under the Illinois Human Rights Act. Remedies in court may include actual damages, back pay, and attorneys' fees. (775 ILCS 5/8A-104) Separately, IDHR may assess civil penalties against employers found in violation. (P.A. 104-0425; 775 ILCS 5/8A-104(K))",
   ];
   rights.forEach((right) => {
     y = addWrappedText(

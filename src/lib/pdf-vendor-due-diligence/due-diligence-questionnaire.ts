@@ -352,7 +352,7 @@ export function generateVendorQuestionnaire(data: ComplianceFormData): jsPDF {
   y = addFormCheckbox(
     doc,
     "vdd_q_reg_co_sb205",
-    "Colorado SB205 / Consumer Protections for AI (C.R.S. §§ 6-1-1701–1707, eff. 2-1-26)",
+    "Colorado SB205 / Consumer Protections for AI (C.R.S. §§ 6-1-1701–1707, eff. 6-30-26)",
     y
   );
   y = addFormCheckbox(

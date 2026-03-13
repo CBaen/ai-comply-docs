@@ -16,7 +16,7 @@ const REGULATION_EMAIL: Record<
     title: "Your Illinois AI Compliance Package",
     statute: "Illinois HB3773 (775 ILCS 5/2-102(L))",
     description:
-      "AI compliance documents, generated for Illinois HB3773 (775 ILCS 5/2-102(L)). Everything you need to meet the state's AI-in-employment requirements is included.",
+      "AI compliance documentation templates, aligned with Illinois HB3773 (775 ILCS 5/2-102(L)) requirements. Review each document with your legal team before deployment.",
     steps: [
       "<strong>Post the Employee Notification</strong> where staff can see it — breakroom, intranet, or onboarding packet.",
       "<strong>Have HR review the Impact Assessment</strong> and designate your Human Oversight contact.",
@@ -29,7 +29,7 @@ const REGULATION_EMAIL: Record<
     title: "Your Colorado AI Compliance Package",
     statute: "Colorado SB 24-205 (C.R.S. §§ 6-1-1701–1707)",
     description:
-      "AI compliance documents, generated for Colorado SB 24-205 (C.R.S. §§ 6-1-1701–1707). Everything you need to meet Colorado consumer AI protection requirements is included.",
+      "AI compliance documentation templates, aligned with Colorado SB 24-205 (C.R.S. §§ 6-1-1701–1707) requirements. Review each document with your legal team before deployment.",
     steps: [
       "<strong>Review the Risk Management Policy</strong> with your compliance team and assign responsible parties.",
       "<strong>Complete the Impact Assessment</strong> for each high-risk AI system you deploy.",
@@ -37,7 +37,7 @@ const REGULATION_EMAIL: Record<
       "<strong>File everything.</strong> The Colorado AG can request proof of compliance. These documents are your evidence.",
     ],
     reminder:
-      "Colorado law requires deployers of high-risk AI systems to use reasonable care to protect consumers from algorithmic discrimination. This law takes effect June 30, 2026. Penalties: up to $20,000 per violation under CCPA.",
+      "Colorado law requires deployers of high-risk AI systems to use reasonable care to protect consumers from algorithmic discrimination. This law takes effect June 30, 2026. Penalties: up to $20,000 per violation under the Colorado Consumer Protection Act (C.R.S. § 6-1-112).",
   },
   "employee-ai-policy": {
     title: "Your Employee AI Acceptable Use Policy",
