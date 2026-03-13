@@ -527,7 +527,7 @@ export const regulations: Regulation[] = [
       "Employee AI Training Acknowledgment",
       "AI Incident Reporting Form",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "vendor-ai-due-diligence",
@@ -554,7 +554,7 @@ export const regulations: Regulation[] = [
       "Vendor Risk Assessment Template",
       "Ongoing Monitoring Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "ai-bias-audit-template",
@@ -580,7 +580,7 @@ export const regulations: Regulation[] = [
       "Impact Ratio Calculation Worksheet",
       "Remediation Action Plan Template",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "ai-incident-response-plan",
