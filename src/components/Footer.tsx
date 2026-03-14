@@ -55,6 +55,22 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/faq"
+                  className="text-gray-600 hover:text-blue-700 transition"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-compliance-by-state"
+                  className="text-gray-600 hover:text-blue-700 transition"
+                >
+                  Compare State Laws
+                </Link>
+              </li>
+              <li>
                 <a
                   href="mailto:info@aicompliancedocuments.com"
                   className="text-gray-600 hover:text-blue-700 transition"
