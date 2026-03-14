@@ -126,9 +126,19 @@ export default async function RegulationPage({
             <h1 className="text-3xl md:text-5xl font-extrabold font-display mb-4 leading-tight">
               {reg.name}
             </h1>
-            <p className="text-lg text-slate-300 mb-6 max-w-2xl leading-relaxed">
+            <p className="text-lg text-slate-300 mb-4 max-w-2xl leading-relaxed">
               {reg.description}
             </p>
+            <div className="mb-6">
+              <a
+                href={reg.citationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:text-white text-sm font-medium underline underline-offset-2 transition"
+              >
+                Read the enacted law: {reg.citation} →
+              </a>
+            </div>
             <div className="flex flex-wrap items-center gap-6">
               <div>
                 <span className="text-4xl font-extrabold font-display text-white">

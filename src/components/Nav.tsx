@@ -47,10 +47,10 @@ export default function Nav() {
               FAQ
             </a>
             <Link
-              href="/blog"
+              href="/about"
               className="text-gray-600 hover:text-blue-700 transition"
             >
-              Blog
+              About
             </Link>
             <DarkModeToggle />
             <a
