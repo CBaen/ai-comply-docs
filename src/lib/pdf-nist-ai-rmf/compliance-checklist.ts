@@ -123,6 +123,9 @@ export function generateNISTComplianceChecklist(data: ComplianceFormData): jsPDF
   y = addFormTextField(doc, "checklist_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "checklist_signature", "Signature:", y, { width: 100 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nist_checklist", y);
+
   addDisclaimer(doc);
   return doc;
 }

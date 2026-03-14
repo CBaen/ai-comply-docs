@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -181,6 +182,9 @@ export function generateTrainingSignOff(data: ComplianceFormData): jsPDF {
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "train_signoff", y);
 
   addDisclaimer(doc);
   return doc;

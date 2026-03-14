@@ -10,6 +10,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -251,6 +252,9 @@ export function generateWhistleblowerPolicy(data: ComplianceFormData): jsPDF {
     multiline: true,
     lines: 2,
   });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "whistle_policy", y);
 
   addDisclaimer(doc);
   return doc;

@@ -10,6 +10,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -181,6 +182,9 @@ export function generateTransparencyReport(data: ComplianceFormData): jsPDF {
 
   y = addFormTextField(doc, "tr_certified_by", "Certified By (Name & Title):", y);
   y = addFormTextField(doc, "tr_certification_date", "Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "transp_report", y);
 
   addDisclaimer(doc);
   return doc;

@@ -249,6 +249,9 @@ export function generateCOComplianceChecklist(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, 'co_cc_reviewer_date', 'Date of Legal Review:', y);
   y = addFormTextField(doc, 'co_cc_next_review', 'Date of Next Scheduled Compliance Review:', y);
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "co_checklist", y);
+
   addDisclaimer(doc);
   return doc;
 }
