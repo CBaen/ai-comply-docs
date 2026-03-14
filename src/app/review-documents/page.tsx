@@ -52,6 +52,14 @@ const REGULATIONS = [
   { slug: "vendor-ai-due-diligence", name: "Vendor Due Diligence" },
   { slug: "ai-bias-audit-template", name: "Bias Audit Templates" },
   { slug: "ai-incident-response-plan", name: "Incident Response Plan" },
+  { slug: "nyc-local-law-144", name: "NYC Local Law 144" },
+  { slug: "minnesota-mcdpa", name: "Minnesota MCDPA" },
+  { slug: "california-ccpa-admt", name: "CA CCPA ADMT" },
+  { slug: "eu-ai-act", name: "EU AI Act" },
+  { slug: "eeoc-ai-hiring", name: "EEOC AI Hiring" },
+  { slug: "nist-ai-rmf", name: "NIST AI RMF" },
+  { slug: "healthcare-ai-compliance", name: "Healthcare AI (HIPAA)" },
+  { slug: "financial-services-ai", name: "Financial Services AI" },
 ];
 
 interface DocResult {

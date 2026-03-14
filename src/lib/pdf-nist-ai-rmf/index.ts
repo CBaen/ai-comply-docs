@@ -5,3 +5,5 @@ export { generateMeasureDocumentation } from "./measure-documentation";
 export { generateManageDocumentation } from "./manage-documentation";
 export { generateRiskProfileTemplate } from "./risk-profile-template";
 export { generateTrustworthyAIAssessment } from "./trustworthy-ai-assessment";
+export { generateRiskProfile } from "./risk-profile";
+export { generateNISTComplianceChecklist } from "./compliance-checklist";
