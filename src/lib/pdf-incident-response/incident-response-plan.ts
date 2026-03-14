@@ -15,7 +15,7 @@ import {
 
 // ============================================================
 // DOCUMENT 1: AI Incident Response Plan
-// Aligned with NIST AI RMF Manage function, California TFAIA,
+// Aligned with NIST AI RMF Manage function, California SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18),
 // and EU AI Act serious incident reporting requirements
 // ============================================================
 export function generateAIIncidentResponsePlan(
