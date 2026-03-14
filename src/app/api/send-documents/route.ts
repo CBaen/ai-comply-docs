@@ -369,6 +369,84 @@ const REGULATION_EMAIL: Record<
     reminder:
       "A Customer AUP limits your liability for customer misuse of your AI products and is increasingly required by enterprise buyers before they\u2019ll sign contracts with AI vendors. This document is separate from your Employee AI Use Policy \u2014 it governs what customers can do with your AI, not what your employees can do internally.",
   },
+  "manager-ai-training-kit": {
+    title: "Your Manager AI Training Kit",
+    statute: "NIST AI RMF + EEOC Guidance + State Employment AI Laws",
+    description:
+      "manager AI training documents — talking points, employee FAQ, and training sign-off tracker. All three documents are included. Review with your HR and legal teams before distribution.",
+    steps: [
+      "<strong>Review the Manager Talking Points</strong> with HR and customize the fill-in sections for your organization\u2019s specific AI tools and policies.",
+      "<strong>Distribute the Employee FAQ</strong> alongside your AI policy rollout — it answers the questions employees actually ask.",
+      "<strong>Use the Training Sign-Off Sheet</strong> to document every session. Keep completed sign-offs on file — they are your evidence of compliance.",
+    ],
+    reminder:
+      "Illinois HB3773 requires employee notification before AI is used in employment decisions. Colorado SB24-205 and Texas TRAIGA require deployers to train staff on AI risks. Documented training demonstrates the \u201creasonable care\u201d that regulators and courts look for.",
+  },
+  "annual-compliance-review": {
+    title: "Your Annual AI Compliance Review Package",
+    statute: "NIST AI RMF + Multi-State Deployer Requirements",
+    description:
+      "annual AI compliance review documents — a comprehensive checklist and an update log for tracking regulatory changes. Both documents are included. Review with your legal and compliance teams.",
+    steps: [
+      "<strong>Work through the Annual Review Checklist</strong> with your compliance team. Every unchecked item is a gap that needs an owner and a deadline.",
+      "<strong>Use the Update Log</strong> to record every regulatory change, policy revision, or system change as it happens — not just at year-end.",
+      "<strong>File completed reviews.</strong> Regulators and auditors will ask for evidence of your compliance review process.",
+    ],
+    reminder:
+      "Colorado SB24-205, Texas TRAIGA, and the NIST AI RMF all require periodic review of AI systems and compliance programs. An annual documented review is a cornerstone of any defensible AI governance program.",
+  },
+  "board-ai-summary": {
+    title: "Your Board AI Compliance Summary Kit",
+    statute: "NIST AI RMF Govern Function + Multi-State Deployer Requirements",
+    description:
+      "board-level AI compliance reporting documents — executive summary, board presentation slides, and a risk register excerpt. All three documents are included. Review with your legal counsel before presenting to the board.",
+    steps: [
+      "<strong>Complete the Executive Summary</strong> before each board meeting that includes AI on the agenda. Keep it to one page.",
+      "<strong>Use the Board Presentation Template</strong> to structure your slides. Customize the risk ratings and open items for your organization.",
+      "<strong>Update the Risk Register Excerpt</strong> whenever a new AI system is deployed or a risk rating changes. The board needs current data.",
+    ],
+    reminder:
+      "Board-level AI oversight is required under Colorado SB24-205 and is a governance best practice under the NIST AI RMF Govern function. Directors who can demonstrate they received and reviewed AI risk reporting have significantly stronger defenses against breach-of-fiduciary claims.",
+  },
+  "consumer-notice-kit": {
+    title: "Your Consumer AI Notice Kit",
+    statute: "Multi-State Consumer Privacy Laws + CPPA ADMT Regulations",
+    description:
+      "consumer AI notice templates for website banners, email notifications, and physical postings. All three documents are included. Review with your legal team before publishing.",
+    steps: [
+      "<strong>Select the correct website banner version</strong> (short bar, full modal, or employment notice) and have your web team implement it before using AI on consumer-facing systems.",
+      "<strong>Customize the email notification templates</strong> for your general consumer, hiring, and adverse decision scenarios. Send them before or at the time of AI-driven decisions.",
+      "<strong>Post the physical posting templates</strong> in required locations before using AI in hiring or employment decisions \u2014 Illinois and NYC require physical or accessible notice.",
+    ],
+    reminder:
+      "California CPPA ADMT regulations require pre-use notice before automated decisionmaking technology is applied to consumers. Illinois HB3773 and NYC LL144 require written notice to job applicants and employees. Physical posting is required in some jurisdictions. Verify current requirements with qualified legal counsel.",
+  },
+  "data-mapping-inventory": {
+    title: "Your AI Data Mapping & Inventory Kit",
+    statute: "NIST AI RMF MAP Function + Multi-State Privacy Assessment Requirements",
+    description:
+      "data mapping and inventory documents \u2014 a data inventory, AI data flow diagram, and third-party AI register. All three documents are included. Review with your legal and IT teams.",
+    steps: [
+      "<strong>Complete the Data Inventory</strong> for every category of personal data your AI systems process. Identify the legal basis for each use.",
+      "<strong>Complete an AI Data Flow Diagram entry</strong> for each AI system. Understanding where data goes in and out is the foundation of every privacy compliance program.",
+      "<strong>Populate the Third-Party Register</strong> with every vendor or partner that receives personal data from your AI systems. This register is required evidence under multiple state privacy laws.",
+    ],
+    reminder:
+      "Data Protection Assessments required under Texas TDPSA (\u00A7 541.105), Delaware PDPA (\u00A7 12D-109), Virginia CDPA (\u00A7 59.1-580), and other state laws must be based on a documented inventory of data and processing activities. These documents are prerequisites for completing those assessments.",
+  },
+  "consumer-rights-kit": {
+    title: "Your Consumer Rights Request Kit",
+    statute: "Multi-State Consumer Privacy Laws (CCPA, TDPSA, CDPA, MCDPA, PDPA)",
+    description:
+      "consumer data rights request documents \u2014 a consumer-facing intake form, response letter templates, and a response timeline tracker. All three documents are included. Review with your legal team before use.",
+    steps: [
+      "<strong>Make the Request Intake Form accessible</strong> to consumers via your website, privacy rights portal, or on request. It must be easy to find and use.",
+      "<strong>Customize the Response Templates</strong> with your organization\u2019s contact information, appeal process, and applicable regulatory agency before your first request arrives.",
+      "<strong>Use the Timeline Tracker</strong> for every active request. Missing the 45-day deadline is itself a violation under every applicable state law.",
+    ],
+    reminder:
+      "California CCPA, Texas TDPSA, Virginia CDPA, Minnesota MCDPA, Delaware PDPA, and other state laws give consumers the right to access, correct, delete, and opt out of data processing. Most laws require a response within 45 days of a verified request, with a one-time 45-day extension if notice is provided. Penalties for non-response can reach $7,500\u2013$25,000 per violation.",
+  },
 };
 
 function buildEmailHtml(
