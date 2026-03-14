@@ -12,13 +12,17 @@ const DATA_INPUT_OPTIONS = [
 ];
 
 const PROTECTED_CHAR_OPTIONS = [
-  { value: "race", label: "Race / Ethnicity" },
+  { value: "race", label: "Race / Color / Ethnicity" },
   { value: "gender", label: "Gender / Sex" },
+  { value: "sexual_orientation", label: "Sexual orientation / Gender identity" },
   { value: "age", label: "Age" },
   { value: "disability", label: "Disability status" },
   { value: "religion", label: "Religion" },
-  { value: "national_origin", label: "National origin" },
+  { value: "national_origin", label: "National origin / Ancestry" },
   { value: "pregnancy", label: "Pregnancy status" },
+  { value: "marital_status", label: "Marital / Family status" },
+  { value: "military", label: "Military status / Discharge" },
+  { value: "citizenship", label: "Citizenship / Work authorization" },
   { value: "none", label: "None of the above" },
 ];
 
