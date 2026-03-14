@@ -68,19 +68,30 @@ function StatusBadge({ status, ready }: { status: string; ready: boolean }) {
   );
 }
 
-function StructuredData({ reg }: { reg: { name: string; description: string; price: number; ready: boolean } }) {
+function StructuredData({ reg }: { reg: { slug: string; name: string; description: string; price: number; ready: boolean } }) {
   const data = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     name: reg.name,
     description: reg.description,
+    url: `https://aicompliancedocuments.com/regulations/${reg.slug}`,
+    brand: {
+      "@type": "Organization",
+      name: "AI Compliance Documents",
+      url: "https://aicompliancedocuments.com",
+    },
     offers: {
       "@type": "Offer",
       price: reg.price.toString(),
       priceCurrency: "USD",
+      url: `https://aicompliancedocuments.com/regulations/${reg.slug}`,
       availability: reg.ready
         ? "https://schema.org/InStock"
         : "https://schema.org/PreOrder",
+      seller: {
+        "@type": "Organization",
+        name: "AI Compliance Documents",
+      },
     },
   });
 

@@ -138,21 +138,7 @@ export default function Home() {
       <main id="main-content">
         {/* Hero Section with Product Carousel */}
         <header className="hero-bg text-white">
-          <div className="max-w-5xl mx-auto px-4 pt-10 pb-2 text-center">
-            <h1 className="text-3xl md:text-5xl font-extrabold font-display mb-2 leading-tight tracking-tight text-white">
-              AI Compliance Documents
-            </h1>
-            <p className="text-sm md:text-base text-slate-400 mb-1">
-              State AI regulations are in effect. Generate your compliance documentation in minutes.
-            </p>
-            <div className="inline-flex items-center gap-2 bg-red-900/30 border border-red-400/30 rounded-full px-3 py-1 text-xs mt-2">
-              <span className="inline-block w-1.5 h-1.5 bg-red-400 rounded-sm" />
-              <span className="text-red-200">
-                Multiple laws now enforceable &mdash;{" "}
-                <strong className="text-white">penalties are live</strong>
-              </span>
-            </div>
-          </div>
+          <h1 className="sr-only">AI Compliance Documents — State AI Compliance Templates</h1>
           <ProductCarousel
             products={regulations
               .filter((r) => r.ready && r.tier === "state")

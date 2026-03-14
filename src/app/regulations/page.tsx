@@ -30,9 +30,27 @@ export const metadata: Metadata = {
   },
 };
 
+function ItemListSchema() {
+  const ready = regulations.filter((r) => r.ready);
+  const data = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "AI Compliance Document Packages",
+    numberOfItems: ready.length,
+    itemListElement: ready.map((r, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://aicompliancedocuments.com/regulations/${r.slug}`,
+      name: r.shortName,
+    })),
+  });
+  return <script type="application/ld+json">{data}</script>;
+}
+
 export default function RegulationsIndexPage() {
   return (
     <>
+      <ItemListSchema />
       <Nav />
       <main id="main-content">
         {/* Hero */}
