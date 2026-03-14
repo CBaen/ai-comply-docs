@@ -54,7 +54,7 @@ export const regulations: Regulation[] = [
       "AEDT System Inventory",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "texas-tdpsa",
@@ -80,7 +80,7 @@ export const regulations: Regulation[] = [
       "Privacy Notice Template",
       "Data Processing Agreement Template",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "delaware-pdpa",
@@ -107,7 +107,7 @@ export const regulations: Regulation[] = [
       "Universal Opt-Out Mechanism Documentation",
       "Data Processing Agreement Template",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "multi-state-profiling-assessment",
@@ -135,7 +135,7 @@ export const regulations: Regulation[] = [
       "Multi-State Privacy Notice Template",
       "State-by-State Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "multi-state-employer-ai-disclosure",
@@ -163,7 +163,7 @@ export const regulations: Regulation[] = [
       "Bias Audit Cross-Reference Guide",
       "Multi-State Record Retention Policy",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "virginia-cdpa",
@@ -192,7 +192,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "connecticut-ctdpa",
@@ -221,7 +221,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "oregon-cpa",
@@ -250,7 +250,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "minnesota-mcdpa",
@@ -279,7 +279,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "illinois-hb3773",
@@ -338,7 +338,7 @@ export const regulations: Regulation[] = [
       "Human Oversight Protocol",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
 
   // ═══════════════════════════════════════════
@@ -406,7 +406,7 @@ export const regulations: Regulation[] = [
       "Instructions for Use Template",
       "Post-Market Monitoring Plan",
     ],
-    ready: false,
+    ready: true,
   },
 
   // ═══════════════════════════════════════════
@@ -439,7 +439,7 @@ export const regulations: Regulation[] = [
       "Annual Audit Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "nist-ai-rmf",
@@ -469,7 +469,7 @@ export const regulations: Regulation[] = [
       "Incident Response Protocol",
       "Management Review Template",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "employee-ai-policy",
@@ -605,7 +605,7 @@ export const regulations: Regulation[] = [
       "Employee FAQ — AI in the Workplace",
       "Training Attendance & Sign-Off Sheet",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "annual-compliance-review",
@@ -630,7 +630,7 @@ export const regulations: Regulation[] = [
       "Annual Compliance Review Checklist",
       "Compliance Update Log",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "board-ai-summary",
@@ -656,7 +656,7 @@ export const regulations: Regulation[] = [
       "Board Presentation Template",
       "AI Risk Register Excerpt",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "consumer-notice-kit",
@@ -682,7 +682,7 @@ export const regulations: Regulation[] = [
       "Email AI Notification Template",
       "Physical Workplace AI Posting",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "data-mapping-inventory",
@@ -708,7 +708,7 @@ export const regulations: Regulation[] = [
       "AI Data Flow Diagram Template",
       "Third-Party Data Sharing Register",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "consumer-rights-kit",
@@ -734,7 +734,7 @@ export const regulations: Regulation[] = [
       "Response Letter Templates",
       "Request Response Timeline Tracker",
     ],
-    ready: false,
+    ready: true,
   },
 
   // ═══════════════════════════════════════════
@@ -769,7 +769,7 @@ export const regulations: Regulation[] = [
       "COPPA Compliance Checklist",
       "FDA Pre-Submission AI Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "financial-services-ai",
@@ -800,7 +800,7 @@ export const regulations: Regulation[] = [
       "Annual Review Checklist",
       "CFPB Adverse Action Notice Template",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "education-k12-ai",
@@ -893,7 +893,7 @@ export const regulations: Regulation[] = [
       "AI Steering Committee Charter",
       "AI Compliance Officer Role Description",
     ],
-    ready: false,
+    ready: true,
   },
   // ── PRODUCT 2: AI System Registry ───────────────────────────
   {
@@ -919,7 +919,7 @@ export const regulations: Regulation[] = [
       "AI System Inventory Template",
       "AI System Lifecycle Tracker",
     ],
-    ready: false,
+    ready: true,
   },
   // ── PRODUCT 3: AI Transparency Report Template ───────────────
   {
@@ -945,7 +945,7 @@ export const regulations: Regulation[] = [
       "Annual AI Transparency Report Template",
       "AI System Performance Monitoring Report",
     ],
-    ready: false,
+    ready: true,
   },
   // ── PRODUCT 4: AI Whistleblower Policy ──────────────────────
   {
@@ -971,7 +971,7 @@ export const regulations: Regulation[] = [
       "AI Safety Whistleblower Protection Policy",
       "Internal AI Concern Reporting Form",
     ],
-    ready: false,
+    ready: true,
   },
   // ── PRODUCT 5: AI Acceptable Use Policy for Customers ────────
   {
@@ -996,7 +996,7 @@ export const regulations: Regulation[] = [
     documents: [
       "Customer AI Acceptable Use Policy",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "indiana-icdpa",
@@ -1025,7 +1025,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "montana-mcdpa",
@@ -1054,7 +1054,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "kentucky-kcdpa",
@@ -1083,7 +1083,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "new-jersey-njdpa",
@@ -1112,7 +1112,7 @@ export const regulations: Regulation[] = [
       "Data Processing Agreement Template",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
 ];
 
