@@ -147,17 +147,32 @@ export default function ProductLibrary({
   regulations: Regulation[];
 }) {
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
-  const filtered = filterRegulations(regulations, activeFilter);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const searchFiltered = searchTerm.trim()
+    ? regulations.filter((r) => {
+        const q = searchTerm.toLowerCase();
+        return (
+          r.shortName.toLowerCase().includes(q) ||
+          r.state.toLowerCase().includes(q) ||
+          r.name.toLowerCase().includes(q) ||
+          r.description.toLowerCase().includes(q) ||
+          r.keywords.some((k) => k.toLowerCase().includes(q))
+        );
+      })
+    : regulations;
+
+  const filtered = filterRegulations(searchFiltered, activeFilter);
 
   const counts: Record<FilterKey, number> = {
-    all: regulations.length,
-    "in-effect": regulations.filter((r) => r.status === "in-effect").length,
-    "effective-soon": regulations.filter((r) => r.status === "effective-soon")
+    all: searchFiltered.length,
+    "in-effect": searchFiltered.filter((r) => r.status === "in-effect").length,
+    "effective-soon": searchFiltered.filter((r) => r.status === "effective-soon")
       .length,
-    federal: regulations.filter(
+    federal: searchFiltered.filter(
       (r) => r.tier === "federal" || r.tier === "universal"
     ).length,
-    industry: regulations.filter(
+    industry: searchFiltered.filter(
       (r) => r.tier === "industry" || r.tier === "international"
     ).length,
   };
@@ -166,8 +181,19 @@ export default function ProductLibrary({
     <>
       <DeadlineBanner regulations={regulations} />
 
+      {/* Search Input */}
+      <div className="mb-4">
+        <input
+          type="search"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search by state, law, or topic..."
+          className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-white text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent transition"
+        />
+      </div>
+
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-2 mb-8" role="tablist">
+      <div className="flex flex-wrap gap-2 mb-6" role="tablist">
         {filters.map((f) => (
           <button
             key={f.key}
@@ -189,6 +215,76 @@ export default function ProductLibrary({
           </button>
         ))}
       </div>
+
+      {/* Not Sure Where to Start Guide */}
+      <details className="mb-8 group">
+        <summary className="cursor-pointer list-none flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-blue-700 transition select-none">
+          <svg
+            className="w-4 h-4 text-blue-600 shrink-0 transition-transform group-open:rotate-90"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          Not sure where to start?
+        </summary>
+        <div className="mt-3 bg-slate-50 border border-slate-200 rounded-lg p-5 grid sm:grid-cols-3 gap-6">
+          <div>
+            <p className="font-semibold text-slate-800 text-sm mb-1">Using AI in hiring?</p>
+            <p className="text-xs text-slate-600 mb-3">
+              If you have employees in Illinois, NYC, or Colorado and use automated tools in hiring decisions:
+            </p>
+            <ul className="space-y-1">
+              <li>
+                <Link href="/regulations/illinois-hb3773" className="text-xs text-blue-700 hover:underline">Illinois HB3773</Link>
+              </li>
+              <li>
+                <Link href="/regulations/nyc-local-law-144" className="text-xs text-blue-700 hover:underline">NYC LL144</Link>
+              </li>
+              <li>
+                <Link href="/regulations/colorado-sb-24-205" className="text-xs text-blue-700 hover:underline">Colorado SB 24-205</Link>
+              </li>
+              <li>
+                <Link href="/regulations/multi-state-employer-bundle" className="text-xs text-blue-700 hover:underline">Multi-State Employer Bundle</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-800 text-sm mb-1">Collecting consumer data?</p>
+            <p className="text-xs text-slate-600 mb-3">
+              If you use customer data for targeting, profiling, or automated decisions:
+            </p>
+            <ul className="space-y-1">
+              <li>
+                <Link href="/regulations/virginia-cdpa" className="text-xs text-blue-700 hover:underline">Virginia CDPA</Link>
+              </li>
+              <li>
+                <Link href="/regulations/california-ccpa-admt" className="text-xs text-blue-700 hover:underline">California CCPA ADMT</Link>
+              </li>
+              <li>
+                <Link href="/regulations/multi-state-profiling-bundle" className="text-xs text-blue-700 hover:underline">Multi-State Profiling Bundle</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-800 text-sm mb-1">Don&apos;t know what you have?</p>
+            <p className="text-xs text-slate-600 mb-3">
+              Start by inventorying your AI systems before worrying about which laws apply:
+            </p>
+            <ul className="space-y-1">
+              <li>
+                <Link href="/regulations/ai-system-registry" className="text-xs text-blue-700 hover:underline">AI System Registry</Link>
+              </li>
+              <li>
+                <Link href="/regulations/ai-governance-framework" className="text-xs text-blue-700 hover:underline">AI Governance Framework</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
 
       {/* Product Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -242,7 +338,9 @@ export default function ProductLibrary({
 
       {filtered.length === 0 && (
         <p className="text-center text-gray-500 py-12">
-          No products match this filter.
+          {searchTerm.trim()
+            ? `No products match "${searchTerm}".`
+            : "No products match this filter."}
         </p>
       )}
     </>
