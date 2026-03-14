@@ -53,10 +53,34 @@ function FAQStructuredData() {
     mainEntity: [
       {
         "@type": "Question",
+        name: "How do I know if any of this applies to my business?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "If you use AI in hiring and you have employees or applicants in Illinois, NYC, or Colorado — yes. If you collect personal data from consumers in Virginia, Connecticut, Oregon, Texas, Delaware, California, or other states and use that data for targeted ads, profiling, or automated decisions — yes. If you sell or deploy AI systems used in consequential decisions — yes. If you're not sure, the AI System Registry ($199) helps you figure out what AI you're actually using before you worry about which laws apply.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What if I don't know whether my tools use AI?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most modern hiring platforms, CRM systems, marketing tools, and customer service chatbots have AI built in. If a tool screens, scores, ranks, recommends, or personalizes — there's likely AI involved. The vendor can confirm this. Our AI System Inventory document walks you through how to find out.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "I have no idea where to start.",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "That's the most common thing we hear. Start by figuring out which states your employees or customers are in. Then look at our state-specific packages for those states. If you operate in a lot of states, the Multi-State Profiling Bundle covers 15+ states in one package. If you just want to get organized first, the AI Governance Framework ($349) and AI System Registry ($199) help you figure out what you have before you worry about which laws apply.",
+        },
+      },
+      {
+        "@type": "Question",
         name: "What AI regulations do you cover?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We currently offer compliance packages for Illinois HB3773 (775 ILCS 5/2-102(L)) and Colorado SB 24-205. Texas TRAIGA, California CCPA ADMT, and universal products (Employee AI Policy, Vendor Due Diligence) are coming soon. Each package is tailored to the specific statute's requirements.",
+          text: "We offer 36 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
         },
       },
       {
@@ -64,7 +88,7 @@ function FAQStructuredData() {
         name: "Is this legal advice?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. This tool generates documentation templates based on published regulatory text and proposed rules. It assists with compliance documentation but does not constitute legal advice. We recommend consulting a qualified attorney for formal compliance verification.",
+          text: "No. We generate documentation templates based on the actual text of enacted statutes and published regulations. These templates help you get organized and demonstrate compliance effort — but they are not a substitute for a licensed attorney who can evaluate your specific situation. We recommend having your legal team review the output.",
         },
       },
       {
@@ -72,7 +96,7 @@ function FAQStructuredData() {
         name: "How are the documents generated?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Your answers to the questionnaire populate templates drafted against each state's specific statute and proposed rules. Documents are generated instantly in PDF format and available for immediate download after payment.",
+          text: "You answer a short questionnaire about your company — what AI tools you use, what decisions they inform, how your organization is structured. Your answers populate templates that were drafted against each state's specific statute. Documents generate instantly as fillable PDFs with electronic signature blocks. The whole process takes about ten minutes.",
         },
       },
       {
@@ -80,7 +104,7 @@ function FAQStructuredData() {
         name: "What if the law changes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Our templates are based on the current published regulatory text at the time of purchase. Regulatory requirements may change over time. We recommend consulting qualified legal counsel to verify your documents remain current.",
+          text: "Laws change. That's the nature of this space. Our templates reflect the enacted statute text at the time of purchase. If a law is amended or new implementing rules are published, your documents may need updating. We recommend checking back periodically and consulting qualified legal counsel to make sure your compliance posture stays current.",
         },
       },
       {
@@ -88,7 +112,7 @@ function FAQStructuredData() {
         name: "Do I need this if I already have outside counsel?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Our documents complement legal counsel. Many companies use our templates as a starting point and have their attorneys review the output — saving significant legal fees compared to drafting from scratch.",
+          text: "A lot of our customers have lawyers. They use our templates as a starting point — it gives their attorney something to review and refine instead of drafting from scratch at $400–$800 an hour. Your lawyer's time is better spent on the nuances specific to your business, not on formatting a compliance checklist.",
         },
       },
       {
@@ -96,15 +120,7 @@ function FAQStructuredData() {
         name: "Are all sales final?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Because documents are generated and delivered digitally at the time of purchase, all sales are final. Please review the product description before purchasing.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How much do lawyers charge for this?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "AI Compliance Documents generates compliance documentation templates for $149–$499. These are templates based on enacted statute text, not custom legal advice. Consult a licensed attorney to verify applicability to your situation.",
+          text: "Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it's the right fit.",
         },
       },
     ],
@@ -168,7 +184,7 @@ export default function Home() {
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
-                <span>Built for compliance teams</span>
+                <span>Built for the person who just found out this is their job</span>
               </div>
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
               <div className="flex items-center gap-2">
