@@ -457,6 +457,130 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be listed in employee and candidate notifications across all three jurisdictions as required by IL 775 ILCS 5/2-102(L)(2), NYC LL144, and CO SB24-205.",
     },
   },
+  "virginia-cdpa": {
+    name: "Virginia CDPA",
+    statute: "Va. Code §§ 59.1-575–59.1-584",
+    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+    lawLinkText: "Read Va. Code §§ 59.1-575 through 59.1-584 on law.lis.virginia.gov",
+    acknowledgment:
+      "I have reviewed Va. Code §§ 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. The VCDPA has been in effect since January 1, 2023. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Assessment",
+      "Consumer Rights Request Procedures",
+      "Opt-Out Documentation",
+      "Data Processing Agreement Template",
+      "Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Virginia consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers that produce legal or similarly significant effects — include it.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Virginia Consumer Data Protection Act.",
+      step2DecisionHelp:
+        "Check every category where this system processes Virginia consumer data. The Virginia CDPA covers profiling for consequential decisions, targeted advertising, data sales, and sensitive data processing.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment.",
+      step3BiasHelp:
+        "If your system uses profiling to make decisions with legal or similarly significant effects, a bias review helps document that your processing is conducted with reasonable care and does not produce disparate impact.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. Virginia law requires responding to consumer rights requests within 45 days and providing an appeals mechanism for denied requests (§ 59.1-578(B)).",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact under the Virginia CDPA.",
+    },
+  },
+  "connecticut-ctdpa": {
+    name: "Connecticut CTDPA",
+    statute: "Conn. Gen. Stat. §§ 42-515–42-525",
+    lawUrl: "https://www.cga.ct.gov/current/pub/chap_743jj.htm",
+    lawLinkText: "Read Conn. Gen. Stat. §§ 42-515 through 42-525 on cga.ct.gov",
+    acknowledgment:
+      "I have reviewed Conn. Gen. Stat. §§ 42-515 through 42-525 (Connecticut Data Privacy Act, PA 22-15) and understand that these are compliance templates, not legal advice. The CTDPA has been in effect since July 1, 2023, and the mandatory cure period has expired. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Assessment",
+      "Consumer Rights Request Procedures",
+      "Profiling Opt-Out Documentation",
+      "Data Processing Agreement Template",
+      "Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Connecticut consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers that produce legal or similarly significant effects — include it.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Connecticut Data Privacy Act.",
+      step2DecisionHelp:
+        "Check every category where this system processes Connecticut consumer data. The CTDPA covers profiling for consequential decisions, targeted advertising, data sales, and sensitive data.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment.",
+      step3BiasHelp:
+        "If your system uses profiling to make consequential decisions, a bias review helps document that your processing is conducted with reasonable care and does not produce discriminatory impact.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. Connecticut law requires responding to consumer rights requests within 45 days. The mandatory 60-day cure period expired December 31, 2024 — compliance is now expected immediately.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact under the Connecticut CTDPA.",
+    },
+  },
+  "oregon-cpa": {
+    name: "Oregon CPA",
+    statute: "ORS §§ 646A.570–646A.604",
+    lawUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
+    lawLinkText: "Read ORS §§ 646A.570 through 646A.604 on oregonlegislature.gov",
+    acknowledgment:
+      "I have reviewed ORS §§ 646A.570 through 646A.604 (Oregon Consumer Privacy Act) and understand that these are compliance templates, not legal advice. The Oregon CPA has been in effect since July 1, 2024, with the cure period expiring January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Assessment",
+      "Consumer Rights Request Procedures",
+      "Profiling Opt-Out Documentation",
+      "Data Processing Agreement Template",
+      "Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+      ["children_data", "Children's Data (ages 13–15)"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Oregon consumers for profiling, targeted advertising, data sales, or processing sensitive data. Oregon also requires consent before processing data of consumers aged 13–15 for targeted advertising or data sales. If your AI system makes decisions about consumers — include it.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Oregon Consumer Privacy Act.",
+      step2DecisionHelp:
+        "Check every category where this system processes Oregon consumer data. The Oregon CPA covers profiling for consequential decisions, targeted advertising, data sales, sensitive data, and has special protections for consumers aged 13–15.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment.",
+      step3BiasHelp:
+        "If your system uses profiling to make decisions with legal or similarly significant effects, a bias review helps document that your processing does not produce unfair or discriminatory outcomes.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. Oregon law requires responding to consumer rights requests within 45 days. The 30-day cure period expires January 1, 2026 — after that date, the AG has enforcement discretion.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact under the Oregon Consumer Privacy Act.",
+    },
+  },
   "minnesota-mcdpa": {
     name: "Minnesota MCDPA",
     statute: "Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21",

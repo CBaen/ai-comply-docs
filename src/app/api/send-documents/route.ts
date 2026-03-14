@@ -164,6 +164,48 @@ const REGULATION_EMAIL: Record<
     reminder:
       "Illinois HB3773 has been in effect since January 1, 2026. NYC Local Law 144 enforcement began July 5, 2023; DCWP proactive investigations increased in 2026. Colorado SB24-205 takes effect June 30, 2026 (per SB 25B-004). IL penalties: up to $70,000 per violation. NYC penalties: up to $1,500/violation/day. CO penalties: up to $20,000 per violation.",
   },
+  "virginia-cdpa": {
+    title: "Your Virginia CDPA AI Profiling Compliance Package",
+    statute: "Va. Code §§ 59.1-575 through 59.1-584",
+    description:
+      "AI profiling compliance documentation templates, aligned with Virginia Consumer Data Protection Act (Va. Code §§ 59.1-575 through 59.1-584) requirements. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Virginia CDPA, including targeted advertising and data sales disclosures (§ 59.1-578(D)).",
+      "<strong>Complete the Data Protection Assessment</strong> for each system that uses profiling for decisions with legal or similarly significant effects (§ 59.1-580(A)(3)).",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template — you have 45 days to respond to consumer requests and must provide an appeals mechanism for denied requests (§ 59.1-578(B)).",
+      "<strong>File everything.</strong> The Virginia AG enforces the CDPA and may request Data Protection Assessments (§ 59.1-580(B)). These documents demonstrate compliance.",
+    ],
+    reminder:
+      "The Virginia Consumer Data Protection Act (Va. Code §§ 59.1-575 through 59.1-584) has been in effect since January 1, 2023. The Virginia Attorney General has exclusive enforcement authority (§ 59.1-584(A)); there is no private right of action. The AG must provide a 30-day cure period before seeking civil penalties of up to $7,500 per violation (§ 59.1-584(C)).",
+  },
+  "connecticut-ctdpa": {
+    title: "Your Connecticut CTDPA AI Profiling Compliance Package",
+    statute: "Conn. Gen. Stat. §§ 42-515 through 42-525",
+    description:
+      "AI profiling compliance documentation templates, aligned with Connecticut Data Privacy Act (Conn. Gen. Stat. §§ 42-515 through 42-525, PA 22-15) requirements. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Connecticut CTDPA (§ 42-520).",
+      "<strong>Complete the Data Protection Assessment</strong> for each system that uses profiling for decisions with legal or similarly significant effects (§ 42-522(a)(3)).",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template — you have 45 days to respond to consumer requests and must provide an appeals mechanism for denied requests (§ 42-519(b)).",
+      "<strong>File everything.</strong> The Connecticut AG enforces the CTDPA and may request Data Protection Assessments (§ 42-522(c)). These documents demonstrate compliance.",
+    ],
+    reminder:
+      "The Connecticut Data Privacy Act (PA 22-15, Conn. Gen. Stat. §§ 42-515 through 42-525) has been in effect since July 1, 2023. The Connecticut Attorney General has exclusive enforcement authority (§ 42-525(a)); there is no private right of action. The mandatory 60-day cure period expired December 31, 2024 — the AG now has enforcement discretion. Penalties: up to $5,000 per violation under CUTPA (§ 42-110o).",
+  },
+  "oregon-cpa": {
+    title: "Your Oregon CPA AI Profiling Compliance Package",
+    statute: "ORS §§ 646A.570 through 646A.604",
+    description:
+      "AI profiling compliance documentation templates, aligned with Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.604) requirements. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include consumer rights, opt-out disclosures, and your children’s data consent practices for consumers aged 13–15 (§ 646A.578).",
+      "<strong>Complete the Data Protection Assessment</strong> for each system that uses profiling for decisions with legal or similarly significant effects (§ 646A.586(1)(a)).",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template — you have 45 days to respond to consumer requests and must provide an appeals mechanism for denied requests (§ 646A.576(2)(b)).",
+      "<strong>Implement consent collection</strong> for consumers aged 13–15 before processing their data for targeted advertising or data sales (§ 646A.576(1)(c)).",
+    ],
+    reminder:
+      "The Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.604) has been in effect since July 1, 2024. The Oregon Attorney General has enforcement authority (§ 646A.604); there is no private right of action. A 30-day cure period applies until January 1, 2026 (§ 646A.604(2)). Penalties: up to $7,500 per violation under UTPA (ORS § 646.642).",
+  },
   "minnesota-mcdpa": {
     title: "Your Minnesota MCDPA Compliance Package",
     statute: "Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21",
