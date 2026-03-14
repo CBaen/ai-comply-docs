@@ -15,17 +15,16 @@ import {
 } from "../pdf-helpers";
 
 // ============================================================
-// DOCUMENT 4: Measure Function Documentation
-// NIST AI RMF 1.0 — MEASURE Core Function
+// DOCUMENT 3: MEASURE Function Documentation (NIST AI RMF 1.0, AI 100-1)
 // ============================================================
 export function generateMeasureDocumentation(data: ComplianceFormData): jsPDF {
   const doc = new jsPDF();
-  let y = addDocHeader(doc, "NIST AI RMF: Measure Function Documentation", data);
+  let y = addDocHeader(doc, "NIST AI RMF \u2014 MEASURE Function Documentation", data);
   y = addTopDisclaimer(doc, y);
 
   y = addWrappedText(
     doc,
-    `This document implements the MEASURE function of the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1) for ${data.company.name}. The MEASURE function analyzes and assesses AI risks using quantitative, qualitative, or mixed-methods tools and methodologies. The AI RMF is a voluntary framework \u2014 verify the current version at airc.nist.gov.`,
+    `This document captures ${data.company.name}'s documentation for the MEASURE function of the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1). The MEASURE function analyzes and assesses the risks identified in the MAP function using quantitative and qualitative measures.`,
     MARGIN,
     y,
     CONTENT_WIDTH,
@@ -33,109 +32,119 @@ export function generateMeasureDocumentation(data: ComplianceFormData): jsPDF {
   );
   y += LINE_HEIGHT;
 
+  // MEASURE 1: Testing, Evaluation, Verification, and Validation
+  y = addSectionHeader(doc, "MEASURE 1: AI System Testing, Evaluation, Verification, and Validation (TEVV)", y);
+  const meas1Items = [
+    "TEVV plan documented for each AI system before deployment",
+    "TEVV plan covers all seven NIST trustworthy AI characteristics",
+    "Independent evaluation team or party involved in TEVV",
+    "TEVV performed on representative test datasets reflecting deployment conditions",
+    "TEVV results documented with pass/fail criteria defined in advance",
+    "Adversarial testing (red-teaming) performed for high-risk AI systems",
+    "TEVV repeated after material changes to AI system",
+    "TEVV records retained for minimum 3 years",
+  ];
+  let cbIdx = 0;
+  meas1Items.forEach((item) => { y = addFormCheckbox(doc, `meas1_${cbIdx++}`, item, y); });
+  y += LINE_HEIGHT;
+
+  // MEASURE 2: Performance Metrics
+  y = addSectionHeader(doc, "MEASURE 2: AI Risk Measurement and Metrics", y);
+  const metricCategories = [
+    {
+      title: "Performance and Accuracy",
+      items: [
+        "Accuracy, precision, recall, F1-score documented and tracked",
+        "Performance thresholds defined and monitored",
+        "Out-of-distribution performance monitored",
+        "Confidence calibration measured (model confidence vs. actual accuracy)",
+      ],
+    },
+    {
+      title: "Bias and Fairness Metrics",
+      items: [
+        "Demographic parity measured across relevant subgroups",
+        "Equalized odds or equal opportunity metrics applied where appropriate",
+        "Disparate impact ratio calculated (EEOC four-fifths rule applied where applicable)",
+        "Intersectional fairness analysis performed for highest-risk systems",
+      ],
+    },
+    {
+      title: "Security and Robustness Metrics",
+      items: [
+        "Adversarial robustness testing results documented",
+        "Data poisoning resistance tested for systems trained on external data",
+        "Model extraction/inversion risk assessed",
+        "Availability and uptime metrics tracked for critical AI systems",
+      ],
+    },
+    {
+      title: "Transparency and Explainability Metrics",
+      items: [
+        "Explainability coverage: percentage of AI decisions where explanation is available",
+        "User comprehension testing of AI explanations conducted",
+        "Audit trail completeness measured",
+      ],
+    },
+  ];
+
+  metricCategories.forEach((cat) => {
+    y = addSectionHeader(doc, cat.title, y);
+    cat.items.forEach((item) => { y = addFormCheckbox(doc, `meas2_${cbIdx++}`, item, y); });
+    y += 4;
+  });
+
+  // MEASURE 2.2: Thresholds
+  y = addSectionHeader(doc, "MEASURE 2.2: Metric Thresholds and Escalation Triggers", y);
+  const freq = REVIEW_LABELS[data.oversight.reviewFrequency] || "quarterly";
+  y = addWrappedText(
+    doc,
+    `Thresholds are reviewed ${freq.toLowerCase()}. Document baselines and escalation triggers for each AI system:`,
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += 4;
   data.aiSystems.forEach((sys, idx) => {
-    y = addSectionHeader(doc, `MEASURE: ${sys.name}`, y);
-
-    y = addWrappedText(
-      doc,
-      "MEASURE-1.1 \u2014 Measurement Approach:",
-      MARGIN,
-      y,
-      CONTENT_WIDTH,
-      LINE_HEIGHT
-    );
-    const measureApproaches = [
-      "Quantitative metrics (accuracy rates, error rates, impact ratios)",
-      "Qualitative assessments (red-teaming, expert review, user feedback)",
-      "Bias and fairness testing by demographic group",
-      "Performance benchmarking against stated requirements",
-      "Explainability / interpretability evaluation",
-    ];
-    measureApproaches.forEach((approach, aidx) => {
-      y = addFormCheckbox(
-        doc,
-        `meas_${idx}_approach_${aidx}`,
-        approach,
-        y
-      );
-    });
+    if (y > 250) { doc.addPage(); y = MARGIN; }
+    y = addWrappedText(doc, `System: ${sys.name}`, MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+    y = addFormTextField(doc, `thresh_${idx}_accuracy`, "Minimum Acceptable Accuracy Threshold:", y, { width: 80 });
+    y = addFormTextField(doc, `thresh_${idx}_bias`, "Maximum Acceptable Disparate Impact Ratio:", y, { width: 80 });
+    y = addFormTextField(doc, `thresh_${idx}_trigger`, "Escalation Trigger:", y, { multiline: true, lines: 2 });
     y += 4;
-
-    y = addWrappedText(
-      doc,
-      "MEASURE-2.1 \u2014 Performance Metrics:",
-      MARGIN,
-      y,
-      CONTENT_WIDTH,
-      LINE_HEIGHT
-    );
-    y = addFormTextField(
-      doc,
-      `meas_${idx}_accuracy`,
-      "  Current accuracy / performance metric:",
-      y
-    );
-    y = addFormTextField(
-      doc,
-      `meas_${idx}_error_rate`,
-      "  Error rate and type of errors (false positives/negatives):",
-      y
-    );
-    y = addFormTextField(
-      doc,
-      `meas_${idx}_bias_metric`,
-      "  Bias / fairness metric (e.g., adverse impact ratio, demographic parity):",
-      y
-    );
-    y += 4;
-
-    y = addWrappedText(
-      doc,
-      `MEASURE-2.5 \u2014 Testing and Evaluation (Review Frequency: ${REVIEW_LABELS[data.oversight.reviewFrequency] || "Not specified"}):`,
-      MARGIN,
-      y,
-      CONTENT_WIDTH,
-      LINE_HEIGHT
-    );
-    y = addFormTextField(
-      doc,
-      `meas_${idx}_test_schedule`,
-      "  Testing schedule and last test date:",
-      y
-    );
-    y = addFormTextField(
-      doc,
-      `meas_${idx}_test_method`,
-      "  Testing methodology:",
-      y,
-      { multiline: true, lines: 2 }
-    );
-    y += 4;
-
-    y = addWrappedText(
-      doc,
-      "MEASURE-3.3 \u2014 Risk Metrics Tracked Over Time:",
-      MARGIN,
-      y,
-      CONTENT_WIDTH,
-      LINE_HEIGHT
-    );
-    y = addFormTextField(
-      doc,
-      `meas_${idx}_trends`,
-      "  Notable trends in performance or risk metrics:",
-      y,
-      { multiline: true, lines: 2 }
-    );
-    y += LINE_HEIGHT;
   });
 
-  y = addSectionHeader(doc, "Measure Function Sign-off", y);
-  y = addFormTextField(doc, "measure_owner", "Function Owner:", y, {
-    prefill: data.contact.name,
-    readOnly: false,
-  });
-  y = addFormTextField(doc, "measure_date", "Date:", y);
+  // MEASURE 3: External Evaluation
+  y = addSectionHeader(doc, "MEASURE 3: External Expert Evaluation", y);
+  const meas3Items = [
+    "External AI risk assessment or audit performed within prior 12 months",
+    "Third-party bias audit results available and addressed",
+    "External red-team or penetration testing results for high-risk AI systems",
+    "Industry benchmark comparisons performed",
+    "External expert review findings documented and tracked to resolution",
+  ];
+  meas3Items.forEach((item) => { y = addFormCheckbox(doc, `meas3_${cbIdx++}`, item, y); });
+  y += LINE_HEIGHT;
+
+  // MEASURE 4: Ongoing Monitoring
+  y = addSectionHeader(doc, "MEASURE 4: Ongoing Monitoring and Feedback Loops", y);
+  const meas4Items = [
+    "Monitoring plan established for each deployed AI system",
+    `Monitoring frequency: ${freq.toLowerCase()}`,
+    "Model drift detection implemented (input distribution drift, output drift)",
+    "Performance degradation alerts configured",
+    "Human feedback mechanisms collect quality data on AI outputs",
+    "User complaints and error reports tracked and analyzed",
+    "Monitoring results reported to AI risk governance team",
+    "Monitoring results trigger re-evaluation when thresholds breached",
+  ];
+  meas4Items.forEach((item) => { y = addFormCheckbox(doc, `meas4_${cbIdx++}`, item, y); });
+
+  y += LINE_HEIGHT;
+  y = addFormTextField(doc, "measure_completed_by", "MEASURE Function Lead:", y, { width: 120 });
+  y = addFormTextField(doc, "measure_date", "Documentation Date:", y, { width: 60 });
+  y = addFormTextField(doc, "measure_next_review", "Next Review Date:", y, { width: 60 });
 
   addDisclaimer(doc);
   return doc;

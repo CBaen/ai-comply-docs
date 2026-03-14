@@ -56,11 +56,11 @@ export function generateVendorAIAuditRequirements(
     "Description of any updates or model changes in the past 12 months",
   ];
   let cbCount = 0;
-  requiredDocs.forEach((doc) => {
+  requiredDocs.forEach((reqDoc) => {
     y = addFormCheckbox(
       doc,
       "vend_doc_" + cbCount,
-      doc,
+      reqDoc,
       y
     );
     cbCount++;
