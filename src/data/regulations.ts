@@ -89,7 +89,7 @@ export const regulations: Regulation[] = [
     name: "Minnesota MCDPA — Consumer Data Privacy & AI",
     shortName: "Minnesota MCDPA",
     citation: "Minn. Stat. Ch. 325M (§§ 325M.10–325M.21)",
-    citationUrl: "https://www.revisor.mn.gov/statutes/cite/325M",
+    citationUrl: "https://www.revisor.mn.gov/statutes/cite/325M.10",
     status: "in-effect",
     effectiveDate: "July 31, 2025",
     tier: "state",
