@@ -93,6 +93,118 @@ const REGULATION_EMAIL: Record<
     reminder:
       "California TFAIA requires incident reporting within 15 days of identification. EU AI Act Article 73 requires serious incident notification as soon as possible. Document your response process before you need it.",
   },
+  "nyc-local-law-144": {
+    title: "Your NYC Local Law 144 Compliance Package",
+    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874 (Local Law 144)",
+    description:
+      "compliance documentation templates aligned with NYC Local Law 144 (NYC Admin. Code \u00A7\u00A7 20-870\u201320-874) requirements. Review each document with your legal team before use.",
+    steps: [
+      "<strong>Review the Bias Audit Report Template</strong> with your independent auditor before scheduling your annual audit.",
+      "<strong>Post the Bias Audit Summary</strong> on your website at least 10 business days before using each AEDT, per DCWP rules.",
+      "<strong>Send the Candidate/Employee Notification</strong> before using an AEDT on any job applicant or employee.",
+      "<strong>File everything.</strong> DCWP may request audit documentation. These documents are your evidence of compliance.",
+    ],
+    reminder:
+      "NYC LL144 requires annual independent bias audits and public posting of audit summaries for all automated employment decision tools. DCWP enforcement has been active since July 5, 2023 and shifted to proactive investigations in 2026.",
+  },
+  "minnesota-mcdpa": {
+    title: "Your Minnesota MCDPA Compliance Package",
+    statute: "Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21",
+    description:
+      "compliance documentation templates aligned with the Minnesota Consumer Data Privacy Act (Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21) requirements. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Minnesota MCDPA.",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template \u2014 you have 45 days to respond to consumer requests.",
+      "<strong>Complete the Data Protection Impact Assessment</strong> for each system that uses profiling for consequential decisions.",
+      "<strong>File everything.</strong> The Minnesota AG enforces the MCDPA. These documents demonstrate compliance.",
+    ],
+    reminder:
+      "The Minnesota Consumer Data Privacy Act (Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21) has been in effect since July 31, 2025. The Minnesota Attorney General has exclusive enforcement authority (\u00A7 325M.20(b)). There is no private right of action.",
+  },
+  "california-ccpa-admt": {
+    title: "Your California CCPA ADMT Compliance Package",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq. + CPPA ADMT Regulations",
+    description:
+      "compliance documentation templates aligned with the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations under the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.). Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Publish the Pre-Use ADMT Notice</strong> before using any automated decisionmaking technology on California consumers.",
+      "<strong>Implement your Opt-Out Mechanism</strong> using the documentation template and verify it is accessible and functional.",
+      "<strong>Complete the ADMT Risk Assessment</strong> for each system that makes or substantially assists significant decisions about consumers.",
+      "<strong>Establish your Human Review Process</strong> so consumers can request human review of ADMT-driven decisions.",
+    ],
+    reminder:
+      "The CPPA ADMT regulations are effective January 1, 2026. CPPA administrative enforcement and AG civil enforcement both apply. Penalties: $2,500 per violation, $7,500 per intentional violation (Cal. Civ. Code \u00A7 1798.155). Verify current CPPA guidance at cppa.ca.gov.",
+  },
+  "eu-ai-act": {
+    title: "Your EU AI Act Compliance Package",
+    statute: "Regulation (EU) 2024/1689",
+    description:
+      "compliance documentation templates aligned with Regulation (EU) 2024/1689 (the EU AI Act) requirements for high-risk AI systems. Review each document with your legal team and EU-qualified counsel before deployment.",
+    steps: [
+      "<strong>Complete the Risk Management System Documentation</strong> for each high-risk AI system \u2014 this is required before placing a system on the EU market.",
+      "<strong>Prepare Technical Documentation (Annex IV)</strong> for each high-risk system and maintain it throughout the system\u2019s lifecycle.",
+      "<strong>Register your high-risk AI systems</strong> in the EU database using the Registration Documentation template (required before deployment for most Annex III systems).",
+      "<strong>Implement your Post-Market Monitoring Plan</strong> and assign responsibility for ongoing incident reporting and corrective actions.",
+    ],
+    reminder:
+      "The EU AI Act has phased effective dates: prohibited AI practices from February 2025, GPAI obligations from August 2025, Annex III high-risk system obligations from August 2027. National market surveillance authorities enforce. High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
+  },
+  "eeoc-ai-hiring": {
+    title: "Your EEOC AI Hiring Compliance Kit",
+    statute: "Title VII + 29 CFR Part 1607 (Uniform Guidelines)",
+    description:
+      "compliance documentation templates aligned with the EEOC\u2019s enforcement of existing federal anti-discrimination law (Title VII, ADA, ADEA) and the Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607) as applied to AI hiring tools. Review each document with your legal team before use.",
+    steps: [
+      "<strong>Run the Adverse Impact Analysis</strong> for each AI hiring tool using the Template \u2014 the EEOC 4/5 (80%) rule is the federal standard under 29 CFR \u00A7 1607.4(D).",
+      "<strong>Complete Job-Relatedness Validation Documentation</strong> for each tool to demonstrate the selection criteria are job-related and consistent with business necessity.",
+      "<strong>Establish Reasonable Accommodation Procedures</strong> before using AI assessments on any applicant or employee.",
+      "<strong>Send the Vendor AI Audit Requirements</strong> to each AI tool vendor and keep their responses on file.",
+    ],
+    reminder:
+      "Employers remain liable under Title VII, ADA, and ADEA for discriminatory outcomes from AI hiring tools, even when the AI vendor is responsible. EEOC AI-specific technical assistance has been modified under the current administration \u2014 verify current guidance at eeoc.gov.",
+  },
+  "nist-ai-rmf": {
+    title: "Your NIST AI RMF Implementation Package",
+    statute: "NIST AI 100-1 (AI Risk Management Framework 1.0)",
+    description:
+      "implementation templates aligned with the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1). These templates cover the Govern, Map, Measure, and Manage core functions. Review each document with your legal and technical teams.",
+    steps: [
+      "<strong>Start with the AI Risk Management Plan</strong> \u2014 it sets your organization\u2019s overall approach and assigns accountability for each RMF function.",
+      "<strong>Complete the AI System Risk Profile</strong> for each system you operate, using the Map Function Documentation to identify context and risks.",
+      "<strong>Use the Measure Function Documentation</strong> to document your metrics, testing, and evaluation procedures for each system.",
+      "<strong>Implement the Manage Function Documentation</strong> to track risks, assign mitigations, and establish your incident and escalation procedures.",
+    ],
+    reminder:
+      "The NIST AI RMF is a voluntary framework \u2014 NIST is non-regulatory. However, it is referenced as the compliance standard by Colorado (SB 24-205), federal contractor requirements, and enterprise procurement programs. Demonstrating RMF alignment shows reasonable care. AI RMF 1.0 is currently being revised \u2014 verify the current version at airc.nist.gov.",
+  },
+  "healthcare-ai-compliance": {
+    title: "Your Healthcare AI Compliance Package",
+    statute: "HIPAA Privacy Rule (45 CFR Part 164)",
+    description:
+      "compliance documentation templates aligned with HIPAA Privacy Rule (45 CFR Part 164 Subpart E), Security Rule (Subpart C), and Breach Notification Rule (Subpart D) requirements as applied to AI processing of protected health information. Review each document with your legal team and HIPAA counsel before deployment.",
+    steps: [
+      "<strong>Complete the AI Risk Assessment for PHI Processing</strong> for each AI system that creates, receives, maintains, or transmits protected health information.",
+      "<strong>Execute Business Associate Agreements</strong> with each AI vendor that processes PHI using the BAA template \u2014 a BAA is required before sharing PHI with any business associate.",
+      "<strong>Implement AI-Specific Security Policies</strong> covering access controls, audit logging, and incident detection for AI systems processing PHI.",
+      "<strong>Establish Breach Notification Procedures</strong> for AI-related PHI breaches \u2014 HHS OCR requires notification within 60 days of discovery.",
+    ],
+    reminder:
+      "HIPAA applies to any covered entity or business associate using AI to process protected health information. HIPAA penalties range up to $2,100,000 per violation category per year. HHS may issue additional guidance on AI and HIPAA \u2014 verify current guidance at hhs.gov/hipaa.",
+  },
+  "financial-services-ai": {
+    title: "Your Financial Services AI Compliance Package",
+    statute: "ECOA/Regulation B (12 CFR Part 1002) + FINRA AI Supervision",
+    description:
+      "compliance documentation templates aligned with the Equal Credit Opportunity Act (15 USC \u00A7 1691 et seq.), Regulation B (12 CFR Part 1002), the Fair Credit Reporting Act (15 USC \u00A7 1681 et seq.), and FINRA AI supervision requirements. Review each document with your legal team and compliance counsel before use.",
+    steps: [
+      "<strong>Adopt the AI Supervision Policy</strong> and assign supervisory responsibility for each AI system \u2014 FINRA requires documented supervision of AI-generated communications and recommendations.",
+      "<strong>Complete Model Risk Documentation</strong> for each AI model used in regulated activities, including validation status and performance monitoring.",
+      "<strong>Prepare ECOA Adverse Action Notices</strong> for AI-driven credit denials \u2014 Regulation B requires specific disclosures explaining the reasons for adverse credit decisions.",
+      "<strong>Conduct Annual AI Review</strong> using the Checklist to verify all AI systems remain within approved risk parameters and supervisory controls are functioning.",
+    ],
+    reminder:
+      "FINRA has flagged AI supervision as a 2026 examination priority. CFPB UDAAP authority reaches AI-driven unfair, deceptive, or abusive practices. Regulation B (12 CFR Part 1002) requires adverse action notices for AI-driven credit denials. Verify current SEC, CFPB, and FINRA guidance for your specific firm type.",
+  },
 };
 
 function buildEmailHtml(

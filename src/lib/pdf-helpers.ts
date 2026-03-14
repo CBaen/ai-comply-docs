@@ -110,6 +110,54 @@ const REGULATION_HEADER: Record<
     rules:
       "Incident response templates covering detection, classification, response, and regulatory reporting.",
   },
+  "nyc-local-law-144": {
+    statute:
+      "Statute: NYC Admin. Code \u00A7\u00A7 20-870\u201320-874 (Local Law 144 of 2021) \u2014 DCWP enforcement began July 5, 2023",
+    rules:
+      "Implementing rules: DCWP rules at 6 RCNY \u00A7 5-300 et seq. DCWP shifted to proactive investigations in 2026.",
+  },
+  "minnesota-mcdpa": {
+    statute:
+      "Statute: Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21 (Minnesota Consumer Data Privacy Act, eff. 7-31-25)",
+    rules:
+      "Enforcement: Minnesota Attorney General (exclusive authority, \u00A7 325M.20(b)). 30-day cure period expired January 31, 2026.",
+  },
+  "california-ccpa-admt": {
+    statute:
+      "Statute: Cal. Civ. Code \u00A7 1798.100 et seq. + CPPA ADMT Regulations (eff. 1-1-26)",
+    rules:
+      "Enforcement: CPPA administrative enforcement and AG civil enforcement. \u00A7\u00A7 1798.155. Verify current CPPA guidance at cppa.ca.gov.",
+  },
+  "eu-ai-act": {
+    statute:
+      "Regulation: (EU) 2024/1689 (EU AI Act) \u2014 Phased: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2027",
+    rules:
+      "Enforcement: National market surveillance authorities. Member States may adopt additional implementing measures.",
+  },
+  "eeoc-ai-hiring": {
+    statute:
+      "Framework: Title VII (42 USC \u00A7 2000e et seq.) + Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607)",
+    rules:
+      "EEOC AI-specific technical assistance has been modified under current administration. Verify current EEOC guidance at eeoc.gov.",
+  },
+  "nist-ai-rmf": {
+    statute:
+      "Framework: NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1)",
+    rules:
+      "Voluntary framework \u2014 NIST is a non-regulatory agency. AI RMF 1.0 is currently being revised. Verify current version at airc.nist.gov.",
+  },
+  "healthcare-ai-compliance": {
+    statute:
+      "Framework: HIPAA Privacy Rule (45 CFR Part 164 Subpart E) + Security Rule (Subpart C) + Breach Notification Rule (Subpart D)",
+    rules:
+      "HHS OCR enforcement. HHS may issue additional guidance on AI and HIPAA. Verify current guidance at hhs.gov/hipaa.",
+  },
+  "financial-services-ai": {
+    statute:
+      "Framework: ECOA/Regulation B (12 CFR Part 1002) + FCRA (15 USC \u00A7 1681 et seq.) + FINRA AI Supervision",
+    rules:
+      "SEC, CFPB, and FINRA may issue additional AI-specific guidance. FINRA flagged AI as a 2026 examination priority.",
+  },
 };
 
 // AcroForm support detection
