@@ -28,9 +28,77 @@ export const metadata: Metadata = {
   },
 };
 
+function FAQStructuredData() {
+  const data = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What AI regulations do you cover?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We currently offer compliance packages for Illinois HB3773 (775 ILCS 5/2-102(L)) and Colorado SB 24-205. Texas TRAIGA, California CCPA ADMT, and universal products (Employee AI Policy, Vendor Due Diligence) are coming soon. Each package is tailored to the specific statute's requirements.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is this legal advice?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. This tool generates documentation templates based on published regulatory text and proposed rules. It assists with compliance documentation but does not constitute legal advice. We recommend consulting a qualified attorney for formal compliance verification.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How are the documents generated?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Your answers to the questionnaire populate templates drafted against each state's specific statute and proposed rules. Documents are generated instantly in PDF format and available for immediate download after payment.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What if the law changes?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our templates are based on the current published regulatory text at the time of purchase. Regulatory requirements may change over time. We recommend consulting qualified legal counsel to verify your documents remain current.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do I need this if I already have outside counsel?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our documents complement legal counsel. Many companies use our templates as a starting point and have their attorneys review the output — saving significant legal fees compared to drafting from scratch.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are all sales final?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Because documents are generated and delivered digitally at the time of purchase, all sales are final. Please review the product description before purchasing.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much do lawyers charge for this?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Employment law attorneys typically charge $300–600 per hour. A custom AI compliance package can cost $5,000–$25,000 from a law firm. AI Compliance Documents generates comparable documentation for $299–$499.",
+        },
+      },
+    ],
+  });
+
+  return <script type="application/ld+json">{data}</script>;
+}
+
 export default function Home() {
   return (
     <>
+      <FAQStructuredData />
       <Nav />
       <main id="main-content">
         {/* Hero Section */}

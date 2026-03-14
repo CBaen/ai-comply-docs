@@ -331,7 +331,7 @@ export const regulations: Regulation[] = [
     tier: "state",
     category: "Consumer Protection",
     price: 449,
-    stripePriceId: "price_colorado_placeholder",
+    stripePriceId: "price_1TABBcGidFVHIL99tjl8mZWm",
     documentCount: 8,
     description: "Complete compliance package for Colorado deployers of high-risk AI systems. Covers algorithmic discrimination prevention, impact assessments, consumer notifications, and affirmative defense documentation.",
     penaltySummary: "Attorney General enforcement under Colorado Consumer Protection Act (C.R.S. § 6-1-112). Up to $20,000 per violation (§ 6-1-112(1)(a)). Up to $50,000 per violation involving persons age 60+ (§ 6-1-112(1)(c)). No private right of action.",
