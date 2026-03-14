@@ -127,7 +127,7 @@ export default function Home() {
               AI Compliance Documents
             </h1>
             <p className="text-sm md:text-base text-slate-400 mb-1">
-              State AI regulations are in effect. Generate your compliance documentation in minutes.
+              New state AI laws require specific documentation from businesses using AI. If you just found out about this, you&apos;re in the right place.
             </p>
             <div className="inline-flex items-center gap-2 bg-red-900/30 border border-red-400/30 rounded-full px-3 py-1 text-xs mt-2">
               <span className="inline-block w-1.5 h-1.5 bg-red-400 rounded-sm" />
