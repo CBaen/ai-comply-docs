@@ -88,6 +88,98 @@ export async function generateDocuments(
     return docs;
   }
 
+  if (data.regulation === "texas-tdpsa") {
+    const tx = await import("./pdf-texas-tdpsa");
+    return [
+      {
+        doc: tx.generateDataProtectionAssessment(data),
+        name: `${companySlug}_TX_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: tx.generatePrivacyNotice(data),
+        name: `${companySlug}_TX_Privacy_Notice.pdf`,
+      },
+      {
+        doc: tx.generateDataProcessingAgreement(data),
+        name: `${companySlug}_TX_Data_Processing_Agreement.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "delaware-pdpa") {
+    const de = await import("./pdf-delaware-pdpa");
+    return [
+      {
+        doc: de.generateDataProtectionAssessment(data),
+        name: `${companySlug}_DE_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: de.generatePrivacyNotice(data),
+        name: `${companySlug}_DE_Privacy_Notice.pdf`,
+      },
+      {
+        doc: de.generateUniversalOptOut(data),
+        name: `${companySlug}_DE_Universal_Opt_Out_Documentation.pdf`,
+      },
+      {
+        doc: de.generateDataProcessingAgreement(data),
+        name: `${companySlug}_DE_Data_Processing_Agreement.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "multi-state-profiling-assessment") {
+    const msp = await import("./pdf-multi-state-profiling");
+    return [
+      {
+        doc: msp.generateMultiStateAssessment(data),
+        name: `${companySlug}_MultiState_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: msp.generateStateComparisonMatrix(data),
+        name: `${companySlug}_MultiState_State_Comparison_Matrix.pdf`,
+      },
+      {
+        doc: msp.generateThresholdAnalysis(data),
+        name: `${companySlug}_MultiState_Threshold_Analysis_Worksheet.pdf`,
+      },
+      {
+        doc: msp.generateMultiStatePrivacyNotice(data),
+        name: `${companySlug}_MultiState_Privacy_Notice_Template.pdf`,
+      },
+      {
+        doc: msp.generateComplianceChecklist(data),
+        name: `${companySlug}_MultiState_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "multi-state-employer-ai-disclosure") {
+    const mse = await import("./pdf-multi-state-employer-ai");
+    return [
+      {
+        doc: mse.generateComplianceMatrix(data),
+        name: `${companySlug}_Employer_Multi_Jurisdiction_Compliance_Matrix.pdf`,
+      },
+      {
+        doc: mse.generateUnifiedNotification(data),
+        name: `${companySlug}_Employer_Unified_Employee_Candidate_Notification.pdf`,
+      },
+      {
+        doc: mse.generateStateAddenda(data),
+        name: `${companySlug}_Employer_State_Specific_Addenda.pdf`,
+      },
+      {
+        doc: mse.generateBiasAuditCrossRef(data),
+        name: `${companySlug}_Employer_Bias_Audit_Cross_Reference_Guide.pdf`,
+      },
+      {
+        doc: mse.generateRecordRetentionPolicy(data),
+        name: `${companySlug}_Employer_Multi_State_Record_Retention_Policy.pdf`,
+      },
+    ];
+  }
+
   if (data.regulation === "minnesota-mcdpa") {
     const mn = await import("./pdf-minnesota-mcdpa");
     return [

@@ -761,4 +761,233 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be listed as your AI compliance officer \u2014 responsible for model risk documentation, adverse action procedures, and FINRA supervision obligations.",
     },
   },
+  "manager-ai-training-kit": {
+    name: "Manager Communication & Training Kit",
+    statute: "NIST AI RMF + EEOC AI Guidance + State Employment Laws",
+    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
+    lawLinkText: "Review the NIST AI Risk Management Framework",
+    acknowledgment:
+      "I understand that these are training and communication templates, not legal advice. I should consult qualified legal counsel for my specific situation.",
+    basePrice: 79,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Manager Talking Points Script",
+      "Employee FAQ \u2014 AI in the Workplace",
+      "Training Attendance & Sign-Off Sheet",
+    ],
+    decisions: [
+      ["hiring", "Hiring & Recruitment"],
+      ["employment", "Employment Decisions"],
+      ["customer_service", "Customer Service"],
+      ["internal_ops", "Internal Operations"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI tools do your managers need to explain?</strong> Any AI system that affects employees \u2014 resume screening tools, scheduling AI, performance review platforms, productivity tools, or any software your employees interact with that uses AI. List the tools your managers will need to discuss with their teams.",
+      step2Intro:
+        "List each AI tool or system your managers need to explain to employees. We\u2019ll customize the talking points and FAQ for your specific tools.",
+      step2DecisionHelp:
+        "Check every area where your organization uses AI tools that affect employees. This helps us tailor the manager scripts and employee FAQ to your context.",
+      step2MultiHelp:
+        "If your managers need to explain multiple AI tools to their teams, list each one. The talking points will cover each tool.",
+      step3BiasHelp:
+        "If any AI tools affect employment decisions, note whether you\u2019ve conducted bias testing. Managers may need to answer questions about fairness from their teams.",
+      step4Help:
+        "This section captures how your organization governs AI use. Managers will need to explain oversight procedures and how employees can raise concerns.",
+      step5Intro:
+        "This person will be listed as the AI compliance contact \u2014 the resource managers and employees can reach for questions not covered in the training materials.",
+    },
+  },
+  "annual-compliance-review": {
+    name: "Annual Compliance Review Checklist",
+    statute: "Multi-State AI Compliance Annual Review Best Practices",
+    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
+    lawLinkText: "Review the NIST AI Risk Management Framework",
+    acknowledgment:
+      "I understand that these are review templates, not legal advice. Laws change. I should verify current regulatory status annually and consult qualified legal counsel.",
+    basePrice: 49,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Annual Compliance Review Checklist",
+      "Compliance Update Log",
+    ],
+    decisions: [
+      ["employment", "Employment/HR AI"],
+      ["customer", "Customer-Facing AI"],
+      ["financial", "Financial AI"],
+      ["internal", "Internal Operations AI"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which AI compliance documents need annual review?</strong> Any AI compliance documents you have in place \u2014 employee policies, vendor due diligence, bias audits, incident response plans, or state-specific compliance packages. This annual checklist ensures they stay current as laws change.",
+      step2Intro:
+        "List each AI system and compliance document area you need to review annually. The checklist will walk through each one.",
+      step2DecisionHelp:
+        "Check every area where your organization uses AI. The annual review covers all compliance documents related to these uses.",
+      step2MultiHelp:
+        "If you have AI systems across multiple areas, the annual review checklist covers all of them in a single workflow.",
+      step3BiasHelp:
+        "Annual bias reviews are required by NYC LL144 and recommended by EEOC and Colorado SB24-205. The checklist includes bias audit recertification as a standard annual item.",
+      step4Help:
+        "This section captures your current compliance program status. The review checklist will assess each component and flag what needs updating.",
+      step5Intro:
+        "This person will be listed as the compliance review coordinator \u2014 responsible for scheduling the annual review and tracking completion.",
+    },
+  },
+  "board-ai-summary": {
+    name: "Board & Executive AI Summary Report",
+    statute: "NIST AI RMF Govern Function + SEC AI Governance Guidance",
+    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
+    lawLinkText: "Review the NIST AI Risk Management Framework",
+    acknowledgment:
+      "I understand that these are governance templates, not legal advice. I should consult qualified legal counsel for my specific board reporting obligations.",
+    basePrice: 69,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Executive AI Compliance Status Report",
+      "Board Presentation Template",
+      "AI Risk Register Excerpt",
+    ],
+    decisions: [
+      ["employment", "Employment/HR AI"],
+      ["customer", "Customer-Facing AI"],
+      ["financial", "Financial AI"],
+      ["operations", "Operational AI"],
+      ["safety", "Safety-Critical AI"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems should be reported to your board?</strong> Any AI system that creates material risk \u2014 legal, regulatory, reputational, or operational. Boards increasingly need to understand AI risk exposure, especially for systems affecting customers, employees, or regulated activities.",
+      step2Intro:
+        "List each AI system that should be included in board-level risk reporting. The executive summary and board presentation will cover each one.",
+      step2DecisionHelp:
+        "Check every area where your organization uses AI that could create material risk. This determines what goes in the board risk register.",
+      step2MultiHelp:
+        "Most organizations with significant AI use have multiple systems. List each one so the board presentation covers your complete AI risk picture.",
+      step3BiasHelp:
+        "Bias risk is increasingly a board-level governance issue. If any AI systems have undergone bias testing, include that status in the board report.",
+      step4Help:
+        "This section captures your current AI governance structure. Boards need to know who is accountable for AI risk oversight.",
+      step5Intro:
+        "This person will be listed as the board AI briefing coordinator \u2014 the executive responsible for board-level AI risk reporting.",
+    },
+  },
+  "consumer-notice-kit": {
+    name: "Consumer Notice Customization Kit",
+    statute: "Multi-State AI Consumer Disclosure Requirements",
+    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
+    lawLinkText: "Review applicable state AI disclosure requirements",
+    acknowledgment:
+      "I understand that these are disclosure templates, not legal advice. Consumer notice requirements vary by state and context. I should verify applicable disclosure requirements and consult qualified legal counsel.",
+    basePrice: 49,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Website AI Disclosure Banner",
+      "Email AI Notification Template",
+      "Physical Workplace AI Posting",
+    ],
+    decisions: [
+      ["customer", "Customer-Facing AI"],
+      ["employment", "Employment AI"],
+      ["profiling", "Consumer Profiling"],
+      ["financial", "Financial Decisions"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Where do you need to disclose AI use?</strong> Colorado SB24-205, California CCPA ADMT, Minnesota MCDPA, and other state laws require consumer notice before using AI in consequential decisions. This kit provides notices in website banner, email, and physical posting formats.",
+      step2Intro:
+        "List each AI system for which you need consumer disclosure notices. We\u2019ll customize the notices for your specific AI use context.",
+      step2DecisionHelp:
+        "Check every area where your AI system is used with consumers. Different disclosure requirements apply depending on the type of decision.",
+      step2MultiHelp:
+        "If you use multiple AI systems that face consumers, each may need its own notice. List each system separately.",
+      step3BiasHelp:
+        "If your AI systems have been audited for bias, that information can be included in your consumer transparency disclosures.",
+      step4Help:
+        "This section captures how consumers interact with your AI systems. This determines which notice formats and language are most appropriate.",
+      step5Intro:
+        "This contact will be listed in consumer notices as the designated AI inquiry contact for consumer questions about AI use.",
+    },
+  },
+  "data-mapping-inventory": {
+    name: "Data Mapping & Inventory Kit",
+    statute: "Multi-State Privacy Data Mapping Requirements",
+    lawUrl: "https://cppa.ca.gov/regulations/",
+    lawLinkText: "Review CPPA data mapping guidance at cppa.ca.gov",
+    acknowledgment:
+      "I understand that these are data mapping templates, not legal advice. Data mapping requirements vary by state. I should consult qualified legal counsel before completing any state privacy assessment.",
+    basePrice: 69,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Personal Data Inventory",
+      "AI Data Flow Diagram Template",
+      "Third-Party Data Sharing Register",
+    ],
+    decisions: [
+      ["profiling", "Consumer Profiling"],
+      ["employment", "Employment Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Why do you need data mapping?</strong> Every state privacy law requires a data protection assessment before you can document compliance. You cannot complete an assessment if you don\u2019t know what data you have, where it comes from, where it goes, and who sees it. Data mapping is step zero.",
+      step2Intro:
+        "List each AI system or data processing activity you need to map. The inventory templates will document each system\u2019s data flows and sharing relationships.",
+      step2DecisionHelp:
+        "Check every activity where your AI or data systems process personal data. Different categories trigger different state privacy law obligations.",
+      step2MultiHelp:
+        "If you have multiple AI systems processing personal data, list each separately. Each needs its own data flow documentation.",
+      step3BiasHelp:
+        "If any of your AI systems use personal data to make decisions that affect people, bias assessment is a natural next step after completing your data inventory.",
+      step4Help:
+        "This section captures who has access to personal data in your AI systems. Third-party access is a key factor in data protection assessments.",
+      step5Intro:
+        "This person will be listed as the data mapping coordinator \u2014 the privacy officer or data governance lead responsible for maintaining the inventory.",
+    },
+  },
+  "consumer-rights-kit": {
+    name: "Consumer Rights Request Kit",
+    statute: "Multi-State Consumer Rights Requirements",
+    lawUrl: "https://cppa.ca.gov/regulations/",
+    lawLinkText: "Review CPPA consumer rights guidance at cppa.ca.gov",
+    acknowledgment:
+      "I understand that these are consumer rights response templates, not legal advice. Consumer rights requirements and response timelines vary by state. I should consult qualified legal counsel for my specific obligations.",
+    basePrice: 59,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Consumer Rights Request Intake Form",
+      "Response Letter Templates",
+      "Request Response Timeline Tracker",
+    ],
+    decisions: [
+      ["profiling", "Consumer Profiling"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["employment", "Employment Decisions"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which laws give consumers rights about your AI?</strong> California CCPA, Colorado SB24-205, Minnesota MCDPA, Texas TDPSA, Delaware PDPA, and other state laws give consumers rights to access, correct, delete, and opt out of AI-driven profiling. This kit provides the intake form, response letters, and timeline tracker to handle those requests professionally.",
+      step2Intro:
+        "List each AI system or data processing activity that generates consumer rights requests. The intake form and response templates cover each type of request.",
+      step2DecisionHelp:
+        "Check every area where your AI systems process consumer personal data. This determines which consumer rights apply and what your response obligations are.",
+      step2MultiHelp:
+        "If consumers can submit rights requests about multiple AI systems, list each separately. The intake form will route requests to the right system.",
+      step3BiasHelp:
+        "If consumers have the right to opt out of profiling or request human review of AI decisions, the response templates cover those rights specifically.",
+      step4Help:
+        "This section captures your current process for handling consumer data requests. Most state laws require responses within 45 days of receiving a valid request.",
+      step5Intro:
+        "This contact will be listed on consumer rights intake forms and response letters as the designated privacy rights contact.",
+    },
+  },
 };

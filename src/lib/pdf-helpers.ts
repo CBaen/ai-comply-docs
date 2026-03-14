@@ -182,6 +182,72 @@ const REGULATION_HEADER: Record<
     rules:
       "SEC, CFPB, and FINRA may issue additional AI-specific guidance. FINRA flagged AI as a 2026 examination priority.",
   },
+  "manager-ai-training-kit": {
+    statute:
+      "Framework: NIST AI RMF (AI 100-1) + EEOC AI Guidance + State Employment AI Laws (IL, NYC, CO)",
+    rules:
+      "Manager communication templates. Not tied to a single statute. Verify applicable state law requirements with qualified legal counsel.",
+  },
+  "annual-compliance-review": {
+    statute:
+      "Framework: Multi-State AI Compliance Annual Review Best Practices",
+    rules:
+      "Annual review templates. Regulatory requirements vary by state. Verify current law status annually and consult qualified legal counsel.",
+  },
+  "board-ai-summary": {
+    statute:
+      "Framework: NIST AI RMF Govern Function + SEC AI Governance Guidance",
+    rules:
+      "Board governance templates. Not tied to a single statute. Consult qualified legal counsel for your specific governance obligations.",
+  },
+  "consumer-notice-kit": {
+    statute:
+      "Framework: Multi-State AI Consumer Disclosure Requirements (CO SB24-205, CA CCPA ADMT, MN MCDPA, TX TDPSA)",
+    rules:
+      "Consumer disclosure templates. Each state law has different requirements. Verify applicability with qualified legal counsel.",
+  },
+  "data-mapping-inventory": {
+    statute:
+      "Framework: Multi-State Privacy Data Mapping Requirements (CA, CO, VA, CT, MN, TX, DE)",
+    rules:
+      "Data inventory templates. Required before completing state privacy data protection assessments. Consult qualified legal counsel.",
+  },
+  "consumer-rights-kit": {
+    statute:
+      "Framework: Multi-State Consumer Rights Requirements (CA CCPA, CO SB24-205, MN MCDPA, TX TDPSA, DE PDPA)",
+    rules:
+      "Consumer rights response templates. Response timelines vary by state (typically 45 days). Verify current requirements with qualified legal counsel.",
+  },
+  "ai-governance-framework": {
+    statute:
+      "Framework: NIST AI RMF Govern Function (NIST AI 100-1) + CO SB24-205 Risk Management Requirements",
+    rules:
+      "Voluntary governance framework aligned with NIST AI RMF and state deployer-liability statutes. Not tied to a single statute.",
+  },
+  "ai-system-registry": {
+    statute:
+      "Framework: NIST AI RMF MAP Function + State Deployer Inventory Requirements (CO, TX, EU)",
+    rules:
+      "AI inventory templates aligned with deployer obligations under multiple AI statutes. Not a substitute for legal counsel.",
+  },
+  "ai-transparency-report": {
+    statute:
+      "Framework: EU AI Act Art. 13 Transparency + Voluntary Best Practice",
+    rules:
+      "Transparency reporting templates. EU AI Act Art. 13 obligations apply to high-risk AI systems under Regulation (EU) 2024/1689.",
+  },
+  "ai-whistleblower-policy": {
+    statute:
+      "Framework: CA SB 53 (2025\u20132026 Session) Whistleblower Protections + Best Practice",
+    rules:
+      "Whistleblower protection templates. CA SB 53 applies to frontier AI developers. Recommended for all organizations using AI.",
+  },
+  "customer-ai-aup": {
+    statute:
+      "Framework: FTC Act \u00A7 5 Unfair Practice Avoidance + EU AI Act Art. 13 + Best Practice",
+    rules:
+      "Customer-facing AUP template. Aligns with FTC guidance on AI transparency and EU AI Act Art. 13 disclosure obligations.",
+  },
 };
 
 // AcroForm support detection

@@ -107,6 +107,63 @@ const REGULATION_EMAIL: Record<
     reminder:
       "NYC LL144 requires annual independent bias audits and public posting of audit summaries for all automated employment decision tools. DCWP enforcement has been active since July 5, 2023 and shifted to proactive investigations in 2026.",
   },
+  "texas-tdpsa": {
+    title: "Your Texas TDPSA Compliance Package",
+    statute: "Tex. Bus. & Com. Code Ch. 541 (Texas Data Privacy and Security Act, HB 4)",
+    description:
+      "compliance documentation templates aligned with the Texas Data Privacy and Security Act (Tex. Bus. & Com. Code Ch. 541, HB 4) requirements. Review each document with your legal team before deployment. Note: This is separate from the Texas TRAIGA (HB 149, Ch. 551\u2013554).",
+    steps: [
+      "<strong>Complete the Data Protection Assessment</strong> for each AI system used in profiling, targeted advertising, data sales, or sensitive data processing. Make it available to the Texas AG upon request (\u00A7 541.107(b)).",
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights, opt-out disclosures, and contact information required by \u00A7 541.101.",
+      "<strong>Execute Data Processing Agreements</strong> with each processor that handles Texas consumer personal data, per \u00A7 541.105.",
+      "<strong>File everything.</strong> The Texas AG enforces the TDPSA. These documents demonstrate compliance.",
+    ],
+    reminder:
+      "The Texas Data Privacy and Security Act (Tex. Bus. & Com. Code Ch. 541) has been in effect since July 1, 2024. Attorney General enforcement only (\u00A7 541.151). No private right of action. Permanent 30-day cure period (\u00A7 541.154). Penalty: up to $7,500 per violation (\u00A7 541.155). This law is separate from Texas TRAIGA (HB 149).",
+  },
+  "delaware-pdpa": {
+    title: "Your Delaware PDPA Compliance Package",
+    statute: "Del. Code tit. 6, ch. 12D, \u00A7\u00A7 12D-101 through 12D-111 (Delaware PDPA, HB 154)",
+    description:
+      "compliance documentation templates aligned with the Delaware Personal Data Privacy Act (Del. Code tit. 6, ch. 12D, HB 154) requirements. Review each document with your legal team before deployment. Delaware has the lowest coverage thresholds of any state (35,000 consumers).",
+    steps: [
+      "<strong>Complete the Data Protection Assessment</strong> for each system used in profiling, targeted advertising, data sales, or sensitive data processing. Make it available to the Delaware AG upon request (\u00A7 12D-109(b)).",
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights, opt-out disclosures, and contact information required by \u00A7 12D-106.",
+      "<strong>Implement Universal Opt-Out recognition</strong> (e.g., Global Privacy Control) as required by \u00A7 12D-106(e), effective January 1, 2026.",
+      "<strong>Execute Data Processing Agreements</strong> with each processor handling Delaware consumer personal data, per \u00A7 12D-108.",
+    ],
+    reminder:
+      "The Delaware Personal Data Privacy Act (Del. Code tit. 6, ch. 12D) has been in effect since January 1, 2025. Attorney General enforcement only (\u00A7 12D-111). No private right of action. 60-day cure period until December 31, 2025; AG discretion after. Penalty: up to $10,000 per violation. Delaware has the lowest coverage thresholds of any state.",
+  },
+  "multi-state-profiling-assessment": {
+    title: "Your Multi-State Profiling Assessment Bundle",
+    statute: "15+ State Consumer Privacy Laws Requiring Data Protection Assessments",
+    description:
+      "multi-state data protection assessment templates covering all major state consumer privacy laws requiring documented profiling assessments. Review each document with your legal team before deployment and verify applicability thresholds for each state.",
+    steps: [
+      "<strong>Complete the Threshold Analysis Worksheet</strong> to confirm which state laws apply to your organization.",
+      "<strong>Review the State Comparison Matrix</strong> to understand each state\u2019s penalties, cure periods, and enforcement mechanisms.",
+      "<strong>Complete the Multi-State Data Protection Assessment</strong> for each covered processing activity (profiling, targeted advertising, data sales, sensitive data).",
+      "<strong>Update your Privacy Notice</strong> using the Multi-State Privacy Notice Template to cover all applicable states.",
+      "<strong>File everything.</strong> State AGs may request assessment documentation. These documents demonstrate compliance.",
+    ],
+    reminder:
+      "State consumer privacy laws are enacted and enforced independently. Key active laws: Texas TDPSA (eff. Jul 1, 2024), Delaware PDPA (eff. Jan 1, 2025), Minnesota MCDPA (eff. Jul 31, 2025). Penalties range from $7,500 (TX) to $25,000 per willful violation (MN). Verify current status of each law with qualified legal counsel.",
+  },
+  "multi-state-employer-ai-disclosure": {
+    title: "Your Multi-State Employer AI Disclosure Kit",
+    statute: "IL 775 ILCS 5/2-102(L) + NYC Admin. Code \u00A7\u00A7 20-870\u201320-874 + CO C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    description:
+      "multi-jurisdiction employer AI disclosure templates covering Illinois HB3773, NYC Local Law 144, and Colorado SB24-205. Review each document with your legal team before deployment. Each jurisdiction enforces independently.",
+    steps: [
+      "<strong>Review the Multi-Jurisdiction Compliance Matrix</strong> to confirm which of the three laws applies to your organization.",
+      "<strong>Distribute the Unified Employee/Candidate Notification</strong> and applicable State-Specific Addenda to employees and job applicants before using AI in employment decisions.",
+      "<strong>Schedule your annual NYC LL144 bias audit</strong> using the Bias Audit Cross-Reference Guide \u2014 required annually before using any AEDT in NYC.",
+      "<strong>Implement the Multi-State Record Retention Policy</strong> to ensure compliance documents are preserved for the required period in each jurisdiction.",
+    ],
+    reminder:
+      "Illinois HB3773 has been in effect since January 1, 2026. NYC Local Law 144 enforcement began July 5, 2023; DCWP proactive investigations increased in 2026. Colorado SB24-205 takes effect June 30, 2026 (per SB 25B-004). IL penalties: up to $70,000 per violation. NYC penalties: up to $1,500/violation/day. CO penalties: up to $20,000 per violation.",
+  },
   "minnesota-mcdpa": {
     title: "Your Minnesota MCDPA Compliance Package",
     statute: "Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21",
