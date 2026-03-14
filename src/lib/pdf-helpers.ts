@@ -122,6 +122,30 @@ const REGULATION_HEADER: Record<
     rules:
       "Enforcement: Minnesota Attorney General (exclusive authority, \u00A7 325M.20(b)). 30-day cure period expired January 31, 2026.",
   },
+  "texas-tdpsa": {
+    statute:
+      "Statute: Tex. Bus. & Com. Code Ch. 541 (Texas Data Privacy and Security Act, HB 4, eff. 7-1-24)",
+    rules:
+      "Enforcement: Texas Attorney General only (\u00A7 541.151). No private right of action. Permanent 30-day cure period (\u00A7 541.154). Separate from Texas TRAIGA (HB 149, Ch. 551\u2013554).",
+  },
+  "delaware-pdpa": {
+    statute:
+      "Statute: Del. Code tit. 6, ch. 12D, \u00A7\u00A7 12D-101 through 12D-111 (Delaware Personal Data Privacy Act, HB 154, eff. 1-1-25)",
+    rules:
+      "Enforcement: Delaware Attorney General (\u00A7 12D-111). No private right of action. 60-day cure period until Dec 31, 2025; AG discretion after. Lowest thresholds of any state (35,000 consumers).",
+  },
+  "multi-state-profiling-assessment": {
+    statute:
+      "Framework: Multi-State Data Protection Assessment \u2014 VA, CT, CO, OR, TX, MT, DE, MN, MD, IN + additional states",
+    rules:
+      "Each state law is independently enacted and enforced. Verify applicability thresholds and cure periods for each state. Consult qualified legal counsel.",
+  },
+  "multi-state-employer-ai-disclosure": {
+    statute:
+      "Framework: IL 775 ILCS 5/2-102(L) (eff. 1-1-26) + NYC Admin. Code \u00A7\u00A7 20-870\u201320-874 (eff. 7-5-23) + CO C.R.S. \u00A7\u00A7 6-1-1701\u20131707 (eff. 6-30-26)",
+    rules:
+      "Each jurisdiction enforces independently. Verify current status of each law. IL IDHR rules in development. CO SB 25B-004 extended CO effective date to June 30, 2026.",
+  },
   "california-ccpa-admt": {
     statute:
       "Statute: Cal. Civ. Code \u00A7 1798.100 et seq. + CPPA ADMT Regulations (eff. 1-1-26)",
