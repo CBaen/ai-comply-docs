@@ -40,7 +40,7 @@ export default function RegulationsIndexPage() {
           <div className="max-w-5xl mx-auto px-4">
             <div className="inline-flex items-center gap-2 border border-blue-400/40 px-4 py-1.5 mb-5 text-sm rounded text-blue-200">
               <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
-              {regulations.length} compliance packages available
+              {regulations.filter(r => r.ready).length} compliance packages available
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold font-display text-white mb-4 leading-tight tracking-tight">
               AI Compliance Templates
