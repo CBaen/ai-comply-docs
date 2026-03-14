@@ -42,13 +42,17 @@ export const DATA_INPUT_LABELS: Record<string, string> = {
 };
 
 export const PROTECTED_LABELS: Record<string, string> = {
-  race: "Race / Ethnicity",
+  race: "Race / Color / Ethnicity",
   gender: "Gender / Sex",
+  sexual_orientation: "Sexual orientation / Gender identity",
   age: "Age",
   disability: "Disability status",
   religion: "Religion",
-  national_origin: "National origin",
+  national_origin: "National origin / Ancestry",
   pregnancy: "Pregnancy status",
+  marital_status: "Marital / Family status",
+  military: "Military status / Discharge",
+  citizenship: "Citizenship / Work authorization",
   none: "None of the above",
 };
 
