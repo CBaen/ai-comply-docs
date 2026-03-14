@@ -88,6 +88,36 @@ export async function generateDocuments(
     return docs;
   }
 
+  if (data.regulation === "minnesota-mcdpa") {
+    const mn = await import("./pdf-minnesota-mcdpa");
+    return [
+      {
+        doc: mn.generatePrivacyNotice(data),
+        name: `${companySlug}_MN_Privacy_Notice.pdf`,
+      },
+      {
+        doc: mn.generateDPIA(data),
+        name: `${companySlug}_MN_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: mn.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_MN_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: mn.generateProfilingOptOut(data),
+        name: `${companySlug}_MN_Profiling_Opt_Out.pdf`,
+      },
+      {
+        doc: mn.generateDataProcessingAgreement(data),
+        name: `${companySlug}_MN_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: mn.generateComplianceChecklist(data),
+        name: `${companySlug}_MN_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
   if (data.regulation === "colorado-sb24-205") {
     const co = await import("./pdf-colorado");
     const docs: GeneratedDoc[] = [
@@ -125,6 +155,40 @@ export async function generateDocuments(
       },
     ];
     return docs;
+  }
+
+  if (data.regulation === "nyc-local-law-144") {
+    const nyc = await import("./pdf-nyc-ll144");
+    return [
+      {
+        doc: nyc.generateBiasAuditSummary(data),
+        name: `${companySlug}_NYC_LL144_Bias_Audit_Summary.pdf`,
+      },
+      {
+        doc: nyc.generateCandidateNotification(data),
+        name: `${companySlug}_NYC_LL144_Candidate_Notification.pdf`,
+      },
+      {
+        doc: nyc.generateBiasAuditReport(data),
+        name: `${companySlug}_NYC_LL144_Bias_Audit_Report.pdf`,
+      },
+      {
+        doc: nyc.generateBiasAuditChecklist(data),
+        name: `${companySlug}_NYC_LL144_Bias_Audit_Checklist.pdf`,
+      },
+      {
+        doc: nyc.generateDataRetentionDisclosure(data),
+        name: `${companySlug}_NYC_LL144_Data_Retention_Disclosure.pdf`,
+      },
+      {
+        doc: nyc.generateAlternativeProcessDocumentation(data),
+        name: `${companySlug}_NYC_LL144_Alternative_Process_Documentation.pdf`,
+      },
+      {
+        doc: nyc.generateDataRetentionPolicy(data),
+        name: `${companySlug}_NYC_LL144_Data_Retention_Policy.pdf`,
+      },
+    ];
   }
 
   // Default: Illinois
