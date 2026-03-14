@@ -124,6 +124,9 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "checklist_next_review", "Next Review Date:", y, { width: 60 });
   y = addFormTextField(doc, "checklist_signature", "Signature:", y, { width: 100 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ms_checklist", y);
+
   addDisclaimer(doc);
   return doc;
 }

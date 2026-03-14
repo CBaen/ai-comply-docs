@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================

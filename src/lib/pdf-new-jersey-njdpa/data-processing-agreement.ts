@@ -118,6 +118,11 @@ export function generateDataProcessingAgreement(
   y = addFormTextField(doc, "processor_name_sig", "Processor Name/Title:", y);
   y = addFormTextField(doc, "processor_sig_date", "Date:", y);
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nj_controller", y);
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nj_processor", y);
+
   addDisclaimer(doc);
   return doc;
 }

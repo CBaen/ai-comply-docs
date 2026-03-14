@@ -140,6 +140,9 @@ export function generateDataProtectionAssessment(data: ComplianceFormData): jsPD
     LINE_HEIGHT
   );
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ky_dpa", y);
+
   addDisclaimer(doc);
   return doc;
 }

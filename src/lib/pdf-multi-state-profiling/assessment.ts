@@ -146,6 +146,9 @@ export function generateMultiStateAssessment(data: ComplianceFormData): jsPDF {
     LINE_HEIGHT
   );
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ms_assess", y);
+
   addDisclaimer(doc);
   return doc;
 }

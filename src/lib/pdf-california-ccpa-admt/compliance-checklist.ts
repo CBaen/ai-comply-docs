@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -142,6 +143,9 @@ export function generateCCPAADMTChecklist(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "checklist_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "checklist_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "checklist_signature", "Signature:", y, { width: 100 });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ca_checklist", y);
 
   addDisclaimer(doc);
   return doc;

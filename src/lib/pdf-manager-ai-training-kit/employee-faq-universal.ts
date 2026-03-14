@@ -9,6 +9,7 @@ import {
   addSectionHeader,
   addWrappedText,
   addDisclaimer,
+  addFormTextField,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -45,7 +46,7 @@ export function generateEmployeeFAQUniversal(data: ComplianceFormData): jsPDF {
     },
     {
       q: "Q3: Is the company using AI to evaluate my performance?",
-      a: "A: [Fill in: Yes / No / Partially]. If AI tools play any role in performance evaluation at " +
+      a: "A: {{AI_PERF_EVAL}}. If AI tools play any role in performance evaluation at " +
         data.company.name +
         ", those tools assist the review process — a qualified human manager makes every final performance decision. AI output is never the sole basis for any consequential decision about your employment. You have the right to ask your HR representative about any AI tools used in your performance evaluation.",
     },
@@ -77,7 +78,10 @@ export function generateEmployeeFAQUniversal(data: ComplianceFormData): jsPDF {
     },
     {
       q: "Q10: Who do I contact if I have a question the FAQ doesn't cover?",
-      a: "A: Contact your manager first. If your manager can't answer it, reach out to our AI compliance contact: [Name, Title, Email]. For urgent concerns — such as a data incident or suspected policy violation — report immediately using the AI Incident Reporting Form available at [location].",
+      a: "A: Contact your manager first. If your manager can't answer it, reach out to our AI compliance contact: " +
+        (data.contact?.name || "{{AI_CONTACT}}") +
+        (data.contact?.email ? " (" + data.contact.email + ")" : "") +
+        ". For urgent concerns — such as a data incident or suspected policy violation — report immediately using the AI Incident Reporting Form available at {{FORM_LOCATION}}.",
     },
   ];
 
@@ -96,6 +100,22 @@ export function generateEmployeeFAQUniversal(data: ComplianceFormData): jsPDF {
     y = addWrappedText(doc, faq.a, MARGIN + 3, y, CONTENT_WIDTH - 3, LINE_HEIGHT);
     y += LINE_HEIGHT;
   });
+
+  // ── Fill-In Fields ────────────────────────────────────────
+  if (y > 200) { doc.addPage(); y = MARGIN; }
+  y = addSectionHeader(doc, "Customize Before Distribution", y);
+  y = addWrappedText(
+    doc,
+    "Fill in these fields, then find and replace the matching {{placeholders}} in the FAQ text above:",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += 2;
+  y = addFormTextField(doc, "faq_ai_perf_eval", "{{AI_PERF_EVAL}} — Does the company use AI in performance evaluation? (Yes / No / Partially):", y);
+  y = addFormTextField(doc, "faq_ai_contact", "{{AI_CONTACT}} — AI compliance contact name, title, email:", y);
+  y = addFormTextField(doc, "faq_form_location", "{{FORM_LOCATION}} — Where is the AI Incident Reporting Form available?:", y);
 
   // ── Document Information ───────────────────────────────────
   if (y > 240) { doc.addPage(); y = MARGIN; }

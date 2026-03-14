@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -143,6 +144,9 @@ export function generateADMTRiskAssessment(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "ra_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "ra_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "ra_next_review", "Next Review Date:", y, { width: 60 });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ca_risk", y);
 
   addDisclaimer(doc);
   return doc;

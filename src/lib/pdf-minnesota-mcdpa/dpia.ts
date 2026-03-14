@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -127,9 +128,6 @@ export function generateDPIA(data: ComplianceFormData): jsPDF {
   });
 
   y = addSectionHeader(doc, "Assessment Review and Approval", y);
-  y = addFormTextField(doc, "review_name", "Reviewed By (Name/Title):", y);
-  y = addFormTextField(doc, "review_date", "Review Date:", y);
-  y = addFormTextField(doc, "review_signature", "Signature:", y);
   y = addWrappedText(
     doc,
     "Recommended Best Practice \u2014 not a statutory mandate: review DPIAs annually and when processing activities change significantly.",
@@ -138,6 +136,10 @@ export function generateDPIA(data: ComplianceFormData): jsPDF {
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
+  y += LINE_HEIGHT;
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "mn_dpia", y);
 
   addDisclaimer(doc);
   return doc;

@@ -11,6 +11,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -171,6 +172,9 @@ export function generateCORecordRetention(data: ComplianceFormData): jsPDF {
     { prefill: data.contact ? data.contact.name || '' : '' });
   y = addFormTextField(doc, 'co_rr_approval_date', 'Approval Date:', y, { prefill: data.generatedDate || '' });
   y = addFormTextField(doc, 'co_rr_next_review', 'Date of Next Review:', y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "co_retention", y);
 
   addDisclaimer(doc);
   return doc;

@@ -113,6 +113,11 @@ export function generateDataProtectionAssessment(data: ComplianceFormData): jsPD
     LINE_HEIGHT
   );
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "de_controller", y);
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "de_processor", y);
+
   addDisclaimer(doc);
   return doc;
 }

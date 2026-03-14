@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -173,6 +174,9 @@ export function generateADMTImpactAssessment(data: ComplianceFormData): jsPDF {
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ca_admt_impact", y);
 
   addDisclaimer(doc);
   return doc;

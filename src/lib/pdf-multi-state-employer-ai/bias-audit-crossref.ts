@@ -100,6 +100,9 @@ export function generateBiasAuditCrossRef(data: ComplianceFormData): jsPDF {
     readOnly: false,
   });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "mse_crossref", y);
+
   addDisclaimer(doc);
   return doc;
 }

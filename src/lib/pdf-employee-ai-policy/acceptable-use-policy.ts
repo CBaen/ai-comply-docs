@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -647,6 +648,9 @@ export function generateAcceptableUsePolicy(data: ComplianceFormData): jsPDF {
     y
   );
   y = addFormTextField(doc, "aup_legal_approver", "Legal Counsel Review (Name & Date):", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "emp_aup", y);
 
   addDisclaimer(doc);
   return doc;
