@@ -7,7 +7,7 @@ import { regulations } from "@/data/regulations";
 export const metadata: Metadata = {
   title: "AI Compliance Documents — AI Compliance Documents Generated in Minutes",
   description:
-    "Generate state-specific AI compliance documents for Illinois, Colorado, Texas, California, and federal requirements. $299-$499 vs $5,000+ at a law firm. Instant download.",
+    "Generate state-specific AI compliance documentation templates for Illinois, Colorado, and federal AI requirements. Templates based on enacted statute text. Instant download.",
   keywords: [
     "ai compliance",
     "ai regulation",
@@ -86,7 +86,7 @@ function FAQStructuredData() {
         name: "How much do lawyers charge for this?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Employment law attorneys typically charge $300–600 per hour. A custom AI compliance package can cost $5,000–$25,000 from a law firm. AI Compliance Documents generates comparable documentation for $299–$499.",
+          text: "AI Compliance Documents generates compliance documentation templates for $149–$499. These are templates based on enacted statute text, not custom legal advice. Consult a licensed attorney to verify applicability to your situation.",
         },
       },
     ],
@@ -227,7 +227,7 @@ export default function Home() {
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
-                <span>$299&ndash;$499 vs $5,000+ legal fees</span>
+                <span>$149&ndash;$499, instant download</span>
               </div>
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
               <div className="flex items-center gap-2">
@@ -267,7 +267,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-bold text-lg font-display mb-2 text-gray-900">State Enforcement</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Attorney General offices and state agencies can investigate and issue civil penalties ranging from $7,500 to $200,000 per violation depending on the state.
+                  Attorney General offices and state commissions can investigate complaints and impose civil penalties ranging from $7,500 to $200,000 per violation depending on the state.
                 </p>
               </div>
               <div className="bg-slate-100 border border-slate-200 rounded p-6 border-l-4 border-l-slate-400">
@@ -276,7 +276,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-bold text-lg font-display mb-2 text-gray-900">Legal Fees to Fix It Later</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Reacting to a complaint costs $5,000&ndash;$25,000 in legal fees &mdash; minimum. Having the right documents in place costs $299&ndash;$499.
+                  Reacting to a complaint costs thousands in legal fees. Having compliance documentation in place costs $149&ndash;$499.
                 </p>
               </div>
             </div>
@@ -406,7 +406,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  Employment law attorneys typically charge $300&ndash;600 per hour. A custom AI compliance package can cost $5,000&ndash;$25,000 from a law firm. AI Compliance Documents generates comparable documentation for $299&ndash;$499.
+                  AI Compliance Documents generates compliance documentation templates for $149&ndash;$499. These are templates based on enacted statute text, not custom legal advice. Consult a licensed attorney to verify applicability to your situation.
                 </div>
               </details>
             </div>

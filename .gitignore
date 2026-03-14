@@ -1,6 +1,11 @@
 node_modules/
 .next/
 out/
+.env
+.env.local
+.env.production
+.env*.local
+tsconfig.tsbuildinfo
 
 # Screenshots from testing
 screenshot_*.png
