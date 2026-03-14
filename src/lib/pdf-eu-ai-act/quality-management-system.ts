@@ -171,6 +171,9 @@ export function generateQualityManagementSystem(data: ComplianceFormData): jsPDF
     LINE_HEIGHT
   );
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_qms", y);
+
   addDisclaimer(doc);
   return doc;
 }

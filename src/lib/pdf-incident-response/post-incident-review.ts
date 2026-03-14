@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -471,6 +472,9 @@ export function generatePostIncidentReview(data: ComplianceFormData): jsPDF {
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "inc_review", y);
 
   addDisclaimer(doc);
   return doc;

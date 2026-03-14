@@ -165,6 +165,9 @@ export function generateHumanOversight(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "ho_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "ho_date", "Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_oversight", y);
+
   addDisclaimer(doc);
   return doc;
 }

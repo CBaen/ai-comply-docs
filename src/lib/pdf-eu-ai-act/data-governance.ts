@@ -154,6 +154,9 @@ export function generateDataGovernance(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "dg_name", "Completed by:", y, { width: 100 });
   y = addFormTextField(doc, "dg_date", "Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_datgov", y);
+
   addDisclaimer(doc);
   return doc;
 }

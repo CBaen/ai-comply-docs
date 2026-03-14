@@ -170,6 +170,9 @@ export function generateRiskManagementSystem(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "rms_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "rms_date", "Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_rms", y);
+
   addDisclaimer(doc);
   return doc;
 }

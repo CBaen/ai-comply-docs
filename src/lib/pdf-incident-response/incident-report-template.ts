@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -535,6 +536,9 @@ export function generateIncidentReportTemplate(
     y = addFormTextField(doc, signoff.field + "_sig", "Signature:", y, { x: MARGIN + 3 });
     y += 4;
   });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "inc_report", y);
 
   addDisclaimer(doc);
   return doc;

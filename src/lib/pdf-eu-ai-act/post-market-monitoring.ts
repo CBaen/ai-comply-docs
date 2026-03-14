@@ -157,6 +157,9 @@ export function generatePostMarketMonitoring(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "pmm_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "pmm_next_review", "Next plan review date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_postmarket", y);
+
   addDisclaimer(doc);
   return doc;
 }

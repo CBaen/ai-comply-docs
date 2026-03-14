@@ -10,6 +10,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================

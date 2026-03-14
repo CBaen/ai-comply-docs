@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -185,6 +186,9 @@ export function generateAnnualReviewChecklist(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "arc_signoff_date", "Date:", y);
   y += LINE_HEIGHT;
   y = addFormTextField(doc, "arc_next_review", "Date of Next Scheduled Annual Review:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ann_review", y);
 
   addDisclaimer(doc);
   return doc;

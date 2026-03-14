@@ -167,6 +167,9 @@ export function generateTransparencyDisclosures(data: ComplianceFormData): jsPDF
   y = addFormTextField(doc, "td_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "td_date", "Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_transp", y);
+
   addDisclaimer(doc);
   return doc;
 }

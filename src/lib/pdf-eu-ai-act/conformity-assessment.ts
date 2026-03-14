@@ -157,6 +157,9 @@ export function generateConformityAssessment(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "ca_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "ca_date", "Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_conform", y);
+
   addDisclaimer(doc);
   return doc;
 }

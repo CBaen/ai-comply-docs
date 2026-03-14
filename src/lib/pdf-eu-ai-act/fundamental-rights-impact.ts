@@ -207,6 +207,9 @@ export function generateFundamentalRightsImpact(
     LINE_HEIGHT
   );
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eu_fria", y);
+
   addDisclaimer(doc);
   return doc;
 }

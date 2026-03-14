@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -684,6 +685,9 @@ export function generateAIIncidentResponsePlan(
     );
     y += 2;
   });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "inc_plan", y);
 
   addDisclaimer(doc);
   return doc;

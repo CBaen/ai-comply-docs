@@ -10,6 +10,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -197,6 +198,9 @@ export function generateUpdateLog(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "ul_cert_name", "Compliance Program Administrator (Name & Title):", y);
   y = addFormTextField(doc, "ul_cert_sig", "Signature:", y);
   y = addFormTextField(doc, "ul_cert_date", "Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ann_log", y);
 
   addDisclaimer(doc);
   return doc;
