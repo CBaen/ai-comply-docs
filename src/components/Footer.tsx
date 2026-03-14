@@ -35,7 +35,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/regulations"
+                  href="/#products"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   All Products
@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/news"
+                  href="/blog"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   News

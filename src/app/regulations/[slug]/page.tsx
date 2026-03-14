@@ -23,6 +23,9 @@ export async function generateMetadata({
     title: `${reg.name} — Compliance Documents`,
     description: reg.description,
     keywords: reg.keywords,
+    alternates: {
+      canonical: `/regulations/${reg.slug}`,
+    },
     openGraph: {
       title: `${reg.name} — AI Compliance Documents`,
       description: reg.description,

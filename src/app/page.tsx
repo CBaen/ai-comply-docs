@@ -31,6 +31,20 @@ export const metadata: Metadata = {
   },
 };
 
+function OrganizationStructuredData() {
+  const data = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "AI Compliance Documents",
+    url: "https://aicompliancedocuments.com",
+    email: "info@aicompliancedocuments.com",
+    description:
+      "AI compliance documentation templates for US state and federal AI regulations.",
+  });
+
+  return <script type="application/ld+json">{data}</script>;
+}
+
 function FAQStructuredData() {
   const data = JSON.stringify({
     "@context": "https://schema.org",
@@ -101,6 +115,7 @@ function FAQStructuredData() {
 export default function Home() {
   return (
     <>
+      <OrganizationStructuredData />
       <FAQStructuredData />
       <Nav />
       <main id="main-content">
