@@ -3,3 +3,6 @@ export { generateBiasAuditSummary } from "./bias-audit-summary";
 export { generateCandidateNotification } from "./candidate-notification";
 export { generateDataRetentionPolicy } from "./data-retention-policy";
 export { generateAlternativeSelection } from "./alternative-selection";
+export { generateBiasAuditChecklist } from "./bias-audit-checklist";
+export { generateDataRetentionDisclosure } from "./data-retention-disclosure";
+export { generateAlternativeProcessDocumentation } from "./alternative-process-documentation";
