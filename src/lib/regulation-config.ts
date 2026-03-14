@@ -8,7 +8,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
     lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
-      'I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I understand that the IDHR implementing rules (Subpart J) are proposed and pending formal adoption, and that I should verify the current regulatory status and consult qualified legal counsel.',
+      'I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I understand that IDHR is currently developing implementing rules but has not yet published proposed rules. The notice elements in these templates are best-practice recommendations based on the statutory text. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.',
     basePrice: 299,
     trainingKitAvailable: true,
     trainingKitPrice: 47,
@@ -45,7 +45,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       step4Help:
         "This section captures how your company uses AI outputs and who oversees the process. Illinois law requires that AI not have a discriminatory effect \u2014 having strong human oversight is a key safeguard.",
       step5Intro:
-        "This information will appear on your compliance documents as specified by proposed IDHR Subpart J notice element 5.",
+        "This information will appear on your compliance documents as the designated contact for AI-related inquiries, consistent with the statutory notice requirement in 775 ILCS 5/2-102(L)(2).",
     },
   },
   "colorado-sb24-205": {

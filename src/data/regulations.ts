@@ -185,7 +185,7 @@ export const regulations: Regulation[] = [
     stripePriceId: "price_1RGHfHP8GJFDgsBh5s78HooB",
     documentCount: 6,
     description: "Compliance documentation templates for Illinois employers using AI in employment decisions. Addresses 775 ILCS 5/2-102(L) statutory requirements. Includes recommended best-practice notice elements based on the statutory text. IDHR implementing rules are in development but have not been published.",
-    penaltySummary: "IDHR civil penalties per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425): up to $16,000 (first violation), $42,500 (second within 5 years), $70,000 (two+ within 7 years). Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
+    penaltySummary: "Civil penalties imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425): up to $16,000 (first violation), $42,500 (second within 5 years), $70,000 (two+ within 7 years). IDHR investigates charges; the Commission imposes penalties. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
     maxPenalty: "$70,000 per violation",
     appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, discharge, discipline, tenure, or terms/conditions of employment.",
     keywords: ["illinois", "hb3773", "ai hiring", "employment", "idhr", "775 ilcs"],

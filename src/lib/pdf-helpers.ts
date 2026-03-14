@@ -74,7 +74,7 @@ const REGULATION_HEADER: Record<
     statute:
       "Statute: 775 ILCS 5/2-102(L) \u2014 Use of Artificial Intelligence (P.A. 103-804, eff. 1-1-26)",
     rules:
-      "IDHR implementing rules: 56 Ill. Adm. Code Part 2520, Subpart J (proposed rules, pending formal adoption)",
+      "IDHR implementing rules: In development (not yet published as of March 2026). Monitor dhr.illinois.gov for updates.",
   },
   "colorado-sb24-205": {
     statute:

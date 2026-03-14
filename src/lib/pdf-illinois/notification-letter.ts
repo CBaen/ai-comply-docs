@@ -29,7 +29,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
     y
   );
 
-  const intro = `Dear Employee/Applicant,\n\nPursuant to 775 ILCS 5/2-102(L)(2) (P.A. 103-804, eff. January 1, 2026), ${data.company.name} is providing this notice regarding our use of artificial intelligence ("AI") in employment-related decisions. Section 2-102(L)(2) makes it a civil rights violation "for an employer to fail to provide notice to an employee that the employer is using artificial intelligence" in covered employment decisions. This notice discloses, consistent with the statute and proposed IDHR implementing rules (56 Ill. Adm. Code Part 2520, Subpart J): (1) the AI systems we use and their developers/vendors, (2) the employment decisions these systems influence or facilitate, (3) the categories of data processed, and (4) your rights under Illinois law.`;
+  const intro = `Dear Employee/Applicant,\n\nPursuant to 775 ILCS 5/2-102(L)(2) (P.A. 103-804, eff. January 1, 2026), ${data.company.name} is providing this notice regarding our use of artificial intelligence ("AI") in employment-related decisions. Section 2-102(L)(2) makes it a civil rights violation "for an employer to fail to provide notice to an employee that the employer is using artificial intelligence" in covered employment decisions. This notice discloses, based on 775 ILCS 5/2-102(L)(2) statutory requirements and recommended best practices: (1) the AI systems we use and their developers/vendors, (2) the employment decisions these systems influence or facilitate, (3) the categories of data processed, and (4) your rights under Illinois law.`;
   y = addWrappedText(doc, intro, MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
   y += LINE_HEIGHT;
 
@@ -49,7 +49,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
     );
     doc.setFont("helvetica", "normal");
 
-    // Developer/Vendor (per proposed IDHR Subpart J draft rules, pending final adoption)
+    // Developer/Vendor (recommended best practice based on 775 ILCS 5/2-102(L) statutory text)
     y = addWrappedText(
       doc,
       `Developer/Vendor: ${sys.vendor || "Internal system"}`,
@@ -59,7 +59,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
       LINE_HEIGHT
     );
 
-    // Purpose and data categories (per proposed IDHR Subpart J draft rules, pending final adoption)
+    // Purpose and data categories (recommended best practice based on 775 ILCS 5/2-102(L) statutory text)
     if (sys.description) {
       y = addWrappedText(
         doc,
@@ -71,7 +71,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
       );
     }
 
-    // Employment decisions influenced (per proposed IDHR Subpart J draft rules, pending final adoption)
+    // Employment decisions influenced (recommended best practice based on 775 ILCS 5/2-102(L) statutory text)
     if (sys.decisions.length > 0) {
       const decText =
         "Employment decisions influenced or facilitated: " +
@@ -86,7 +86,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
       );
     }
 
-    // Categories of data processed (per proposed IDHR Subpart J draft rules, pending final adoption)
+    // Categories of data processed (recommended best practice based on 775 ILCS 5/2-102(L) statutory text)
     if (data.dataInputs.length > 0) {
       const dataText =
         "Categories of personal/employee data processed: " +
@@ -103,7 +103,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
     y += 4;
   });
 
-  // Job positions where AI is used (per proposed IDHR Subpart J draft rules, pending final adoption)
+  // Job positions where AI is used (recommended best practice based on 775 ILCS 5/2-102(L) statutory text)
   y = addSectionHeader(doc, "Positions Where AI Is Used", y);
   y = addWrappedText(
     doc,
@@ -142,7 +142,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
   );
   y += LINE_HEIGHT;
 
-  // Anti-discrimination statement — obligation from 775 ILCS 5/2-102(L)(1); format per proposed Subpart J
+  // Anti-discrimination statement — obligation from 775 ILCS 5/2-102(L)(1)
   y = addSectionHeader(doc, "Non-Discrimination Statement", y);
   y = addWrappedText(
     doc,
@@ -174,11 +174,11 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
   );
   y += LINE_HEIGHT;
 
-  // Reasonable accommodation rights (per proposed IDHR rules and existing IHRA obligations)
+  // Reasonable accommodation rights (existing IHRA obligations)
   y = addSectionHeader(doc, "Reasonable Accommodation", y);
   y = addWrappedText(
     doc,
-    `Consistent with IDHR's proposed implementing rules (Subpart J) and existing IHRA reasonable accommodation obligations, you may request a reasonable accommodation regarding AI-assisted employment processes. To request an accommodation, contact:`,
+    `Consistent with existing IHRA reasonable accommodation obligations (disability, pregnancy, religion), you may request a reasonable accommodation regarding AI-assisted employment processes. To request an accommodation, contact:`,
     MARGIN,
     y,
     CONTENT_WIDTH,
