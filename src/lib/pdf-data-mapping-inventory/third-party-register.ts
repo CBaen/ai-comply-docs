@@ -10,6 +10,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -163,6 +164,9 @@ export function generateThirdPartyRegister(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "tpr_cert_name", "Completed By (Name, Title):", y);
   y = addFormTextField(doc, "tpr_cert_sig", "Signature:", y);
   y = addFormTextField(doc, "tpr_cert_date", "Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "dmi_thirdp", y);
 
   addDisclaimer(doc);
   return doc;

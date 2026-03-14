@@ -192,6 +192,9 @@ export function generateCFPBUDAAPCompliance(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "udaap_next_review", "Next Annual Review Date:", y);
   y = addFormTextField(doc, "udaap_counsel", "Legal Counsel Review (Name/Firm):", y);
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "fin_cfpb", y);
+
   addDisclaimer(doc);
   return doc;
 }

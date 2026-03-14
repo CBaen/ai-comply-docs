@@ -182,6 +182,9 @@ export function generateCustomerDisclosure(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "disclosure_effective", "Effective Date:", y, { width: 60 });
   y = addFormTextField(doc, "disclosure_next_review", "Next Review Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "fin_disc", y);
+
   addDisclaimer(doc);
   return doc;
 }

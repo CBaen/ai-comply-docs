@@ -153,6 +153,9 @@ export function generateVendorDueDiligenceFinancial(data: ComplianceFormData): j
   y = addFormTextField(doc, "dd_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "dd_next_review", "Next Annual Review Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "fin_vdd", y);
+
   addDisclaimer(doc);
   return doc;
 }

@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -120,6 +121,9 @@ export function generateAIRiskManagementPlan(data: ComplianceFormData): jsPDF {
     readOnly: false,
   });
   y = addFormTextField(doc, "plan_approval_date", "Approval Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nist_rmp", y);
 
   addDisclaimer(doc);
   return doc;

@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -175,6 +176,9 @@ export function generateDataInventory(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "di_cert_name", "Certified By (Name, Title):", y);
   y = addFormTextField(doc, "di_cert_sig", "Signature:", y);
   y = addFormTextField(doc, "di_cert_date", "Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "dmi_inv", y);
 
   addDisclaimer(doc);
   return doc;

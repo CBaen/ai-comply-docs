@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -121,6 +122,9 @@ export function generateExecutiveSummary(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "es_approve_name", "Approved By (Name & Title):", y);
   y = addFormTextField(doc, "es_approve_sig", "Signature:", y);
   y = addFormTextField(doc, "es_approve_date", "Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "board_exec", y);
 
   addDisclaimer(doc);
   return doc;

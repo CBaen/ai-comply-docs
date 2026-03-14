@@ -127,6 +127,9 @@ export function generateFinancialServicesChecklist(data: ComplianceFormData): js
   y = addFormTextField(doc, "checklist_title", "Title/CRD:", y, { width: 100 });
   y = addFormTextField(doc, "checklist_signature", "Signature:", y, { width: 100 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "fin_checklist", y);
+
   addDisclaimer(doc);
   return doc;
 }

@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -147,6 +148,9 @@ export function generateRiskProfile(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "profile_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "profile_exec_sponsor", "Executive Sponsor:", y, { width: 120 });
   y = addFormTextField(doc, "profile_next_review", "Next Review Date:", y, { width: 60 });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nist_profile", y);
 
   addDisclaimer(doc);
   return doc;

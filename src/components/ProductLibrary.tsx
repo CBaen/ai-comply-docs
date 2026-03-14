@@ -89,7 +89,7 @@ function DeadlineBanner({
 
   return (
     <div className="bg-red-50 border border-red-200 rounded-lg p-5 mb-8">
-      <div className="flex items-center gap-2 mb-3">
+      <div className="flex items-center gap-2 mb-1">
         <svg
           className="w-5 h-5 text-red-600 shrink-0"
           fill="none"
@@ -105,30 +105,37 @@ function DeadlineBanner({
           />
         </svg>
         <h3 className="font-bold text-red-900 font-display">
-          Upcoming Compliance Deadlines
+          These Laws Are In Effect Now — Penalties Are Live
         </h3>
       </div>
+      <p className="text-xs text-red-700/70 mb-3">
+        Last updated {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+      </p>
       <div className="grid sm:grid-cols-2 gap-3">
-        {urgent.map((r) => (
-          <Link
-            key={r.slug}
-            href={`/regulations/${r.slug}`}
-            className="flex items-center justify-between bg-white border border-red-100 rounded p-3 hover:border-red-300 transition group"
-          >
-            <div>
-              <p className="font-semibold text-gray-900 text-sm group-hover:text-blue-700 transition">
-                {r.shortName}
-              </p>
-              <p className="text-xs text-gray-500">{r.state}</p>
-            </div>
-            <div className="text-right shrink-0 ml-3">
-              <p className="text-sm font-bold text-red-700">
-                {r.effectiveDate}
-              </p>
-              <p className="text-xs text-gray-500">{r.maxPenalty}</p>
-            </div>
-          </Link>
-        ))}
+        {urgent.map((r) => {
+          const effectiveParsed = new Date(r.effectiveDate);
+          const isPast = !isNaN(effectiveParsed.getTime()) && effectiveParsed < new Date();
+          return (
+            <Link
+              key={r.slug}
+              href={`/regulations/${r.slug}`}
+              className="flex items-center justify-between bg-white border border-red-100 rounded p-3 hover:border-red-300 transition group"
+            >
+              <div>
+                <p className="font-semibold text-gray-900 text-sm group-hover:text-blue-700 transition">
+                  {r.shortName}
+                </p>
+                <p className="text-xs text-gray-500">{r.state}</p>
+              </div>
+              <div className="text-right shrink-0 ml-3">
+                <p className="text-sm font-bold text-red-700">
+                  {isPast ? "In effect since" : "Effective"} {r.effectiveDate}
+                </p>
+                <p className="text-xs text-gray-500">{r.maxPenalty}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

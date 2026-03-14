@@ -179,6 +179,9 @@ export function generateSupervisionPolicy(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "sup_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "sup_next_review", `Next Review Date (${freq}):`, y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "fin_supv", y);
+
   addDisclaimer(doc);
   return doc;
 }

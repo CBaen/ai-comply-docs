@@ -151,6 +151,9 @@ export function generateModelRiskDocumentation(data: ComplianceFormData): jsPDF 
   y = addFormTextField(doc, "inventory_date", "Inventory Date:", y, { width: 60 });
   y = addFormTextField(doc, "inventory_next_review", "Next Annual Review Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "fin_model", y);
+
   addDisclaimer(doc);
   return doc;
 }

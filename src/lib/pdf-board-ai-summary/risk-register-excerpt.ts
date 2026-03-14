@@ -10,6 +10,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -174,6 +175,9 @@ export function generateRiskRegisterExcerpt(data: ComplianceFormData): jsPDF {
 
   y = addFormTextField(doc, "rr_certifier_name", "Certified By (Name, Title):", y);
   y = addFormTextField(doc, "rr_certifier_date", "Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "board_risk", y);
 
   addDisclaimer(doc);
   return doc;
