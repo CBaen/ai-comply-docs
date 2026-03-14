@@ -47,6 +47,14 @@ export default function Footer() {
             <h4 className="font-bold text-sm text-gray-900 mb-3">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link
+                  href="/blog"
+                  className="text-gray-600 hover:text-blue-700 transition"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <a
                   href="mailto:info@aicompliancedocuments.com"
                   className="text-gray-600 hover:text-blue-700 transition"

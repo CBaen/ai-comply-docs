@@ -116,6 +116,13 @@ export default function Nav() {
               FAQ
             </a>
             <Link
+              href="/blog"
+              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              onClick={() => setMobileOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
               href="/about"
               className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
               onClick={() => setMobileOpen(false)}
