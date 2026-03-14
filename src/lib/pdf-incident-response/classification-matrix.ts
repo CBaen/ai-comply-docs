@@ -16,7 +16,7 @@ import {
 
 // ============================================================
 // DOCUMENT 2: Incident Classification Decision Matrix
-// Aligned with NIST AI RMF Manage function, California TFAIA,
+// Aligned with NIST AI RMF Manage function, California SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18),
 // and EU AI Act serious incident requirements
 // ============================================================
 export function generateClassificationMatrix(
@@ -321,7 +321,7 @@ export function generateClassificationMatrix(
     "Incident involves AI system used in healthcare, criminal justice, or child welfare",
     "Incident constitutes a HIPAA breach, GLBA incident, or state data breach notification trigger",
     "EU AI Act Article 3(49) serious incident definition is met (death, serious injury, etc.)",
-    "California TFAIA 15-day reporting clock has started or may have started",
+    "SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18) incident reporting requirements may be triggered (applies only to large frontier AI developers meeting specific compute and revenue thresholds — verify applicability and current reporting timeline with legal counsel)",
     "Incident Commander determines facts warrant Severity 1 response regardless of matrix score",
   ];
 

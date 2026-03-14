@@ -16,7 +16,7 @@ import {
 // ============================================================
 // DOCUMENT 4: Post-Incident Review Checklist
 // Aligned with NIST AI RMF Manage function and continuous
-// improvement requirements under California TFAIA and EU AI Act
+// improvement requirements under California SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18) and EU AI Act
 // ============================================================
 export function generatePostIncidentReview(data: ComplianceFormData): jsPDF {
   const doc = new jsPDF();
@@ -113,7 +113,7 @@ export function generatePostIncidentReview(data: ComplianceFormData): jsPDF {
     },
     {
       field: "pir_tl_reg_timelines",
-      label: "Regulatory timelines were met — all applicable reporting deadlines (California TFAIA 15-day window, EU AI Act Article 73, etc.) were identified and met",
+      label: "Regulatory timelines were met — all applicable reporting deadlines (SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18) incident reporting requirements (applies only to large frontier AI developers — verify applicability with legal counsel), EU AI Act Article 73, etc.) were identified and met",
     },
     {
       field: "pir_tl_investigation",

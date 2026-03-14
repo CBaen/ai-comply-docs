@@ -34,8 +34,9 @@ export function generateAIIncidentResponsePlan(
       "repeatable process for detecting, classifying, containing, investigating, and " +
       "recovering from incidents involving artificial intelligence systems. This Plan " +
       "aligns with the NIST AI Risk Management Framework (AI RMF 1.0) Manage function, " +
-      "California Transparency in Automated Decision-Making Act (TFAIA) incident " +
-      "reporting obligations, and EU AI Act serious incident reporting requirements " +
+      "California Transparency in Frontier AI Development Act (SB 53) (Cal. Bus. & Prof. Code §§ 22757.10-22757.18) " +
+      "incident reporting obligations (note: SB 53 applies only to large frontier AI developers meeting specific " +
+      "compute and revenue thresholds — verify applicability with legal counsel), and EU AI Act serious incident reporting requirements " +
       "(Article 73). It is a living document and must be reviewed annually and updated " +
       "after every Severity 1 or Severity 2 incident.",
     MARGIN,
@@ -248,7 +249,7 @@ export function generateAIIncidentResponsePlan(
         "Data breach via AI system (fewer than 1,000 individuals or uncertain scope)",
         "Unauthorized deployment of high-risk AI system",
         "AI system manipulation or adversarial attack detected",
-        "Incident likely to trigger California TFAIA 15-day reporting window",
+        "Incident likely to trigger SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18) incident reporting requirements (verify applicability and current reporting timeline with legal counsel)",
       ],
       response: "Urgent — IRT notified within 4 hours",
     },
@@ -374,8 +375,10 @@ export function generateAIIncidentResponsePlan(
     "Step 3 — Assessment & Investigation: Technical Lead leads root cause analysis. " +
       "Document: affected system, affected individuals/records, nature of harm, contributing " +
       "factors. Legal Counsel assesses regulatory notification obligations and timelines.",
-    "Step 4 — Regulatory Timeline Assessment: Legal Counsel confirms whether California " +
-      "TFAIA 15-day reporting window is triggered. Assess EU AI Act Article 73 serious " +
+    "Step 4 — Regulatory Timeline Assessment: Legal Counsel confirms whether SB 53 " +
+      "(Cal. Bus. & Prof. Code §§ 22757.10-22757.18) incident reporting requirements are triggered " +
+      "(applies only to large frontier AI developers meeting specific compute and revenue thresholds — " +
+      "verify applicability and current reporting timeline with legal counsel). Assess EU AI Act Article 73 serious " +
       "incident reporting obligation. Identify state AG notification requirements.",
     "Step 5 — Internal Communication: Brief executive leadership within 24 hours. " +
       "Document all communications. Maintain incident log with timestamps.",
@@ -483,13 +486,15 @@ export function generateAIIncidentResponsePlan(
 
   const regReqs = [
     {
-      title: "California TFAIA — 15-Day Reporting Window:",
+      title: "California SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18) — Incident Reporting Requirements:",
       body:
-        "The California Transparency in Automated Decision-Making Act imposes a 15-day " +
-        "reporting window for qualifying AI incidents. Upon identification of an incident " +
-        "that may trigger TFAIA reporting, Legal Counsel must immediately assess applicability " +
-        "and initiate the notification process. Day 1 begins on the date of identification. " +
-        "Verify current TFAIA reporting thresholds and recipient agency with Legal Counsel.",
+        "The California Transparency in Frontier AI Development Act (SB 53) establishes " +
+        "incident reporting requirements for qualifying AI incidents. IMPORTANT: SB 53 applies " +
+        "only to large frontier AI developers meeting specific compute and revenue thresholds — " +
+        "verify applicability with legal counsel. Upon identification of an incident that may " +
+        "trigger SB 53 reporting, Legal Counsel must immediately assess applicability and " +
+        "initiate the notification process if applicable. Verify current reporting timeline " +
+        "and recipient agency with legal counsel.",
     },
     {
       title: "EU AI Act — Serious Incident Reporting (Article 73):",

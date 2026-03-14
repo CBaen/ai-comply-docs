@@ -16,7 +16,7 @@ import {
 // ============================================================
 // DOCUMENT 3: AI Incident Report Template
 // Individual incident report form — one per incident
-// Aligned with NIST AI RMF Manage function, California TFAIA,
+// Aligned with NIST AI RMF Manage function, California SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18),
 // and EU AI Act serious incident requirements
 // ============================================================
 export function generateIncidentReportTemplate(
@@ -406,7 +406,7 @@ export function generateIncidentReportTemplate(
 
   y = addFormCheckbox(doc, "ir_notif_none", "None — no regulatory notification required (document basis for this determination)", y);
   y = addFormCheckbox(doc, "ir_notif_ag", "State Attorney General notification required", y);
-  y = addFormCheckbox(doc, "ir_notif_tfaia", "California TFAIA — 15-day reporting window triggered", y);
+  y = addFormCheckbox(doc, "ir_notif_tfaia", "California SB 53 (Cal. Bus. & Prof. Code §§ 22757.10-22757.18) — incident reporting requirements triggered (applies only to large frontier AI developers meeting specific compute and revenue thresholds — verify applicability and current reporting timeline with legal counsel)", y);
   y = addFormCheckbox(doc, "ir_notif_eu", "EU AI Act Article 73 — serious incident notification to national market surveillance authority", y);
   y = addFormCheckbox(doc, "ir_notif_hipaa", "HIPAA Breach Notification Rule", y);
   y = addFormCheckbox(doc, "ir_notif_glba", "GLBA Safeguards Rule", y);
