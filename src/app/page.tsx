@@ -200,53 +200,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Pain Section */}
-        <section className="py-16 bg-slate-50">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
-                What happens if you don&apos;t comply?
-              </h2>
-              <p className="text-gray-700 text-lg max-w-2xl">
-                AI regulations aren&apos;t suggestions. They&apos;re law, with real
-                enforcement teeth and penalties up to $200,000 per violation.
-              </p>
-            </div>
-            <hr className="border-t border-gray-200 my-4" />
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-red-50 border border-red-100 rounded p-6 border-l-4 border-l-red-400">
-                <div className="w-10 h-10 bg-red-100 rounded flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
-                </div>
-                <h3 className="font-bold text-lg font-display mb-2 text-gray-900">Employee Complaints</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Employees can file charges with state agencies, which may lead to civil penalties or civil court actions with actual damages. Attorney fees may be awarded at the adjudicator&apos;s discretion.
-                </p>
-              </div>
-              <div className="bg-amber-50 border border-amber-100 rounded p-6 border-l-4 border-l-amber-400">
-                <div className="w-10 h-10 bg-amber-100 rounded flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
-                </div>
-                <h3 className="font-bold text-lg font-display mb-2 text-gray-900">State Enforcement</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Attorney General offices and state commissions can investigate complaints and impose civil penalties ranging from $7,500 to $200,000 per violation depending on the state.
-                </p>
-              </div>
-              <div className="bg-slate-100 border border-slate-200 rounded p-6 border-l-4 border-l-slate-400">
-                <div className="w-10 h-10 bg-slate-200 rounded flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75" /></svg>
-                </div>
-                <h3 className="font-bold text-lg font-display mb-2 text-gray-900">Legal Fees to Fix It Later</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Reacting to a complaint costs thousands in legal fees. Having compliance documentation in place costs $149&ndash;$499.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works */}
-        <section id="how-it-works" className="py-16 bg-white">
+        {/* How It Works — comes BEFORE penalties so visitors understand the solution first */}
+        <section id="how-it-works" className="py-16 bg-slate-50">
           <div className="max-w-5xl mx-auto px-4">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
@@ -308,13 +263,40 @@ export default function Home() {
             </div>
             <hr className="border-t border-gray-200 my-4" />
             <div className="space-y-3">
+              <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden" open>
+                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                  How do I know if any of this applies to my business?
+                  <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                  If you use AI in hiring and you have employees or applicants in Illinois, NYC, or Colorado &mdash; yes. If you collect personal data from consumers in Virginia, Connecticut, Oregon, Texas, Delaware, California, or other states and you use that data for targeted ads, profiling, or automated decisions &mdash; yes. If you sell or deploy AI systems used in consequential decisions &mdash; yes. If you&apos;re not sure, the <a href="/regulations/ai-system-registry" className="text-blue-700 hover:underline">AI System Registry</a> ($199) helps you figure out what AI you&apos;re actually using before you worry about which laws apply.
+                </div>
+              </details>
+              <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
+                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                  What if I don&apos;t know whether my tools use AI?
+                  <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                  You&apos;re not alone. Most modern hiring platforms, CRM systems, marketing tools, and customer service chatbots have AI built in. If a tool screens, scores, ranks, recommends, or personalizes &mdash; there&apos;s likely AI involved. Your vendor can confirm this. Our AI System Inventory document walks you through how to find out what you&apos;re actually running.
+                </div>
+              </details>
+              <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
+                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                  I have no idea where to start.
+                  <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                  That&apos;s the most common thing we hear. Start by figuring out which states your employees or customers are in. Then look at our state-specific packages for those states. If you operate in a lot of states, the <a href="/regulations/multi-state-profiling-assessment" className="text-blue-700 hover:underline">Multi-State Profiling Bundle</a> covers 15+ states in one package. If you just want to get organized first, the <a href="/regulations/ai-governance-framework" className="text-blue-700 hover:underline">AI Governance Framework</a> ($349) and <a href="/regulations/ai-system-registry" className="text-blue-700 hover:underline">AI System Registry</a> ($199) help you figure out what you have before you worry about which laws apply.
+                </div>
+              </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
                 <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
                   What AI regulations do you cover?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  We currently offer compliance packages for Illinois HB3773 (775 ILCS 5/2-102(L)) and Colorado SB 24-205. Texas TRAIGA, California CCPA ADMT, and universal products (Employee AI Policy, Vendor Due Diligence) are coming soon. Each package is tailored to the specific statute&apos;s requirements.
+                  We offer 36 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text &mdash; not summaries, not training data, not paraphrases.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
@@ -323,7 +305,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  No. This tool generates documentation templates based on published regulatory text and proposed rules. It assists with compliance documentation but does not constitute legal advice. We recommend consulting a qualified attorney for formal compliance verification.
+                  No. We generate documentation templates based on the actual text of enacted statutes and published regulations. These templates help you get organized and demonstrate compliance effort &mdash; but they&apos;re not a substitute for a licensed attorney who can evaluate your specific situation. We recommend having your legal team review the output.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
@@ -332,7 +314,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  Your answers to the questionnaire populate templates drafted against each state&apos;s specific statute and proposed rules. Documents are generated instantly in PDF format and available for immediate download after payment.
+                  You answer a short questionnaire about your company &mdash; what AI tools you use, what decisions they inform, how your organization is structured. Your answers populate templates that were drafted against each state&apos;s specific statute. Documents generate instantly as fillable PDFs with electronic signature blocks. The whole process takes about ten minutes.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
@@ -341,7 +323,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  Our templates are based on the current published regulatory text at the time of purchase. Regulatory requirements may change over time. We recommend consulting qualified legal counsel to verify your documents remain current.
+                  Laws change. That&apos;s the nature of this space. Our templates reflect the enacted statute text at the time of purchase. If a law is amended or new implementing rules are published, your documents may need updating. We recommend checking back periodically and consulting qualified legal counsel to make sure your compliance posture stays current.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
@@ -350,7 +332,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  Our documents complement legal counsel. Many companies use our templates as a starting point and have their attorneys review the output &mdash; saving significant legal fees compared to drafting from scratch.
+                  A lot of our customers have lawyers. They use our templates as a starting point &mdash; it gives their attorney something to review and refine instead of drafting from scratch at $400&ndash;$800 an hour. Your lawyer&apos;s time is better spent on the nuances specific to your business, not on formatting a compliance checklist.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
@@ -359,16 +341,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  Yes. Because documents are generated and delivered digitally at the time of purchase, all sales are final. Please review the product description before purchasing.
-                </div>
-              </details>
-              <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
-                  How much do lawyers charge for this?
-                  <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
-                </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                  AI Compliance Documents generates compliance documentation templates for $149&ndash;$499. These are templates based on enacted statute text, not custom legal advice. Consult a licensed attorney to verify applicability to your situation.
+                  Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it&apos;s the right fit.
                 </div>
               </details>
             </div>
