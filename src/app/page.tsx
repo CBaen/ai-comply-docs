@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ProductLibrary from "@/components/ProductLibrary";
+import ProductCarousel from "@/components/ProductCarousel";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
@@ -119,109 +120,36 @@ export default function Home() {
       <FAQStructuredData />
       <Nav />
       <main id="main-content">
-        {/* Hero Section */}
-        <header className="hero-bg text-white py-20 md:py-28">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <div className="flex justify-center mb-6">
-              <svg
-                className="w-24 h-24 md:w-28 md:h-28 text-blue-400 drop-shadow-xl"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
-                />
-              </svg>
-            </div>
-
-            <div className="inline-flex items-center gap-2 border border-red-400 px-4 py-2 mb-5 text-sm rounded">
-              <span className="inline-block w-2 h-2 bg-red-400 rounded-sm" />
-              <span className="text-red-200">
-                Multiple state AI laws now in effect &mdash;{" "}
-                <strong className="text-white">compliance is mandatory</strong>
-              </span>
-            </div>
-
-            <h1 className="text-4xl md:text-6xl font-extrabold font-display mb-5 leading-tight tracking-tight text-white">
+        {/* Hero Section with Product Carousel */}
+        <header className="hero-bg text-white">
+          <div className="max-w-5xl mx-auto px-4 pt-10 pb-2 text-center">
+            <h1 className="text-3xl md:text-5xl font-extrabold font-display mb-2 leading-tight tracking-tight text-white">
               AI Compliance Documents
-              <br />
-              <span className="text-blue-300">Generated in Minutes</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              State AI regulations are here. Illinois, Colorado, Texas,
-              California &mdash; each with different requirements, deadlines, and
-              penalties. Generate your compliance documentation for a fraction of
-              legal fees.
+            <p className="text-sm md:text-base text-slate-400 mb-1">
+              State AI regulations are in effect. Generate your compliance documentation in minutes.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              <a
-                href="#products"
-                className="hero-cta bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg flex items-center justify-center gap-2"
-              >
-                Browse Products
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#how-it-works"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition flex items-center justify-center gap-2"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                  />
-                </svg>
-                How It Works
-              </a>
-            </div>
-
-            <div className="inline-flex items-center gap-2 bg-green-900/40 border border-green-400/30 rounded-full px-4 py-1.5 text-xs">
-              <svg
-                className="w-3.5 h-3.5 text-green-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2.5}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <span className="text-green-100">
-                Templates based on published statutes and proposed rules as of{" "}
-                <strong className="text-white">March 2026</strong>
+            <div className="inline-flex items-center gap-2 bg-red-900/30 border border-red-400/30 rounded-full px-3 py-1 text-xs mt-2">
+              <span className="inline-block w-1.5 h-1.5 bg-red-400 rounded-sm" />
+              <span className="text-red-200">
+                Multiple laws now enforceable &mdash;{" "}
+                <strong className="text-white">penalties are live</strong>
               </span>
             </div>
           </div>
+          <ProductCarousel
+            products={regulations
+              .filter((r) => r.ready && r.tier === "state")
+              .sort((a, b) => b.price - a.price)
+              .slice(0, 8)
+              .concat(
+                regulations
+                  .filter((r) => r.ready && (r.tier === "international" || r.tier === "industry"))
+                  .sort((a, b) => b.price - a.price)
+                  .slice(0, 4)
+              )
+            }
+          />
         </header>
 
         {/* Trust Bar */}

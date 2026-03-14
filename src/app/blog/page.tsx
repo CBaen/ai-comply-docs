@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { blogPosts } from "@/data/blog-posts";
+import { getAllBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "AI Compliance Blog — News, Guides & Regulation Updates",
@@ -29,8 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-const published = blogPosts.filter((p) => p.published);
-
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
     year: "numeric",
@@ -40,6 +38,7 @@ function formatDate(dateStr: string) {
 }
 
 export default function BlogPage() {
+  const published = getAllBlogPosts();
   return (
     <>
       <Nav />
