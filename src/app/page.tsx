@@ -347,7 +347,7 @@ export default function Home() {
                 State-specific and universal AI compliance packages. Each includes customized documentation, instant download.
               </p>
             </div>
-            <ProductLibrary regulations={regulations} />
+            <ProductLibrary regulations={regulations.filter(r => r.ready)} />
           </div>
         </section>
 

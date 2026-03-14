@@ -8,7 +8,9 @@ import Questionnaire from "@/components/Questionnaire";
 import PostPaymentHandler from "@/components/PostPaymentHandler";
 
 export async function generateStaticParams() {
-  return regulations.map((r) => ({ slug: r.slug }));
+  // Only generate pages for ready products — non-ready products
+  // contain unverified data and should not be accessible
+  return regulations.filter((r) => r.ready).map((r) => ({ slug: r.slug }));
 }
 
 export async function generateMetadata({

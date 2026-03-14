@@ -56,7 +56,7 @@ export default function RegulationsIndexPage() {
         {/* Product Library */}
         <section className="py-16 bg-slate-50">
           <div className="max-w-5xl mx-auto px-4">
-            <ProductLibrary regulations={regulations} />
+            <ProductLibrary regulations={regulations.filter(r => r.ready)} />
           </div>
         </section>
 
