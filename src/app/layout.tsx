@@ -19,6 +19,9 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aicompliancedocuments.com"),
+  verification: {
+    google: "YttkkRZdguWjTkMceRmuH1LahOwIQlawMPjLjmwD9Lg",
+  },
   title: {
     default: "AI Compliance Documents — AI Compliance Documentation Generator",
     template: "%s | AI Compliance Documents",
