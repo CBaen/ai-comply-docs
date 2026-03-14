@@ -262,6 +262,71 @@ const REGULATION_EMAIL: Record<
     reminder:
       "FINRA has flagged AI supervision as a 2026 examination priority. CFPB UDAAP authority reaches AI-driven unfair, deceptive, or abusive practices. Regulation B (12 CFR Part 1002) requires adverse action notices for AI-driven credit denials. Verify current SEC, CFPB, and FINRA guidance for your specific firm type.",
   },
+  "ai-governance-framework": {
+    title: "Your AI Governance Framework",
+    statute: "NIST AI RMF Govern Function + CO SB24-205",
+    description:
+      "AI governance framework templates, aligned with the NIST AI Risk Management Framework Govern function and Colorado SB24-205 risk management requirements. All six documents are included. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Start with the AI Governance Policy.</strong> Have leadership sign it, distribute it to all teams, and make it the anchor document for your AI program.",
+      "<strong>Customize the AI Ethics Principles Statement</strong> to reflect your organization\u2019s values and publish it internally and externally.",
+      "<strong>Apply the Risk Classification Matrix</strong> to every AI system in your inventory. High-risk systems need the most oversight.",
+      "<strong>Route every new AI use case through the Approval Workflow</strong> before deployment. Document each approval.",
+      "<strong>Seat your AI Steering Committee</strong> using the Charter as your founding document. Schedule your first meeting.",
+      "<strong>Assign your AI Compliance Officer</strong> using the Role Description. This role is accountable for everything else on this list.",
+    ],
+    reminder:
+      "Documented AI governance is required evidence of \u201creasonable care\u201d under Colorado SB24-205 and similar deployer-liability statutes. Enterprise procurement programs increasingly require AI governance documentation from vendors. This framework aligns with the NIST AI RMF Govern function.",
+  },
+  "ai-system-registry": {
+    title: "Your AI System Registry",
+    statute: "NIST AI RMF MAP Function",
+    description:
+      "AI system inventory and lifecycle tracking templates, aligned with the NIST AI RMF MAP function. Both documents are included. Review each with your legal and IT teams.",
+    steps: [
+      "<strong>Complete the AI System Inventory</strong> for every AI system your organization uses. Name, purpose, vendor, data inputs, risk level, and owner for each system.",
+      "<strong>Use the Lifecycle Tracker</strong> to document each system\u2019s status \u2014 from development through testing, deployment, monitoring, and eventual retirement.",
+    ],
+    reminder:
+      "An AI system inventory is a prerequisite for compliance with Colorado SB24-205, Texas TRAIGA, EU AI Act, and every other AI statute. You cannot assess risk, assign accountability, or comply with disclosure requirements for systems you haven\u2019t cataloged. Start here.",
+  },
+  "ai-transparency-report": {
+    title: "Your AI Transparency Report Templates",
+    statute: "EU AI Act Art. 13 + Voluntary Best Practice",
+    description:
+      "AI transparency reporting templates for public disclosure of AI systems, safeguards, and outcomes. Both documents are included. Review with your legal team and communications team before publishing.",
+    steps: [
+      "<strong>Complete the Annual AI Transparency Report Template</strong> for public disclosure of your AI systems, their purposes, safeguards, and outcomes.",
+      "<strong>Use the Performance Monitoring Report Template</strong> to document ongoing AI system performance metrics and share them with internal stakeholders.",
+    ],
+    reminder:
+      "EU AI Act Article 13 requires transparency obligations for high-risk AI systems. Large enterprises increasingly publish voluntary AI transparency reports as evidence of responsible deployment. Proactive disclosure strengthens your regulatory position.",
+  },
+  "ai-whistleblower-policy": {
+    title: "Your AI Whistleblower Policy",
+    statute: "CA SB 53 (2025\u20132026 Session) + Best Practice",
+    description:
+      "AI safety whistleblower protection policy and internal concern reporting form. Both documents are included. Review with your legal team and HR before publishing.",
+    steps: [
+      "<strong>Adopt and publish the AI Safety Whistleblower Protection Policy.</strong> Distribute to all employees and add it to your employee handbook.",
+      "<strong>Make the Internal AI Concern Reporting Form accessible</strong> \u2014 link it in your intranet, HR systems, and AI governance documentation.",
+    ],
+    reminder:
+      "California SB 53 (2025\u20132026 Session) requires certain AI developers to maintain safety and whistleblower protections. For all other organizations, a clear internal reporting channel is a best practice that reduces the risk of AI harms escalating undetected.",
+  },
+  "customer-ai-aup": {
+    title: "Your Customer AI Acceptable Use Policy",
+    statute: "FTC Act \u00A7 5 + EU AI Act Art. 13 + Best Practice",
+    description:
+      "customer-facing AI acceptable use policy template for companies that offer AI-powered products or services. Review with your legal team before publishing to customers.",
+    steps: [
+      "<strong>Customize the Customer AI Acceptable Use Policy</strong> with your company name, AI product names, and specific use cases.",
+      "<strong>Publish it where customers can find it</strong> \u2014 your terms of service page, help center, or AI feature documentation.",
+      "<strong>Require customers to acknowledge it</strong> before accessing AI features \u2014 a checkbox at signup or feature activation is standard practice.",
+    ],
+    reminder:
+      "A Customer AUP limits your liability for customer misuse of your AI products and is increasingly required by enterprise buyers before they\u2019ll sign contracts with AI vendors. This document is separate from your Employee AI Use Policy \u2014 it governs what customers can do with your AI, not what your employees can do internally.",
+  },
 };
 
 function buildEmailHtml(

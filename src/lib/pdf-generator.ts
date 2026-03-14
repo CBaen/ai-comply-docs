@@ -491,6 +491,88 @@ export async function generateDocuments(
     ];
   }
 
+  if (data.regulation === "ai-governance-framework") {
+    const gov = await import("./pdf-ai-governance-framework");
+    return [
+      {
+        doc: gov.generateGovernancePolicy(data),
+        name: `${companySlug}_AI_Governance_Policy.pdf`,
+      },
+      {
+        doc: gov.generateEthicsPrinciples(data),
+        name: `${companySlug}_AI_Ethics_Principles.pdf`,
+      },
+      {
+        doc: gov.generateRiskClassificationMatrix(data),
+        name: `${companySlug}_AI_Risk_Classification_Matrix.pdf`,
+      },
+      {
+        doc: gov.generateApprovalWorkflow(data),
+        name: `${companySlug}_AI_Approval_Workflow.pdf`,
+      },
+      {
+        doc: gov.generateSteeringCommitteeCharter(data),
+        name: `${companySlug}_AI_Steering_Committee_Charter.pdf`,
+      },
+      {
+        doc: gov.generateComplianceOfficerRole(data),
+        name: `${companySlug}_AI_Compliance_Officer_Role.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "ai-system-registry") {
+    const reg = await import("./pdf-ai-system-registry");
+    return [
+      {
+        doc: reg.generateSystemInventory(data),
+        name: `${companySlug}_AI_System_Inventory.pdf`,
+      },
+      {
+        doc: reg.generateLifecycleTracker(data),
+        name: `${companySlug}_AI_System_Lifecycle_Tracker.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "ai-transparency-report") {
+    const tr = await import("./pdf-ai-transparency-report");
+    return [
+      {
+        doc: tr.generateTransparencyReport(data),
+        name: `${companySlug}_AI_Transparency_Report.pdf`,
+      },
+      {
+        doc: tr.generatePerformanceMonitoringReport(data),
+        name: `${companySlug}_AI_Performance_Monitoring_Report.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "ai-whistleblower-policy") {
+    const wb = await import("./pdf-ai-whistleblower-policy");
+    return [
+      {
+        doc: wb.generateWhistleblowerPolicy(data),
+        name: `${companySlug}_AI_Whistleblower_Policy.pdf`,
+      },
+      {
+        doc: wb.generateConcernReportingForm(data),
+        name: `${companySlug}_AI_Concern_Reporting_Form.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "customer-ai-aup") {
+    const caup = await import("./pdf-customer-ai-aup");
+    return [
+      {
+        doc: caup.generateCustomerAUP(data),
+        name: `${companySlug}_Customer_AI_Acceptable_Use_Policy.pdf`,
+      },
+    ];
+  }
+
   // Default: Illinois
   const il = await import("./pdf-illinois");
   const docs: GeneratedDoc[] = [

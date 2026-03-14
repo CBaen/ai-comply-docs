@@ -116,6 +116,24 @@ const REGULATION_HEADER: Record<
     rules:
       "Implementing rules: DCWP rules at 6 RCNY \u00A7 5-300 et seq. DCWP shifted to proactive investigations in 2026.",
   },
+  "virginia-cdpa": {
+    statute:
+      "Statute: Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act, eff. 1-1-23)",
+    rules:
+      "Enforcement: Virginia Attorney General (exclusive authority, \u00A7 59.1-584(A)). 30-day cure period before AG may seek penalties (\u00A7 59.1-584(B)). No private right of action.",
+  },
+  "connecticut-ctdpa": {
+    statute:
+      "Statute: Conn. Gen. Stat. \u00A7\u00A7 42-515 through 42-525 (Connecticut Data Privacy Act, PA 22-15, eff. 7-1-23)",
+    rules:
+      "Enforcement: Connecticut Attorney General (exclusive authority, \u00A7 42-525(a)). Mandatory 60-day cure period expired December 31, 2024; AG has enforcement discretion. No private right of action.",
+  },
+  "oregon-cpa": {
+    statute:
+      "Statute: ORS \u00A7\u00A7 646A.570 through 646A.604 (Oregon Consumer Privacy Act, eff. 7-1-24)",
+    rules:
+      "Enforcement: Oregon Attorney General (\u00A7 646A.604). 30-day cure period until January 1, 2026 (\u00A7 646A.604(2)); AG discretion after. Penalties under UTPA (ORS \u00A7 646.642). No private right of action.",
+  },
   "minnesota-mcdpa": {
     statute:
       "Statute: Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21 (Minnesota Consumer Data Privacy Act, eff. 7-31-25)",

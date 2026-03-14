@@ -990,4 +990,207 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be listed on consumer rights intake forms and response letters as the designated privacy rights contact.",
     },
   },
+  // ── PRODUCT 1: AI Governance Framework ──────────────────────
+  "ai-governance-framework": {
+    name: "AI Governance Framework",
+    statute: "NIST AI RMF Govern Function + CO SB24-205",
+    lawUrl: "https://www.nist.gov/system/files/documents/2023/01/26/AI-RMF-1-0.pdf",
+    lawLinkText: "Review the NIST AI Risk Management Framework 1.0 (PDF)",
+    acknowledgment:
+      "I have reviewed the NIST AI Risk Management Framework (NIST AI 100-1) referenced in this product. I understand that these are governance framework templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization and jurisdiction.",
+    basePrice: 349,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "AI Governance Policy",
+      "AI Ethics Principles Statement",
+      "AI Risk Classification Matrix",
+      "AI Use Case Approval Workflow",
+      "AI Steering Committee Charter",
+      "AI Compliance Officer Role Description",
+    ],
+    decisions: [
+      ["hiring", "Hiring & Employment"],
+      ["customer_service", "Customer Service & Operations"],
+      ["financial", "Financial & Lending"],
+      ["healthcare", "Healthcare & Clinical"],
+      ["content", "Content Generation & Marketing"],
+      ["internal_ops", "Internal Operations & Automation"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems need governance?</strong> Any AI system your organization deploys, including third-party tools with AI features. The NIST AI RMF Govern function applies to all AI systems \u2014 from simple recommendation engines to complex generative AI. If employees or customers interact with it and it uses machine learning or AI, it belongs in your governance framework.",
+      step2Intro:
+        "List each AI system your organization deploys. Your governance framework will cover all of them.",
+      step2DecisionHelp:
+        "Check every area where this AI system is used. Your governance policy, ethics principles, and risk classification will address all checked areas.",
+      step2MultiHelp:
+        "Most organizations deploy AI across multiple business areas. List each system separately so your governance framework explicitly covers each one.",
+      step3BiasHelp:
+        "A bias audit establishes whether your AI systems produce equitable outcomes across demographic groups. The NIST AI RMF MEASURE function recommends bias testing as part of responsible AI deployment.",
+      step4Help:
+        "This section captures how your organization currently oversees AI decisions. Your governance framework and steering committee charter will formalize these oversight structures.",
+      step5Intro:
+        "This person will be named as your AI Compliance Officer in the governance framework \u2014 responsible for policy enforcement, risk oversight, and committee coordination.",
+    },
+  },
+  // ── PRODUCT 2: AI System Registry ───────────────────────────
+  "ai-system-registry": {
+    name: "AI System Registry",
+    statute: "NIST AI RMF MAP Function",
+    lawUrl: "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook",
+    lawLinkText: "Review the NIST AI RMF MAP Function Playbook",
+    acknowledgment:
+      "I have reviewed the NIST AI RMF MAP Function Playbook referenced in this product. I understand that these are inventory and lifecycle tracking templates, not legal advice. I should consult qualified legal counsel to verify my specific compliance obligations.",
+    basePrice: 199,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "AI System Inventory Template",
+      "AI System Lifecycle Tracker",
+    ],
+    decisions: [
+      ["hiring", "Hiring & Employment"],
+      ["customer_service", "Customer Service & Operations"],
+      ["financial", "Financial & Lending"],
+      ["healthcare", "Healthcare & Clinical"],
+      ["content", "Content Generation & Marketing"],
+      ["internal_ops", "Internal Operations & Automation"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which systems belong in your AI inventory?</strong> Every AI system your organization deploys \u2014 whether built internally, purchased from a vendor, or accessed as a SaaS feature. This includes resume screening tools, chatbots, recommendation engines, fraud detection models, and any software marketed as \u201cAI-powered.\u201d You cannot assess, govern, or comply with AI law for systems you haven\u2019t inventoried.",
+      step2Intro:
+        "List each AI system your organization uses. The inventory will capture name, purpose, vendor, data inputs, risk level, and owner for each system.",
+      step2DecisionHelp:
+        "Check every area where this AI system operates. Your inventory entry will capture the full scope of each system\u2019s use.",
+      step2MultiHelp:
+        "Most organizations discover more AI systems than they expected during the inventory process. List every system you know of \u2014 you can always add more.",
+      step3BiasHelp:
+        "Your inventory should capture whether each system has been bias-tested. This field in the inventory helps prioritize which systems need auditing.",
+      step4Help:
+        "This section captures ownership and oversight for each system. Your inventory will document who owns each AI system and who is accountable for its performance.",
+      step5Intro:
+        "This person will be listed as the registry administrator \u2014 responsible for maintaining the inventory as systems are added, modified, or retired.",
+    },
+  },
+  // ── PRODUCT 3: AI Transparency Report Template ───────────────
+  "ai-transparency-report": {
+    name: "AI Transparency Report Template",
+    statute: "EU AI Act Art. 13 + Voluntary Best Practice",
+    lawUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+    lawLinkText: "Review Regulation (EU) 2024/1689 (EU AI Act) on EUR-Lex",
+    acknowledgment:
+      "I have reviewed Regulation (EU) 2024/1689 (EU AI Act) referenced in this product. I understand that these are transparency reporting templates, not legal advice. I should consult qualified legal counsel to verify my specific disclosure and reporting obligations.",
+    basePrice: 149,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Annual AI Transparency Report Template",
+      "AI System Performance Monitoring Report",
+    ],
+    decisions: [
+      ["hiring", "Hiring & Employment"],
+      ["customer_service", "Customer Service & Operations"],
+      ["financial", "Financial & Lending"],
+      ["healthcare", "Healthcare & Clinical"],
+      ["content", "Content Generation & Marketing"],
+      ["internal_ops", "Internal Operations & Automation"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which systems belong in your transparency report?</strong> Any AI system your organization deploys that affects people \u2014 especially high-risk systems under EU AI Act Annex III. Voluntary transparency reports typically cover all material AI deployments. The more systems you disclose, the stronger your transparency posture.",
+      step2Intro:
+        "List each AI system you want to include in your transparency report. The template will generate a report section for each one.",
+      step2DecisionHelp:
+        "Check every area where this AI system is used. Transparency reports describe the purpose and scope of each system\u2019s deployment.",
+      step2MultiHelp:
+        "Large organizations often publish transparency reports covering all AI deployments. List each system separately for clear, auditable disclosure.",
+      step3BiasHelp:
+        "Transparency reports should disclose whether bias testing was conducted and what the results showed. Voluntary disclosure of bias testing results is increasingly expected by regulators and enterprise customers.",
+      step4Help:
+        "This section captures your human oversight and safeguard practices. Transparency reports describe the controls your organization has in place to ensure responsible AI use.",
+      step5Intro:
+        "This contact will be named as the transparency report author and AI accountability contact \u2014 the person stakeholders can reach with questions about your AI disclosure.",
+    },
+  },
+  // ── PRODUCT 4: AI Whistleblower Policy ──────────────────────
+  "ai-whistleblower-policy": {
+    name: "AI Whistleblower Policy",
+    statute: "CA SB 53 (2025\u20132026 Session) + Best Practice",
+    lawUrl: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB53",
+    lawLinkText: "Review CA SB 53 (2025\u20132026 Session) on leginfo.legislature.ca.gov",
+    acknowledgment:
+      "I have reviewed the California SB 53 (2025\u20132026 Session) AI whistleblower provisions referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
+    basePrice: 99,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "AI Safety Whistleblower Protection Policy",
+      "Internal AI Concern Reporting Form",
+    ],
+    decisions: [
+      ["hiring", "Hiring & Employment"],
+      ["customer_service", "Customer Service & Operations"],
+      ["financial", "Financial & Lending"],
+      ["healthcare", "Healthcare & Clinical"],
+      ["content", "Content Generation & Marketing"],
+      ["internal_ops", "Internal Operations & Automation"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems need whistleblower protections?</strong> Any AI system where employees might observe harmful outputs, unsafe behavior, or policy violations. This is especially important for AI systems that make consequential decisions \u2014 hiring, lending, healthcare triage, content moderation. Employees who observe problems need a protected channel to report them.",
+      step2Intro:
+        "List the AI systems your whistleblower policy will cover. Your policy will identify protected reporting channels for each system.",
+      step2DecisionHelp:
+        "Check every area where AI systems in your organization operate. Your policy will cover concerns related to all checked areas.",
+      step2MultiHelp:
+        "A single whistleblower policy can cover all your AI systems. List each one so your policy explicitly names the systems employees can report concerns about.",
+      step3BiasHelp:
+        "Employees who discover discriminatory AI outputs need a clear path to report them. Your whistleblower policy should explicitly protect employees who report bias-related concerns.",
+      step4Help:
+        "This section captures your current oversight structure. Your whistleblower policy will integrate with your existing oversight roles \u2014 identifying who receives reports and how investigations are conducted.",
+      step5Intro:
+        "This person will be named as the Whistleblower Program Administrator \u2014 responsible for receiving reports, maintaining confidentiality, and coordinating investigations.",
+    },
+  },
+  // ── PRODUCT 5: AI Acceptable Use Policy for Customers ────────
+  "customer-ai-aup": {
+    name: "AI Acceptable Use Policy for Customers",
+    statute: "FTC Act \u00A7 5 + EU AI Act Art. 13 + Best Practice",
+    lawUrl: "https://www.ftc.gov/business-guidance/blog/2023/02/ftc-chair-khan-and-officials-from-doj-cfpb-eeoc-release-joint-statement-ai",
+    lawLinkText: "Review FTC AI Joint Statement on ftc.gov",
+    acknowledgment:
+      "I have reviewed the FTC and EU AI Act guidance referenced in this product. I understand that this is a customer-facing policy template, not legal advice. I should consult qualified legal counsel to verify the policy is appropriate for my products and jurisdiction.",
+    basePrice: 99,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Customer AI Acceptable Use Policy",
+    ],
+    decisions: [
+      ["customer_service", "Customer Service & Support"],
+      ["content", "Content Generation & Marketing"],
+      ["analysis", "Data Analysis & Reporting"],
+      ["financial", "Financial & Recommendations"],
+      ["healthcare", "Healthcare & Clinical"],
+      ["internal_ops", "Automation & Workflows"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which AI features need to be covered in your Customer AUP?</strong> Any AI capability you make available to customers \u2014 generative AI features, AI-powered recommendations, automated decision tools, chatbots, or AI-assisted workflows. Your Customer AUP sets the rules for how customers may use your AI features, what\u2019s prohibited, and what your liability limits are.",
+      step2Intro:
+        "List each AI-powered feature or product you offer to customers. Your Customer AUP will cover all of them.",
+      step2DecisionHelp:
+        "Check every area where your AI product is used by customers. Your AUP will address permitted uses, prohibited uses, and limitations for each area.",
+      step2MultiHelp:
+        "If you offer multiple AI-powered products or features, your Customer AUP should cover all of them. List each one so your policy is comprehensive.",
+      step3BiasHelp:
+        "If your AI product makes decisions affecting people, your Customer AUP should address your bias testing practices and limitations on discriminatory use.",
+      step4Help:
+        "This section captures how your AI product is designed to be used and what safeguards you have in place. Your Customer AUP will reflect these safeguards in the permitted use and liability sections.",
+      step5Intro:
+        "This contact will be named in your Customer AUP as the point of contact for AUP violations, abuse reports, and policy questions.",
+    },
+  },
 };
