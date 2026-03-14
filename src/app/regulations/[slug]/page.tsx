@@ -113,7 +113,7 @@ export default async function RegulationPage({
               <span className="text-slate-400 text-sm">{reg.state}</span>
             </div>
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <StatusBadge status={reg.status} />
+              <StatusBadge status={reg.status} ready={reg.ready} />
               <span className="text-slate-400 text-sm">
                 Effective: {reg.effectiveDate}
               </span>

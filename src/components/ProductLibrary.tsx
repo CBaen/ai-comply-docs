@@ -41,7 +41,15 @@ function filterRegulations(
   }
 }
 
-function StatusBadge({ status }: { status: string }) {
+function StatusBadge({ status, ready }: { status: string; ready: boolean }) {
+  if (!ready) {
+    return (
+      <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded font-semibold shrink-0 bg-slate-100 text-slate-600">
+        <span className="inline-block w-1.5 h-1.5 rounded-sm bg-slate-400" />
+        COMING SOON
+      </span>
+    );
+  }
   const styles: Record<string, string> = {
     "in-effect": "bg-red-100 text-red-800",
     "effective-soon": "bg-amber-100 text-amber-800",
@@ -191,7 +199,7 @@ export default function ProductLibrary({
                   {reg.citation}
                 </p>
               </div>
-              <StatusBadge status={reg.status} />
+              <StatusBadge status={reg.status} ready={reg.ready} />
             </div>
             <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-1">
               {reg.description.length > 140
@@ -218,7 +226,7 @@ export default function ProductLibrary({
                 href={`/regulations/${reg.slug}`}
                 className="block text-center bg-slate-50 border border-gray-200 text-gray-700 py-3 rounded-lg font-semibold text-sm hover:border-blue-300 hover:text-blue-700 transition"
               >
-                Learn More
+                Coming Soon — Learn More
               </Link>
             )}
           </div>
