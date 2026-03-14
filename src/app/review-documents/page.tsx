@@ -5,6 +5,9 @@ import { generateDocuments } from "@/lib/pdf-generator";
 import type { ComplianceFormData } from "@/lib/pdf-types";
 
 const SAMPLE_DATA: ComplianceFormData = {
+  regulation: "",
+  generatedDate: new Date().toISOString().split("T")[0],
+  includeTrainingKit: false,
   company: {
     name: "Sample Corp",
     state: "Illinois",
@@ -58,7 +61,8 @@ export default function ReviewDocuments() {
   async function generateForRegulation(slug: string) {
     setGenerating(true);
     try {
-      const docs = await generateDocuments(slug, SAMPLE_DATA);
+      const data = { ...SAMPLE_DATA, regulation: slug };
+      const docs = await generateDocuments(data);
       const urls = docs.map((doc) => {
         const blob = doc.doc.output("blob");
         return { name: doc.name, url: URL.createObjectURL(blob) };
@@ -68,7 +72,7 @@ export default function ReviewDocuments() {
       console.error(`Error generating ${slug}:`, err);
       setResults((prev) => ({
         ...prev,
-        [slug]: [{ name: "ERROR", url: "#" }],
+        [slug]: [{ name: "ERROR: " + String(err), url: "#" }],
       }));
     }
     setGenerating(false);
@@ -78,7 +82,8 @@ export default function ReviewDocuments() {
     setGenerating(true);
     for (const slug of REGULATIONS) {
       try {
-        const docs = await generateDocuments(slug, SAMPLE_DATA);
+        const data = { ...SAMPLE_DATA, regulation: slug };
+        const docs = await generateDocuments(data);
         const urls = docs.map((doc) => {
           const blob = doc.doc.output("blob");
           return { name: doc.name, url: URL.createObjectURL(blob) };
@@ -88,7 +93,7 @@ export default function ReviewDocuments() {
         console.error(`Error generating ${slug}:`, err);
         setResults((prev) => ({
           ...prev,
-          [slug]: [{ name: `ERROR: ${err}`, url: "#" }],
+          [slug]: [{ name: `ERROR: ${String(err)}`, url: "#" }],
         }));
       }
     }
