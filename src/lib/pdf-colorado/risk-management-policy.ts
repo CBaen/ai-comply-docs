@@ -37,7 +37,7 @@ export function generateCORiskManagementPolicy(data: ComplianceFormData): jsPDF 
 
   y = addWrappedText(doc,
     'This Policy applies to all "high-risk artificial intelligence systems" as defined in ' +
-    '§ 6-1-1701(6) — systems that make, or are a substantial factor in making, consequential ' +
+    '§ 6-1-1701(9)(a) — systems that make, or are a substantial factor in making, consequential ' +
     'decisions — deployed by the Company. "Consequential decisions" are defined in ' +
     '§ 6-1-1701(3) as decisions that have a material legal or similarly significant effect ' +
     'on a consumer\'s access to, or the cost, terms, or availability of, the following: ' +
