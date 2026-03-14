@@ -1,8 +1,10 @@
 export { generateRiskManagementSystem } from "./risk-management-system";
 export { generateTechnicalDocumentation } from "./technical-documentation";
-export { generateConformityAssessment } from "./conformity-assessment";
 export { generateDataGovernance } from "./data-governance";
+export { generateConformityAssessment } from "./conformity-assessment";
+export { generateQualityManagementSystem } from "./quality-management-system";
 export { generateHumanOversight } from "./human-oversight";
-export { generateTransparencyDisclosures } from "./transparency-disclosures";
 export { generatePostMarketMonitoring } from "./post-market-monitoring";
-export { generateEUAIActChecklist } from "./compliance-checklist";
+export { generateEUDatabaseRegistration } from "./eu-database-registration";
+export { generateTransparencyDisclosures } from "./transparency-disclosures";
+export { generateFundamentalRightsImpact } from "./fundamental-rights-impact";
