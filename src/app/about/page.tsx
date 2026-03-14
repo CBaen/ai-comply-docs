@@ -164,75 +164,59 @@ export default function AboutPage() {
               Available templates
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              We currently offer compliance templates for enacted state AI regulations, plus a set
-              of universal governance documents applicable across jurisdictions.
+              We offer 36 compliance packages covering state AI employment laws (Illinois, NYC, Colorado),
+              state consumer data privacy laws (Virginia, Connecticut, California, Oregon, Texas, Delaware,
+              Minnesota, Montana, New Jersey, Indiana, Kentucky), federal frameworks (EEOC, NIST AI RMF),
+              industry-specific packages (healthcare, financial services), the EU AI Act, and a full library
+              of universal governance documents &mdash; bias audits, incident response plans, vendor due
+              diligence, employee AI policies, and more.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div className="border border-gray-200 rounded-lg p-5">
-                <p className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-1">
-                  Illinois
+                <p className="text-xs font-semibold text-red-600 uppercase tracking-wider mb-2">
+                  Employment AI Laws
                 </p>
-                <h3 className="font-bold text-gray-900 mb-1">HB3773</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Employer AI notice and disclosure compliance package for Illinois&apos;s artificial
-                  intelligence in employment law (775 ILCS 5/2-102(L)).
-                </p>
-                <Link
-                  href="/regulations/illinois-hb3773"
-                  className="inline-block mt-3 text-sm font-semibold text-blue-700 hover:underline"
-                >
-                  View product &rarr;
-                </Link>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>Illinois HB3773</li>
+                  <li>NYC Local Law 144</li>
+                  <li>Colorado SB 24-205</li>
+                  <li>EEOC AI Hiring Guidance</li>
+                  <li>Multi-State Employer Bundle</li>
+                </ul>
               </div>
-
               <div className="border border-gray-200 rounded-lg p-5">
-                <p className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-1">
-                  Colorado
+                <p className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-2">
+                  Consumer Privacy Laws
                 </p>
-                <h3 className="font-bold text-gray-900 mb-1">SB 24-205</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  High-risk AI system governance documentation package for Colorado&apos;s AI Act,
-                  covering risk management, impact assessments, and consumer disclosure.
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>Virginia, Connecticut, Oregon</li>
+                  <li>Texas, Delaware, California</li>
+                  <li>Minnesota, Montana, Indiana</li>
+                  <li>Kentucky, New Jersey</li>
+                  <li>Multi-State Profiling Bundle</li>
+                </ul>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-5">
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                  Frameworks &amp; Universal
                 </p>
-                <Link
-                  href="/regulations/colorado-sb24-205"
-                  className="inline-block mt-3 text-sm font-semibold text-blue-700 hover:underline"
-                >
-                  View product &rarr;
-                </Link>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>EU AI Act, NIST AI RMF</li>
+                  <li>Healthcare AI (HIPAA)</li>
+                  <li>Financial Services AI</li>
+                  <li>AI Governance &amp; Registry</li>
+                  <li>+ 8 add-on packages</li>
+                </ul>
               </div>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-5">
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                Universal Governance Templates
-              </p>
-              <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-700 mt-0.5">&#10003;</span>
-                  Employee AI Use Policy
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-700 mt-0.5">&#10003;</span>
-                  Vendor AI Due Diligence Framework
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-700 mt-0.5">&#10003;</span>
-                  AI Bias Audit Documentation
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-700 mt-0.5">&#10003;</span>
-                  AI Incident Response Plan
-                </li>
-              </ul>
-              <Link
-                href="/regulations"
-                className="inline-block mt-4 text-sm font-semibold text-blue-700 hover:underline"
-              >
-                View all products &rarr;
-              </Link>
-            </div>
+            <Link
+              href="/regulations"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:underline"
+            >
+              View all 36 products &rarr;
+            </Link>
           </section>
 
           {/* Contact */}

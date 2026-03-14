@@ -35,7 +35,7 @@ export default function Nav() {
               How It Works
             </a>
             <Link
-              href="/#products"
+              href="/regulations"
               className="text-gray-600 hover:text-blue-700 transition"
             >
               Products

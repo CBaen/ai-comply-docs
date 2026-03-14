@@ -189,7 +189,7 @@ export default function Home() {
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
-                <span>$149&ndash;$499, instant download</span>
+                <span>$49&ndash;$997, one-time purchase</span>
               </div>
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
               <div className="flex items-center gap-2">
@@ -231,6 +231,51 @@ export default function Home() {
                 Browse Products
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Pain Section — after How It Works so penalties hit harder */}
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
+                What happens if you don&apos;t comply?
+              </h2>
+              <p className="text-gray-700 text-lg max-w-2xl">
+                AI regulations aren&apos;t suggestions. They&apos;re law, with real
+                enforcement teeth and penalties up to $200,000 per violation.
+              </p>
+            </div>
+            <hr className="border-t border-gray-200 my-4" />
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-red-50 border border-red-100 rounded p-6 border-l-4 border-l-red-400">
+                <div className="w-10 h-10 bg-red-100 rounded flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                </div>
+                <h3 className="font-bold text-lg font-display mb-2 text-gray-900">Employee &amp; Consumer Complaints</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  In most states, employees and consumers can file complaints with the Attorney General or a state agency. If a complaint leads to an investigation, the first thing the state asks for is your documentation. Having it ready is your strongest first response.
+                </p>
+              </div>
+              <div className="bg-amber-50 border border-amber-100 rounded p-6 border-l-4 border-l-amber-400">
+                <div className="w-10 h-10 bg-amber-100 rounded flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
+                </div>
+                <h3 className="font-bold text-lg font-display mb-2 text-gray-900">State Enforcement</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Attorney General offices enforce these laws. Penalties range from $7,500 per violation (Virginia, Connecticut) to $70,000 per violation (Illinois). Several states assess penalties per violation and per person affected &mdash; so for automated systems that process many people, the numbers add up quickly.
+                </p>
+              </div>
+              <div className="bg-slate-100 border border-slate-200 rounded p-6 border-l-4 border-l-slate-400">
+                <div className="w-10 h-10 bg-slate-200 rounded flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75" /></svg>
+                </div>
+                <h3 className="font-bold text-lg font-display mb-2 text-gray-900">The Cost of Starting from Scratch</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Hiring a law firm to build a compliance package from scratch typically runs $5,000 to $25,000. Our templates give you a professional, statute-based starting point for $49&ndash;$997 &mdash; and your attorney can review and finalize them in a fraction of the time.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -364,6 +409,9 @@ export default function Home() {
               Browse Products
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
             </a>
+            <p className="text-slate-500 text-sm mt-4">
+              Not sure which package? <a href="mailto:info@aicompliancedocuments.com" className="text-blue-400 hover:text-blue-300 underline">info@aicompliancedocuments.com</a>
+            </p>
           </div>
         </section>
       </main>
