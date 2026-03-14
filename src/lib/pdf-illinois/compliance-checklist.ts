@@ -99,11 +99,11 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
       ],
     },
     {
-      title: "Recordkeeping (4-Year Retention \u2014 Recommended Best Practice)",
+      title: "Recordkeeping (Recommended Best Practice — No Statutory Period Specified)",
       items: [
-        "All AI-related notices, postings, and disclosures preserved for 4 years",
-        "Records of AI system use in employment decisions preserved for 4 years",
-        "Records preserved until any IDHR charge is fully adjudicated, regardless of filing date (per general IHRA practice and recommended best practice)",
+        "All AI-related notices, postings, and disclosures preserved for 4 years (recommended — 775 ILCS 5/2-102(L) does not specify a retention period)",
+        "Records of AI system use in employment decisions preserved for 4 years (recommended — not a statutory requirement)",
+        "Records preserved until any IDHR charge is fully adjudicated, regardless of filing date (per general IHRA practice)",
         "Record retention policy documented and assigned to responsible party",
       ],
     },
