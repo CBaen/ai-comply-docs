@@ -68,6 +68,54 @@ function StatusBadge({ status, ready }: { status: string; ready: boolean }) {
   );
 }
 
+const DOC_EXPLANATIONS: Record<string, string> = {
+  "Employee & Applicant AI Notification": "The notice you're legally required to give people before you use AI in decisions that affect them.",
+  "AI System Inventory": "A structured list of every AI tool you use, so you know what you need to disclose.",
+  "Impact Assessment Framework": "A written evaluation of whether your AI tools could be producing discriminatory outcomes. This is what the state asks for if there's a complaint.",
+  "Human Oversight Protocol": "Documentation showing that a human reviews AI-driven decisions — not just approves them automatically.",
+  "Compliance Checklist": "Every step you need to take, in order, so nothing gets missed.",
+  "Accommodation Request Form": "If an employee or applicant wants a human-only process instead of AI, this is how they request it.",
+  "Risk Management Policy": "Your organization's formal policy for identifying and managing AI risks. The foundation everything else builds on.",
+  "Consumer Notice": "The disclosure you provide to consumers before or when AI is used in decisions about them.",
+  "Transparency Statement": "A public-facing statement describing what AI systems you use, how they work, and what safeguards are in place.",
+  "Record Retention Policy": "Documentation of what AI records you keep, how long you keep them, and why.",
+  "Adverse Decision Kit": "Templates for notifying consumers when AI contributed to a decision that went against them, plus appeal process documentation.",
+  "Incident Response Plan": "What your organization does if an AI system makes a bad decision, produces discriminatory outcomes, or fails.",
+  "Privacy Notice": "The consumer-facing notice that explains what personal data you collect, how you use it, and what rights consumers have.",
+  "Data Protection Assessment": "A documented evaluation weighing the benefits of your data processing against the risks to consumers. Required by most state privacy laws.",
+  "Data Processing Agreement": "A contract between you and your data processors that defines responsibilities, security requirements, and compliance obligations.",
+  "Opt-Out Documentation": "The mechanism and process for consumers to opt out of data processing, profiling, or targeted advertising.",
+  "Consumer Rights Procedures": "Internal procedures for handling consumer requests to access, correct, delete, or port their data within legal deadlines.",
+  "Bias Audit Report": "A structured report documenting the results of testing your AI tools for discriminatory outcomes.",
+  "Impact Ratio Worksheet": "The statistical calculations showing selection rates and impact ratios across demographic groups.",
+  "Remediation Plan": "If your AI system shows bias, this documents what you're doing to fix it.",
+  "Candidate Notification": "The notice you give job candidates when automated tools are used in their hiring process.",
+  "Bias Audit Summary": "The public summary of your bias audit results that must be posted on your website.",
+  "Alternative Selection Process": "Documentation of the alternative non-AI process you offer when candidates request one.",
+  "Pre-Use Notice": "The notice consumers must receive before automated decisionmaking technology is applied to them.",
+  "Risk Assessment": "A documented assessment of the risks your AI processing activities pose to consumers.",
+  "Opt-Out Mechanism": "The technical and procedural mechanism consumers use to opt out of automated decisionmaking.",
+  "Consumer Access Procedures": "How consumers can request access to the logic behind AI decisions that affected them.",
+  "Human Review Process": "The procedure for human review when consumers challenge an AI-driven decision.",
+  "Conformity Assessment": "EU AI Act documentation proving your high-risk AI system meets the regulatory requirements.",
+  "Technical Documentation": "The detailed technical dossier required by the EU AI Act describing how your AI system works.",
+  "Fundamental Rights Impact Assessment": "An assessment of how your AI system could affect people's fundamental rights.",
+  "Quality Management System": "Your organization's quality management framework for AI systems, as required by the EU AI Act.",
+  "Post-Market Monitoring Plan": "Your plan for monitoring AI system performance after deployment.",
+  "Governance Policy": "The overarching policy defining who in your organization makes AI decisions and how.",
+  "Steering Committee Charter": "The charter for your AI governance committee, defining membership, authority, and meeting cadence.",
+  "Ethics Principles": "Your organization's stated principles for responsible AI use.",
+  "Approval Workflow": "The documented process for approving new AI systems before deployment.",
+  "Risk Classification Matrix": "A framework for categorizing AI systems by risk level to determine what governance they require.",
+  "Acceptable Use Policy": "The internal policy telling employees what they can and can't do with AI tools at work.",
+  "Training Acknowledgment": "A sign-off form confirming employees completed AI training.",
+  "Incident Reporting Form": "The form employees use to report AI-related problems or concerns.",
+  "Vendor Due Diligence Questionnaire": "The questions you ask AI vendors before buying or renewing their tools.",
+  "Contract Addendum": "AI-specific contract language to add to your vendor agreements.",
+  "Monitoring Checklist": "A structured checklist for ongoing review of your AI vendors' compliance.",
+  "Vendor Risk Assessment": "An assessment of the risks each AI vendor poses to your compliance posture.",
+};
+
 function StructuredData({ reg }: { reg: { slug: string; name: string; description: string; price: number; ready: boolean } }) {
   const data = JSON.stringify({
     "@context": "https://schema.org",
@@ -98,6 +146,29 @@ function StructuredData({ reg }: { reg: { slug: string; name: string; descriptio
   return <script type="application/ld+json">{data}</script>;
 }
 
+const BLOG_GUIDES: Record<string, { url: string; title: string }> = {
+  "illinois-hb3773": {
+    url: "/blog/illinois-hb3773-ai-employment-law-what-employers-need",
+    title: "Illinois HB3773: What Employers Need to Know",
+  },
+  "california-ccpa-admt": {
+    url: "/blog/california-ccpa-admt-risk-assessment-compliance-2026",
+    title: "California CCPA ADMT: Risk Assessment Compliance Guide",
+  },
+  "virginia-cdpa": {
+    url: "/blog/virginia-cdpa-data-protection-assessment-profiling-requirements",
+    title: "Virginia CDPA: Data Protection Assessment Requirements",
+  },
+  "colorado-sb24-205": {
+    url: "/blog/colorado-sb-24-205-ai-law-what-businesses-need-to-know",
+    title: "Colorado SB 24-205: What Businesses Need to Know",
+  },
+  "connecticut-ctdpa": {
+    url: "/blog/connecticut-ctdpa-data-protection-assessment-profiling-requirements",
+    title: "Connecticut CTDPA: Data Protection Assessment Guide",
+  },
+};
+
 export default async function RegulationPage({
   params,
 }: {
@@ -109,6 +180,8 @@ export default async function RegulationPage({
   // Only show product pages for ready products — non-ready products
   // contain unverified data and should not be visible to customers
   if (!reg.ready) notFound();
+
+  const blogGuide = BLOG_GUIDES[reg.slug] ?? null;
 
   return (
     <>
@@ -237,10 +310,15 @@ export default async function RegulationPage({
                       key={i}
                       className="flex items-start gap-3 bg-white border border-gray-200 rounded p-4"
                     >
-                      <div className="w-8 h-8 bg-blue-50 border border-blue-100 rounded flex items-center justify-center shrink-0">
+                      <div className="w-8 h-8 bg-blue-50 border border-blue-100 rounded flex items-center justify-center shrink-0 mt-0.5">
                         <svg className="w-4 h-4 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                       </div>
-                      <p className="font-semibold text-gray-900">{doc}</p>
+                      <div>
+                        <p className="font-semibold text-gray-900">{doc}</p>
+                        {DOC_EXPLANATIONS[doc] && (
+                          <p className="text-sm text-gray-500 mt-1">{DOC_EXPLANATIONS[doc]}</p>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>

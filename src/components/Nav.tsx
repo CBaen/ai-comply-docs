@@ -40,17 +40,17 @@ export default function Nav() {
             >
               Products
             </Link>
-            <a
-              href="/#faq"
-              className="text-gray-600 hover:text-blue-700 transition"
-            >
-              FAQ
-            </a>
             <Link
               href="/blog"
               className="text-gray-600 hover:text-blue-700 transition"
             >
               Blog
+            </Link>
+            <Link
+              href="/faq"
+              className="text-gray-600 hover:text-blue-700 transition"
+            >
+              FAQ
             </Link>
             <Link
               href="/about"
@@ -108,19 +108,19 @@ export default function Nav() {
             >
               Products
             </a>
-            <a
-              href="/#faq"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
-              onClick={() => setMobileOpen(false)}
-            >
-              FAQ
-            </a>
             <Link
               href="/blog"
               className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >
               Blog
+            </Link>
+            <Link
+              href="/faq"
+              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              onClick={() => setMobileOpen(false)}
+            >
+              FAQ
             </Link>
             <Link
               href="/about"
