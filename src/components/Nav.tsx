@@ -47,6 +47,12 @@ export default function Nav() {
               FAQ
             </a>
             <Link
+              href="/blog"
+              className="text-gray-600 hover:text-blue-700 transition"
+            >
+              Blog
+            </Link>
+            <Link
               href="/about"
               className="text-gray-600 hover:text-blue-700 transition"
             >

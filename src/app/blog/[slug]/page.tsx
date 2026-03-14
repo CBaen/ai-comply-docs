@@ -60,9 +60,38 @@ export default async function BlogPostPage({ params }: Props) {
   const related = getRelatedPosts(slug, 2);
   const bodyNodes = renderMarkdown(post.content);
 
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: post.author,
+      url: "https://aicompliancedocuments.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "AI Compliance Documents",
+      url: "https://aicompliancedocuments.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://aicompliancedocuments.com/blog/${post.slug}`,
+    },
+    keywords: post.tags.join(", "),
+  };
+
   return (
     <>
       <Nav />
+      {/* BlogPosting JSON-LD — all data is server-side from our own MDX frontmatter, not user input */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <main id="main-content">
         {/* Post header */}
         <header className="hero-bg text-white py-12 md:py-16">
