@@ -4,10 +4,11 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://aicompliancedocuments.com";
+  const siteLastUpdated = new Date("2026-03-14");
 
   const regulationPages = regulations.filter((r) => r.ready).map((r) => ({
     url: `${base}/regulations/${r.slug}`,
-    lastModified: new Date(),
+    lastModified: siteLastUpdated,
     changeFrequency: "weekly" as const,
     priority: r.status === "in-effect" ? 0.9 : 0.8,
   }));
@@ -20,8 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [
-    { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${base}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
+    { url: base, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${base}/regulations`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/blog`, lastModified: siteLastUpdated, changeFrequency: "daily", priority: 0.8 },
+    { url: `${base}/about`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.5 },
     ...regulationPages,
     ...blogPosts,
   ];
