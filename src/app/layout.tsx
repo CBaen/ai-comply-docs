@@ -47,6 +47,10 @@ export const metadata: Metadata = {
     description: "AI compliance documents for every state. Self-service, instant download.",
     images: ["/og-image.png"],
   },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/logo.png",
+  },
   robots: {
     index: true,
     follow: true,
