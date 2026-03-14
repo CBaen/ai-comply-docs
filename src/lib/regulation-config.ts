@@ -297,6 +297,166 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be listed in candidate notifications and website disclosures as required by NYC LL144 and DCWP rules at 6 RCNY \u00A7 5-300 et seq.",
     },
   },
+  "texas-tdpsa": {
+    name: "Texas TDPSA",
+    statute: "Tex. Bus. & Com. Code Ch. 541",
+    lawUrl: "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+    lawLinkText: "Read Tex. Bus. & Com. Code Ch. 541 on statutes.capitol.texas.gov",
+    acknowledgment:
+      "I have reviewed Tex. Bus. & Com. Code Ch. 541 (Texas Data Privacy and Security Act, HB 4) and understand that these are compliance templates, not legal advice. The TDPSA has been in effect since July 1, 2024, and includes a permanent 30-day cure period. This is separate from the Texas TRAIGA (HB 149). I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Data Protection Assessment for Profiling",
+      "Privacy Notice Template",
+      "Data Processing Agreement Template",
+    ],
+    decisions: [
+      ["profiling", "Profiling for Consequential Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Sale of Personal Data"],
+      ["sensitive_data", "Processing Sensitive Data"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any system that processes personal data of Texas consumers for profiling, targeted advertising, or data sales. The TDPSA (\u00A7 541.107) requires data protection assessments for profiling activities that present a heightened risk to consumers.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Texas Data Privacy and Security Act.",
+      step2DecisionHelp:
+        "Check every category where this system processes Texas consumer data. The TDPSA (\u00A7 541.107) requires data protection assessments for profiling, targeted advertising, data sales, and sensitive data processing.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment under \u00A7 541.107(a).",
+      step3BiasHelp:
+        "If your system uses profiling to make consequential decisions, a bias review helps document that processing is conducted with reasonable care.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. The TDPSA requires responding to consumer rights requests within 45 days.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated data privacy contact under the Texas TDPSA.",
+    },
+  },
+  "delaware-pdpa": {
+    name: "Delaware PDPA",
+    statute: "Del. Code tit. 6, ch. 12D, \u00A7\u00A7 12D-101 through 12D-111",
+    lawUrl: "https://delcode.delaware.gov/title6/c012d/index.html",
+    lawLinkText: "Read Del. Code tit. 6, ch. 12D on delcode.delaware.gov",
+    acknowledgment:
+      "I have reviewed Del. Code tit. 6, ch. 12D (Delaware Personal Data Privacy Act, HB 154) and understand that these are compliance templates, not legal advice. The Delaware PDPA has been in effect since January 1, 2025, with the cure period expiring December 31, 2025. Delaware has the lowest compliance thresholds of any state (35,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Data Protection Assessment for Profiling",
+      "Privacy Notice Template",
+      "Universal Opt-Out Mechanism Documentation",
+      "Data Processing Agreement Template",
+    ],
+    decisions: [
+      ["profiling", "Profiling for Consequential Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Sale of Personal Data"],
+      ["sensitive_data", "Processing Sensitive Data"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any system that processes personal data of Delaware consumers for profiling, targeted advertising, or data sales. The Delaware PDPA (\u00A7 12D-109) requires data protection assessments for profiling activities. Delaware has the lowest coverage thresholds of any state \u2014 35,000 consumers OR 10,000 consumers with 20%+ revenue from data sales.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Delaware Personal Data Privacy Act.",
+      step2DecisionHelp:
+        "Check every category where this system processes Delaware consumer data. The PDPA (\u00A7 12D-109(a)) requires data protection assessments for profiling, targeted advertising, data sales, and sensitive data processing.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment under \u00A7 12D-109(a).",
+      step3BiasHelp:
+        "If your system uses profiling to make consequential decisions, a bias review helps document that processing is conducted with reasonable care under the Delaware PDPA.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. The Delaware PDPA requires responding to consumer rights requests within 45 days. Note: Universal opt-out mechanism recognition is required starting January 1, 2026 (\u00A7 12D-106(e)).",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated data privacy contact under the Delaware PDPA.",
+    },
+  },
+  "multi-state-profiling-assessment": {
+    name: "Multi-State Profiling Assessment Bundle",
+    statute: "VA, CT, CO, OR, TX, MT, DE, MN, MD, IN + more",
+    lawUrl: "https://law.lis.virginia.gov/vacode/title59.1/chapter53/",
+    lawLinkText: "Read Virginia VCDPA (the first state law) on law.lis.virginia.gov",
+    acknowledgment:
+      "I understand that these are multi-state compliance templates, not legal advice. State privacy laws are enacted independently and may differ in thresholds, cure periods, and specific requirements. I should verify the current status of each state\u2019s law and consult qualified legal counsel.",
+    basePrice: 399,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Multi-State Data Protection Assessment",
+      "State Comparison Matrix",
+      "Threshold Analysis Worksheet",
+      "Multi-State Privacy Notice Template",
+      "State-by-State Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling for Consequential Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Sale of Personal Data"],
+      ["sensitive_data", "Processing Sensitive Data"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any system that processes personal data of consumers for profiling, targeted advertising, or data sales across the 15+ states requiring documented data protection assessments. This bundle covers all major state consumer privacy laws with profiling assessment requirements.",
+      step2Intro:
+        "List each AI or data processing system you use in activities covered by multi-state consumer privacy laws. We\u2019ll generate a unified assessment template covering all applicable states.",
+      step2DecisionHelp:
+        "Check every category where this system processes consumer data. Each state law has different specifics, but profiling, targeted advertising, data sales, and sensitive data processing are covered across all major states.",
+      step2MultiHelp:
+        "If you use multiple systems, list each separately. Each may require its own assessment. The State Comparison Matrix will show you each state\u2019s threshold and cure period requirements.",
+      step3BiasHelp:
+        "If your system uses profiling to make consequential decisions, documenting bias review demonstrates reasonable care under multiple state laws including Colorado, Virginia, and Connecticut.",
+      step4Help:
+        "This section captures your oversight structure. Consumer response timelines vary by state \u2014 the State Comparison Matrix will show you each state\u2019s requirements.",
+      step5Intro:
+        "This contact will be listed in your multi-state privacy notices and consumer rights procedures as the designated data privacy contact.",
+    },
+  },
+  "multi-state-employer-ai-disclosure": {
+    name: "Multi-State Employer AI Disclosure Kit",
+    statute: "775 ILCS 5/2-102(L) + NYC Admin. Code \u00A7\u00A7 20-870\u201320-874 + C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    lawUrl: "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
+    lawLinkText: "Read Illinois HB3773 (775 ILCS 5/2-102(L)) on ilga.gov",
+    acknowledgment:
+      "I understand that these are multi-jurisdiction compliance templates covering IL, NYC, and CO AI employment laws, not legal advice. Each jurisdiction has different requirements, penalties, and enforcement mechanisms. I should verify the current status of each law and consult qualified legal counsel.",
+    basePrice: 299,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Multi-Jurisdiction Compliance Matrix",
+      "Unified Employee/Candidate Notification",
+      "State-Specific Addendum Templates",
+      "Bias Audit Cross-Reference Guide",
+      "Multi-State Record Retention Policy",
+    ],
+    decisions: [
+      ["recruitment", "Recruitment"],
+      ["hiring", "Hiring"],
+      ["promotion", "Promotion"],
+      ["discharge", "Discharge"],
+      ["discipline", "Discipline"],
+      ["tenure", "Tenure"],
+      ["terms", "Terms, Privileges, or Conditions of Employment"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any AI tool used in employment decisions in Illinois, New York City, or Colorado. Illinois HB3773 covers all employment decisions for IL employees. NYC LL144 covers automated employment decision tools used for hiring or promotion in NYC. Colorado SB24-205 covers AI used in consequential employment decisions for CO consumers.",
+      step2Intro:
+        "List each AI tool or system used in employment decisions across Illinois, New York City, and/or Colorado. We\u2019ll generate unified disclosure documentation covering all three jurisdictions.",
+      step2DecisionHelp:
+        "Check every type of employment decision where this AI tool plays any role. The Multi-Jurisdiction Compliance Matrix will show you which of the three laws applies to each decision type.",
+      step2MultiHelp:
+        "If you use multiple AI tools in employment decisions, list each separately. NYC LL144 requires separate bias audits for each automated employment decision tool.",
+      step3BiasHelp:
+        "Bias audits are required annually under NYC LL144 and are strongly recommended under CO SB24-205 as evidence of \u201creasonable care.\u201d Illinois HB3773 does not mandate audits, but they are strong evidence of good faith.",
+      step4Help:
+        "This section captures how your company uses AI outputs and who oversees the process. All three jurisdictions emphasize human oversight as a key safeguard.",
+      step5Intro:
+        "This contact will be listed in employee and candidate notifications across all three jurisdictions as required by IL 775 ILCS 5/2-102(L)(2), NYC LL144, and CO SB24-205.",
+    },
+  },
   "minnesota-mcdpa": {
     name: "Minnesota MCDPA",
     statute: "Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21",
