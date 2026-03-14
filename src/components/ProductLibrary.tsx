@@ -245,10 +245,10 @@ export default function ProductLibrary({
                 <Link href="/regulations/nyc-local-law-144" className="text-xs text-blue-700 hover:underline">NYC LL144</Link>
               </li>
               <li>
-                <Link href="/regulations/colorado-sb-24-205" className="text-xs text-blue-700 hover:underline">Colorado SB 24-205</Link>
+                <Link href="/regulations/colorado-sb24-205" className="text-xs text-blue-700 hover:underline">Colorado SB 24-205</Link>
               </li>
               <li>
-                <Link href="/regulations/multi-state-employer-bundle" className="text-xs text-blue-700 hover:underline">Multi-State Employer Bundle</Link>
+                <Link href="/regulations/multi-state-employer-ai-disclosure" className="text-xs text-blue-700 hover:underline">Multi-State Employer Bundle</Link>
               </li>
             </ul>
           </div>
@@ -265,7 +265,7 @@ export default function ProductLibrary({
                 <Link href="/regulations/california-ccpa-admt" className="text-xs text-blue-700 hover:underline">California CCPA ADMT</Link>
               </li>
               <li>
-                <Link href="/regulations/multi-state-profiling-bundle" className="text-xs text-blue-700 hover:underline">Multi-State Profiling Bundle</Link>
+                <Link href="/regulations/multi-state-profiling-assessment" className="text-xs text-blue-700 hover:underline">Multi-State Profiling Bundle</Link>
               </li>
             </ul>
           </div>
