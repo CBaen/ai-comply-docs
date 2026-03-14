@@ -34,7 +34,16 @@ export async function generateMetadata({
   };
 }
 
-function StatusBadge({ status }: { status: string }) {
+function StatusBadge({ status, ready }: { status: string; ready: boolean }) {
+  // If the product isn't ready to buy, show COMING SOON regardless of law status
+  if (!ready) {
+    return (
+      <span className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded font-semibold bg-slate-100 text-slate-600">
+        <span className="inline-block w-1.5 h-1.5 rounded-sm bg-slate-400" />
+        COMING SOON
+      </span>
+    );
+  }
   const styles: Record<string, string> = {
     "in-effect": "bg-red-100 text-red-800",
     "effective-soon": "bg-amber-100 text-amber-800",
