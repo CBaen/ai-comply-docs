@@ -5,7 +5,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://aicompliancedocuments.com";
 
-  const regulationPages = regulations.map((r) => ({
+  const regulationPages = regulations.filter((r) => r.ready).map((r) => ({
     url: `${base}/regulations/${r.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
