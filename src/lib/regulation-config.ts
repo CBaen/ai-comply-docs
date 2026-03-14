@@ -1317,4 +1317,168 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be named in your Customer AUP as the point of contact for AUP violations, abuse reports, and policy questions.",
     },
   },
+  "indiana-icdpa": {
+    name: "Indiana ICDPA",
+    statute: "IC 24-15 (Indiana Consumer Data Protection Act)",
+    lawUrl: "https://iga.in.gov/laws/2024/ic/titles/24#24-15",
+    lawLinkText: "Read IC 24-15 on iga.in.gov",
+    acknowledgment:
+      "I have reviewed IC 24-15 (Indiana Consumer Data Protection Act, P.L. 94-2023) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Assessment",
+      "Consumer Rights Request Procedures",
+      "Opt-Out Documentation",
+      "Data Processing Agreement Template",
+      "Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What systems are covered?</strong> Any system that uses personal data of Indiana consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your system makes decisions about consumers \u2014 include it.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Indiana Consumer Data Protection Act (IC 24-15).",
+      step2DecisionHelp:
+        "Check every category where this system processes Indiana consumer data. IC 24-15 covers profiling for consequential decisions, targeted advertising, data sales, and sensitive data processing.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment.",
+      step3BiasHelp:
+        "IC 24-15-6-1(b) requires documented assessments for profiling that presents risk of unfair treatment or disparate impact. Document your review of these risks.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. Indiana law requires responding to consumer rights requests within 45 days.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact.",
+    },
+  },
+  "montana-mcdpa": {
+    name: "Montana MCDPA",
+    statute: "MCA \u00A7\u00A7 30-14-2801 through 30-14-2820",
+    lawUrl: "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0280/sections_index.html",
+    lawLinkText: "Read MCA \u00A7\u00A7 30-14-2801\u201330-14-2820 on leg.mt.gov",
+    acknowledgment:
+      "I have reviewed MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384) and understand that these are compliance templates, not legal advice. Montana has the lowest applicability thresholds of any state privacy law (25,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Assessment",
+      "Consumer Rights Request Procedures",
+      "Opt-Out Documentation",
+      "Data Processing Agreement Template",
+      "Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What systems are covered?</strong> Any system that uses personal data of Montana consumers for profiling, targeted advertising, data sales, or processing sensitive data. Montana has the lowest applicability thresholds of any state \u2014 if your business reaches 25,000 Montana consumers, review carefully.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Montana Consumer Data Privacy Act (MCA \u00A7\u00A7 30-14-2801\u201330-14-2820).",
+      step2DecisionHelp:
+        "Check every category where this system processes Montana consumer data. The Montana MCDPA covers profiling for consequential decisions, targeted advertising, data sales, and sensitive data processing.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment.",
+      step3BiasHelp:
+        "MCA \u00A7 30-14-2814 requires documented assessments for profiling activities. Assessments are not retroactive to pre-January 1, 2025 processing.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. Montana law requires responding to consumer rights requests within 45 days.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact.",
+    },
+  },
+  "kentucky-kcdpa": {
+    name: "Kentucky KCDPA",
+    statute: "KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15)",
+    lawUrl: "https://apps.legislature.ky.gov/record/24RS/hb15.html",
+    lawLinkText: "Read HB 15 (KRS Chapter 367) on apps.legislature.ky.gov",
+    acknowledgment:
+      "I have reviewed KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Assessment",
+      "Consumer Rights Request Procedures",
+      "Opt-Out Documentation",
+      "Data Processing Agreement Template",
+      "Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What systems are covered?</strong> Any system that uses personal data of Kentucky consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your system makes decisions about consumers \u2014 include it.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Kentucky Consumer Data Protection Act (KRS Chapter 367, HB 15).",
+      step2DecisionHelp:
+        "Check every category where this system processes Kentucky consumer data. The Kentucky KCDPA covers profiling for consequential decisions, targeted advertising, data sales, and sensitive data processing.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment.",
+      step3BiasHelp:
+        "Kentucky\u2019s KCDPA requires documented assessments for profiling activities that present heightened risk. Document your review of these risks for each covered system.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. Kentucky law requires responding to consumer rights requests within 45 days.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact.",
+    },
+  },
+  "new-jersey-njdpa": {
+    name: "New Jersey NJDPA",
+    statute: "New Jersey Data Protection Act (S332/A1971)",
+    lawUrl: "https://www.njleg.state.nj.us/bill-search/2022/S332",
+    lawLinkText: "Read S332 (New Jersey Data Protection Act) on njleg.state.nj.us",
+    acknowledgment:
+      "I have reviewed the New Jersey Data Protection Act (S332, signed January 16, 2024) and understand that these are compliance templates, not legal advice. The NJDPA is effective January 15, 2025. This is separate from the NJ Law Against Discrimination. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 249,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Assessment",
+      "Consumer Rights Request Procedures",
+      "Opt-Out Documentation",
+      "Data Processing Agreement Template",
+      "Compliance Checklist",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What systems are covered?</strong> Any system that uses personal data of New Jersey consumers for profiling, targeted advertising, data sales, or processing sensitive data. Note: the NJDPA is a separate law from the NJ Law Against Discrimination.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the New Jersey Data Protection Act (S332).",
+      step2DecisionHelp:
+        "Check every category where this system processes New Jersey consumer data. The NJDPA covers profiling for consequential decisions, targeted advertising, data sales, and sensitive data processing.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection assessment.",
+      step3BiasHelp:
+        "The New Jersey NJDPA requires documented assessments for profiling activities that present heightened risk. Document your review of these risks for each covered system.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. New Jersey law requires responding to consumer rights requests within 45 days.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact.",
+    },
+  },
 };

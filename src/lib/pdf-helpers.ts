@@ -266,6 +266,30 @@ const REGULATION_HEADER: Record<
     rules:
       "Customer-facing AUP template. Aligns with FTC guidance on AI transparency and EU AI Act Art. 13 disclosure obligations.",
   },
+  "indiana-icdpa": {
+    statute:
+      "Statute: IC 24-15 (Indiana Consumer Data Protection Act, P.L. 94-2023, eff. 1-1-26)",
+    rules:
+      "Enforcement: Indiana Attorney General (exclusive authority, IC 24-15-10-4). No private right of action. 30-day cure period (IC 24-15-10-3).",
+  },
+  "montana-mcdpa": {
+    statute:
+      "Statute: MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384, eff. 10-1-24)",
+    rules:
+      "Enforcement: Montana Attorney General via Title 30, ch. 14, parts 1\u20132. No private right of action (\u00A7 30-14-2817(5)). 30-day cure period (\u00A7 30-14-2817(3)). Lowest applicability thresholds of any state (25,000 consumers).",
+  },
+  "kentucky-kcdpa": {
+    statute:
+      "Statute: KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15, eff. 1-1-26)",
+    rules:
+      "Enforcement: Kentucky Attorney General (exclusive authority). No private right of action. 30-day cure period.",
+  },
+  "new-jersey-njdpa": {
+    statute:
+      "Statute: New Jersey Data Protection Act (S332/A1971, signed 1-16-24, eff. 1-15-25)",
+    rules:
+      "Enforcement: New Jersey Attorney General. No private right of action. This is a separate law from the NJ Law Against Discrimination (LAD).",
+  },
 };
 
 // AcroForm support detection
