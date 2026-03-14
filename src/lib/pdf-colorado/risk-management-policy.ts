@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -219,6 +220,9 @@ export function generateCORiskManagementPolicy(data: ComplianceFormData): jsPDF 
   y = addFormTextField(doc, 'co_rmp_approver_name', 'Approved By (Name & Title):', y);
   y = addFormTextField(doc, 'co_rmp_approval_date', 'Approval Date:', y);
   y = addFormTextField(doc, 'co_rmp_approval_sig', 'Signature:', y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "co_rmp", y);
 
   addDisclaimer(doc);
   return doc;

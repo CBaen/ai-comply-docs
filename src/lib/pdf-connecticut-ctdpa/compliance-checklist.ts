@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -161,9 +162,9 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
     y,
     { width: 60 }
   );
-  y = addFormTextField(doc, "checklist_signature", "Signature:", y, {
-    width: 100,
-  });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "ct_checklist", y);
 
   addDisclaimer(doc);
   return doc;

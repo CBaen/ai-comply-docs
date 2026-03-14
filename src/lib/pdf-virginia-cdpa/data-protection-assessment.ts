@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -144,9 +145,6 @@ export function generateDataProtectionAssessment(
   });
 
   y = addSectionHeader(doc, "Assessment Review and Approval", y);
-  y = addFormTextField(doc, "review_name", "Reviewed By (Name/Title):", y);
-  y = addFormTextField(doc, "review_date", "Review Date:", y);
-  y = addFormTextField(doc, "review_signature", "Signature:", y);
   y = addWrappedText(
     doc,
     "Recommended Best Practice — not a statutory mandate: review assessments annually and when processing activities change significantly. Retain assessments and make them available to the Virginia AG upon request (§ 59.1-580(B)).",
@@ -155,6 +153,10 @@ export function generateDataProtectionAssessment(
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
+  y += LINE_HEIGHT;
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "va_dpa", y);
 
   addDisclaimer(doc);
   return doc;

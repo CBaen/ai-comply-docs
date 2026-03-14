@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -270,6 +271,9 @@ export function generateAccommodationForm(data: ComplianceFormData): jsPDF {
     LINE_HEIGHT
   );
   doc.setFont("helvetica", "normal");
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "il_accom", y);
 
   addDisclaimer(doc);
   return doc;

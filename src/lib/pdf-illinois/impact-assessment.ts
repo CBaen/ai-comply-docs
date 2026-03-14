@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -191,6 +192,9 @@ export function generateImpactAssessment(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "assess_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "assess_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "assess_next_review", "Next review date:", y, { width: 60 });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "il_impact", y);
 
   addDisclaimer(doc);
   return doc;

@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -110,13 +111,14 @@ export function generateDataProcessingAgreement(
   y += LINE_HEIGHT;
 
   y = addSectionHeader(doc, "Signatures", y);
-  y = addFormTextField(doc, "controller_sig", "Controller Signature:", y);
-  y = addFormTextField(doc, "controller_name_sig", "Controller Name/Title:", y);
-  y = addFormTextField(doc, "controller_sig_date", "Date:", y);
-  y += LINE_HEIGHT;
-  y = addFormTextField(doc, "processor_sig", "Processor Signature:", y);
-  y = addFormTextField(doc, "processor_name_sig", "Processor Name/Title:", y);
-  y = addFormTextField(doc, "processor_sig_date", "Date:", y);
+
+  y = addSectionHeader(doc, "Controller Signature", y);
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "va_controller", y);
+
+  y = addSectionHeader(doc, "Processor Signature", y);
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "va_processor", y);
 
   addDisclaimer(doc);
   return doc;

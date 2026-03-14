@@ -12,6 +12,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -200,6 +201,9 @@ export function generateCOImpactAssessment(data: ComplianceFormData): jsPDF {
     y = addFormTextField(doc, 'co_ia_sys' + sysNum + '_retention_end', 'Retention End Date (3 years after final deployment, § 6-1-1703(3)(f)):', y);
     y += LINE_HEIGHT * 2;
   });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "co_impact", y);
 
   addDisclaimer(doc);
   return doc;
