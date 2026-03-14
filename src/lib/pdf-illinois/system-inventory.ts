@@ -28,7 +28,7 @@ export function generateSystemInventory(data: ComplianceFormData): jsPDF {
     doc,
     "This document inventories all artificial intelligence systems used by " +
       data.company.name +
-      " in employment-related decisions, to support compliance with 775 ILCS 5/2-102(L) (Illinois HB3773).",
+      " in employment-related decisions. This inventory format is a recommended best practice to support compliance with 775 ILCS 5/2-102(L) (Illinois HB3773) — the statute does not mandate a specific inventory format.",
     MARGIN,
     y,
     CONTENT_WIDTH,
