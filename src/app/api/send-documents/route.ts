@@ -220,6 +220,62 @@ const REGULATION_EMAIL: Record<
     reminder:
       "The Minnesota Consumer Data Privacy Act (Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21) has been in effect since July 31, 2025. The Minnesota Attorney General has exclusive enforcement authority (\u00A7 325M.20(b)). There is no private right of action.",
   },
+  "indiana-icdpa": {
+    title: "Your Indiana ICDPA Compliance Package",
+    statute: "IC 24-15 (Indiana Consumer Data Protection Act)",
+    description:
+      "compliance documentation templates aligned with the Indiana Consumer Data Protection Act (IC 24-15, effective January 1, 2026) requirements. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Indiana ICDPA (IC 24-15).",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template \u2014 you have 45 days to respond to consumer requests.",
+      "<strong>Complete the Data Protection Assessment</strong> for each system that processes data for targeted advertising, data sales, profiling for consequential decisions, or sensitive data (IC 24-15-6-1(b)).",
+      "<strong>File everything.</strong> The Indiana AG enforces the ICDPA (IC 24-15-10-4). These documents demonstrate compliance. Civil penalty up to $7,500 per violation (IC 24-15-10-2) with a 30-day cure period (IC 24-15-10-3).",
+    ],
+    reminder:
+      "The Indiana Consumer Data Protection Act (IC 24-15) is effective January 1, 2026. The Indiana Attorney General has exclusive enforcement authority (IC 24-15-10-4). There is no private right of action. Civil penalty up to $7,500 per violation (IC 24-15-10-2). 30-day cure period (IC 24-15-10-3).",
+  },
+  "montana-mcdpa": {
+    title: "Your Montana MCDPA Compliance Package",
+    statute: "MCA \u00A7\u00A7 30-14-2801 through 30-14-2820",
+    description:
+      "compliance documentation templates aligned with the Montana Consumer Data Privacy Act (MCA \u00A7\u00A7 30-14-2801 through 30-14-2820, effective October 1, 2024) requirements. Montana has the lowest applicability thresholds of any state privacy law (25,000+ consumers). Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Montana MCDPA (\u00A7 30-14-2808).",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template \u2014 you have 45 days to respond to consumer requests (\u00A7 30-14-2810).",
+      "<strong>Complete the Data Protection Assessment</strong> for each covered processing activity (\u00A7 30-14-2814). Note: Assessments are not retroactive to pre-January 1, 2025 processing.",
+      "<strong>File everything.</strong> The Montana AG enforces the MCDPA. These documents demonstrate compliance. Civil penalty up to $7,500 per violation (\u00A7 30-14-2820).",
+    ],
+    reminder:
+      "The Montana Consumer Data Privacy Act (MCA \u00A7\u00A7 30-14-2801 through 30-14-2820) has been in effect since October 1, 2024. Montana has the lowest applicability thresholds of any state privacy law: 25,000+ consumers OR 15,000+ consumers with 25%+ revenue from data sales (\u00A7 30-14-2803). No private right of action (\u00A7 30-14-2817(5)). 30-day cure period (\u00A7 30-14-2817(3)).",
+  },
+  "kentucky-kcdpa": {
+    title: "Your Kentucky KCDPA Compliance Package",
+    statute: "KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15)",
+    description:
+      "compliance documentation templates aligned with the Kentucky Consumer Data Protection Act (KRS Chapter 367, HB 15, effective January 1, 2026) requirements. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Kentucky KCDPA (KRS Chapter 367).",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template \u2014 you have 45 days to respond to consumer requests.",
+      "<strong>Complete the Data Protection Assessment</strong> for each system that processes data for targeted advertising, data sales, profiling for consequential decisions, or sensitive data.",
+      "<strong>File everything.</strong> The Kentucky AG enforces the KCDPA. These documents demonstrate compliance. A 30-day cure period applies before the AG may initiate civil action.",
+    ],
+    reminder:
+      "The Kentucky Consumer Data Protection Act (KRS Chapter 367, HB 15) is effective January 1, 2026. The Kentucky Attorney General has exclusive enforcement authority. There is no private right of action. A 30-day cure period applies.",
+  },
+  "new-jersey-njdpa": {
+    title: "Your New Jersey NJDPA Compliance Package",
+    statute: "New Jersey Data Protection Act (S332/A1971)",
+    description:
+      "compliance documentation templates aligned with the New Jersey Data Protection Act (S332/A1971, signed January 16, 2024, effective January 15, 2025) requirements. Note: The NJDPA is a separate law from the NJ Law Against Discrimination. Review each document with your legal team before deployment.",
+    steps: [
+      "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the New Jersey NJDPA.",
+      "<strong>Build your Consumer Rights Request process</strong> using the Procedures template \u2014 you have 45 days to respond to consumer requests.",
+      "<strong>Complete the Data Protection Assessment</strong> for each system that processes data for targeted advertising, data sales, profiling for consequential decisions, or sensitive data.",
+      "<strong>File everything.</strong> The New Jersey AG enforces the NJDPA. These documents demonstrate compliance. Remember: the NJDPA and the NJ Law Against Discrimination are separate laws \u2014 both may apply.",
+    ],
+    reminder:
+      "The New Jersey Data Protection Act (S332/A1971) has been in effect since January 15, 2025. The New Jersey Attorney General has enforcement authority. There is no private right of action. This law is separate from the NJ Law Against Discrimination.",
+  },
   "california-ccpa-admt": {
     title: "Your California CCPA ADMT Compliance Package",
     statute: "Cal. Civ. Code \u00A7 1798.100 et seq. + CPPA ADMT Regulations",

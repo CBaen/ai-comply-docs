@@ -300,6 +300,126 @@ export async function generateDocuments(
     ];
   }
 
+  if (data.regulation === "indiana-icdpa") {
+    const in_ = await import("./pdf-indiana-icdpa");
+    return [
+      {
+        doc: in_.generatePrivacyNotice(data),
+        name: `${companySlug}_IN_Privacy_Notice.pdf`,
+      },
+      {
+        doc: in_.generateDataProtectionAssessment(data),
+        name: `${companySlug}_IN_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: in_.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_IN_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: in_.generateOptOutDocumentation(data),
+        name: `${companySlug}_IN_Opt_Out_Documentation.pdf`,
+      },
+      {
+        doc: in_.generateDataProcessingAgreement(data),
+        name: `${companySlug}_IN_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: in_.generateComplianceChecklist(data),
+        name: `${companySlug}_IN_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "montana-mcdpa") {
+    const mt = await import("./pdf-montana-mcdpa");
+    return [
+      {
+        doc: mt.generatePrivacyNotice(data),
+        name: `${companySlug}_MT_Privacy_Notice.pdf`,
+      },
+      {
+        doc: mt.generateDataProtectionAssessment(data),
+        name: `${companySlug}_MT_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: mt.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_MT_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: mt.generateOptOutDocumentation(data),
+        name: `${companySlug}_MT_Opt_Out_Documentation.pdf`,
+      },
+      {
+        doc: mt.generateDataProcessingAgreement(data),
+        name: `${companySlug}_MT_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: mt.generateComplianceChecklist(data),
+        name: `${companySlug}_MT_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "kentucky-kcdpa") {
+    const ky = await import("./pdf-kentucky-kcdpa");
+    return [
+      {
+        doc: ky.generatePrivacyNotice(data),
+        name: `${companySlug}_KY_Privacy_Notice.pdf`,
+      },
+      {
+        doc: ky.generateDataProtectionAssessment(data),
+        name: `${companySlug}_KY_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: ky.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_KY_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: ky.generateOptOutDocumentation(data),
+        name: `${companySlug}_KY_Opt_Out_Documentation.pdf`,
+      },
+      {
+        doc: ky.generateDataProcessingAgreement(data),
+        name: `${companySlug}_KY_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: ky.generateComplianceChecklist(data),
+        name: `${companySlug}_KY_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "new-jersey-njdpa") {
+    const nj = await import("./pdf-new-jersey-njdpa");
+    return [
+      {
+        doc: nj.generatePrivacyNotice(data),
+        name: `${companySlug}_NJ_Privacy_Notice.pdf`,
+      },
+      {
+        doc: nj.generateDataProtectionAssessment(data),
+        name: `${companySlug}_NJ_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: nj.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_NJ_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: nj.generateOptOutDocumentation(data),
+        name: `${companySlug}_NJ_Opt_Out_Documentation.pdf`,
+      },
+      {
+        doc: nj.generateDataProcessingAgreement(data),
+        name: `${companySlug}_NJ_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: nj.generateComplianceChecklist(data),
+        name: `${companySlug}_NJ_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
   if (data.regulation === "colorado-sb24-205") {
     const co = await import("./pdf-colorado");
     const docs: GeneratedDoc[] = [
