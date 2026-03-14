@@ -1,4 +1,5 @@
 import { regulations } from "@/data/regulations";
+import { getAllBlogPosts } from "@/lib/blog";
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,9 +12,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.status === "in-effect" ? 0.9 : 0.8,
   }));
 
+  const blogPosts = getAllBlogPosts().map((post) => ({
+    url: `${base}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
     { url: `${base}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
     ...regulationPages,
+    ...blogPosts,
   ];
 }

@@ -1,0 +1,16 @@
+# AI Compliance Documents
+> AI compliance documentation templates for US state and federal AI regulations.
+
+## About
+AI Compliance Documents generates compliance documentation templates for businesses subject to AI regulations. Products cover Illinois HB3773, Colorado SB24-205, and universal frameworks (Employee AI Policy, Vendor Due Diligence, Bias Audit, Incident Response).
+
+## Products
+- Illinois HB3773 AI Compliance Package: /regulations/illinois-hb3773
+- Colorado SB24-205 AI Compliance Package: /regulations/colorado-sb24-205
+- Employee AI Acceptable Use Policy: /regulations/employee-ai-policy
+- Vendor AI Due Diligence Kit: /regulations/vendor-ai-due-diligence
+- AI Bias Audit Templates: /regulations/ai-bias-audit-template
+- AI Incident Response Plan: /regulations/ai-incident-response-plan
+
+## Important
+All documents are templates for compliance planning purposes. They do not constitute legal advice. AI Compliance Documents is not a law firm.
