@@ -40,7 +40,7 @@ export const regulations: Regulation[] = [
     price: 399,
     stripePriceId: "price_1TAqxYGidFVHIL99zIU5BY1C",
     documentCount: 7,
-    description: "Compliance package for NYC employers using automated employment decision tools (AEDTs). Covers mandatory annual bias audits, public audit result posting, and candidate notification requirements. DCWP shifted to proactive investigations in 2026.",
+    description: "If you hire in New York City and use any automated tool to screen or evaluate candidates, you need an annual bias audit and public summary of the results. This package covers the full Local Law 144 requirement.",
     penaltySummary: "NYC Department of Consumer and Worker Protection enforcement. Civil penalties of $500 (first), $500-$1,500 per subsequent violation per day. Proactive DCWP investigations increasing in 2026.",
     maxPenalty: "$1,500 per violation per day",
     appliesToSummary: "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion.",
