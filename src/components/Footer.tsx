@@ -35,7 +35,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#products"
+                  href="/regulations"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   All Products
