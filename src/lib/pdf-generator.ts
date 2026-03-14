@@ -180,6 +180,96 @@ export async function generateDocuments(
     ];
   }
 
+  if (data.regulation === "virginia-cdpa") {
+    const va = await import("./pdf-virginia-cdpa");
+    return [
+      {
+        doc: va.generatePrivacyNotice(data),
+        name: `${companySlug}_VA_Privacy_Notice.pdf`,
+      },
+      {
+        doc: va.generateDataProtectionAssessment(data),
+        name: `${companySlug}_VA_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: va.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_VA_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: va.generateOptOutDocumentation(data),
+        name: `${companySlug}_VA_Opt_Out_Documentation.pdf`,
+      },
+      {
+        doc: va.generateDataProcessingAgreement(data),
+        name: `${companySlug}_VA_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: va.generateComplianceChecklist(data),
+        name: `${companySlug}_VA_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "connecticut-ctdpa") {
+    const ct = await import("./pdf-connecticut-ctdpa");
+    return [
+      {
+        doc: ct.generatePrivacyNotice(data),
+        name: `${companySlug}_CT_Privacy_Notice.pdf`,
+      },
+      {
+        doc: ct.generateDataProtectionAssessment(data),
+        name: `${companySlug}_CT_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: ct.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_CT_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: ct.generateOptOutDocumentation(data),
+        name: `${companySlug}_CT_Profiling_Opt_Out.pdf`,
+      },
+      {
+        doc: ct.generateDataProcessingAgreement(data),
+        name: `${companySlug}_CT_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: ct.generateComplianceChecklist(data),
+        name: `${companySlug}_CT_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "oregon-cpa") {
+    const or = await import("./pdf-oregon-cpa");
+    return [
+      {
+        doc: or.generatePrivacyNotice(data),
+        name: `${companySlug}_OR_Privacy_Notice.pdf`,
+      },
+      {
+        doc: or.generateDataProtectionAssessment(data),
+        name: `${companySlug}_OR_Data_Protection_Assessment.pdf`,
+      },
+      {
+        doc: or.generateConsumerRightsProcedures(data),
+        name: `${companySlug}_OR_Consumer_Rights_Procedures.pdf`,
+      },
+      {
+        doc: or.generateOptOutDocumentation(data),
+        name: `${companySlug}_OR_Profiling_Opt_Out.pdf`,
+      },
+      {
+        doc: or.generateDataProcessingAgreement(data),
+        name: `${companySlug}_OR_Data_Processing_Agreement.pdf`,
+      },
+      {
+        doc: or.generateComplianceChecklist(data),
+        name: `${companySlug}_OR_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
   if (data.regulation === "minnesota-mcdpa") {
     const mn = await import("./pdf-minnesota-mcdpa");
     return [
