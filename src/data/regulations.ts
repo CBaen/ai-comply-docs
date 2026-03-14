@@ -515,7 +515,7 @@ export const regulations: Regulation[] = [
     tier: "universal",
     category: "Internal Policy",
     price: 199,
-    stripePriceId: "",
+    stripePriceId: "price_1TAiyAGidFVHIL99aTZ9NcqA",
     documentCount: 3,
     description: "Internal AI acceptable use policy template aligned with NIST AI Risk Management Framework and EEOC guidance. Covers employee obligations, prohibited uses, data handling, and reporting procedures.",
     penaltySummary: "Reduces organizational liability. Required foundation for most state-specific compliance programs.",
