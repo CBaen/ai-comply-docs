@@ -472,6 +472,33 @@ export function addFormTextField(
   return y;
 }
 
+export function addSignatureBlock(
+  doc: jsPDF,
+  prefix: string,
+  y: number
+): number {
+  y = addSectionHeader(doc, "Authorization & Electronic Signature", y);
+
+  doc.setFontSize(BODY_SIZE);
+  doc.setFont("helvetica", "normal");
+  y = addWrappedText(
+    doc,
+    "By typing my name below, I acknowledge this constitutes my electronic signature under the ESIGN Act (15 U.S.C. \u00A7 7001) and applicable state law.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += 2;
+
+  y = addFormTextField(doc, `${prefix}_sig_name`, "Signature (type full legal name):", y);
+  y = addFormTextField(doc, `${prefix}_sig_title`, "Title/Role:", y);
+  y = addFormTextField(doc, `${prefix}_sig_date`, "Date:", y);
+  y = addFormTextField(doc, `${prefix}_sig_org`, "Organization:", y);
+
+  return y;
+}
+
 interface CheckboxOpts {
   checked?: boolean;
   x?: number;
