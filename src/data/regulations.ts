@@ -177,7 +177,7 @@ export const regulations: Regulation[] = [
     tier: "state",
     category: "Consumer Privacy",
     price: 249,
-    stripePriceId: "",
+    stripePriceId: "price_1TArY0GidFVHIL99DxG3ZQsu",
     documentCount: 6,
     description: "Compliance documentation templates for Virginia's Consumer Data Protection Act covering AI profiling obligations. Includes privacy notice, data protection assessments for profiling with risk of unfair treatment or disparate impact, consumer rights procedures, opt-out documentation, data processing agreement template, and compliance checklist.",
     penaltySummary: "Virginia Attorney General exclusive enforcement (§ 59.1-584(A)). No private right of action. AG must provide 30-day cure period before seeking penalties (§ 59.1-584(B)). Civil penalties up to $7,500 per violation (§ 59.1-584(C)).",
