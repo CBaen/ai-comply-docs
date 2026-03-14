@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -176,6 +177,9 @@ export function generateDeIdentificationMethodology(data: ComplianceFormData): j
   });
   y = addFormTextField(doc, "approved_date", "Approval Date:", y);
   y = addFormTextField(doc, "counsel_review", "Legal Counsel Review (Name/Firm):", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "hipaa_deid", y);
 
   addDisclaimer(doc);
   return doc;

@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -159,6 +160,11 @@ export function generateBusinessAssociateAgreement(data: ComplianceFormData): js
   y = addFormTextField(doc, "ba_name", "Printed Name:", y, { width: 100 });
   y = addFormTextField(doc, "ba_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "ba_date", "Date:", y, { width: 60 });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "hipaa_ce", y);
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "hipaa_ba", y);
 
   addDisclaimer(doc);
   return doc;

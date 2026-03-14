@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -493,6 +494,9 @@ export function generateVendorQuestionnaire(data: ComplianceFormData): jsPDF {
   );
   y = addFormTextField(doc, "vdd_q_cert_date", "Date:", y);
   y = addFormTextField(doc, "vdd_q_cert_sig", "Signature:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "vdd_quest", y);
 
   addDisclaimer(doc);
   return doc;

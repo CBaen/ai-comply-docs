@@ -378,6 +378,9 @@ export function generateVendorRiskAssessment(
   y = addFormTextField(doc, "vdd_ra_approver_date", "Date:", y);
   y = addFormTextField(doc, "vdd_ra_approver_sig", "Signature:", y);
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "vdd_risk", y);
+
   addDisclaimer(doc);
   return doc;
 }

@@ -7,6 +7,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   LINE_HEIGHT,
   REVIEW_LABELS,
@@ -142,6 +143,9 @@ export function generateHIPAAComplianceChecklist(data: ComplianceFormData): jsPD
   y = addFormTextField(doc, "checklist_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "checklist_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "checklist_signature", "Signature:", y, { width: 100 });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "hipaa_checklist", y);
 
   addDisclaimer(doc);
   return doc;

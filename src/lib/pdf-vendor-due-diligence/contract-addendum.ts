@@ -420,6 +420,11 @@ export function generateContractAddendum(data: ComplianceFormData): jsPDF {
     x: MARGIN,
   });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "vdd_company", y);
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "vdd_vendor", y);
+
   addDisclaimer(doc);
   return doc;
 }

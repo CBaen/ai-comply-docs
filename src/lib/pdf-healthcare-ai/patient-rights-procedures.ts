@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -193,6 +194,9 @@ export function generatePatientRightsProcedures(data: ComplianceFormData): jsPDF
   y = addFormTextField(doc, "rights_approved_by", "Procedures Approved by (Privacy Officer):", y, { width: 100 });
   y = addFormTextField(doc, "rights_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "rights_next_review", "Next Review Date:", y, { width: 60 });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "hipaa_rights", y);
 
   addDisclaimer(doc);
   return doc;

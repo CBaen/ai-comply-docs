@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -419,6 +420,9 @@ export function generateMonitoringChecklist(
   );
   y = addFormTextField(doc, "vdd_mc_approver_date", "Date:", y);
   y = addFormTextField(doc, "vdd_mc_approver_sig", "Signature:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "vdd_monitor", y);
 
   addDisclaimer(doc);
   return doc;
