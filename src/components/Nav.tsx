@@ -110,11 +110,11 @@ export default function Nav() {
               FAQ
             </a>
             <Link
-              href="/blog"
+              href="/about"
               className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >
-              Blog
+              About
             </Link>
             <div className="flex items-center gap-3">
               <DarkModeToggle />
