@@ -663,6 +663,110 @@ export async function generateDocuments(
     ];
   }
 
+  if (data.regulation === "manager-ai-training-kit") {
+    const mtrk = await import("./pdf-manager-ai-training-kit");
+    return [
+      {
+        doc: mtrk.generateManagerTalkingPoints(data),
+        name: `${companySlug}_Manager_AI_Talking_Points.pdf`,
+      },
+      {
+        doc: mtrk.generateEmployeeFAQUniversal(data),
+        name: `${companySlug}_Employee_AI_FAQ.pdf`,
+      },
+      {
+        doc: mtrk.generateTrainingSignOff(data),
+        name: `${companySlug}_AI_Training_Sign_Off.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "annual-compliance-review") {
+    const acr = await import("./pdf-annual-compliance-review");
+    return [
+      {
+        doc: acr.generateAnnualReviewChecklist(data),
+        name: `${companySlug}_Annual_AI_Compliance_Review_Checklist.pdf`,
+      },
+      {
+        doc: acr.generateUpdateLog(data),
+        name: `${companySlug}_AI_Compliance_Update_Log.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "board-ai-summary") {
+    const bas = await import("./pdf-board-ai-summary");
+    return [
+      {
+        doc: bas.generateExecutiveSummary(data),
+        name: `${companySlug}_Board_AI_Executive_Summary.pdf`,
+      },
+      {
+        doc: bas.generateBoardPresentation(data),
+        name: `${companySlug}_Board_AI_Presentation.pdf`,
+      },
+      {
+        doc: bas.generateRiskRegisterExcerpt(data),
+        name: `${companySlug}_AI_Risk_Register_Excerpt.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "consumer-notice-kit") {
+    const cnk = await import("./pdf-consumer-notice-kit");
+    return [
+      {
+        doc: cnk.generateWebsiteBannerLanguage(data),
+        name: `${companySlug}_Website_AI_Banner_Language.pdf`,
+      },
+      {
+        doc: cnk.generateEmailNotification(data),
+        name: `${companySlug}_AI_Email_Notification_Templates.pdf`,
+      },
+      {
+        doc: cnk.generatePhysicalPosting(data),
+        name: `${companySlug}_AI_Physical_Posting_Templates.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "data-mapping-inventory") {
+    const dmi = await import("./pdf-data-mapping-inventory");
+    return [
+      {
+        doc: dmi.generateDataInventory(data),
+        name: `${companySlug}_AI_Data_Inventory.pdf`,
+      },
+      {
+        doc: dmi.generateAIDataFlowDiagram(data),
+        name: `${companySlug}_AI_Data_Flow_Diagram.pdf`,
+      },
+      {
+        doc: dmi.generateThirdPartyRegister(data),
+        name: `${companySlug}_Third_Party_AI_Register.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "consumer-rights-kit") {
+    const crk = await import("./pdf-consumer-rights-kit");
+    return [
+      {
+        doc: crk.generateRequestIntakeForm(data),
+        name: `${companySlug}_Consumer_Rights_Request_Intake_Form.pdf`,
+      },
+      {
+        doc: crk.generateResponseTemplates(data),
+        name: `${companySlug}_Consumer_Rights_Response_Templates.pdf`,
+      },
+      {
+        doc: crk.generateTimelineTracker(data),
+        name: `${companySlug}_Consumer_Rights_Timeline_Tracker.pdf`,
+      },
+    ];
+  }
+
   // Default: Illinois
   const il = await import("./pdf-illinois");
   const docs: GeneratedDoc[] = [

@@ -121,8 +121,6 @@ export function generateThirdPartyRegister(data: ComplianceFormData): jsPDF {
     doc.setFont("helvetica", "normal");
     y += 42;
 
-    // Invisible fields for form fill
-    doc.addField && void 0; // suppress unused expression
     // Use form field names for tracking
     doc.setFontSize(6);
     doc.setTextColor(150);
