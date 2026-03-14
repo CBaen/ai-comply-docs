@@ -135,6 +135,9 @@ export function generateAnnualComplianceReview(data: ComplianceFormData): jsPDF 
   y = addFormTextField(doc, "signoff_date", "Date:", y);
   y = addFormTextField(doc, "signoff_signature", "Signature:", y);
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eeoc_annual", y);
+
   addDisclaimer(doc);
   return doc;
 }

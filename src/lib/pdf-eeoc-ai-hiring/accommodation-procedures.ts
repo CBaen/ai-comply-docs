@@ -160,6 +160,9 @@ export function generateAccommodationProcedures(data: ComplianceFormData): jsPDF
   y = addFormTextField(doc, "acc_title", "Title:", y, { width: 100 });
   y = addFormTextField(doc, "acc_date", "Date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eeoc_accom", y);
+
   addDisclaimer(doc);
   return doc;
 }

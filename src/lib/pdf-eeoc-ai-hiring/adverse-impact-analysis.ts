@@ -178,6 +178,9 @@ export function generateAdverseImpactAnalysis(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "ai_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "ai_next", "Next analysis date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eeoc_impact", y);
+
   addDisclaimer(doc);
   return doc;
 }

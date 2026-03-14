@@ -191,6 +191,9 @@ export function generateValidationDocumentation(data: ComplianceFormData): jsPDF
   y = addFormTextField(doc, "vd_date", "Date:", y, { width: 60 });
   y = addFormTextField(doc, "vd_next", "Next validation review date:", y, { width: 60 });
 
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "eeoc_valid", y);
+
   addDisclaimer(doc);
   return doc;
 }
