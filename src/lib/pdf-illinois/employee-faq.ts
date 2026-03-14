@@ -110,11 +110,11 @@ export function generateEmployeeFAQ(data: ComplianceFormData): jsPDF {
     },
     {
       q: "10. What happens if my employer violates this law?",
-      a: "Using AI that has the effect of discrimination, or failing to provide required notice, is a civil rights violation under the Illinois Human Rights Act. Employees may file a charge with IDHR, which can investigate, mediate, or adjudicate. Courts may award actual damages, back pay, and attorneys' fees.",
+      a: "Using AI that has the effect of discrimination, or failing to provide required notice, is a civil rights violation under the Illinois Human Rights Act. Employees may file a charge with IDHR, which investigates and mediates charges. The Illinois Human Rights Commission adjudicates and may impose civil penalties. Courts may award actual damages, back pay, and attorneys' fees.",
     },
     {
       q: "11. Does this law apply to job applicants too?",
-      a: "Yes. The proposed IDHR implementing rules require that prospective employees also be notified about AI use, typically through job postings.",
+      a: "Yes. The statute (775 ILCS 5/2-102(L)) covers both employees and applicants. It is recommended best practice to notify prospective employees through job postings. IDHR implementing rules are in development.",
     },
     {
       q: '12. What is a "zip code proxy"?',

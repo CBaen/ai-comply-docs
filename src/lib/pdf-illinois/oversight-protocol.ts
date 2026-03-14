@@ -136,7 +136,7 @@ export function generateOversightProtocol(data: ComplianceFormData): jsPDF {
     "Request is acknowledged promptly.",
     "Review is conducted by a qualified reviewer who was not involved in the original AI-influenced decision.",
     "Individual is notified of the outcome in a timely manner.",
-    "All appeal records are maintained for a minimum of 4 years, consistent with IDHR proposed recordkeeping rules.",
+    "All appeal records are maintained for a minimum of 4 years, consistent with recommended recordkeeping best practices.",
   ];
   appealSteps.forEach((step, idx) => {
     y = addWrappedText(
@@ -166,7 +166,7 @@ export function generateOversightProtocol(data: ComplianceFormData): jsPDF {
     "Illinois HB3773 requirements and obligations",
     "Recognition of potential AI bias and discriminatory outcomes",
     "Override procedures and documentation requirements",
-    "Employee notification requirements (applicant notification per proposed IDHR rules)",
+    "Employee and applicant notification requirements (per 775 ILCS 5/2-102(L)(2))",
     "Appeal process administration",
   ];
   training.forEach((t) => {
