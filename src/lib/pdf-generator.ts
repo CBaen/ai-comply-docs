@@ -191,6 +191,82 @@ export async function generateDocuments(
     ];
   }
 
+  if (data.regulation === "eu-ai-act") {
+    const eu = await import("./pdf-eu-ai-act");
+    return [
+      {
+        doc: eu.generateRiskManagementSystem(data),
+        name: `${companySlug}_EU_Risk_Management_System.pdf`,
+      },
+      {
+        doc: eu.generateTechnicalDocumentation(data),
+        name: `${companySlug}_EU_Technical_Documentation.pdf`,
+      },
+      {
+        doc: eu.generateConformityAssessment(data),
+        name: `${companySlug}_EU_Conformity_Assessment.pdf`,
+      },
+      {
+        doc: eu.generateDataGovernance(data),
+        name: `${companySlug}_EU_Data_Governance.pdf`,
+      },
+      {
+        doc: eu.generateQualityManagementSystem(data),
+        name: `${companySlug}_EU_Quality_Management_System.pdf`,
+      },
+      {
+        doc: eu.generateHumanOversight(data),
+        name: `${companySlug}_EU_Human_Oversight_Design.pdf`,
+      },
+      {
+        doc: eu.generateTransparencyDisclosures(data),
+        name: `${companySlug}_EU_Transparency_Disclosures.pdf`,
+      },
+      {
+        doc: eu.generatePostMarketMonitoring(data),
+        name: `${companySlug}_EU_Post_Market_Monitoring.pdf`,
+      },
+      {
+        doc: eu.generateEUDatabaseRegistration(data),
+        name: `${companySlug}_EU_Database_Registration.pdf`,
+      },
+      {
+        doc: eu.generateFundamentalRightsImpact(data),
+        name: `${companySlug}_EU_Fundamental_Rights_Impact.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "eeoc-ai-hiring") {
+    const eeoc = await import("./pdf-eeoc-ai-hiring");
+    return [
+      {
+        doc: eeoc.generateAdverseImpactAnalysis(data),
+        name: `${companySlug}_EEOC_Adverse_Impact_Analysis.pdf`,
+      },
+      {
+        doc: eeoc.generateValidationDocumentation(data),
+        name: `${companySlug}_EEOC_Validation_Documentation.pdf`,
+      },
+      {
+        doc: eeoc.generateAccommodationProcedures(data),
+        name: `${companySlug}_EEOC_Accommodation_Procedures.pdf`,
+      },
+      {
+        doc: eeoc.generateVendorAIAuditRequirements(data),
+        name: `${companySlug}_EEOC_Vendor_AI_Audit_Requirements.pdf`,
+      },
+      {
+        doc: eeoc.generateAIHiringMonitoring(data),
+        name: `${companySlug}_EEOC_AI_Hiring_Monitoring.pdf`,
+      },
+      {
+        doc: eeoc.generateAnnualComplianceReview(data),
+        name: `${companySlug}_EEOC_Annual_Compliance_Review.pdf`,
+      },
+    ];
+  }
+
   // Default: Illinois
   const il = await import("./pdf-illinois");
   const docs: GeneratedDoc[] = [
