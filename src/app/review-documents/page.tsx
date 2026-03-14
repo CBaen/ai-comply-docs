@@ -46,114 +46,106 @@ const SAMPLE_DATA: ComplianceFormData = {
 };
 
 const REGULATIONS = [
-  "illinois-hb3773",
-  "colorado-sb24-205",
-  "employee-ai-policy",
-  "vendor-ai-due-diligence",
-  "ai-bias-audit-template",
-  "ai-incident-response-plan",
+  { slug: "illinois-hb3773", name: "Illinois HB3773" },
+  { slug: "colorado-sb24-205", name: "Colorado SB24-205" },
+  { slug: "employee-ai-policy", name: "Employee AI Policy" },
+  { slug: "vendor-ai-due-diligence", name: "Vendor Due Diligence" },
+  { slug: "ai-bias-audit-template", name: "Bias Audit Templates" },
+  { slug: "ai-incident-response-plan", name: "Incident Response Plan" },
 ];
+
+interface DocResult {
+  name: string;
+  textContent: string;
+}
 
 export default function ReviewDocuments() {
   const [generating, setGenerating] = useState(false);
-  const [results, setResults] = useState<Record<string, { name: string; url: string }[]>>({});
-
-  async function generateForRegulation(slug: string) {
-    setGenerating(true);
-    try {
-      const data = { ...SAMPLE_DATA, regulation: slug };
-      const docs = await generateDocuments(data);
-      const urls = docs.map((doc) => {
-        const blob = doc.doc.output("blob");
-        return { name: doc.name, url: URL.createObjectURL(blob) };
-      });
-      setResults((prev) => ({ ...prev, [slug]: urls }));
-    } catch (err) {
-      console.error(`Error generating ${slug}:`, err);
-      setResults((prev) => ({
-        ...prev,
-        [slug]: [{ name: "ERROR: " + String(err), url: "#" }],
-      }));
-    }
-    setGenerating(false);
-  }
+  const [results, setResults] = useState<Record<string, DocResult[]>>({});
+  const [error, setError] = useState("");
 
   async function generateAll() {
     setGenerating(true);
-    for (const slug of REGULATIONS) {
+    setError("");
+    const allResults: Record<string, DocResult[]> = {};
+
+    for (const reg of REGULATIONS) {
       try {
-        const data = { ...SAMPLE_DATA, regulation: slug };
+        const data = { ...SAMPLE_DATA, regulation: reg.slug };
         const docs = await generateDocuments(data);
-        const urls = docs.map((doc) => {
-          const blob = doc.doc.output("blob");
-          return { name: doc.name, url: URL.createObjectURL(blob) };
+        allResults[reg.slug] = docs.map((doc) => {
+          // Extract text content from jsPDF document
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const internal = doc.doc as any;
+          const pageCount = internal.internal.getNumberOfPages();
+          let text = "";
+          for (let p = 1; p <= pageCount; p++) {
+            doc.doc.setPage(p);
+            text += `\n--- PAGE ${p} ---\n`;
+            // Get text from the page using jsPDF's internal API
+            const pageText = internal.internal.pages[p];
+            if (Array.isArray(pageText)) {
+              pageText.forEach((line: string) => {
+                // Extract text from PDF operators - match (text) Tj patterns
+                const matches = line.match(/\(([^)]*)\)\s*Tj/g);
+                if (matches) {
+                  matches.forEach((m: string) => {
+                    const t = m.replace(/^\(/, "").replace(/\)\s*Tj$/, "");
+                    if (t.trim()) text += t + "\n";
+                  });
+                }
+              });
+            }
+          }
+          return { name: doc.name, textContent: text };
         });
-        setResults((prev) => ({ ...prev, [slug]: urls }));
       } catch (err) {
-        console.error(`Error generating ${slug}:`, err);
-        setResults((prev) => ({
-          ...prev,
-          [slug]: [{ name: `ERROR: ${String(err)}`, url: "#" }],
-        }));
+        allResults[reg.slug] = [{ name: "ERROR", textContent: String(err) }];
       }
     }
+
+    setResults(allResults);
     setGenerating(false);
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-2xl font-bold mb-2">Document Review Page</h1>
-      <p className="text-gray-600 mb-6 text-sm">
-        Internal review page. Generates all product documents with sample data for quality review.
-        Not linked from the public site.
+    <div className="max-w-6xl mx-auto p-8 font-mono text-sm">
+      <h1 className="text-2xl font-bold mb-2">Document Review — All Products</h1>
+      <p className="text-gray-600 mb-4">
+        Internal page for AI-assisted document review. Generates all documents as
+        readable text. Not linked from the public site.
       </p>
 
       <button
         onClick={generateAll}
         disabled={generating}
-        className="bg-blue-700 text-white px-6 py-3 rounded-lg font-bold mb-8 disabled:opacity-50"
+        className="bg-blue-700 text-white px-6 py-3 rounded font-bold mb-8 disabled:opacity-50"
       >
-        {generating ? "Generating..." : "Generate All Documents"}
+        {generating ? "Generating all documents..." : "Generate All Documents as Text"}
       </button>
 
-      <div className="space-y-6">
-        {REGULATIONS.map((slug) => (
-          <div key={slug} className="border rounded-lg p-4">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="font-bold text-lg">{slug}</h2>
-              <button
-                onClick={() => generateForRegulation(slug)}
-                disabled={generating}
-                className="text-sm bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 disabled:opacity-50"
-              >
-                Generate
-              </button>
-            </div>
-            {results[slug] ? (
-              <ul className="space-y-1">
-                {results[slug].map((doc, i) => (
-                  <li key={i}>
-                    {doc.url === "#" ? (
-                      <span className="text-red-600 text-sm">{doc.name}</span>
-                    ) : (
-                      <a
-                        href={doc.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-700 hover:underline text-sm"
-                      >
-                        {doc.name}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-gray-400 text-sm">Not generated yet</p>
-            )}
+      {error && <p className="text-red-600 mb-4">{error}</p>}
+
+      {Object.entries(results).map(([slug, docs]) => {
+        const reg = REGULATIONS.find((r) => r.slug === slug);
+        return (
+          <div key={slug} className="mb-12">
+            <h2 className="text-xl font-bold border-b-2 border-blue-700 pb-2 mb-4">
+              {reg?.name || slug}
+            </h2>
+            {docs.map((doc, i) => (
+              <div key={i} className="mb-8">
+                <h3 className="font-bold text-base bg-gray-100 p-2 mb-2">
+                  Document: {doc.name}
+                </h3>
+                <pre className="whitespace-pre-wrap text-xs leading-relaxed bg-white border p-4 max-h-[600px] overflow-y-auto">
+                  {doc.textContent || "(No text extracted — document may use form fields only)"}
+                </pre>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        );
+      })}
     </div>
   );
 }
