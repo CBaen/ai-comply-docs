@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -204,6 +205,9 @@ export function generateApprovalWorkflow(data: ComplianceFormData): jsPDF {
   );
   y = addFormTextField(doc, "auw_approved_by", "Approved By (Name, Title, Signature):", y);
   y = addFormTextField(doc, "auw_decision_date", "Decision Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "gov_approval", y);
 
   addDisclaimer(doc);
   return doc;

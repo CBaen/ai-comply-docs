@@ -11,6 +11,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -253,6 +254,9 @@ export function generateTrainingAcknowledgment(
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "emp_train", y);
 
   addDisclaimer(doc);
   return doc;

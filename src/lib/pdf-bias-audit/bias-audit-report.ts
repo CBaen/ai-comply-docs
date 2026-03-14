@@ -13,6 +13,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -500,6 +501,9 @@ export function generateBiasAuditReport(data: ComplianceFormData): jsPDF {
   );
   y = addFormTextField(doc, "bar_cert_date", "Audit Completion Date:", y);
   y = addFormTextField(doc, "bar_cert_signature", "Auditor Signature:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "bias_report", y);
 
   addDisclaimer(doc);
   return doc;

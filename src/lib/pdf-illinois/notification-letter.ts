@@ -134,7 +134,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
   y += 2;
   y = addWrappedText(
     doc,
-    `Human oversight: All AI-influenced decisions are overseen by ${data.oversight.oversightRole || "[Designated Oversight Role]"}.`,
+    `Human oversight: All AI-influenced decisions are overseen by ${data.oversight.oversightRole || "a designated oversight officer"}.`,
     MARGIN,
     y,
     CONTENT_WIDTH,

@@ -12,6 +12,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -536,6 +537,9 @@ export function generateRemediationPlan(data: ComplianceFormData): jsPDF {
     "Approving Signature:",
     y
   );
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "bias_remed", y);
 
   addDisclaimer(doc);
   return doc;

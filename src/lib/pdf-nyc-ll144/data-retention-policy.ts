@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -110,6 +111,9 @@ export function generateDataRetentionPolicy(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "policy_date", "Date:", y);
   y = addFormTextField(doc, "policy_approver", "Approved By (Name/Title):", y);
   y = addFormTextField(doc, "policy_signature", "Signature:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nyc_retention", y);
 
   addDisclaimer(doc);
   return doc;

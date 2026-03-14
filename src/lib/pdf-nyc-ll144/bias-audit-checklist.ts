@@ -8,6 +8,7 @@ import {
   addFormCheckbox,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -150,6 +151,9 @@ export function generateBiasAuditChecklist(data: ComplianceFormData): jsPDF {
   });
   y = addFormTextField(doc, "cert_date", "Date:", y);
   y = addFormTextField(doc, "cert_signature", "Signature:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nyc_checklist", y);
 
   addDisclaimer(doc);
   return doc;

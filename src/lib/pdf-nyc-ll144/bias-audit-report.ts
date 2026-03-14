@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -154,6 +155,9 @@ export function generateBiasAuditReport(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "auditor_signature", "Auditor Signature:", y);
   y = addFormTextField(doc, "auditor_date", "Date:", y);
   y = addFormTextField(doc, "auditor_license", "License/Certification (if applicable):", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nyc_audit", y);
 
   addDisclaimer(doc);
   return doc;

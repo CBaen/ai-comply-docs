@@ -7,6 +7,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -136,6 +137,9 @@ export function generateBiasAuditSummary(data: ComplianceFormData): jsPDF {
       prefill: data.contact.phone,
       readOnly: true,
     });
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nyc_summary", y);
 
   addDisclaimer(doc);
   return doc;

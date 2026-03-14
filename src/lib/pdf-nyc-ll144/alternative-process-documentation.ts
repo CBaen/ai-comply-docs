@@ -8,6 +8,7 @@ import {
   addFormTextField,
   addFormCheckbox,
   addDisclaimer,
+  addSignatureBlock,
   MARGIN,
   CONTENT_WIDTH,
   LINE_HEIGHT,
@@ -206,6 +207,9 @@ export function generateAlternativeProcessDocumentation(
       readOnly: false,
     });
   y = addFormTextField(doc, "admin_review_date", "Policy Last Reviewed / Updated:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "nyc_alt", y);
 
   addDisclaimer(doc);
   return doc;

@@ -10,6 +10,7 @@ import {
   addWrappedText,
   addFormTextField,
   addDisclaimer,
+  addSignatureBlock,
 } from "../pdf-helpers";
 
 // ============================================================
@@ -167,6 +168,9 @@ export function generateEthicsPrinciples(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "ethics_signed_by", "Signed By (Name & Title):", y);
   y = addFormTextField(doc, "ethics_effective_date", "Effective Date:", y);
   y = addFormTextField(doc, "ethics_next_review", "Next Review Date:", y);
+
+  if (y > 240) { doc.addPage(); y = 20; }
+  y = addSignatureBlock(doc, "gov_ethics", y);
 
   addDisclaimer(doc);
   return doc;
