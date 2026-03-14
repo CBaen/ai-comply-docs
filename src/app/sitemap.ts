@@ -23,7 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: base, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 1.0 },
     { url: `${base}/regulations`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/ai-compliance-by-state`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.85 },
     { url: `${base}/blog`, lastModified: siteLastUpdated, changeFrequency: "daily", priority: 0.8 },
+    { url: `${base}/faq`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/about`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.5 },
     ...regulationPages,
     ...blogPosts,
