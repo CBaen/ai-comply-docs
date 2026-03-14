@@ -8,14 +8,10 @@ function getStripe() {
   });
 }
 
-// Price IDs per regulation slug — add new products here as they're created in Stripe
-const PRICE_MAP: Record<string, { base: string; trainingKit?: string }> = {
+// Add-on price IDs for products with optional training kit upsell
+const ADDON_PRICES: Record<string, { trainingKit?: string }> = {
   "illinois-hb3773": {
-    base: "price_1TA1xZGidFVHIL99wuSn7aiD",
     trainingKit: "price_1TA3XHGidFVHIL99h2UwiLd9",
-  },
-  "colorado-sb24-205": {
-    base: "price_1TABBcGidFVHIL99tjl8mZWm",
   },
 };
 
@@ -24,10 +20,9 @@ export async function POST(request: Request) {
   const { includeTrainingKit, regulation } = body;
 
   const slug = regulation || "illinois-hb3773";
-  const prices = PRICE_MAP[slug];
   const reg = getRegulation(slug);
 
-  if (!prices || !prices.base) {
+  if (!reg || !reg.stripePriceId) {
     const name = reg?.shortName || slug;
     return NextResponse.json(
       { error: `Product not yet available for ${name}. Please check back soon.` },
@@ -37,10 +32,12 @@ export async function POST(request: Request) {
 
   try {
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [
-      { price: prices.base, quantity: 1 },
+      { price: reg.stripePriceId, quantity: 1 },
     ];
-    if (includeTrainingKit && prices.trainingKit) {
-      lineItems.push({ price: prices.trainingKit, quantity: 1 });
+
+    const addons = ADDON_PRICES[slug];
+    if (includeTrainingKit && addons?.trainingKit) {
+      lineItems.push({ price: addons.trainingKit, quantity: 1 });
     }
 
     const origin = request.headers.get("origin") || "https://aicompliancedocuments.com";
