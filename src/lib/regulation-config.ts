@@ -257,4 +257,348 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This person will be listed as the Incident Response Team lead \u2014 the primary contact for AI incident escalation and regulatory reporting.",
     },
   },
+  "nyc-local-law-144": {
+    name: "NYC Local Law 144",
+    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
+    lawUrl:
+      "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9",
+    lawLinkText:
+      "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
+    acknowledgment:
+      "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. DCWP began enforcement on July 5, 2023 and may update its rules or guidance. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 399,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Bias Audit Report Template",
+      "Bias Audit Summary (Public Posting)",
+      "Candidate/Employee Notification Template",
+      "Data Retention Policy Disclosure",
+      "Alternative Selection Process Documentation",
+    ],
+    decisions: [
+      ["hiring", "Hiring/Screening"],
+      ["promotion", "Promotion"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What is an automated employment decision tool (AEDT)?</strong> Under NYC Admin. Code \u00A7 20-870, any computational process derived from machine learning, statistical modeling, data analytics, or AI that issues simplified output used to make or substantially assist a covered employment decision. Common examples: resume screening software, candidate scoring platforms, interview analysis tools. If the tool materially influences a hiring or promotion decision \u2014 include it.",
+      step2Intro:
+        "List each automated employment decision tool your organization uses for hiring or promotion decisions in New York City.",
+      step2DecisionHelp:
+        "Check whether this tool is used for hiring/screening, promotion, or both. NYC LL144 covers both uses.",
+      step2MultiHelp:
+        "If you use multiple AEDTs, each one requires its own annual bias audit under NYC LL144. List each separately.",
+      step3BiasHelp:
+        "NYC LL144 requires an annual independent bias audit before using an AEDT. The audit must be conducted by an independent auditor and published on your website at least 10 business days before use. If you have not yet had an audit, these templates guide you through the process.",
+      step4Help:
+        "This section captures how your organization uses AEDT outputs. NYC LL144 requires disclosing to candidates that an AEDT is being used and what job qualifications it assesses.",
+      step5Intro:
+        "This contact will be listed in candidate notifications and website disclosures as required by NYC LL144 and DCWP rules at 6 RCNY \u00A7 5-300 et seq.",
+    },
+  },
+  "minnesota-mcdpa": {
+    name: "Minnesota MCDPA",
+    statute: "Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21",
+    lawUrl: "https://www.revisor.mn.gov/statutes/cite/325M.10",
+    lawLinkText:
+      "Read Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21 on revisor.mn.gov",
+    acknowledgment:
+      "I have reviewed the Minnesota Consumer Data Privacy Act, Minn. Stat. \u00A7\u00A7 325M.10 through 325M.21. I understand that these are compliance templates, not legal advice. This law is effective July 31, 2025. The 30-day cure period expires January 31, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 349,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Privacy Notice Template",
+      "Data Protection Impact Assessment",
+      "Consumer Rights Request Procedures",
+      "Profiling Opt-Out Documentation",
+      "Data Processing Agreement Template",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["targeted_ads", "Targeted Advertising"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Minnesota consumers for algorithmic profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers \u2014 include it.",
+      step2Intro:
+        "List each AI or data processing system used in activities covered by the Minnesota Consumer Data Privacy Act.",
+      step2DecisionHelp:
+        "Check every category where this system processes Minnesota consumer data. The Minnesota MCDPA covers profiling for consequential decisions, targeted advertising, data sales, and sensitive data.",
+      step2MultiHelp:
+        "If you use multiple systems across these categories, list each separately. Each may require its own data protection impact assessment.",
+      step3BiasHelp:
+        "If your system uses profiling to make consequential decisions, a bias review helps document that your processing is conducted with reasonable care.",
+      step4Help:
+        "This section captures your oversight and governance for data processing activities. Minnesota law requires responding to consumer rights requests within 45 days.",
+      step5Intro:
+        "This contact will be listed in your privacy notices and consumer rights procedures as the designated data privacy officer or contact.",
+    },
+  },
+  "california-ccpa-admt": {
+    name: "California CCPA ADMT",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
+    lawUrl: "https://cppa.ca.gov/regulations/",
+    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
+    acknowledgment:
+      "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations, effective January 1, 2026. I understand that these are compliance templates, not legal advice. The CPPA may update regulations and issue additional guidance. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 499,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Pre-Use ADMT Notice Template",
+      "ADMT Risk Assessment",
+      "Consumer Opt-Out Mechanism Documentation",
+      "Consumer Access/Information Procedures",
+      "Human Review Process Documentation",
+      "ADMT Impact Assessment",
+    ],
+    decisions: [
+      ["hiring", "Employment Decisions"],
+      ["financial", "Financial/Lending"],
+      ["insurance", "Insurance"],
+      ["healthcare", "Healthcare"],
+      ["housing", "Housing"],
+      ["education", "Education"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What is ADMT?</strong> Under the CPPA regulations, automated decisionmaking technology means any system that uses computation to make a decision, or facilitate human decisionmaking, that has a legal or similarly significant effect on a consumer. This includes AI used in hiring, lending, insurance, healthcare, housing, and education decisions.",
+      step2Intro:
+        "List each automated decisionmaking technology system your organization uses that affects California consumers.",
+      step2DecisionHelp:
+        "Check every decision category where this ADMT system makes or substantially assists decisions about California consumers.",
+      step2MultiHelp:
+        "Each ADMT system may require its own pre-use notice and risk assessment. List all systems that affect California consumers.",
+      step3BiasHelp:
+        "The CPPA ADMT regulations require a risk assessment before using ADMT for significant decisions. These templates guide you through that assessment.",
+      step4Help:
+        "This section captures how your organization oversees ADMT outputs. California regulations require a human review process for consumers who request it.",
+      step5Intro:
+        "This contact will be listed in consumer-facing ADMT notices and rights request procedures.",
+    },
+  },
+  "eu-ai-act": {
+    name: "EU AI Act",
+    statute: "Regulation (EU) 2024/1689",
+    lawUrl:
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
+    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
+    acknowledgment:
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. Member States may adopt additional implementing measures. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 997,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "Risk Management System Documentation",
+      "Technical Documentation (Annex IV)",
+      "Data Governance Documentation",
+      "Conformity Assessment Records",
+      "Quality Management System",
+      "Human Oversight Design Document",
+      "Post-Market Monitoring Plan",
+      "EU Database Registration Documentation",
+      "Transparency Disclosures",
+      "Fundamental Rights Impact Assessment",
+    ],
+    decisions: [
+      ["employment", "Employment/HR"],
+      ["education", "Education"],
+      ["financial", "Credit/Financial"],
+      ["law_enforcement", "Law Enforcement"],
+      ["critical_infra", "Critical Infrastructure"],
+      ["healthcare", "Healthcare/Medical"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What is a high-risk AI system under the EU AI Act?</strong> Under Annex III of Regulation (EU) 2024/1689, high-risk systems include AI used in employment decisions, education, credit, law enforcement, critical infrastructure, and healthcare. If your system makes or substantially influences decisions in these areas affecting EU residents \u2014 include it.",
+      step2Intro:
+        "List each high-risk AI system that falls under the EU AI Act. These are systems used in the areas listed in Annex III of Regulation (EU) 2024/1689.",
+      step2DecisionHelp:
+        "Check the Annex III category that applies to this system. The category determines which conformity assessment procedure applies.",
+      step2MultiHelp:
+        "Each high-risk AI system needs its own technical documentation and risk management file. List all systems separately.",
+      step3BiasHelp:
+        "The EU AI Act requires high-risk AI systems to use high-quality training data and undergo testing for bias. Document your bias testing process here.",
+      step4Help:
+        "This section captures your human oversight design. The EU AI Act requires high-risk systems to enable humans to understand, monitor, and override AI outputs.",
+      step5Intro:
+        "This contact will be listed as the EU AI Act compliance contact and quality management system administrator.",
+    },
+  },
+  "eeoc-ai-hiring": {
+    name: "EEOC AI Hiring Compliance Kit",
+    statute: "29 CFR Part 1607 (Uniform Guidelines)",
+    lawUrl: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607",
+    lawLinkText: "Read the Uniform Guidelines (29 CFR Part 1607) on eCFR",
+    acknowledgment:
+      "I have reviewed Title VII of the Civil Rights Act of 1964 (42 USC \u00A7 2000e et seq.) and the Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607). I understand that these are compliance templates, not legal advice. The EEOC\u2019s AI-specific guidance documents have been modified; previously published technical assistance may no longer be available on eeoc.gov. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 349,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "AI Adverse Impact Analysis Template",
+      "Job-Relatedness Validation Documentation",
+      "Reasonable Accommodation Procedures for AI Assessments",
+      "Vendor AI Audit Requirements",
+      "AI Hiring Tool Monitoring Procedures",
+      "Annual Compliance Review",
+    ],
+    decisions: [
+      ["hiring", "Hiring/Screening"],
+      ["promotion", "Promotion"],
+      ["termination", "Termination"],
+      ["performance", "Performance Evaluation"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which AI tools require EEOC compliance review?</strong> Any AI or automated system used in hiring, promotion, termination, or performance evaluation. The Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607) apply to any selection procedure that has adverse impact on a protected group. If your tool screens, scores, or ranks job candidates \u2014 include it.",
+      step2Intro:
+        "List each AI or automated system used in employment decisions. These tools are subject to the EEOC\u2019s adverse impact analysis requirements under 29 CFR Part 1607.",
+      step2DecisionHelp:
+        "Check every employment decision area where this AI tool plays a role. The Uniform Guidelines apply to all selection procedures for any employment purpose.",
+      step2MultiHelp:
+        "Each AI tool may create separate adverse impact exposure. List each tool individually so your compliance documentation covers each one.",
+      step3BiasHelp:
+        "The EEOC 4/5 (80%) rule is the federal standard for evaluating adverse impact. Under 29 CFR \u00A7 1607.4(D), a selection rate for a protected group that is less than 4/5 of the highest rate indicates adverse impact. Document your adverse impact analysis here.",
+      step4Help:
+        "This section captures human oversight of AI-driven employment decisions. The EEOC has emphasized that employers remain liable for discriminatory outcomes even when the AI vendor is responsible.",
+      step5Intro:
+        "This contact will be listed as your EEOC compliance officer \u2014 responsible for adverse impact monitoring and reasonable accommodation requests.",
+    },
+  },
+  "nist-ai-rmf": {
+    name: "NIST AI Risk Management Framework",
+    statute: "NIST AI 100-1",
+    lawUrl: "https://airc.nist.gov/",
+    lawLinkText: "Read the NIST AI RMF at airc.nist.gov",
+    acknowledgment:
+      "I have reviewed the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1). I understand that these are implementation templates, not legal advice. The AI RMF is a voluntary framework; NIST is a non-regulatory agency. AI RMF 1.0 is currently being revised. I should verify the current version and consult qualified legal counsel.",
+    basePrice: 397,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "AI Risk Management Plan",
+      "Govern Function Documentation",
+      "Map Function Documentation",
+      "Measure Function Documentation",
+      "Manage Function Documentation",
+      "AI System Risk Profile Template",
+      "Trustworthy AI Characteristics Assessment",
+    ],
+    decisions: [
+      ["hiring", "Employment/HR"],
+      ["financial", "Financial Services"],
+      ["healthcare", "Healthcare"],
+      ["customer_service", "Customer-Facing Services"],
+      ["internal", "Internal Operations"],
+      ["safety", "Safety-Critical Systems"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which AI systems should be covered by your RMF implementation?</strong> Any system that uses AI to make or support decisions. The NIST AI RMF applies to all AI systems regardless of risk level, but prioritization is recommended based on potential impact. Start with customer-facing, employment, financial, and safety-critical systems.",
+      step2Intro:
+        "List each AI system you are bringing under your NIST AI RMF implementation. We\u2019ll generate framework documentation for each.",
+      step2DecisionHelp:
+        "Check the primary area where this AI system operates. This determines which risk profile template and trustworthy AI characteristics are most relevant.",
+      step2MultiHelp:
+        "The NIST AI RMF recommends maintaining a system-level inventory. List all AI systems so your Risk Management Plan covers your complete AI portfolio.",
+      step3BiasHelp:
+        "The NIST AI RMF\u2019s Measure function includes bias and fairness testing as a key metric. If your system affects people, bias measurement is a core RMF practice.",
+      step4Help:
+        "This section captures your AI governance structure. The NIST AI RMF Govern function requires documented roles, responsibilities, and organizational accountability for AI risk.",
+      step5Intro:
+        "This contact will be listed as your AI Risk Management program coordinator \u2014 the person responsible for maintaining your RMF documentation and risk profiles.",
+    },
+  },
+  "healthcare-ai-compliance": {
+    name: "Healthcare AI Compliance Package",
+    statute: "HIPAA Privacy Rule (45 CFR Part 164)",
+    lawUrl:
+      "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E",
+    lawLinkText: "Read HIPAA Privacy Rule (45 CFR Part 164) on eCFR",
+    acknowledgment:
+      "I have reviewed the HIPAA Privacy Rule (45 CFR Part 164 Subpart E), Security Rule (45 CFR Part 164 Subpart C), and Breach Notification Rule (45 CFR Part 164 Subpart D) as applied to AI processing of protected health information. I understand that these are compliance templates, not legal advice. HHS may issue additional guidance on AI and HIPAA. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 597,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "AI Risk Assessment for PHI Processing",
+      "Business Associate Agreement (AI Vendor)",
+      "AI-Specific Security Policies",
+      "Breach Notification Procedures (AI)",
+      "De-Identification Methodology Documentation",
+      "Patient Rights Procedures for AI-Processed Data",
+    ],
+    decisions: [
+      ["clinical", "Clinical Decision Support"],
+      ["diagnostic", "Diagnostic AI"],
+      ["administrative", "Administrative/Billing"],
+      ["research", "Research/Analytics"],
+      ["patient_facing", "Patient-Facing AI"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which AI systems process protected health information?</strong> Any AI system that creates, receives, maintains, or transmits PHI \u2014 individually identifiable health information \u2014 is subject to HIPAA. This includes clinical decision support tools, diagnostic AI, AI-powered billing systems, research analytics platforms, and patient-facing chatbots. If the system touches patient data \u2014 include it.",
+      step2Intro:
+        "List each AI system used in your healthcare organization that processes or may access protected health information.",
+      step2DecisionHelp:
+        "Check the healthcare context where this AI system operates. Different contexts have different HIPAA requirements and risk profiles.",
+      step2MultiHelp:
+        "Each AI system that processes PHI may require its own Business Associate Agreement and risk assessment. List all systems separately.",
+      step3BiasHelp:
+        "AI systems in clinical decision support and diagnostics can produce biased outputs that affect patient care. HHS OCR has indicated that HIPAA\u2019s nondiscrimination requirements apply to AI-assisted clinical decisions.",
+      step4Help:
+        "This section captures how your organization oversees AI systems processing PHI. HIPAA\u2019s Security Rule requires administrative, physical, and technical safeguards \u2014 including oversight procedures.",
+      step5Intro:
+        "This contact will be listed as your HIPAA AI compliance officer \u2014 responsible for Business Associate Agreements, breach notification, and PHI processing oversight.",
+    },
+  },
+  "financial-services-ai": {
+    name: "Financial Services AI Compliance Package",
+    statute: "Regulation B (12 CFR Part 1002) + ECOA",
+    lawUrl: "https://www.ecfr.gov/current/title-12/chapter-X/part-1002",
+    lawLinkText: "Read Regulation B (ECOA) on eCFR",
+    acknowledgment:
+      "I have reviewed the Equal Credit Opportunity Act (15 USC \u00A7 1691 et seq.) and Regulation B (12 CFR Part 1002), the Fair Credit Reporting Act (15 USC \u00A7 1681 et seq.), and relevant FINRA rules as applied to AI in financial services. I understand that these are compliance templates, not legal advice. SEC, CFPB, and FINRA may issue additional AI-specific guidance. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 597,
+    trainingKitAvailable: false,
+    trainingKitPrice: 0,
+    documents: [
+      "AI Supervision Policy",
+      "Model Risk Documentation",
+      "ECOA Adverse Action Notice (AI)",
+      "Customer Communication Disclosure",
+      "Vendor AI Due Diligence (Financial)",
+      "Annual AI Review Checklist",
+      "CFPB UDAAP Compliance Documentation",
+    ],
+    decisions: [
+      ["lending", "Lending/Credit"],
+      ["underwriting", "Insurance Underwriting"],
+      ["trading", "Trading/Advisory"],
+      ["customer_service", "Customer Service"],
+      ["fraud", "Fraud Detection"],
+      ["marketing", "Marketing/Personalization"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Which AI systems require financial services compliance review?</strong> Any AI system used in credit decisions, underwriting, trading, customer service, fraud detection, or marketing in a regulated financial services context. Regulation B (12 CFR Part 1002) requires adverse action notices for AI-driven credit denials. FINRA has flagged AI supervision as a 2026 examination priority.",
+      step2Intro:
+        "List each AI system used in your financial services operations. These tools are subject to ECOA, FCRA, and FINRA supervision requirements.",
+      step2DecisionHelp:
+        "Check every financial services area where this AI system operates. Different areas have different regulatory requirements \u2014 lending triggers ECOA, trading triggers SEC/FINRA, marketing triggers CFPB UDAAP.",
+      step2MultiHelp:
+        "Financial services firms often use multiple AI systems across different regulatory contexts. List each separately so your compliance program covers each regulatory framework.",
+      step3BiasHelp:
+        "Regulation B (ECOA) and the CFPB\u2019s UDAAP authority both reach AI-driven lending discrimination. Documenting your bias testing process is a key defense.",
+      step4Help:
+        "This section captures your AI supervision and model governance framework. FINRA\u2019s 2024 guidance requires firms to have supervisory procedures for AI-generated communications and recommendations.",
+      step5Intro:
+        "This contact will be listed as your AI compliance officer \u2014 responsible for model risk documentation, adverse action procedures, and FINRA supervision obligations.",
+    },
+  },
 };
