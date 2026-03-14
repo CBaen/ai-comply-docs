@@ -263,7 +263,7 @@ export function generateAccommodationForm(data: ComplianceFormData): jsPDF {
   doc.setFont("helvetica", "bold");
   y = addWrappedText(
     doc,
-    "Note: IDHR draft Subpart J rules (56 Ill. Admin. Code 2520.900 et seq.) would require AI-use notices to include accommodation instructions. These rules have not been formally adopted as of March 2026. Monitor ilga.gov for updates.",
+    "Note: 775 ILCS 5/2-102(L) does not specifically address AI-related accommodations. However, existing IHRA accommodation obligations for disability, pregnancy, and religion may intersect with AI use in employment processes. IDHR is developing implementing rules — monitor dhr.illinois.gov for updates.",
     MARGIN,
     y,
     CONTENT_WIDTH,

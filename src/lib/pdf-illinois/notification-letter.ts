@@ -218,9 +218,9 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
   const rights = [
     "You have the right to be notified when AI is used to influence or facilitate employment decisions that affect you.",
     "You have the right to be free from discriminatory effects of AI in employment decisions, including discrimination through the use of zip codes as proxies for protected classes.",
-    "Consistent with IDHR's proposed implementing rules and existing IHRA reasonable accommodation obligations, you may request a reasonable accommodation regarding AI-assisted employment processes.",
+    "Consistent with existing IHRA reasonable accommodation obligations (disability, pregnancy, religion), you may request a reasonable accommodation regarding AI-assisted employment processes.",
     "You may file a charge of discrimination with the Illinois Department of Human Rights (IDHR) if you believe AI has been used in a manner that has the effect of subjecting you to discrimination. (775 ILCS 5/7A-102)",
-    "You may also pursue a civil action under the Illinois Human Rights Act. Remedies in court may include actual damages, back pay, and attorneys' fees. (775 ILCS 5/8A-104) Separately, IDHR may assess civil penalties against employers found in violation. (P.A. 104-0425; 775 ILCS 5/8A-104(K))",
+    "You may also pursue a civil action under the Illinois Human Rights Act. Remedies in court may include actual damages, back pay, and attorneys' fees. (775 ILCS 5/8A-104) Separately, the Illinois Human Rights Commission may impose civil penalties against employers found in violation — IDHR investigates charges, the Commission imposes penalties. (P.A. 104-0425; 775 ILCS 5/8A-104(K))",
   ];
   rights.forEach((right) => {
     y = addWrappedText(
@@ -287,7 +287,7 @@ export function generateNotificationLetter(data: ComplianceFormData): jsPDF {
   y = addSectionHeader(doc, "Notice Schedule", y);
   y = addWrappedText(
     doc,
-    "This notice is provided pursuant to 775 ILCS 5/2-102(L)(2) and in accordance with proposed IDHR Subpart J rules (56 Ill. Adm. Code Part 2520, pending formal adoption). It will be updated and reissued:",
+    "This notice is provided pursuant to 775 ILCS 5/2-102(L)(2) and based on 775 ILCS 5/2-102(L)(2) statutory requirements and recommended best practices. IDHR implementing rules are in development but have not been published. It will be updated and reissued:",
     MARGIN,
     y,
     CONTENT_WIDTH,

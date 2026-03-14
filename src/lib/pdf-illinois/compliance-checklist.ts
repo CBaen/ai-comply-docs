@@ -34,7 +34,7 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
 
   const sections: { title: string; items: string[] }[] = [
     {
-      title: "Notice Requirements (Proposed IDHR Subpart J Rules)",
+      title: "Notice Requirements (Best Practice — IDHR Rules Pending)",
       items: [
         "Notice includes AI product name, developer, and vendor for each system",
         "Notice identifies which employment decisions each AI system influences or facilitates",
@@ -49,7 +49,7 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
       ],
     },
     {
-      title: "Notice Posting Locations (Per Proposed IDHR Subpart J Rules)",
+      title: "Notice Posting Locations (Recommended Best Practice)",
       items: [
         "Posted in employee handbooks/manuals",
         "Posted on physical workplace notice boards",
@@ -58,7 +58,7 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
       ],
     },
     {
-      title: "Notice Timing (Per Proposed IDHR Subpart J Rules)",
+      title: "Notice Timing (Recommended Best Practice)",
       items: [
         "Annual notice provided to all current employees",
         "Notice provided within 30 days of adopting new or substantially updated AI systems",
@@ -89,21 +89,21 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
     },
     {
       title:
-        "Human Oversight & Accommodation (Recommended Best Practice / Proposed IDHR Rules)",
+        "Human Oversight & Accommodation (Recommended Best Practice)",
       items: [
         "Designated oversight role assigned and documented",
         "Decision review process established and documented",
         "Override authority and documentation requirements in place",
         "Reasonable accommodation request process established and documented",
-        "All oversight personnel trained on 775 ILCS 5/2-102(L) requirements and proposed IDHR Subpart J rules",
+        "All oversight personnel trained on 775 ILCS 5/2-102(L) requirements and recommended best practices",
       ],
     },
     {
-      title: "Recordkeeping (4-Year Retention \u2014 IDHR Proposed Rules)",
+      title: "Recordkeeping (4-Year Retention \u2014 Recommended Best Practice)",
       items: [
         "All AI-related notices, postings, and disclosures preserved for 4 years",
         "Records of AI system use in employment decisions preserved for 4 years",
-        "Records preserved until any IDHR charge is fully adjudicated, regardless of filing date (per general IHRA practice)",
+        "Records preserved until any IDHR charge is fully adjudicated, regardless of filing date (per general IHRA practice and recommended best practice)",
         "Record retention policy documented and assigned to responsible party",
       ],
     },
