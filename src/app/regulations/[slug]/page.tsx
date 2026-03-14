@@ -93,6 +93,9 @@ export default async function RegulationPage({
   const { slug } = await params;
   const reg = getRegulation(slug);
   if (!reg) notFound();
+  // Only show product pages for ready products — non-ready products
+  // contain unverified data and should not be visible to customers
+  if (!reg.ready) notFound();
 
   return (
     <>
