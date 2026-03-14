@@ -267,6 +267,138 @@ export async function generateDocuments(
     ];
   }
 
+  if (data.regulation === "california-ccpa-admt") {
+    const ca = await import("./pdf-california-ccpa-admt");
+    return [
+      {
+        doc: ca.generatePreUseNotice(data),
+        name: `${companySlug}_CA_Pre_Use_Notice.pdf`,
+      },
+      {
+        doc: ca.generateADMTRiskAssessment(data),
+        name: `${companySlug}_CA_ADMT_Risk_Assessment.pdf`,
+      },
+      {
+        doc: ca.generateOptOutDocumentation(data),
+        name: `${companySlug}_CA_Opt_Out_Documentation.pdf`,
+      },
+      {
+        doc: ca.generateConsumerAccessProcedures(data),
+        name: `${companySlug}_CA_Consumer_Access_Procedures.pdf`,
+      },
+      {
+        doc: ca.generateHumanReviewProcess(data),
+        name: `${companySlug}_CA_Human_Review_Process.pdf`,
+      },
+      {
+        doc: ca.generateADMTImpactAssessment(data),
+        name: `${companySlug}_CA_ADMT_Impact_Assessment.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "nist-ai-rmf") {
+    const nist = await import("./pdf-nist-ai-rmf");
+    return [
+      {
+        doc: nist.generateAIRiskManagementPlan(data),
+        name: `${companySlug}_NIST_RMF_Risk_Management_Plan.pdf`,
+      },
+      {
+        doc: nist.generateGovernDocumentation(data),
+        name: `${companySlug}_NIST_RMF_Govern_Documentation.pdf`,
+      },
+      {
+        doc: nist.generateMapDocumentation(data),
+        name: `${companySlug}_NIST_RMF_Map_Documentation.pdf`,
+      },
+      {
+        doc: nist.generateMeasureDocumentation(data),
+        name: `${companySlug}_NIST_RMF_Measure_Documentation.pdf`,
+      },
+      {
+        doc: nist.generateManageDocumentation(data),
+        name: `${companySlug}_NIST_RMF_Manage_Documentation.pdf`,
+      },
+      {
+        doc: nist.generateRiskProfileTemplate(data),
+        name: `${companySlug}_NIST_RMF_Risk_Profile_Template.pdf`,
+      },
+      {
+        doc: nist.generateTrustworthyAIAssessment(data),
+        name: `${companySlug}_NIST_RMF_Trustworthy_AI_Assessment.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "healthcare-ai-compliance") {
+    const hc = await import("./pdf-healthcare-ai");
+    return [
+      {
+        doc: hc.generateAIRiskAssessment(data),
+        name: `${companySlug}_HIPAA_AI_Risk_Assessment.pdf`,
+      },
+      {
+        doc: hc.generateBusinessAssociateAgreement(data),
+        name: `${companySlug}_HIPAA_Business_Associate_Agreement.pdf`,
+      },
+      {
+        doc: hc.generateSecurityPolicies(data),
+        name: `${companySlug}_HIPAA_AI_Security_Policies.pdf`,
+      },
+      {
+        doc: hc.generateBreachNotification(data),
+        name: `${companySlug}_HIPAA_Breach_Notification_Procedures.pdf`,
+      },
+      {
+        doc: hc.generateDeIdentificationMethodology(data),
+        name: `${companySlug}_HIPAA_De_Identification_Methodology.pdf`,
+      },
+      {
+        doc: hc.generatePatientRightsProcedures(data),
+        name: `${companySlug}_HIPAA_Patient_Rights_Procedures.pdf`,
+      },
+      {
+        doc: hc.generateHIPAAComplianceChecklist(data),
+        name: `${companySlug}_HIPAA_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
+  if (data.regulation === "financial-services-ai") {
+    const fin = await import("./pdf-financial-services-ai");
+    return [
+      {
+        doc: fin.generateSupervisionPolicy(data),
+        name: `${companySlug}_FinServ_AI_Supervision_Policy.pdf`,
+      },
+      {
+        doc: fin.generateModelRiskDocumentation(data),
+        name: `${companySlug}_FinServ_Model_Risk_Documentation.pdf`,
+      },
+      {
+        doc: fin.generateAdverseActionNotice(data),
+        name: `${companySlug}_FinServ_ECOA_Adverse_Action_Notice.pdf`,
+      },
+      {
+        doc: fin.generateCustomerDisclosure(data),
+        name: `${companySlug}_FinServ_Customer_AI_Disclosure.pdf`,
+      },
+      {
+        doc: fin.generateVendorDueDiligenceFinancial(data),
+        name: `${companySlug}_FinServ_Vendor_Due_Diligence.pdf`,
+      },
+      {
+        doc: fin.generateFinancialServicesChecklist(data),
+        name: `${companySlug}_FinServ_Annual_AI_Review_Checklist.pdf`,
+      },
+      {
+        doc: fin.generateCFPBUDAAPCompliance(data),
+        name: `${companySlug}_FinServ_CFPB_UDAAP_Compliance.pdf`,
+      },
+    ];
+  }
+
   // Default: Illinois
   const il = await import("./pdf-illinois");
   const docs: GeneratedDoc[] = [
