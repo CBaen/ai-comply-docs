@@ -27,7 +27,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-gray-500 text-sm mb-10">
-            Effective date: March 14, 2026 &nbsp;|&nbsp; Last updated: March 14, 2026
+            Effective date: <time dateTime="2026-03-14">March 14, 2026</time> &nbsp;|&nbsp; Last updated: <time dateTime="2026-03-14">March 14, 2026</time>
           </p>
 
           <div className="prose prose-gray max-w-none space-y-10 text-gray-700 leading-relaxed">
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                   href="https://stripe.com/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-700 hover:underline"
+                  className="text-blue-700 underline"
                 >
                   Privacy Policy
                 </a>
@@ -190,7 +190,7 @@ export default function PrivacyPage() {
                 To exercise any of these rights, contact us at{" "}
                 <a
                   href="mailto:info@aicompliancedocuments.com"
-                  className="text-blue-700 hover:underline"
+                  className="text-blue-700 underline"
                 >
                   info@aicompliancedocuments.com
                 </a>
@@ -248,7 +248,7 @@ export default function PrivacyPage() {
                 Questions about this Privacy Policy or how we handle your data? Contact us at:{" "}
                 <a
                   href="mailto:info@aicompliancedocuments.com"
-                  className="text-blue-700 hover:underline"
+                  className="text-blue-700 underline"
                 >
                   info@aicompliancedocuments.com
                 </a>

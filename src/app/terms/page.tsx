@@ -27,7 +27,7 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p className="text-gray-500 text-sm mb-10">
-            Effective date: March 14, 2026 &nbsp;|&nbsp; Last updated: March 14, 2026
+            Effective date: <time dateTime="2026-03-14">March 14, 2026</time> &nbsp;|&nbsp; Last updated: <time dateTime="2026-03-14">March 14, 2026</time>
           </p>
 
           <div className="prose prose-gray max-w-none space-y-10 text-gray-700 leading-relaxed">
@@ -121,7 +121,7 @@ export default function TermsPage() {
                 If you experience a technical issue with delivery of your document, contact us at{" "}
                 <a
                   href="mailto:info@aicompliancedocuments.com"
-                  className="text-blue-700 hover:underline"
+                  className="text-blue-700 underline"
                 >
                   info@aicompliancedocuments.com
                 </a>{" "}
@@ -180,7 +180,7 @@ export default function TermsPage() {
                 Questions about these terms? Reach us at:{" "}
                 <a
                   href="mailto:info@aicompliancedocuments.com"
-                  className="text-blue-700 hover:underline"
+                  className="text-blue-700 underline"
                 >
                   info@aicompliancedocuments.com
                 </a>

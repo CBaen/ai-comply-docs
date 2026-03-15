@@ -20,22 +20,25 @@ export default function StepContact({
         {helpTexts.step5Intro}
       </p>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="contactName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Contact Name <span className="text-red-500">*</span>
         </label>
         <input
+          id="contactName"
           type="text"
           value={contactName}
           onChange={(e) => setContactName(e.target.value)}
           placeholder="e.g., Jane Smith"
+          aria-required="true"
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="contactTitle" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Title
         </label>
         <input
+          id="contactTitle"
           type="text"
           value={contactTitle}
           onChange={(e) => setContactTitle(e.target.value)}
@@ -44,22 +47,25 @@ export default function StepContact({
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="contactEmail" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Email
         </label>
         <input
+          id="contactEmail"
           type="email"
           value={contactEmail}
           onChange={(e) => setContactEmail(e.target.value)}
           placeholder="e.g., compliance@company.com"
+          aria-required="true"
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="contactPhone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Phone <span className="text-gray-400 font-normal">(Optional)</span>
         </label>
         <input
+          id="contactPhone"
           type="tel"
           value={contactPhone}
           onChange={(e) => setContactPhone(e.target.value)}

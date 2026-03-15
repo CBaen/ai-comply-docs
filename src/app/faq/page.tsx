@@ -176,7 +176,7 @@ export default function FAQPage() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  If you use AI in hiring and you have employees or applicants in Illinois, NYC, or Colorado &mdash; yes. If you collect personal data from consumers in Virginia, Connecticut, Oregon, Texas, Delaware, California, or other states and you use that data for targeted ads, profiling, or automated decisions &mdash; yes. If you sell or deploy AI systems used in consequential decisions &mdash; yes. If you&apos;re not sure, the <Link href="/products/ai-system-registry" className="text-blue-700 hover:underline">AI System Registry</Link> ($199) helps you figure out what AI you&apos;re actually using before you worry about which laws apply.
+                  If you use AI in hiring and you have employees or applicants in Illinois, NYC, or Colorado &mdash; yes. If you collect personal data from consumers in Virginia, Connecticut, Oregon, Texas, Delaware, California, or other states and you use that data for targeted ads, profiling, or automated decisions &mdash; yes. If you sell or deploy AI systems used in consequential decisions &mdash; yes. If you&apos;re not sure, the <Link href="/products/ai-system-registry" className="text-blue-700 underline">AI System Registry</Link> ($199) helps you figure out what AI you&apos;re actually using before you worry about which laws apply.
                 </div>
               </details>
 
@@ -196,7 +196,7 @@ export default function FAQPage() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  That&apos;s the most common thing we hear. Start by figuring out which states your employees or customers are in. Then look at our state-specific packages for those states. If you operate in a lot of states, the <Link href="/products/multi-state-profiling-assessment" className="text-blue-700 hover:underline">Multi-State Profiling Bundle</Link> covers 15+ states in one package. If you just want to get organized first, the <Link href="/products/ai-governance-framework" className="text-blue-700 hover:underline">AI Governance Framework</Link> ($349) and <Link href="/products/ai-system-registry" className="text-blue-700 hover:underline">AI System Registry</Link> ($199) help you figure out what you have before you worry about which laws apply.
+                  That&apos;s the most common thing we hear. Start by figuring out which states your employees or customers are in. Then look at our state-specific packages for those states. If you operate in a lot of states, the <Link href="/products/multi-state-profiling-assessment" className="text-blue-700 underline">Multi-State Profiling Bundle</Link> covers 15+ states in one package. If you just want to get organized first, the <Link href="/products/ai-governance-framework" className="text-blue-700 underline">AI Governance Framework</Link> ($349) and <Link href="/products/ai-system-registry" className="text-blue-700 underline">AI System Registry</Link> ($199) help you figure out what you have before you worry about which laws apply.
                 </div>
               </details>
 
@@ -278,7 +278,7 @@ export default function FAQPage() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  Each state-specific package is built for that state&apos;s law. If you operate in multiple states, look at the <Link href="/products/multi-state-profiling-assessment" className="text-blue-700 hover:underline">Multi-State Profiling Bundle</Link> ($399) which covers 15+ states, or the <Link href="/products/multi-state-employer-ai-disclosure" className="text-blue-700 hover:underline">Multi-State Employer AI Disclosure</Link> ($299) which covers Illinois, NYC, and Colorado in one package.
+                  Each state-specific package is built for that state&apos;s law. If you operate in multiple states, look at the <Link href="/products/multi-state-profiling-assessment" className="text-blue-700 underline">Multi-State Profiling Bundle</Link> ($399) which covers 15+ states, or the <Link href="/products/multi-state-employer-ai-disclosure" className="text-blue-700 underline">Multi-State Employer AI Disclosure</Link> ($299) which covers Illinois, NYC, and Colorado in one package.
                 </div>
               </details>
 
@@ -298,7 +298,7 @@ export default function FAQPage() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  At minimum, annually &mdash; and whenever the underlying law is amended, your AI tools change, or your business operations change. Our <Link href="/products/annual-compliance-review" className="text-blue-700 hover:underline">Annual Compliance Review</Link> package ($49) includes a structured checklist for this.
+                  At minimum, annually &mdash; and whenever the underlying law is amended, your AI tools change, or your business operations change. Our <Link href="/products/annual-compliance-review" className="text-blue-700 underline">Annual Compliance Review</Link> package ($49) includes a structured checklist for this.
                 </div>
               </details>
 

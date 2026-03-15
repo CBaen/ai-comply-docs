@@ -252,7 +252,7 @@ export default function AboutPage() {
 
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 underline"
             >
               View all 53 products &rarr;
             </Link>

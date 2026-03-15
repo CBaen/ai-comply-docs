@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { REGULATION_CONFIG } from "@/lib/regulation-config";
 import type { AISystem, ComplianceFormData } from "@/lib/pdf-types";
 import StepCompanyInfo from "./questionnaire/StepCompanyInfo";
@@ -65,6 +65,12 @@ export default function Questionnaire({
   const [contactTitle, setContactTitle] = useState<string>(saved?.contactTitle || "");
   const [contactEmail, setContactEmail] = useState<string>(saved?.contactEmail || "");
   const [contactPhone, setContactPhone] = useState<string>(saved?.contactPhone || "");
+
+  // Focus management: move focus to step heading when step changes
+  const stepHeadingRef = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    stepHeadingRef.current?.focus();
+  }, [step]);
 
   // Step 6
   const [lawVisited, setLawVisited] = useState(false);
@@ -314,6 +320,7 @@ export default function Questionnaire({
           <div
             className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2.5"
             role="progressbar"
+            aria-label="Form completion progress"
             aria-valuenow={progressPercent}
             aria-valuemin={0}
             aria-valuemax={100}
@@ -326,8 +333,21 @@ export default function Questionnaire({
         </div>
 
         <div className="p-4 sm:p-6 md:p-8">
+          {/* Visually hidden focus target for step change — screen readers announce new step heading */}
+          <h2
+            ref={stepHeadingRef}
+            tabIndex={-1}
+            className="sr-only"
+            aria-live="polite"
+          >
+            Step {visibleStepIndex} of {visibleStepCount}
+          </h2>
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-6 text-sm">
+            <div
+              role="alert"
+              aria-live="assertive"
+              className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-6 text-sm"
+            >
               {error}
             </div>
           )}
@@ -443,7 +463,7 @@ export default function Questionnaire({
                 onClick={prevStep}
                 className="w-full sm:w-auto min-h-[44px] px-6 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-medium transition text-center"
               >
-                &larr; Back
+                <span aria-hidden="true">&larr;</span> Back
               </button>
             ) : (
               <div className="hidden sm:block" />

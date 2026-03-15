@@ -195,7 +195,7 @@ export default async function BlogPostPage({ params }: Props) {
                 {/* ═══ Mobile: Progressive disclosure cards ═══ */}
                 <div className="xl:hidden mt-8 space-y-3">
                   {post.deepDive && (
-                    <details className="group border-l-2 border-indigo-300 bg-indigo-50/50 rounded-r-lg overflow-hidden">
+                    <details className="group border-l-2 border-indigo-300 bg-indigo-50/50 rounded-r-lg overflow-hidden" aria-label="Deep dive explanation">
                       <summary className="flex items-center gap-2 px-3 sm:px-4 py-3 cursor-pointer list-none">
                         <svg className="w-4 h-4 text-indigo-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
                         <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-[0.15em] hidden sm:inline">Deep Dive</span>
@@ -218,7 +218,8 @@ export default async function BlogPostPage({ params }: Props) {
                         {post.microFacts.map((fact, i) => (
                           <a key={i} href={fact.sourceUrl} target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-700 leading-relaxed hover:text-amber-800 transition break-words">
                             {fact.fact}
-                            <span className="text-amber-600 text-xs ml-1">— {fact.source}</span>
+                            <span className="text-amber-700 text-xs ml-1">— {fact.source}</span>
+                            <span className="sr-only"> (opens in new tab)</span>
                           </a>
                         ))}
                       </div>
@@ -248,7 +249,8 @@ export default async function BlogPostPage({ params }: Props) {
                             <p className="text-xs text-gray-600 leading-[1.6] group-hover:text-amber-800 transition mb-1">
                               {fact.fact}
                             </p>
-                            <p className="text-[10px] text-amber-500 font-medium">{fact.source}</p>
+                            <p className="text-xs text-amber-700 font-medium">{fact.source}</p>
+                            <span className="sr-only"> (opens in new tab)</span>
                           </a>
                         ))}
                       </div>
@@ -273,6 +275,7 @@ export default async function BlogPostPage({ params }: Props) {
                       <span className="text-slate-500 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
                       <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 text-sm underline underline-offset-2 decoration-slate-600 hover:decoration-blue-400 transition break-words min-w-0">
                         {ref.title}
+                        <span className="sr-only"> (opens in new tab)</span>
                       </a>
                     </li>
                   ))}
@@ -319,15 +322,16 @@ export default async function BlogPostPage({ params }: Props) {
                         {p.title}
                       </Link>
                     </h3>
-                    <div className="flex items-center justify-between text-xs text-gray-400 mb-3">
+                    <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
                       <time dateTime={p.date}>{formatDate(p.date)}</time>
                       <span>{p.readTime}</span>
                     </div>
                     <Link
                       href={`/blog/${p.slug}`}
+                      aria-label={`Read ${p.title}`}
                       className="text-blue-700 hover:text-blue-900 text-sm font-semibold transition"
                     >
-                      Read →
+                      Read <span aria-hidden="true">→</span>
                     </Link>
                   </article>
                 ))}
