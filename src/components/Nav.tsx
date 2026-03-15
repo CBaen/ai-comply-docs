@@ -68,6 +68,9 @@ export default function Nav() {
               Get Started
             </a>
           </div>
+          <div className="flex items-center gap-1 md:hidden">
+            <SearchModal />
+          </div>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 text-gray-600 min-w-[44px] min-h-[44px] flex items-center justify-center"
