@@ -851,6 +851,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the Equal Credit Opportunity Act (15 USC \u00A7 1691 et seq.) and Regulation B (12 CFR Part 1002), the Fair Credit Reporting Act (15 USC \u00A7 1681 et seq.), and relevant FINRA rules as applied to AI in financial services. I understand that these are compliance templates, not legal advice. SEC, CFPB, and FINRA may issue additional AI-specific guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 597,
+    skippedSteps: [3],
 
     documents: [
       "AI Supervision Policy",
@@ -894,6 +895,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are training and communication templates, not legal advice. I should consult qualified legal counsel for my specific situation.",
     basePrice: 79,
+    skippedSteps: [3],
 
     documents: [
       "Manager Talking Points Script",
@@ -931,6 +933,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are review templates, not legal advice. Laws change. I should verify current regulatory status annually and consult qualified legal counsel.",
     basePrice: 49,
+    skippedSteps: [3, 4],
 
     documents: [
       "Annual Compliance Review Checklist",
@@ -967,6 +970,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are governance templates, not legal advice. I should consult qualified legal counsel for my specific board reporting obligations.",
     basePrice: 69,
+    skippedSteps: [3, 4],
 
     documents: [
       "Executive AI Compliance Status Report",
@@ -1042,6 +1046,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are data mapping templates, not legal advice. Data mapping requirements vary by state. I should consult qualified legal counsel before completing any state privacy assessment.",
     basePrice: 69,
+    skippedSteps: [3, 4],
 
     documents: [
       "Personal Data Inventory",
@@ -1118,6 +1123,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (NIST AI 100-1) referenced in this product. I understand that these are governance framework templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization and jurisdiction.",
     basePrice: 349,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "AI Governance Policy",
@@ -1161,6 +1167,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI RMF MAP Function Playbook referenced in this product. I understand that these are inventory and lifecycle tracking templates, not legal advice. I should consult qualified legal counsel to verify my specific compliance obligations.",
     basePrice: 199,
+    skippedSteps: [3, 4],
 
     documents: [
       "AI System Inventory Template",
@@ -1315,6 +1322,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed IC 24-15 (Indiana Consumer Data Protection Act, P.L. 94-2023) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
+    skippedSteps: [3],
 
     documents: [
       "Privacy Notice Template",
@@ -1350,11 +1358,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "montana-mcdpa": {
     name: "Montana MCDPA",
     statute: "MCA \u00A7\u00A7 30-14-2801 through 30-14-2820",
-    lawUrl: "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0280/sections_index.html",
+    lawUrl: "https://leg.mt.gov/bills/mca/title__0300/chapter_0140/part_0280/sections_index.html",
     lawLinkText: "Read MCA \u00A7\u00A7 30-14-2801\u201330-14-2820 on leg.mt.gov",
     acknowledgment:
       "I have reviewed MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384) and understand that these are compliance templates, not legal advice. Montana has the lowest applicability thresholds of any state privacy law (25,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
+    skippedSteps: [3],
 
     documents: [
       "Privacy Notice Template",
