@@ -118,7 +118,7 @@ function DeadlineBanner({
           return (
             <Link
               key={r.slug}
-              href={`/regulations/${r.slug}`}
+              href={`/products/${r.slug}`}
               className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white border border-red-100 rounded p-3 hover:border-red-300 transition group gap-1"
             >
               <div className="min-w-0">
@@ -239,13 +239,13 @@ export default function ProductLibrary({
             </p>
             <ul className="space-y-1">
               <li>
-                <Link href="/regulations/illinois-hb3773" className="text-xs text-blue-700 hover:underline">Illinois HB3773</Link>
+                <Link href="/products/illinois-hb3773" className="text-xs text-blue-700 hover:underline">Illinois HB3773</Link>
               </li>
               <li>
-                <Link href="/regulations/nyc-local-law-144" className="text-xs text-blue-700 hover:underline">NYC LL144</Link>
+                <Link href="/products/nyc-local-law-144" className="text-xs text-blue-700 hover:underline">NYC LL144</Link>
               </li>
               <li>
-                <Link href="/regulations/colorado-sb24-205" className="text-xs text-blue-700 hover:underline">Colorado SB 24-205</Link>
+                <Link href="/products/colorado-sb24-205" className="text-xs text-blue-700 hover:underline">Colorado SB 24-205</Link>
               </li>
               <li>
                 <Link href="/regulations/multi-state-employer-ai-disclosure" className="text-xs text-blue-700 hover:underline">Multi-State Employer Bundle</Link>
