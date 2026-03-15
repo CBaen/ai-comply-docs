@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "ai regulation templates",
     "ai compliance methodology",
     "ai compliance for small business",
-    "ai built compliance documents",
+    "compliance document methodology",
   ],
   alternates: {
     canonical: "https://aicompliancedocuments.com/about",
