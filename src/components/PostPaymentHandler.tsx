@@ -9,6 +9,22 @@ interface PostPaymentHandlerProps {
 
 type Status = "idle" | "verifying" | "ready" | "error";
 
+// Fields collected by the Quick Purchase mini-form
+interface QuickPurchaseFields {
+  companyName: string;
+  aiToolName: string;
+  aiRole: string;
+  contactName: string;
+}
+
+const AI_ROLE_OPTIONS = [
+  "AI makes final decisions autonomously",
+  "AI recommendation is primary factor",
+  "AI provides advisory input",
+  "AI screens/filters first, humans decide",
+  "AI processes data, humans review outputs",
+];
+
 export default function PostPaymentHandler({
   regulationSlug,
 }: PostPaymentHandlerProps) {
@@ -18,6 +34,16 @@ export default function PostPaymentHandler({
   const [docs, setDocs] = useState<GeneratedDoc[] | null>(null);
   const [deliveryToken, setDeliveryToken] = useState<string>("");
   const [verifiedSessionId, setVerifiedSessionId] = useState<string>("");
+
+  // Quick Purchase mini-form state
+  const [isQuickPurchase, setIsQuickPurchase] = useState(false);
+  const [quickFields, setQuickFields] = useState<QuickPurchaseFields>({
+    companyName: "",
+    aiToolName: "",
+    aiRole: AI_ROLE_OPTIONS[0],
+    contactName: "",
+  });
+  const [quickFieldErrors, setQuickFieldErrors] = useState<Partial<QuickPurchaseFields>>({});
 
   // Download state
   const [downloadState, setDownloadState] = useState<
