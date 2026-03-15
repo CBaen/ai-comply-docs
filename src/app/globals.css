@@ -87,6 +87,8 @@ html.dark .border-blue-100 { border-color: #1e3a5f; }
 html.dark nav { background-color: #111827 !important; border-color: #1e293b !important; }
 html.dark nav .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3); }
 html.dark .mobile-menu { background-color: #111827 !important; }
+html.dark nav .text-gray-600 { color: #94a3b8; }
+html.dark .mobile-menu .text-gray-600 { color: #94a3b8; }
 
 /* Cards and sections */
 html.dark .pricing-featured { background-color: #1e293b; border-color: #3b82f6; }

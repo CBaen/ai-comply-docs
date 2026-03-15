@@ -185,7 +185,7 @@ export default function AboutPage() {
               Available templates
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              We offer 36 compliance packages covering state AI employment laws (Illinois, NYC, Colorado),
+              We offer 53 compliance packages covering state AI employment laws (Illinois, NYC, Colorado),
               state consumer data privacy laws (Virginia, Connecticut, California, Oregon, Texas, Delaware,
               Minnesota, Montana, New Jersey, Indiana, Kentucky), federal frameworks (EEOC, NIST AI RMF),
               industry-specific packages (healthcare, financial services), the EU AI Act, and a full library
@@ -236,7 +236,7 @@ export default function AboutPage() {
               href="/regulations"
               className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:underline"
             >
-              View all 36 products &rarr;
+              View all 53 products &rarr;
             </Link>
           </section>
 

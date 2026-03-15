@@ -1,5 +1,5 @@
 # AI Compliance Documents
-> AI compliance documentation templates for 14+ US state laws, the EU AI Act, and federal frameworks. 36 packages covering employment AI laws, consumer data privacy laws, and universal governance documents.
+> AI compliance documentation templates for 14+ US state laws, the EU AI Act, and federal frameworks. 53 packages covering employment AI laws, consumer data privacy laws, and universal governance documents.
 
 ## About
 AI Compliance Documents generates compliance documentation templates for businesses subject to AI regulations. Customers answer a 10-minute questionnaire about their company and AI systems, pay once (no subscription), and download customized fillable PDF documents instantly. Prices range from $49 to $997. Each package is built from the actual enacted statute text — not summaries, not training data, not paraphrases. We are not a law firm and do not provide legal advice.

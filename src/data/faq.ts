@@ -18,7 +18,7 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: "What AI regulations do you cover?",
-    answer: "We offer 36 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
+    answer: "We offer 53 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
   },
   {
     question: "Is this legal advice?",

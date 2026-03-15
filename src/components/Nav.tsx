@@ -136,7 +136,7 @@ export default function Nav() {
             </Link>
             <div className="flex items-center gap-3">
               <DarkModeToggle />
-              <span className="text-slate-600 dark:text-slate-300 text-sm">Dark Mode</span>
+              <span className="text-gray-600 text-sm">Dark Mode</span>
             </div>
             <a
               href="/#products"
