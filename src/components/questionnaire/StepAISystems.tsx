@@ -36,7 +36,7 @@ export default function StepAISystems({
               <button
                 type="button"
                 onClick={() => removeAISystem(idx)}
-                className="text-red-500 hover:text-red-700 text-sm"
+                className="min-h-[44px] min-w-[44px] px-3 flex items-center justify-center text-red-500 hover:text-red-700 text-sm font-medium"
               >
                 Remove
               </button>

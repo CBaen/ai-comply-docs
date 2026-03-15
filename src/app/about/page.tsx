@@ -35,29 +35,29 @@ export default function AboutPage() {
       <main id="main-content" className="min-h-screen bg-white">
 
         {/* Hero */}
-        <header className="bg-gray-900 text-white py-16 md:py-24">
-          <div className="max-w-3xl mx-auto px-4">
+        <header className="bg-gray-900 text-white py-12 md:py-24">
+          <div className="max-w-3xl mx-auto px-6 sm:px-8">
             <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">
               About Us
             </p>
-            <h1 className="text-3xl md:text-4xl font-bold font-display leading-tight mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display leading-tight mb-6">
               AI compliance templates built from the actual law. Not summaries. Not paraphrases.
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
               Every citation in our documents is verified against enacted statute text from official
               .gov sources. That&apos;s it. That&apos;s the whole methodology.
             </p>
           </div>
         </header>
 
-        <div className="max-w-3xl mx-auto px-4 py-16 md:py-24 space-y-16">
+        <div className="max-w-3xl mx-auto px-6 sm:px-8 py-12 md:py-24 space-y-14 md:space-y-16">
 
           {/* Why we built this */}
           <section>
-            <h2 className="text-2xl font-bold font-display text-gray-900 mb-5">
+            <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-5">
               Why this exists
             </h2>
-            <div className="flex flex-col sm:flex-row gap-6 mb-8">
+            <div className="flex flex-col items-center sm:flex-row sm:items-start gap-6 mb-8">
               <div className="shrink-0">
                 <div className="w-[120px] h-[120px] rounded-full bg-slate-200 overflow-hidden flex items-center justify-center shadow-md ring-2 ring-slate-300">
                   <Image
@@ -98,7 +98,7 @@ export default function AboutPage() {
 
           {/* Methodology */}
           <section>
-            <h2 className="text-2xl font-bold font-display text-gray-900 mb-5">
+            <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-5">
               How we build our templates
             </h2>
             <div className="space-y-6">
@@ -163,8 +163,8 @@ export default function AboutPage() {
           </section>
 
           {/* What we are not */}
-          <section className="bg-amber-50 border border-amber-200 rounded-xl p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <section className="bg-amber-50 border border-amber-200 rounded-xl p-5 sm:p-8">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
               What we are not
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -181,7 +181,7 @@ export default function AboutPage() {
 
           {/* Products */}
           <section>
-            <h2 className="text-2xl font-bold font-display text-gray-900 mb-5">
+            <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-5">
               Available templates
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
@@ -193,8 +193,8 @@ export default function AboutPage() {
               diligence, employee AI policies, and more.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-4 mb-6">
-              <div className="border border-gray-200 rounded-lg p-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              <div className="border border-gray-200 rounded-lg p-4 sm:p-5">
                 <p className="text-xs font-semibold text-red-600 uppercase tracking-wider mb-2">
                   Employment AI Laws
                 </p>
@@ -206,7 +206,7 @@ export default function AboutPage() {
                   <li>Multi-State Employer Bundle</li>
                 </ul>
               </div>
-              <div className="border border-gray-200 rounded-lg p-5">
+              <div className="border border-gray-200 rounded-lg p-4 sm:p-5">
                 <p className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-2">
                   Consumer Privacy Laws
                 </p>
@@ -218,7 +218,7 @@ export default function AboutPage() {
                   <li>Multi-State Profiling Bundle</li>
                 </ul>
               </div>
-              <div className="border border-gray-200 rounded-lg p-5">
+              <div className="border border-gray-200 rounded-lg p-4 sm:p-5">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                   Frameworks &amp; Universal
                 </p>
@@ -241,15 +241,15 @@ export default function AboutPage() {
           </section>
 
           {/* Contact */}
-          <section className="border-t border-gray-200 pt-12">
-            <h2 className="text-xl font-bold text-gray-900 mb-3">Get in touch</h2>
-            <p className="text-gray-700 leading-relaxed mb-3">
+          <section className="border-t border-gray-200 pt-10 sm:pt-12">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">Get in touch</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
               Questions about our methodology, a specific regulation, or whether a product is right
               for your situation? We&apos;re glad to help.
             </p>
             <a
               href="mailto:info@aicompliancedocuments.com"
-              className="inline-block bg-blue-800 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-900 transition"
+              className="inline-block w-full sm:w-auto text-center bg-blue-800 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-900 transition"
             >
               info@aicompliancedocuments.com
             </a>

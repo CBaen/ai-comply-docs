@@ -198,8 +198,8 @@ export default async function RegulationPage({
       <StructuredData reg={reg} />
       <main id="main-content">
         {/* Hero */}
-        <div className="hero-bg text-white py-16 md:py-20">
-          <div className="max-w-4xl mx-auto px-4">
+        <div className="hero-bg text-white py-10 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-4">
               <Link
                 href="/#products"
@@ -210,19 +210,19 @@ export default async function RegulationPage({
               <span className="text-slate-500">|</span>
               <span className="text-slate-400 text-sm">{reg.state}</span>
             </div>
-            <div className="flex flex-wrap items-center gap-3 mb-4">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
               <StatusBadge status={reg.status} ready={reg.ready} />
-              <span className="text-slate-400 text-sm">
+              <span className="text-slate-400 text-xs sm:text-sm">
                 Effective: {reg.effectiveDate}
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-extrabold font-display mb-4 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display mb-3 sm:mb-4 leading-tight">
               {reg.name}
             </h1>
-            <p className="text-lg text-slate-300 mb-4 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-300 mb-4 max-w-2xl leading-relaxed">
               {reg.description}
             </p>
-            <div className="mb-6">
+            <div className="mb-5 sm:mb-6">
               <a
                 href={reg.citationUrl}
                 target="_blank"
@@ -232,9 +232,9 @@ export default async function RegulationPage({
                 Read the enacted law: {reg.citation} →
               </a>
             </div>
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 sm:gap-6">
               <div>
-                <span className="text-4xl font-extrabold font-display text-white">
+                <span className="text-3xl sm:text-4xl font-extrabold font-display text-white">
                   ${reg.price}
                 </span>
                 <span className="text-slate-400 text-sm ml-2">
@@ -244,12 +244,12 @@ export default async function RegulationPage({
               {reg.ready ? (
                 <a
                   href="#get-started"
-                  className="hero-cta bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg"
+                  className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg"
                 >
                   Get Started
                 </a>
               ) : (
-                <span className="bg-slate-700 text-slate-300 px-8 py-3 rounded-lg font-semibold text-lg cursor-default">
+                <span className="w-full sm:w-auto text-center bg-slate-700 text-slate-300 px-8 py-3 rounded-lg font-semibold text-lg cursor-default">
                   Coming Soon
                 </span>
               )}

@@ -44,16 +44,16 @@ export default function BlogPage() {
       <Nav />
       <main id="main-content">
         {/* Hero */}
-        <header className="hero-bg text-white py-16 md:py-20">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="inline-flex items-center gap-2 border border-blue-400/40 px-4 py-1.5 mb-5 text-sm rounded text-blue-200">
+        <header className="hero-bg text-white py-10 md:py-20">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="inline-flex items-center gap-2 border border-blue-400/40 px-3 py-1.5 mb-4 text-xs sm:text-sm rounded text-blue-200">
               <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
               Plain language. No jargon.
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold font-display text-white mb-4 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white mb-3 leading-tight tracking-tight">
               AI Compliance Blog
             </h1>
-            <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
               State AI regulations are real, confusing, and genuinely important. We explain them
               like you&apos;re a smart adult who just hasn&apos;t had time to read 47 pages of
               legislative text. Because that&apos;s most people.
@@ -62,12 +62,12 @@ export default function BlogPage() {
         </header>
 
         {/* Posts */}
-        <section className="py-14 bg-slate-50">
-          <div className="max-w-5xl mx-auto px-4">
+        <section className="py-10 md:py-14 bg-slate-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
             {published.length === 0 ? (
               <p className="text-gray-600">No posts yet. Check back soon.</p>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
                 {published.map((post) => (
                   <article
                     key={post.slug}
@@ -79,12 +79,12 @@ export default function BlogPage() {
                         <img
                           src={post.image}
                           alt={post.title}
-                          className="w-full h-40 object-cover"
+                          className="w-full h-44 sm:h-40 object-cover"
                         />
                       </Link>
                     )}
 
-                    <div className="p-5 flex flex-col flex-1">
+                    <div className="p-4 sm:p-5 flex flex-col flex-1">
                       {/* Tags */}
                       <div className="flex flex-wrap gap-1.5 mb-3">
                         {post.tags.slice(0, 2).map((tag) => (
@@ -98,7 +98,7 @@ export default function BlogPage() {
                       </div>
 
                       {/* Title */}
-                      <h2 className="font-bold text-lg font-display text-gray-900 mb-2 leading-snug flex-1">
+                      <h2 className="font-bold text-base sm:text-lg font-display text-gray-900 mb-2 leading-snug flex-1">
                         <Link
                           href={`/blog/${post.slug}`}
                           className="hover:text-blue-700 transition"

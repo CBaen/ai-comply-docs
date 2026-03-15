@@ -95,12 +95,12 @@ export default async function BlogPostPage({ params }: Props) {
       />
       <main id="main-content">
         {/* Post header — image left, text right on desktop */}
-        <header className="hero-bg text-white py-12 md:py-16">
-          <div className="max-w-5xl mx-auto px-4">
+        <header className="hero-bg text-white py-8 md:py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
             {/* Back link */}
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-blue-300 hover:text-white text-sm mb-6 transition"
+              className="inline-flex items-center gap-1.5 text-blue-300 hover:text-white text-sm mb-5 transition"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -108,14 +108,14 @@ export default async function BlogPostPage({ params }: Props) {
               Back to Blog
             </Link>
 
-            <div className={`${post.image ? "md:grid md:grid-cols-[300px_1fr] md:gap-8 md:items-stretch" : ""}`}>
-              {/* Image — left side, stretches to full height of text block */}
+            <div className={`${post.image ? "grid grid-cols-1 md:grid-cols-[300px_1fr] md:gap-8 md:items-stretch" : ""}`}>
+              {/* Image — full width on mobile, left column on desktop */}
               {post.image && (
-                <div className="mb-6 md:mb-0">
+                <div className="mb-5 md:mb-0">
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-48 md:h-full object-cover rounded-lg shadow-lg"
+                    className="w-full h-48 max-h-[200px] md:h-full md:max-h-none object-cover rounded-lg shadow-lg"
                   />
                 </div>
               )}
@@ -135,12 +135,12 @@ export default async function BlogPostPage({ params }: Props) {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-2xl md:text-3xl font-extrabold font-display text-white leading-tight tracking-tight mb-4">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold font-display text-white leading-tight tracking-tight mb-3">
                   {post.title}
                 </h1>
 
                 {/* Meta row */}
-                <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-4">
+                <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-400 mb-4">
                   <span>{post.author}</span>
                   <span className="w-1 h-1 bg-slate-500 rounded-full" />
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -161,8 +161,8 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         {/* Post body — Art of War annotated layout */}
-        <article className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
+        <article className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="xl:grid xl:grid-cols-[240px_minmax(0,640px)_240px] xl:gap-10 xl:justify-center">
 
               {/* ═══ Left margin: Deep Dive ═══ */}

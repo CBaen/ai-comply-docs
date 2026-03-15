@@ -222,17 +222,17 @@ export default function Home() {
         </section>
 
         {/* Methodology Section — between How It Works and penalties */}
-        <section className="py-14 bg-white border-b border-gray-100">
+        <section className="py-10 md:py-14 bg-white border-b border-gray-100">
           <div className="max-w-5xl mx-auto px-4">
-            <div className="mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold font-display text-gray-900 mb-2">
+            <div className="mb-8 md:mb-10">
+              <h2 className="text-xl md:text-3xl font-bold font-display text-gray-900 mb-2">
                 How We Build Our Templates
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm md:text-base">
                 Every document starts with the actual enacted law — not summaries, not AI-generated overviews.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               <div className="flex flex-col gap-2">
                 <div className="w-9 h-9 bg-blue-50 border border-blue-100 rounded flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
@@ -273,7 +273,7 @@ export default function Home() {
         {/* Founder Callout */}
         <section className="py-10 bg-slate-50 border-y border-gray-200">
           <div className="max-w-5xl mx-auto px-4">
-            <div className="flex items-center gap-5">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center shrink-0 ring-2 ring-slate-300">
                 <img
                   src="/cameron-founder.png"
@@ -283,7 +283,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <p className="text-gray-700 text-sm leading-relaxed">
                   <strong className="text-gray-900">&ldquo;I built this because I needed it myself.</strong> I&apos;m a small business owner using AI, and I couldn&apos;t find compliance documentation I could actually afford. So I built it &mdash; using the same approach I used building HIPAA compliance software for one of the country&apos;s most respected hospital systems.&rdquo;
                 </p>
@@ -296,19 +296,19 @@ export default function Home() {
         </section>
 
         {/* Pain Section — after How It Works so penalties hit harder */}
-        <section className="py-16 bg-white">
+        <section className="py-10 md:py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4">
-            <div className="mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
+            <div className="mb-8 md:mb-10">
+              <h2 className="text-2xl md:text-4xl font-bold font-display text-gray-900 mb-3">
                 What happens if you don&apos;t comply?
               </h2>
-              <p className="text-gray-700 text-lg max-w-2xl">
+              <p className="text-gray-700 text-base md:text-lg max-w-2xl">
                 AI regulations aren&apos;t suggestions. They&apos;re law, with real
                 enforcement teeth and penalties up to $200,000 per violation.
               </p>
             </div>
             <hr className="border-t border-gray-200 my-4" />
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-red-50 border border-red-100 rounded p-6 border-l-4 border-l-red-400">
                 <div className="w-10 h-10 bg-red-100 rounded flex items-center justify-center mb-4">
                   <svg className="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
@@ -341,13 +341,13 @@ export default function Home() {
         </section>
 
         {/* Product Library */}
-        <section id="products" className="py-16 bg-slate-50">
+        <section id="products" className="py-10 md:py-16 bg-slate-50">
           <div className="max-w-5xl mx-auto px-4">
-            <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-display mb-3 text-gray-900">
+            <div className="mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-4xl font-bold font-display mb-3 text-gray-900">
                 Compliance Document Library
               </h2>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-700 text-base md:text-lg">
                 State-specific and universal AI compliance packages. Each includes customized documentation, instant download.
               </p>
             </div>
@@ -356,29 +356,29 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-16 bg-white">
+        <section id="faq" className="py-10 md:py-16 bg-white">
           <div className="max-w-3xl mx-auto px-4">
-            <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-display mb-3 text-gray-900">
+            <div className="mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-4xl font-bold font-display mb-3 text-gray-900">
                 Frequently Asked Questions
               </h2>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-700 text-base md:text-lg">
                 Everything you need to know before getting started.
               </p>
             </div>
             <hr className="border-t border-gray-200 my-4" />
             <div className="space-y-3">
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden" open>
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   How do I know if any of this applies to my business?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   If you use AI in hiring and you have employees or applicants in Illinois, NYC, or Colorado &mdash; yes. If you collect personal data from consumers in Virginia, Connecticut, Oregon, Texas, Delaware, California, or other states and you use that data for targeted ads, profiling, or automated decisions &mdash; yes. If you sell or deploy AI systems used in consequential decisions &mdash; yes. If you&apos;re not sure, the <a href="/regulations/ai-system-registry" className="text-blue-700 hover:underline">AI System Registry</a> ($199) helps you figure out what AI you&apos;re actually using before you worry about which laws apply.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   What if I don&apos;t know whether my tools use AI?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>

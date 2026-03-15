@@ -251,10 +251,10 @@ export default function Questionnaire({
   if (!config) return null;
 
   return (
-    <div id="generator" className="max-w-3xl mx-auto px-4 py-12">
+    <div id="generator" className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
       <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700 overflow-hidden">
         {/* Product summary bar */}
-        <div className="bg-blue-50 dark:bg-blue-900/30 border-b border-blue-100 dark:border-blue-800 px-6 py-2.5 flex items-center justify-between">
+        <div className="bg-blue-50 dark:bg-blue-900/30 border-b border-blue-100 dark:border-blue-800 px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-1">
           <span className="text-sm font-medium text-blue-900 dark:text-blue-200">
             {regulationName} &mdash; {config.documents.length} documents
           </span>
@@ -264,7 +264,7 @@ export default function Questionnaire({
         </div>
 
         {/* Progress bar */}
-        <div className="bg-slate-50 dark:bg-slate-900 px-6 py-4 border-b border-gray-200 dark:border-slate-700">
+        <div className="bg-slate-50 dark:bg-slate-900 px-4 sm:px-6 py-4 border-b border-gray-200 dark:border-slate-700">
           <div className="flex justify-between items-center mb-2 text-sm">
             <span className="font-medium text-gray-700 dark:text-gray-300">
               Step {step} of {TOTAL_STEPS}
@@ -272,20 +272,20 @@ export default function Questionnaire({
             <span className="text-gray-500">{progressPercent}%</span>
           </div>
           <div
-            className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2"
+            className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2.5"
             role="progressbar"
             aria-valuenow={progressPercent}
             aria-valuemin={0}
             aria-valuemax={100}
           >
             <div
-              className="bg-blue-700 h-2 rounded-full transition-all duration-300"
+              className="bg-blue-700 h-2.5 rounded-full transition-all duration-300"
               style={{ width: `${progressPercent}%` }}
             />
           </div>
         </div>
 
-        <div className="p-6 md:p-8">
+        <div className="p-4 sm:p-6 md:p-8">
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 mb-6 text-sm">
               {error}
@@ -393,23 +393,23 @@ export default function Questionnaire({
           )}
 
           {/* Navigation */}
-          <div className="flex justify-between mt-8 pt-6 border-t border-gray-200 dark:border-slate-700">
+          <div className="flex flex-col-reverse sm:flex-row sm:justify-between gap-3 mt-8 pt-6 border-t border-gray-200 dark:border-slate-700">
             {step > 1 ? (
               <button
                 type="button"
                 onClick={prevStep}
-                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium"
+                className="w-full sm:w-auto min-h-[44px] px-6 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-medium transition text-center"
               >
                 &larr; Back
               </button>
             ) : (
-              <div />
+              <div className="hidden sm:block" />
             )}
             {step < TOTAL_STEPS && (
               <button
                 type="button"
                 onClick={nextStep}
-                className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-2.5 rounded-lg font-semibold transition"
+                className="w-full sm:w-auto min-h-[44px] bg-blue-700 hover:bg-blue-800 text-white px-8 py-2.5 rounded-lg font-semibold transition text-center"
               >
                 {step === TOTAL_STEPS - 1 ? "Review" : "Next"}
               </button>

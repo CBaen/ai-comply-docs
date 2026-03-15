@@ -220,11 +220,11 @@ function computeRecommendations(answers: Answers): Recommendation[] {
 
 function StepIndicator({ current, total }: { current: number; total: number }) {
   return (
-    <div className="flex items-center gap-2 mb-8">
+    <div className="flex items-center gap-1.5 mb-8 flex-wrap">
       {Array.from({ length: total }).map((_, i) => (
-        <div key={i} className="flex items-center gap-2">
+        <div key={i} className="flex items-center gap-1.5">
           <div
-            className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
+            className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold transition-colors ${
               i + 1 < current
                 ? "bg-blue-700 text-white"
                 : i + 1 === current
@@ -233,7 +233,7 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
             }`}
           >
             {i + 1 < current ? (
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             ) : (
@@ -242,14 +242,14 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
           </div>
           {i < total - 1 && (
             <div
-              className={`h-0.5 w-6 transition-colors ${
+              className={`h-0.5 w-4 sm:w-6 transition-colors ${
                 i + 1 < current ? "bg-blue-700" : "bg-gray-200"
               }`}
             />
           )}
         </div>
       ))}
-      <span className="ml-2 text-sm text-gray-500 font-medium">
+      <span className="ml-1 text-xs sm:text-sm text-gray-500 font-medium">
         Question {current} of {total}
       </span>
     </div>

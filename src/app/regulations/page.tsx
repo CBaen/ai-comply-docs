@@ -54,16 +54,16 @@ export default function RegulationsIndexPage() {
       <Nav />
       <main id="main-content">
         {/* Hero */}
-        <header className="hero-bg text-white py-16 md:py-20">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="inline-flex items-center gap-2 border border-blue-400/40 px-4 py-1.5 mb-5 text-sm rounded text-blue-200">
+        <header className="hero-bg text-white py-12 md:py-20">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="inline-flex items-center gap-2 border border-blue-400/40 px-3 sm:px-4 py-1.5 mb-4 sm:mb-5 text-xs sm:text-sm rounded text-blue-200">
               <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
               {regulations.filter(r => r.ready).length} compliance packages available
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold font-display text-white mb-4 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white mb-3 sm:mb-4 leading-tight tracking-tight">
               AI Compliance Templates
             </h1>
-            <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
               State-specific and universal AI compliance packages. Each built
               against the actual enacted statute text. Instant download, fraction
               of legal fees.
@@ -72,25 +72,25 @@ export default function RegulationsIndexPage() {
         </header>
 
         {/* Product Library */}
-        <section className="py-16 bg-slate-50">
-          <div className="max-w-5xl mx-auto px-4">
+        <section className="py-10 sm:py-16 bg-slate-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <ProductLibrary regulations={regulations.filter(r => r.ready)} />
           </div>
         </section>
 
         {/* CTA strip */}
-        <section className="py-14 bg-slate-900">
-          <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-3">
+        <section className="py-10 sm:py-14 bg-slate-900">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-white mb-3">
               Not sure which package you need?
             </h2>
-            <p className="text-slate-300 mb-6">
+            <p className="text-slate-300 text-sm sm:text-base mb-6">
               Email us and we&apos;ll help you identify which regulations apply
               to your business.
             </p>
             <a
               href="mailto:info@aicompliancedocuments.com"
-              className="inline-flex items-center gap-2 bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-base hover:bg-blue-800 transition"
+              className="inline-flex items-center gap-2 bg-blue-700 text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-blue-800 transition"
             >
               Contact Us
             </a>

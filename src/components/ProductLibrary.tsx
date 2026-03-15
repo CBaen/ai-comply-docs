@@ -193,14 +193,14 @@ export default function ProductLibrary({
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-2 mb-6" role="tablist">
+      <div className="flex overflow-x-auto gap-2 mb-6 pb-1 -mx-1 px-1 scrollbar-none" role="tablist">
         {filters.map((f) => (
           <button
             key={f.key}
             role="tab"
             aria-selected={activeFilter === f.key}
             onClick={() => setActiveFilter(f.key)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+            className={`shrink-0 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition whitespace-nowrap ${
               activeFilter === f.key
                 ? "bg-blue-800 text-white shadow-sm"
                 : "bg-white border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700"
@@ -287,15 +287,15 @@ export default function ProductLibrary({
       </details>
 
       {/* Product Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {filtered.map((reg) => (
           <div
             key={reg.slug}
-            className="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-700 hover:shadow-md transition flex flex-col"
+            className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6 hover:border-blue-700 hover:shadow-md transition flex flex-col"
           >
             <div className="flex justify-between items-start mb-3 gap-2">
               <div className="min-w-0">
-                <h3 className="font-bold text-lg font-display text-gray-900 leading-snug">
+                <h3 className="font-bold text-base sm:text-lg font-display text-gray-900 leading-snug">
                   {reg.shortName}
                 </h3>
                 <p className="text-gray-500 text-xs mt-0.5 truncate">
@@ -310,7 +310,7 @@ export default function ProductLibrary({
                 : reg.description}
             </p>
             <div className="flex items-center justify-between mb-4 pt-2 border-t border-gray-100">
-              <span className="text-2xl font-bold text-gray-900 font-display">
+              <span className="text-xl sm:text-2xl font-bold text-gray-900 font-display">
                 ${reg.price}
               </span>
               <span className="text-gray-500 text-xs">

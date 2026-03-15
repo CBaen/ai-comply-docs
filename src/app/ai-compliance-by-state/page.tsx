@@ -57,16 +57,16 @@ export default function AIComplianceByStatePage() {
       <Nav />
       <main id="main-content">
         {/* ── Hero ── */}
-        <header className="hero-bg text-white py-16 md:py-20">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="inline-flex items-center gap-2 border border-blue-400/40 px-4 py-1.5 mb-5 text-sm rounded text-blue-200">
+        <header className="hero-bg text-white py-10 md:py-20">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="inline-flex items-center gap-2 border border-blue-400/40 px-3 py-1 sm:px-4 sm:py-1.5 mb-4 sm:mb-5 text-xs sm:text-sm rounded text-blue-200">
               <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
               Updated March 2026
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold font-display text-white mb-4 leading-tight tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display text-white mb-3 sm:mb-4 leading-tight tracking-tight">
               AI Compliance Requirements by State
             </h1>
-            <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
               {stateRegs.length} states have enacted AI or data privacy laws that require specific
               documentation from businesses using AI. Here&apos;s how they compare.
             </p>
@@ -74,12 +74,12 @@ export default function AIComplianceByStatePage() {
         </header>
 
         {/* ── Comparison table ── */}
-        <section className="py-14 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl font-bold font-display text-slate-900 mb-2">
+        <section className="py-10 sm:py-14 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 mb-2">
               State AI Law Comparison
             </h2>
-            <p className="text-slate-500 text-sm mb-8">
+            <p className="text-slate-500 text-xs sm:text-sm mb-6 sm:mb-8">
               Sorted by effective date, earliest first. Only state-level laws with active
               documentation requirements shown.
             </p>
@@ -147,18 +147,18 @@ export default function AIComplianceByStatePage() {
             </div>
 
             {/* Mobile cards */}
-            <div className="md:hidden space-y-4">
+            <div className="md:hidden space-y-3">
               {stateRegs.map((reg) => (
                 <div
                   key={reg.slug}
-                  className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm"
+                  className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm"
                 >
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <div>
-                      <p className="font-bold text-slate-900 text-base">{reg.state}</p>
-                      <p className="text-slate-600 text-sm">{reg.shortName}</p>
+                  <div className="flex items-start justify-between gap-2 mb-3">
+                    <div className="min-w-0">
+                      <p className="font-bold text-slate-900 text-sm leading-snug">{reg.state}</p>
+                      <p className="text-slate-600 text-xs mt-0.5 leading-snug">{reg.shortName}</p>
                     </div>
-                    <div>
+                    <div className="shrink-0">
                       {reg.status === "in-effect" ? (
                         <span className="text-green-700 font-semibold text-xs uppercase tracking-wide bg-green-50 border border-green-200 px-2 py-0.5 rounded">
                           In Effect
@@ -171,22 +171,22 @@ export default function AIComplianceByStatePage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 text-sm mb-4">
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-2 text-xs mb-4">
                     <div>
                       <p className="text-slate-400 text-xs uppercase tracking-wide mb-0.5">Effective</p>
-                      <p className="text-slate-700">{reg.effectiveDate}</p>
+                      <p className="text-slate-700 leading-snug">{reg.effectiveDate}</p>
                     </div>
                     <div>
                       <p className="text-slate-400 text-xs uppercase tracking-wide mb-0.5">Max Penalty</p>
-                      <p className="text-slate-700">{reg.maxPenalty}</p>
+                      <p className="text-slate-700 leading-snug">{reg.maxPenalty}</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700 font-semibold">${reg.price}</span>
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-slate-700 font-semibold text-sm">${reg.price}</span>
                     <Link
                       href={`/regulations/${reg.slug}`}
-                      className="inline-flex items-center gap-1 bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-800 transition"
+                      className="inline-flex items-center gap-1 bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-blue-800 transition shrink-0"
                     >
                       View Package →
                     </Link>
@@ -198,13 +198,13 @@ export default function AIComplianceByStatePage() {
         </section>
 
         {/* ── What these laws have in common ── */}
-        <section className="py-16 bg-slate-50">
-          <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold font-display text-slate-900 mb-6">
+        <section className="py-10 sm:py-16 bg-slate-50">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-slate-900 mb-4 sm:mb-6">
               What These Laws Have in Common
             </h2>
 
-            <div className="space-y-5 text-slate-700 text-base leading-relaxed">
+            <div className="space-y-4 sm:space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed">
               <p>
                 Despite being written independently across more than a dozen state legislatures, most
                 of these laws follow a recognizable pattern. At the core, almost every state AI law
@@ -247,19 +247,19 @@ export default function AIComplianceByStatePage() {
         </section>
 
         {/* ── "Not sure which applies to you?" section ── */}
-        <section className="py-16 bg-white">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold font-display text-slate-900 mb-3">
+        <section className="py-10 sm:py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-slate-900 mb-2 sm:mb-3">
               Not Sure Which Applies to You?
             </h2>
-            <p className="text-slate-500 mb-10 text-base">
+            <p className="text-slate-500 mb-6 sm:mb-10 text-sm sm:text-base">
               Your obligations depend on where you operate, who you serve, and how you use AI.
               Here&apos;s a quick guide by situation.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {/* Card 1: Employers using AI in hiring */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6">
                 <div className="text-2xl mb-3">🏢</div>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
                   Employers using AI in hiring

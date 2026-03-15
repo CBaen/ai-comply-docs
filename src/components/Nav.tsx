@@ -21,11 +21,14 @@ export default function Nav() {
         className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm"
         aria-label="Main navigation"
       >
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+          <Link href="/" className="flex items-center gap-2.5 min-w-0 shrink">
             <Image src="/logo.png" alt="AI Compliance Documents" width={36} height={36} className="shrink-0" />
-            <span className="text-xl font-bold font-display text-gray-900">
+            <span className="text-xl font-bold font-display text-gray-900 hidden sm:block truncate">
               AI Compliance Documents
+            </span>
+            <span className="text-base font-bold font-display text-gray-900 sm:hidden truncate">
+              AI Comply Docs
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -68,79 +71,79 @@ export default function Nav() {
               Get Started
             </a>
           </div>
-          <div className="flex items-center gap-1 md:hidden">
+          <div className="flex items-center gap-1 md:hidden shrink-0">
             <SearchModal />
-          </div>
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-gray-600 min-w-[44px] min-h-[44px] flex items-center justify-center"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-nav"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-              aria-hidden="true"
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-gray-600 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md hover:bg-gray-100 transition"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                {mobileOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
         <div
           id="mobile-nav"
           className={`mobile-menu md:hidden border-t border-gray-100 bg-white ${mobileOpen ? "open" : ""}`}
         >
-          <div className="px-4 py-3 space-y-3">
+          <div className="px-4 py-2 flex flex-col">
             <a
               href="/#how-it-works"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
               onClick={() => setMobileOpen(false)}
             >
               How It Works
             </a>
             <a
               href="/#products"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
               onClick={() => setMobileOpen(false)}
             >
               Products
             </a>
             <Link
               href="/blog"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
               onClick={() => setMobileOpen(false)}
             >
               Blog
             </Link>
             <Link
               href="/faq"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
               onClick={() => setMobileOpen(false)}
             >
               FAQ
             </Link>
             <Link
               href="/about"
-              className="block text-gray-600 hover:text-blue-700 text-sm font-medium"
+              className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
               onClick={() => setMobileOpen(false)}
             >
               About
             </Link>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 min-h-[44px] border-b border-gray-100 py-2">
               <DarkModeToggle />
               <span className="text-gray-600 text-sm">Dark Mode</span>
             </div>
             <a
               href="/#products"
-              className="block bg-blue-800 text-white px-5 py-2 rounded-lg text-center text-sm font-semibold"
+              className="block bg-blue-800 text-white px-5 py-3 rounded-lg text-center text-sm font-semibold mt-3 mb-2 min-h-[44px] flex items-center justify-center"
               onClick={() => setMobileOpen(false)}
             >
               Get Started
