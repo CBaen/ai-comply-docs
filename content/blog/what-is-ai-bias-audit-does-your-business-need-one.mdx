@@ -6,6 +6,47 @@ date: "2026-03-15"
 author: "AI Compliance Documents Team"
 tags: ["bias audit", "NYC Local Law 144", "EEOC", "AI hiring", "disparate impact"]
 published: true
+summary: "A bias audit is a test that checks whether an AI hiring tool produces different outcomes for different groups of people based on race, ethnicity, or sex — and in New York City, it's required by law every year for any employer using automated tools to screen job candidates. The concept comes from decades-old federal employment discrimination law, but it's now being applied specifically to AI, with penalties that compound for every day you use a tool without one."
+deepDive:
+  title: "What Is the Four-Fifths Rule?"
+  content: |
+    Imagine two kids are trying out for the school basketball team. The coach picks 10 out of 50 boys who try out — that's a 20% selection rate. But out of 50 girls who try out, the coach only picks 2 — that's a 4% selection rate. If you compare those two numbers (4% divided by 20%), you get 0.20, or 20%. That's way below 80%. Under a rule the federal government created in 1978, any time one group's selection rate falls below 80% of the highest group's rate, it's a red flag that the selection process might be unfair. That rule is called the four-fifths rule.
+
+    The four-fifths rule — also called the 80% rule — comes from a set of federal regulations called the Uniform Guidelines on Employee Selection Procedures, published at 29 CFR Part 1607. These guidelines were written long before AI existed, but they apply perfectly to AI hiring tools. When an algorithm screens job applicants and produces a score or ranking, you can measure who gets selected and who doesn't, broken down by race, ethnicity, and sex. If any group's selection rate is less than four-fifths of the rate for the group that gets selected most often, that's evidence of what the law calls 'adverse impact.'
+
+    Here's an example with an AI tool. Suppose your resume screener evaluates 1,000 applicants and advances 200 of them. If 30% of white applicants get advanced but only 15% of Black applicants do, the impact ratio is 15% divided by 30%, which equals 0.50 — well below the 0.80 threshold. That's a statistical signal that the tool might be discriminating, even if nobody programmed it to.
+
+    It's important to understand that the four-fifths rule is a screening tool, not a final verdict. A ratio below 0.80 doesn't automatically prove discrimination, and a ratio above 0.80 doesn't automatically prove fairness. But in a bias audit — the kind New York City requires every year — these ratios are exactly what the auditor calculates for every demographic group. If the numbers come back below the threshold, that's the starting point for figuring out what's going wrong and how to fix it.
+microFacts:
+  - fact: "The Uniform Guidelines on Employee Selection Procedures, which established the four-fifths (80%) rule for measuring adverse impact in hiring, were published in 1978 and remain the federal standard referenced by NYC's bias audit requirements."
+    source: "Electronic Code of Federal Regulations (29 CFR Part 1607)"
+    sourceUrl: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607"
+  - fact: "NYC Local Law 144 requires bias audits to calculate selection rates and impact ratios across the same race, ethnicity, and sex categories that employers report under the federal EEO-1 framework (29 CFR 1602.7)."
+    source: "Electronic Code of Federal Regulations (29 CFR 1602.7)"
+    sourceUrl: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1602/subpart-B/section-1602.7"
+  - fact: "The DCWP's final adopted rules for Local Law 144 became effective on July 5, 2023, and include specific requirements for the content, methodology, and publication of bias audit results."
+    source: "NYC Rules — DCWP Adopted Rules for AEDT"
+    sourceUrl: "https://rules.cityofnewyork.us/rule/automated-employment-decision-tools-updated/"
+  - fact: "The EEOC launched its Artificial Intelligence and Algorithmic Fairness Initiative in October 2021, signaling that existing federal anti-discrimination laws — including Title VII — fully apply to AI-powered employment tools."
+    source: "U.S. Equal Employment Opportunity Commission"
+    sourceUrl: "https://www.eeoc.gov/newsroom/eeoc-launches-initiative-artificial-intelligence-and-algorithmic-fairness"
+externalReferences:
+  - title: "NYC Local Law 144 of 2021 (Int 1894-2020) — Automated Employment Decision Tools"
+    url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9"
+  - title: "NYC DCWP — Automated Employment Decision Tools Information Page"
+    url: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page"
+  - title: "DCWP Adopted Rules — Automated Employment Decision Tools (Updated)"
+    url: "https://rules.cityofnewyork.us/rule/automated-employment-decision-tools-updated/"
+  - title: "29 CFR Part 1607 — Uniform Guidelines on Employee Selection Procedures (1978)"
+    url: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607"
+  - title: "29 CFR 1602.7 — EEO-1 Reporting Requirements"
+    url: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1602/subpart-B/section-1602.7"
+  - title: "EEOC — Artificial Intelligence and Algorithmic Fairness Initiative (October 2021)"
+    url: "https://www.eeoc.gov/newsroom/eeoc-launches-initiative-artificial-intelligence-and-algorithmic-fairness"
+  - title: "Illinois HB3773 / 775 ILCS 5/2-102(L)"
+    url: "https://www.ilga.gov/legislation/ilcs/documents/077500050K2-102.htm"
+  - title: "Colorado SB 24-205 — Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
 ---
 
 If you've recently heard the phrase "bias audit" and your instinct was to assume it was either very technical or very optional, you're in good company. Most businesses encounter this term when they're already behind — either because a vendor mentioned it, a lawyer flagged it, or they found out New York City has been fining employers for not conducting one since July 2023.
