@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "About AI Compliance Documents — Our Methodology",
   description:
-    "AI compliance templates built by AI, verified by humans against enacted statute text. Learn how we build documents and why every citation is checked against the actual law.",
+    "AI compliance templates verified against enacted statute text. Learn how we build documents and why every citation is checked against the actual law.",
   keywords: [
     "ai compliance document templates",
     "ai regulation templates",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About AI Compliance Documents — Our Methodology",
     description:
-      "AI compliance templates built by AI, verified against enacted statute text. Not summaries. Not AI-generated legal claims. The actual law, turned into usable templates.",
+      "AI compliance templates verified against enacted statute text. Not summaries. Not AI-generated legal claims. The actual law, turned into usable templates.",
     url: "https://aicompliancedocuments.com/about",
     type: "website",
   },
@@ -34,7 +34,7 @@ function OrganizationSchema() {
     url: "https://aicompliancedocuments.com",
     email: "info@aicompliancedocuments.com",
     description:
-      "AI compliance documentation templates for US state and federal AI regulations. Built by AI, verified against enacted statute text.",
+      "AI compliance documentation templates for US state and federal AI regulations. Built from enacted statute text.",
   });
   return <script type="application/ld+json">{data}</script>;
 }
@@ -111,12 +111,12 @@ export default function AboutPage() {
                   2
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">AI drafts, humans verify</h3>
+                  <h3 className="font-semibold text-gray-900 mb-1">Every claim is verified, not inferred</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    AI generates the initial document structure and content. Then every requirement,
-                    every citation, every penalty amount is verified against the specific statutory
-                    section. If AI cites &sect; 6-1-1703(4)(a), we confirm that section exists and
-                    says what the template claims it says.
+                    Every requirement in our templates links back to a specific statutory citation. If
+                    the law says employers must provide a notice, we show you where it says that (e.g.,
+                    775 ILCS 5/2-102(L)). We don&apos;t include requirements that we can&apos;t trace
+                    to the text.
                   </p>
                 </div>
               </div>
