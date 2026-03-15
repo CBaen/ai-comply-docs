@@ -38,6 +38,7 @@ function OrganizationStructuredData() {
     "@type": "Organization",
     name: "AI Compliance Documents",
     url: "https://aicompliancedocuments.com",
+    logo: "https://aicompliancedocuments.com/logo.png",
     email: "info@aicompliancedocuments.com",
     description:
       "AI compliance documentation templates for US state and federal AI regulations.",

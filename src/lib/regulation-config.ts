@@ -651,6 +651,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "Consumer Rights Request Procedures",
       "Profiling Opt-Out Documentation",
       "Data Processing Agreement Template",
+      "Compliance Checklist",
     ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
@@ -867,12 +868,14 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
-      "AI Risk Assessment for PHI Processing",
-      "Business Associate Agreement (AI Vendor)",
-      "AI-Specific Security Policies",
-      "Breach Notification Procedures (AI)",
-      "De-Identification Methodology Documentation",
-      "Patient Rights Procedures for AI-Processed Data",
+      "HIPAA AI Risk Assessment",
+      "BAA Addendum for AI Vendors",
+      "Minimum Necessary Standard AI Policy",
+      "Patient AI Disclosure Notice",
+      "AI-Generated Output Review Protocol",
+      "De-Identification Protocol for AI",
+      "COPPA Compliance Checklist",
+      "FDA Pre-Submission AI Checklist",
     ],
     decisions: [
       ["clinical", "Clinical Decision Support"],
@@ -911,12 +914,13 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
 
     documents: [
       "AI Supervision Policy",
-      "Model Risk Documentation",
-      "ECOA Adverse Action Notice (AI)",
-      "Customer Communication Disclosure",
+      "GenAI Communications Recordkeeping Policy",
+      "Model Risk Inventory Template",
       "Vendor AI Due Diligence (Financial)",
-      "Annual AI Review Checklist",
-      "CFPB UDAAP Compliance Documentation",
+      "AI Audit Trail Procedure",
+      "Customer Communication Disclosure",
+      "Annual Review Checklist",
+      "CFPB Adverse Action Notice Template",
     ],
     decisions: [
       ["lending", "Lending/Credit"],
