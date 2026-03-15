@@ -57,20 +57,38 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold font-display text-gray-900 mb-5">
               Why this exists
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              AI regulations are multiplying. Illinois enacted HB3773 in 2024. Colorado passed SB
-              24-205 that same year. Texas, California, and a dozen other states have bills in
-              various stages. Federal frameworks are in development. The pace is not slowing down.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              The problem: a custom compliance package from a law firm typically runs $5,000 to
-              $25,000. That&apos;s reasonable for a Fortune 500 company with a dedicated legal
-              department. It&apos;s not reasonable for the mid-size HR tech company, the regional
-              staffing firm, or the healthcare startup that also has to comply — and has the same
-              risk exposure.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-6 mb-8">
+              <div className="shrink-0">
+                <Image
+                  src="/cameron-founder.png"
+                  alt="Cameron, Founder of AI Compliance Documents"
+                  width={120}
+                  height={120}
+                  className="rounded-xl"
+                />
+              </div>
+              <div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  I&apos;m Cameron. I built AI Compliance Documents because I needed it myself.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  I&apos;m a small business owner who uses AI across every part of my business. When
+                  state AI laws started taking effect, I went looking for compliance documentation I
+                  could actually afford and use. What I found was either $5,000+ law firm packages or
+                  generic checklists that didn&apos;t reference the actual statute text. Nothing in between.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  So I built it. I&apos;ve run multiple small businesses. I&apos;ve worked in medical
+                  and tech compliance — including building HIPAA compliance software for one of the
+                  country&apos;s most respected hospital systems. I know what compliance documentation
+                  needs to look like, how it needs to be structured, and what regulators actually ask
+                  for when they come knocking. That experience is what these templates are built on.
+                </p>
+              </div>
+            </div>
             <p className="text-gray-700 leading-relaxed">
-              We built AI Compliance Documents to close that gap. Our templates give you a
+              AI Compliance Documents exists to close the gap between &quot;I can&apos;t afford a law
+              firm&quot; and &quot;I can&apos;t afford to ignore this.&quot; Our templates give you a
               professional, statute-verified starting point that you can take to your attorney for
               final review — instead of starting from zero and paying for every hour of research.
             </p>

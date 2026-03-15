@@ -270,6 +270,29 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Founder Callout */}
+        <section className="py-10 bg-slate-50 border-y border-gray-200">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="flex items-center gap-5">
+              <img
+                src="/cameron-founder.png"
+                alt="Cameron, Founder"
+                width={64}
+                height={64}
+                className="rounded-full shrink-0"
+              />
+              <div>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  <strong className="text-gray-900">&ldquo;I built this because I needed it myself.</strong> I&apos;m a small business owner using AI, and I couldn&apos;t find compliance documentation I could actually afford. So I built it &mdash; using the same approach I used building HIPAA compliance software for one of the country&apos;s most respected hospital systems.&rdquo;
+                </p>
+                <p className="text-gray-500 text-xs mt-1">
+                  Cameron, Founder &middot; <a href="/about" className="text-blue-700 hover:underline">Read our story</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pain Section — after How It Works so penalties hit harder */}
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4">

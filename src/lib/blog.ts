@@ -3,6 +3,17 @@ import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 
+export interface MicroFact {
+  fact: string;
+  source: string;
+  sourceUrl: string;
+}
+
+export interface DeepDive {
+  title: string;
+  content: string;
+}
+
 export interface BlogPostMeta {
   title: string;
   slug: string;
@@ -12,10 +23,14 @@ export interface BlogPostMeta {
   readTime: string;
   tags: string[];
   published: boolean;
+  summary?: string;
 }
 
 export interface BlogPostFull extends BlogPostMeta {
   content: string;
+  deepDive?: DeepDive;
+  microFacts?: MicroFact[];
+  externalReferences?: Array<{ title: string; url: string }>;
 }
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
