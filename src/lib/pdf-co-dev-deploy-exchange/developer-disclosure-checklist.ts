@@ -62,19 +62,19 @@ export function generateDeveloperDisclosureChecklist(
 
   y = addWrappedText(
     doc,
-    "For each required disclosure item, check the box when completed and provide the relevant document reference or details.",
+    "The 13 required disclosure elements are organized by statutory subsection. Check each item when completed and provide a document reference or details. Elements (a)–(d) address disclosure to deployers; (3) addresses documentation artifacts; (4) addresses the public website statement.",
     MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
   );
   y += 4;
 
-  // Item 1: System purpose and intended uses
+  // Item (a): Foreseeable uses and known harmful uses
   y = addFormCheckbox(
     doc,
-    "ddc_item1_check",
-    "1. System Purpose and Intended Uses — Describe the intended purpose and reasonably foreseeable uses of the AI system",
+    "ddc_item_a_check",
+    "(a) Foreseeable Uses and Known Harmful Uses — General statement of the AI system's reasonably foreseeable uses and known harmful or inappropriate uses",
     y
   );
-  y = addFormTextField(doc, "ddc_item1_detail", "Document reference / details:", y, {
+  y = addFormTextField(doc, "ddc_item_a_detail", "Document reference / details:", y, {
     multiline: true, lines: 3,
   });
   doc.setDrawColor(220); doc.setLineWidth(0.3);
@@ -82,14 +82,14 @@ export function generateDeveloperDisclosureChecklist(
   doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
   y += LINE_HEIGHT + 2;
 
-  // Item 2: Known limitations
+  // Item (b)(I): Summary of training data types
   y = addFormCheckbox(
     doc,
-    "ddc_item2_check",
-    "2. Known Limitations — Describe known limitations of the AI system that are relevant to its intended use, including accuracy, reliability, and performance constraints",
+    "ddc_item_b1_check",
+    "(b)(I) Summary of Training Data Types — Summary of the types of data used to train the AI system",
     y
   );
-  y = addFormTextField(doc, "ddc_item2_detail", "Document reference / details:", y, {
+  y = addFormTextField(doc, "ddc_item_b1_detail", "Document reference / details:", y, {
     multiline: true, lines: 3,
   });
   doc.setDrawColor(220); doc.setLineWidth(0.3);
@@ -97,14 +97,14 @@ export function generateDeveloperDisclosureChecklist(
   doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
   y += LINE_HEIGHT + 2;
 
-  // Item 3: Training data description
+  // Item (b)(II): Known limitations including discrimination risks
   y = addFormCheckbox(
     doc,
-    "ddc_item3_check",
-    "3. Training Data Description — Describe the data used to train the AI system, including data sources, collection methods, and any known gaps or biases in the training data",
+    "ddc_item_b2_check",
+    "(b)(II) Known Limitations Including Algorithmic Discrimination Risks — Known limitations of the AI system including risks of algorithmic discrimination",
     y
   );
-  y = addFormTextField(doc, "ddc_item3_detail", "Document reference / details (model card / dataset card reference per § 6-1-1702(3)):", y, {
+  y = addFormTextField(doc, "ddc_item_b2_detail", "Document reference / details:", y, {
     multiline: true, lines: 3,
   });
   doc.setDrawColor(220); doc.setLineWidth(0.3);
@@ -112,29 +112,14 @@ export function generateDeveloperDisclosureChecklist(
   doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
   y += LINE_HEIGHT + 2;
 
-  // Item 4: Known risks of algorithmic discrimination
+  // Item (b)(III): System purpose
   y = addFormCheckbox(
     doc,
-    "ddc_item4_check",
-    "4. Known Risks of Algorithmic Discrimination — Disclose any known or reasonably foreseeable risks that the AI system may result in algorithmic discrimination when used for its intended purpose",
+    "ddc_item_b3_check",
+    "(b)(III) System Purpose — The purpose of the AI system",
     y
   );
-  y = addFormTextField(doc, "ddc_item4_detail", "Document reference / details:", y, {
-    multiline: true, lines: 4,
-  });
-  doc.setDrawColor(220); doc.setLineWidth(0.3);
-  if (y > 270) { doc.addPage(); y = MARGIN; }
-  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
-  y += LINE_HEIGHT + 2;
-
-  // Item 5: Proper and improper use cases
-  y = addFormCheckbox(
-    doc,
-    "ddc_item5_check",
-    "5. Proper and Improper Use Cases — Describe the uses for which the AI system is appropriate and the uses for which it is not appropriate; include any prohibited uses",
-    y
-  );
-  y = addFormTextField(doc, "ddc_item5_detail", "Document reference / details:", y, {
+  y = addFormTextField(doc, "ddc_item_b3_detail", "Document reference / details:", y, {
     multiline: true, lines: 3,
   });
   doc.setDrawColor(220); doc.setLineWidth(0.3);
@@ -142,14 +127,104 @@ export function generateDeveloperDisclosureChecklist(
   doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
   y += LINE_HEIGHT + 2;
 
-  // Item 6: How to monitor the system
+  // Item (b)(IV): Intended benefits and uses
   y = addFormCheckbox(
     doc,
-    "ddc_item6_check",
-    "6. Monitoring Guidance — Provide guidance on how to monitor the AI system for algorithmic discrimination, including recommended metrics, monitoring frequency, and escalation procedures",
+    "ddc_item_b4_check",
+    "(b)(IV) Intended Benefits and Uses — The intended benefits and uses of the AI system",
     y
   );
-  y = addFormTextField(doc, "ddc_item6_detail", "Document reference / details:", y, {
+  y = addFormTextField(doc, "ddc_item_b4_detail", "Document reference / details:", y, {
+    multiline: true, lines: 3,
+  });
+  doc.setDrawColor(220); doc.setLineWidth(0.3);
+  if (y > 270) { doc.addPage(); y = MARGIN; }
+  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
+  y += LINE_HEIGHT + 2;
+
+  // Item (b)(V): All info necessary for deployer compliance with §6-1-1703
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_b5_check",
+    "(b)(V) All Information Necessary for Deployer Compliance with § 6-1-1703 — Any other information the developer reasonably believes is necessary for a deployer to comply with § 6-1-1703",
+    y
+  );
+  y = addFormTextField(doc, "ddc_item_b5_detail", "Document reference / details:", y, {
+    multiline: true, lines: 3,
+  });
+  doc.setDrawColor(220); doc.setLineWidth(0.3);
+  if (y > 270) { doc.addPage(); y = MARGIN; }
+  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
+  y += LINE_HEIGHT + 2;
+
+  // Item (c)(I): Evaluation for performance and discrimination mitigation
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_c1_check",
+    "(c)(I) Evaluation for Performance and Discrimination Mitigation — Description of how the system was evaluated for performance and for mitigation of algorithmic discrimination",
+    y
+  );
+  y = addFormTextField(doc, "ddc_item_c1_detail", "Document reference / details:", y, {
+    multiline: true, lines: 3,
+  });
+  doc.setDrawColor(220); doc.setLineWidth(0.3);
+  if (y > 270) { doc.addPage(); y = MARGIN; }
+  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
+  y += LINE_HEIGHT + 2;
+
+  // Item (c)(II): Data governance measures for training datasets
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_c2_check",
+    "(c)(II) Data Governance Measures for Training Datasets — Description of data governance measures applied to training datasets",
+    y
+  );
+  y = addFormTextField(doc, "ddc_item_c2_detail", "Document reference / details:", y, {
+    multiline: true, lines: 3,
+  });
+  doc.setDrawColor(220); doc.setLineWidth(0.3);
+  if (y > 270) { doc.addPage(); y = MARGIN; }
+  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
+  y += LINE_HEIGHT + 2;
+
+  // Item (c)(III): Intended outputs
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_c3_check",
+    "(c)(III) Intended Outputs — Description of the intended outputs of the AI system",
+    y
+  );
+  y = addFormTextField(doc, "ddc_item_c3_detail", "Document reference / details:", y, {
+    multiline: true, lines: 3,
+  });
+  doc.setDrawColor(220); doc.setLineWidth(0.3);
+  if (y > 270) { doc.addPage(); y = MARGIN; }
+  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
+  y += LINE_HEIGHT + 2;
+
+  // Item (c)(IV): Measures to mitigate discrimination risks
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_c4_check",
+    "(c)(IV) Measures to Mitigate Discrimination Risks — Description of measures taken to mitigate known or reasonably foreseeable risks of algorithmic discrimination",
+    y
+  );
+  y = addFormTextField(doc, "ddc_item_c4_detail", "Document reference / details:", y, {
+    multiline: true, lines: 3,
+  });
+  doc.setDrawColor(220); doc.setLineWidth(0.3);
+  if (y > 270) { doc.addPage(); y = MARGIN; }
+  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
+  y += LINE_HEIGHT + 2;
+
+  // Item (d): Additional documentation for understanding outputs
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_d_check",
+    "(d) Additional Documentation for Understanding Outputs — Any additional documentation that helps deployers understand the outputs of the AI system and monitor for algorithmic discrimination",
+    y
+  );
+  y = addFormTextField(doc, "ddc_item_d_detail", "Document reference / details:", y, {
     multiline: true, lines: 3,
   });
   doc.setDrawColor(220); doc.setLineWidth(0.3);
