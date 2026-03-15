@@ -41,6 +41,26 @@ export default function PostPaymentHandler({
 
   const checkedRef = useRef(false);
 
+  // Lock body scroll when modal is showing
+  useEffect(() => {
+    if (status === "verifying" || status === "ready") {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [status]);
+
   useEffect(() => {
     if (checkedRef.current) return;
     checkedRef.current = true;
@@ -537,6 +557,8 @@ export default function PostPaymentHandler({
               {emailStatus.message}
             </p>
           )}
+        </div>
+          </div>
         </div>
       </div>
     );
