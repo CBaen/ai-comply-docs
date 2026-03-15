@@ -15,7 +15,7 @@ import {
 
 // ============================================================
 // DOCUMENT 1: Privacy Notice Template
-// Oregon CPA — ORS §§ 646A.570 through 646A.604
+// Oregon CPA — ORS §§ 646A.570 through 646A.589
 // ============================================================
 export function generatePrivacyNotice(data: ComplianceFormData): jsPDF {
   const doc = new jsPDF();
@@ -24,7 +24,7 @@ export function generatePrivacyNotice(data: ComplianceFormData): jsPDF {
 
   y = addWrappedText(
     doc,
-    `This Privacy Notice is provided by ${data.company.name} pursuant to ORS § 646A.578, which requires controllers to provide consumers with a reasonably accessible, clear, and meaningful privacy notice. The Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.604) has been in effect since July 1, 2024.`,
+    `This Privacy Notice is provided by ${data.company.name} pursuant to ORS § 646A.578, which requires controllers to provide consumers with a reasonably accessible, clear, and meaningful privacy notice. The Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.589) has been in effect since July 1, 2024.`,
     MARGIN,
     y,
     CONTENT_WIDTH,

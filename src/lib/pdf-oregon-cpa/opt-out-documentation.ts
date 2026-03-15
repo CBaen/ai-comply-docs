@@ -15,7 +15,7 @@ import {
 
 // ============================================================
 // DOCUMENT 4: Profiling Opt-Out Documentation
-// Oregon CPA — ORS §§ 646A.570 through 646A.604
+// Oregon CPA — ORS §§ 646A.570 through 646A.589
 // ============================================================
 export function generateOptOutDocumentation(
   data: ComplianceFormData
@@ -144,7 +144,7 @@ export function generateOptOutDocumentation(
   y = addSectionHeader(doc, "Opt-Out Request Log", y);
   y = addWrappedText(
     doc,
-    "Recommended Best Practice — not a statutory mandate: log all opt-out requests for at least 3 years. The 30-day cure period under ORS § 646A.604(2) applies until January 1, 2026; after that date, the AG has enforcement discretion.",
+    "Recommended Best Practice — not a statutory mandate: log all opt-out requests for at least 3 years. The 30-day cure period under ORS § 646A.589(2) applies until January 1, 2026; after that date, the AG has enforcement discretion.",
     MARGIN,
     y,
     CONTENT_WIDTH,

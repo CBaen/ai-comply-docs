@@ -16,7 +16,7 @@ import {
 
 // ============================================================
 // DOCUMENT 2: Data Protection Assessment
-// Oregon CPA — ORS §§ 646A.570 through 646A.604
+// Oregon CPA — ORS §§ 646A.570 through 646A.589
 // ============================================================
 export function generateDataProtectionAssessment(
   data: ComplianceFormData

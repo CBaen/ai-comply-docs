@@ -130,9 +130,9 @@ const REGULATION_HEADER: Record<
   },
   "oregon-cpa": {
     statute:
-      "Statute: ORS \u00A7\u00A7 646A.570 through 646A.604 (Oregon Consumer Privacy Act, eff. 7-1-24)",
+      "Statute: ORS \u00A7\u00A7 646A.570 through 646A.589 (Oregon Consumer Privacy Act, eff. 7-1-24)",
     rules:
-      "Enforcement: Oregon Attorney General (\u00A7 646A.604). 30-day cure period until January 1, 2026 (\u00A7 646A.604(2)); AG discretion after. Penalties under UTPA (ORS \u00A7 646.642). No private right of action.",
+      "Enforcement: Oregon Attorney General (\u00A7 646A.589). 30-day cure period until January 1, 2026 (\u00A7 646A.589(2)); AG discretion after. Civil penalties up to $7,500 per violation (ORS \u00A7 646A.589). No private right of action.",
   },
   "minnesota-mcdpa": {
     statute:

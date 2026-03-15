@@ -14,7 +14,7 @@ import {
 
 // ============================================================
 // DOCUMENT 3: Consumer Rights Request Procedures
-// Oregon CPA — ORS §§ 646A.570 through 646A.604
+// Oregon CPA — ORS §§ 646A.570 through 646A.589
 // ============================================================
 export function generateConsumerRightsProcedures(
   data: ComplianceFormData
@@ -25,7 +25,7 @@ export function generateConsumerRightsProcedures(
 
   y = addWrappedText(
     doc,
-    `These procedures govern ${data.company.name}'s response to consumer rights requests under ORS § 646A.574 (Oregon Consumer Privacy Act, eff. July 1, 2024). Under § 646A.576(2)(a), the controller must respond to authenticated consumer requests within 45 days, with the option to extend by an additional 45 days with prior notice to the consumer. The 30-day cure period under § 646A.604(2) applies until January 1, 2026; after that date, the AG has discretion on whether to allow cure.`,
+    `These procedures govern ${data.company.name}'s response to consumer rights requests under ORS § 646A.574 (Oregon Consumer Privacy Act, eff. July 1, 2024). Under § 646A.576(2)(a), the controller must respond to authenticated consumer requests within 45 days, with the option to extend by an additional 45 days with prior notice to the consumer. The 30-day cure period under § 646A.589(2) applies until January 1, 2026; after that date, the AG has discretion on whether to allow cure.`,
     MARGIN,
     y,
     CONTENT_WIDTH,

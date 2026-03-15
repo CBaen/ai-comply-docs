@@ -29,7 +29,7 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
 
   y = addWrappedText(
     doc,
-    `Use this checklist to verify and maintain compliance with the Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.604, eff. July 1, 2024) for ${data.company.name}. Enforcement is by the Oregon Attorney General under § 646A.604; there is no private right of action. A 30-day cure period applies until January 1, 2026 (§ 646A.604(2)); after that date, the AG has enforcement discretion. Civil penalties: up to $7,500 per violation under the Oregon Unlawful Trade Practices Act (UTPA, ORS § 646.642). Review and update at least ${REVIEW_LABELS[data.oversight.reviewFrequency] || "annually"}.`,
+    `Use this checklist to verify and maintain compliance with the Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.589, eff. July 1, 2024) for ${data.company.name}. Enforcement is by the Oregon Attorney General under § 646A.589; there is no private right of action. A 30-day cure period applies until January 1, 2026 (§ 646A.589(2)); after that date, the AG has enforcement discretion. Civil penalties: up to $7,500 per violation (ORS § 646A.589). Review and update at least ${REVIEW_LABELS[data.oversight.reviewFrequency] || "annually"}.`,
     MARGIN,
     y,
     CONTENT_WIDTH,
@@ -39,7 +39,7 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
 
   const sections: { title: string; items: string[] }[] = [
     {
-      title: "Applicability (§§ 646A.570–646A.604)",
+      title: "Applicability (§§ 646A.570–646A.589)",
       items: [
         "Confirmed organization does business in Oregon or targets Oregon residents",
         "Confirmed organization meets at least one threshold: processes data of 100,000+ consumers/year OR derives 25%+ revenue from data sales and processes data of 25,000+ consumers",
@@ -131,12 +131,12 @@ export function generateComplianceChecklist(data: ComplianceFormData): jsPDF {
       ],
     },
     {
-      title: "Enforcement Awareness (§ 646A.604)",
+      title: "Enforcement Awareness (§ 646A.589)",
       items: [
-        "Organization is aware Oregon AG has enforcement authority (§ 646A.604)",
+        "Organization is aware Oregon AG has enforcement authority (§ 646A.589)",
         "Organization is aware there is no private right of action",
-        "Organization is aware of the 30-day cure period until January 1, 2026 (§ 646A.604(2))",
-        "Civil penalty exposure: up to $7,500 per violation under UTPA (ORS § 646.642)",
+        "Organization is aware of the 30-day cure period until January 1, 2026 (§ 646A.589(2))",
+        "Civil penalty exposure: up to $7,500 per violation (ORS § 646A.589)",
         "Legal counsel identified for AG investigation response",
       ],
     },
