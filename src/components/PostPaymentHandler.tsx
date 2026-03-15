@@ -112,12 +112,24 @@ export default function PostPaymentHandler({
 
   const handlePaymentSuccess = async (sessionId: string) => {
     const savedData = sessionStorage.getItem("complianceFormData");
+
+    // Detect Quick Purchase sentinel: no data at all, or explicit quickPurchase flag
+    let parsedData: (ComplianceFormData & { quickPurchase?: boolean }) | null = null;
+    let isQP = false;
+
     if (!savedData) {
-      setStatus("error");
-      setErrorMessage(
-        "Form data was lost. Please fill out the form again \u2014 you will not be charged twice."
-      );
-      return;
+      // No sessionStorage at all — treat as Quick Purchase
+      isQP = true;
+    } else {
+      try {
+        parsedData = JSON.parse(savedData);
+        if (parsedData?.quickPurchase === true) {
+          isQP = true;
+        }
+      } catch {
+        // Corrupt data — treat as Quick Purchase rather than blocking the buyer
+        isQP = true;
+      }
     }
 
     setStatus("verifying");
@@ -128,24 +140,30 @@ export default function PostPaymentHandler({
     }, 50);
 
     try {
-      const parsedData: ComplianceFormData = JSON.parse(savedData);
-
       const response = await fetch("/api/verify-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // formData is included so verify-payment can save the purchase to the DB
         // as a synchronous fallback before the Stripe webhook fires.
-        body: JSON.stringify({ sessionId, formData: parsedData }),
+        // Quick Purchase passes null — verify-payment already supports this.
+        body: JSON.stringify({ sessionId, formData: isQP ? null : parsedData }),
       });
       const result = await response.json();
 
       if (result.verified) {
-        const data: ComplianceFormData = parsedData;
         sessionStorage.removeItem("complianceFormData");
-        setFormData(data);
         setDeliveryToken(result.deliveryToken || "");
         setVerifiedSessionId(sessionId);
-        setStatus("ready");
+
+        if (isQP) {
+          // Show mini-form before the download panel
+          setIsQuickPurchase(true);
+          setStatus("ready");
+        } else {
+          setFormData(parsedData as ComplianceFormData);
+          setStatus("ready");
+        }
+
         // Scroll to download section after render
         setTimeout(() => {
           const el = document.getElementById("post-payment");
@@ -300,6 +318,61 @@ export default function PostPaymentHandler({
     }
   };
 
+  const handleQuickPurchaseSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Validate required fields
+    const errors: Partial<QuickPurchaseFields> = {};
+    if (!quickFields.companyName.trim()) errors.companyName = "Required";
+    if (!quickFields.aiToolName.trim()) errors.aiToolName = "Required";
+    if (!quickFields.contactName.trim()) errors.contactName = "Required";
+
+    if (Object.keys(errors).length > 0) {
+      setQuickFieldErrors(errors);
+      return;
+    }
+
+    // Build a full ComplianceFormData with sensible defaults for everything
+    // the buyer didn't fill in during the Quick Purchase flow.
+    const completed: ComplianceFormData = {
+      regulation: regulationSlug,
+      company: {
+        name: quickFields.companyName.trim(),
+        state: "",
+        size: "",
+        industry: "",
+      },
+      aiSystems: [
+        {
+          name: quickFields.aiToolName.trim(),
+          vendor: "",
+          description: "",
+          decisions: [],
+        },
+      ],
+      dataInputs: [],
+      protectedCharacteristics: [],
+      biasAudit: "",
+      oversight: {
+        aiRole: quickFields.aiRole,
+        oversightRole: "",
+        humanReview: "",
+        reviewFrequency: "",
+      },
+      contact: {
+        name: quickFields.contactName.trim(),
+        title: "",
+        email: "",
+        phone: "",
+      },
+      generatedDate: new Date().toISOString().split("T")[0],
+      selectedAddons: [],
+    };
+
+    setFormData(completed);
+    setIsQuickPurchase(false);
+  };
+
   // Cancelled payment banner
   if (showCancelledBanner) {
     return (
@@ -396,6 +469,125 @@ export default function PostPaymentHandler({
           <p className="text-gray-500 text-sm mt-2">
             This usually takes just a moment.
           </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Quick Purchase mini-form — shown when payment is verified but we need details
+  if (status === "ready" && isQuickPurchase) {
+    return (
+      <div className="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto" role="dialog" aria-modal="true" aria-label="Customize your documents">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" aria-hidden="true" />
+        <div className="relative bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700 max-w-xl w-full mx-4 my-8 sm:my-16 overflow-hidden">
+          <div className="p-6 sm:p-8">
+            {/* Header */}
+            <div className="text-center mb-6">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg className="w-6 h-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h2 className="text-xl font-bold font-display text-gray-900 dark:text-white mb-1">
+                Almost there — customize your documents
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">
+                We just need a few details to personalize your compliance documents.
+              </p>
+            </div>
+
+            <form onSubmit={handleQuickPurchaseSubmit} noValidate className="space-y-5">
+              {/* Company Name */}
+              <div>
+                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                  Company Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={quickFields.companyName}
+                  onChange={(e) => {
+                    setQuickFields((f) => ({ ...f, companyName: e.target.value }));
+                    setQuickFieldErrors((err) => ({ ...err, companyName: undefined }));
+                  }}
+                  placeholder="Acme Corp"
+                  className={`w-full px-4 py-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none dark:bg-slate-700 dark:text-white dark:border-slate-600 ${
+                    quickFieldErrors.companyName ? "border-red-400" : "border-gray-300"
+                  }`}
+                />
+                {quickFieldErrors.companyName && (
+                  <p className="text-red-500 text-xs mt-1">{quickFieldErrors.companyName}</p>
+                )}
+              </div>
+
+              {/* AI Tool Name */}
+              <div>
+                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                  AI System / Tool Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={quickFields.aiToolName}
+                  onChange={(e) => {
+                    setQuickFields((f) => ({ ...f, aiToolName: e.target.value }));
+                    setQuickFieldErrors((err) => ({ ...err, aiToolName: undefined }));
+                  }}
+                  placeholder="e.g., HireVue, ChatGPT, Workday AI"
+                  className={`w-full px-4 py-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none dark:bg-slate-700 dark:text-white dark:border-slate-600 ${
+                    quickFieldErrors.aiToolName ? "border-red-400" : "border-gray-300"
+                  }`}
+                />
+                {quickFieldErrors.aiToolName && (
+                  <p className="text-red-500 text-xs mt-1">{quickFieldErrors.aiToolName}</p>
+                )}
+              </div>
+
+              {/* AI Role dropdown */}
+              <div>
+                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                  Your Role in AI Decisions <span className="text-red-500">*</span>
+                </label>
+                <select
+                  value={quickFields.aiRole}
+                  onChange={(e) => setQuickFields((f) => ({ ...f, aiRole: e.target.value }))}
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none dark:bg-slate-700 dark:text-white dark:border-slate-600"
+                >
+                  {AI_ROLE_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Contact Name */}
+              <div>
+                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                  Your Name <span className="text-red-500">*</span>
+                </label>
+                <p className="text-xs text-gray-400 dark:text-gray-500 mb-1">Name for compliance documents</p>
+                <input
+                  type="text"
+                  value={quickFields.contactName}
+                  onChange={(e) => {
+                    setQuickFields((f) => ({ ...f, contactName: e.target.value }));
+                    setQuickFieldErrors((err) => ({ ...err, contactName: undefined }));
+                  }}
+                  placeholder="Jane Smith"
+                  className={`w-full px-4 py-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none dark:bg-slate-700 dark:text-white dark:border-slate-600 ${
+                    quickFieldErrors.contactName ? "border-red-400" : "border-gray-300"
+                  }`}
+                />
+                {quickFieldErrors.contactName && (
+                  <p className="text-red-500 text-xs mt-1">{quickFieldErrors.contactName}</p>
+                )}
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3.5 px-6 rounded-lg transition text-base mt-2"
+              >
+                Generate My Documents
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     );

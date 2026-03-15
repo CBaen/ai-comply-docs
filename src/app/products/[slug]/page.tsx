@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import Questionnaire from "@/components/Questionnaire";
 import PostPaymentHandler from "@/components/PostPaymentHandler";
 import DocumentSamplePreview from "@/components/DocumentSamplePreview";
+import QuickPurchaseButton from "@/components/QuickPurchaseButton";
 
 export async function generateStaticParams() {
   // Only generate pages for ready products — non-ready products
@@ -563,12 +564,15 @@ export default async function RegulationPage({
                   </li>
                 </ul>
                 {reg.ready ? (
-                  <a
-                    href={`/products/${reg.slug}#generator`}
-                    className="block text-center bg-blue-800 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md"
-                  >
-                    Get My Documents &mdash; ${reg.price}
-                  </a>
+                  <>
+                    <a
+                      href={`/products/${reg.slug}#generator`}
+                      className="block text-center bg-blue-800 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md"
+                    >
+                      Get My Documents &mdash; ${reg.price}
+                    </a>
+                    <QuickPurchaseButton slug={reg.slug} price={reg.price} />
+                  </>
                 ) : (
                   <div className="text-center">
                     <span className="block bg-slate-100 text-slate-500 py-4 rounded-lg font-semibold text-lg cursor-default mb-3">
