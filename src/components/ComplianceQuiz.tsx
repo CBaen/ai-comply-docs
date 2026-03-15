@@ -220,10 +220,11 @@ function computeRecommendations(answers: Answers): Recommendation[] {
 
 function StepIndicator({ current, total }: { current: number; total: number }) {
   return (
-    <div className="flex items-center gap-1.5 mb-8 flex-wrap">
+    <div className="flex items-center gap-1.5 mb-8 flex-wrap" aria-label={`Step ${current} of ${total}`}>
       {Array.from({ length: total }).map((_, i) => (
         <div key={i} className="flex items-center gap-1.5">
           <div
+            aria-current={i + 1 === current ? "step" : undefined}
             className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold transition-colors ${
               i + 1 < current
                 ? "bg-blue-700 text-white"
@@ -233,15 +234,17 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
             }`}
           >
             {i + 1 < current ? (
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             ) : (
               i + 1
             )}
+            {i + 1 === current && <span className="sr-only">(current step)</span>}
           </div>
           {i < total - 1 && (
             <div
+              aria-hidden="true"
               className={`h-0.5 w-4 sm:w-6 transition-colors ${
                 i + 1 < current ? "bg-blue-700" : "bg-gray-200"
               }`}
@@ -356,7 +359,7 @@ function ResultsCard({
       <div className="bg-green-50 border border-green-200 rounded-xl p-5 sm:p-6 mb-8">
         <div className="flex items-start gap-3 sm:gap-4">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-green-100 border-2 border-green-300 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -431,9 +434,10 @@ function ResultsCard({
                   </div>
                   <Link
                     href={`/products/${rec.slug}`}
+                    aria-label={`View ${rec.name}`}
                     className="inline-flex items-center gap-1 text-blue-700 font-semibold text-sm hover:text-blue-900 transition whitespace-nowrap min-h-[44px] sm:min-h-0 sm:pt-0.5"
                   >
-                    View →
+                    View <span aria-hidden="true">→</span>
                   </Link>
                 </div>
               </div>
@@ -597,7 +601,7 @@ export default function ComplianceQuiz() {
                 <p className="text-gray-500 text-sm mb-6">
                   Select the one that best describes your primary use case.
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-3" role="radiogroup" aria-label="Does your business use AI or automated tools in any of these areas?">
                   {Q1_OPTIONS.map((opt) => (
                     <OptionButton
                       key={opt.value}
@@ -619,7 +623,7 @@ export default function ComplianceQuiz() {
                 <p className="text-gray-500 text-sm mb-6">
                   Select all that apply. This determines which state laws are relevant to you.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5" role="group" aria-label="Where are your employees or customers located?">
                   {Q2_STATES.map((state) => (
                     <CheckboxOption
                       key={state}
@@ -710,7 +714,7 @@ export default function ComplianceQuiz() {
                   onClick={() => setStep((s) => s - 1)}
                   className="text-sm text-gray-500 hover:text-gray-800 transition flex items-center gap-1.5 min-h-[44px] sm:min-h-0 justify-center sm:justify-start"
                 >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
                   </svg>
                   Back
@@ -724,7 +728,7 @@ export default function ComplianceQuiz() {
                 className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-blue-800 transition disabled:opacity-40 disabled:cursor-not-allowed w-full sm:w-auto min-h-[48px] sm:min-h-0"
               >
                 {step === TOTAL_STEPS ? "See My Results" : "Next Question"}
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </button>
