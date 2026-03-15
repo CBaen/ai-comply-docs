@@ -271,6 +271,7 @@ export function generateAdmtOutputExplanation(
   );
   y += LINE_HEIGHT;
 
+  if (y > 240) { doc.addPage(); y = 20; }
   y = addSignatureBlock(doc, "aoe", y);
 
   addDisclaimer(doc);

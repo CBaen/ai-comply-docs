@@ -546,11 +546,11 @@ const REGULATION_EMAIL: Record<
     title: "Your Colorado AG Discrimination Reporting Kit",
     statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
     description:
-      "algorithmic discrimination discovery forms, incident documentation templates, and Colorado AG notification letter templates. All three documents are included.",
+      "an algorithmic discrimination discovery form, AG notification letter, and corrective action plan for Colorado SB 24-205. All three documents are included.",
     steps: [
-      "<strong>Use the Discovery Form</strong> to document any instance where an AI system may have produced a discriminatory outcome — record the system, decision, affected population, and date.",
-      "<strong>Complete the Incident Documentation Template</strong> with root cause analysis, impact assessment, and corrective action plan.",
-      "<strong>If AG notification is required, use the Notification Letter Template</strong> — customize it with your organization\u2019s details and file it with your compliance records.",
+      "<strong>Use the Discrimination Discovery Form</strong> to document any instance where an AI system may have produced a discriminatory outcome — record the system, decision, affected population, and date.",
+      "<strong>Complete the Corrective Action Plan</strong> with root cause analysis, impact assessment, and remediation steps.",
+      "<strong>If AG notification is required, use the AG Notification Letter</strong> — customize it with your organization\u2019s details and file it with your compliance records.",
     ],
     reminder:
       "Colorado SB 24-205 requires deployers to notify the Colorado AG when algorithmic discrimination is discovered. Failure to report known discrimination is itself a violation. The AG may seek civil penalties up to $20,000 per violation under the Colorado Consumer Protection Act (C.R.S. \u00A7 6-1-112).",
@@ -702,11 +702,11 @@ const REGULATION_EMAIL: Record<
     title: "Your EU Human Oversight Kit",
     statute: "Regulation (EU) 2024/1689",
     description:
-      "human oversight procedure documentation, oversight personnel training records, and oversight log templates for EU AI Act high-risk AI systems. All three documents are included.",
+      "an oversight implementation plan, worker notification template, and oversight decision log for EU AI Act high-risk AI systems. All three documents are included.",
     steps: [
-      "<strong>Document your Human Oversight Procedures</strong> for each high-risk AI system — identify who has oversight authority, what they monitor, and how they can intervene or halt the system.",
-      "<strong>Use the Training Records Template</strong> to document oversight personnel training — EU AI Act Article 26 requires deployers to ensure assigned staff have the necessary competence.",
-      "<strong>Maintain Oversight Logs</strong> for each high-risk system — record each oversight review, the reviewer, findings, and any interventions made.",
+      "<strong>Document your Human Oversight Procedures</strong> using the Oversight Implementation Plan — identify who has oversight authority, what they monitor, and how they can intervene or halt the system.",
+      "<strong>Use the Worker Notification Template</strong> to inform affected workers about the high-risk AI system being deployed — EU AI Act Article 26 requires deployers to ensure assigned staff have the necessary competence.",
+      "<strong>Maintain the Oversight Decision Log</strong> for each high-risk system — record each oversight review, the reviewer, findings, and any interventions made.",
     ],
     reminder:
       "EU AI Act Article 14 requires high-risk AI systems to be designed and deployed with effective human oversight. Deployers must assign oversight to competent persons and ensure those persons can understand, monitor, and intervene in the system\u2019s operation. Document every oversight activity.",
@@ -715,11 +715,11 @@ const REGULATION_EMAIL: Record<
     title: "Your EU Registration & Transparency Kit",
     statute: "Regulation (EU) 2024/1689",
     description:
-      "EU AI database registration documentation templates, transparency obligation checklists, and user-facing disclosure templates for EU AI Act high-risk AI systems. All three documents are included.",
+      "a database registration checklist, transparency disclosure templates, and provider documentation verification for EU AI Act high-risk AI systems. All three documents are included.",
     steps: [
-      "<strong>Complete the Registration Documentation Template</strong> before registering each high-risk AI system in the EU AI Act database — registration is required before deployment for most Annex III systems.",
-      "<strong>Work through the Transparency Obligation Checklist</strong> to confirm your system\u2019s instructions for use, technical documentation, and user disclosures meet EU AI Act requirements.",
-      "<strong>Customize the User-Facing Disclosure Templates</strong> for each high-risk system and integrate them into your product documentation and onboarding materials.",
+      "<strong>Complete the Database Registration Checklist</strong> before registering each high-risk AI system in the EU AI Act database — registration is required before deployment for most Annex III systems.",
+      "<strong>Customize the Transparency Disclosure Templates</strong> for each high-risk system to confirm your system\u2019s instructions for use, technical documentation, and user disclosures meet EU AI Act requirements.",
+      "<strong>Complete the Provider Documentation Verification</strong> for each high-risk system and integrate transparency materials into your product documentation and onboarding materials.",
     ],
     reminder:
       "EU AI Act Article 49 requires providers of high-risk AI systems to register in the EU database before placing systems on the market. Article 13 requires transparency obligations including instructions for use that enable deployers to understand and operate the system effectively.",

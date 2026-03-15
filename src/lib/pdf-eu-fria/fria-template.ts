@@ -27,6 +27,30 @@ export function generateFriaTemplate(data: ComplianceFormData): jsPDF {
   );
   y = addTopDisclaimer(doc, y);
 
+  // Annex III classification and pre-deployment timing fields (Art. 27(1) prerequisites)
+  y = addFormTextField(
+    doc,
+    "fria_annex3_category",
+    "Annex III High-Risk Classification — Which Annex III category does this AI system fall under? (e.g., Annex III(4) — Employment; Annex III(5) — Essential services; etc.):",
+    y,
+    { multiline: true, lines: 2 }
+  );
+  y = addFormTextField(
+    doc,
+    "fria_completion_date",
+    "FRIA Pre-Deployment Completion Date — Date this FRIA was completed (must be before first deployment per Art. 27(1)):",
+    y,
+    { width: 80 }
+  );
+  y = addFormTextField(
+    doc,
+    "fria_deployment_date",
+    "Planned or Actual Deployment Date — Date the AI system is (or will be) first deployed:",
+    y,
+    { width: 80 }
+  );
+  y += LINE_HEIGHT;
+
   y = addWrappedText(
     doc,
     `This Fundamental Rights Impact Assessment (FRIA) is prepared by ${data.company.name} pursuant to Article 27 of Regulation (EU) 2024/1689 (EU AI Act). Article 27 requires deployers of high-risk AI systems to conduct a FRIA before deploying the system and to document the assessment. The six elements below are required by Article 27(1). Complete each section with specificity; generic responses do not satisfy the statutory obligation.`,
