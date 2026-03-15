@@ -85,7 +85,7 @@ export default function ContactPage() {
             </p>
             <button
               onClick={() => setStatus("idle")}
-              className="mt-4 text-sm text-blue-700 hover:underline"
+              className="mt-4 text-sm text-blue-700 hover:underline min-h-[44px] px-4 py-2"
             >
               Send another message
             </button>
@@ -180,13 +180,13 @@ export default function ContactPage() {
                 placeholder="Tell us how we can help..."
                 className={`${inputClass} resize-y`}
               />
-              <p className="text-xs text-gray-400 mt-1 text-right">
+              <p className="text-xs text-gray-400 mt-1 text-right" aria-live="polite">
                 {form.message.length}/5,000
               </p>
             </div>
 
             {status === "error" && (
-              <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
+              <div role="alert" className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
                 {errorMsg}
               </div>
             )}

@@ -185,6 +185,7 @@ export default function StepReviewCheckout({
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth={2}
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -211,7 +212,7 @@ export default function StepReviewCheckout({
           disabled={!isFrameworkGate && !lawVisited}
           className="mt-0.5 rounded w-5 h-5 shrink-0"
         />
-        <span className="text-sm text-gray-700 dark:text-gray-300">
+        <span id="acknowledgment-text" className="text-sm text-gray-700 dark:text-gray-300">
           <strong>I confirm:</strong> {acknowledgment}
         </span>
       </label>
@@ -275,6 +276,7 @@ export default function StepReviewCheckout({
         type="button"
         onClick={handleCheckout}
         disabled={!acknowledged || checkoutLoading}
+        aria-describedby="acknowledgment-text"
         className={`w-full py-4 px-4 rounded-lg font-bold text-base sm:text-lg transition shadow-md leading-snug ${
           acknowledged && !checkoutLoading
             ? "bg-blue-800 hover:bg-blue-900 text-white"

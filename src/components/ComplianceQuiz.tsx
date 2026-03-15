@@ -270,6 +270,8 @@ function OptionButton({
   return (
     <button
       onClick={onClick}
+      role="radio"
+      aria-checked={selected}
       className={`w-full text-left px-4 py-4 sm:px-5 rounded-lg border-2 font-medium transition-all text-sm sm:text-base min-h-[52px] ${
         selected
           ? "border-blue-700 bg-blue-50 text-blue-900"
@@ -278,12 +280,13 @@ function OptionButton({
     >
       <span className="flex items-center gap-3">
         <span
+          aria-hidden="true"
           className={`w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors ${
             selected ? "border-blue-700 bg-blue-700" : "border-gray-300"
           }`}
         >
           {selected && (
-            <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           )}
@@ -308,6 +311,8 @@ function CheckboxOption({
   return (
     <button
       onClick={onClick}
+      role="checkbox"
+      aria-checked={selected}
       className={`w-full text-left px-4 py-4 sm:px-5 rounded-lg border-2 font-medium transition-all text-sm sm:text-base min-h-[52px] ${
         selected
           ? "border-blue-700 bg-blue-50 text-blue-900"
@@ -316,12 +321,13 @@ function CheckboxOption({
     >
       <span className="flex items-center gap-3">
         <span
+          aria-hidden="true"
           className={`w-5 h-5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-colors ${
             selected ? "border-blue-700 bg-blue-700" : "border-gray-300"
           }`}
         >
           {selected && (
-            <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           )}

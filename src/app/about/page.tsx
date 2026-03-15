@@ -71,7 +71,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-6 sm:px-8 py-12 md:py-24 space-y-14 md:space-y-16">
 
           {/* Why we built this */}
-          <section>
+          <section aria-label="About the founder">
             <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-5">
               Why this exists
             </h2>
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               <div className="border border-gray-200 rounded-lg p-4 sm:p-5">
-                <p className="text-xs font-semibold text-red-600 uppercase tracking-wider mb-2">
+                <p className="text-xs font-semibold text-red-700 uppercase tracking-wider mb-2">
                   Employment AI Laws
                 </p>
                 <ul className="text-sm text-gray-700 space-y-1">
