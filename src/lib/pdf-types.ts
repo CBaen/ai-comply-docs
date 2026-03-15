@@ -45,8 +45,7 @@ export interface RegulationConfig {
   lawLinkText: string;
   acknowledgment: string;
   basePrice: number;
-  trainingKitAvailable: boolean;
-  trainingKitPrice: number;
+  addons?: import("./regulation-config").AddonConfig[];
   documents: string[];
   decisions: [string, string][];
   helpTexts: Record<string, string>;
