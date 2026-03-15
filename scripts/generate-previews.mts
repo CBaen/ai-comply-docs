@@ -82,11 +82,8 @@ async function renderPage1ToPng(pdfBytes: ArrayBuffer): Promise<Buffer> {
   ctx.fillStyle = "#ffffff";
   ctx.fillRect(0, 0, viewport.width, viewport.height);
 
-  await page.render({
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    canvasContext: ctx as any,
-    viewport,
-  }).promise;
+  // @ts-expect-error pdfjs-dist types mismatch with node-canvas context
+  await page.render({ canvasContext: ctx, viewport }).promise;
 
   // Get raw pixel data and resize with sharp
   const rawPixels = ctx.getImageData(0, 0, viewport.width, viewport.height);
