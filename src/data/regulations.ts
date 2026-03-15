@@ -383,7 +383,7 @@ export const regulations: Regulation[] = [
     citation: "Regulation (EU) 2024/1689",
     citationUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689",
     status: "in-effect",
-    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2027",
+    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2026",
     tier: "international",
     category: "AI Governance",
     price: 997,
