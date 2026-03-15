@@ -4,8 +4,12 @@ export async function generateDocuments(
   data: ComplianceFormData
 ): Promise<GeneratedDoc[]> {
   const companySlug = data.company.name
-    .replace(/[^a-zA-Z0-9]/g, "_")
-    .substring(0, 30);
+    .replace(/[^a-zA-Z0-9\s]/g, "")
+    .trim()
+    .replace(/\s+/g, "_")
+    .replace(/_+/g, "_")
+    .substring(0, 40)
+    .replace(/_$/, "");
 
   if (data.regulation === "employee-ai-policy") {
     const emp = await import("./pdf-employee-ai-policy");
