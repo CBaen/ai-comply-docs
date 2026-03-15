@@ -59,4 +59,13 @@ export interface RegulationConfig {
   decisions: [string, string][];
   helpTexts: Record<string, string>;
   skippedSteps?: number[];
+  /** Custom AI-role options for Step 4. If absent, hiring defaults are used. */
+  oversightOptions?: { value: string; label: string }[];
+  /** Custom data-input checkboxes for Step 3. If absent, hiring defaults are used. */
+  dataInputOptions?: { value: string; label: string }[];
+  /**
+   * If set, replaces the hardcoded "you must review the actual law text" message
+   * in the law gate. Also makes the gate non-blocking (checkbox is always enabled).
+   */
+  gateText?: string;
 }
