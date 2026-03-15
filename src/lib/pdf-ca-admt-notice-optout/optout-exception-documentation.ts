@@ -73,12 +73,12 @@ export function generateOptoutExceptionDocumentation(
   // Section 2: Which §7221(b) Exception Applies
   y = addSectionHeader(
     doc,
-    "2. Applicable §7221(b) Exception (Check All That Apply)",
+    "2. Applicable §7221(b) Exception (Select One — Exactly 3 Exceptions Exist)",
     y
   );
   y = addWrappedText(
     doc,
-    "Select the §7221(b) exception(s) upon which the business is relying to deny or limit the opt-out request. Only check exceptions that genuinely apply. Fabricating or stretching exceptions is a compliance violation.",
+    "§7221(b) of the CPPA ADMT regulations provides EXACTLY THREE exceptions to the consumer opt-out right. Only these three exceptions exist — no others. Select the exception upon which the business is relying. Fabricating or stretching exceptions is a compliance violation. If none of these three applies, the opt-out request must be honored.",
     MARGIN,
     y,
     CONTENT_WIDTH,
@@ -88,51 +88,49 @@ export function generateOptoutExceptionDocumentation(
 
   y = addFormCheckbox(
     doc,
-    "oed_exc_contract",
-    "Contract Performance Exception — ADMT use is necessary to perform a contract with the consumer (e.g., the product or service cannot function without ADMT) (§7221(b)(1))",
+    "oed_exc_human_appeal",
+    "Exception 1 — Human Appeal Exception (§7221(b)(1)): The business provides a method for the consumer to appeal the ADMT decision to a human reviewer who has the authority to overturn the ADMT outcome. If using this exception, the pre-use notice must include appeal information instead of an opt-out mechanism.",
     y
   );
-  y += 2;
-  y = addFormCheckbox(
-    doc,
-    "oed_exc_legal_obligation",
-    "Legal Obligation Exception — ADMT use is required to comply with a legal obligation, such as a federal or state law or regulation (§7221(b)(2))",
-    y
-  );
-  y += 2;
-  y = addFormCheckbox(
-    doc,
-    "oed_exc_safety",
-    "Vital Interest / Safety Exception — ADMT use is necessary to protect the vital interests of the consumer or another person (§7221(b)(3))",
-    y
-  );
-  y += 2;
-  y = addFormCheckbox(
-    doc,
-    "oed_exc_fraud",
-    "Security / Fraud Prevention Exception — ADMT use is strictly necessary to detect security incidents or prevent fraud, and the business cannot reasonably achieve this purpose without ADMT (§7221(b)(4))",
-    y
-  );
-  y += 2;
-  y = addFormCheckbox(
-    doc,
-    "oed_exc_public_interest",
-    "Public Interest Exception — ADMT use is necessary for the public interest and is carried out with appropriate safeguards (§7221(b)(5))",
-    y
-  );
-  y += 2;
-  y = addFormCheckbox(
-    doc,
-    "oed_exc_other",
-    "Other Enumerated Exception Under §7221(b) — describe below",
-    y
-  );
+  y += 4;
   y = addFormTextField(
     doc,
-    "oed_exc_other_desc",
-    "Other Exception Description (cite specific subsection):",
+    "oed_exc_human_appeal_detail",
+    "Describe the human reviewer's role, authority to overturn, and the appeal process provided to the consumer:",
     y,
-    { multiline: true, lines: 2 }
+    { multiline: true, lines: 3 }
+  );
+  y += 4;
+
+  y = addFormCheckbox(
+    doc,
+    "oed_exc_admission_hiring",
+    "Exception 2 — Admission/Acceptance/Hiring Exception (§7221(b)(2)): The ADMT is used solely for the purpose of assessing a consumer's ability to perform the job, meet admission requirements, or fulfill similar criteria, AND the ADMT does not result in discrimination against the consumer based on a protected characteristic.",
+    y
+  );
+  y += 4;
+  y = addFormTextField(
+    doc,
+    "oed_exc_admission_hiring_detail",
+    "Explain how the ADMT is used solely for ability assessment and document that it does not discriminate based on protected characteristics:",
+    y,
+    { multiline: true, lines: 3 }
+  );
+  y += 4;
+
+  y = addFormCheckbox(
+    doc,
+    "oed_exc_work_allocation",
+    "Exception 3 — Work Allocation/Compensation Exception (§7221(b)(3)): The ADMT is used solely for the purpose of allocating work among workers or determining compensation, AND the ADMT does not result in discrimination against the consumer based on a protected characteristic.",
+    y
+  );
+  y += 4;
+  y = addFormTextField(
+    doc,
+    "oed_exc_work_allocation_detail",
+    "Explain how the ADMT is used solely for work allocation or compensation purposes and document that it does not discriminate based on protected characteristics:",
+    y,
+    { multiline: true, lines: 3 }
   );
   y += LINE_HEIGHT;
 

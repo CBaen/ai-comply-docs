@@ -245,8 +245,135 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
   );
   y += LINE_HEIGHT;
 
-  // Section 7: Notice Delivery and Timing
-  y = addSectionHeader(doc, "7. Notice Delivery and Timing Confirmation", y);
+  // Section 7: Consumer Right to Access ADMT (§7220(c) required element 3)
+  y = addSectionHeader(
+    doc,
+    "7. Consumer's Right to Access ADMT Information (§7220(c) Required Element)",
+    y
+  );
+  y = addWrappedText(
+    doc,
+    `Per §7220(c), the pre-use notice must disclose the consumer's right to access information about the ADMT and how to submit a request. You have the right to request information about ${data.company.name}'s use of Automated Decision-Making Technology (ADMT) that affects you, including what personal information is processed and how it is used to make or contribute to significant decisions about you.`,
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += LINE_HEIGHT;
+  y = addFormTextField(
+    doc,
+    "pun_access_web",
+    "Online Access Request Form URL:",
+    y,
+    { width: 150 }
+  );
+  y = addFormTextField(
+    doc,
+    "pun_access_email",
+    "Access Request Email Address:",
+    y,
+    { prefill: data.contact.email || "", width: 130 }
+  );
+  y = addFormTextField(
+    doc,
+    "pun_access_timeline",
+    "Access Request Response Timeline:",
+    y,
+    { width: 100 }
+  );
+  y += LINE_HEIGHT;
+
+  // Section 8: Non-Retaliation Statement (§7220(c) required element 4)
+  y = addSectionHeader(
+    doc,
+    "8. Non-Retaliation Statement (§7220(c) Required Element)",
+    y
+  );
+  y = addWrappedText(
+    doc,
+    `Per §7220(c), the pre-use notice must state that the business cannot retaliate against the consumer for exercising their CCPA rights. ${data.company.name} will not retaliate against you for exercising any rights you have under the California Consumer Privacy Act (CCPA), including the right to opt out of ADMT use, the right to access ADMT information, or any other right provided under the CCPA. We will not deny goods or services, charge different prices, provide a different level of service, or suggest you will receive a different level of treatment for exercising your CCPA rights.`,
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += LINE_HEIGHT;
+  y = addFormCheckbox(
+    doc,
+    "pun_nonretaliation_confirmed",
+    "Non-retaliation statement confirmed as included in the published notice",
+    y
+  );
+  y += LINE_HEIGHT;
+
+  // Section 9: How ADMT Works (§7220(c) required element 5 — sub-elements A, B, C)
+  y = addSectionHeader(
+    doc,
+    "9. How ADMT Works — Additional Required Information (§7220(c)(5))",
+    y
+  );
+  y = addWrappedText(
+    doc,
+    "Per §7220(c)(5), the notice must include additional information about how the ADMT works, covering three specific sub-elements (A), (B), and (C). Complete each field below:",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += 6;
+  y = addFormTextField(
+    doc,
+    "pun_how_admt_processes_pi",
+    "(A) How ADMT Processes PI to Make Significant Decision — Describe how the ADMT processes personal information, including the categories of personal information that affect the output (plain language required):",
+    y,
+    { multiline: true, lines: 4 }
+  );
+  y = addFormTextField(
+    doc,
+    "pun_output_type_and_use",
+    "(B) Type of Output Generated and How Used — Describe the type of output the ADMT generates (e.g., score, ranking, classification, recommendation) and how that output is used to make or contribute to a significant decision about the consumer:",
+    y,
+    { multiline: true, lines: 4 }
+  );
+  y = addFormTextField(
+    doc,
+    "pun_alternative_process",
+    "(C) Alternative Process for Opt-Out Consumers — Describe the alternative process available to consumers who opt out of ADMT use:",
+    y,
+    { multiline: true, lines: 3 }
+  );
+  y += LINE_HEIGHT;
+
+  // Section 10: Trade Secret and Security Exclusions (§7220(d))
+  y = addSectionHeader(
+    doc,
+    "10. Trade Secret and Security Exclusions (§7220(d))",
+    y
+  );
+  y = addWrappedText(
+    doc,
+    "Per §7220(d), a business is not required to disclose trade secrets or security investigation information, fraud prevention details, or physical safety information in the pre-use notice. If any portion of the ADMT information is excluded under §7220(d), document the basis for exclusion below. Note: exclusions apply to specific disclosures, not to the obligation to provide the notice itself.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += 4;
+  y = addFormCheckbox(doc, "pun_excl_trade_secret", "Trade secret exclusion applies to specified portions of ADMT description (identify below)", y);
+  y = addFormCheckbox(doc, "pun_excl_security", "Security investigation information excluded (would undermine fraud prevention or security measures)", y);
+  y = addFormCheckbox(doc, "pun_excl_safety", "Physical safety information excluded", y);
+  y = addFormCheckbox(doc, "pun_excl_none", "No exclusions apply — full disclosure provided", y);
+  y = addFormTextField(
+    doc,
+    "pun_excl_detail",
+    "Description of excluded information and §7220(d) basis for exclusion (if any):",
+    y,
+    { multiline: true, lines: 3 }
+  );
+  y += LINE_HEIGHT;
+
+  // Section 11: Notice Delivery and Timing
+  y = addSectionHeader(doc, "11. Notice Delivery and Timing Confirmation", y);
   y = addWrappedText(
     doc,
     "Per §7220, this notice must be provided before using ADMT. Document when and how this notice is delivered:",
@@ -282,8 +409,8 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
   );
   y += LINE_HEIGHT;
 
-  // Section 8: Internal Authorization
-  y = addSectionHeader(doc, "8. Internal Authorization", y);
+  // Section 12: Internal Authorization
+  y = addSectionHeader(doc, "12. Internal Authorization", y);
   y = addFormTextField(
     doc,
     "pun_prepared_by",
