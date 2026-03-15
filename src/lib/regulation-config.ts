@@ -1,6 +1,36 @@
 import type { RegulationConfig, AddonConfig } from "./pdf-types";
 export type { AddonConfig };
 
+// Shared option sets — referenced by products below to avoid duplication.
+
+/** Default oversight options for hiring/employment products. */
+const OVERSIGHT_OPTIONS_HIRING = [
+  { value: "screening", label: "AI screens/filters, human reviews remaining candidates" },
+  { value: "primary", label: "AI recommends, human makes final decision" },
+  { value: "sole", label: "AI decides autonomously, human reviews exceptions" },
+  { value: "advisory", label: "Advisory only — AI provides information, human decides independently" },
+];
+
+/** Generic oversight options for privacy, governance, and framework products. */
+const OVERSIGHT_OPTIONS_GENERIC = [
+  { value: "processing", label: "AI processes data, human reviews outputs" },
+  { value: "primary", label: "AI recommends actions, human makes final decision" },
+  { value: "sole", label: "AI decides autonomously, human reviews exceptions" },
+  { value: "advisory", label: "Advisory only — AI provides analysis, human decides independently" },
+];
+
+/** Generic data-input options for non-hiring products. */
+const DATA_INPUT_OPTIONS_GENERIC = [
+  { value: "customer_profiles", label: "Customer profiles" },
+  { value: "transaction_data", label: "Transaction data" },
+  { value: "behavioral_data", label: "Behavioral data" },
+  { value: "location_data", label: "Location data" },
+  { value: "communication_data", label: "Communication data" },
+  { value: "biometric", label: "Biometric data" },
+  { value: "health_data", label: "Health data" },
+  { value: "financial_data", label: "Financial data" },
+];
+
 export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "illinois-hb3773": {
     name: "Illinois HB3773",
@@ -66,6 +96,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       'I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205, effective June 30, 2026 per SB 25B-004) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.',
     basePrice: 449,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Risk Management Policy & Program",
@@ -113,6 +144,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the NIST AI Risk Management Framework and EEOC AI guidance referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     basePrice: 199,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "AI Acceptable Use Policy",
@@ -152,6 +185,9 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI RMF Playbook and applicable state laws referenced in this product. I understand that these are due diligence templates, not legal advice. I should consult qualified legal counsel for my specific vendor contracts.",
     basePrice: 249,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
+    gateText: "These templates reference the NIST AI RMF Playbook. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "Vendor AI Due Diligence Questionnaire",
@@ -192,6 +228,9 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the EEOC AI guidance and NYC LL144 requirements referenced in this product. I understand that these are audit templates, not legal advice. I should consult qualified legal counsel and a qualified auditor for my specific situation.",
     basePrice: 149,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
+    gateText: "These templates reference EEOC guidance on AI in employment. We recommend reviewing the guidance before purchasing.",
 
     documents: [
       "Bias Audit Report Template",
@@ -231,6 +270,9 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI RMF, California TFAIA, and EU AI Act requirements referenced in this product. I understand that these are incident response templates, not legal advice. I should consult qualified legal counsel for my specific regulatory obligations.",
     basePrice: 149,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
+    gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "AI Incident Response Plan",
@@ -311,6 +353,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed Tex. Bus. & Com. Code Ch. 541 (Texas Data Privacy and Security Act, HB 4) and understand that these are compliance templates, not legal advice. The TDPSA has been in effect since July 1, 2024, and includes a permanent 30-day cure period. This is separate from the Texas TRAIGA (HB 149). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Data Protection Assessment for Profiling",
