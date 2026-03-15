@@ -38,6 +38,15 @@ export interface GeneratedDoc {
   name: string;
 }
 
+export interface AddonConfig {
+  id: string;
+  slug: string;
+  label: string;
+  description: string;
+  price: number;
+  stripePriceId: string;
+}
+
 export interface RegulationConfig {
   name: string;
   statute: string;
@@ -45,7 +54,7 @@ export interface RegulationConfig {
   lawLinkText: string;
   acknowledgment: string;
   basePrice: number;
-  addons?: import("./regulation-config").AddonConfig[];
+  addons?: AddonConfig[];
   documents: string[];
   decisions: [string, string][];
   helpTexts: Record<string, string>;
