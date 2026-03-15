@@ -5,6 +5,7 @@ const ROLE_LABELS: Record<string, string> = {
   primary: "AI recommendation is primary factor",
   advisory: "AI provides advisory input",
   screening: "AI screens/filters candidates",
+  processing: "AI processes data, human reviews outputs",
 };
 
 export default function StepReviewCheckout({
@@ -36,8 +37,12 @@ export default function StepReviewCheckout({
   acknowledgment,
   basePrice,
   documents,
+  gateText,
   handleCheckout,
 }: StepReviewCheckoutProps) {
+  // Framework/voluntary-standard products provide gateText and use a soft gate —
+  // the link is encouraged but does not block the checkbox.
+  const isFrameworkGate = Boolean(gateText);
   return (
     <div className="space-y-5">
       <h3 className="text-xl font-bold font-display text-gray-900 dark:text-white">
@@ -151,13 +156,19 @@ export default function StepReviewCheckout({
         </ul>
       </div>
 
-      {/* Law gate */}
-      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-5">
+      {/* Law / framework gate */}
+      <div className={`${isFrameworkGate ? "bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800" : "bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"} rounded-lg p-5`}>
         <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
-          These templates are based on{" "}
-          <strong>{statute}</strong>. You must review the actual
-          law text before purchasing. The checkout button is locked until
-          you do.
+          {isFrameworkGate ? (
+            gateText
+          ) : (
+            <>
+              These templates are based on{" "}
+              <strong>{statute}</strong>. You must review the actual
+              law text before purchasing. The checkout button is locked until
+              you do.
+            </>
+          )}
         </p>
         <a
           href={lawUrl}
@@ -182,7 +193,7 @@ export default function StepReviewCheckout({
           {lawLinkText}
           <span className="sr-only">(opens in new tab)</span>
         </a>
-        {lawVisited && (
+        {!isFrameworkGate && lawVisited && (
           <p className="text-green-700 text-xs mt-2 font-medium">
             Law link visited. You may now check the acknowledgment below.
           </p>
@@ -195,7 +206,7 @@ export default function StepReviewCheckout({
           type="checkbox"
           checked={acknowledged}
           onChange={(e) => setAcknowledged(e.target.checked)}
-          disabled={!lawVisited}
+          disabled={!isFrameworkGate && !lawVisited}
           className="mt-0.5 rounded w-5 h-5 shrink-0"
         />
         <span className="text-sm text-gray-700 dark:text-gray-300">

@@ -34,6 +34,8 @@ export interface StepDataBiasProps {
   setBiasAudit: (v: string) => void;
   helpTexts: Record<string, string>;
   toggleCheckbox: (value: string, list: string[], setter: (v: string[]) => void) => void;
+  /** Custom data-input checkboxes from regulation config. Falls back to hiring defaults if absent. */
+  dataInputOptions?: { value: string; label: string }[];
 }
 
 export interface StepOversightProps {
@@ -46,6 +48,8 @@ export interface StepOversightProps {
   reviewFrequency: string;
   setReviewFrequency: (v: string) => void;
   helpTexts: Record<string, string>;
+  /** Custom AI-role options from regulation config. Falls back to hiring defaults if absent. */
+  oversightOptions?: { value: string; label: string }[];
 }
 
 export interface StepContactProps {
@@ -95,6 +99,11 @@ export interface StepReviewCheckoutProps {
   acknowledgment: string;
   basePrice: number;
   documents: string[];
+  /**
+   * If set, replaces the hardcoded law-gate message and makes the gate non-blocking.
+   * Used for framework/voluntary-standard products (NIST, FTC guidance, etc.).
+   */
+  gateText?: string;
   // Handler
   handleCheckout: () => void;
 }

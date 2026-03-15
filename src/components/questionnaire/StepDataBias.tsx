@@ -1,6 +1,6 @@
 import type { StepDataBiasProps } from "./types";
 
-const DATA_INPUT_OPTIONS = [
+const DATA_INPUT_OPTIONS_HIRING = [
   { value: "resume", label: "Resumes / CVs" },
   { value: "video", label: "Video interviews" },
   { value: "assessment", label: "Skills assessments" },
@@ -35,7 +35,10 @@ export default function StepDataBias({
   setBiasAudit,
   helpTexts,
   toggleCheckbox,
+  dataInputOptions,
 }: StepDataBiasProps) {
+  const inputOptions = dataInputOptions ?? DATA_INPUT_OPTIONS_HIRING;
+
   return (
     <div className="space-y-5">
       <h3 className="text-xl font-bold font-display text-gray-900 dark:text-white">
@@ -47,7 +50,7 @@ export default function StepDataBias({
           What types of data does your AI system process?
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-          {DATA_INPUT_OPTIONS.map((opt) => (
+          {inputOptions.map((opt) => (
             <label
               key={opt.value}
               className="flex items-center gap-3 min-h-[44px] px-1 text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
