@@ -73,7 +73,7 @@ export default function RootLayout({
       className={`${merriweather.variable} ${sourceSans.variable}`}
       suppressHydrationWarning
     >
-      <head>
+      <body className="bg-slate-50 text-gray-900 antialiased font-sans transition-colors" suppressHydrationWarning>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7KYPZS9H9P"
           strategy="afterInteractive"
@@ -84,8 +84,6 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-7KYPZS9H9P');
         `}</Script>
-      </head>
-      <body className="bg-slate-50 text-gray-900 antialiased font-sans transition-colors" suppressHydrationWarning>
         <Script id="dark-mode-init" strategy="beforeInteractive">{`
           (function() {
             var stored = localStorage.getItem('theme');
