@@ -94,72 +94,69 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
       <main id="main-content">
-        {/* Hero image */}
-        {post.image && (
-          <div className="w-full h-48 md:h-72 relative overflow-hidden">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/80" />
-          </div>
-        )}
-
-        {/* Post header */}
-        <header className={`hero-bg text-white ${post.image ? "py-8 md:py-12 -mt-16 relative z-10" : "py-12 md:py-16"}`}>
-          <div className="max-w-3xl mx-auto px-4">
+        {/* Post header — image left, text right on desktop */}
+        <header className="hero-bg text-white py-12 md:py-16">
+          <div className="max-w-5xl mx-auto px-4">
             {/* Back link */}
             <Link
               href="/blog"
               className="inline-flex items-center gap-1.5 text-blue-300 hover:text-white text-sm mb-6 transition"
             >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                aria-hidden="true"
-              >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
               </svg>
               Back to Blog
             </Link>
 
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-block text-xs font-semibold bg-blue-900/60 text-blue-200 px-2.5 py-1 rounded"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <div className={`${post.image ? "md:grid md:grid-cols-[280px_1fr] md:gap-8 md:items-start" : ""}`}>
+              {/* Image — left side on desktop, top on mobile */}
+              {post.image && (
+                <div className="mb-6 md:mb-0">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-48 md:h-auto md:max-h-72 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+              )}
 
-            {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-extrabold font-display text-white leading-tight tracking-tight mb-5">
-              {post.title}
-            </h1>
+              {/* Text content — right side on desktop */}
+              <div>
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-block text-xs font-semibold bg-blue-900/60 text-blue-200 px-2.5 py-1 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-            {/* Meta row */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400">
-              <span>{post.author}</span>
-              <span className="w-1 h-1 bg-slate-500 rounded-full" />
-              <time dateTime={post.date}>{formatDate(post.date)}</time>
-              <span className="w-1 h-1 bg-slate-500 rounded-full" />
-              <span>{post.readTime}</span>
-            </div>
+                {/* Title */}
+                <h1 className="text-2xl md:text-3xl font-extrabold font-display text-white leading-tight tracking-tight mb-4">
+                  {post.title}
+                </h1>
 
-            {/* Two Sentence Summary */}
-            {post.summary && (
-              <div className="mt-6 bg-blue-900/40 border border-blue-400/30 rounded-lg p-4">
-                <p className="text-xs font-semibold text-blue-300 uppercase tracking-wider mb-2">Two-Sentence Summary</p>
-                <p className="text-slate-200 text-sm leading-relaxed">{post.summary}</p>
+                {/* Meta row */}
+                <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-4">
+                  <span>{post.author}</span>
+                  <span className="w-1 h-1 bg-slate-500 rounded-full" />
+                  <time dateTime={post.date}>{formatDate(post.date)}</time>
+                  <span className="w-1 h-1 bg-slate-500 rounded-full" />
+                  <span>{post.readTime}</span>
+                </div>
+
+                {/* Two Sentence Summary */}
+                {post.summary && (
+                  <div className="bg-blue-900/40 border border-blue-400/30 rounded-lg p-4">
+                    <p className="text-xs font-semibold text-blue-300 uppercase tracking-wider mb-2">Two-Sentence Summary</p>
+                    <p className="text-slate-200 text-sm leading-relaxed">{post.summary}</p>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         </header>
 
