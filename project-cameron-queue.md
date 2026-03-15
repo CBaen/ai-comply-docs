@@ -3,9 +3,9 @@
 
 ## CRITICAL (Revenue/Operations)
 
-- [ ] Mobile view dedicated audit — use Playwright webapp-testing skill to screenshot every page at mobile widths. Another instance tried fixing mobile but issues remain. Need a dedicated pass.
+- [x] Mobile view dedicated audit — DONE. 14 parallel fix teams audited and fixed every page. ~63 issues resolved across ~20 files. Carousel, nav, footer, homepage, blog, products, questionnaire, FAQ, about, state comparison, quiz, privacy, terms all responsive.
 - [ ] Split product documents onto separate hidden review pages per product — browser Claude needs to audit the actual generated document content for each of the 53 products individually
-- [ ] Blog enrichment YAML — 10 of 12 posts still need enrichment blocks added. Data exists for articles 7-12 (from browser Claude). Articles 1-6 need browser Claude to generate (prompt already written in session)
+- [x] Blog enrichment YAML for articles 1-6 — DONE. All 6 original posts (IL, CA, VA, CO, CT, Hiring) now have summary, deepDive, microFacts, and externalReferences with verified source URLs. 6 of 12 total enriched. Remaining 6 (Cost, Bias Audit, EU AI Act, Penalties, HIPAA, ISO 42001) need browser Claude.
 - [ ] Resend domain verification — confirm email delivery is actually working end-to-end. Test with a real purchase.
 
 ## HIGH (Trust & Conversion)
