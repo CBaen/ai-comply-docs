@@ -1358,7 +1358,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "montana-mcdpa": {
     name: "Montana MCDPA",
     statute: "MCA \u00A7\u00A7 30-14-2801 through 30-14-2820",
-    lawUrl: "https://leg.mt.gov/bills/mca/title__0300/chapter_0140/part_0280/sections_index.html",
+    lawUrl: "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0280/sections_index.html",
     lawLinkText: "Read MCA \u00A7\u00A7 30-14-2801\u201330-14-2820 on leg.mt.gov",
     acknowledgment:
       "I have reviewed MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384) and understand that these are compliance templates, not legal advice. Montana has the lowest applicability thresholds of any state privacy law (25,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
@@ -1404,6 +1404,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
+    skippedSteps: [3],
 
     documents: [
       "Privacy Notice Template",
@@ -1444,6 +1445,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the New Jersey Data Protection Act (S332, signed January 16, 2024) and understand that these are compliance templates, not legal advice. The NJDPA is effective January 15, 2025. This is separate from the NJ Law Against Discrimination. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
+    skippedSteps: [3],
 
     documents: [
       "Privacy Notice Template",
@@ -1486,6 +1488,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
     basePrice: 79,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Employee Notification Template",
@@ -1523,6 +1526,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
     basePrice: 99,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Data Input Audit",
@@ -1560,6 +1564,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 99,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Appeal Intake Form",
@@ -1596,6 +1601,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 129,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Discrimination Discovery Form",
