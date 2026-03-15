@@ -53,12 +53,11 @@ export default function AboutPage() {
               About Us
             </p>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display leading-tight mb-6">
-              AI compliance documents, built by AI, verified against the actual law.
+              AI compliance templates built from the actual law. Not summaries. Not paraphrases.
             </h1>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              We use AI to build AI compliance templates. We know exactly what AI gets right and what
-              it gets wrong &mdash; because we work with it every day. That&apos;s why every citation
-              in our documents is verified against enacted statute text from official .gov sources.
+              Every citation in our documents is verified against enacted statute text from official
+              .gov sources. That&apos;s it. That&apos;s the whole methodology.
             </p>
           </div>
         </header>
@@ -82,12 +81,6 @@ export default function AboutPage() {
                 give you a professional, verified starting point &mdash; for a fraction of what a law
                 firm charges. Take them to your attorney for final review instead of paying for every
                 hour of research from scratch.
-              </p>
-              <p>
-                Yes, we use AI to build these documents. We also verify every single legal claim
-                against the enacted text. We know firsthand that AI produces confident, well-formatted
-                answers that are sometimes completely wrong &mdash; which is exactly why human
-                verification against primary sources is non-negotiable.
               </p>
             </div>
           </section>
