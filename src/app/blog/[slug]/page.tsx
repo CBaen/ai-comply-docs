@@ -82,6 +82,7 @@ export default async function BlogPostPage({ params }: Props) {
       "@id": `https://aicompliancedocuments.com/blog/${post.slug}`,
     },
     keywords: post.tags.join(", "),
+    ...(post.image ? { image: `https://aicompliancedocuments.com${post.image}` } : {}),
   };
 
   return (
