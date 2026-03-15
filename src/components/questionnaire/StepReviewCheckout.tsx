@@ -251,6 +251,17 @@ export default function StepReviewCheckout({
           ? "Redirecting to Checkout..."
           : `Get My ${regulationName} Documents — $${orderTotal}`}
       </button>
+
+      {/* Support link */}
+      <p className="text-center text-sm text-gray-500 dark:text-gray-400">
+        Questions before purchasing?{" "}
+        <a
+          href="mailto:info@aicompliancedocuments.com"
+          className="text-blue-700 hover:text-blue-900 underline"
+        >
+          info@aicompliancedocuments.com
+        </a>
+      </p>
     </div>
   );
 }

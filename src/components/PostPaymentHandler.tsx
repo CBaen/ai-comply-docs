@@ -35,6 +35,7 @@ export default function PostPaymentHandler({
   const [orphanedData, setOrphanedData] = useState<ComplianceFormData | null>(
     null
   );
+  const [showCancelledBanner, setShowCancelledBanner] = useState(false);
 
   const checkedRef = useRef(false);
 
@@ -101,6 +102,7 @@ export default function PostPaymentHandler({
   };
 
   const handleCancelled = () => {
+    setShowCancelledBanner(true);
     const savedData = sessionStorage.getItem("complianceFormData");
     if (savedData) {
       // Data survives in sessionStorage — questionnaire will restore from it
@@ -203,6 +205,39 @@ export default function PostPaymentHandler({
       setSendingEmail(false);
     }
   };
+
+  // Cancelled payment banner
+  if (showCancelledBanner) {
+    return (
+      <div className="bg-blue-50 border border-blue-200 rounded-lg px-5 py-4 mb-6 max-w-3xl mx-auto mt-6 flex items-start justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <svg
+            className="w-5 h-5 text-blue-600 shrink-0 mt-0.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <p className="text-blue-800 text-sm font-medium">
+            No charge was made. Your form is saved &mdash; pick up where you left off.
+          </p>
+        </div>
+        <button
+          onClick={() => setShowCancelledBanner(false)}
+          className="text-blue-400 hover:text-blue-700 text-xl leading-none shrink-0"
+          aria-label="Dismiss"
+        >
+          &times;
+        </button>
+      </div>
+    );
+  }
 
   // Orphaned data banner
   if (showRestoreBanner && orphanedData) {

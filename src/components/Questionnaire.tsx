@@ -239,7 +239,7 @@ export default function Questionnaire({
     }
   };
 
-  const progressPercent = Math.round(((step - 1) / (TOTAL_STEPS - 1)) * 100);
+  const progressPercent = Math.round((step / TOTAL_STEPS) * 100);
   const orderTotal =
     config && includeTrainingKit && config.trainingKitAvailable
       ? config.basePrice + config.trainingKitPrice
@@ -250,6 +250,16 @@ export default function Questionnaire({
   return (
     <div id="generator" className="max-w-3xl mx-auto px-4 py-12">
       <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700 overflow-hidden">
+        {/* Product summary bar */}
+        <div className="bg-blue-50 dark:bg-blue-900/30 border-b border-blue-100 dark:border-blue-800 px-6 py-2.5 flex items-center justify-between">
+          <span className="text-sm font-medium text-blue-900 dark:text-blue-200">
+            {regulationName} &mdash; {config.documents.length} documents
+          </span>
+          <span className="text-sm font-bold text-blue-900 dark:text-blue-200">
+            ${price}
+          </span>
+        </div>
+
         {/* Progress bar */}
         <div className="bg-slate-50 dark:bg-slate-900 px-6 py-4 border-b border-gray-200 dark:border-slate-700">
           <div className="flex justify-between items-center mb-2 text-sm">

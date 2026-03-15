@@ -221,6 +221,55 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Methodology Section — between How It Works and penalties */}
+        <section className="py-14 bg-white border-b border-gray-100">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-gray-900 mb-2">
+                How We Build Our Templates
+              </h2>
+              <p className="text-gray-600">
+                Every document starts with the actual enacted law — not summaries, not AI-generated overviews.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="flex flex-col gap-2">
+                <div className="w-9 h-9 bg-blue-50 border border-blue-100 rounded flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Read the enacted statute</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Every template starts with the actual law text from .gov sources</p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="w-9 h-9 bg-blue-50 border border-blue-100 rounded flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Verify every citation</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Section numbers, penalty amounts, effective dates — all checked against primary sources</p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="w-9 h-9 bg-amber-50 border border-amber-100 rounded flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M3 3l1.664 9.526a2.25 2.25 0 002.18 1.849H15M3 3l-.393-2.102A.75.75 0 013.344 0h17.13a.75.75 0 01.742.875L19.5 12M3 3h12M15 21a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m0 3.75h.008v.008H12v-.008z" /></svg>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Flag what&apos;s pending</p>
+                <p className="text-gray-600 text-sm leading-relaxed">If implementing rules haven&apos;t been published yet, we say so explicitly</p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="w-9 h-9 bg-slate-100 border border-slate-200 rounded flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Templates, not legal opinions</p>
+                <p className="text-gray-600 text-sm leading-relaxed">We document what the law requires. Your attorney verifies it applies to you.</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <a href="/about" className="text-sm font-semibold text-blue-700 hover:underline">
+                Read more about our methodology &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Pain Section — after How It Works so penalties hit harder */}
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4">
