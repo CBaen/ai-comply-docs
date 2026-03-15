@@ -16,7 +16,6 @@ interface QuestionnaireProps {
   price: number;
 }
 
-const TOTAL_STEPS = 6;
 
 function emptyAISystem(): AISystem {
   return { name: "", vendor: "", description: "", decisions: [] };

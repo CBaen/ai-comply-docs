@@ -1939,6 +1939,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 89,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Processor DPA Template",
@@ -1977,6 +1978,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 149,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "FRIA Template",
@@ -2014,6 +2016,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 139,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Post-Market Monitoring Plan",
@@ -2051,6 +2054,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 99,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Oversight Implementation Plan",
@@ -2088,6 +2092,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 89,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Database Registration Checklist",
