@@ -238,7 +238,7 @@ export const regulations: Regulation[] = [
     stripePriceId: "price_1TArY2GidFVHIL99ZxQn0McI",
     documentCount: 6,
     description: "Oregon's Consumer Privacy Act requires data protection assessments for profiling that presents risk of harm to consumers. If your business processes personal data from Oregon residents, this package covers the assessment and privacy notice requirements.",
-    penaltySummary: "Oregon Attorney General enforcement (§ 646A.589). No private right of action. 30-day cure period until January 1, 2026 (§ 646A.589(2)); AG has enforcement discretion after that date. Civil penalties up to $7,500 per violation under UTPA (ORS § 646A.589).",
+    penaltySummary: "Oregon Attorney General enforcement (§ 646A.589). No private right of action. 30-day cure period until January 1, 2026 (§ 646A.589(2)); AG has enforcement discretion after that date. Civil penalties up to $7,500 per violation (ORS § 646A.589(4)(a)).",
     maxPenalty: "Up to $7,500 per violation (UTPA, ORS § 646A.589)",
     appliesToSummary: "Persons doing business in OR or targeting OR residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 25%+ revenue from data sales and process data of 25,000+ consumers.",
     keywords: ["oregon", "cpa", "consumer privacy", "ai profiling", "automated decisions", "children's data", "646A.570"],
@@ -1135,7 +1135,7 @@ export const regulations: Regulation[] = [
     description: "When Illinois employees receive your AI notice and have questions — or when you need to log each time AI is used in an employment decision — this kit gives you the forms. Covers the ongoing notice and response lifecycle under 775 ILCS 5/2-102(L).",
     penaltySummary: "Civil penalties up to $16,000 per violation (first offense), $42,500 (one prior violation within 5 years), or $70,000 (two+ prior violations within 7 years). Penalties assessed per violation and per affected person. Imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425). IDHR investigates charges. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
     maxPenalty: "Up to $70,000 per violation (repeat offenders); $16,000 first offense",
-    appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, discharge, discipline, tenure, or terms/conditions of employment.",
+    appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, renewal of employment, selection for training or apprenticeship, discharge, discipline, tenure, or the terms, privileges, or conditions of employment (775 ILCS 5/2-102(L)).",
     keywords: ["illinois", "hb3773", "employee notice", "ai notice", "response kit", "775 ilcs", "add-on"],
     documents: [
       "Employee Notification Template",
@@ -1161,7 +1161,7 @@ export const regulations: Regulation[] = [
     description: "Illinois HB3773 specifically prohibits using zip codes as a proxy for protected classes. This workbook walks you through auditing your AI hiring tools for zip code data, analyzing whether it correlates with protected characteristics, and documenting your remediation if it does.",
     penaltySummary: "Civil penalties up to $16,000 per violation (first offense), $42,500 (one prior violation within 5 years), or $70,000 (two+ prior violations within 7 years). Penalties assessed per violation and per affected person. Imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425). IDHR investigates charges. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
     maxPenalty: "Up to $70,000 per violation (repeat offenders); $16,000 first offense",
-    appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, discharge, discipline, tenure, or terms/conditions of employment.",
+    appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, renewal of employment, selection for training or apprenticeship, discharge, discipline, tenure, or the terms, privileges, or conditions of employment (775 ILCS 5/2-102(L)).",
     keywords: ["illinois", "hb3773", "zip code", "proxy audit", "protected class", "775 ilcs", "add-on"],
     documents: [
       "Data Input Audit",

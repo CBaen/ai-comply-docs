@@ -26,7 +26,7 @@ const ADDONS = [
     effectiveDate: "January 1, 2026",
     maxPenalty: "$70,000 per violation",
     appliesToSummary:
-      "Any Illinois employer using AI in recruitment, hiring, promotion, discharge, discipline, tenure, or terms/conditions of employment.",
+      "Any Illinois employer using AI in recruitment, hiring, promotion, renewal of employment, selection for training or apprenticeship, discharge, discipline, tenure, or the terms, privileges, or conditions of employment (775 ILCS 5/2-102(L)).",
     description:
       "When Illinois employees receive your AI notice and have questions — or when you need to log each time AI is used in an employment decision — this kit gives you the forms. Covers the ongoing notice and response lifecycle under 775 ILCS 5/2-102(L).",
     penaltySummary:
@@ -55,7 +55,7 @@ const ADDONS = [
     effectiveDate: "January 1, 2026",
     maxPenalty: "$70,000 per violation",
     appliesToSummary:
-      "Any Illinois employer using AI in recruitment, hiring, promotion, discharge, discipline, tenure, or terms/conditions of employment.",
+      "Any Illinois employer using AI in recruitment, hiring, promotion, renewal of employment, selection for training or apprenticeship, discharge, discipline, tenure, or the terms, privileges, or conditions of employment (775 ILCS 5/2-102(L)).",
     description:
       "Illinois HB3773 specifically prohibits using zip codes as a proxy for protected classes. This workbook walks you through auditing your AI hiring tools for zip code data, analyzing whether it correlates with protected characteristics, and documenting your remediation if it does.",
     penaltySummary:
@@ -420,7 +420,7 @@ const ADDONS = [
     citation: "Regulation (EU) 2024/1689",
     citationUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689",
     status: "in-effect",
-    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2027",
+    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2026",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary:
       "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
@@ -449,7 +449,7 @@ const ADDONS = [
     citation: "Regulation (EU) 2024/1689",
     citationUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689",
     status: "in-effect",
-    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2027",
+    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2026",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary:
       "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
@@ -478,7 +478,7 @@ const ADDONS = [
     citation: "Regulation (EU) 2024/1689",
     citationUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689",
     status: "in-effect",
-    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2027",
+    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2026",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary:
       "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
@@ -507,7 +507,7 @@ const ADDONS = [
     citation: "Regulation (EU) 2024/1689",
     citationUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689",
     status: "in-effect",
-    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2027",
+    effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2026",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary:
       "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
