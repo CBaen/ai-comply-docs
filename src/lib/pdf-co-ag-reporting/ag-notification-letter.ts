@@ -136,7 +136,18 @@ export function generateAgNotificationLetter(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "anl_notification_date", "Date of This Notification:", y, {
     prefill: data.generatedDate, width: 80,
   });
-  y = addFormTextField(doc, "anl_days_since_discovery", "Days Elapsed Since Discovery (must be within 90 days — statutory obligation under C.R.S. § 6-1-1703(7)):", y, {
+  y = addWrappedText(
+    doc,
+    "IMPORTANT — Developer vs. Deployer Trigger Distinction: The 90-day notification obligation differs by role. A DEVELOPER must notify under § 6-1-1702(5) if the AI system 'caused or is reasonably likely to have caused' algorithmic discrimination — this is a BROADER trigger that includes prospective/likely harm. A DEPLOYER must notify under § 6-1-1703(7) if the AI system 'has caused' algorithmic discrimination — this is a NARROWER trigger requiring actual causation. Both are subject to 'without unreasonable delay but no later than ninety days' from discovery. Identify the applicable role and trigger below.",
+    MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
+  );
+  y += LINE_HEIGHT;
+
+  y = addFormCheckbox(doc, "anl_role_developer", "We are the DEVELOPER — trigger: system caused or is reasonably likely to have caused discrimination (§ 6-1-1702(5), broader standard)", y);
+  y = addFormCheckbox(doc, "anl_role_deployer", "We are the DEPLOYER — trigger: system has caused discrimination (§ 6-1-1703(7), narrower standard requiring actual causation)", y);
+  y += 4;
+
+  y = addFormTextField(doc, "anl_days_since_discovery", "Days Elapsed Since Discovery (must be within 90 days — statutory obligation under C.R.S. § 6-1-1702(5) / § 6-1-1703(7)):", y, {
     width: 60,
   });
   y = addFormTextField(

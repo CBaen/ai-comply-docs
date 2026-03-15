@@ -112,155 +112,155 @@ export function generateCybersecurityAuditChecklist(
     return ly;
   };
 
-  // Area 1: Access Controls
+  // Area 1: Authentication
   y = renderArea(
     1,
-    "Access Controls",
-    "Role-based access controls limiting employee access to personal information to what is necessary for their job function. Includes privileged access management, access reviews, and least-privilege enforcement.",
+    "Authentication",
+    "Authentication controls including multi-factor authentication (MFA) requirements and password management policies. Covers MFA for access to systems processing personal information, password complexity and rotation requirements, and controls to prevent credential compromise.",
     "cac_area1",
     y
   );
 
-  // Area 2: Risk Identification
+  // Area 2: Encryption at Rest and in Transit
   y = renderArea(
     2,
-    "Risk Identification",
-    "Processes to identify internal and external risks to the security, confidentiality, and integrity of personal information. Includes asset inventory, threat modeling, and periodic risk assessments.",
+    "Encryption at Rest and in Transit",
+    "Encryption of personal information both at rest (stored data) and in transit (data in motion across networks). Includes use of current encryption standards, key management procedures, and encryption of personal information on mobile devices, removable media, and cloud storage.",
     "cac_area2",
     y
   );
 
-  // Area 3: Incident Response Management
+  // Area 3: Account Management and Access Controls
   y = renderArea(
     3,
-    "Incident Response Management",
-    "Written incident response plan covering detection, classification, escalation, containment, recovery, and post-incident review. Includes defined roles, contact lists, and tested response procedures.",
+    "Account Management and Access Controls",
+    "Account lifecycle management and access control practices including: least-privilege enforcement limiting access to what is necessary for job function; privileged account management (PAM) for administrative access; processes for provisioning and deprovisioning new accounts; and physical access controls to systems containing personal information.",
     "cac_area3",
     y
   );
 
-  // Area 4: Third-Party Oversight
+  // Area 4: Inventory and Management
   y = renderArea(
     4,
-    "Third-Party Oversight",
-    "Due diligence and ongoing oversight of service providers and vendors that process personal information. Includes written contracts with security requirements, periodic security assessments, and breach notification clauses.",
+    "Inventory and Management",
+    "Inventory and management practices including: personal information (PI) inventories and data maps documenting what PI is collected, where stored, and how used; hardware and software inventories; and approval processes for new data collection or processing activities involving personal information.",
     "cac_area4",
     y
   );
 
-  // Area 5: Employee Training
+  // Area 5: Secure Configuration
   y = renderArea(
     5,
-    "Employee Training",
-    "Annual (or more frequent) security awareness training for all employees with access to personal information. Includes phishing awareness, data handling procedures, and incident reporting obligations.",
+    "Secure Configuration",
+    "Secure configuration practices including: software and firmware updates applied on a defined schedule; cloud security configuration and hardening; data masking or pseudonymization where appropriate; patch management processes with defined remediation timelines; and change management procedures for configuration changes to systems processing personal information.",
     "cac_area5",
     y
   );
 
-  // Area 6: Retention Schedules
+  // Area 6: Vulnerability Scans, Penetration Testing, and Disclosure Programs
   y = renderArea(
     6,
-    "Retention Schedules",
-    "Documented data retention schedules specifying retention periods for each category of personal information. Includes automated or manual processes to delete personal information when retention periods expire.",
+    "Vulnerability Scans, Penetration Testing, and Disclosure Programs",
+    "Proactive vulnerability identification including: regular vulnerability scans of systems processing personal information; periodic penetration testing (at least annually or after significant changes); and a vulnerability disclosure program (VDP) or bug bounty program to receive external security reports.",
     "cac_area6",
     y
   );
 
-  // Area 7: Data Minimization
+  // Area 7: Audit-Log Management
   y = renderArea(
     7,
-    "Data Minimization",
-    "Practices and technical controls limiting the collection and processing of personal information to what is reasonably necessary for the identified purpose. Includes periodic reviews to identify unnecessary data.",
+    "Audit-Log Management",
+    "Audit logging program including: centralized log storage for systems processing personal information; defined log retention periods aligned with legal and operational requirements; and log monitoring and alerting to detect unauthorized access, anomalous activity, or security events.",
     "cac_area7",
     y
   );
 
-  // Area 8: Encryption
+  // Area 8: Network Monitoring and Defenses
   y = renderArea(
     8,
-    "Encryption",
-    "Encryption of personal information in transit and at rest. Includes use of current encryption standards, key management procedures, and encryption of personal information on mobile devices and removable media.",
+    "Network Monitoring and Defenses",
+    "Network-layer monitoring and defensive controls including: bot detection mechanisms to identify and block automated threats; intrusion detection and/or prevention systems (IDS/IPS); and data loss prevention (DLP) tools to detect and prevent unauthorized exfiltration of personal information.",
     "cac_area8",
     y
   );
 
-  // Area 9: Monitoring
+  // Area 9: Antivirus and Antimalware
   y = renderArea(
     9,
-    "Monitoring",
-    "Continuous or periodic monitoring of systems that process personal information to detect unauthorized access, anomalous activity, or security events. Includes log management, alerting, and review procedures.",
+    "Antivirus and Antimalware",
+    "Endpoint protection including antivirus and antimalware software deployed on all systems processing personal information. Includes definition update cadence, scanning frequency, coverage of servers and endpoints, and response procedures for detected threats.",
     "cac_area9",
     y
   );
 
-  // Area 10: Vulnerability Management
+  // Area 10: Network Segmentation
   y = renderArea(
     10,
-    "Vulnerability Management",
-    "Processes to identify, prioritize, and remediate security vulnerabilities in systems that process personal information. Includes patch management, penetration testing, and vulnerability scanning cadence.",
+    "Network Segmentation",
+    "Network segmentation controls to limit lateral movement and contain potential breaches. Includes firewalls separating network segments, router and switch configurations enforcing segmentation, and isolation of systems containing sensitive personal information from general-purpose networks.",
     "cac_area10",
     y
   );
 
-  // Area 11: Change Management
+  // Area 11: Port, Service, and Protocol Controls
   y = renderArea(
     11,
-    "Change Management",
-    "Formal change management procedures to ensure security and privacy implications are reviewed before changes are deployed to systems processing personal information. Includes testing and rollback procedures.",
+    "Port, Service, and Protocol Controls",
+    "Controls limiting open network ports, enabled services, and permitted protocols to only what is necessary for business operations. Includes port scanning and audits to identify unauthorized open ports, disabling unused services, and documented allowlists for permitted protocols.",
     "cac_area11",
     y
   );
 
-  // Area 12: Business Continuity
+  // Area 12: Cybersecurity Awareness
   y = renderArea(
     12,
-    "Business Continuity",
-    "Business continuity and disaster recovery plans for systems that process personal information. Includes recovery time objectives (RTO), recovery point objectives (RPO), and tested backup and recovery procedures.",
+    "Cybersecurity Awareness",
+    "Organizational cybersecurity awareness program ensuring employees maintain current knowledge of relevant cybersecurity threats. Includes threat intelligence sharing, regular security advisories or bulletins, awareness of current attack vectors (phishing, social engineering, ransomware), and leadership-level security briefings.",
     "cac_area12",
     y
   );
 
-  // Area 13: Physical Security
+  // Area 13: Cybersecurity Education and Training
   y = renderArea(
     13,
-    "Physical Security",
-    "Physical controls protecting servers, devices, and media containing personal information from unauthorized access, theft, or destruction. Includes facility access controls, clean desk policies, and secure disposal of hardware.",
+    "Cybersecurity Education and Training",
+    "Formal cybersecurity education and training program for all employees with access to personal information. Includes role-based training (general staff, IT, executives), training frequency and completion tracking, phishing simulation exercises, and new-hire security onboarding.",
     "cac_area13",
     y
   );
 
-  // Area 14: Privacy by Design
+  // Area 14: Secure Development and Coding Practices
   y = renderArea(
     14,
-    "Privacy by Design",
-    "Processes to integrate privacy and security requirements into the design and development of new products, systems, and processes that will process personal information. Includes privacy reviews at project inception.",
+    "Secure Development and Coding Practices",
+    "Secure software development lifecycle (SDLC) practices including secure coding standards, code review processes, static and dynamic application security testing (SAST/DAST), dependency vulnerability management, and security review gates before deploying systems that process personal information.",
     "cac_area14",
     y
   );
 
-  // Area 15: Breach Notification
+  // Area 15: Oversight of Service Providers, Contractors, and Third Parties
   y = renderArea(
     15,
-    "Breach Notification",
-    "Written procedures for notifying affected individuals and the CPPA (and other regulators where required) in the event of a data breach involving personal information. Procedures aligned with California breach notification law (Cal. Civ. Code §1798.82).",
+    "Oversight of Service Providers, Contractors, and Third Parties",
+    "Due diligence and ongoing oversight of service providers, contractors, and third parties that access or process personal information. Includes written data processing agreements (DPAs) with security requirements, periodic security assessments of third parties, subprocessor oversight, and breach notification obligations in contracts.",
     "cac_area15",
     y
   );
 
-  // Area 16: Vendor Security
+  // Area 16: Retention Schedules and Disposal
   y = renderArea(
     16,
-    "Vendor Security",
-    "Security requirements imposed on vendors and service providers through contract terms. Includes data processing agreements (DPAs), subprocessor oversight, right-to-audit clauses, and vendor security questionnaire program.",
+    "Retention Schedules and Disposal",
+    "Documented data retention schedules specifying retention periods for each category of personal information, and secure disposal procedures. Includes automated or manual processes to delete or anonymize personal information when retention periods expire, and secure destruction of physical and digital media.",
     "cac_area16",
     y
   );
 
-  // Area 17: Governance
+  // Area 17: Incident Response Management
   y = renderArea(
     17,
-    "Governance",
-    "Organizational governance structures for cybersecurity and privacy. Includes designation of a responsible executive or officer, board-level reporting, documented cybersecurity policies and procedures, and policy review schedule.",
+    "Incident Response Management",
+    "Written incident response plan (IRP) covering detection, classification, escalation, containment, eradication, recovery, and post-incident review for security incidents involving personal information. Includes defined roles and responsibilities, tested response procedures, contact lists for notification (CPPA, law enforcement, affected individuals), and alignment with California breach notification law (Cal. Civ. Code § 1798.82).",
     "cac_area17",
     y
   );

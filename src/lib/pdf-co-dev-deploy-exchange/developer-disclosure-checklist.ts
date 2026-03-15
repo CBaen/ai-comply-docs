@@ -232,24 +232,40 @@ export function generateDeveloperDisclosureChecklist(
   doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
   y += LINE_HEIGHT + 2;
 
-  // ---- SECTION 3: Model Card & Dataset Card ----
+  // ---- SECTION 3: Model Card, Dataset Card, and Impact Assessments (§ 6-1-1702(3)) ----
   y = addSectionHeader(
     doc,
-    "Section 3: Model Card and Dataset Card (§ 6-1-1702(3))",
+    "Section 3: Element (3) — Model Cards, Dataset Cards, and Impact Assessments (§ 6-1-1702(3))",
     y
   );
 
   y = addWrappedText(
     doc,
-    "C.R.S. § 6-1-1702(3) references model cards and dataset cards as documentation artifacts that developers may use to satisfy disclosure requirements. Check the applicable items below.",
+    "C.R.S. § 6-1-1702(3) requires developers to provide model cards, dataset cards, or other impact assessments to deployers. Check each documentation artifact provided.",
     MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
   );
   y += 2;
 
-  y = addFormCheckbox(doc, "ddc_model_card", "Model card provided to deployer", y);
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_3a_check",
+    "(3) Model Card — Model card describing the AI system provided to deployer",
+    y
+  );
   y = addFormTextField(doc, "ddc_model_card_ref", "Model card document reference / location:", y);
-  y = addFormCheckbox(doc, "ddc_dataset_card", "Dataset card provided to deployer", y);
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_3b_check",
+    "(3) Dataset Card — Dataset card describing training data provided to deployer",
+    y
+  );
   y = addFormTextField(doc, "ddc_dataset_card_ref", "Dataset card document reference / location:", y);
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_3c_check",
+    "(3) Impact Assessment — Other impact assessment documentation provided to deployer",
+    y
+  );
   y = addFormTextField(
     doc,
     "ddc_additional_docs",
@@ -257,6 +273,33 @@ export function generateDeveloperDisclosureChecklist(
     y,
     { multiline: true, lines: 3 }
   );
+
+  // ---- SECTION 3B: Public Website Statement (§ 6-1-1702(4)) ----
+  y = addSectionHeader(
+    doc,
+    "Section 3B: Element (4) — Public Website Statement (§ 6-1-1702(4))",
+    y
+  );
+
+  y = addWrappedText(
+    doc,
+    "C.R.S. § 6-1-1702(4) requires developers to post a statement on their public website summarizing the types of high-risk artificial intelligence systems the developer offers for use and the developer's approach to managing risks of algorithmic discrimination.",
+    MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
+  );
+  y += 2;
+
+  y = addFormCheckbox(
+    doc,
+    "ddc_item_4_check",
+    "(4) Public Website Statement — Statement summarizing high-risk AI systems offered and risk management approach posted on developer's public website",
+    y
+  );
+  y = addFormTextField(doc, "ddc_item_4_url", "URL of public website statement:", y, {
+    width: 150,
+  });
+  y = addFormTextField(doc, "ddc_item_4_date", "Date statement posted / last updated:", y, {
+    width: 80,
+  });
 
   // ---- SECTION 4: Confidentiality ----
   y = addSectionHeader(doc, "Section 4: Confidentiality Designation", y);
