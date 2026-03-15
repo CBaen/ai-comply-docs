@@ -864,6 +864,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the HIPAA Privacy Rule (45 CFR Part 164 Subpart E), Security Rule (45 CFR Part 164 Subpart C), and Breach Notification Rule (45 CFR Part 164 Subpart D) as applied to AI processing of protected health information. I understand that these are compliance templates, not legal advice. HHS may issue additional guidance on AI and HIPAA. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 597,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "AI Risk Assessment for PHI Processing",
@@ -906,6 +907,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the Equal Credit Opportunity Act (15 USC \u00A7 1691 et seq.) and Regulation B (12 CFR Part 1002), the Fair Credit Reporting Act (15 USC \u00A7 1681 et seq.), and relevant FINRA rules as applied to AI in financial services. I understand that these are compliance templates, not legal advice. SEC, CFPB, and FINRA may issue additional AI-specific guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 597,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "AI Supervision Policy",
@@ -950,6 +952,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I understand that these are training and communication templates, not legal advice. I should consult qualified legal counsel for my specific situation.",
     basePrice: 79,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "Manager Talking Points Script",
@@ -988,6 +992,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I understand that these are review templates, not legal advice. Laws change. I should verify current regulatory status annually and consult qualified legal counsel.",
     basePrice: 49,
     skippedSteps: [3, 4],
+    gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "Annual Compliance Review Checklist",
@@ -1025,6 +1030,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I understand that these are governance templates, not legal advice. I should consult qualified legal counsel for my specific board reporting obligations.",
     basePrice: 69,
     skippedSteps: [3, 4],
+    gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "Executive AI Compliance Status Report",
@@ -1063,6 +1069,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are disclosure templates, not legal advice. Consumer notice requirements vary by state and context. I should verify applicable disclosure requirements and consult qualified legal counsel.",
     basePrice: 49,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
 
     documents: [
       "Website AI Disclosure Banner",
@@ -1139,6 +1147,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are consumer rights response templates, not legal advice. Consumer rights requirements and response timelines vary by state. I should consult qualified legal counsel for my specific obligations.",
     basePrice: 59,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
 
     documents: [
       "Consumer Rights Request Intake Form",
@@ -1178,6 +1188,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the NIST AI Risk Management Framework (NIST AI 100-1) referenced in this product. I understand that these are governance framework templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization and jurisdiction.",
     basePrice: 349,
     skippedSteps: [2, 3, 4],
+    gateText: "These templates implement the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "AI Governance Policy",
@@ -1222,6 +1233,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the NIST AI RMF MAP Function Playbook referenced in this product. I understand that these are inventory and lifecycle tracking templates, not legal advice. I should consult qualified legal counsel to verify my specific compliance obligations.",
     basePrice: 199,
     skippedSteps: [3, 4],
+    gateText: "These templates reference the NIST AI RMF Playbook. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "AI System Inventory Template",
@@ -1261,6 +1273,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (EU AI Act) referenced in this product. I understand that these are transparency reporting templates, not legal advice. I should consult qualified legal counsel to verify my specific disclosure and reporting obligations.",
     basePrice: 149,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
 
     documents: [
       "Annual AI Transparency Report Template",
