@@ -887,6 +887,159 @@ export async function generateDocuments(
     ];
   }
 
+  if (data.regulation === "il-notice-response-kit") {
+    const mod = await import("./pdf-il-notice-response");
+    return [
+      { doc: mod.generateEmployeeNotificationTemplate(data), name: `${companySlug}_IL_Employee_AI_Notification.pdf` },
+      { doc: mod.generateAiUseLoggingForm(data), name: `${companySlug}_IL_AI_Use_Logging_Form.pdf` },
+      { doc: mod.generateEmployeeInquiryResponse(data), name: `${companySlug}_IL_Employee_Inquiry_Response.pdf` },
+    ];
+  }
+
+  if (data.regulation === "il-zip-proxy-audit") {
+    const mod = await import("./pdf-il-zip-proxy-audit");
+    return [
+      { doc: mod.generateDataInputAudit(data), name: `${companySlug}_IL_Zip_Code_Data_Input_Audit.pdf` },
+      { doc: mod.generateProxyAnalysisWorksheet(data), name: `${companySlug}_IL_Proxy_Analysis_Worksheet.pdf` },
+      { doc: mod.generateRemediationPlan(data), name: `${companySlug}_IL_Zip_Proxy_Remediation_Plan.pdf` },
+    ];
+  }
+
+  if (data.regulation === "co-appeal-correction-kit") {
+    const mod = await import("./pdf-co-appeal-correction");
+    return [
+      { doc: mod.generateAppealIntakeForm(data), name: `${companySlug}_CO_Consumer_Appeal_Intake.pdf` },
+      { doc: mod.generateDataCorrectionRequest(data), name: `${companySlug}_CO_Data_Correction_Request.pdf` },
+      { doc: mod.generateAppealOutcomeLetter(data), name: `${companySlug}_CO_Appeal_Outcome_Letter.pdf` },
+    ];
+  }
+
+  if (data.regulation === "co-ag-reporting-kit") {
+    const mod = await import("./pdf-co-ag-reporting");
+    return [
+      { doc: mod.generateDiscriminationDiscoveryForm(data), name: `${companySlug}_CO_Discrimination_Discovery.pdf` },
+      { doc: mod.generateAgNotificationLetter(data), name: `${companySlug}_CO_AG_Notification_Letter.pdf` },
+      { doc: mod.generateCorrectiveActionPlan(data), name: `${companySlug}_CO_Corrective_Action_Plan.pdf` },
+    ];
+  }
+
+  if (data.regulation === "co-dev-deploy-exchange") {
+    const mod = await import("./pdf-co-dev-deploy-exchange");
+    return [
+      { doc: mod.generateDeveloperDisclosureChecklist(data), name: `${companySlug}_CO_Developer_Disclosure_Checklist.pdf` },
+      { doc: mod.generateDeployerGapAnalysis(data), name: `${companySlug}_CO_Deployer_Gap_Analysis.pdf` },
+      { doc: mod.generateThirdPartyAssessmentAddendum(data), name: `${companySlug}_CO_Third_Party_Assessment_Addendum.pdf` },
+    ];
+  }
+
+  if (data.regulation === "ca-admt-notice-optout") {
+    const mod = await import("./pdf-ca-admt-notice-optout");
+    return [
+      { doc: mod.generatePreUseNotice(data), name: `${companySlug}_CA_ADMT_Pre_Use_Notice.pdf` },
+      { doc: mod.generateOptoutRequestProcessing(data), name: `${companySlug}_CA_ADMT_Optout_Processing.pdf` },
+      { doc: mod.generateOptoutExceptionDocumentation(data), name: `${companySlug}_CA_ADMT_Optout_Exception.pdf` },
+    ];
+  }
+
+  if (data.regulation === "ca-admt-access-kit") {
+    const mod = await import("./pdf-ca-admt-access");
+    return [
+      { doc: mod.generateAccessRequestIntake(data), name: `${companySlug}_CA_ADMT_Access_Request_Intake.pdf` },
+      { doc: mod.generateAdmtOutputExplanation(data), name: `${companySlug}_CA_ADMT_Output_Explanation.pdf` },
+      { doc: mod.generateResponseTimelineTracker(data), name: `${companySlug}_CA_ADMT_Response_Tracker.pdf` },
+    ];
+  }
+
+  if (data.regulation === "ca-cyber-audit-kit") {
+    const mod = await import("./pdf-ca-cyber-audit");
+    return [
+      { doc: mod.generateCybersecurityAuditChecklist(data), name: `${companySlug}_CA_Cybersecurity_Audit_Checklist.pdf` },
+      { doc: mod.generateRiskAssessmentWorkbook(data), name: `${companySlug}_CA_Risk_Assessment_Workbook.pdf` },
+      { doc: mod.generateAuditRemediationTracker(data), name: `${companySlug}_CA_Audit_Remediation_Tracker.pdf` },
+    ];
+  }
+
+  if (data.regulation === "nyc-bias-audit-mgmt") {
+    const mod = await import("./pdf-nyc-bias-audit-mgmt");
+    return [
+      { doc: mod.generateAuditorRfpTemplate(data), name: `${companySlug}_NYC_Auditor_RFP.pdf` },
+      { doc: mod.generateResultsPublicationTemplate(data), name: `${companySlug}_NYC_Audit_Results_Publication.pdf` },
+      { doc: mod.generateAnnualRenewalCalendar(data), name: `${companySlug}_NYC_Audit_Renewal_Calendar.pdf` },
+    ];
+  }
+
+  if (data.regulation === "nyc-candidate-notice-kit") {
+    const mod = await import("./pdf-nyc-candidate-notice");
+    return [
+      { doc: mod.generateAdvanceNoticeTemplate(data), name: `${companySlug}_NYC_10Day_Advance_Notice.pdf` },
+      { doc: mod.generateAlternativeProcessWorkflow(data), name: `${companySlug}_NYC_Alternative_Process_Workflow.pdf` },
+      { doc: mod.generateDataDisclosureResponse(data), name: `${companySlug}_NYC_Data_Disclosure_Response.pdf` },
+    ];
+  }
+
+  if (data.regulation === "va-consumer-rights-kit") {
+    const mod = await import("./pdf-va-consumer-rights");
+    return [
+      { doc: mod.generateRightsRequestIntake(data), name: `${companySlug}_VA_Rights_Request_Intake.pdf` },
+      { doc: mod.generateAppealWorkflow(data), name: `${companySlug}_VA_Appeal_Workflow.pdf` },
+      { doc: mod.generateAgComplaintReferral(data), name: `${companySlug}_VA_AG_Complaint_Referral.pdf` },
+    ];
+  }
+
+  if (data.regulation === "va-profiling-assessment-kit") {
+    const mod = await import("./pdf-va-profiling-assessment");
+    return [
+      { doc: mod.generateProfilingAssessment(data), name: `${companySlug}_VA_Profiling_Assessment.pdf` },
+      { doc: mod.generateBenefitsRisksWorksheet(data), name: `${companySlug}_VA_Benefits_Risks_Worksheet.pdf` },
+      { doc: mod.generateSensitiveDataConsent(data), name: `${companySlug}_VA_Sensitive_Data_Consent.pdf` },
+    ];
+  }
+
+  if (data.regulation === "va-controller-processor-kit") {
+    const mod = await import("./pdf-va-controller-processor");
+    return [
+      { doc: mod.generateProcessorDpaTemplate(data), name: `${companySlug}_VA_Processor_DPA.pdf` },
+      { doc: mod.generateProcessorAuditQuestionnaire(data), name: `${companySlug}_VA_Processor_Audit_Questionnaire.pdf` },
+      { doc: mod.generateSubcontractorFlowdown(data), name: `${companySlug}_VA_Subcontractor_Flowdown.pdf` },
+    ];
+  }
+
+  if (data.regulation === "eu-fria-kit") {
+    const mod = await import("./pdf-eu-fria");
+    return [
+      { doc: mod.generateFriaTemplate(data), name: `${companySlug}_EU_FRIA.pdf` },
+      { doc: mod.generateAuthorityNotification(data), name: `${companySlug}_EU_Authority_Notification.pdf` },
+      { doc: mod.generateFriaUpdateTrigger(data), name: `${companySlug}_EU_FRIA_Update_Trigger.pdf` },
+    ];
+  }
+
+  if (data.regulation === "eu-post-market-kit") {
+    const mod = await import("./pdf-eu-post-market");
+    return [
+      { doc: mod.generateMonitoringPlan(data), name: `${companySlug}_EU_Monitoring_Plan.pdf` },
+      { doc: mod.generateSeriousIncidentReport(data), name: `${companySlug}_EU_Serious_Incident_Report.pdf` },
+      { doc: mod.generateLogRetentionPolicy(data), name: `${companySlug}_EU_Log_Retention_Policy.pdf` },
+    ];
+  }
+
+  if (data.regulation === "eu-human-oversight-kit") {
+    const mod = await import("./pdf-eu-human-oversight");
+    return [
+      { doc: mod.generateOversightImplementationPlan(data), name: `${companySlug}_EU_Oversight_Plan.pdf` },
+      { doc: mod.generateWorkerNotification(data), name: `${companySlug}_EU_Worker_Notification.pdf` },
+      { doc: mod.generateOversightDecisionLog(data), name: `${companySlug}_EU_Oversight_Decision_Log.pdf` },
+    ];
+  }
+
+  if (data.regulation === "eu-registration-transparency") {
+    const mod = await import("./pdf-eu-registration");
+    return [
+      { doc: mod.generateDatabaseRegistrationChecklist(data), name: `${companySlug}_EU_Database_Registration.pdf` },
+      { doc: mod.generateTransparencyDisclosure(data), name: `${companySlug}_EU_Transparency_Disclosure.pdf` },
+      { doc: mod.generateProviderDocumentationVerification(data), name: `${companySlug}_EU_Provider_Doc_Verification.pdf` },
+    ];
+  }
+
   // Default: Illinois
   const il = await import("./pdf-illinois");
   const docs: GeneratedDoc[] = [
