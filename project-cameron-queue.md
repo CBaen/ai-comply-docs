@@ -116,3 +116,11 @@
 - [x] Nav: mobile dark mode text visibility fixed
 - [x] PyMuPDF installed for PDF reading
 - [x] Business documents copied to project directory
+- [x] Questionnaire adapts to product type — 25 products get generic oversight language, 9 get generic data inputs, 11 get honest framework gate text
+- [x] Oregon citation range fixed (§§646A.570-589) and penalty statute (§646A.589) across 9 files
+- [x] EU AI Act €35M/7% prohibited tier added to email templates and board summary
+- [x] EEOC ADEA threshold corrected (20+ employees, not 15+)
+- [x] Document counts synced: Minnesota (5→6), Healthcare (6→8), Financial (7→8)
+- [x] Organization schema: logo field added
+- [x] Blog index fixed to read from filesystem (was empty static array)
+- [x] Search modal added to nav (cmdk + MiniSearch)
