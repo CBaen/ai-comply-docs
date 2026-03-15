@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     "ai compliance for small business",
   ],
   alternates: {
-    canonical: "/",
+    canonical: "https://aicompliancedocuments.com",
   },
   openGraph: {
-    title: "AI Compliance Documents — Generate State-Specific AI Compliance Templates in Minutes",
+    title: "AI Compliance Documents — Templates for Every State AI Law",
     description:
       "State AI regulations are here. Generate compliance documentation in minutes for a fraction of legal fees.",
     url: "https://aicompliancedocuments.com",

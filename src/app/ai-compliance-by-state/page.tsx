@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
-  title: "AI Compliance Requirements by State — 2026 Guide | AI Compliance Documents",
+  title: "AI Compliance Requirements by State — 2026 Guide",
   description:
     "Compare AI compliance laws across all 50 states. See which states require AI documentation, what the penalties are, and when deadlines hit. Updated March 2026.",
   keywords: [
@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     "ai compliance requirements 2026",
   ],
   alternates: {
-    canonical: "/ai-compliance-by-state",
+    canonical: "https://aicompliancedocuments.com/ai-compliance-by-state",
   },
   openGraph: {
-    title: "AI Compliance Requirements by State — 2026 Guide | AI Compliance Documents",
+    title: "AI Compliance Requirements by State — 2026 Guide",
     description:
       "Compare AI compliance laws across all 50 states. See which states require AI documentation, what the penalties are, and when deadlines hit.",
     url: "https://aicompliancedocuments.com/ai-compliance-by-state",
@@ -38,7 +38,7 @@ function parseDateRank(dateStr: string): number {
 function StateComparisonSchema({ stateRegs }: { stateRegs: typeof regulations }) {
   const data = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Table",
+    "@type": "Dataset",
     name: "AI Compliance Requirements by State — 2026",
     about: "Comparison of US state AI and data privacy laws requiring business documentation",
     url: "https://aicompliancedocuments.com/ai-compliance-by-state",

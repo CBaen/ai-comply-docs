@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import ComplianceQuiz from "@/components/ComplianceQuiz";
 
 export const metadata: Metadata = {
-  title: "Do I Need AI Compliance? Free Assessment | AI Compliance Documents",
+  title: "Do I Need AI Compliance? Free Assessment",
   description:
-    "Answer 5 questions to find out which AI compliance laws apply to your business. Free assessment covers 14+ state laws, federal requirements, and industry-specific regulations.",
+    "Answer 5 questions to find out which AI compliance laws apply to your business. Free assessment covers 14+ state laws and federal requirements.",
   keywords: [
     "do i need ai compliance",
     "ai compliance assessment",
@@ -21,15 +21,40 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Do I Need AI Compliance? Free Assessment | AI Compliance Documents",
     description:
-      "Answer 5 questions to find out which AI compliance laws apply to your business. Free assessment covers 14+ state laws, federal requirements, and industry-specific regulations.",
+      "Answer 5 questions to find out which AI compliance laws apply to your business. Free assessment covers 14+ state laws and federal requirements.",
     url: "https://aicompliancedocuments.com/do-i-need-ai-compliance",
     type: "website",
   },
 };
 
+function WebApplicationSchema() {
+  const data = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "AI Compliance Assessment",
+    url: "https://aicompliancedocuments.com/do-i-need-ai-compliance",
+    description:
+      "Free 5-question assessment to determine which AI compliance laws apply to your business.",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    provider: {
+      "@type": "Organization",
+      name: "AI Compliance Documents",
+      url: "https://aicompliancedocuments.com",
+    },
+  });
+  return <script type="application/ld+json">{data}</script>;
+}
+
 export default function DoINeedAICompliancePage() {
   return (
     <>
+      <WebApplicationSchema />
       <Nav />
       <main id="main-content" className="min-h-screen bg-white">
         {/* Hero */}

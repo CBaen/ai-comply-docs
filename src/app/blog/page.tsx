@@ -7,7 +7,7 @@ import { getAllBlogPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "AI Compliance Blog — News, Guides & Regulation Updates",
   description:
-    "Plain-language guides to AI compliance laws. We break down what Illinois HB3773, Colorado SB24-205, and other state AI regulations actually mean for your business.",
+    "Plain-language guides to AI compliance laws. We break down what Illinois HB3773, Colorado SB24-205, and other state AI regulations mean for your business.",
   keywords: [
     "ai compliance blog",
     "ai regulation news",

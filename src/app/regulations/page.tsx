@@ -5,7 +5,7 @@ import ProductLibrary from "@/components/ProductLibrary";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
-  title: "AI Compliance Templates — All Products | AI Compliance Documents",
+  title: "AI Compliance Templates — All Products",
   description:
     "Browse all AI compliance templates for US state and federal AI regulations. State-specific packages for Illinois, Colorado, Texas, California, New York, and more. Instant download.",
   keywords: [
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     "ai governance documents",
   ],
   alternates: {
-    canonical: "/regulations",
+    canonical: "https://aicompliancedocuments.com/regulations",
   },
   openGraph: {
-    title: "AI Compliance Templates — All Products | AI Compliance Documents",
+    title: "AI Compliance Templates — All Products",
     description:
       "Browse all AI compliance templates for US state and federal regulations. Instant download, fraction of legal fees.",
     url: "https://aicompliancedocuments.com/regulations",

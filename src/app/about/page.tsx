@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "About AI Compliance Documents — Our Methodology",
   description:
-    "AI compliance document templates built from enacted statute text. Learn how we verify every citation, why we built this, and what sets us apart from AI-generated legal summaries.",
+    "AI compliance templates built from enacted statute text. Learn how we verify every citation, why we built this, and what sets us apart from AI-generated legal summaries.",
   keywords: [
     "ai compliance document templates",
     "ai regulation templates",
