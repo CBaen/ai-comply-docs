@@ -78,7 +78,11 @@ export function getBlogPost(slug: string): BlogPostFull | null {
         readTime: stats.text,
         tags: (data.tags as string[]) ?? [],
         published: (data.published as boolean) ?? false,
+        summary: (data.summary as string) ?? undefined,
         content,
+        deepDive: data.deepDive as DeepDive | undefined,
+        microFacts: data.microFacts as MicroFact[] | undefined,
+        externalReferences: data.externalReferences as Array<{ title: string; url: string }> | undefined,
       };
     }
   }

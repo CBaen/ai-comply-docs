@@ -139,6 +139,14 @@ export default async function BlogPostPage({ params }: Props) {
               <span className="w-1 h-1 bg-slate-500 rounded-full" />
               <span>{post.readTime}</span>
             </div>
+
+            {/* Two Sentence Summary */}
+            {post.summary && (
+              <div className="mt-6 bg-blue-900/40 border border-blue-400/30 rounded-lg p-4">
+                <p className="text-xs font-semibold text-blue-300 uppercase tracking-wider mb-2">Two-Sentence Summary</p>
+                <p className="text-slate-200 text-sm leading-relaxed">{post.summary}</p>
+              </div>
+            )}
           </div>
         </header>
 
@@ -148,6 +156,57 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="text-base leading-relaxed">
               {bodyNodes}
             </div>
+
+            {/* Deep Dive */}
+            {post.deepDive && (
+              <div className="mt-10 bg-indigo-50 border border-indigo-200 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <svg className="w-5 h-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                  <p className="text-sm font-bold text-indigo-900 uppercase tracking-wider">Deep Dive</p>
+                </div>
+                <h3 className="text-lg font-bold text-indigo-900 mb-3">{post.deepDive.title}</h3>
+                <p className="text-indigo-800 text-sm leading-relaxed whitespace-pre-line">{post.deepDive.content}</p>
+              </div>
+            )}
+
+            {/* Micro Facts */}
+            {post.microFacts && post.microFacts.length > 0 && (
+              <div className="mt-10 bg-amber-50 border border-amber-200 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
+                  <p className="text-sm font-bold text-amber-900 uppercase tracking-wider">Micro Facts</p>
+                </div>
+                <ul className="space-y-3">
+                  {post.microFacts.map((fact, i) => (
+                    <li key={i} className="text-amber-900 text-sm leading-relaxed">
+                      <a href={fact.sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-amber-700 underline underline-offset-2 decoration-amber-300">
+                        {fact.fact}
+                      </a>
+                      <span className="text-amber-600 text-xs ml-1">({fact.source})</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* External References */}
+            {post.externalReferences && post.externalReferences.length > 0 && (
+              <div className="mt-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <svg className="w-5 h-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
+                  <p className="text-sm font-bold text-slate-700 uppercase tracking-wider">External References</p>
+                </div>
+                <ul className="space-y-2">
+                  {post.externalReferences.map((ref, i) => (
+                    <li key={i}>
+                      <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline text-sm">
+                        {ref.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {/* Legal disclaimer — appears on every blog post */}
             <div className="mt-10 pt-6 border-t border-gray-200 text-xs text-gray-500 leading-relaxed">
