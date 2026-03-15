@@ -1,4 +1,7 @@
+import dynamic from "next/dynamic";
 import type { StepReviewCheckoutProps } from "./types";
+
+const PersonalizedDocPreview = dynamic(() => import("@/components/PersonalizedDocPreview"), { ssr: false });
 
 const ROLE_LABELS: Record<string, string> = {
   sole: "AI makes final decisions autonomously",
@@ -9,14 +12,20 @@ const ROLE_LABELS: Record<string, string> = {
 };
 
 export default function StepReviewCheckout({
+  regulationSlug,
   companyName,
   companyIndustry,
   companySize,
   companyState,
   aiSystems,
   decisions,
+  dataInputs,
+  protectedChars,
+  biasAudit,
   aiRole,
   oversightRole,
+  humanReview,
+  reviewFrequency,
   contactName,
   contactTitle,
   contactEmail,
@@ -43,6 +52,20 @@ export default function StepReviewCheckout({
   // Framework/voluntary-standard products provide gateText and use a soft gate —
   // the link is encouraged but does not block the checkbox.
   const isFrameworkGate = Boolean(gateText);
+
+  // Assemble the buyer's actual form data for the personalized preview
+  const formData = {
+    regulation: regulationSlug,
+    company: { name: companyName, state: companyState, size: companySize, industry: companyIndustry },
+    aiSystems: aiSystems.filter(s => s.name.trim()),
+    dataInputs,
+    protectedCharacteristics: protectedChars,
+    biasAudit,
+    oversight: { aiRole, oversightRole, humanReview, reviewFrequency },
+    contact: { name: contactName, title: contactTitle, email: contactEmail, phone: contactPhone },
+    generatedDate: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
+    selectedAddons: [],
+  };
   return (
     <div className="space-y-5">
       <h3 className="text-xl font-bold font-display text-gray-900 dark:text-white">
@@ -157,6 +180,9 @@ export default function StepReviewCheckout({
           ))}
         </ul>
       </div>
+
+      {/* Personalized document preview */}
+      <PersonalizedDocPreview formData={formData} regulationSlug={regulationSlug} />
 
       {/* Law / framework gate */}
       <div className={`${isFrameworkGate ? "bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800" : "bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"} rounded-lg p-5`}>

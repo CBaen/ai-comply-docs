@@ -177,3 +177,5 @@ html.dark .dark-toggle .icon-moon { display: none; }
 /* Mobile menu */
 .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
 .mobile-menu.open { max-height: 520px; }
+
+@media print { .preview-protected { display: none !important; } }

@@ -9,6 +9,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Questionnaire from "@/components/Questionnaire";
 import PostPaymentHandler from "@/components/PostPaymentHandler";
+import DocumentSamplePreview from "@/components/DocumentSamplePreview";
 
 export async function generateStaticParams() {
   // Only generate pages for ready products — non-ready products
@@ -346,7 +347,18 @@ export default async function RegulationPage({
                 </div>
               </section>
 
-              {/* Document Preview */}
+              {/* Dynamic Document Sample Preview */}
+              <section>
+                <h2 className="text-2xl font-bold font-display text-gray-900 mb-1">
+                  Preview Your Documents
+                </h2>
+                <p className="text-gray-500 text-sm mb-3">
+                  See what your compliance package includes — sample shown with example data
+                </p>
+                <DocumentSamplePreview slug={reg.slug} />
+              </section>
+
+              {/* Static Document Preview (pre-generated PNG, if available) */}
               {existsSync(join(process.cwd(), "public", "previews", `${reg.slug}.png`)) && (
                 <section>
                   <h2 className="text-xl font-bold font-display text-gray-900 mb-3">

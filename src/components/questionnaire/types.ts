@@ -65,6 +65,8 @@ export interface StepContactProps {
 }
 
 export interface StepReviewCheckoutProps {
+  // Regulation identity (needed to generate personalized preview)
+  regulationSlug: string;
   // Company summary
   companyName: string;
   companyIndustry: string;
@@ -73,9 +75,15 @@ export interface StepReviewCheckoutProps {
   // AI systems summary
   aiSystems: AISystem[];
   decisions: [string, string][];
+  // Data & bias summary (needed for personalized preview)
+  dataInputs: string[];
+  protectedChars: string[];
+  biasAudit: string;
   // Oversight summary
   aiRole: string;
   oversightRole: string;
+  humanReview: string;
+  reviewFrequency: string;
   // Contact summary
   contactName: string;
   contactTitle: string;

@@ -422,14 +422,20 @@ export default function Questionnaire({
 
           {step === 6 && (
             <StepReviewCheckout
+              regulationSlug={regulationSlug}
               companyName={companyName}
               companyIndustry={companyIndustry}
               companySize={companySize}
               companyState={companyState}
               aiSystems={aiSystems}
               decisions={decisions}
+              dataInputs={dataInputs}
+              protectedChars={protectedChars}
+              biasAudit={biasAudit}
               aiRole={aiRole}
               oversightRole={oversightRole}
+              humanReview={humanReview}
+              reviewFrequency={reviewFrequency}
               contactName={contactName}
               contactTitle={contactTitle}
               contactEmail={contactEmail}
