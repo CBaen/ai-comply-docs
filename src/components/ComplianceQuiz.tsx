@@ -388,7 +388,7 @@ function ResultsCard({
                     <p className="text-gray-600 text-sm leading-relaxed">{rec.reason}</p>
                   </div>
                   <Link
-                    href={`/regulations/${rec.slug}`}
+                    href={`/products/${rec.slug}`}
                     className="inline-flex items-center justify-center gap-1.5 bg-blue-700 text-white text-sm font-semibold px-4 py-3 sm:py-2.5 rounded-lg hover:bg-blue-800 transition whitespace-nowrap w-full sm:w-auto sm:flex-shrink-0 min-h-[44px]"
                   >
                     View Package
@@ -424,7 +424,7 @@ function ResultsCard({
                     <p className="text-gray-500 text-sm leading-relaxed">{rec.reason}</p>
                   </div>
                   <Link
-                    href={`/regulations/${rec.slug}`}
+                    href={`/products/${rec.slug}`}
                     className="inline-flex items-center gap-1 text-blue-700 font-semibold text-sm hover:text-blue-900 transition whitespace-nowrap min-h-[44px] sm:min-h-0 sm:pt-0.5"
                   >
                     View →

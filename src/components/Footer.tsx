@@ -21,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/regulations/illinois-hb3773"
+                  href="/products/illinois-hb3773"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   Illinois HB3773
@@ -29,7 +29,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/regulations/colorado-sb24-205"
+                  href="/products/colorado-sb24-205"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   Colorado SB 24-205
@@ -37,7 +37,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/regulations"
+                  href="/products"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   All Products

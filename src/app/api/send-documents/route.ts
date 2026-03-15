@@ -1,5 +1,15 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { validateDeliveryToken } from "@/lib/delivery-token";
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
 
 function getResend() {
   return new Resend(process.env.RESEND_API_KEY);

@@ -248,7 +248,7 @@ export default function ProductLibrary({
                 <Link href="/products/colorado-sb24-205" className="text-xs text-blue-700 hover:underline">Colorado SB 24-205</Link>
               </li>
               <li>
-                <Link href="/regulations/multi-state-employer-ai-disclosure" className="text-xs text-blue-700 hover:underline">Multi-State Employer Bundle</Link>
+                <Link href="/products/multi-state-employer-ai-disclosure" className="text-xs text-blue-700 hover:underline">Multi-State Employer Bundle</Link>
               </li>
             </ul>
           </div>
@@ -259,13 +259,13 @@ export default function ProductLibrary({
             </p>
             <ul className="space-y-1">
               <li>
-                <Link href="/regulations/virginia-cdpa" className="text-xs text-blue-700 hover:underline">Virginia CDPA</Link>
+                <Link href="/products/virginia-cdpa" className="text-xs text-blue-700 hover:underline">Virginia CDPA</Link>
               </li>
               <li>
-                <Link href="/regulations/california-ccpa-admt" className="text-xs text-blue-700 hover:underline">California CCPA ADMT</Link>
+                <Link href="/products/california-ccpa-admt" className="text-xs text-blue-700 hover:underline">California CCPA ADMT</Link>
               </li>
               <li>
-                <Link href="/regulations/multi-state-profiling-assessment" className="text-xs text-blue-700 hover:underline">Multi-State Profiling Bundle</Link>
+                <Link href="/products/multi-state-profiling-assessment" className="text-xs text-blue-700 hover:underline">Multi-State Profiling Bundle</Link>
               </li>
             </ul>
           </div>
@@ -276,10 +276,10 @@ export default function ProductLibrary({
             </p>
             <ul className="space-y-1">
               <li>
-                <Link href="/regulations/ai-system-registry" className="text-xs text-blue-700 hover:underline">AI System Registry</Link>
+                <Link href="/products/ai-system-registry" className="text-xs text-blue-700 hover:underline">AI System Registry</Link>
               </li>
               <li>
-                <Link href="/regulations/ai-governance-framework" className="text-xs text-blue-700 hover:underline">AI Governance Framework</Link>
+                <Link href="/products/ai-governance-framework" className="text-xs text-blue-700 hover:underline">AI Governance Framework</Link>
               </li>
             </ul>
           </div>
@@ -319,14 +319,14 @@ export default function ProductLibrary({
             </div>
             {reg.ready ? (
               <Link
-                href={`/regulations/${reg.slug}`}
+                href={`/products/${reg.slug}`}
                 className="block text-center bg-blue-800 text-white py-3 rounded-lg font-semibold text-sm hover:bg-blue-900 transition"
               >
                 View Package
               </Link>
             ) : (
               <Link
-                href={`/regulations/${reg.slug}`}
+                href={`/products/${reg.slug}`}
                 className="block text-center bg-slate-50 border border-gray-200 text-gray-700 py-3 rounded-lg font-semibold text-sm hover:border-blue-300 hover:text-blue-700 transition"
               >
                 Coming Soon — Learn More

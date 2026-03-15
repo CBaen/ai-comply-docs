@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const siteLastUpdated = new Date("2026-03-14");
 
   const regulationPages = regulations.filter((r) => r.ready).map((r) => ({
-    url: `${base}/regulations/${r.slug}`,
+    url: `${base}/products/${r.slug}`,
     lastModified: siteLastUpdated,
     changeFrequency: "weekly" as const,
     priority: r.status === "in-effect" ? 0.9 : 0.8,
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: base, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${base}/regulations`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/products`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ai-compliance-by-state`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.85 },
     { url: `${base}/blog`, lastModified: siteLastUpdated, changeFrequency: "daily", priority: 0.8 },
     { url: `${base}/do-i-need-ai-compliance`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.85 },

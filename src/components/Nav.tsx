@@ -39,7 +39,7 @@ export default function Nav() {
               How It Works
             </a>
             <Link
-              href="/regulations"
+              href="/products"
               className="text-gray-600 hover:text-blue-700 transition"
             >
               Products

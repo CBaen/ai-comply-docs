@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getRegulation } from "@/data/regulations";
+import { generateDeliveryToken } from "@/lib/delivery-token";
 
 function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -76,7 +77,10 @@ export async function POST(request: Request) {
       session.payment_status === "no_payment_required"
     ) {
       trackPurchase(session);
-      return NextResponse.json({ verified: true });
+      return NextResponse.json({
+        verified: true,
+        deliveryToken: generateDeliveryToken(sessionId),
+      });
     }
 
     return NextResponse.json(

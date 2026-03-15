@@ -58,7 +58,7 @@ export default function ProductCarousel({ products }: Props) {
       <div className="max-w-4xl mx-auto px-12 sm:px-6 md:px-16 py-10 sm:py-16 md:py-24 text-center flex flex-col justify-center">
         {/* Breadcrumb */}
         <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400 mb-3 sm:mb-4">
-          <Link href="/regulations" className="hover:text-blue-300 transition">
+          <Link href="/products" className="hover:text-blue-300 transition">
             All Products
           </Link>
           <span className="text-slate-600">|</span>
@@ -95,7 +95,7 @@ export default function ProductCarousel({ products }: Props) {
             <span className="text-slate-400 text-xs sm:text-sm ml-1.5 sm:ml-2">one-time purchase</span>
           </div>
           <Link
-            href={`/regulations/${p.slug}`}
+            href={`/products/${p.slug}`}
             className="w-full sm:w-auto bg-white text-slate-900 px-7 py-3 sm:py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-gray-100 transition shadow-lg text-center"
           >
             Get Started

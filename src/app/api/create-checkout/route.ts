@@ -48,8 +48,8 @@ export async function POST(request: Request) {
       mode: "payment",
       line_items: lineItems,
       allow_promotion_codes: true,
-      success_url: `${origin}/regulations/${slug}?payment=success&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/regulations/${slug}?payment=cancelled`,
+      success_url: `${origin}/products/${slug}?payment=success&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}/products/${slug}?payment=cancelled`,
       metadata: { regulation: slug },
     });
 

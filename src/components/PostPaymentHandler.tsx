@@ -16,6 +16,8 @@ export default function PostPaymentHandler({
   const [formData, setFormData] = useState<ComplianceFormData | null>(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [docs, setDocs] = useState<GeneratedDoc[] | null>(null);
+  const [deliveryToken, setDeliveryToken] = useState<string>("");
+  const [verifiedSessionId, setVerifiedSessionId] = useState<string>("");
 
   // Download state
   const [downloadState, setDownloadState] = useState<
@@ -86,6 +88,8 @@ export default function PostPaymentHandler({
         const data: ComplianceFormData = JSON.parse(savedData);
         sessionStorage.removeItem("complianceFormData");
         setFormData(data);
+        setDeliveryToken(result.deliveryToken || "");
+        setVerifiedSessionId(sessionId);
         setStatus("ready");
       } else {
         setStatus("error");
@@ -207,6 +211,8 @@ export default function PostPaymentHandler({
           companyName: formData!.company.name,
           contactName: formData!.contact?.name || "",
           regulation: regulationSlug,
+          deliveryToken,
+          sessionId: verifiedSessionId,
         }),
       });
 

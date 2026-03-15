@@ -134,7 +134,7 @@ export default function AIComplianceByStatePage() {
                       </td>
                       <td className="px-4 py-3.5 whitespace-nowrap">
                         <Link
-                          href={`/regulations/${reg.slug}`}
+                          href={`/products/${reg.slug}`}
                           className="inline-flex items-center gap-1 text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors"
                         >
                           View Package →
@@ -185,7 +185,7 @@ export default function AIComplianceByStatePage() {
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-slate-700 font-semibold text-sm">${reg.price}</span>
                     <Link
-                      href={`/regulations/${reg.slug}`}
+                      href={`/products/${reg.slug}`}
                       className="inline-flex items-center gap-1 bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-blue-800 transition shrink-0"
                     >
                       View Package →
@@ -271,7 +271,7 @@ export default function AIComplianceByStatePage() {
                 <ul className="space-y-1.5 mb-5">
                   <li>
                     <Link
-                      href="/regulations/illinois-hb3773"
+                      href="/products/illinois-hb3773"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       Illinois HB3773 →
@@ -279,7 +279,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                   <li>
                     <Link
-                      href="/regulations/nyc-local-law-144"
+                      href="/products/nyc-local-law-144"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       NYC Local Law 144 →
@@ -287,7 +287,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                   <li>
                     <Link
-                      href="/regulations/colorado-sb24-205"
+                      href="/products/colorado-sb24-205"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       Colorado SB 24-205 →
@@ -295,7 +295,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                 </ul>
                 <Link
-                  href="/regulations/multi-state-employer-ai-disclosure"
+                  href="/products/multi-state-employer-ai-disclosure"
                   className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-blue-700 font-medium transition-colors"
                 >
                   Or get the multi-state employer bundle →
@@ -315,7 +315,7 @@ export default function AIComplianceByStatePage() {
                 <ul className="space-y-1.5 mb-5">
                   <li>
                     <Link
-                      href="/regulations/virginia-cdpa"
+                      href="/products/virginia-cdpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       Virginia CDPA →
