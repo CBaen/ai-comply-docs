@@ -133,18 +133,19 @@ html.dark a.text-red-700:hover { color: #fecaca; }
 /* Dark mode toggle */
 .dark-toggle {
   background: none;
-  border: 1px solid currentColor;
+  border: 1px solid #94a3b8;
   border-radius: 0.5rem;
   padding: 0.4rem;
   cursor: pointer;
-  color: inherit;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  color: #475569;
+  transition: opacity 0.2s, color 0.2s, border-color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.dark-toggle:hover { opacity: 1; }
+.dark-toggle:hover { color: #1e40af; border-color: #1e40af; }
+html.dark .dark-toggle { color: #e2e8f0; border-color: #64748b; }
+html.dark .dark-toggle:hover { color: #93c5fd; border-color: #93c5fd; }
 .dark-toggle .icon-sun { display: none; }
 .dark-toggle .icon-moon { display: block; }
 html.dark .dark-toggle .icon-sun { display: block; }
