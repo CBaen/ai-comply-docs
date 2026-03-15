@@ -650,7 +650,7 @@ export default function ComplianceQuiz() {
                 <p className="text-gray-500 text-sm mb-6">
                   Many state laws have applicability thresholds based on volume.
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-3" role="radiogroup" aria-label="How many employees or consumers does your business interact with?">
                   {Q3_OPTIONS.map((opt) => (
                     <OptionButton
                       key={opt.value}
@@ -672,7 +672,7 @@ export default function ComplianceQuiz() {
                 <p className="text-gray-500 text-sm mb-6">
                   Selling, sharing, or using personal data for targeted ads triggers additional requirements in most state laws.
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-3" role="radiogroup" aria-label="Does your business sell or share personal data, or use it for targeted advertising?">
                   {Q4_OPTIONS.map((opt) => (
                     <OptionButton
                       key={opt.value}
@@ -694,7 +694,7 @@ export default function ComplianceQuiz() {
                 <p className="text-gray-500 text-sm mb-6">
                   This helps us understand where you&apos;re starting from.
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-3" role="radiogroup" aria-label="Do you currently have any AI compliance documentation in place?">
                   {Q5_OPTIONS.map((opt) => (
                     <OptionButton
                       key={opt.value}

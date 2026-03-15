@@ -75,6 +75,11 @@ export default function PostPaymentHandler({
     }
 
     setStatus("verifying");
+    // Scroll to show the verification spinner
+    setTimeout(() => {
+      const el = document.getElementById("post-payment");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
 
     try {
       const response = await fetch("/api/verify-payment", {
@@ -91,6 +96,12 @@ export default function PostPaymentHandler({
         setDeliveryToken(result.deliveryToken || "");
         setVerifiedSessionId(sessionId);
         setStatus("ready");
+        // Scroll to download section after render
+        setTimeout(() => {
+          const el = document.getElementById("post-payment");
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+          else window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 100);
       } else {
         setStatus("error");
         setErrorMessage(
@@ -325,7 +336,7 @@ export default function PostPaymentHandler({
   // Verifying
   if (status === "verifying") {
     return (
-      <div className="max-w-2xl mx-auto px-4 py-12 text-center">
+      <div id="post-payment" className="max-w-2xl mx-auto px-4 py-12 text-center">
         <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-700 rounded-full animate-spin mx-auto mb-4" />
         <p className="text-lg font-semibold text-gray-900">
           Verifying your payment...
@@ -340,7 +351,7 @@ export default function PostPaymentHandler({
   // Ready — show download/email panel
   if (status === "ready" && formData) {
     return (
-      <div className="max-w-2xl mx-auto px-4 py-12">
+      <div id="post-payment" className="max-w-2xl mx-auto px-4 py-12">
         {/* Success header */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
