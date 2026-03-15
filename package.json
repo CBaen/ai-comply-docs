@@ -7,11 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate-previews": "npx tsx scripts/generate-previews.mts"
+    "generate-previews": "npx tsx scripts/generate-previews.ts"
   },
   "dependencies": {
+    "@auth/pg-adapter": "^1.11.1",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
+    "@neondatabase/serverless": "^1.0.2",
     "@next/mdx": "^16.1.6",
     "cmdk": "^1.1.1",
     "dotenv": "^17.3.1",
@@ -20,6 +22,7 @@
     "jszip": "^3.10.1",
     "minisearch": "^7.2.0",
     "next": "16.1.6",
+    "next-auth": "^5.0.0-beta.30",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "reading-time": "^1.5.0",
