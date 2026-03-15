@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/do-i-need-ai-compliance`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/faq`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/about`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/privacy`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.3 },
+    { url: `${base}/terms`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.3 },
     ...regulationPages,
     ...blogPosts,
   ];

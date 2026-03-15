@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://aicompliancedocuments.com/do-i-need-ai-compliance",
   },
   openGraph: {
-    title: "Do I Need AI Compliance? Free Assessment | AI Compliance Documents",
+    title: "Do I Need AI Compliance? Free Assessment",
     description:
       "Answer 5 questions to find out which AI compliance laws apply to your business. Free assessment covers 14+ state laws and federal requirements.",
     url: "https://aicompliancedocuments.com/do-i-need-ai-compliance",

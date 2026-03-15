@@ -28,9 +28,27 @@ export const metadata: Metadata = {
   },
 };
 
+function OrganizationSchema() {
+  const data = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "AI Compliance Documents",
+    url: "https://aicompliancedocuments.com",
+    email: "info@aicompliancedocuments.com",
+    description:
+      "AI compliance documentation templates for US state and federal AI regulations. Built from enacted statute text.",
+    founder: {
+      "@type": "Person",
+      name: "Cameron",
+    },
+  });
+  return <script type="application/ld+json">{data}</script>;
+}
+
 export default function AboutPage() {
   return (
     <>
+      <OrganizationSchema />
       <Nav />
       <main id="main-content" className="min-h-screen bg-white">
 

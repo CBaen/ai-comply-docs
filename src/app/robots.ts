@@ -10,6 +10,11 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Bingbot", allow: "/" },
       { userAgent: "anthropic-ai", allow: "/" },
       { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
+      { userAgent: "CCBot", allow: "/" },
+      { userAgent: "Claude-Web", allow: "/" },
+      { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "Amazonbot", allow: "/" },
     ],
     sitemap: "https://aicompliancedocuments.com/sitemap.xml",
   };
