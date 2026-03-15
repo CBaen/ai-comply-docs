@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getRegulation } from "@/data/regulations";
+import { REGULATION_CONFIG } from "@/lib/regulation-config";
 
 function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -8,16 +9,9 @@ function getStripe() {
   });
 }
 
-// Add-on price IDs for products with optional training kit upsell
-const ADDON_PRICES: Record<string, { trainingKit?: string }> = {
-  "illinois-hb3773": {
-    trainingKit: "price_1TA3XHGidFVHIL99h2UwiLd9",
-  },
-};
-
 export async function POST(request: Request) {
   const body = await request.json();
-  const { includeTrainingKit, regulation } = body;
+  const { addonIds, regulation } = body;
 
   const slug = regulation || "illinois-hb3773";
   const reg = getRegulation(slug);
@@ -35,9 +29,16 @@ export async function POST(request: Request) {
       { price: reg.stripePriceId, quantity: 1 },
     ];
 
-    const addons = ADDON_PRICES[slug];
-    if (includeTrainingKit && addons?.trainingKit) {
-      lineItems.push({ price: addons.trainingKit, quantity: 1 });
+    const selectedAddonIds: string[] = Array.isArray(addonIds) ? addonIds : [];
+    if (selectedAddonIds.length > 0) {
+      const configEntry = REGULATION_CONFIG[slug];
+      const availableAddons = configEntry?.addons ?? [];
+      for (const addonId of selectedAddonIds) {
+        const addon = availableAddons.find((a) => a.id === addonId);
+        if (addon?.stripePriceId) {
+          lineItems.push({ price: addon.stripePriceId, quantity: 1 });
+        }
+      }
     }
 
     const origin = request.headers.get("origin") || "https://aicompliancedocuments.com";

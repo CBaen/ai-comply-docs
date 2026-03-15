@@ -1069,7 +1069,7 @@ export async function generateDocuments(
     },
   ];
 
-  if (data.includeTrainingKit) {
+  if (data.selectedAddons?.includes("manager-training-kit")) {
     docs.push(
       {
         doc: il.generateManagerTraining(data),

@@ -60,7 +60,7 @@ export default function Questionnaire({
   // Step 6
   const [lawVisited, setLawVisited] = useState(false);
   const [acknowledged, setAcknowledged] = useState(false);
-  const [includeTrainingKit, setIncludeTrainingKit] = useState(false);
+  const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
 
   const decisions = config?.decisions || [];
@@ -129,7 +129,7 @@ export default function Questionnaire({
         month: "long",
         day: "numeric",
       }),
-      includeTrainingKit,
+      selectedAddons,
     };
   }, [
     regulationSlug,
@@ -149,7 +149,7 @@ export default function Questionnaire({
     contactTitle,
     contactEmail,
     contactPhone,
-    includeTrainingKit,
+    selectedAddons,
   ]);
 
   const nextStep = () => {
@@ -215,7 +215,7 @@ export default function Questionnaire({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          includeTrainingKit,
+          addonIds: selectedAddons,
           regulation: regulationSlug,
         }),
       });
@@ -241,8 +241,11 @@ export default function Questionnaire({
 
   const progressPercent = Math.round((step / TOTAL_STEPS) * 100);
   const orderTotal =
-    config && includeTrainingKit && config.trainingKitAvailable
-      ? config.basePrice + config.trainingKitPrice
+    config && selectedAddons.length > 0 && config.addons
+      ? config.basePrice +
+        config.addons
+          .filter((a) => selectedAddons.includes(a.id))
+          .reduce((sum, a) => sum + a.price, 0)
       : price;
 
   if (!config) return null;
@@ -373,8 +376,9 @@ export default function Questionnaire({
               setLawVisited={setLawVisited}
               acknowledged={acknowledged}
               setAcknowledged={setAcknowledged}
-              includeTrainingKit={includeTrainingKit}
-              setIncludeTrainingKit={setIncludeTrainingKit}
+              addons={config.addons ?? []}
+              selectedAddons={selectedAddons}
+              setSelectedAddons={setSelectedAddons}
               checkoutLoading={checkoutLoading}
               orderTotal={orderTotal}
               regulationName={regulationName}
@@ -382,8 +386,6 @@ export default function Questionnaire({
               lawUrl={config.lawUrl}
               lawLinkText={config.lawLinkText}
               acknowledgment={config.acknowledgment}
-              trainingKitAvailable={config.trainingKitAvailable}
-              trainingKitPrice={config.trainingKitPrice}
               basePrice={config.basePrice}
               documents={config.documents}
               handleCheckout={handleCheckout}

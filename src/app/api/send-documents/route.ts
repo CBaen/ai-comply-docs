@@ -503,6 +503,227 @@ const REGULATION_EMAIL: Record<
     reminder:
       "California CCPA, Texas TDPSA, Virginia CDPA, Minnesota MCDPA, Delaware PDPA, and other state laws give consumers the right to access, correct, delete, and opt out of data processing. Most laws require a response within 45 days of a verified request, with a one-time 45-day extension if notice is provided. Penalties for non-response can reach $7,500\u2013$25,000 per violation.",
   },
+  "il-notice-response-kit": {
+    title: "Your Illinois AI Notice & Response Kit",
+    statute: "775 ILCS 5/2-102(L)",
+    description:
+      "employee AI notification templates, an AI use logging form, and an employee inquiry response form. All three documents are included.",
+    steps: [
+      "<strong>Customize the Employee Notification Template</strong> with your company's AI systems and deployment details, then distribute to all affected employees.",
+      "<strong>Start using the AI Use Logging Form</strong> to document each time AI is used in an employment decision — dates, systems, outcomes, and reviewers.",
+      "<strong>Keep the Inquiry Response Form ready</strong> for when employees ask questions about AI use after receiving notice.",
+    ],
+    reminder:
+      "Illinois HB3773 requires notice to employees when AI is used in employment decisions. IDHR is developing implementing rules on timing and format. Having a documented notice and response process demonstrates compliance effort.",
+  },
+  "il-zip-proxy-audit": {
+    title: "Your Illinois Zip Code Proxy Audit Workbook",
+    statute: "775 ILCS 5/2-102(L)",
+    description:
+      "a data input audit template, proxy analysis worksheet, and remediation plan for Illinois\u2019s prohibition on using zip codes as a proxy for protected classes.",
+    steps: [
+      "<strong>Complete the Data Input Audit</strong> for each AI hiring tool — identify every data input and flag any that include zip codes or zip-code-derived data.",
+      "<strong>Work through the Proxy Analysis Worksheet</strong> to assess whether zip codes correlate with protected classes in your applicant pool.",
+      "<strong>If correlation is found, complete the Remediation Plan</strong> — document what you\u2019ll change, when, and who is responsible.",
+    ],
+    reminder:
+      "Illinois HB3773 specifically prohibits using zip codes as a proxy for protected classes in AI-driven employment decisions.",
+  },
+  "co-appeal-correction-kit": {
+    title: "Your Colorado Consumer Appeal & Correction Kit",
+    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    description:
+      "consumer appeal intake forms, data correction request processing templates, and appeal outcome letter templates for Colorado SB 24-205. All three documents are included.",
+    steps: [
+      "<strong>Customize the Appeal Intake Form</strong> with your organization\u2019s contact information and the AI systems consumers can appeal decisions from.",
+      "<strong>Use the Correction Request Processing Template</strong> to document each consumer\u2019s request, the data at issue, and the corrective action taken.",
+      "<strong>Send the Appeal Outcome Letter</strong> to the consumer with the result of their appeal and any further steps available to them.",
+    ],
+    reminder:
+      "Colorado SB 24-205 (C.R.S. \u00A7\u00A7 6-1-1701\u20131707) requires deployers of high-risk AI systems to provide consumers with a mechanism to appeal consequential decisions and correct inaccurate data. This law takes effect June 30, 2026.",
+  },
+  "co-ag-reporting-kit": {
+    title: "Your Colorado AG Discrimination Reporting Kit",
+    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    description:
+      "algorithmic discrimination discovery forms, incident documentation templates, and Colorado AG notification letter templates. All three documents are included.",
+    steps: [
+      "<strong>Use the Discovery Form</strong> to document any instance where an AI system may have produced a discriminatory outcome — record the system, decision, affected population, and date.",
+      "<strong>Complete the Incident Documentation Template</strong> with root cause analysis, impact assessment, and corrective action plan.",
+      "<strong>If AG notification is required, use the Notification Letter Template</strong> — customize it with your organization\u2019s details and file it with your compliance records.",
+    ],
+    reminder:
+      "Colorado SB 24-205 requires deployers to notify the Colorado AG when algorithmic discrimination is discovered. Failure to report known discrimination is itself a violation. The AG may seek civil penalties up to $20,000 per violation under the Colorado Consumer Protection Act (C.R.S. \u00A7 6-1-112).",
+  },
+  "co-dev-deploy-exchange": {
+    title: "Your Colorado Developer-Deployer Documentation Exchange Kit",
+    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    description:
+      "developer disclosure request templates, deployer gap analysis worksheets, and documentation exchange checklists for Colorado SB 24-205. All three documents are included.",
+    steps: [
+      "<strong>Send the Developer Disclosure Request</strong> to each AI system developer you work with — Colorado requires developers to provide deployers with the information needed to comply.",
+      "<strong>Complete the Gap Analysis Worksheet</strong> to identify where developer disclosures fall short of what your compliance program requires.",
+      "<strong>Use the Exchange Checklist</strong> to track the documentation exchange for each system and flag any open items before deployment.",
+    ],
+    reminder:
+      "Colorado SB 24-205 creates distinct obligations for developers and deployers. Deployers are responsible for their own compliance even when developers fail to provide adequate disclosures. Document every exchange attempt.",
+  },
+  "ca-admt-notice-optout": {
+    title: "Your California ADMT Notice & Opt-Out Kit",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
+    description:
+      "pre-use ADMT notice templates, opt-out mechanism documentation, and opt-out request processing forms for California CPPA ADMT regulations. All three documents are included.",
+    steps: [
+      "<strong>Publish the Pre-Use ADMT Notice</strong> before deploying automated decisionmaking technology on any California consumer — the notice must appear before the system is used.",
+      "<strong>Implement your Opt-Out Mechanism</strong> using the documentation template and verify the opt-out link or process is accessible, functional, and tested.",
+      "<strong>Process opt-out requests using the Request Form</strong> — log each request, the action taken, and the date of completion.",
+    ],
+    reminder:
+      "The CPPA ADMT regulations (Cal. Civ. Code \u00A7 1798.100 et seq.) are effective January 1, 2026. Pre-use notice and opt-out are mandatory before using ADMT for significant decisions about California consumers. CPPA administrative penalties: $2,500 per violation, $7,500 per intentional violation.",
+  },
+  "ca-admt-access-kit": {
+    title: "Your California ADMT Access Request Kit",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
+    description:
+      "ADMT access request intake forms, logic disclosure response templates, and access request tracking logs for California CPPA ADMT regulations. All three documents are included.",
+    steps: [
+      "<strong>Make the Access Request Intake Form available</strong> to California consumers through your privacy rights portal or on request.",
+      "<strong>Use the Logic Disclosure Response Template</strong> to explain the ADMT system\u2019s logic and how it affected the consumer\u2019s outcome — responses must be meaningful, not boilerplate.",
+      "<strong>Track every request in the Access Request Log</strong> — note the request date, response date, system involved, and outcome.",
+    ],
+    reminder:
+      "California CPPA ADMT regulations give consumers the right to access information about automated decisionmaking technology used on them, including a meaningful explanation of the system\u2019s logic. Responses are due within 45 days of a verified request.",
+  },
+  "ca-cyber-audit-kit": {
+    title: "Your California Cybersecurity Audit Kit",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
+    description:
+      "cybersecurity audit planning templates, audit scope documentation, and audit findings log for California CPPA cybersecurity audit requirements. All three documents are included.",
+    steps: [
+      "<strong>Complete the Audit Planning Template</strong> before each cybersecurity audit cycle — define scope, assign auditors, and document the AI systems under review.",
+      "<strong>Use the Audit Scope Documentation</strong> to confirm which AI systems process personal information and are subject to CPPA cybersecurity audit requirements.",
+      "<strong>Record findings in the Audit Findings Log</strong> and assign remediation owners and deadlines for every identified gap.",
+    ],
+    reminder:
+      "The CPPA cybersecurity audit regulations require businesses that process personal information to conduct annual cybersecurity audits. AI systems that process personal information are in scope. Audit documentation may be requested by the CPPA during an investigation.",
+  },
+  "nyc-bias-audit-mgmt": {
+    title: "Your NYC Bias Audit Management Kit",
+    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
+    description:
+      "bias audit project management templates, independent auditor coordination checklists, and audit cycle tracking logs for NYC Local Law 144. All three documents are included.",
+    steps: [
+      "<strong>Use the Audit Project Management Template</strong> to scope and schedule your annual bias audit — assign an independent auditor at least 60 days before your AEDT\u2019s next use date.",
+      "<strong>Complete the Auditor Coordination Checklist</strong> to ensure your auditor receives all required data, system access, and documentation before the audit begins.",
+      "<strong>Maintain the Audit Cycle Tracking Log</strong> to record each year\u2019s audit completion date, auditor name, and publication date for the required public summary.",
+    ],
+    reminder:
+      "NYC Local Law 144 requires annual independent bias audits for all automated employment decision tools used in NYC. The audit summary must be published on your website at least 10 business days before each AEDT is used. DCWP proactive investigations increased in 2026.",
+  },
+  "nyc-candidate-notice-kit": {
+    title: "Your NYC Candidate Notice Kit",
+    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
+    description:
+      "candidate and employee AEDT notification templates, notice delivery tracking logs, and FAQ response templates for NYC Local Law 144. All three documents are included.",
+    steps: [
+      "<strong>Customize the Candidate/Employee Notice Template</strong> with the specific AEDT being used, its purpose, and the contact information for inquiries.",
+      "<strong>Send the Notice before using any AEDT</strong> on a job applicant or employee in NYC — delivery must occur before, not at the time of, the tool\u2019s use.",
+      "<strong>Log every notice delivery</strong> in the Tracking Log — record the recipient, delivery method, date, and the AEDT the notice covered.",
+    ],
+    reminder:
+      "NYC Local Law 144 requires employers to notify job candidates and employees before using an automated employment decision tool on them. Notice must include the AEDT\u2019s purpose, the characteristics it evaluates, and contact information. DCWP may request delivery records.",
+  },
+  "va-consumer-rights-kit": {
+    title: "Your Virginia Consumer Rights Processing Kit",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-585",
+    description:
+      "consumer rights request intake forms, response letter templates, and appeal processing documentation for the Virginia Consumer Data Protection Act. All three documents are included.",
+    steps: [
+      "<strong>Make the Consumer Rights Request Intake Form available</strong> through your privacy portal or on request — Virginia consumers have rights to access, correct, delete, and opt out.",
+      "<strong>Use the Response Letter Templates</strong> to respond within 45 days of a verified request — customize with your organization\u2019s contact information and the action taken.",
+      "<strong>Process appeals using the Appeal Documentation Template</strong> — Virginia requires an appeals mechanism for denied requests, with a response due within 60 days.",
+    ],
+    reminder:
+      "The Virginia Consumer Data Protection Act (Va. Code \u00A7\u00A7 59.1-575\u201359.1-584) requires a 45-day response window for consumer rights requests and a mandatory appeals process for denials. The Virginia AG has enforcement authority with civil penalties up to $7,500 per violation (\u00A7 59.1-584(C)).",
+  },
+  "va-profiling-assessment-kit": {
+    title: "Your Virginia Profiling Assessment Workbook",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-585",
+    description:
+      "profiling data protection assessment templates, consequential decision identification worksheets, and assessment filing checklists for the Virginia Consumer Data Protection Act. All three documents are included.",
+    steps: [
+      "<strong>Use the Consequential Decision Identification Worksheet</strong> to catalog every AI system that makes or assists decisions with legal or similarly significant effects on Virginia consumers.",
+      "<strong>Complete a Data Protection Assessment</strong> for each identified system using the Assessment Template — document the processing purpose, risks, and safeguards.",
+      "<strong>File completed assessments using the Checklist</strong> and make them available to the Virginia AG upon request (\u00A7 59.1-580(B)).",
+    ],
+    reminder:
+      "Virginia CDPA (\u00A7 59.1-580) requires data protection assessments for profiling activities that produce legal or similarly significant effects. Assessments must be made available to the Attorney General on request. There is no private right of action; the AG has exclusive enforcement authority.",
+  },
+  "va-controller-processor-kit": {
+    title: "Your Virginia Controller-Processor Kit",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-585",
+    description:
+      "controller-processor data processing agreement templates, processor instruction documentation, and sub-processor management checklists for the Virginia Consumer Data Protection Act. All three documents are included.",
+    steps: [
+      "<strong>Execute a Data Processing Agreement</strong> with every processor that handles Virginia consumer personal data on your behalf — use the Agreement Template as your starting point.",
+      "<strong>Document your processing instructions</strong> for each processor using the Instruction Documentation template — Virginia requires controllers to provide binding instructions to processors.",
+      "<strong>Complete the Sub-Processor Management Checklist</strong> for each processor relationship to confirm downstream data handling meets CDPA requirements.",
+    ],
+    reminder:
+      "Virginia CDPA (\u00A7 59.1-577) requires data processing agreements between controllers and processors. Controllers remain liable for processor conduct. Document every processor relationship before sharing Virginia consumer personal data.",
+  },
+  "eu-fria-kit": {
+    title: "Your EU AI Act FRIA Kit",
+    statute: "Regulation (EU) 2024/1689",
+    description:
+      "Fundamental Rights Impact Assessment templates, stakeholder consultation documentation, and FRIA filing checklists for EU AI Act high-risk AI systems. All three documents are included.",
+    steps: [
+      "<strong>Complete the FRIA Template</strong> for each high-risk AI system before deployment — assess the system\u2019s impact on fundamental rights including non-discrimination, privacy, and due process.",
+      "<strong>Document your stakeholder consultations</strong> using the Consultation Documentation template — the EU AI Act requires meaningful consultation with affected groups for certain high-risk systems.",
+      "<strong>File the completed FRIA</strong> using the Checklist and maintain it throughout the system\u2019s lifecycle — assessments must be updated when the system changes significantly.",
+    ],
+    reminder:
+      "EU AI Act Article 27 requires deployers of certain high-risk AI systems to conduct a Fundamental Rights Impact Assessment before deployment. FRIA obligations apply to bodies governed by public law and private entities providing public services, as well as financial institutions and employers using high-risk systems.",
+  },
+  "eu-post-market-kit": {
+    title: "Your EU Post-Market Monitoring Kit",
+    statute: "Regulation (EU) 2024/1689",
+    description:
+      "post-market monitoring plan templates, serious incident reporting forms, and corrective action tracking logs for EU AI Act high-risk AI systems. All three documents are included.",
+    steps: [
+      "<strong>Implement the Post-Market Monitoring Plan</strong> for each high-risk AI system — assign a responsible person, define monitoring metrics, and set review intervals.",
+      "<strong>Use the Serious Incident Report Form</strong> whenever a high-risk AI system causes or contributes to a serious incident — EU AI Act Article 73 requires notification as soon as possible.",
+      "<strong>Track corrective actions in the Log</strong> — document every identified risk, the corrective action taken, and the date of resolution.",
+    ],
+    reminder:
+      "EU AI Act Article 72 requires providers of high-risk AI systems to establish post-market monitoring systems. Article 73 requires serious incident reporting to national market surveillance authorities as soon as possible after identification. High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
+  },
+  "eu-human-oversight-kit": {
+    title: "Your EU Human Oversight Kit",
+    statute: "Regulation (EU) 2024/1689",
+    description:
+      "human oversight procedure documentation, oversight personnel training records, and oversight log templates for EU AI Act high-risk AI systems. All three documents are included.",
+    steps: [
+      "<strong>Document your Human Oversight Procedures</strong> for each high-risk AI system — identify who has oversight authority, what they monitor, and how they can intervene or halt the system.",
+      "<strong>Use the Training Records Template</strong> to document oversight personnel training — EU AI Act Article 26 requires deployers to ensure assigned staff have the necessary competence.",
+      "<strong>Maintain Oversight Logs</strong> for each high-risk system — record each oversight review, the reviewer, findings, and any interventions made.",
+    ],
+    reminder:
+      "EU AI Act Article 14 requires high-risk AI systems to be designed and deployed with effective human oversight. Deployers must assign oversight to competent persons and ensure those persons can understand, monitor, and intervene in the system\u2019s operation. Document every oversight activity.",
+  },
+  "eu-registration-transparency": {
+    title: "Your EU Registration & Transparency Kit",
+    statute: "Regulation (EU) 2024/1689",
+    description:
+      "EU AI database registration documentation templates, transparency obligation checklists, and user-facing disclosure templates for EU AI Act high-risk AI systems. All three documents are included.",
+    steps: [
+      "<strong>Complete the Registration Documentation Template</strong> before registering each high-risk AI system in the EU AI Act database — registration is required before deployment for most Annex III systems.",
+      "<strong>Work through the Transparency Obligation Checklist</strong> to confirm your system\u2019s instructions for use, technical documentation, and user disclosures meet EU AI Act requirements.",
+      "<strong>Customize the User-Facing Disclosure Templates</strong> for each high-risk system and integrate them into your product documentation and onboarding materials.",
+    ],
+    reminder:
+      "EU AI Act Article 49 requires providers of high-risk AI systems to register in the EU database before placing systems on the market. Article 13 requires transparency obligations including instructions for use that enable deployers to understand and operate the system effectively.",
+  },
 };
 
 function buildEmailHtml(
