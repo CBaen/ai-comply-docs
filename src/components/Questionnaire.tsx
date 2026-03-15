@@ -28,13 +28,17 @@ export default function Questionnaire({
   price,
 }: QuestionnaireProps) {
   const config = REGULATION_CONFIG[regulationSlug];
+  const skippedSteps = (config?.skippedSteps || []).filter((s: number) => s !== 6);
+  const visibleSteps = [1, 2, 3, 4, 5, 6].filter(s => !skippedSteps.includes(s));
+  const visibleStepCount = visibleSteps.length;
 
   // Restore saved form state from sessionStorage if available (survives browser Back)
   const saved = typeof window !== "undefined" ? (() => {
     try { return JSON.parse(sessionStorage.getItem(`questionnaire-${regulationSlug}`) || "null"); } catch { return null; }
   })() : null;
 
-  const [step, setStep] = useState<number>(saved?.step || 1);
+  const initialStep = saved?.step && !skippedSteps.includes(saved.step) ? saved.step : visibleSteps[0];
+  const [step, setStep] = useState<number>(initialStep);
   const [error, setError] = useState("");
 
   // Step 1
