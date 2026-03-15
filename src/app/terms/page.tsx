@@ -22,8 +22,8 @@ export default function TermsPage() {
     <>
       <Nav />
       <main id="main-content" className="min-h-screen bg-white">
-        <div className="max-w-3xl mx-auto px-4 py-16 md:py-24">
-          <h1 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
             Terms of Service
           </h1>
           <p className="text-gray-500 text-sm mb-10">
@@ -33,7 +33,7 @@ export default function TermsPage() {
           <div className="prose prose-gray max-w-none space-y-10 text-gray-700 leading-relaxed">
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">1. We Are Not a Law Firm</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">1. We Are Not a Law Firm</h2>
               <p>
                 AI Compliance Documents is a document generation service. We are not a law firm, we do
                 not employ attorneys in a client-facing capacity, and we do not practice law. Nothing on
@@ -48,7 +48,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">2. What Our Documents Are</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">2. What Our Documents Are</h2>
               <p>
                 Our documents are customizable templates intended to help businesses begin the process of
                 AI compliance documentation. They are designed for compliance planning purposes and are
@@ -67,7 +67,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">3. Not Legal Advice — Consult an Attorney</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">3. Not Legal Advice — Consult an Attorney</h2>
               <p>
                 We strongly recommend that you consult a licensed attorney admitted in your jurisdiction
                 before relying on any document generated through this service. AI and algorithmic
@@ -82,7 +82,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">4. No Guarantee of Legal Sufficiency</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">4. No Guarantee of Legal Sufficiency</h2>
               <p>
                 AI Compliance Documents makes no representation, warranty, or guarantee — express or
                 implied — that any document generated through our service will satisfy the requirements
@@ -97,7 +97,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">5. Your Responsibility</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">5. Your Responsibility</h2>
               <p>
                 By purchasing a document from AI Compliance Documents, you acknowledge and agree that:
               </p>
@@ -110,7 +110,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">6. All Sales Are Final</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">6. All Sales Are Final</h2>
               <p>
                 All purchases are for digital products delivered immediately upon payment confirmation.
                 Because our documents are generated and delivered electronically at the time of
@@ -130,7 +130,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">7. Limitation of Liability</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">7. Limitation of Liability</h2>
               <p>
                 To the maximum extent permitted by applicable law, AI Compliance Documents, its owners,
                 employees, agents, and service providers shall not be liable for any indirect,
@@ -145,7 +145,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">8. Intellectual Property</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">8. Intellectual Property</h2>
               <p>
                 Documents you purchase are licensed for your internal business use only. You may not
                 resell, redistribute, or sublicense our templates or document output to third parties.
@@ -155,7 +155,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">9. Governing Law</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">9. Governing Law</h2>
               <p>
                 These Terms of Service are governed by the laws of the State of Wyoming, without regard
                 to its conflict of law provisions. Any dispute arising from these terms or your use of
@@ -165,7 +165,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">10. Changes to These Terms</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">10. Changes to These Terms</h2>
               <p>
                 We may update these Terms of Service from time to time. When we do, we will update the
                 effective date at the top of this page. Continued use of the site after any update
@@ -175,7 +175,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">11. Contact</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">11. Contact</h2>
               <p>
                 Questions about these terms? Reach us at:{" "}
                 <a

@@ -24,7 +24,7 @@ export default function StepCompanyInfo({
           value={companyName}
           onChange={(e) => setCompanyName(e.target.value)}
           placeholder="e.g., Acme Corporation"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
@@ -36,7 +36,7 @@ export default function StepCompanyInfo({
           value={companyState}
           onChange={(e) => setCompanyState(e.target.value)}
           placeholder="e.g., Illinois"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
@@ -46,7 +46,7 @@ export default function StepCompanyInfo({
         <select
           value={companySize}
           onChange={(e) => setCompanySize(e.target.value)}
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
         >
           <option value="">Select...</option>
           <option value="1-50">1-50 employees</option>
@@ -65,7 +65,7 @@ export default function StepCompanyInfo({
           value={companyIndustry}
           onChange={(e) => setCompanyIndustry(e.target.value)}
           placeholder="e.g., Financial Services, Healthcare, Technology"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
     </div>

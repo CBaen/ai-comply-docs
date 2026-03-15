@@ -33,19 +33,19 @@ export default function DoINeedAICompliancePage() {
       <Nav />
       <main id="main-content" className="min-h-screen bg-white">
         {/* Hero */}
-        <header className="bg-gray-900 text-white py-16 md:py-24">
-          <div className="max-w-3xl mx-auto px-4">
-            <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <header className="bg-gray-900 text-white py-12 sm:py-16 md:py-24">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <p className="text-blue-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4">
               Free Assessment
             </p>
-            <h1 className="text-3xl md:text-4xl font-bold font-display leading-tight mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display leading-tight mb-4 sm:mb-6">
               Do I Need AI Compliance?
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
               Answer 5 questions to see which AI laws apply to your business — and which
               documentation packages cover your specific obligations.
             </p>
-            <div className="flex flex-wrap gap-4 mt-8 text-sm text-gray-400">
+            <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8 text-xs sm:text-sm text-gray-400">
               <span className="flex items-center gap-1.5">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-400" />
                 Takes about 2 minutes

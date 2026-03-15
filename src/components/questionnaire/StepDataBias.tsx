@@ -108,7 +108,7 @@ export default function StepDataBias({
         <select
           value={biasAudit}
           onChange={(e) => setBiasAudit(e.target.value)}
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         >
           <option value="">Select...</option>
           <option value="yes">

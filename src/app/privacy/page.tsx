@@ -22,8 +22,8 @@ export default function PrivacyPage() {
     <>
       <Nav />
       <main id="main-content" className="min-h-screen bg-white">
-        <div className="max-w-3xl mx-auto px-4 py-16 md:py-24">
-          <h1 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
             Privacy Policy
           </h1>
           <p className="text-gray-500 text-sm mb-10">
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <div className="prose prose-gray max-w-none space-y-10 text-gray-700 leading-relaxed">
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">1. Overview</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">1. Overview</h2>
               <p>
                 AI Compliance Documents (&quot;we,&quot; &quot;our,&quot; &quot;us&quot;) operates the website{" "}
                 <span className="font-medium text-gray-900">aicompliancedocuments.com</span>. This
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">2. What Data We Collect</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">2. What Data We Collect</h2>
 
               <h3 className="text-base font-semibold text-gray-900 mt-5 mb-2">Information you provide directly</h3>
               <ul className="list-disc list-inside space-y-2 ml-2">
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">3. How We Use Your Data</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">3. How We Use Your Data</h2>
               <p>We use the information you provide for two purposes:</p>
               <ul className="list-disc list-inside mt-3 space-y-2 ml-2">
                 <li>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">4. Questionnaire Data and Storage</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">4. Questionnaire Data and Storage</h2>
               <p>
                 The compliance questionnaire you complete before purchase is stored in your
                 browser&apos;s <span className="font-medium text-gray-900">sessionStorage</span> only.
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">5. Third-Party Service Providers</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">5. Third-Party Service Providers</h2>
               <p>We use the following third-party services to operate our website:</p>
               <ul className="list-disc list-inside mt-3 space-y-2 ml-2">
                 <li>
@@ -155,7 +155,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">6. We Do Not Sell Your Data</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">6. We Do Not Sell Your Data</h2>
               <p>
                 We do not sell, rent, trade, or otherwise transfer your personal information to outside
                 parties for their own marketing or commercial purposes. This applies to all users,
@@ -164,7 +164,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">7. California Residents — Your CCPA Rights</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">7. California Residents — Your CCPA Rights</h2>
               <p>
                 If you are a California resident, you have the right to:
               </p>
@@ -199,7 +199,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">8. Data Retention</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">8. Data Retention</h2>
               <p>
                 We retain your email address and the record of your purchase for as long as reasonably
                 necessary to support your transaction (for example, to resend a document if delivery
@@ -209,7 +209,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">9. Security</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">9. Security</h2>
               <p>
                 We use industry-standard security practices to protect your information, including
                 HTTPS encryption for all data in transit. Payment data is handled entirely by Stripe,
@@ -223,7 +223,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">10. Children&apos;s Privacy</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">10. Children&apos;s Privacy</h2>
               <p>
                 Our service is intended for business use by adults. We do not knowingly collect
                 personal information from anyone under the age of 18. If you believe we have
@@ -233,7 +233,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">11. Changes to This Policy</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">11. Changes to This Policy</h2>
               <p>
                 We may update this Privacy Policy from time to time. When we do, we will update the
                 effective date at the top of this page. We encourage you to review this page
@@ -243,7 +243,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-3">12. Contact</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">12. Contact</h2>
               <p>
                 Questions about this Privacy Policy or how we handle your data? Contact us at:{" "}
                 <a
