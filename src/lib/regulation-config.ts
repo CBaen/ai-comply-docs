@@ -42,7 +42,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        '<strong>What counts as an \u201cAI system\u201d?</strong> Any software that uses artificial intelligence, machine learning, or automated decision-making in your hiring or employment process. Common examples: resume screening tools (like HireVue, Pymetrics), automated scheduling software, performance review platforms with AI features, or chatbots that interact with job applicants. If you\u2019re not sure whether a tool counts \u2014 include it. It\u2019s better to disclose more than less.',
+        'What counts as an \u201cAI system\u201d? Any software that uses artificial intelligence, machine learning, or automated decision-making in your hiring or employment process. Common examples: resume screening tools (like HireVue, Pymetrics), automated scheduling software, performance review platforms with AI features, or chatbots that interact with job applicants. If you\u2019re not sure whether a tool counts \u2014 include it. It\u2019s better to disclose more than less.',
       step2Intro:
         "List each AI tool or system used in employment decisions. We\u2019ll generate documentation for each one.",
       step2DecisionHelp:
@@ -127,7 +127,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What counts as an AI tool?</strong> Any software that uses artificial intelligence, machine learning, or generative AI. Common examples: ChatGPT, Microsoft Copilot, GitHub Copilot, Grammarly, AI-powered CRM features, automated scheduling tools, or any tool that generates text, images, code, or recommendations. If you\u2019re not sure \u2014 include it.",
+        "What counts as an AI tool? Any software that uses artificial intelligence, machine learning, or generative AI. Common examples: ChatGPT, Microsoft Copilot, GitHub Copilot, Grammarly, AI-powered CRM features, automated scheduling tools, or any tool that generates text, images, code, or recommendations. If you\u2019re not sure \u2014 include it.",
       step2Intro:
         "List each AI tool your employees use. This helps us customize your policy to cover the specific tools in your workplace.",
       step2DecisionHelp:
@@ -167,7 +167,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What counts as a vendor AI system?</strong> Any third-party software or service that uses AI to process data or make recommendations for your business. This includes HR platforms with AI screening, CRM tools with AI features, lending or insurance models from vendors, and any SaaS product marketed as \u201cAI-powered.\u201d",
+        "What counts as a vendor AI system? Any third-party software or service that uses AI to process data or make recommendations for your business. This includes HR platforms with AI screening, CRM tools with AI features, lending or insurance models from vendors, and any SaaS product marketed as \u201cAI-powered.\u201d",
       step2Intro:
         "List each AI system you procure from third-party vendors. We\u2019ll generate due diligence documentation for each one.",
       step2DecisionHelp:
@@ -206,7 +206,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI systems need a bias audit?</strong> Any AI system that makes or influences decisions about people. The EEOC uses the \u201c4/5 rule\u201d (80% threshold) to evaluate adverse impact. NYC LL144 requires annual independent bias audits for automated employment decision tools. If your system affects hiring, lending, insurance, or housing \u2014 it should be audited.",
+        "Which AI systems need a bias audit? Any AI system that makes or influences decisions about people. The EEOC uses the \u201c4/5 rule\u201d (80% threshold) to evaluate adverse impact. NYC LL144 requires annual independent bias audits for automated employment decision tools. If your system affects hiring, lending, insurance, or housing \u2014 it should be audited.",
       step2Intro:
         "List each AI system you want to audit for bias. We\u2019ll generate audit templates customized to each system\u2019s decision area.",
       step2DecisionHelp:
@@ -246,7 +246,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI systems need incident response coverage?</strong> Any AI system that could cause harm if it malfunctions, produces biased outputs, or exposes data. California TFAIA requires frontier AI developers to report safety incidents within 15 days. The EU AI Act requires serious incident reporting for high-risk systems. Even without legal requirements, an incident response plan is best practice.",
+        "Which AI systems need incident response coverage? Any AI system that could cause harm if it malfunctions, produces biased outputs, or exposes data. California TFAIA requires frontier AI developers to report safety incidents within 15 days. The EU AI Act requires serious incident reporting for high-risk systems. Even without legal requirements, an incident response plan is best practice.",
       step2Intro:
         "List each AI system that should be covered by your incident response plan. We\u2019ll customize the plan\u2019s severity classifications and reporting procedures for each.",
       step2DecisionHelp:
@@ -285,7 +285,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What is an automated employment decision tool (AEDT)?</strong> Under NYC Admin. Code \u00A7 20-870, any computational process derived from machine learning, statistical modeling, data analytics, or AI that issues simplified output used to make or substantially assist a covered employment decision. Common examples: resume screening software, candidate scoring platforms, interview analysis tools. If the tool materially influences a hiring or promotion decision \u2014 include it.",
+        "What is an automated employment decision tool (AEDT)? Under NYC Admin. Code \u00A7 20-870, any computational process derived from machine learning, statistical modeling, data analytics, or AI that issues simplified output used to make or substantially assist a covered employment decision. Common examples: resume screening software, candidate scoring platforms, interview analysis tools. If the tool materially influences a hiring or promotion decision \u2014 include it.",
       step2Intro:
         "List each automated employment decision tool your organization uses for hiring or promotion decisions in New York City.",
       step2DecisionHelp:
@@ -322,7 +322,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any system that processes personal data of Texas consumers for profiling, targeted advertising, or data sales. The TDPSA (\u00A7 541.107) requires data protection assessments for profiling activities that present a heightened risk to consumers.",
+        "What AI systems are covered? Any system that processes personal data of Texas consumers for profiling, targeted advertising, or data sales. The TDPSA (\u00A7 541.107) requires data protection assessments for profiling activities that present a heightened risk to consumers.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Texas Data Privacy and Security Act.",
       step2DecisionHelp:
@@ -360,7 +360,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any system that processes personal data of Delaware consumers for profiling, targeted advertising, or data sales. The Delaware PDPA (\u00A7 12D-109) requires data protection assessments for profiling activities. Delaware has the lowest coverage thresholds of any state \u2014 35,000 consumers OR 10,000 consumers with 20%+ revenue from data sales.",
+        "What AI systems are covered? Any system that processes personal data of Delaware consumers for profiling, targeted advertising, or data sales. The Delaware PDPA (\u00A7 12D-109) requires data protection assessments for profiling activities. Delaware has the lowest coverage thresholds of any state \u2014 35,000 consumers OR 10,000 consumers with 20%+ revenue from data sales.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Delaware Personal Data Privacy Act.",
       step2DecisionHelp:
@@ -399,7 +399,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any system that processes personal data of consumers for profiling, targeted advertising, or data sales across the 15+ states requiring documented data protection assessments. This bundle covers all major state consumer privacy laws with profiling assessment requirements.",
+        "What AI systems are covered? Any system that processes personal data of consumers for profiling, targeted advertising, or data sales across the 15+ states requiring documented data protection assessments. This bundle covers all major state consumer privacy laws with profiling assessment requirements.",
       step2Intro:
         "List each AI or data processing system you use in activities covered by multi-state consumer privacy laws. We\u2019ll generate a unified assessment template covering all applicable states.",
       step2DecisionHelp:
@@ -441,7 +441,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any AI tool used in employment decisions in Illinois, New York City, or Colorado. Illinois HB3773 covers all employment decisions for IL employees. NYC LL144 covers automated employment decision tools used for hiring or promotion in NYC. Colorado SB24-205 covers AI used in consequential employment decisions for CO consumers.",
+        "What AI systems are covered? Any AI tool used in employment decisions in Illinois, New York City, or Colorado. Illinois HB3773 covers all employment decisions for IL employees. NYC LL144 covers automated employment decision tools used for hiring or promotion in NYC. Colorado SB24-205 covers AI used in consequential employment decisions for CO consumers.",
       step2Intro:
         "List each AI tool or system used in employment decisions across Illinois, New York City, and/or Colorado. We\u2019ll generate unified disclosure documentation covering all three jurisdictions.",
       step2DecisionHelp:
@@ -481,7 +481,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Virginia consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers that produce legal or similarly significant effects — include it.",
+        "What AI systems are covered? Any system that uses personal data of Virginia consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers that produce legal or similarly significant effects — include it.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Virginia Consumer Data Protection Act.",
       step2DecisionHelp:
@@ -521,7 +521,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Connecticut consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers that produce legal or similarly significant effects — include it.",
+        "What AI systems are covered? Any system that uses personal data of Connecticut consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers that produce legal or similarly significant effects — include it.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Connecticut Data Privacy Act.",
       step2DecisionHelp:
@@ -562,7 +562,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Oregon consumers for profiling, targeted advertising, data sales, or processing sensitive data. Oregon also requires consent before processing data of consumers aged 13–15 for targeted advertising or data sales. If your AI system makes decisions about consumers — include it.",
+        "What AI systems are covered? Any system that uses personal data of Oregon consumers for profiling, targeted advertising, data sales, or processing sensitive data. Oregon also requires consent before processing data of consumers aged 13–15 for targeted advertising or data sales. If your AI system makes decisions about consumers — include it.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Oregon Consumer Privacy Act.",
       step2DecisionHelp:
@@ -602,7 +602,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems are covered?</strong> Any system that uses personal data of Minnesota consumers for algorithmic profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers \u2014 include it.",
+        "What AI systems are covered? Any system that uses personal data of Minnesota consumers for algorithmic profiling, targeted advertising, data sales, or processing sensitive data. If your AI system makes decisions about consumers \u2014 include it.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Minnesota Consumer Data Privacy Act.",
       step2DecisionHelp:
@@ -644,7 +644,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What is ADMT?</strong> Under the CPPA regulations, automated decisionmaking technology means any system that uses computation to make a decision, or facilitate human decisionmaking, that has a legal or similarly significant effect on a consumer. This includes AI used in hiring, lending, insurance, healthcare, housing, and education decisions.",
+        "What is ADMT? Under the CPPA regulations, automated decisionmaking technology means any system that uses computation to make a decision, or facilitate human decisionmaking, that has a legal or similarly significant effect on a consumer. This includes AI used in hiring, lending, insurance, healthcare, housing, and education decisions.",
       step2Intro:
         "List each automated decisionmaking technology system your organization uses that affects California consumers.",
       step2DecisionHelp:
@@ -691,7 +691,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What is a high-risk AI system under the EU AI Act?</strong> Under Annex III of Regulation (EU) 2024/1689, high-risk systems include AI used in employment decisions, education, credit, law enforcement, critical infrastructure, and healthcare. If your system makes or substantially influences decisions in these areas affecting EU residents \u2014 include it.",
+        "What is a high-risk AI system under the EU AI Act? Under Annex III of Regulation (EU) 2024/1689, high-risk systems include AI used in employment decisions, education, credit, law enforcement, critical infrastructure, and healthcare. If your system makes or substantially influences decisions in these areas affecting EU residents \u2014 include it.",
       step2Intro:
         "List each high-risk AI system that falls under the EU AI Act. These are systems used in the areas listed in Annex III of Regulation (EU) 2024/1689.",
       step2DecisionHelp:
@@ -731,7 +731,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI tools require EEOC compliance review?</strong> Any AI or automated system used in hiring, promotion, termination, or performance evaluation. The Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607) apply to any selection procedure that has adverse impact on a protected group. If your tool screens, scores, or ranks job candidates \u2014 include it.",
+        "Which AI tools require EEOC compliance review? Any AI or automated system used in hiring, promotion, termination, or performance evaluation. The Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607) apply to any selection procedure that has adverse impact on a protected group. If your tool screens, scores, or ranks job candidates \u2014 include it.",
       step2Intro:
         "List each AI or automated system used in employment decisions. These tools are subject to the EEOC\u2019s adverse impact analysis requirements under 29 CFR Part 1607.",
       step2DecisionHelp:
@@ -774,7 +774,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI systems should be covered by your RMF implementation?</strong> Any system that uses AI to make or support decisions. The NIST AI RMF applies to all AI systems regardless of risk level, but prioritization is recommended based on potential impact. Start with customer-facing, employment, financial, and safety-critical systems.",
+        "Which AI systems should be covered by your RMF implementation? Any system that uses AI to make or support decisions. The NIST AI RMF applies to all AI systems regardless of risk level, but prioritization is recommended based on potential impact. Start with customer-facing, employment, financial, and safety-critical systems.",
       step2Intro:
         "List each AI system you are bringing under your NIST AI RMF implementation. We\u2019ll generate framework documentation for each.",
       step2DecisionHelp:
@@ -816,7 +816,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI systems process protected health information?</strong> Any AI system that creates, receives, maintains, or transmits PHI \u2014 individually identifiable health information \u2014 is subject to HIPAA. This includes clinical decision support tools, diagnostic AI, AI-powered billing systems, research analytics platforms, and patient-facing chatbots. If the system touches patient data \u2014 include it.",
+        "Which AI systems process protected health information? Any AI system that creates, receives, maintains, or transmits PHI \u2014 individually identifiable health information \u2014 is subject to HIPAA. This includes clinical decision support tools, diagnostic AI, AI-powered billing systems, research analytics platforms, and patient-facing chatbots. If the system touches patient data \u2014 include it.",
       step2Intro:
         "List each AI system used in your healthcare organization that processes or may access protected health information.",
       step2DecisionHelp:
@@ -859,7 +859,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI systems require financial services compliance review?</strong> Any AI system used in credit decisions, underwriting, trading, customer service, fraud detection, or marketing in a regulated financial services context. Regulation B (12 CFR Part 1002) requires adverse action notices for AI-driven credit denials. FINRA has flagged AI supervision as a 2026 examination priority.",
+        "Which AI systems require financial services compliance review? Any AI system used in credit decisions, underwriting, trading, customer service, fraud detection, or marketing in a regulated financial services context. Regulation B (12 CFR Part 1002) requires adverse action notices for AI-driven credit denials. FINRA has flagged AI supervision as a 2026 examination priority.",
       step2Intro:
         "List each AI system used in your financial services operations. These tools are subject to ECOA, FCRA, and FINRA supervision requirements.",
       step2DecisionHelp:
@@ -896,7 +896,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI tools do your managers need to explain?</strong> Any AI system that affects employees \u2014 resume screening tools, scheduling AI, performance review platforms, productivity tools, or any software your employees interact with that uses AI. List the tools your managers will need to discuss with their teams.",
+        "What AI tools do your managers need to explain? Any AI system that affects employees \u2014 resume screening tools, scheduling AI, performance review platforms, productivity tools, or any software your employees interact with that uses AI. List the tools your managers will need to discuss with their teams.",
       step2Intro:
         "List each AI tool or system your managers need to explain to employees. We\u2019ll customize the talking points and FAQ for your specific tools.",
       step2DecisionHelp:
@@ -932,7 +932,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI compliance documents need annual review?</strong> Any AI compliance documents you have in place \u2014 employee policies, vendor due diligence, bias audits, incident response plans, or state-specific compliance packages. This annual checklist ensures they stay current as laws change.",
+        "Which AI compliance documents need annual review? Any AI compliance documents you have in place \u2014 employee policies, vendor due diligence, bias audits, incident response plans, or state-specific compliance packages. This annual checklist ensures they stay current as laws change.",
       step2Intro:
         "List each AI system and compliance document area you need to review annually. The checklist will walk through each one.",
       step2DecisionHelp:
@@ -970,7 +970,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems should be reported to your board?</strong> Any AI system that creates material risk \u2014 legal, regulatory, reputational, or operational. Boards increasingly need to understand AI risk exposure, especially for systems affecting customers, employees, or regulated activities.",
+        "What AI systems should be reported to your board? Any AI system that creates material risk \u2014 legal, regulatory, reputational, or operational. Boards increasingly need to understand AI risk exposure, especially for systems affecting customers, employees, or regulated activities.",
       step2Intro:
         "List each AI system that should be included in board-level risk reporting. The executive summary and board presentation will cover each one.",
       step2DecisionHelp:
@@ -1007,7 +1007,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Where do you need to disclose AI use?</strong> Colorado SB24-205, California CCPA ADMT, Minnesota MCDPA, and other state laws require consumer notice before using AI in consequential decisions. This kit provides notices in website banner, email, and physical posting formats.",
+        "Where do you need to disclose AI use? Colorado SB24-205, California CCPA ADMT, Minnesota MCDPA, and other state laws require consumer notice before using AI in consequential decisions. This kit provides notices in website banner, email, and physical posting formats.",
       step2Intro:
         "List each AI system for which you need consumer disclosure notices. We\u2019ll customize the notices for your specific AI use context.",
       step2DecisionHelp:
@@ -1045,7 +1045,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Why do you need data mapping?</strong> Every state privacy law requires a data protection assessment before you can document compliance. You cannot complete an assessment if you don\u2019t know what data you have, where it comes from, where it goes, and who sees it. Data mapping is step zero.",
+        "Why do you need data mapping? Every state privacy law requires a data protection assessment before you can document compliance. You cannot complete an assessment if you don\u2019t know what data you have, where it comes from, where it goes, and who sees it. Data mapping is step zero.",
       step2Intro:
         "List each AI system or data processing activity you need to map. The inventory templates will document each system\u2019s data flows and sharing relationships.",
       step2DecisionHelp:
@@ -1082,7 +1082,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which laws give consumers rights about your AI?</strong> California CCPA, Colorado SB24-205, Minnesota MCDPA, Texas TDPSA, Delaware PDPA, and other state laws give consumers rights to access, correct, delete, and opt out of AI-driven profiling. This kit provides the intake form, response letters, and timeline tracker to handle those requests professionally.",
+        "Which laws give consumers rights about your AI? California CCPA, Colorado SB24-205, Minnesota MCDPA, Texas TDPSA, Delaware PDPA, and other state laws give consumers rights to access, correct, delete, and opt out of AI-driven profiling. This kit provides the intake form, response letters, and timeline tracker to handle those requests professionally.",
       step2Intro:
         "List each AI system or data processing activity that generates consumer rights requests. The intake form and response templates cover each type of request.",
       step2DecisionHelp:
@@ -1125,7 +1125,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems need governance?</strong> Any AI system your organization deploys, including third-party tools with AI features. The NIST AI RMF Govern function applies to all AI systems \u2014 from simple recommendation engines to complex generative AI. If employees or customers interact with it and it uses machine learning or AI, it belongs in your governance framework.",
+        "What AI systems need governance? Any AI system your organization deploys, including third-party tools with AI features. The NIST AI RMF Govern function applies to all AI systems \u2014 from simple recommendation engines to complex generative AI. If employees or customers interact with it and it uses machine learning or AI, it belongs in your governance framework.",
       step2Intro:
         "List each AI system your organization deploys. Your governance framework will cover all of them.",
       step2DecisionHelp:
@@ -1164,7 +1164,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which systems belong in your AI inventory?</strong> Every AI system your organization deploys \u2014 whether built internally, purchased from a vendor, or accessed as a SaaS feature. This includes resume screening tools, chatbots, recommendation engines, fraud detection models, and any software marketed as \u201cAI-powered.\u201d You cannot assess, govern, or comply with AI law for systems you haven\u2019t inventoried.",
+        "Which systems belong in your AI inventory? Every AI system your organization deploys \u2014 whether built internally, purchased from a vendor, or accessed as a SaaS feature. This includes resume screening tools, chatbots, recommendation engines, fraud detection models, and any software marketed as \u201cAI-powered.\u201d You cannot assess, govern, or comply with AI law for systems you haven\u2019t inventoried.",
       step2Intro:
         "List each AI system your organization uses. The inventory will capture name, purpose, vendor, data inputs, risk level, and owner for each system.",
       step2DecisionHelp:
@@ -1203,7 +1203,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which systems belong in your transparency report?</strong> Any AI system your organization deploys that affects people \u2014 especially high-risk systems under EU AI Act Annex III. Voluntary transparency reports typically cover all material AI deployments. The more systems you disclose, the stronger your transparency posture.",
+        "Which systems belong in your transparency report? Any AI system your organization deploys that affects people \u2014 especially high-risk systems under EU AI Act Annex III. Voluntary transparency reports typically cover all material AI deployments. The more systems you disclose, the stronger your transparency posture.",
       step2Intro:
         "List each AI system you want to include in your transparency report. The template will generate a report section for each one.",
       step2DecisionHelp:
@@ -1242,7 +1242,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems need whistleblower protections?</strong> Any AI system where employees might observe harmful outputs, unsafe behavior, or policy violations. This is especially important for AI systems that make consequential decisions \u2014 hiring, lending, healthcare triage, content moderation. Employees who observe problems need a protected channel to report them.",
+        "What AI systems need whistleblower protections? Any AI system where employees might observe harmful outputs, unsafe behavior, or policy violations. This is especially important for AI systems that make consequential decisions \u2014 hiring, lending, healthcare triage, content moderation. Employees who observe problems need a protected channel to report them.",
       step2Intro:
         "List the AI systems your whistleblower policy will cover. Your policy will identify protected reporting channels for each system.",
       step2DecisionHelp:
@@ -1280,7 +1280,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Which AI features need to be covered in your Customer AUP?</strong> Any AI capability you make available to customers \u2014 generative AI features, AI-powered recommendations, automated decision tools, chatbots, or AI-assisted workflows. Your Customer AUP sets the rules for how customers may use your AI features, what\u2019s prohibited, and what your liability limits are.",
+        "Which AI features need to be covered in your Customer AUP? Any AI capability you make available to customers \u2014 generative AI features, AI-powered recommendations, automated decision tools, chatbots, or AI-assisted workflows. Your Customer AUP sets the rules for how customers may use your AI features, what\u2019s prohibited, and what your liability limits are.",
       step2Intro:
         "List each AI-powered feature or product you offer to customers. Your Customer AUP will cover all of them.",
       step2DecisionHelp:
@@ -1320,7 +1320,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What systems are covered?</strong> Any system that uses personal data of Indiana consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your system makes decisions about consumers \u2014 include it.",
+        "What systems are covered? Any system that uses personal data of Indiana consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your system makes decisions about consumers \u2014 include it.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Indiana Consumer Data Protection Act (IC 24-15).",
       step2DecisionHelp:
@@ -1360,7 +1360,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What systems are covered?</strong> Any system that uses personal data of Montana consumers for profiling, targeted advertising, data sales, or processing sensitive data. Montana has the lowest applicability thresholds of any state \u2014 if your business reaches 25,000 Montana consumers, review carefully.",
+        "What systems are covered? Any system that uses personal data of Montana consumers for profiling, targeted advertising, data sales, or processing sensitive data. Montana has the lowest applicability thresholds of any state \u2014 if your business reaches 25,000 Montana consumers, review carefully.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Montana Consumer Data Privacy Act (MCA \u00A7\u00A7 30-14-2801\u201330-14-2820).",
       step2DecisionHelp:
@@ -1400,7 +1400,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What systems are covered?</strong> Any system that uses personal data of Kentucky consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your system makes decisions about consumers \u2014 include it.",
+        "What systems are covered? Any system that uses personal data of Kentucky consumers for profiling, targeted advertising, data sales, or processing sensitive data. If your system makes decisions about consumers \u2014 include it.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the Kentucky Consumer Data Protection Act (KRS Chapter 367, HB 15).",
       step2DecisionHelp:
@@ -1440,7 +1440,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What systems are covered?</strong> Any system that uses personal data of New Jersey consumers for profiling, targeted advertising, data sales, or processing sensitive data. Note: the NJDPA is a separate law from the NJ Law Against Discrimination.",
+        "What systems are covered? Any system that uses personal data of New Jersey consumers for profiling, targeted advertising, data sales, or processing sensitive data. Note: the NJDPA is a separate law from the NJ Law Against Discrimination.",
       step2Intro:
         "List each AI or data processing system used in activities covered by the New Jersey Data Protection Act (S332).",
       step2DecisionHelp:
@@ -1478,7 +1478,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What AI systems require notice?</strong> Any AI tool used in employment decisions for Illinois employees. This kit provides the templates needed to notify employees and respond to their inquiries as required under 775 ILCS 5/2-102(L).",
+        "What AI systems require notice? Any AI tool used in employment decisions for Illinois employees. This kit provides the templates needed to notify employees and respond to their inquiries as required under 775 ILCS 5/2-102(L).",
       step2Intro:
         "List each AI tool for which you need to send employee notices or handle inquiry responses.",
       step2DecisionHelp:
@@ -1515,7 +1515,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>Why audit data inputs?</strong> Under Illinois HB3773, AI systems must not have a discriminatory effect. ZIP codes and similar geographic inputs can act as proxies for race or national origin. This kit helps you audit AI data inputs to identify and remediate potential proxy discrimination.",
+        "Why audit data inputs? Under Illinois HB3773, AI systems must not have a discriminatory effect. ZIP codes and similar geographic inputs can act as proxies for race or national origin. This kit helps you audit AI data inputs to identify and remediate potential proxy discrimination.",
       step2Intro:
         "List each AI tool whose data inputs you need to audit for proxy discrimination risks.",
       step2DecisionHelp:
@@ -1552,7 +1552,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>When do consumers have appeal rights?</strong> Under C.R.S. \u00A7 6-1-1703, consumers affected by adverse consequential decisions made by high-risk AI systems have the right to appeal and request correction of inaccurate data. This kit provides the forms to handle those appeals.",
+        "When do consumers have appeal rights? Under C.R.S. \u00A7 6-1-1703, consumers affected by adverse consequential decisions made by high-risk AI systems have the right to appeal and request correction of inaccurate data. This kit provides the forms to handle those appeals.",
       step2Intro:
         "List each AI system that makes adverse consequential decisions against consumers. Your appeal process will cover each one.",
       step2DecisionHelp:
@@ -1588,7 +1588,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>When must you notify the Colorado AG?</strong> Under C.R.S. \u00A7 6-1-1706, deployers who discover that their high-risk AI system has caused algorithmic discrimination must notify the Attorney General. This kit provides the documentation and notification templates for that process.",
+        "When must you notify the Colorado AG? Under C.R.S. \u00A7 6-1-1706, deployers who discover that their high-risk AI system has caused algorithmic discrimination must notify the Attorney General. This kit provides the documentation and notification templates for that process.",
       step2Intro:
         "List each AI system involved in a potential discrimination discovery that may require AG notification.",
       step2DecisionHelp:
@@ -1624,7 +1624,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What are developer vs. deployer obligations?</strong> Colorado SB 24-205 distinguishes between developers (who build AI systems) and deployers (who use them). Developers must disclose system capabilities and limitations; deployers must conduct their own impact assessments. This kit addresses the documentation exchange between both parties.",
+        "What are developer vs. deployer obligations? Colorado SB 24-205 distinguishes between developers (who build AI systems) and deployers (who use them). Developers must disclose system capabilities and limitations; deployers must conduct their own impact assessments. This kit addresses the documentation exchange between both parties.",
       step2Intro:
         "List each AI system involved in a developer-deployer relationship requiring documentation exchange.",
       step2DecisionHelp:
@@ -1661,7 +1661,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>When is pre-use notice required?</strong> The CPPA ADMT regulations require businesses to provide consumers with notice before using ADMT that has a legal or similarly significant effect on them, and to offer an opt-out right. This kit provides the notice templates and opt-out processing workflow.",
+        "When is pre-use notice required? The CPPA ADMT regulations require businesses to provide consumers with notice before using ADMT that has a legal or similarly significant effect on them, and to offer an opt-out right. This kit provides the notice templates and opt-out processing workflow.",
       step2Intro:
         "List each ADMT system for which you need to provide consumer pre-use notice and opt-out rights.",
       step2DecisionHelp:
@@ -1697,7 +1697,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What access rights do California consumers have?</strong> The CPPA ADMT regulations give consumers the right to access information about ADMT decisions that significantly affect them, including an explanation of the logic and the data used. This kit provides the intake form, explanation template, and timeline tracker.",
+        "What access rights do California consumers have? The CPPA ADMT regulations give consumers the right to access information about ADMT decisions that significantly affect them, including an explanation of the logic and the data used. This kit provides the intake form, explanation template, and timeline tracker.",
       step2Intro:
         "List each ADMT system from which consumers may request access and explanation of decisions.",
       step2DecisionHelp:
@@ -1733,7 +1733,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>When is a cybersecurity audit required?</strong> The CPPA regulations require businesses that process personal data and present significant risk to conduct cybersecurity audits. This kit provides the checklist, risk assessment workbook, and remediation tracker for that process.",
+        "When is a cybersecurity audit required? The CPPA regulations require businesses that process personal data and present significant risk to conduct cybersecurity audits. This kit provides the checklist, risk assessment workbook, and remediation tracker for that process.",
       step2Intro:
         "List each AI or data processing system to be included in your cybersecurity audit.",
       step2DecisionHelp:
@@ -1771,7 +1771,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What does annual bias audit management require?</strong> Under NYC LL144, automated employment decision tools must have an annual independent bias audit conducted before use, and results must be published on your website at least 10 business days before using the tool. This kit provides the auditor RFP, publication template, and renewal calendar.",
+        "What does annual bias audit management require? Under NYC LL144, automated employment decision tools must have an annual independent bias audit conducted before use, and results must be published on your website at least 10 business days before using the tool. This kit provides the auditor RFP, publication template, and renewal calendar.",
       step2Intro:
         "List each AEDT that requires annual bias audit management under NYC LL144.",
       step2DecisionHelp:
@@ -1808,7 +1808,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What notice must candidates receive?</strong> Under NYC LL144 and DCWP rules, employers must notify candidates at least 10 business days before using an AEDT and offer an alternative selection process. Candidates may also request disclosure of the data types used. This kit provides all three required documents.",
+        "What notice must candidates receive? Under NYC LL144 and DCWP rules, employers must notify candidates at least 10 business days before using an AEDT and offer an alternative selection process. Candidates may also request disclosure of the data types used. This kit provides all three required documents.",
       step2Intro:
         "List each AEDT for which you need to send candidate advance notices and manage alternative process requests.",
       step2DecisionHelp:
@@ -1845,7 +1845,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What consumer rights exist under Virginia CDPA?</strong> Virginia consumers have rights to access, correct, delete, opt out of profiling, and appeal denied requests (\u00A7 59.1-578(B)). If the appeal is denied, consumers may complain to the AG. This kit provides the intake form, appeal workflow, and AG referral notice.",
+        "What consumer rights exist under Virginia CDPA? Virginia consumers have rights to access, correct, delete, opt out of profiling, and appeal denied requests (\u00A7 59.1-578(B)). If the appeal is denied, consumers may complain to the AG. This kit provides the intake form, appeal workflow, and AG referral notice.",
       step2Intro:
         "List each AI or data processing system subject to consumer rights requests under Virginia CDPA.",
       step2DecisionHelp:
@@ -1881,7 +1881,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>When is a profiling assessment required?</strong> Under Virginia CDPA (\u00A7 59.1-581), controllers must conduct data protection assessments for processing activities that present heightened risk, including profiling for consequential decisions and processing sensitive data. This kit provides the assessment template, benefits-risks worksheet, and consent form.",
+        "When is a profiling assessment required? Under Virginia CDPA (\u00A7 59.1-581), controllers must conduct data protection assessments for processing activities that present heightened risk, including profiling for consequential decisions and processing sensitive data. This kit provides the assessment template, benefits-risks worksheet, and consent form.",
       step2Intro:
         "List each AI or data processing system that uses profiling or sensitive data processing subject to Virginia CDPA assessment requirements.",
       step2DecisionHelp:
@@ -1917,7 +1917,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What contracts are required with AI processors?</strong> Under Virginia CDPA (\u00A7 59.1-580), controllers must enter into binding contracts with processors. These contracts must specify processing instructions, confidentiality, security, subcontractor approval, and audit rights. This kit provides the DPA template, audit questionnaire, and subcontractor flowdown.",
+        "What contracts are required with AI processors? Under Virginia CDPA (\u00A7 59.1-580), controllers must enter into binding contracts with processors. These contracts must specify processing instructions, confidentiality, security, subcontractor approval, and audit rights. This kit provides the DPA template, audit questionnaire, and subcontractor flowdown.",
       step2Intro:
         "List each AI vendor or data processor you need to contract with under Virginia CDPA.",
       step2DecisionHelp:
@@ -1955,7 +1955,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>When is a Fundamental Rights Impact Assessment required?</strong> Under EU AI Act Art. 27, deployers of high-risk AI systems must conduct a FRIA before deployment, covering impacts on fundamental rights including non-discrimination, privacy, and dignity. This kit provides the FRIA template, notification letter, and update trigger assessment.",
+        "When is a Fundamental Rights Impact Assessment required? Under EU AI Act Art. 27, deployers of high-risk AI systems must conduct a FRIA before deployment, covering impacts on fundamental rights including non-discrimination, privacy, and dignity. This kit provides the FRIA template, notification letter, and update trigger assessment.",
       step2Intro:
         "List each high-risk AI system requiring a Fundamental Rights Impact Assessment under the EU AI Act.",
       step2DecisionHelp:
@@ -1992,7 +1992,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What is post-market monitoring?</strong> Under EU AI Act Art. 72, providers of high-risk AI systems must establish and implement a post-market monitoring plan to collect and analyze data on system performance after deployment, and report serious incidents. This kit provides the monitoring plan, incident report, and log retention policy.",
+        "What is post-market monitoring? Under EU AI Act Art. 72, providers of high-risk AI systems must establish and implement a post-market monitoring plan to collect and analyze data on system performance after deployment, and report serious incidents. This kit provides the monitoring plan, incident report, and log retention policy.",
       step2Intro:
         "List each high-risk AI system requiring post-market monitoring under the EU AI Act.",
       step2DecisionHelp:
@@ -2029,7 +2029,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What human oversight is required?</strong> Under EU AI Act Art. 14, high-risk AI systems must be designed to enable natural persons to oversee, understand, monitor, and correct AI outputs. Deployers must assign oversight to competent individuals and document their oversight activities. This kit provides the implementation plan, worker notification, and decision log.",
+        "What human oversight is required? Under EU AI Act Art. 14, high-risk AI systems must be designed to enable natural persons to oversee, understand, monitor, and correct AI outputs. Deployers must assign oversight to competent individuals and document their oversight activities. This kit provides the implementation plan, worker notification, and decision log.",
       step2Intro:
         "List each high-risk AI system for which you need to implement and document human oversight measures.",
       step2DecisionHelp:
@@ -2066,7 +2066,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     ],
     helpTexts: {
       step2Help:
-        "<strong>What registration is required?</strong> Under EU AI Act Art. 49, providers and deployers of high-risk AI systems must register in the EU database maintained by the Commission before placing the system on the market or putting it into service. This kit provides the registration checklist, transparency disclosure templates, and provider documentation verification.",
+        "What registration is required? Under EU AI Act Art. 49, providers and deployers of high-risk AI systems must register in the EU database maintained by the Commission before placing the system on the market or putting it into service. This kit provides the registration checklist, transparency disclosure templates, and provider documentation verification.",
       step2Intro:
         "List each high-risk AI system requiring EU database registration and transparency disclosures.",
       step2DecisionHelp:

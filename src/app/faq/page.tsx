@@ -130,14 +130,6 @@ function FAQStructuredData() {
       },
       {
         "@type": "Question",
-        name: "Do you offer refunds?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "All sales are final because documents are generated and delivered digitally at the time of purchase. We recommend reviewing the product description and document list before purchasing.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "How often should I update my compliance documents?",
         acceptedAnswer: {
           "@type": "Answer",
@@ -260,11 +252,11 @@ export default function FAQPage() {
 
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
                 <summary className="flex items-center justify-between gap-3 p-4 sm:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
-                  <span className="flex-1 min-w-0">Are all sales final?</span>
+                  <span className="flex-1 min-w-0">What is your refund policy?</span>
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it&apos;s the right fit.
+                  All sales are final. Documents are generated and delivered digitally at the time of purchase, so we do not offer refunds. Take a look at the product description and document list before purchasing to make sure it&apos;s the right fit.
                 </div>
               </details>
 
@@ -297,16 +289,6 @@ export default function FAQPage() {
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
                   All documents are generated as fillable PDF files with electronic signature blocks. You can fill them in on your computer, print them, or send them to your attorney for review.
-                </div>
-              </details>
-
-              <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between gap-3 p-4 sm:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
-                  <span className="flex-1 min-w-0">Do you offer refunds?</span>
-                  <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
-                </summary>
-                <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  All sales are final because documents are generated and delivered digitally at the time of purchase. We recommend reviewing the product description and document list before purchasing.
                 </div>
               </details>
 
