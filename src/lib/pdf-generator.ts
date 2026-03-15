@@ -19,7 +19,7 @@ export async function generateDocuments(
   return [welcomeDoc, ...docs];
 }
 
-async function generateDocumentsInner(
+export async function generateDocumentsInner(
   data: ComplianceFormData
 ): Promise<GeneratedDoc[]> {
   const companySlug = data.company.name
