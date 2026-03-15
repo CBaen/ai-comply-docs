@@ -83,7 +83,7 @@ export function generateStateComparisonMatrix(data: ComplianceFormData): jsPDF {
       effective: "July 31, 2025",
       thresholds: "100,000+ consumers OR 25,000+ consumers with 25%+ data sale revenue",
       cure: "30-day cure period expired January 31, 2026 (\u00A7 325M.20(a))",
-      maxPenalty: "Up to $25,000 per willful violation (\u00A7 8.31)",
+      maxPenalty: "Up to $7,500 per violation (\u00A7325M.20(c))",
       enforcement: "AG only (\u00A7 325M.20(b)). No private right of action (\u00A7 325M.20(d)).",
     },
   ];

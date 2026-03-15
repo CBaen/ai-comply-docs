@@ -268,7 +268,7 @@ const ADDONS = [
     citationUrl: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
     status: "in-effect",
     effectiveDate: "July 5, 2023",
-    maxPenalty: "$1,500 per violation per day",
+    maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary:
       "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion.",
     description:
@@ -297,7 +297,7 @@ const ADDONS = [
     citationUrl: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
     status: "in-effect",
     effectiveDate: "July 5, 2023",
-    maxPenalty: "$1,500 per violation per day",
+    maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary:
       "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion.",
     description:

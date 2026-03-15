@@ -308,6 +308,15 @@ export default async function RegulationPage({
                 </div>
               </section>
 
+              {/* IDHR implementing rules notice — Illinois HB3773 only */}
+              {reg.slug === "illinois-hb3773" && (
+                <div className="bg-amber-50 border border-amber-100 rounded-lg p-4">
+                  <p className="text-amber-800 text-sm">
+                    <strong>Note:</strong> IDHR is currently developing implementing rules but has not yet published proposed rules. These templates address the statutory requirements of 775 ILCS 5/2-102(L) directly.
+                  </p>
+                </div>
+              )}
+
               {/* What You Get */}
               <section>
                 <h2 className="text-2xl font-bold font-display text-gray-900 mb-4">
