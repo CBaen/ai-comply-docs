@@ -91,17 +91,11 @@ async function renderPage1ToPng(pdfBytes: ArrayBuffer): Promise<Buffer> {
     viewport,
   }).promise;
 
-  // Get raw pixel data and resize with sharp
-  const rawPixels = ctx.getImageData(0, 0, viewport.width, viewport.height);
-  const pngBuffer = await sharp(Buffer.from(rawPixels.data), {
-    raw: {
-      width: viewport.width,
-      height: viewport.height,
-      channels: 4,
-    },
-  })
+  // Convert canvas to PNG, then resize with sharp
+  const fullPng = canvas.toBuffer("image/png");
+  const pngBuffer = await sharp(fullPng)
     .resize(PREVIEW_WIDTH)
-    .png({ quality: 90, compressionLevel: 8 })
+    .png({ compressionLevel: 8 })
     .toBuffer();
 
   return pngBuffer;
