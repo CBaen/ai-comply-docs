@@ -143,7 +143,7 @@ export default function BlogPage() {
               Stop reading about it. Generate your compliance documentation today.
             </p>
             <Link
-              href="/regulations"
+              href="/products"
               className="inline-flex items-center gap-2 bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-base hover:bg-blue-800 transition"
             >
               Browse Compliance Packages

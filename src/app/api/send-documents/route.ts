@@ -742,10 +742,12 @@ function buildEmailHtml(
   contactName: string,
   regulation: string
 ) {
+  companyName = escapeHtml(companyName);
+  contactName = contactName ? escapeHtml(contactName) : "";
   const reg = REGULATION_EMAIL[regulation] || REGULATION_EMAIL["illinois-hb3773"];
   const greeting = contactName ? `Hi ${contactName},` : "Hi,";
   const docList = documentNames
-    .map((name) => `<li style="padding:4px 0;color:#374151;">${name}</li>`)
+    .map((name) => `<li style="padding:4px 0;color:#374151;">${escapeHtml(name)}</li>`)
     .join("");
 
   return `<!DOCTYPE html>
@@ -789,8 +791,12 @@ function buildEmailHtml(
 }
 
 export async function POST(request: Request) {
-  const { emails, documents, companyName, contactName, regulation } =
+  const { emails, documents, companyName, contactName, regulation, deliveryToken, sessionId } =
     await request.json();
+
+  if (!deliveryToken || !sessionId || !validateDeliveryToken(sessionId, deliveryToken)) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
+  }
 
   if (!emails || !Array.isArray(emails) || emails.length === 0) {
     return NextResponse.json(

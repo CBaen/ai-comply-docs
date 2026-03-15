@@ -323,7 +323,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                   <li>
                     <Link
-                      href="/regulations/california-ccpa-admt"
+                      href="/products/california-ccpa-admt"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       California CCPA ADMT →
@@ -331,7 +331,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                   <li>
                     <Link
-                      href="/regulations/connecticut-ctdpa"
+                      href="/products/connecticut-ctdpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       Connecticut CTDPA →
@@ -339,7 +339,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                   <li>
                     <Link
-                      href="/regulations/oregon-cpa"
+                      href="/products/oregon-cpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       Oregon CPA →
@@ -347,7 +347,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                   <li>
                     <Link
-                      href="/regulations/texas-tdpsa"
+                      href="/products/texas-tdpsa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       Texas TDPSA →
@@ -355,7 +355,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                   <li>
                     <Link
-                      href="/regulations/delaware-pdpa"
+                      href="/products/delaware-pdpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
                       Delaware PDPA →
@@ -363,7 +363,7 @@ export default function AIComplianceByStatePage() {
                   </li>
                 </ul>
                 <Link
-                  href="/regulations/multi-state-profiling-assessment"
+                  href="/products/multi-state-profiling-assessment"
                   className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-blue-700 font-medium transition-colors"
                 >
                   Or get the multi-state profiling bundle →
@@ -382,7 +382,7 @@ export default function AIComplianceByStatePage() {
                   you&apos;re not building separate documents for each jurisdiction.
                 </p>
                 <Link
-                  href="/regulations/multi-state-profiling-assessment"
+                  href="/products/multi-state-profiling-assessment"
                   className="inline-flex items-center gap-1 bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg hover:bg-blue-800 transition"
                 >
                   Multi-State Profiling Bundle →
@@ -403,7 +403,7 @@ export default function AIComplianceByStatePage() {
               Each built against the actual enacted statute text.
             </p>
             <Link
-              href="/regulations"
+              href="/products"
               className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-blue-800 transition w-full sm:w-auto"
             >
               View All Packages →

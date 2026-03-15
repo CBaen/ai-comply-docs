@@ -41,7 +41,7 @@ export async function POST(request: Request) {
       }
     }
 
-    const origin = request.headers.get("origin") || "https://aicompliancedocuments.com";
+    const origin = "https://aicompliancedocuments.com";
 
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({

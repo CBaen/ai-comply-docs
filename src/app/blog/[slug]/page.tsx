@@ -344,7 +344,7 @@ export default async function BlogPostPage({ params }: Props) {
               Stop reading, start complying. Our packages generate the documents you need based on the actual statutes.
             </p>
             <Link
-              href="/regulations"
+              href="/products"
               className="inline-flex items-center gap-2 bg-blue-700 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-blue-800 transition w-full sm:w-auto justify-center sm:justify-start"
             >
               Browse Compliance Packages
