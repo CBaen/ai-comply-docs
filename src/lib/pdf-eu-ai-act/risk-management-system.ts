@@ -100,16 +100,10 @@ export function generateRiskManagementSystem(data: ComplianceFormData): jsPDF {
     y += 2;
     riskCategories.forEach((cat, cIdx) => {
       if (y > 270) { doc.addPage(); y = MARGIN; }
-      y = addWrappedText(
-        doc,
-        `  [ ] HIGH  [ ] MED  [ ] LOW  —  ${cat}`,
-        MARGIN,
-        y,
-        CONTENT_WIDTH - 5,
-        LINE_HEIGHT
-      );
-      y += LINE_HEIGHT;
-      void (sIdx + cIdx);
+      y = addWrappedText(doc, `  ${cat}`, MARGIN, y, CONTENT_WIDTH - 5, LINE_HEIGHT);
+      y = addFormCheckbox(doc, `rms_risk_${sIdx}_${cIdx}_high`, "HIGH", y);
+      y = addFormCheckbox(doc, `rms_risk_${sIdx}_${cIdx}_med`, "MED", y);
+      y = addFormCheckbox(doc, `rms_risk_${sIdx}_${cIdx}_low`, "LOW", y);
     });
     y += LINE_HEIGHT;
   });

@@ -117,17 +117,16 @@ export function generateAIRiskAssessment(data: ComplianceFormData): jsPDF {
 
   threats.forEach((threat, idx) => {
     if (y > 262) { doc.addPage(); y = MARGIN; }
-    y = addWrappedText(
-      doc,
-      `  [ ] HIGH  [ ] MED  [ ] LOW  (Probability) | [ ] HIGH  [ ] MED  [ ] LOW  (Impact)`,
-      MARGIN,
-      y,
-      CONTENT_WIDTH,
-      LINE_HEIGHT
-    );
     y = addWrappedText(doc, `  Threat: ${threat}`, MARGIN, y, CONTENT_WIDTH - 5, LINE_HEIGHT);
+    y = addWrappedText(doc, "  Probability:", MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+    y = addFormCheckbox(doc, `threat_${idx}_prob_high`, "HIGH", y);
+    y = addFormCheckbox(doc, `threat_${idx}_prob_med`, "MED", y);
+    y = addFormCheckbox(doc, `threat_${idx}_prob_low`, "LOW", y);
+    y = addWrappedText(doc, "  Impact:", MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+    y = addFormCheckbox(doc, `threat_${idx}_impact_high`, "HIGH", y);
+    y = addFormCheckbox(doc, `threat_${idx}_impact_med`, "MED", y);
+    y = addFormCheckbox(doc, `threat_${idx}_impact_low`, "LOW", y);
     y += LINE_HEIGHT;
-    void idx;
   });
 
   // Section 4: Current Safeguards
