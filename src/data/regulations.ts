@@ -297,7 +297,7 @@ export const regulations: Regulation[] = [
     documentCount: 6,
     description: "If you're an Illinois employer using any software that helps screen, rank, or evaluate job candidates, this law applies to you. HB3773 (775 ILCS 5/2-102(L)) requires notice to employees and applicants, plus documentation showing your AI tools aren't discriminating. This package covers both.",
     penaltySummary: "Civil penalties imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425): up to $16,000 (first violation), $42,500 (second within 5 years), $70,000 (two+ within 7 years). IDHR investigates charges; the Commission imposes penalties. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
-    maxPenalty: "$70,000 per violation",
+    maxPenalty: "Up to $70,000 per violation (repeat); $16,000 first offense",
     appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, discharge, discipline, tenure, or terms/conditions of employment.",
     keywords: ["illinois", "hb3773", "ai hiring", "employment", "idhr", "775 ilcs"],
     documents: [
