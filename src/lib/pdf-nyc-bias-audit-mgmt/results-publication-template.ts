@@ -233,10 +233,10 @@ export function generateResultsPublicationTemplate(
   );
   y += LINE_HEIGHT;
 
-  // Section 4: Source and Explanation of Data (§20-871(a)(2)(c))
+  // Section 5: Source and Explanation of Data (§5-303 element 2)
   y = addSectionHeader(
     doc,
-    "4. Source and Explanation of Data Used (§20-871(a)(2)(c))",
+    "5. Source and Explanation of Data Used (§5-303 Required Element)",
     y
   );
   y = addWrappedText(
@@ -285,17 +285,21 @@ export function generateResultsPublicationTemplate(
   );
   y += LINE_HEIGHT;
 
-  // Section 5: Publication Checklist
-  y = addSectionHeader(doc, "5. Publication Compliance Checklist", y);
+  // Section 6: Publication Checklist
+  y = addSectionHeader(doc, "6. Publication Compliance Checklist", y);
   const pubChecks = [
-    "Disclosure posted on company website at least 30 days before AEDT first used (§20-871(a)(2))",
-    "Disclosure updated within 30 days of new bias audit completion (§20-871(a)(1))",
-    "Disclosure includes date of most recent audit (§20-871(a)(2)(a))",
-    "Disclosure includes AEDT distribution date",
-    "Disclosure includes selection rates and impact ratios for all required categories (§20-871(a)(2)(b))",
-    "Disclosure includes data source and explanation (§20-871(a)(2)(c))",
-    "Disclosure will remain posted while AEDT is in use and for one year after",
-    "DCWP can locate the disclosure via the website (not hidden behind login)",
+    "Disclosure posted on the EMPLOYMENT SECTION of company website at least 30 days before AEDT first used (§5-303)",
+    "Disclosure updated within 30 days of new bias audit completion",
+    "Disclosure includes date of most recent bias audit (§5-303 required element 1)",
+    "Disclosure includes source and explanation of data used (§5-303 required element 2)",
+    "Disclosure includes number of individuals in unknown category (§5-303 required element 3)",
+    "Disclosure includes number of applicants / candidates (§5-303 required element 4)",
+    "Disclosure includes selection or scoring rates for ALL categories including intersectional (§5-303 required element 5)",
+    "Disclosure includes impact ratios for ALL categories including intersectional (§5-303 required element 6)",
+    "Disclosure includes distribution date of the AEDT (§5-303 required element 7)",
+    "Hyperlink to separate page used (if applicable — permitted under §5-303)",
+    "Disclosure will remain posted while AEDT is in use and for SIX MONTHS after last use of the AEDT (§5-303)",
+    "DCWP can locate the disclosure via the website (must be clear and conspicuous — not hidden behind login)",
   ];
   pubChecks.forEach((check, idx) => {
     y = addFormCheckbox(doc, `rpt_check_${idx}`, check, y);

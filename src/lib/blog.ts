@@ -23,6 +23,7 @@ export interface BlogPostMeta {
   readTime: string;
   tags: string[];
   published: boolean;
+  image?: string;
   summary?: string;
 }
 
@@ -52,6 +53,7 @@ export function getAllBlogPosts(): BlogPostMeta[] {
       readTime: stats.text,
       tags: (data.tags as string[]) ?? [],
       published: (data.published as boolean) ?? false,
+      image: (data.image as string) ?? undefined,
     };
   });
 
@@ -78,6 +80,7 @@ export function getBlogPost(slug: string): BlogPostFull | null {
         readTime: stats.text,
         tags: (data.tags as string[]) ?? [],
         published: (data.published as boolean) ?? false,
+        image: (data.image as string) ?? undefined,
         summary: (data.summary as string) ?? undefined,
         content,
         deepDive: data.deepDive as DeepDive | undefined,

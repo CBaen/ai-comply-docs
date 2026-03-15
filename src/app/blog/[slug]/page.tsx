@@ -93,8 +93,20 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
       <main id="main-content">
+        {/* Hero image */}
+        {post.image && (
+          <div className="w-full h-48 md:h-72 relative overflow-hidden">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/80" />
+          </div>
+        )}
+
         {/* Post header */}
-        <header className="hero-bg text-white py-12 md:py-16">
+        <header className={`hero-bg text-white ${post.image ? "py-8 md:py-12 -mt-16 relative z-10" : "py-12 md:py-16"}`}>
           <div className="max-w-3xl mx-auto px-4">
             {/* Back link */}
             <Link
