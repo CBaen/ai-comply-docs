@@ -62,6 +62,12 @@ export default function Nav() {
             >
               About
             </Link>
+            <Link
+              href="/contact"
+              className="text-gray-600 hover:text-blue-700 transition"
+            >
+              Contact
+            </Link>
             <SearchModal />
             <DarkModeToggle />
             <a
@@ -136,6 +142,13 @@ export default function Nav() {
               onClick={() => setMobileOpen(false)}
             >
               About
+            </Link>
+            <Link
+              href="/contact"
+              className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact
             </Link>
             <div className="flex items-center gap-3 min-h-[44px] border-b border-gray-100 py-2">
               <DarkModeToggle />

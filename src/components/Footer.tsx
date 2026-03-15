@@ -73,12 +73,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="mailto:info@aicompliancedocuments.com"
+                <Link
+                  href="/contact"
                   className="text-gray-600 hover:text-blue-700 transition"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
