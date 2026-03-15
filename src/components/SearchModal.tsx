@@ -14,16 +14,16 @@ interface SearchItem {
   keywords: string;
 }
 
-const TYPE_LABELS: Record<string, string> = {
-  product: "Products",
-  blog: "Blog",
-  faq: "FAQ",
-};
-
 const TYPE_COLORS: Record<string, string> = {
   product: "bg-blue-100 text-blue-700",
   blog: "bg-emerald-100 text-emerald-700",
   faq: "bg-amber-100 text-amber-700",
+};
+
+const TYPE_PILL: Record<string, string> = {
+  product: "Product",
+  blog: "Blog",
+  faq: "FAQ",
 };
 
 export default function SearchModal() {
@@ -35,17 +35,47 @@ export default function SearchModal() {
   const searchRef = useRef<MiniSearch<SearchItem> | null>(null);
   const router = useRouter();
 
-  // Cmd+K / Ctrl+K to open
+  const close = useCallback(() => {
+    setOpen(false);
+    setQuery("");
+  }, []);
+
+  // Cmd+K / Ctrl+K to open, Escape to close
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
         setOpen((o) => !o);
       }
+      if (e.key === "Escape" && open) {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+      }
     };
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+    document.addEventListener("keydown", handleKeyDown, true);
+    return () => document.removeEventListener("keydown", handleKeyDown, true);
+  }, [open, close]);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (open) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [open]);
 
   // Load search data on first open
   useEffect(() => {
@@ -85,11 +115,10 @@ export default function SearchModal() {
 
   const handleSelect = useCallback(
     (url: string) => {
-      setOpen(false);
-      setQuery("");
+      close();
       router.push(url);
     },
-    [router]
+    [router, close]
   );
 
   // Group results by type
@@ -99,12 +128,38 @@ export default function SearchModal() {
     return acc;
   }, {});
 
-  // When no query, show popular suggestions
-  const showSuggestions = !query.trim() && loaded;
-  const popularProducts = items
-    .filter((i) => i.type === "product")
-    .slice(0, 4);
-  const popularBlog = items.filter((i) => i.type === "blog").slice(0, 2);
+  // When no query, show ALL items grouped by type (browsable)
+  const showBrowse = !query.trim() && loaded;
+  const allProducts = items.filter((i) => i.type === "product");
+  const allBlog = items.filter((i) => i.type === "blog");
+  const allFaq = items.filter((i) => i.type === "faq");
+
+  function renderItem(item: SearchItem) {
+    return (
+      <Command.Item
+        key={item.id}
+        value={item.id}
+        onSelect={() => handleSelect(item.url)}
+        className="flex items-start gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-sm data-[selected=true]:bg-blue-50 hover:bg-gray-50 transition"
+      >
+        <span
+          className={`shrink-0 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded mt-0.5 ${TYPE_COLORS[item.type]}`}
+        >
+          {TYPE_PILL[item.type]}
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="font-medium text-gray-900 truncate">
+            {item.title}
+          </div>
+          {item.subtitle && (
+            <div className="text-gray-500 text-xs truncate mt-0.5">
+              {item.subtitle}
+            </div>
+          )}
+        </div>
+      </Command.Item>
+    );
+  }
 
   return (
     <>
@@ -134,12 +189,9 @@ export default function SearchModal() {
       {/* Modal */}
       {open && (
         <div
-          className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] sm:pt-[20vh] px-4"
+          className="fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] sm:pt-[15vh] px-4"
           onClick={(e) => {
-            if (e.target === e.currentTarget) {
-              setOpen(false);
-              setQuery("");
-            }
+            if (e.target === e.currentTarget) close();
           }}
         >
           {/* Backdrop */}
@@ -147,10 +199,10 @@ export default function SearchModal() {
 
           {/* Command palette */}
           <Command
-            className="relative w-full max-w-xl bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col max-h-[60vh] sm:max-h-[70vh]"
+            className="relative w-full max-w-xl bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col max-h-[75vh] sm:max-h-[70vh]"
             shouldFilter={false}
           >
-            {/* Input */}
+            {/* Input row with X button */}
             <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100">
               <svg
                 className="w-5 h-5 text-gray-400 shrink-0"
@@ -173,13 +225,19 @@ export default function SearchModal() {
                 className="flex-1 bg-transparent text-gray-900 placeholder-gray-400 text-base outline-none"
                 autoFocus
               />
-              <kbd className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-medium text-gray-400 bg-gray-100 border border-gray-200 rounded">
-                ESC
-              </kbd>
+              <button
+                onClick={close}
+                className="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-md transition"
+                aria-label="Close search"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
 
-            {/* Results */}
-            <Command.List className="overflow-y-auto px-2 py-2">
+            {/* Results — scrollable within the modal */}
+            <Command.List className="overflow-y-auto flex-1 px-2 py-2">
               {/* Loading state */}
               {!loaded && (
                 <div className="px-4 py-8 text-center text-sm text-gray-400">
@@ -187,59 +245,40 @@ export default function SearchModal() {
                 </div>
               )}
 
-              {/* No query — show popular */}
-              {showSuggestions && (
+              {/* No query — browse everything */}
+              {showBrowse && (
                 <>
-                  <Command.Group
-                    heading={
-                      <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
-                        Popular Products
-                      </span>
-                    }
-                  >
-                    {popularProducts.map((item) => (
-                      <Command.Item
-                        key={item.id}
-                        value={item.id}
-                        onSelect={() => handleSelect(item.url)}
-                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-sm data-[selected=true]:bg-blue-50 hover:bg-gray-50 transition"
-                      >
-                        <span
-                          className={`shrink-0 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded ${TYPE_COLORS.product}`}
-                        >
-                          Product
-                        </span>
-                        <span className="font-medium text-gray-900 truncate">
-                          {item.title}
-                        </span>
-                      </Command.Item>
-                    ))}
-                  </Command.Group>
-                  {popularBlog.length > 0 && (
+                  {allProducts.length > 0 && (
                     <Command.Group
                       heading={
                         <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
-                          Latest Articles
+                          Products ({allProducts.length})
                         </span>
                       }
                     >
-                      {popularBlog.map((item) => (
-                        <Command.Item
-                          key={item.id}
-                          value={item.id}
-                          onSelect={() => handleSelect(item.url)}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-sm data-[selected=true]:bg-blue-50 hover:bg-gray-50 transition"
-                        >
-                          <span
-                            className={`shrink-0 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded ${TYPE_COLORS.blog}`}
-                          >
-                            Blog
-                          </span>
-                          <span className="font-medium text-gray-900 truncate">
-                            {item.title}
-                          </span>
-                        </Command.Item>
-                      ))}
+                      {allProducts.map(renderItem)}
+                    </Command.Group>
+                  )}
+                  {allBlog.length > 0 && (
+                    <Command.Group
+                      heading={
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
+                          Blog ({allBlog.length})
+                        </span>
+                      }
+                    >
+                      {allBlog.map(renderItem)}
+                    </Command.Group>
+                  )}
+                  {allFaq.length > 0 && (
+                    <Command.Group
+                      heading={
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
+                          FAQ ({allFaq.length})
+                        </span>
+                      }
+                    >
+                      {allFaq.map(renderItem)}
                     </Command.Group>
                   )}
                 </>
@@ -254,36 +293,11 @@ export default function SearchModal() {
                         key={type}
                         heading={
                           <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
-                            {TYPE_LABELS[type]}
+                            {TYPE_PILL[type]} ({grouped[type].length})
                           </span>
                         }
                       >
-                        {grouped[type].slice(0, 5).map((item) => (
-                          <Command.Item
-                            key={item.id}
-                            value={item.id}
-                            onSelect={() => handleSelect(item.url)}
-                            className="flex items-start gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-sm data-[selected=true]:bg-blue-50 hover:bg-gray-50 transition"
-                          >
-                            <span
-                              className={`shrink-0 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded mt-0.5 ${TYPE_COLORS[type]}`}
-                            >
-                              {type === "product"
-                                ? "Product"
-                                : type === "blog"
-                                  ? "Blog"
-                                  : "FAQ"}
-                            </span>
-                            <div className="min-w-0 flex-1">
-                              <div className="font-medium text-gray-900 truncate">
-                                {item.title}
-                              </div>
-                              <div className="text-gray-500 text-xs truncate mt-0.5">
-                                {item.subtitle}
-                              </div>
-                            </div>
-                          </Command.Item>
-                        ))}
+                        {grouped[type].map(renderItem)}
                       </Command.Group>
                     ) : null
                   )}
@@ -304,21 +318,15 @@ export default function SearchModal() {
             </Command.List>
 
             {/* Footer */}
-            <div className="border-t border-gray-100 px-4 py-2 flex items-center justify-between text-[11px] text-gray-400">
-              <div className="flex items-center gap-3">
-                <span className="flex items-center gap-1">
-                  <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-200 rounded text-[10px]">↑↓</kbd>
-                  navigate
-                </span>
-                <span className="flex items-center gap-1">
-                  <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-200 rounded text-[10px]">↵</kbd>
-                  select
-                </span>
-                <span className="flex items-center gap-1">
-                  <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-200 rounded text-[10px]">esc</kbd>
-                  close
-                </span>
-              </div>
+            <div className="border-t border-gray-100 px-4 py-2 flex items-center gap-3 text-[11px] text-gray-400">
+              <span className="flex items-center gap-1">
+                <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-200 rounded text-[10px]">↑↓</kbd>
+                navigate
+              </span>
+              <span className="flex items-center gap-1">
+                <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-200 rounded text-[10px]">↵</kbd>
+                select
+              </span>
             </div>
           </Command>
         </div>
