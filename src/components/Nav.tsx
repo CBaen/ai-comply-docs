@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import DarkModeToggle from "./DarkModeToggle";
+import SearchModal from "./SearchModal";
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -58,6 +59,7 @@ export default function Nav() {
             >
               About
             </Link>
+            <SearchModal />
             <DarkModeToggle />
             <a
               href="/#products"
