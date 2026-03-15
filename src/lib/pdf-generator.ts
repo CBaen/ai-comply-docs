@@ -1,6 +1,25 @@
 import type { ComplianceFormData, GeneratedDoc } from "./pdf-types";
+import { generateWelcomePage } from "./pdf-welcome-page";
 
 export async function generateDocuments(
+  data: ComplianceFormData
+): Promise<GeneratedDoc[]> {
+  const docs = await generateDocumentsInner(data);
+  const companySlug = data.company.name
+    .replace(/[^a-zA-Z0-9\s]/g, "")
+    .trim()
+    .replace(/\s+/g, "_")
+    .replace(/_+/g, "_")
+    .substring(0, 40)
+    .replace(/_$/, "");
+  const welcomeDoc: GeneratedDoc = {
+    doc: generateWelcomePage(data, docs.map((d) => d.name)),
+    name: `${companySlug}_00_Welcome_Package_Overview.pdf`,
+  };
+  return [welcomeDoc, ...docs];
+}
+
+async function generateDocumentsInner(
   data: ComplianceFormData
 ): Promise<GeneratedDoc[]> {
   const companySlug = data.company.name
