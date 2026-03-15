@@ -24,8 +24,9 @@ export default function StepReviewCheckout({
   setLawVisited,
   acknowledged,
   setAcknowledged,
-  includeTrainingKit,
-  setIncludeTrainingKit,
+  addons,
+  selectedAddons,
+  setSelectedAddons,
   checkoutLoading,
   orderTotal,
   regulationName,
@@ -33,8 +34,6 @@ export default function StepReviewCheckout({
   lawUrl,
   lawLinkText,
   acknowledgment,
-  trainingKitAvailable,
-  trainingKitPrice,
   basePrice,
   documents,
   handleCheckout,
@@ -204,23 +203,42 @@ export default function StepReviewCheckout({
         </span>
       </label>
 
-      {/* Training kit add-on */}
-      {trainingKitAvailable && (
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-          <label className="flex items-center gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={includeTrainingKit}
-              onChange={(e) => setIncludeTrainingKit(e.target.checked)}
-              className="rounded"
-            />
-            <span className="text-sm text-gray-700 dark:text-gray-300">
-              <strong>
-                Add Manager Training Kit (+${trainingKitPrice})
-              </strong>{" "}
-              &mdash; Manager guide and employee FAQ documents
-            </span>
-          </label>
+      {/* Add-ons */}
+      {addons.length > 0 && (
+        <div className="space-y-2">
+          <h4 className="font-semibold text-gray-900 dark:text-white">
+            Recommended Add-Ons
+          </h4>
+          {addons.map((addon) => {
+            const checked = selectedAddons.includes(addon.id);
+            return (
+              <div
+                key={addon.id}
+                className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4"
+              >
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => {
+                      if (checked) {
+                        setSelectedAddons(selectedAddons.filter((id) => id !== addon.id));
+                      } else {
+                        setSelectedAddons([...selectedAddons, addon.id]);
+                      }
+                    }}
+                    className="mt-0.5 rounded"
+                  />
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>{addon.label} (+${addon.price})</strong>
+                    <span className="block text-gray-500 dark:text-gray-400 mt-0.5">
+                      {addon.description}
+                    </span>
+                  </span>
+                </label>
+              </div>
+            );
+          })}
         </div>
       )}
 
@@ -230,8 +248,11 @@ export default function StepReviewCheckout({
           ${orderTotal}
         </p>
         <p className="text-sm text-gray-500 mt-1">
-          {includeTrainingKit && trainingKitAvailable
-            ? `Compliance Package $${basePrice} + Manager Training Kit $${trainingKitPrice}`
+          {selectedAddons.length > 0
+            ? `Compliance Package $${basePrice} + ${addons
+                .filter((a) => selectedAddons.includes(a.id))
+                .map((a) => `${a.label} $${a.price}`)
+                .join(" + ")}`
             : "One-time purchase. Instant download. No subscription."}
         </p>
       </div>

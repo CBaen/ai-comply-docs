@@ -1,4 +1,5 @@
-import type { RegulationConfig } from "./pdf-types";
+import type { RegulationConfig, AddonConfig } from "./pdf-types";
+export type { AddonConfig };
 
 export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "illinois-hb3773": {
@@ -10,8 +11,16 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       'I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I understand that IDHR is currently developing implementing rules but has not yet published proposed rules. The notice elements in these templates are best-practice recommendations based on the statutory text. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.',
     basePrice: 299,
-    trainingKitAvailable: true,
-    trainingKitPrice: 47,
+    addons: [
+      {
+        id: "manager-training-kit",
+        slug: "manager-ai-training-kit",
+        label: "Manager AI Training Kit",
+        description: "Talking points, employee FAQ, and training sign-off sheet for managers explaining AI use to their teams.",
+        price: 47,
+        stripePriceId: "price_1TA3XHGidFVHIL99h2UwiLd9",
+      },
+    ],
     documents: [
       "Employee/Applicant AI Notification Template (customized)",
       "AI System Inventory Document",
@@ -56,8 +65,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       'I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205, effective June 30, 2026 per SB 25B-004) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.',
     basePrice: 449,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Risk Management Policy & Program",
       "Impact Assessment Framework",
@@ -103,8 +111,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework and EEOC AI guidance referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     basePrice: 199,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Acceptable Use Policy",
       "Employee AI Training Acknowledgment",
@@ -143,8 +150,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI RMF Playbook and applicable state laws referenced in this product. I understand that these are due diligence templates, not legal advice. I should consult qualified legal counsel for my specific vendor contracts.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Vendor AI Due Diligence Questionnaire",
       "AI Vendor Contract Addendum",
@@ -184,8 +190,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the EEOC AI guidance and NYC LL144 requirements referenced in this product. I understand that these are audit templates, not legal advice. I should consult qualified legal counsel and a qualified auditor for my specific situation.",
     basePrice: 149,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Bias Audit Report Template",
       "Impact Ratio Calculation Worksheet",
@@ -224,8 +229,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI RMF, California TFAIA, and EU AI Act requirements referenced in this product. I understand that these are incident response templates, not legal advice. I should consult qualified legal counsel for my specific regulatory obligations.",
     basePrice: 149,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Incident Response Plan",
       "Incident Classification Matrix",
@@ -267,8 +271,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. DCWP began enforcement on July 5, 2023 and may update its rules or guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 399,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Bias Audit Report Template",
       "Bias Audit Summary (Public Posting)",
@@ -305,8 +308,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Tex. Bus. & Com. Code Ch. 541 (Texas Data Privacy and Security Act, HB 4) and understand that these are compliance templates, not legal advice. The TDPSA has been in effect since July 1, 2024, and includes a permanent 30-day cure period. This is separate from the Texas TRAIGA (HB 149). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Data Protection Assessment for Profiling",
       "Privacy Notice Template",
@@ -343,8 +345,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Del. Code tit. 6, ch. 12D (Delaware Personal Data Privacy Act, HB 154) and understand that these are compliance templates, not legal advice. The Delaware PDPA has been in effect since January 1, 2025, with the cure period expiring December 31, 2025. Delaware has the lowest compliance thresholds of any state (35,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Data Protection Assessment for Profiling",
       "Privacy Notice Template",
@@ -382,8 +383,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are multi-state compliance templates, not legal advice. State privacy laws are enacted independently and may differ in thresholds, cure periods, and specific requirements. I should verify the current status of each state\u2019s law and consult qualified legal counsel.",
     basePrice: 399,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Multi-State Data Protection Assessment",
       "State Comparison Matrix",
@@ -422,8 +422,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are multi-jurisdiction compliance templates covering IL, NYC, and CO AI employment laws, not legal advice. Each jurisdiction has different requirements, penalties, and enforcement mechanisms. I should verify the current status of each law and consult qualified legal counsel.",
     basePrice: 299,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Multi-Jurisdiction Compliance Matrix",
       "Unified Employee/Candidate Notification",
@@ -465,8 +464,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Va. Code §§ 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. The VCDPA has been in effect since January 1, 2023. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Assessment",
@@ -506,8 +504,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Conn. Gen. Stat. §§ 42-515 through 42-525 (Connecticut Data Privacy Act, PA 22-15) and understand that these are compliance templates, not legal advice. The CTDPA has been in effect since July 1, 2023, and the mandatory cure period has expired. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Assessment",
@@ -547,8 +544,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed ORS §§ 646A.570 through 646A.604 (Oregon Consumer Privacy Act) and understand that these are compliance templates, not legal advice. The Oregon CPA has been in effect since July 1, 2024, with the cure period expiring January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Assessment",
@@ -590,8 +586,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the Minnesota Consumer Data Privacy Act, Minn. Stat. \u00A7\u00A7 325M.10 through 325M.21. I understand that these are compliance templates, not legal advice. This law is effective July 31, 2025. The 30-day cure period expires January 31, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 349,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Impact Assessment",
@@ -630,8 +625,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations, effective January 1, 2026. I understand that these are compliance templates, not legal advice. The CPPA may update regulations and issue additional guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 499,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Pre-Use ADMT Notice Template",
       "ADMT Risk Assessment",
@@ -674,8 +668,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. Member States may adopt additional implementing measures. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 997,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Risk Management System Documentation",
       "Technical Documentation (Annex IV)",
@@ -721,8 +714,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Title VII of the Civil Rights Act of 1964 (42 USC \u00A7 2000e et seq.) and the Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607). I understand that these are compliance templates, not legal advice. The EEOC\u2019s AI-specific guidance documents have been modified; previously published technical assistance may no longer be available on eeoc.gov. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 349,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Adverse Impact Analysis Template",
       "Job-Relatedness Validation Documentation",
@@ -762,8 +754,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1). I understand that these are implementation templates, not legal advice. The AI RMF is a voluntary framework; NIST is a non-regulatory agency. AI RMF 1.0 is currently being revised. I should verify the current version and consult qualified legal counsel.",
     basePrice: 397,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Risk Management Plan",
       "Govern Function Documentation",
@@ -807,8 +798,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the HIPAA Privacy Rule (45 CFR Part 164 Subpart E), Security Rule (45 CFR Part 164 Subpart C), and Breach Notification Rule (45 CFR Part 164 Subpart D) as applied to AI processing of protected health information. I understand that these are compliance templates, not legal advice. HHS may issue additional guidance on AI and HIPAA. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 597,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Risk Assessment for PHI Processing",
       "Business Associate Agreement (AI Vendor)",
@@ -849,8 +839,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the Equal Credit Opportunity Act (15 USC \u00A7 1691 et seq.) and Regulation B (12 CFR Part 1002), the Fair Credit Reporting Act (15 USC \u00A7 1681 et seq.), and relevant FINRA rules as applied to AI in financial services. I understand that these are compliance templates, not legal advice. SEC, CFPB, and FINRA may issue additional AI-specific guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 597,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Supervision Policy",
       "Model Risk Documentation",
@@ -893,8 +882,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are training and communication templates, not legal advice. I should consult qualified legal counsel for my specific situation.",
     basePrice: 79,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Manager Talking Points Script",
       "Employee FAQ \u2014 AI in the Workplace",
@@ -931,8 +919,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are review templates, not legal advice. Laws change. I should verify current regulatory status annually and consult qualified legal counsel.",
     basePrice: 49,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Annual Compliance Review Checklist",
       "Compliance Update Log",
@@ -968,8 +955,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are governance templates, not legal advice. I should consult qualified legal counsel for my specific board reporting obligations.",
     basePrice: 69,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Executive AI Compliance Status Report",
       "Board Presentation Template",
@@ -1007,8 +993,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are disclosure templates, not legal advice. Consumer notice requirements vary by state and context. I should verify applicable disclosure requirements and consult qualified legal counsel.",
     basePrice: 49,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Website AI Disclosure Banner",
       "Email AI Notification Template",
@@ -1045,8 +1030,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are data mapping templates, not legal advice. Data mapping requirements vary by state. I should consult qualified legal counsel before completing any state privacy assessment.",
     basePrice: 69,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Personal Data Inventory",
       "AI Data Flow Diagram Template",
@@ -1084,8 +1068,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are consumer rights response templates, not legal advice. Consumer rights requirements and response timelines vary by state. I should consult qualified legal counsel for my specific obligations.",
     basePrice: 59,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Consumer Rights Request Intake Form",
       "Response Letter Templates",
@@ -1123,8 +1106,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (NIST AI 100-1) referenced in this product. I understand that these are governance framework templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization and jurisdiction.",
     basePrice: 349,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Governance Policy",
       "AI Ethics Principles Statement",
@@ -1167,8 +1149,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI RMF MAP Function Playbook referenced in this product. I understand that these are inventory and lifecycle tracking templates, not legal advice. I should consult qualified legal counsel to verify my specific compliance obligations.",
     basePrice: 199,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI System Inventory Template",
       "AI System Lifecycle Tracker",
@@ -1207,8 +1188,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (EU AI Act) referenced in this product. I understand that these are transparency reporting templates, not legal advice. I should consult qualified legal counsel to verify my specific disclosure and reporting obligations.",
     basePrice: 149,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Annual AI Transparency Report Template",
       "AI System Performance Monitoring Report",
@@ -1247,8 +1227,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the California SB 53 (2025\u20132026 Session) AI whistleblower provisions referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     basePrice: 99,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "AI Safety Whistleblower Protection Policy",
       "Internal AI Concern Reporting Form",
@@ -1287,8 +1266,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the FTC and EU AI Act guidance referenced in this product. I understand that this is a customer-facing policy template, not legal advice. I should consult qualified legal counsel to verify the policy is appropriate for my products and jurisdiction.",
     basePrice: 99,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Customer AI Acceptable Use Policy",
     ],
@@ -1325,8 +1303,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed IC 24-15 (Indiana Consumer Data Protection Act, P.L. 94-2023) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Assessment",
@@ -1366,8 +1343,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384) and understand that these are compliance templates, not legal advice. Montana has the lowest applicability thresholds of any state privacy law (25,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Assessment",
@@ -1407,8 +1383,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Assessment",
@@ -1448,8 +1423,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the New Jersey Data Protection Act (S332, signed January 16, 2024) and understand that these are compliance templates, not legal advice. The NJDPA is effective January 15, 2025. This is separate from the NJ Law Against Discrimination. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
-    trainingKitAvailable: false,
-    trainingKitPrice: 0,
+
     documents: [
       "Privacy Notice Template",
       "Data Protection Assessment",

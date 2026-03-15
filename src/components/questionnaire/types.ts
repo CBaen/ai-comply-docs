@@ -1,6 +1,8 @@
 import type { AISystem } from "@/lib/pdf-types";
+import type { AddonConfig } from "@/lib/regulation-config";
 
 export type { AISystem };
+export type { AddonConfig };
 
 export interface StepCompanyInfoProps {
   companyName: string;
@@ -80,8 +82,9 @@ export interface StepReviewCheckoutProps {
   setLawVisited: (v: boolean) => void;
   acknowledged: boolean;
   setAcknowledged: (v: boolean) => void;
-  includeTrainingKit: boolean;
-  setIncludeTrainingKit: (v: boolean) => void;
+  addons: AddonConfig[];
+  selectedAddons: string[];
+  setSelectedAddons: (ids: string[]) => void;
   checkoutLoading: boolean;
   orderTotal: number;
   regulationName: string;
@@ -90,8 +93,6 @@ export interface StepReviewCheckoutProps {
   lawUrl: string;
   lawLinkText: string;
   acknowledgment: string;
-  trainingKitAvailable: boolean;
-  trainingKitPrice: number;
   basePrice: number;
   documents: string[];
   // Handler
