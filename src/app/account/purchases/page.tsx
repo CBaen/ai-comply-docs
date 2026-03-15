@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { auth } from "@/lib/auth";
+import { getPool } from "@/lib/db";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { getRegulation } from "@/data/regulations";
@@ -15,20 +16,23 @@ interface Purchase {
   form_data: Record<string, unknown> | null;
 }
 
-async function getPurchases(userId: string): Promise<Purchase[]> {
+async function getUserPurchases(userId: string): Promise<Purchase[]> {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL ?? "https://aicompliancedocuments.com"}/api/account/purchases`,
-      {
-        headers: {
-          // Pass user context via internal server-side call
-          "x-internal-user-id": userId,
-        },
-        cache: "no-store",
-      }
+    const pool = getPool();
+    const result = await pool.query(
+      `SELECT
+         id,
+         stripe_session_id,
+         regulation_slug,
+         amount_paid,
+         created_at,
+         form_data
+       FROM purchases
+       WHERE user_id = $1
+       ORDER BY created_at DESC`,
+      [userId]
     );
-    if (!res.ok) return [];
-    return res.json();
+    return result.rows as Purchase[];
   } catch {
     return [];
   }
@@ -56,7 +60,7 @@ export default async function PurchasesPage() {
     redirect("/account/login");
   }
 
-  const purchases = await getPurchases(session.user.id as string);
+  const purchases = await getUserPurchases(session.user.id as string);
 
   return (
     <>
@@ -82,7 +86,10 @@ export default async function PurchasesPage() {
         <div className="max-w-4xl mx-auto px-6 sm:px-8 py-10 md:py-14">
           {purchases.length === 0 ? (
             <div className="text-center py-16 border border-gray-200 rounded-xl">
-              <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+              <div
+                className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                aria-hidden="true"
+              >
                 <svg
                   className="w-7 h-7 text-gray-400"
                   fill="none"
@@ -90,7 +97,11 @@ export default async function PurchasesPage() {
                   stroke="currentColor"
                   strokeWidth={1.5}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                  />
                 </svg>
               </div>
               <h2 className="text-lg font-bold text-gray-900 mb-2 font-display">
