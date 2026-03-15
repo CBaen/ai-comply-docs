@@ -357,28 +357,32 @@ export function addDocHeader(
   let y = MARGIN;
   doc.setFontSize(HEADER_SIZE);
   doc.setFont("helvetica", "bold");
-  doc.text(title, MARGIN, y);
-  y += 8;
+  const titleLines: string[] = doc.splitTextToSize(title, CONTENT_WIDTH);
+  titleLines.forEach((line) => {
+    doc.text(line, MARGIN, y);
+    y += 7;
+  });
+  y += 1;
 
-  doc.setFontSize(BODY_SIZE);
+  doc.setFontSize(SMALL_SIZE);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(100);
   doc.text("Prepared for: " + data.company.name, MARGIN, y);
-  y += LINE_HEIGHT;
+  y += LINE_HEIGHT - 1;
   doc.text("Date: " + data.generatedDate, MARGIN, y);
-  y += LINE_HEIGHT;
-  doc.text(header.statute, MARGIN, y);
-  y += LINE_HEIGHT;
-  doc.text(header.rules, MARGIN, y);
-  y += LINE_HEIGHT;
-  doc.text(
+  y += LINE_HEIGHT - 1;
+  y = addWrappedText(doc, header.statute, MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
+  y = addWrappedText(doc, header.rules, MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
+  y = addWrappedText(
+    doc,
     "Template generated: " +
       data.generatedDate +
       " \u2014 Verify current regulatory status before use",
     MARGIN,
-    y
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT - 1
   );
-  y += LINE_HEIGHT;
 
   doc.setDrawColor(0);
   doc.setLineWidth(0.3);
