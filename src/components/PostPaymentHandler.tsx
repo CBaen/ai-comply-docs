@@ -140,7 +140,34 @@ export default function PostPaymentHandler({
     setDownloadState("generating");
     try {
       const generated = await ensureDocs();
-      generated.forEach((item) => item.doc.save(item.name));
+      const JSZip = (await import("jszip")).default;
+      const zip = new JSZip();
+
+      for (const item of generated) {
+        const pdfBlob = item.doc.output("blob");
+        zip.file(item.name, pdfBlob);
+      }
+
+      const zipBlob = await zip.generateAsync({ type: "blob" });
+      const companyName = formData?.company?.name
+        ?.replace(/[^a-zA-Z0-9\s]/g, "")
+        .trim()
+        .replace(/\s+/g, "_")
+        .replace(/_+/g, "_")
+        .substring(0, 40)
+        .replace(/_$/, "") || "Compliance";
+      const regName = regulationSlug.replace(/-/g, "_");
+      const zipName = `${companyName}_${regName}_Package.zip`;
+
+      const url = URL.createObjectURL(zipBlob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = zipName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
       setDownloadState("done");
     } catch (err) {
       console.error("Download error:", err);
@@ -365,12 +392,12 @@ export default function PostPaymentHandler({
               />
             </svg>
             {downloadState === "generating"
-              ? "Generating..."
+              ? "Preparing your package..."
               : downloadState === "done"
-                ? "Downloaded!"
+                ? "Package downloaded!"
                 : downloadState === "error"
                   ? "Error \u2014 try again"
-                  : "Download to This Device"}
+                  : "Download Complete Package (.zip)"}
           </button>
         </div>
 
