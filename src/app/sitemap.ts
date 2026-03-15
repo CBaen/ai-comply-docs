@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/regulations`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ai-compliance-by-state`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.85 },
     { url: `${base}/blog`, lastModified: siteLastUpdated, changeFrequency: "daily", priority: 0.8 },
+    { url: `${base}/do-i-need-ai-compliance`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/faq`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/about`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.5 },
     ...regulationPages,

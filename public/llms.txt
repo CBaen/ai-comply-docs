@@ -51,6 +51,7 @@ AI Compliance Documents generates compliance documentation templates for busines
 - Consumer Rights Kit ($59): /regulations/consumer-rights-kit
 
 ## Resources
+- Do I Need AI Compliance? (free 5-question assessment): /do-i-need-ai-compliance
 - AI Compliance Requirements by State (comparison table): /ai-compliance-by-state
 - Frequently Asked Questions: /faq
 - Blog (plain-language guides to AI laws): /blog
