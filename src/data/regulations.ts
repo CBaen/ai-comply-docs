@@ -1130,7 +1130,7 @@ export const regulations: Regulation[] = [
     tier: "state",
     category: "Add-On",
     price: 79,
-    stripePriceId: "",
+    stripePriceId: "price_1TB7FsGidFVHIL99rz5UOdAz",
     documentCount: 3,
     description: "When Illinois employees receive your AI notice and have questions — or when you need to log each time AI is used in an employment decision — this kit gives you the forms. Covers the ongoing notice and response lifecycle under 775 ILCS 5/2-102(L).",
     penaltySummary: "Civil penalties up to $16,000 per violation (first offense), $42,500 (one prior violation within 5 years), or $70,000 (two+ prior violations within 7 years). Penalties assessed per violation and per affected person. Imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425). IDHR investigates charges. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
