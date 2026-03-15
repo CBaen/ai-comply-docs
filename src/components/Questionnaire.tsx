@@ -367,6 +367,7 @@ export default function Questionnaire({
               setBiasAudit={setBiasAudit}
               helpTexts={helpTexts}
               toggleCheckbox={toggleCheckbox}
+              dataInputOptions={config?.dataInputOptions}
             />
           )}
 
@@ -381,6 +382,7 @@ export default function Questionnaire({
               reviewFrequency={reviewFrequency}
               setReviewFrequency={setReviewFrequency}
               helpTexts={helpTexts}
+              oversightOptions={config?.oversightOptions}
             />
           )}
 
@@ -428,6 +430,7 @@ export default function Questionnaire({
               acknowledgment={config.acknowledgment}
               basePrice={config.basePrice}
               documents={config.documents}
+              gateText={config.gateText}
               handleCheckout={handleCheckout}
             />
           )}
