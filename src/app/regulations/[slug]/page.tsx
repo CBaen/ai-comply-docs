@@ -339,6 +339,69 @@ export default async function RegulationPage({
                 <p>All documents include electronic signature blocks compliant with the ESIGN Act (15 U.S.C. &sect;&nbsp;7001) and UETA.</p>
               </div>
 
+              {/* Complete Your Compliance — law-specific add-ons */}
+              {(() => {
+                const addonSlugs = RELATED_ADDONS[reg.slug];
+                if (!addonSlugs || addonSlugs.length === 0) return null;
+                const addons = addonSlugs
+                  .map((s) => getRegulation(s))
+                  .filter(Boolean) as NonNullable<ReturnType<typeof getRegulation>>[];
+                if (addons.length === 0) return null;
+                return (
+                  <section>
+                    <h2 className="text-2xl font-bold font-display text-gray-900 mb-1">
+                      Complete Your Compliance
+                    </h2>
+                    <p className="text-gray-500 text-sm mb-5">
+                      Law-specific add-ons for this package
+                    </p>
+                    <div className="space-y-3">
+                      {addons.map((addon) => (
+                        <div
+                          key={addon.slug}
+                          className="bg-blue-50 border border-blue-100 rounded-lg p-5"
+                        >
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 mb-1">
+                                <p className="font-semibold text-gray-900">
+                                  {addon.shortName}
+                                </p>
+                                <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-slate-100 text-slate-600 shrink-0">
+                                  Coming Soon
+                                </span>
+                              </div>
+                              <p className="text-sm text-gray-600 leading-snug line-clamp-2 mb-2">
+                                {addon.description}
+                              </p>
+                              <p className="text-xs text-gray-500">
+                                {addon.documentCount} documents
+                              </p>
+                            </div>
+                            <div className="text-right shrink-0">
+                              <p className="text-xl font-extrabold text-gray-900 font-display">
+                                ${addon.price}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3 pt-3 border-t border-blue-100">
+                            <p className="text-xs text-gray-500">
+                              Want to add this to your order?{" "}
+                              <a
+                                href="mailto:info@aicompliancedocuments.com"
+                                className="text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
+                              >
+                                Contact us at info@aicompliancedocuments.com
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                );
+              })()}
+
               {/* Citation */}
               <section>
                 <h2 className="text-2xl font-bold font-display text-gray-900 mb-4">
