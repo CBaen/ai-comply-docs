@@ -696,7 +696,7 @@ const REGULATION_EMAIL: Record<
       "<strong>Track corrective actions in the Log</strong> — document every identified risk, the corrective action taken, and the date of resolution.",
     ],
     reminder:
-      "EU AI Act Article 72 requires providers of high-risk AI systems to establish post-market monitoring systems. Article 73 requires serious incident reporting to national market surveillance authorities as soon as possible after identification. High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
+      "EU AI Act Article 72 requires providers of high-risk AI systems to establish post-market monitoring systems. Article 73 requires serious incident reporting to national market surveillance authorities as soon as possible after identification. Prohibited AI practices: up to \u20AC35,000,000 or 7% global turnover (Art. 99(3)). High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
   },
   "eu-human-oversight-kit": {
     title: "Your EU Human Oversight Kit",

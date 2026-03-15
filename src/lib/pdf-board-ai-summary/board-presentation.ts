@@ -65,7 +65,7 @@ export function generateBoardPresentation(data: ComplianceFormData): jsPDF {
 
   const whyPoints = [
     "\u2022  State AI laws are creating legal exposure for organizations that deploy AI without documented compliance programs (IL, CO, CA, NYC, MN).",
-    "\u2022  The EU AI Act imposes up to €15M or 3% of global turnover for high-risk AI violations — reaching US companies serving EU customers.",
+    "\u2022  The EU AI Act imposes up to \u20AC35M or 7% of global turnover for prohibited AI practices, and up to \u20AC15M or 3% for high-risk violations \u2014 reaching US companies serving EU customers.",
     "\u2022  FINRA and SEC have flagged AI as 2026 examination priorities — financial services firms face increasing scrutiny.",
     "\u2022  Enterprise contracts increasingly require documented AI compliance programs before procurement.",
     "\u2022  Board members can face personal liability exposure if AI governance is materially deficient.",
