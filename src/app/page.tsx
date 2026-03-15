@@ -6,9 +6,9 @@ import ProductCarousel from "@/components/ProductCarousel";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
-  title: "AI Compliance Documents — Generate State-Specific AI Compliance Templates in Minutes",
+  title: "AI Compliance Documents — Templates for Every State AI Law",
   description:
-    "Generate AI compliance documentation templates for 14+ state laws, the EU AI Act, and federal frameworks. 53 packages from $49. Built from enacted statute text. Instant download.",
+    "AI compliance templates for 14+ state laws, the EU AI Act, and federal frameworks. 53 packages from $49. Built from enacted statute text. Instant download.",
   keywords: [
     "ai compliance",
     "ai regulation",
