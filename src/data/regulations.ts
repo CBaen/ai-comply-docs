@@ -326,7 +326,7 @@ export const regulations: Regulation[] = [
     documentCount: 7,
     description: "California's new ADMT regulations require documented risk assessments starting January 1, 2026 and consumer-facing opt-out and notice requirements by January 1, 2027. If the CCPA applies to your business and you use automated systems to make decisions about consumers, this package covers both deadlines.",
     penaltySummary: "CPPA administrative enforcement and AG civil enforcement. $2,500 per violation, $7,500 per intentional violation (Cal. Civ. Code § 1798.155). No private right of action for ADMT-specific violations.",
-    maxPenalty: "$7,500 per intentional violation",
+    maxPenalty: "$2,500 per violation; $7,500 per intentional violation",
     appliesToSummary: "Any business subject to CCPA that uses automated decision-making technology to make significant decisions about California consumers.",
     keywords: ["california", "ccpa", "cpra", "admt", "automated decision-making", "privacy"],
     documents: [

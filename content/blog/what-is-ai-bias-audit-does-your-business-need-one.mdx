@@ -7,47 +7,36 @@ author: "AI Compliance Documents Team"
 tags: ["bias audit", "NYC Local Law 144", "EEOC", "AI hiring", "disparate impact"]
 published: true
 image: "/blog/blog-hero-bias-audit.png"
-summary: "A bias audit is a test that checks whether an AI hiring tool produces different outcomes for different groups of people based on race, ethnicity, or sex — and in New York City, it's required by law every year for any employer using automated tools to screen job candidates. The concept comes from decades-old federal employment discrimination law, but it's now being applied specifically to AI, with penalties that compound for every day you use a tool without one."
+summary: "A bias audit is a statistical test that measures whether an AI hiring tool produces different selection rates for different demographic groups — and New York City requires one every year for any employer using automated tools to screen job candidates. This article explains how the audit works, what 'selection rate' and 'impact ratio' actually mean, who has to do it, what the penalties are for skipping it, and how federal discrimination law connects to the same underlying analysis."
 deepDive:
-  title: "What Is the Four-Fifths Rule?"
-  content: |
-    Imagine two kids are trying out for the school basketball team. The coach picks 10 out of 50 boys who try out — that's a 20% selection rate. But out of 50 girls who try out, the coach only picks 2 — that's a 4% selection rate. If you compare those two numbers (4% divided by 20%), you get 0.20, or 20%. That's way below 80%. Under a rule the federal government created in 1978, any time one group's selection rate falls below 80% of the highest group's rate, it's a red flag that the selection process might be unfair. That rule is called the four-fifths rule.
-
-    The four-fifths rule — also called the 80% rule — comes from a set of federal regulations called the Uniform Guidelines on Employee Selection Procedures, published at 29 CFR Part 1607. These guidelines were written long before AI existed, but they apply perfectly to AI hiring tools. When an algorithm screens job applicants and produces a score or ranking, you can measure who gets selected and who doesn't, broken down by race, ethnicity, and sex. If any group's selection rate is less than four-fifths of the rate for the group that gets selected most often, that's evidence of what the law calls 'adverse impact.'
-
-    Here's an example with an AI tool. Suppose your resume screener evaluates 1,000 applicants and advances 200 of them. If 30% of white applicants get advanced but only 15% of Black applicants do, the impact ratio is 15% divided by 30%, which equals 0.50 — well below the 0.80 threshold. That's a statistical signal that the tool might be discriminating, even if nobody programmed it to.
-
-    It's important to understand that the four-fifths rule is a screening tool, not a final verdict. A ratio below 0.80 doesn't automatically prove discrimination, and a ratio above 0.80 doesn't automatically prove fairness. But in a bias audit — the kind New York City requires every year — these ratios are exactly what the auditor calculates for every demographic group. If the numbers come back below the threshold, that's the starting point for figuring out what's going wrong and how to fix it.
+  title: "Why Bias Testing Looks at Outcomes, Not Intentions"
+  content: "Imagine a teacher creates a final exam that she genuinely believes is fair. She didn't write the questions to favor any particular group of students. She used the same textbook material everyone had access to. She gave everyone the same amount of time. From her perspective, the test is completely neutral. But when the grades come in, students who speak English as a second language fail at three times the rate of native English speakers — not because the subject matter is harder for them, but because the questions are phrased in unnecessarily complex English that tests language fluency more than subject knowledge. The teacher didn't intend to discriminate. But the result is discriminatory.\n\nThis is exactly the logic behind bias audits for AI hiring tools. The law doesn't ask whether the programmer intended to build a biased tool. It doesn't ask whether the company wanted to discriminate. It asks a simpler, more measurable question: do the outcomes look different for different groups? If your AI resume screener advances 40% of white applicants but only 20% of Black applicants, the numbers speak for themselves — regardless of what the algorithm was 'trying' to do. That gap is what employment law calls adverse impact, and it's been the standard for evaluating discrimination in hiring since 1978.\n\nThe reason the law focuses on outcomes rather than intentions is practical. You can't look inside an AI model and identify a line of code that says 'discriminate against this group.' Modern machine learning models are complex enough that even their creators often can't fully explain why a particular applicant received a particular score. But you can look at the results — who got through the screen and who didn't — and measure whether those results break down along demographic lines. That measurement is something an independent auditor can perform, document, and publish. It's concrete and verifiable in a way that 'we didn't mean to discriminate' never can be.\n\nThis is why NYC Local Law 144 requires selection rate calculations and impact ratios broken down by the same race, ethnicity, and sex categories used in federal EEO-1 reporting. The audit doesn't ask the tool to explain itself. It measures what the tool actually does to real applicants, compares those outcomes across groups, and flags any disparity that crosses the four-fifths threshold established by the federal Uniform Guidelines. It's the difference between trusting a restaurant's claim that their kitchen is clean and sending a health inspector to look."
 microFacts:
-  - fact: "The Uniform Guidelines on Employee Selection Procedures, which established the four-fifths (80%) rule for measuring adverse impact in hiring, were published in 1978 and remain the federal standard referenced by NYC's bias audit requirements."
-    source: "Electronic Code of Federal Regulations (29 CFR Part 1607)"
+  - fact: "The four-fifths (80%) rule for evaluating adverse impact in employment selection was established in 1978 by the Uniform Guidelines on Employee Selection Procedures and has been the standard methodology for disparate impact analysis for over 45 years — now applied directly to AI hiring tools under NYC Local Law 144."
+    source: "Electronic Code of Federal Regulations"
     sourceUrl: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607"
-  - fact: "NYC Local Law 144 requires bias audits to calculate selection rates and impact ratios across the same race, ethnicity, and sex categories that employers report under the federal EEO-1 framework (29 CFR 1602.7)."
-    source: "Electronic Code of Federal Regulations (29 CFR 1602.7)"
-    sourceUrl: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1602/subpart-B/section-1602.7"
-  - fact: "The DCWP's final adopted rules for Local Law 144 became effective on July 5, 2023, and include specific requirements for the content, methodology, and publication of bias audit results."
-    source: "NYC Rules — DCWP Adopted Rules for AEDT"
-    sourceUrl: "https://rules.cityofnewyork.us/rule/automated-employment-decision-tools-updated/"
-  - fact: "The EEOC launched its Artificial Intelligence and Algorithmic Fairness Initiative in October 2021, signaling that existing federal anti-discrimination laws — including Title VII — fully apply to AI-powered employment tools."
+  - fact: "NYC Local Law 144 requires bias audits to use the same race, ethnicity, and sex categories that employers report under the federal EEO-1 framework, creating a direct link between AI audit methodology and the workforce demographic reporting system that has been in place since the Civil Rights Act of 1964."
+    source: "EEOC — Questions and Answers on the Uniform Guidelines"
+    sourceUrl: "https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines"
+  - fact: "The EU AI Act classifies AI systems used in employment — including recruitment, task allocation, and performance monitoring — as high-risk, requiring conformity assessments and ongoing monitoring obligations that parallel the bias audit concept, with full applicability beginning August 2, 2026."
+    source: "European Commission"
+    sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+  - fact: "The EEOC's October 2021 initiative on AI and Algorithmic Fairness explicitly stated that employers are liable for discriminatory outcomes of AI hiring tools under Title VII, the ADA, and the ADEA — even when the employer purchased the tool from a third-party vendor and had no role in its development."
     source: "U.S. Equal Employment Opportunity Commission"
     sourceUrl: "https://www.eeoc.gov/newsroom/eeoc-launches-initiative-artificial-intelligence-and-algorithmic-fairness"
 externalReferences:
-  - title: "NYC Local Law 144 of 2021 (Int 1894-2020) — Automated Employment Decision Tools"
-    url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9"
-  - title: "NYC DCWP — Automated Employment Decision Tools Information Page"
+  - title: "NYC Department of Consumer and Worker Protection — Automated Employment Decision Tools"
     url: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page"
-  - title: "DCWP Adopted Rules — Automated Employment Decision Tools (Updated)"
-    url: "https://rules.cityofnewyork.us/rule/automated-employment-decision-tools-updated/"
-  - title: "29 CFR Part 1607 — Uniform Guidelines on Employee Selection Procedures (1978)"
+  - title: "29 CFR Part 1607 — Uniform Guidelines on Employee Selection Procedures (eCFR)"
     url: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607"
-  - title: "29 CFR 1602.7 — EEO-1 Reporting Requirements"
-    url: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1602/subpart-B/section-1602.7"
-  - title: "EEOC — Artificial Intelligence and Algorithmic Fairness Initiative (October 2021)"
+  - title: "EEOC — Questions and Answers on the Uniform Guidelines"
+    url: "https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines"
+  - title: "EEOC — AI and Algorithmic Fairness Initiative Launch (October 2021)"
     url: "https://www.eeoc.gov/newsroom/eeoc-launches-initiative-artificial-intelligence-and-algorithmic-fairness"
-  - title: "Illinois HB3773 / 775 ILCS 5/2-102(L)"
+  - title: "Illinois Human Rights Act § 2-102 (775 ILCS 5/2-102) — AI Employment Provision"
     url: "https://www.ilga.gov/legislation/ilcs/documents/077500050K2-102.htm"
-  - title: "Colorado SB 24-205 — Consumer Protections for Artificial Intelligence"
-    url: "https://leg.colorado.gov/bills/sb24-205"
+  - title: "EU AI Act — European Commission Regulatory Framework Page"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
 ---
 
 If you've recently heard the phrase "bias audit" and your instinct was to assume it was either very technical or very optional, you're in good company. Most businesses encounter this term when they're already behind — either because a vendor mentioned it, a lawyer flagged it, or they found out New York City has been fining employers for not conducting one since July 2023.
