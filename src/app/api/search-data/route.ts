@@ -26,7 +26,7 @@ export async function GET() {
         type: "product",
         title: r.shortName,
         subtitle: r.appliesToSummary || r.description.slice(0, 120),
-        url: `/regulations/${r.slug}`,
+        url: `/products/${r.slug}`,
         keywords: [r.state, r.name, r.category, ...(r.keywords || [])].join(" "),
       });
     });

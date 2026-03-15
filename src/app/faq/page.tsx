@@ -298,7 +298,7 @@ export default function FAQPage() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  At minimum, annually &mdash; and whenever the underlying law is amended, your AI tools change, or your business operations change. Our <Link href="/regulations/annual-compliance-review" className="text-blue-700 hover:underline">Annual Compliance Review</Link> package ($49) includes a structured checklist for this.
+                  At minimum, annually &mdash; and whenever the underlying law is amended, your AI tools change, or your business operations change. Our <Link href="/products/annual-compliance-review" className="text-blue-700 hover:underline">Annual Compliance Review</Link> package ($49) includes a structured checklist for this.
                 </div>
               </details>
 
@@ -323,7 +323,7 @@ export default function FAQPage() {
               . We&apos;re glad to help you figure out what applies to your situation.
             </p>
             <Link
-              href="/regulations"
+              href="/products"
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-blue-800 transition"
             >
               Browse All Products

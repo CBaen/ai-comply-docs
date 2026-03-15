@@ -251,7 +251,7 @@ export default function AboutPage() {
             </div>
 
             <Link
-              href="/regulations"
+              href="/products"
               className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:underline"
             >
               View all 53 products &rarr;
