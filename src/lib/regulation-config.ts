@@ -65,6 +65,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       'I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205, effective June 30, 2026 per SB 25B-004) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.',
     basePrice: 449,
+    skippedSteps: [3],
 
     documents: [
       "Risk Management Policy & Program",
@@ -111,6 +112,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework and EEOC AI guidance referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     basePrice: 199,
+    skippedSteps: [3],
 
     documents: [
       "AI Acceptable Use Policy",
@@ -308,6 +310,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Tex. Bus. & Com. Code Ch. 541 (Texas Data Privacy and Security Act, HB 4) and understand that these are compliance templates, not legal advice. The TDPSA has been in effect since July 1, 2024, and includes a permanent 30-day cure period. This is separate from the Texas TRAIGA (HB 149). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
+    skippedSteps: [3],
 
     documents: [
       "Data Protection Assessment for Profiling",
@@ -345,6 +348,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Del. Code tit. 6, ch. 12D (Delaware Personal Data Privacy Act, HB 154) and understand that these are compliance templates, not legal advice. The Delaware PDPA has been in effect since January 1, 2025, with the cure period expiring December 31, 2025. Delaware has the lowest compliance thresholds of any state (35,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
+    skippedSteps: [3],
 
     documents: [
       "Data Protection Assessment for Profiling",
@@ -383,6 +387,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I understand that these are multi-state compliance templates, not legal advice. State privacy laws are enacted independently and may differ in thresholds, cure periods, and specific requirements. I should verify the current status of each state\u2019s law and consult qualified legal counsel.",
     basePrice: 399,
+    skippedSteps: [3],
 
     documents: [
       "Multi-State Data Protection Assessment",

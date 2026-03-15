@@ -100,6 +100,7 @@ export default function Questionnaire({
   const helpTexts = config?.helpTexts || {};
 
   const validate = useCallback((): boolean => {
+    if (skippedSteps.includes(step)) return true;
     switch (step) {
       case 1:
         if (!companyName.trim()) {
@@ -187,13 +188,17 @@ export default function Questionnaire({
 
   const nextStep = () => {
     if (!validate()) return;
-    if (step < TOTAL_STEPS) setStep(step + 1);
+    const currentIdx = visibleSteps.indexOf(step);
+    if (currentIdx < visibleSteps.length - 1) {
+      setStep(visibleSteps[currentIdx + 1]);
+    }
   };
 
   const prevStep = () => {
-    if (step > 1) {
+    const currentIdx = visibleSteps.indexOf(step);
+    if (currentIdx > 0) {
       setError("");
-      setStep(step - 1);
+      setStep(visibleSteps[currentIdx - 1]);
     }
   };
 
@@ -274,7 +279,8 @@ export default function Questionnaire({
     }
   };
 
-  const progressPercent = Math.round((step / TOTAL_STEPS) * 100);
+  const visibleStepIndex = visibleSteps.indexOf(step) + 1;
+  const progressPercent = Math.round((visibleStepIndex / visibleStepCount) * 100);
   const orderTotal =
     config && selectedAddons.length > 0 && config.addons
       ? config.basePrice +
@@ -302,7 +308,7 @@ export default function Questionnaire({
         <div className="bg-slate-50 dark:bg-slate-900 px-4 sm:px-6 py-4 border-b border-gray-200 dark:border-slate-700">
           <div className="flex justify-between items-center mb-2 text-sm">
             <span className="font-medium text-gray-700 dark:text-gray-300">
-              Step {step} of {TOTAL_STEPS}
+              Step {visibleStepIndex} of {visibleStepCount}
             </span>
             <span className="text-gray-500">{progressPercent}%</span>
           </div>
@@ -429,7 +435,7 @@ export default function Questionnaire({
 
           {/* Navigation */}
           <div className="flex flex-col-reverse sm:flex-row sm:justify-between gap-3 mt-8 pt-6 border-t border-gray-200 dark:border-slate-700">
-            {step > 1 ? (
+            {visibleSteps.indexOf(step) > 0 ? (
               <button
                 type="button"
                 onClick={prevStep}
@@ -440,13 +446,13 @@ export default function Questionnaire({
             ) : (
               <div className="hidden sm:block" />
             )}
-            {step < TOTAL_STEPS && (
+            {step !== 6 && (
               <button
                 type="button"
                 onClick={nextStep}
                 className="w-full sm:w-auto min-h-[44px] bg-blue-700 hover:bg-blue-800 text-white px-8 py-2.5 rounded-lg font-semibold transition text-center"
               >
-                {step === TOTAL_STEPS - 1 ? "Review" : "Next"}
+                {step === visibleSteps[visibleSteps.length - 2] ? "Review" : "Next"}
               </button>
             )}
           </div>

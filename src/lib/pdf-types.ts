@@ -58,4 +58,5 @@ export interface RegulationConfig {
   documents: string[];
   decisions: [string, string][];
   helpTexts: Record<string, string>;
+  skippedSteps?: number[];
 }
