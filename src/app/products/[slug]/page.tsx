@@ -1,7 +1,10 @@
 import { regulations, getRegulation } from "@/data/regulations";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { existsSync } from "fs";
+import { join } from "path";
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Questionnaire from "@/components/Questionnaire";
