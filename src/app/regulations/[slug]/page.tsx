@@ -360,7 +360,7 @@ export default async function RegulationPage({
                   ${reg.price}
                 </p>
                 <p className="text-gray-600 text-sm mb-6">
-                  One-time purchase. Instant download. All sales final.
+                  One-time purchase. Instant download.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-700 mb-6">
                   <li className="flex items-center gap-2">

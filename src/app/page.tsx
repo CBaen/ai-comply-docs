@@ -8,7 +8,7 @@ import { regulations } from "@/data/regulations";
 export const metadata: Metadata = {
   title: "AI Compliance Documents — Generate State-Specific AI Compliance Templates in Minutes",
   description:
-    "Generate state-specific AI compliance documentation templates for Illinois, Colorado, and federal AI requirements. Templates based on enacted statute text. Instant download.",
+    "Generate AI compliance documentation templates for 14+ state laws, the EU AI Act, and federal frameworks. 36 packages from $49. Built from enacted statute text. Instant download.",
   keywords: [
     "ai compliance",
     "ai regulation",
