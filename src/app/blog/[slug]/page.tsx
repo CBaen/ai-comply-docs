@@ -34,6 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      images: post.image
+        ? [{ url: `https://aicompliancedocuments.com${post.image}`, width: 1200, height: 630 }]
+        : [{ url: "https://aicompliancedocuments.com/opengraph-image", width: 1200, height: 630 }],
     },
     alternates: {
       canonical: `https://aicompliancedocuments.com/blog/${post.slug}`,

@@ -98,10 +98,10 @@ function FAQStructuredData() {
       },
       {
         "@type": "Question",
-        name: "Are all sales final?",
+        name: "What is your refund policy?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it's the right fit.",
+          text: "All sales are final. Documents are generated and delivered digitally at the time of purchase, so we do not offer refunds. Take a look at the product description and document list before purchasing to make sure it's the right fit.",
         },
       },
       {

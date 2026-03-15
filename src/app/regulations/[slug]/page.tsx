@@ -32,6 +32,7 @@ export async function generateMetadata({
       title: `${reg.name} — AI Compliance Documents`,
       description: reg.description,
       url: `https://aicompliancedocuments.com/regulations/${reg.slug}`,
+      images: [{ url: "https://aicompliancedocuments.com/opengraph-image", width: 1200, height: 630 }],
     },
   };
 }
