@@ -205,7 +205,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="w-14 h-14 bg-blue-800 rounded flex items-center justify-center mx-auto mb-5 text-white text-2xl font-extrabold font-display">2</div>
                 <h3 className="font-bold text-xl font-display mb-3 text-gray-900">Pay Once</h3>
-                <p className="text-gray-700 leading-relaxed">One-time purchase, no subscription. Secure checkout via Stripe. Your answers generate customized documents &mdash; never stored or shared.</p>
+                <p className="text-gray-700 leading-relaxed">One-time purchase, no subscription. Powered by <strong style={{ color: "#635BFF" }}>Stripe</strong>. Your answers generate customized documents &mdash; never stored or shared.</p>
               </div>
               <div className="text-center">
                 <div className="w-14 h-14 bg-blue-800 rounded flex items-center justify-center mx-auto mb-5 text-white text-2xl font-extrabold font-display">3</div>

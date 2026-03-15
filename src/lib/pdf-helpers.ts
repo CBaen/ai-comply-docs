@@ -86,13 +86,13 @@ const REGULATION_HEADER: Record<
     statute:
       "Statute: 775 ILCS 5/2-102(L) \u2014 Use of Artificial Intelligence (P.A. 103-804, eff. 1-1-26)",
     rules:
-      "IDHR implementing rules: In development (not yet published as of March 2026). Monitor dhr.illinois.gov for updates.",
+      "IDHR implementing rules: In development (not yet published as of March 2026). Core compliance obligations are set by statute and are in effect now. Implementing rules typically add procedural detail. Monitor dhr.illinois.gov for updates.",
   },
   "colorado-sb24-205": {
     statute:
       "Statute: C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 \u2014 Consumer Protections for AI (SB 24-205, eff. 6-30-26)",
     rules:
-      "Enforcement: Colorado Attorney General (exclusive authority, \u00A7 6-1-1706). No AG implementing rules adopted as of March 2026.",
+      "Enforcement: Colorado Attorney General (exclusive authority, \u00A7 6-1-1706). No AG implementing rules adopted as of March 2026. Core compliance obligations are set by statute and are in effect now. Implementing rules typically add procedural detail.",
   },
   "employee-ai-policy": {
     statute:
@@ -170,7 +170,7 @@ const REGULATION_HEADER: Record<
     statute:
       "Framework: IL 775 ILCS 5/2-102(L) (eff. 1-1-26) + NYC Admin. Code \u00A7\u00A7 20-870\u201320-874 (eff. 7-5-23) + CO C.R.S. \u00A7\u00A7 6-1-1701\u20131707 (eff. 6-30-26)",
     rules:
-      "Each jurisdiction enforces independently. Verify current status of each law. IL IDHR rules in development. CO SB 25B-004 extended CO effective date to June 30, 2026.",
+      "Each jurisdiction enforces independently. Verify current status of each law. IL IDHR rules in development — core compliance obligations are set by statute and are in effect now; implementing rules typically add procedural detail. CO SB 25B-004 extended CO effective date to June 30, 2026.",
   },
   "california-ccpa-admt": {
     statute:
