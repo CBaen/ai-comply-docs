@@ -136,7 +136,7 @@ export function generateAgNotificationLetter(data: ComplianceFormData): jsPDF {
   y = addFormTextField(doc, "anl_notification_date", "Date of This Notification:", y, {
     prefill: data.generatedDate, width: 80,
   });
-  y = addFormTextField(doc, "anl_days_since_discovery", "Days Elapsed Since Discovery (must be within 90 days per best practice):", y, {
+  y = addFormTextField(doc, "anl_days_since_discovery", "Days Elapsed Since Discovery (must be within 90 days — statutory obligation under C.R.S. § 6-1-1703(7)):", y, {
     width: 60,
   });
   y = addFormTextField(
