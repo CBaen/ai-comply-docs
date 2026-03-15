@@ -119,19 +119,19 @@ function DeadlineBanner({
             <Link
               key={r.slug}
               href={`/regulations/${r.slug}`}
-              className="flex items-center justify-between bg-white border border-red-100 rounded p-3 hover:border-red-300 transition group"
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white border border-red-100 rounded p-3 hover:border-red-300 transition group gap-1"
             >
-              <div>
-                <p className="font-semibold text-gray-900 text-sm group-hover:text-blue-700 transition">
+              <div className="min-w-0">
+                <p className="font-semibold text-gray-900 text-sm group-hover:text-blue-700 transition truncate">
                   {r.shortName}
                 </p>
                 <p className="text-xs text-gray-500">{r.state}</p>
               </div>
-              <div className="text-right shrink-0 ml-3">
-                <p className="text-sm font-bold text-red-700">
+              <div className="sm:text-right sm:shrink-0 sm:ml-3">
+                <p className="text-xs sm:text-sm font-bold text-red-700 break-words">
                   {isPast ? "In effect since" : "Effective"} {r.effectiveDate}
                 </p>
-                <p className="text-xs text-gray-500">{r.maxPenalty}</p>
+                <p className="text-xs text-gray-500 break-words">{r.maxPenalty}</p>
               </div>
             </Link>
           );
