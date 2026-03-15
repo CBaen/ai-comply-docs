@@ -336,22 +336,28 @@ export default function PostPaymentHandler({
   // Verifying
   if (status === "verifying") {
     return (
-      <div id="post-payment" className="max-w-2xl mx-auto px-4 py-12 text-center">
-        <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-700 rounded-full animate-spin mx-auto mb-4" />
-        <p className="text-lg font-semibold text-gray-900">
-          Verifying your payment...
-        </p>
-        <p className="text-gray-500 text-sm mt-2">
-          This usually takes just a moment.
-        </p>
+      <div className="fixed inset-0 z-[200] flex items-center justify-center px-4" role="dialog" aria-modal="true" aria-label="Verifying payment">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" aria-hidden="true" />
+        <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center">
+          <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-700 rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-lg font-semibold text-gray-900">
+            Verifying your payment...
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
+            This usually takes just a moment.
+          </p>
+        </div>
       </div>
     );
   }
 
-  // Ready — show download/email panel
+  // Ready — show download/email panel as modal
   if (status === "ready" && formData) {
     return (
-      <div id="post-payment" className="max-w-2xl mx-auto px-4 py-12">
+      <div className="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto" role="dialog" aria-modal="true" aria-label="Your documents are ready">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" aria-hidden="true" />
+        <div className="relative bg-white rounded-2xl shadow-2xl max-w-xl w-full mx-4 my-8 sm:my-16 overflow-hidden">
+          <div className="p-6 sm:p-8">
         {/* Success header */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
