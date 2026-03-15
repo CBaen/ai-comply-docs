@@ -157,7 +157,7 @@ export default function Home() {
         {/* Trust Bar */}
         <div className="bg-white border-b border-gray-200 py-5">
           <div className="max-w-5xl mx-auto px-4">
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-sm text-gray-600 font-medium">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-4 md:flex md:flex-nowrap md:items-center md:justify-center md:gap-10 text-sm text-gray-600 font-medium">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span>Multi-State Coverage</span>
@@ -168,8 +168,8 @@ export default function Home() {
                 <span>Instant Download</span>
               </div>
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
+              <div className="col-span-2 flex items-start gap-2">
+                <svg className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
                 <span>Built for the person who just found out this is their job</span>
               </div>
               <div className="hidden md:block w-px h-5 bg-gray-200" aria-hidden="true" />
