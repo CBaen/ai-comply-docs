@@ -8,9 +8,9 @@
 
 import { mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
-import { generateDocumentsInner } from "../src/lib/pdf-generator";
-import { regulations } from "../src/data/regulations";
-import type { ComplianceFormData } from "../src/lib/pdf-types";
+import { generateDocumentsInner } from "@/lib/pdf-generator";
+import { regulations } from "@/data/regulations";
+import type { ComplianceFormData } from "@/lib/pdf-types";
 
 // pdfjs-dist for rendering PDF page 1 to canvas
 import { getDocument, GlobalWorkerOptions } from "pdfjs-dist/legacy/build/pdf.mjs";
