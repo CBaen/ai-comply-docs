@@ -38,7 +38,7 @@
 
 ## LOW (Polish)
 
-- [ ] 3 remaining static checkbox fixes — `[ ] HIGH [ ] MED [ ] LOW` text in CA CCPA/ADMT risk-assessment.ts, EU AI Act risk-management-system.ts, Healthcare AI ai-risk-assessment.ts
+- [x] 3 remaining static checkbox fixes — DONE. All interactive now.
 - [ ] Dark mode toggle removal consideration — research flagged it as "startup side project" signal on a compliance site
 - [ ] "Reviewed by" or "In collaboration with" credit — if Cameron can get one licensed attorney to review templates, it transforms credibility
 - [ ] BBB accreditation ($400-$1,200/year) — skip for now per research. Not worth it at this stage for a digital product.
