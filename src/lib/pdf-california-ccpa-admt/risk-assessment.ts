@@ -111,7 +111,14 @@ export function generateADMTRiskAssessment(data: ComplianceFormData): jsPDF {
       y = addWrappedText(doc, rc.risk, MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
       doc.setFont("helvetica", "normal");
       y = addWrappedText(doc, rc.detail, MARGIN + 5, y, CONTENT_WIDTH - 5, LINE_HEIGHT);
-      y = addWrappedText(doc, "  [ ] HIGH  [ ] MED  [ ] LOW  (Likelihood) | [ ] HIGH  [ ] MED  [ ] LOW  (Impact)", MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+      y = addWrappedText(doc, "  Likelihood:", MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+      y = addFormCheckbox(doc, `risk_${idx}_${rIdx}_likelihood_high`, "HIGH", y);
+      y = addFormCheckbox(doc, `risk_${idx}_${rIdx}_likelihood_med`, "MED", y);
+      y = addFormCheckbox(doc, `risk_${idx}_${rIdx}_likelihood_low`, "LOW", y);
+      y = addWrappedText(doc, "  Impact:", MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+      y = addFormCheckbox(doc, `risk_${idx}_${rIdx}_impact_high`, "HIGH", y);
+      y = addFormCheckbox(doc, `risk_${idx}_${rIdx}_impact_med`, "MED", y);
+      y = addFormCheckbox(doc, `risk_${idx}_${rIdx}_impact_low`, "LOW", y);
       y = addFormTextField(doc, `risk_${idx}_${rIdx}_mitigation`, "Mitigation:", y, { multiline: true, lines: 2 });
       y += 4;
     });
