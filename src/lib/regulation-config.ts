@@ -390,6 +390,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     lawLinkText: "Read Del. Code tit. 6, ch. 12D on delcode.delaware.gov",
     acknowledgment:
       "I have reviewed Del. Code tit. 6, ch. 12D (Delaware Personal Data Privacy Act, HB 154) and understand that these are compliance templates, not legal advice. The Delaware PDPA has been in effect since January 1, 2025, with the cure period expiring December 31, 2025. Delaware has the lowest compliance thresholds of any state (35,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     basePrice: 249,
     skippedSteps: [3],
 
@@ -431,6 +432,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I understand that these are multi-state compliance templates, not legal advice. State privacy laws are enacted independently and may differ in thresholds, cure periods, and specific requirements. I should verify the current status of each state\u2019s law and consult qualified legal counsel.",
     basePrice: 399,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Multi-State Data Protection Assessment",
@@ -513,6 +515,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed Va. Code §§ 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. The VCDPA has been in effect since January 1, 2023. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
@@ -554,6 +557,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed Conn. Gen. Stat. §§ 42-515 through 42-525 (Connecticut Data Privacy Act, PA 22-15) and understand that these are compliance templates, not legal advice. The CTDPA has been in effect since July 1, 2023, and the mandatory cure period has expired. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
@@ -595,6 +599,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed ORS §§ 646A.570 through 646A.604 (Oregon Consumer Privacy Act) and understand that these are compliance templates, not legal advice. The Oregon CPA has been in effect since July 1, 2024, with the cure period expiring January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
@@ -638,6 +643,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the Minnesota Consumer Data Privacy Act, Minn. Stat. \u00A7\u00A7 325M.10 through 325M.21. I understand that these are compliance templates, not legal advice. This law is effective July 31, 2025. The 30-day cure period expires January 31, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 349,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
@@ -678,6 +684,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations, effective January 1, 2026. I understand that these are compliance templates, not legal advice. The CPPA may update regulations and issue additional guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 499,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Pre-Use ADMT Notice Template",
@@ -721,6 +728,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. Member States may adopt additional implementing measures. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 997,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
 
     documents: [
       "Risk Management System Documentation",
@@ -808,6 +817,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1). I understand that these are implementation templates, not legal advice. The AI RMF is a voluntary framework; NIST is a non-regulatory agency. AI RMF 1.0 is currently being revised. I should verify the current version and consult qualified legal counsel.",
     basePrice: 397,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    gateText: "These templates implement the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
 
     documents: [
       "AI Risk Management Plan",
