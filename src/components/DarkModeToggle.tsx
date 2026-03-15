@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 
 export default function DarkModeToggle() {
   const [mounted, setMounted] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
     setMounted(true);
   }, []);
 
@@ -13,10 +15,9 @@ export default function DarkModeToggle() {
     const html = document.documentElement;
     html.classList.add("dark-transition");
     html.classList.toggle("dark");
-    localStorage.setItem(
-      "theme",
-      html.classList.contains("dark") ? "dark" : "light"
-    );
+    const dark = html.classList.contains("dark");
+    localStorage.setItem("theme", dark ? "dark" : "light");
+    setIsDark(dark);
     setTimeout(() => html.classList.remove("dark-transition"), 350);
   }
 
@@ -25,9 +26,10 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggle}
-      className="dark-toggle"
-      aria-label="Toggle dark mode"
-      title="Toggle dark mode"
+      className="dark-toggle min-w-[44px] min-h-[44px]"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-pressed={isDark}
+      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       <svg
         className="w-4 h-4 icon-moon"

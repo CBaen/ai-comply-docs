@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
         {/* Link columns — 2-col on mobile, 2-col on md+ */}
         <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-8">
-          <div>
+          <nav aria-label="Products">
             <h4 className="font-bold text-sm text-gray-900 mb-3">Products</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -44,8 +44,8 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-          <div>
+          </nav>
+          <nav aria-label="Company">
             <h4 className="font-bold text-sm text-gray-900 mb-3">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -96,11 +96,19 @@ export default function Footer() {
                   Terms
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-gray-600 hover:text-blue-700 transition"
+                >
+                  Privacy
+                </Link>
+              </li>
             </ul>
-          </div>
+          </nav>
         </div>
         <div className="border-t border-gray-200 pt-6">
-          <p className="text-gray-400 text-xs leading-relaxed mb-3">
+          <p className="text-gray-500 text-xs leading-relaxed mb-3">
             <strong className="text-gray-600">Legal Disclaimer:</strong> AI
             Compliance Documents generates documentation templates based on published
             regulatory text. This is not legal advice. Templates are based on
@@ -108,7 +116,7 @@ export default function Footer() {
             Regulatory requirements may change. Consult qualified legal counsel
             for formal compliance verification.
           </p>
-          <p className="text-gray-400 text-xs flex flex-wrap gap-x-1">
+          <p className="text-gray-500 text-xs flex flex-wrap gap-x-1">
             <span>&copy; {new Date().getFullYear()} AI Compliance Documents.</span>
             <span>All rights reserved.</span>
             <span>All sales final.</span>

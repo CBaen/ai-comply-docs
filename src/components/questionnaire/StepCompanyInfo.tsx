@@ -16,22 +16,25 @@ export default function StepCompanyInfo({
         Company Information
       </h3>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Company Name <span className="text-red-500">*</span>
         </label>
         <input
+          id="companyName"
           type="text"
           value={companyName}
           onChange={(e) => setCompanyName(e.target.value)}
           placeholder="e.g., Acme Corporation"
+          aria-required="true"
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="state" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           State of Operation
         </label>
         <input
+          id="state"
           type="text"
           value={companyState}
           onChange={(e) => setCompanyState(e.target.value)}
@@ -40,10 +43,11 @@ export default function StepCompanyInfo({
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="companySize" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Company Size
         </label>
         <select
+          id="companySize"
           value={companySize}
           onChange={(e) => setCompanySize(e.target.value)}
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:text-white"

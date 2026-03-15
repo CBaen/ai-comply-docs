@@ -45,7 +45,7 @@ function StatusBadge({ status, ready }: { status: string; ready: boolean }) {
   if (!ready) {
     return (
       <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded font-semibold shrink-0 bg-slate-100 text-slate-600">
-        <span className="inline-block w-1.5 h-1.5 rounded-sm bg-slate-400" />
+        <span className="inline-block w-1.5 h-1.5 rounded-sm bg-slate-400" aria-hidden="true" />
         COMING SOON
       </span>
     );
@@ -65,6 +65,7 @@ function StatusBadge({ status, ready }: { status: string; ready: boolean }) {
       className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded font-semibold shrink-0 ${styles[status] || styles.proposed}`}
     >
       <span
+        aria-hidden="true"
         className={`inline-block w-1.5 h-1.5 rounded-sm ${status === "in-effect" ? "bg-red-500" : status === "effective-soon" ? "bg-amber-500" : "bg-slate-400"}`}
       />
       {labels[status] || "PROPOSED"}
@@ -108,7 +109,7 @@ function DeadlineBanner({
           These Laws Are In Effect Now — Penalties Are Live
         </h3>
       </div>
-      <p className="text-xs text-red-700/70 mb-3">
+      <p className="text-xs text-red-700 mb-3">
         Last updated {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
       </p>
       <div className="grid sm:grid-cols-2 gap-3">
@@ -193,12 +194,11 @@ export default function ProductLibrary({
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex overflow-x-auto gap-2 mb-6 pb-1 -mx-1 px-1 scrollbar-none" role="tablist">
+      <div className="flex overflow-x-auto gap-2 mb-6 pb-1 -mx-1 px-1 scrollbar-none">
         {filters.map((f) => (
           <button
             key={f.key}
-            role="tab"
-            aria-selected={activeFilter === f.key}
+            aria-pressed={activeFilter === f.key}
             onClick={() => setActiveFilter(f.key)}
             className={`shrink-0 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition whitespace-nowrap ${
               activeFilter === f.key

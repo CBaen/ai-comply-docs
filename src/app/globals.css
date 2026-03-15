@@ -40,6 +40,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   outline-offset: 2px;
 }
 
+/* Dark mode focus ring: add white outer ring so #1e40af is visible on dark backgrounds */
+html.dark a:focus-visible,
+html.dark button:focus-visible,
+html.dark summary:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px #1e293b, 0 0 0 6px #93c5fd;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -156,11 +165,13 @@ html.dark .dark-toggle .icon-sun { display: block; }
 html.dark .dark-toggle .icon-moon { display: none; }
 
 /* Smooth transition for dark mode */
-html.dark-transition,
-html.dark-transition *,
-html.dark-transition *::before,
-html.dark-transition *::after {
-  transition: background-color 0.3s ease, color 0.2s ease, border-color 0.3s ease !important;
+@media (prefers-reduced-motion: no-preference) {
+  html.dark-transition,
+  html.dark-transition *,
+  html.dark-transition *::before,
+  html.dark-transition *::after {
+    transition: background-color 0.3s ease, color 0.2s ease, border-color 0.3s ease;
+  }
 }
 
 /* Mobile menu */

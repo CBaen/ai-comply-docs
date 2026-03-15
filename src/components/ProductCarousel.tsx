@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import type { Regulation } from "@/data/regulations";
 
@@ -11,6 +11,9 @@ interface Props {
 export default function ProductCarousel({ products }: Props) {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const reducedMotion = useRef(
+    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
 
   const next = useCallback(() => {
     setCurrent((c) => (c + 1) % products.length);
@@ -21,7 +24,7 @@ export default function ProductCarousel({ products }: Props) {
   }, [products.length]);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || reducedMotion.current) return;
     const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
   }, [paused, next]);
