@@ -73,7 +73,7 @@ export default function RootLayout({
       className={`${merriweather.variable} ${sourceSans.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-slate-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased font-sans transition-colors">
+      <body className="bg-slate-50 text-gray-900 antialiased font-sans transition-colors" suppressHydrationWarning>
         <Script id="dark-mode-init" strategy="beforeInteractive">{`
           (function() {
             var stored = localStorage.getItem('theme');
