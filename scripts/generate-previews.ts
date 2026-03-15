@@ -16,10 +16,12 @@ import type { ComplianceFormData } from "@/lib/pdf-types";
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const pdfjsLib = require("pdfjs-dist/legacy/build/pdf.mjs");
 import { createCanvas } from "canvas";
+import { pathToFileURL } from "url";
 import sharp from "sharp";
 
-// Point worker to the bundled worker file
-pdfjsLib.GlobalWorkerOptions.workerSrc = require.resolve("pdfjs-dist/legacy/build/pdf.worker.mjs");
+// Point worker to the bundled worker file — must be a file:// URL on Windows
+const workerPath = require.resolve("pdfjs-dist/legacy/build/pdf.worker.mjs");
+pdfjsLib.GlobalWorkerOptions.workerSrc = pathToFileURL(workerPath).href;
 
 const PREVIEW_DIR = join(process.cwd(), "public", "previews");
 const PREVIEW_WIDTH = 800; // px — crisp on retina at 400px display
@@ -66,7 +68,7 @@ const SAMPLE_DATA: Omit<ComplianceFormData, "regulation"> = {
 };
 
 async function renderPage1ToPng(pdfBytes: ArrayBuffer): Promise<Buffer> {
-  const pdfDoc = await getDocument({
+  const pdfDoc = await pdfjsLib.getDocument({
     data: new Uint8Array(pdfBytes),
     useSystemFonts: true,
     standardFontDataUrl: undefined,
