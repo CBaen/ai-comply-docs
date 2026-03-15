@@ -30,7 +30,7 @@ export function generateResultsPublicationTemplate(
 
   y = addWrappedText(
     doc,
-    `This template produces the publicly posted bias audit disclosure required by NYC Admin. Code §20-871(a)(2). Employers and employment agencies must post bias audit results on their website at least 30 days before using the AEDT and within 30 days of a new audit being completed. The posting must remain publicly accessible while the AEDT is in use and for one year after the AEDT is no longer used. Verify current DCWP requirements at nyc.gov/dcwp.`,
+    `This template produces the publicly posted bias audit disclosure required by NYC Admin. Code §20-871(a)(2) and DCWP rule §5-303. Employers and employment agencies must post bias audit results on the employment section of their website at least 30 days before using the AEDT, and update within 30 days of a new audit being completed. A hyperlink to a separate page is permitted. The posting must remain publicly accessible while the AEDT is in use and for SIX MONTHS after the last use of the AEDT (not one year — confirm the verified DCWP rule §5-303). Verify current DCWP requirements at nyc.gov/dcwp.`,
     MARGIN,
     y,
     CONTENT_WIDTH,
@@ -130,27 +130,63 @@ export function generateResultsPublicationTemplate(
   y = addFormTextField(
     doc,
     "rpt_website_url",
-    "URL Where This Disclosure Is Posted:",
+    "URL Where This Disclosure Is Posted (must be on employment section of website; hyperlink to separate page permitted):",
     y,
     { width: 150 }
   );
   y += LINE_HEIGHT;
 
-  // Section 3: Summary of Results by Category (§20-871(a)(2)(b))
+  // Section 3: Required Counts (§5-303 elements 3 and 4)
   y = addSectionHeader(
     doc,
-    "3. Bias Audit Results Summary — Selection Rates and Impact Ratios (§20-871(a)(2)(b))",
+    "3. Required Counts — Applicants/Candidates and Unknown Category (§5-303)",
     y
   );
   y = addWrappedText(
     doc,
-    "Per §20-871(a)(2)(b), the posting must include a summary of results for each category tested, including the selection rate and impact ratio for each EEO-1 category and for sex. The impact ratio compares the selection rate for each category against the most-selected category (or against the White male group, per DCWP rules). An impact ratio below 0.80 (the 4/5 / 80% rule) indicates potential adverse impact.",
+    "Per §5-303, the published summary must include the number of individuals in the unknown category (those whose sex or race/ethnicity could not be determined) and the total number of applicants or candidates in the dataset used for the audit.",
     MARGIN,
     y,
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
-  y += 6;
+  y += 4;
+  y = addFormTextField(
+    doc,
+    "rpt_total_applicants",
+    "Total Number of Applicants / Candidates in Audit Dataset (§5-303 required element):",
+    y,
+    { width: 80 }
+  );
+  y = addFormTextField(
+    doc,
+    "rpt_unknown_count",
+    "Number of Individuals in Unknown Category — sex or race/ethnicity undetermined (§5-303 required element):",
+    y,
+    { width: 80 }
+  );
+  y += LINE_HEIGHT;
+
+  // Section 4: Summary of Results by Category (§5-303 elements 5 and 6)
+  y = addSectionHeader(
+    doc,
+    "4. Bias Audit Results Summary — Selection or Scoring Rates and Impact Ratios (§5-303)",
+    y
+  );
+  y = addWrappedText(
+    doc,
+    "Per §5-303, the posting must include selection or scoring rates AND impact ratios for ALL categories tested — (i) Sex, (ii) Race/Ethnicity (7 EEO-1 categories), and (iii) Intersectional sex × race/ethnicity. For selection-type AEDTs complete selection rates; for scoring-type AEDTs complete scoring rates and median score. Impact ratio = this category's rate ÷ highest-selected/scoring category's rate. A ratio below 0.80 (the 4/5 / 80% rule) may indicate adverse impact.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y += 4;
+
+  y = addFormCheckbox(doc, "rpt_aedt_selection_type", "AEDT is a SELECTION-TYPE tool — complete selection rates below", y);
+  y = addFormCheckbox(doc, "rpt_aedt_scoring_type", "AEDT is a SCORING-TYPE tool — complete scoring rates and median score below", y);
+  y = addFormTextField(doc, "rpt_median_score", "Median Score for Full Sample (scoring-type AEDTs only):", y, { width: 80 });
+  y += 4;
 
   const eeoGroups = [
     "Hispanic or Latino",
@@ -168,19 +204,33 @@ export function generateResultsPublicationTemplate(
     y = addFormTextField(
       doc,
       `rpt_sel_rate_${idx}`,
-      `${group} — Selection Rate (number selected ÷ total in category):`,
+      `${group} — Selection or Scoring Rate:`,
       y,
       { width: 80 }
     );
     y = addFormTextField(
       doc,
       `rpt_impact_ratio_${idx}`,
-      `${group} — Impact Ratio (this category's rate ÷ highest-selected category's rate):`,
+      `${group} — Impact Ratio (this category's rate ÷ highest-selected/scoring category's rate):`,
       y,
       { width: 80 }
     );
     y += 2;
   });
+
+  y = addWrappedText(
+    doc,
+    "Intersectional Sex × Race/Ethnicity Categories (§5-301(b)(3)(iii) and §5-301(c)(4)(iii) — required): Report selection or scoring rates and impact ratios for all intersectional combinations tested (e.g., Hispanic or Latino Male, White Female, Black or African American Male, etc.).",
+    MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
+  );
+  y += 4;
+  y = addFormTextField(
+    doc,
+    "rpt_intersectional_results",
+    "Intersectional Results Table (attach or summarize all intersectional sex × race/ethnicity rates and ratios):",
+    y,
+    { multiline: true, lines: 6 }
+  );
   y += LINE_HEIGHT;
 
   // Section 4: Source and Explanation of Data (§20-871(a)(2)(c))

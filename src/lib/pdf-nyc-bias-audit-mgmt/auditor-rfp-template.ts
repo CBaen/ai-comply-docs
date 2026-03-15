@@ -124,12 +124,12 @@ export function generateAuditorRfpTemplate(data: ComplianceFormData): jsPDF {
   // Section 3: Required Testing
   y = addSectionHeader(
     doc,
-    "3. Required Testing — Selection Rates and Impact Ratios",
+    "3. Required Testing — Selection Rates, Impact Ratios, and AEDT Type",
     y
   );
   y = addWrappedText(
     doc,
-    "Per DCWP rules (6 RCNY § 5-301), the bias audit must calculate selection rates and impact ratios for each EEO-1 race/ethnicity category and for sex. The auditor must compare selection rates across categories using the 4/5 (80%) rule from EEOC Uniform Guidelines (29 C.F.R. § 1607). Required categories to test:",
+    "Per DCWP rules (6 RCNY § 5-301), required calculations depend on whether the AEDT is a selection-type or scoring-type tool. Both types require calculations across (i) Sex, (ii) Race/Ethnicity (7 EEO-1 categories), and (iii) Intersectional sex × race/ethnicity categories. Identify the AEDT type and confirm all required calculations below.",
     MARGIN,
     y,
     CONTENT_WIDTH,
@@ -137,22 +137,79 @@ export function generateAuditorRfpTemplate(data: ComplianceFormData): jsPDF {
   );
   y += 4;
 
+  y = addFormCheckbox(doc, "rfp_aedt_selection_type", "AEDT is a SELECTION-TYPE tool (issues pass/fail, selected/not-selected, or proceed/screen-out output)", y);
+  y = addFormCheckbox(doc, "rfp_aedt_scoring_type", "AEDT is a SCORING-TYPE tool (issues a score, ranking, or numeric output used for decision-making)", y);
+  y += 4;
+
+  y = addWrappedText(
+    doc,
+    "SELECTION-TYPE AEDT — Required calculations per §5-301(b):",
+    MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
+  );
+  y += 2;
+  const selectionCalcs = [
+    "Selection rate for each category (number selected ÷ total in category)",
+    "Impact ratio for each category (category selection rate ÷ highest selection rate among all categories)",
+    "Calculations broken out by: (i) Sex, (ii) Race/Ethnicity — all 7 EEO-1 categories, (iii) Intersectional sex × race/ethnicity",
+    "Per-group calculations if AEDT classifies applicants into groups before selection",
+    "Count of individuals in the unknown category (those whose sex or race/ethnicity could not be determined)",
+  ];
+  selectionCalcs.forEach((calc, idx) => {
+    y = addFormCheckbox(doc, `rfp_sel_calc_${idx}`, calc, y);
+  });
+  y += 4;
+
+  y = addWrappedText(
+    doc,
+    "SCORING-TYPE AEDT — Required calculations per §5-301(c):",
+    MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
+  );
+  y += 2;
+  const scoringCalcs = [
+    "Median score for the full sample",
+    "Scoring rate for each category (number scored at or above threshold ÷ total in category, or as defined by auditor methodology)",
+    "Impact ratio for each category (category scoring rate ÷ highest scoring rate among all categories)",
+    "Calculations broken out by: (i) Sex, (ii) Race/Ethnicity — all 7 EEO-1 categories, (iii) Intersectional sex × race/ethnicity",
+    "Count of individuals in the unknown category (those whose sex or race/ethnicity could not be determined)",
+  ];
+  scoringCalcs.forEach((calc, idx) => {
+    y = addFormCheckbox(doc, `rfp_score_calc_${idx}`, calc, y);
+  });
+  y += 4;
+
+  y = addWrappedText(
+    doc,
+    "EEO-1 Race/Ethnicity Categories (7 categories required per §5-301):",
+    MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
+  );
+  y += 2;
   const eeoCategories = [
-    "Hispanic or Latino",
-    "White (Not Hispanic or Latino)",
-    "Black or African American (Not Hispanic or Latino)",
-    "Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)",
-    "Asian (Not Hispanic or Latino)",
-    "American Indian or Alaska Native (Not Hispanic or Latino)",
-    "Two or More Races (Not Hispanic or Latino)",
-    "Male",
-    "Female",
-    "Intersectional categories (race/ethnicity × sex) where data permits",
+    "(ii) Hispanic or Latino",
+    "(ii) White (Not Hispanic or Latino)",
+    "(ii) Black or African American (Not Hispanic or Latino)",
+    "(ii) Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)",
+    "(ii) Asian (Not Hispanic or Latino)",
+    "(ii) American Indian or Alaska Native (Not Hispanic or Latino)",
+    "(ii) Two or More Races (Not Hispanic or Latino)",
+    "(i) Male",
+    "(i) Female",
+    "(iii) Intersectional sex × race/ethnicity — all combinations (e.g., Hispanic or Latino Male, White Female, etc.)",
   ];
   eeoCategories.forEach((cat, idx) => {
     y = addFormCheckbox(doc, `rfp_eeo_${idx}`, cat, y);
   });
   y += 4;
+
+  y = addWrappedText(
+    doc,
+    "§5-301(d) Small-Category Exclusion: Categories comprising less than 2% of the total data used for bias testing may be excluded from the analysis, provided the auditor documents the justification for exclusion. The auditor must still count and report the number of individuals in the unknown category regardless of the 2% threshold.",
+    MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT
+  );
+  y += LINE_HEIGHT;
+  y = addFormCheckbox(doc, "rfp_exclusion_provision", "Auditor will apply §5-301(d) <2% exclusion where justified and document all exclusions in the audit report", y);
+  y = addFormCheckbox(doc, "rfp_unknown_category", "Auditor will count and report the number of individuals in the unknown category (sex or race/ethnicity undetermined) regardless of exclusions", y);
+  y += 4;
+
   y = addFormTextField(
     doc,
     "rfp_testing_methodology",
