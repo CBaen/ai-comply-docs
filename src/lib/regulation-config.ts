@@ -1638,6 +1638,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 109,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Developer Disclosure Checklist",
@@ -1675,6 +1676,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 99,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Pre-Use Notice Template",
@@ -1711,6 +1713,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 89,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Access Request Intake Form",
@@ -1747,6 +1750,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s cybersecurity audit regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 149,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Cybersecurity Audit Checklist",
@@ -1786,6 +1790,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 129,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Auditor RFP Template",
@@ -1823,6 +1828,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 89,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "10-Day Advance Notice Template",
@@ -1859,6 +1865,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 99,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Rights Request Intake Form",
@@ -1895,6 +1902,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 109,
+    skippedSteps: [2, 3, 4],
 
     documents: [
       "Profiling Assessment Template",
