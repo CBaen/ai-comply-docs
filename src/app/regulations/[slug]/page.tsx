@@ -169,6 +169,15 @@ const BLOG_GUIDES: Record<string, { url: string; title: string }> = {
   },
 };
 
+const RELATED_ADDONS: Record<string, string[]> = {
+  "illinois-hb3773": ["il-notice-response-kit", "il-zip-proxy-audit"],
+  "colorado-sb24-205": ["co-appeal-correction-kit", "co-ag-reporting-kit", "co-dev-deploy-exchange"],
+  "california-ccpa-admt": ["ca-admt-notice-optout", "ca-admt-access-kit", "ca-cyber-audit-kit"],
+  "nyc-local-law-144": ["nyc-bias-audit-mgmt", "nyc-candidate-notice-kit"],
+  "virginia-cdpa": ["va-consumer-rights-kit", "va-profiling-assessment-kit", "va-controller-processor-kit"],
+  "eu-ai-act": ["eu-fria-kit", "eu-post-market-kit", "eu-human-oversight-kit", "eu-registration-transparency"],
+};
+
 export default async function RegulationPage({
   params,
 }: {

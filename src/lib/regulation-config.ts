@@ -1455,4 +1455,630 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be listed in your privacy notices and consumer rights procedures as the designated privacy contact.",
     },
   },
+  // ── Illinois Add-Ons ─────────────────────────────────────────
+  "il-notice-response-kit": {
+    name: "IL Notice & Response Kit",
+    statute: "775 ILCS 5/2-102(L)",
+    lawUrl:
+      "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
+    lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
+    acknowledgment:
+      "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
+    basePrice: 79,
+
+    documents: [
+      "Employee Notification Template",
+      "AI Use Logging Form",
+      "Employee Inquiry Response Form",
+    ],
+    decisions: [
+      ["hiring", "Hiring"],
+      ["employment", "Employment Decisions"],
+      ["inquiry", "Employee Inquiries & Responses"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What AI systems require notice?</strong> Any AI tool used in employment decisions for Illinois employees. This kit provides the templates needed to notify employees and respond to their inquiries as required under 775 ILCS 5/2-102(L).",
+      step2Intro:
+        "List each AI tool for which you need to send employee notices or handle inquiry responses.",
+      step2DecisionHelp:
+        "Check the employment decision areas where this AI tool is used. This determines which notice templates apply.",
+      step2MultiHelp:
+        "If you use multiple AI tools requiring employee notice, list each separately.",
+      step3BiasHelp:
+        "If employees raise bias-related inquiries, your response templates should address how you evaluate and mitigate discriminatory AI outcomes.",
+      step4Help:
+        "This section captures how your organization processes employee AI inquiries and who is responsible for responding.",
+      step5Intro:
+        "This contact will be listed on employee notices and inquiry response forms as the designated AI compliance contact under Illinois HB3773.",
+    },
+  },
+  "il-zip-proxy-audit": {
+    name: "IL ZIP Code Proxy Audit Kit",
+    statute: "775 ILCS 5/2-102(L)",
+    lawUrl:
+      "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
+    lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
+    acknowledgment:
+      "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
+    basePrice: 99,
+
+    documents: [
+      "Data Input Audit",
+      "Proxy Analysis Worksheet",
+      "Remediation Plan",
+    ],
+    decisions: [
+      ["hiring", "Hiring"],
+      ["employment", "Employment Decisions"],
+      ["data_inputs", "AI Data Input Review"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>Why audit data inputs?</strong> Under Illinois HB3773, AI systems must not have a discriminatory effect. ZIP codes and similar geographic inputs can act as proxies for race or national origin. This kit helps you audit AI data inputs to identify and remediate potential proxy discrimination.",
+      step2Intro:
+        "List each AI tool whose data inputs you need to audit for proxy discrimination risks.",
+      step2DecisionHelp:
+        "Check the employment decision areas where this AI tool is used. This determines the scope of your proxy audit.",
+      step2MultiHelp:
+        "If you use multiple AI tools with data input concerns, audit each separately.",
+      step3BiasHelp:
+        "A proxy analysis is one of the most important bias reviews for employment AI. Geographic and demographic input variables are common sources of disparate impact.",
+      step4Help:
+        "This section captures your current AI data governance practices and who is responsible for input validation.",
+      step5Intro:
+        "This contact will be listed as the data audit coordinator responsible for proxy analysis and remediation tracking.",
+    },
+  },
+  // ── Colorado Add-Ons ─────────────────────────────────────────
+  "co-appeal-correction-kit": {
+    name: "CO Appeal & Correction Kit",
+    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    lawUrl: "https://leg.colorado.gov/bills/sb24-205",
+    lawLinkText: "Read SB 24-205 on leg.colorado.gov",
+    acknowledgment:
+      "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 99,
+
+    documents: [
+      "Appeal Intake Form",
+      "Data Correction Request Form",
+      "Appeal Outcome Letter",
+    ],
+    decisions: [
+      ["consumer_rights", "Consumer Appeal Rights"],
+      ["data_correction", "Data Correction Requests"],
+      ["adverse_decisions", "Adverse AI Decisions"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>When do consumers have appeal rights?</strong> Under C.R.S. \u00A7 6-1-1703, consumers affected by adverse consequential decisions made by high-risk AI systems have the right to appeal and request correction of inaccurate data. This kit provides the forms to handle those appeals.",
+      step2Intro:
+        "List each AI system that makes adverse consequential decisions against consumers. Your appeal process will cover each one.",
+      step2DecisionHelp:
+        "Check the consequential decision areas where adverse outcomes trigger appeal rights under Colorado SB 24-205.",
+      step2MultiHelp:
+        "If you use multiple high-risk AI systems, each may generate separate appeal requests. List each separately.",
+      step3BiasHelp:
+        "Consumers who experience discriminatory outcomes may use your appeal process to challenge those decisions. Your intake form should capture bias-related complaints.",
+      step4Help:
+        "This section captures how your organization reviews and responds to consumer appeals. Colorado law requires deployers to provide a meaningful appeal mechanism.",
+      step5Intro:
+        "This contact will be listed on appeal intake forms and outcome letters as the designated consumer rights contact under Colorado SB 24-205.",
+    },
+  },
+  "co-ag-reporting-kit": {
+    name: "CO AG Reporting Kit",
+    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    lawUrl: "https://leg.colorado.gov/bills/sb24-205",
+    lawLinkText: "Read SB 24-205 on leg.colorado.gov",
+    acknowledgment:
+      "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 129,
+
+    documents: [
+      "Discrimination Discovery Form",
+      "AG Notification Letter",
+      "Corrective Action Plan",
+    ],
+    decisions: [
+      ["discrimination_discovery", "Algorithmic Discrimination Discovery"],
+      ["ag_notification", "Attorney General Notification"],
+      ["corrective_action", "Corrective Action"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>When must you notify the Colorado AG?</strong> Under C.R.S. \u00A7 6-1-1706, deployers who discover that their high-risk AI system has caused algorithmic discrimination must notify the Attorney General. This kit provides the documentation and notification templates for that process.",
+      step2Intro:
+        "List each AI system involved in a potential discrimination discovery that may require AG notification.",
+      step2DecisionHelp:
+        "Check the consequential decision areas where the potential discrimination occurred.",
+      step2MultiHelp:
+        "If multiple AI systems are involved in a discrimination event, document each separately.",
+      step3BiasHelp:
+        "Documenting your bias analysis at the time of discovery is critical for AG notification. Your discrimination discovery form should capture the statistical evidence.",
+      step4Help:
+        "This section captures your current oversight structure and how the discrimination was detected. This context is required for the AG notification letter.",
+      step5Intro:
+        "This contact will be listed as the compliance officer responsible for the AG notification and corrective action plan.",
+    },
+  },
+  "co-dev-deploy-exchange": {
+    name: "CO Developer-Deployer Exchange Kit",
+    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
+    lawUrl: "https://leg.colorado.gov/bills/sb24-205",
+    lawLinkText: "Read SB 24-205 on leg.colorado.gov",
+    acknowledgment:
+      "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 109,
+
+    documents: [
+      "Developer Disclosure Checklist",
+      "Deployer Gap Analysis",
+      "Third-Party Assessment Addendum",
+    ],
+    decisions: [
+      ["developer_obligations", "Developer Disclosure Obligations"],
+      ["deployer_assessment", "Deployer Risk Assessment"],
+      ["third_party", "Third-Party AI Procurement"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What are developer vs. deployer obligations?</strong> Colorado SB 24-205 distinguishes between developers (who build AI systems) and deployers (who use them). Developers must disclose system capabilities and limitations; deployers must conduct their own impact assessments. This kit addresses the documentation exchange between both parties.",
+      step2Intro:
+        "List each AI system involved in a developer-deployer relationship requiring documentation exchange.",
+      step2DecisionHelp:
+        "Check the consequential decision areas where this AI system is deployed. This determines which developer disclosures and deployer assessments are required.",
+      step2MultiHelp:
+        "If you procure multiple AI systems from different developers, each relationship requires its own documentation exchange.",
+      step3BiasHelp:
+        "Developer disclosures should include bias testing results. Your deployer gap analysis should assess whether the developer\u2019s testing is sufficient for your deployment context.",
+      step4Help:
+        "This section captures how your organization evaluates third-party AI systems before deployment. Colorado law requires deployers to exercise reasonable care over procured systems.",
+      step5Intro:
+        "This contact will be listed as the vendor AI compliance lead responsible for the developer-deployer documentation exchange.",
+    },
+  },
+  // ── California Add-Ons ────────────────────────────────────────
+  "ca-admt-notice-optout": {
+    name: "CA ADMT Notice & Opt-Out Kit",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
+    lawUrl: "https://cppa.ca.gov/regulations/",
+    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
+    acknowledgment:
+      "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 99,
+
+    documents: [
+      "Pre-Use Notice Template",
+      "Opt-Out Request Processing Workflow",
+      "Opt-Out Exception Documentation",
+    ],
+    decisions: [
+      ["hiring", "Employment Decisions"],
+      ["financial", "Financial/Lending"],
+      ["consumer_profiling", "Consumer Profiling"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>When is pre-use notice required?</strong> The CPPA ADMT regulations require businesses to provide consumers with notice before using ADMT that has a legal or similarly significant effect on them, and to offer an opt-out right. This kit provides the notice templates and opt-out processing workflow.",
+      step2Intro:
+        "List each ADMT system for which you need to provide consumer pre-use notice and opt-out rights.",
+      step2DecisionHelp:
+        "Check every decision category where this ADMT system affects California consumers. This determines the scope of notice and opt-out obligations.",
+      step2MultiHelp:
+        "Each ADMT system may require its own consumer notice. List all systems separately.",
+      step3BiasHelp:
+        "CPPA regulations require risk assessments for ADMT. If your system has been assessed for bias, that information should be reflected in your consumer-facing disclosures.",
+      step4Help:
+        "This section captures how consumers interact with your ADMT system and how opt-out requests are processed. California regulations require a meaningful opt-out mechanism.",
+      step5Intro:
+        "This contact will be listed on consumer notices and opt-out request forms as the designated ADMT rights contact.",
+    },
+  },
+  "ca-admt-access-kit": {
+    name: "CA ADMT Access & Explanation Kit",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
+    lawUrl: "https://cppa.ca.gov/regulations/",
+    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
+    acknowledgment:
+      "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 89,
+
+    documents: [
+      "Access Request Intake Form",
+      "ADMT Output Explanation Template",
+      "Response Timeline Tracker",
+    ],
+    decisions: [
+      ["hiring", "Employment Decisions"],
+      ["financial", "Financial/Lending"],
+      ["consumer_profiling", "Consumer Profiling"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What access rights do California consumers have?</strong> The CPPA ADMT regulations give consumers the right to access information about ADMT decisions that significantly affect them, including an explanation of the logic and the data used. This kit provides the intake form, explanation template, and timeline tracker.",
+      step2Intro:
+        "List each ADMT system from which consumers may request access and explanation of decisions.",
+      step2DecisionHelp:
+        "Check the decision categories where this ADMT system produces outputs that consumers have the right to access.",
+      step2MultiHelp:
+        "If you use multiple ADMT systems, consumers may request access to each separately. List all systems.",
+      step3BiasHelp:
+        "Consumers who receive biased ADMT outputs may request an explanation. Your explanation template should address how the system was designed to minimize discriminatory outcomes.",
+      step4Help:
+        "This section captures how your organization generates and communicates ADMT decision explanations to consumers.",
+      step5Intro:
+        "This contact will be listed on access request intake forms as the designated ADMT access rights contact.",
+    },
+  },
+  "ca-cyber-audit-kit": {
+    name: "CA Cybersecurity Audit Kit",
+    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
+    lawUrl: "https://cppa.ca.gov/regulations/",
+    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
+    acknowledgment:
+      "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s cybersecurity audit regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 149,
+
+    documents: [
+      "Cybersecurity Audit Checklist",
+      "Risk Assessment Workbook",
+      "Audit Remediation Tracker",
+    ],
+    decisions: [
+      ["data_processing", "Personal Data Processing"],
+      ["consumer_profiling", "Consumer Profiling"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>When is a cybersecurity audit required?</strong> The CPPA regulations require businesses that process personal data and present significant risk to conduct cybersecurity audits. This kit provides the checklist, risk assessment workbook, and remediation tracker for that process.",
+      step2Intro:
+        "List each AI or data processing system to be included in your cybersecurity audit.",
+      step2DecisionHelp:
+        "Check every category where this system processes California consumer personal data. This determines the audit scope.",
+      step2MultiHelp:
+        "If you have multiple systems processing personal data, each may require its own audit assessment. List them separately.",
+      step3BiasHelp:
+        "Cybersecurity risks and algorithmic bias risks often overlap \u2014 a compromised AI system can produce distorted outputs. Include bias risk in your audit scope.",
+      step4Help:
+        "This section captures your current cybersecurity controls for AI and data processing systems. The audit checklist will assess each control area.",
+      step5Intro:
+        "This contact will be listed as the cybersecurity audit coordinator responsible for scheduling, tracking, and remediating audit findings.",
+    },
+  },
+  // ── NYC Add-Ons ──────────────────────────────────────────────
+  "nyc-bias-audit-mgmt": {
+    name: "NYC Bias Audit Management Kit",
+    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
+    lawUrl:
+      "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9",
+    lawLinkText:
+      "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
+    acknowledgment:
+      "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 129,
+
+    documents: [
+      "Auditor RFP Template",
+      "Results Publication Template",
+      "Annual Renewal Calendar",
+    ],
+    decisions: [
+      ["hiring", "Hiring/Screening"],
+      ["promotion", "Promotion"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What does annual bias audit management require?</strong> Under NYC LL144, automated employment decision tools must have an annual independent bias audit conducted before use, and results must be published on your website at least 10 business days before using the tool. This kit provides the auditor RFP, publication template, and renewal calendar.",
+      step2Intro:
+        "List each AEDT that requires annual bias audit management under NYC LL144.",
+      step2DecisionHelp:
+        "Check whether this AEDT is used for hiring/screening, promotion, or both.",
+      step2MultiHelp:
+        "Each AEDT requires its own annual bias audit. List each tool separately so your renewal calendar covers them all.",
+      step3BiasHelp:
+        "The auditor RFP template specifies the independence requirements and impact ratio methodology required by DCWP rules at 6 RCNY \u00A7 5-300 et seq.",
+      step4Help:
+        "This section captures how your organization selects and manages independent bias auditors. NYC LL144 requires auditors to be independent of the AEDT developer and deployer.",
+      step5Intro:
+        "This contact will be listed as the bias audit program coordinator responsible for auditor selection, results publication, and annual renewal.",
+    },
+  },
+  "nyc-candidate-notice-kit": {
+    name: "NYC Candidate Notice Kit",
+    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
+    lawUrl:
+      "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9",
+    lawLinkText:
+      "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
+    acknowledgment:
+      "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 89,
+
+    documents: [
+      "10-Day Advance Notice Template",
+      "Alternative Process Workflow",
+      "Data Disclosure Response",
+    ],
+    decisions: [
+      ["hiring", "Hiring/Screening"],
+      ["promotion", "Promotion"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What notice must candidates receive?</strong> Under NYC LL144 and DCWP rules, employers must notify candidates at least 10 business days before using an AEDT and offer an alternative selection process. Candidates may also request disclosure of the data types used. This kit provides all three required documents.",
+      step2Intro:
+        "List each AEDT for which you need to send candidate advance notices and manage alternative process requests.",
+      step2DecisionHelp:
+        "Check whether this AEDT is used for hiring/screening, promotion, or both.",
+      step2MultiHelp:
+        "If you use multiple AEDTs, each requires its own candidate notice process. List each separately.",
+      step3BiasHelp:
+        "Candidates who request the alternative process may be doing so due to concerns about bias. Your alternative process workflow should document how you evaluate those cases.",
+      step4Help:
+        "This section captures how your organization manages candidate notices and alternative process requests. DCWP rules specify timing and delivery requirements.",
+      step5Intro:
+        "This contact will be listed on candidate notices and data disclosure responses as the designated NYC LL144 compliance contact.",
+    },
+  },
+  // ── Virginia Add-Ons ─────────────────────────────────────────
+  "va-consumer-rights-kit": {
+    name: "VA Consumer Rights Kit",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
+    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+    lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
+    acknowledgment:
+      "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 99,
+
+    documents: [
+      "Rights Request Intake Form",
+      "Appeal Workflow",
+      "AG Complaint Referral Notice",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["data_sales", "Data Sales"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What consumer rights exist under Virginia CDPA?</strong> Virginia consumers have rights to access, correct, delete, opt out of profiling, and appeal denied requests (\u00A7 59.1-578(B)). If the appeal is denied, consumers may complain to the AG. This kit provides the intake form, appeal workflow, and AG referral notice.",
+      step2Intro:
+        "List each AI or data processing system subject to consumer rights requests under Virginia CDPA.",
+      step2DecisionHelp:
+        "Check every category where this system processes Virginia consumer data. This determines which consumer rights apply.",
+      step2MultiHelp:
+        "If consumers can submit rights requests about multiple systems, list each separately.",
+      step3BiasHelp:
+        "Consumers who opt out of profiling due to bias concerns should be tracked separately. Your appeal workflow should address bias-related challenges.",
+      step4Help:
+        "This section captures how your organization handles consumer rights requests and appeals. Virginia law requires responding within 45 days and providing an appeal mechanism for denied requests.",
+      step5Intro:
+        "This contact will be listed on consumer rights intake forms and appeal responses as the designated Virginia CDPA privacy contact.",
+    },
+  },
+  "va-profiling-assessment-kit": {
+    name: "VA Profiling Assessment Kit",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
+    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+    lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
+    acknowledgment:
+      "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 109,
+
+    documents: [
+      "Profiling Assessment Template",
+      "Benefits-Risks Worksheet",
+      "Sensitive Data Consent Form",
+    ],
+    decisions: [
+      ["profiling", "Profiling/Automated Decisions"],
+      ["sensitive_data", "Sensitive Data Processing"],
+      ["targeted_ads", "Targeted Advertising"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>When is a profiling assessment required?</strong> Under Virginia CDPA (\u00A7 59.1-581), controllers must conduct data protection assessments for processing activities that present heightened risk, including profiling for consequential decisions and processing sensitive data. This kit provides the assessment template, benefits-risks worksheet, and consent form.",
+      step2Intro:
+        "List each AI or data processing system that uses profiling or sensitive data processing subject to Virginia CDPA assessment requirements.",
+      step2DecisionHelp:
+        "Check every category where this system uses profiling or processes sensitive data about Virginia consumers.",
+      step2MultiHelp:
+        "Each profiling activity may require its own assessment under \u00A7 59.1-581. List each system separately.",
+      step3BiasHelp:
+        "Your profiling assessment must weigh the benefits and risks of the processing, including the risk of discriminatory outcomes. Document your bias analysis in the benefits-risks worksheet.",
+      step4Help:
+        "This section captures how your organization oversees profiling activities. Assessments must be retained and made available to the AG upon request.",
+      step5Intro:
+        "This contact will be listed as the privacy assessment coordinator responsible for maintaining assessment records under Virginia CDPA.",
+    },
+  },
+  "va-controller-processor-kit": {
+    name: "VA Controller-Processor Kit",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
+    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+    lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
+    acknowledgment:
+      "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 89,
+
+    documents: [
+      "Processor DPA Template",
+      "Processor Audit Questionnaire",
+      "Subcontractor Flowdown Addendum",
+    ],
+    decisions: [
+      ["data_processing", "Data Processing Agreements"],
+      ["profiling", "Profiling/Automated Decisions"],
+      ["sensitive_data", "Sensitive Data Processing"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What contracts are required with AI processors?</strong> Under Virginia CDPA (\u00A7 59.1-580), controllers must enter into binding contracts with processors. These contracts must specify processing instructions, confidentiality, security, subcontractor approval, and audit rights. This kit provides the DPA template, audit questionnaire, and subcontractor flowdown.",
+      step2Intro:
+        "List each AI vendor or data processor you need to contract with under Virginia CDPA.",
+      step2DecisionHelp:
+        "Check every category of processing this vendor performs on your behalf. This determines the required contract provisions.",
+      step2MultiHelp:
+        "If you use multiple AI vendors as processors, each requires its own DPA under \u00A7 59.1-580. List each separately.",
+      step3BiasHelp:
+        "Your processor audit questionnaire should ask vendors about their bias testing practices. Processors who perform profiling on your behalf share responsibility for discriminatory outputs.",
+      step4Help:
+        "This section captures your oversight structure for processor relationships. Virginia CDPA requires controllers to verify that processors meet their contractual obligations.",
+      step5Intro:
+        "This contact will be listed as the vendor compliance lead responsible for managing processor DPAs and subcontractor flowdown agreements.",
+    },
+  },
+  // ── EU Add-Ons ───────────────────────────────────────────────
+  "eu-fria-kit": {
+    name: "EU Fundamental Rights Impact Assessment Kit",
+    statute: "Regulation (EU) 2024/1689",
+    lawUrl:
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
+    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
+    acknowledgment:
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 149,
+
+    documents: [
+      "FRIA Template",
+      "Authority Notification Letter",
+      "FRIA Update Trigger Assessment",
+    ],
+    decisions: [
+      ["employment", "Employment/HR"],
+      ["education", "Education"],
+      ["financial", "Credit/Financial"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>When is a Fundamental Rights Impact Assessment required?</strong> Under EU AI Act Art. 27, deployers of high-risk AI systems must conduct a FRIA before deployment, covering impacts on fundamental rights including non-discrimination, privacy, and dignity. This kit provides the FRIA template, notification letter, and update trigger assessment.",
+      step2Intro:
+        "List each high-risk AI system requiring a Fundamental Rights Impact Assessment under the EU AI Act.",
+      step2DecisionHelp:
+        "Check the Annex III category that applies to this system. The category determines which fundamental rights are most at risk.",
+      step2MultiHelp:
+        "Each high-risk AI system requires its own FRIA. List all systems separately.",
+      step3BiasHelp:
+        "Fundamental rights impacts include the risk of discrimination. Your FRIA must assess algorithmic bias as a core component of the fundamental rights analysis.",
+      step4Help:
+        "This section captures how your organization\u2019s human oversight mechanisms protect fundamental rights in AI deployment.",
+      step5Intro:
+        "This contact will be listed as the FRIA coordinator responsible for conducting assessments, authority notifications, and update reviews.",
+    },
+  },
+  "eu-post-market-kit": {
+    name: "EU Post-Market Monitoring Kit",
+    statute: "Regulation (EU) 2024/1689",
+    lawUrl:
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
+    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
+    acknowledgment:
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 139,
+
+    documents: [
+      "Post-Market Monitoring Plan",
+      "Serious Incident Report",
+      "Log Retention Policy",
+    ],
+    decisions: [
+      ["employment", "Employment/HR"],
+      ["education", "Education"],
+      ["financial", "Credit/Financial"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What is post-market monitoring?</strong> Under EU AI Act Art. 72, providers of high-risk AI systems must establish and implement a post-market monitoring plan to collect and analyze data on system performance after deployment, and report serious incidents. This kit provides the monitoring plan, incident report, and log retention policy.",
+      step2Intro:
+        "List each high-risk AI system requiring post-market monitoring under the EU AI Act.",
+      step2DecisionHelp:
+        "Check the Annex III category for this system. Different categories have different monitoring and incident reporting thresholds.",
+      step2MultiHelp:
+        "Each high-risk AI system requires its own post-market monitoring plan. List all systems separately.",
+      step3BiasHelp:
+        "Post-market monitoring must detect unexpected bias or discrimination that emerges in real-world use. Your monitoring plan should include statistical tracking of outcomes across demographic groups.",
+      step4Help:
+        "This section captures your organization\u2019s current monitoring capabilities and log retention practices. The EU AI Act requires logs to be automatically generated by the system where technically feasible.",
+      step5Intro:
+        "This contact will be listed as the post-market monitoring coordinator responsible for the monitoring plan, incident reporting, and log retention compliance.",
+    },
+  },
+  "eu-human-oversight-kit": {
+    name: "EU Human Oversight Implementation Kit",
+    statute: "Regulation (EU) 2024/1689",
+    lawUrl:
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
+    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
+    acknowledgment:
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 99,
+
+    documents: [
+      "Oversight Implementation Plan",
+      "Worker Notification Template",
+      "Oversight Decision Log",
+    ],
+    decisions: [
+      ["employment", "Employment/HR"],
+      ["education", "Education"],
+      ["financial", "Credit/Financial"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What human oversight is required?</strong> Under EU AI Act Art. 14, high-risk AI systems must be designed to enable natural persons to oversee, understand, monitor, and correct AI outputs. Deployers must assign oversight to competent individuals and document their oversight activities. This kit provides the implementation plan, worker notification, and decision log.",
+      step2Intro:
+        "List each high-risk AI system for which you need to implement and document human oversight measures.",
+      step2DecisionHelp:
+        "Check the Annex III category for this system. The oversight measures required depend on the system\u2019s risk profile and decision area.",
+      step2MultiHelp:
+        "Each high-risk AI system may require different oversight measures. List systems separately to tailor the implementation plan.",
+      step3BiasHelp:
+        "Human overseers must be specifically trained to detect potential bias and discrimination in AI outputs. Your implementation plan should document bias-detection as a core oversight competency.",
+      step4Help:
+        "This section captures your current oversight structure and the individuals responsible for AI supervision. EU AI Act Art. 14 requires oversight persons to have the authority to intervene and stop the system.",
+      step5Intro:
+        "This contact will be listed as the human oversight program lead responsible for assigning oversight roles, delivering training, and maintaining the oversight decision log.",
+    },
+  },
+  "eu-registration-transparency": {
+    name: "EU Registration & Transparency Kit",
+    statute: "Regulation (EU) 2024/1689",
+    lawUrl:
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
+    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
+    acknowledgment:
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+    basePrice: 89,
+
+    documents: [
+      "Database Registration Checklist",
+      "Transparency Disclosure Templates",
+      "Provider Documentation Verification",
+    ],
+    decisions: [
+      ["employment", "Employment/HR"],
+      ["education", "Education"],
+      ["financial", "Credit/Financial"],
+    ],
+    helpTexts: {
+      step2Help:
+        "<strong>What registration is required?</strong> Under EU AI Act Art. 49, providers and deployers of high-risk AI systems must register in the EU database maintained by the Commission before placing the system on the market or putting it into service. This kit provides the registration checklist, transparency disclosure templates, and provider documentation verification.",
+      step2Intro:
+        "List each high-risk AI system requiring EU database registration and transparency disclosures.",
+      step2DecisionHelp:
+        "Check the Annex III category for this system. The category determines which registration fields and transparency obligations apply.",
+      step2MultiHelp:
+        "Each high-risk AI system must be registered separately in the EU database. List all systems.",
+      step3BiasHelp:
+        "Transparency disclosures must include information about testing for bias and the measures taken to minimize discriminatory outcomes. Your provider documentation verification should confirm bias testing was conducted.",
+      step4Help:
+        "This section captures the provider information required for EU database registration. Deployers must verify that providers have completed their registration obligations.",
+      step5Intro:
+        "This contact will be listed as the EU registration coordinator responsible for database submissions, transparency disclosures, and provider documentation review.",
+    },
+  },
 };
