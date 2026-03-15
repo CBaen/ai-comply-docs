@@ -187,15 +187,15 @@ export default function Home() {
         </div>
 
         {/* How It Works — comes BEFORE penalties so visitors understand the solution first */}
-        <section id="how-it-works" className="py-16 bg-slate-50">
+        <section id="how-it-works" className="py-10 md:py-16 bg-slate-50">
           <div className="max-w-5xl mx-auto px-4">
-            <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
+            <div className="mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-4xl font-bold font-display text-gray-900 mb-3">
                 How It Works
               </h2>
-              <p className="text-gray-700 text-lg">Three steps from zero to fully documented.</p>
+              <p className="text-gray-700 text-base md:text-lg">Three steps from zero to fully documented.</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <div className="text-center">
                 <div className="w-14 h-14 bg-blue-800 rounded flex items-center justify-center mx-auto mb-5 text-white text-2xl font-extrabold font-display">1</div>
                 <h3 className="font-bold text-xl font-display mb-3 text-gray-900">Choose Your Regulation</h3>
@@ -212,8 +212,8 @@ export default function Home() {
                 <p className="text-gray-700 leading-relaxed">Your complete compliance package downloads instantly. Post, distribute, and file. You&apos;re done.</p>
               </div>
             </div>
-            <div className="text-center mt-10">
-              <a href="#products" className="inline-flex items-center gap-2 bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md">
+            <div className="text-center mt-8 md:mt-10">
+              <a href="#products" className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md">
                 Browse Products
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
               </a>
