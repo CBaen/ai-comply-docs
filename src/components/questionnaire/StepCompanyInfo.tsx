@@ -61,10 +61,11 @@ export default function StepCompanyInfo({
         </select>
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="industry" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Industry
         </label>
         <input
+          id="industry"
           type="text"
           value={companyIndustry}
           onChange={(e) => setCompanyIndustry(e.target.value)}

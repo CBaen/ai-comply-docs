@@ -33,13 +33,15 @@ export default function StepOversight({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="aiRole" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           How are AI outputs used in decisions?{" "}
           <span className="text-red-500">*</span>
         </label>
         <select
+          id="aiRole"
           value={aiRole}
           onChange={(e) => setAiRole(e.target.value)}
+          aria-required="true"
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         >
           <option value="">Select...</option>
@@ -51,10 +53,11 @@ export default function StepOversight({
         </select>
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="oversightRole" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Who oversees the AI system? (Name or role)
         </label>
         <input
+          id="oversightRole"
           type="text"
           value={oversightRole}
           onChange={(e) => setOversightRole(e.target.value)}
@@ -63,10 +66,11 @@ export default function StepOversight({
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="humanReview" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Can a human review and override AI decisions?
         </label>
         <select
+          id="humanReview"
           value={humanReview}
           onChange={(e) => setHumanReview(e.target.value)}
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
@@ -82,10 +86,11 @@ export default function StepOversight({
         </select>
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="reviewFrequency" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           How often is the AI system reviewed?
         </label>
         <select
+          id="reviewFrequency"
           value={reviewFrequency}
           onChange={(e) => setReviewFrequency(e.target.value)}
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"

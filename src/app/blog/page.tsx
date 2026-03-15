@@ -47,7 +47,7 @@ export default function BlogPage() {
         <header className="hero-bg text-white py-10 md:py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="inline-flex items-center gap-2 border border-blue-400/40 px-3 py-1.5 mb-4 text-xs sm:text-sm rounded text-blue-200">
-              <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
+              <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" aria-hidden="true" />
               Plain language. No jargon.
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white mb-3 leading-tight tracking-tight">
@@ -62,7 +62,7 @@ export default function BlogPage() {
         </header>
 
         {/* Posts */}
-        <section className="py-10 md:py-14 bg-slate-50">
+        <section className="py-10 md:py-14 bg-slate-50" aria-label="Blog posts">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             {published.length === 0 ? (
               <p className="text-gray-600">No posts yet. Check back soon.</p>
@@ -90,7 +90,7 @@ export default function BlogPage() {
                         {post.tags.slice(0, 2).map((tag) => (
                           <span
                             key={tag}
-                            className="inline-block text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-0.5 rounded"
+                            className="inline-block text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded"
                           >
                             {tag}
                           </span>
@@ -113,7 +113,7 @@ export default function BlogPage() {
                       </p>
 
                       {/* Meta */}
-                      <div className="flex items-center justify-between text-xs text-gray-400 mb-4 border-t border-gray-100 pt-3">
+                      <div className="flex items-center justify-between text-xs text-gray-500 mb-4 border-t border-gray-100 pt-3">
                         <time dateTime={post.date}>{formatDate(post.date)}</time>
                         <span>{post.readTime}</span>
                       </div>

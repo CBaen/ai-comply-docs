@@ -45,10 +45,10 @@ export default function StepDataBias({
         Data & Bias Audit
       </h3>
 
-      <div>
-        <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+      <fieldset>
+        <legend className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           What types of data does your AI system process?
-        </p>
+        </legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
           {inputOptions.map((opt) => (
             <label
@@ -67,13 +67,13 @@ export default function StepDataBias({
             </label>
           ))}
         </div>
-      </div>
+      </fieldset>
 
-      <div>
-        <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+      <fieldset>
+        <legend className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Which protected characteristics could be affected by the AI
           system?
-        </p>
+        </legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
           {PROTECTED_CHAR_OPTIONS.map((opt) => (
             <label
@@ -96,10 +96,10 @@ export default function StepDataBias({
             </label>
           ))}
         </div>
-      </div>
+      </fieldset>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label htmlFor="biasAudit" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Has your organization conducted a bias audit of this AI
           system?
         </label>
@@ -109,6 +109,7 @@ export default function StepDataBias({
           </p>
         </div>
         <select
+          id="biasAudit"
           value={biasAudit}
           onChange={(e) => setBiasAudit(e.target.value)}
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"

@@ -60,7 +60,7 @@ export default function AIComplianceByStatePage() {
         <header className="hero-bg text-white py-10 md:py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="inline-flex items-center gap-2 border border-blue-400/40 px-3 py-1 sm:px-4 sm:py-1.5 mb-4 sm:mb-5 text-xs sm:text-sm rounded text-blue-200">
-              <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
+              <span aria-hidden="true" className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
               Updated March 2026
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display text-white mb-3 sm:mb-4 leading-tight tracking-tight">
@@ -79,7 +79,7 @@ export default function AIComplianceByStatePage() {
             <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 mb-2">
               State AI Law Comparison
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm mb-6 sm:mb-8">
+            <p className="text-slate-600 text-xs sm:text-sm mb-6 sm:mb-8">
               Sorted by effective date, earliest first. Only state-level laws with active
               documentation requirements shown.
             </p>
@@ -87,23 +87,24 @@ export default function AIComplianceByStatePage() {
             {/* Desktop table */}
             <div className="hidden md:block overflow-x-auto rounded-xl border border-slate-200">
               <table className="w-full text-sm">
+                <caption className="sr-only">State AI Law Comparison — sorted by effective date</caption>
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-200 text-left">
-                    <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">State</th>
-                    <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Law</th>
-                    <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Effective</th>
-                    <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Status</th>
-                    <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Max Penalty</th>
-                    <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Package</th>
-                    <th className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap"></th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">State</th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Law</th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Effective</th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Status</th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Max Penalty</th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap">Package</th>
+                    <th scope="col" className="px-4 py-3 font-semibold text-slate-700 whitespace-nowrap"><span className="sr-only">Actions</span></th>
                   </tr>
                 </thead>
                 <tbody>
                   {stateRegs.map((reg, i) => (
                     <tr
                       key={reg.slug}
-                      className={`border-b border-slate-100 hover:bg-slate-50 transition-colors ${
-                        i % 2 === 0 ? "bg-white" : "bg-slate-50/40"
+                      className={`border-b border-slate-100 hover:bg-slate-50 focus-within:bg-blue-50 transition-colors ${
+                        i % 2 === 0 ? "bg-white" : "bg-slate-100"
                       }`}
                     >
                       <td className="px-4 py-3.5 font-medium text-slate-900 whitespace-nowrap">
@@ -121,7 +122,7 @@ export default function AIComplianceByStatePage() {
                             In Effect
                           </span>
                         ) : (
-                          <span className="text-amber-600 font-semibold text-xs uppercase tracking-wide">
+                          <span className="text-amber-800 font-semibold text-xs uppercase tracking-wide">
                             Effective Soon
                           </span>
                         )}
@@ -135,9 +136,10 @@ export default function AIComplianceByStatePage() {
                       <td className="px-4 py-3.5 whitespace-nowrap">
                         <Link
                           href={`/products/${reg.slug}`}
+                          aria-label={`View ${reg.state} compliance package`}
                           className="inline-flex items-center gap-1 text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors"
                         >
-                          View Package →
+                          View Package<span aria-hidden="true"> →</span>
                         </Link>
                       </td>
                     </tr>
@@ -160,35 +162,36 @@ export default function AIComplianceByStatePage() {
                     </div>
                     <div className="shrink-0">
                       {reg.status === "in-effect" ? (
-                        <span className="text-green-700 font-semibold text-xs uppercase tracking-wide bg-green-50 border border-green-200 px-2 py-0.5 rounded">
+                        <span className="text-green-800 font-semibold text-xs uppercase tracking-wide bg-green-50 border border-green-200 px-2 py-0.5 rounded">
                           In Effect
                         </span>
                       ) : (
-                        <span className="text-amber-600 font-semibold text-xs uppercase tracking-wide bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
+                        <span className="text-amber-800 font-semibold text-xs uppercase tracking-wide bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
                           Effective Soon
                         </span>
                       )}
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-x-3 gap-y-2 text-xs mb-4">
+                  <dl className="grid grid-cols-2 gap-x-3 gap-y-2 text-xs mb-4">
                     <div>
-                      <p className="text-slate-400 text-xs uppercase tracking-wide mb-0.5">Effective</p>
-                      <p className="text-slate-700 leading-snug">{reg.effectiveDate}</p>
+                      <dt className="text-slate-600 text-xs uppercase tracking-wide mb-0.5">Effective</dt>
+                      <dd className="text-slate-700 leading-snug">{reg.effectiveDate}</dd>
                     </div>
                     <div>
-                      <p className="text-slate-400 text-xs uppercase tracking-wide mb-0.5">Max Penalty</p>
-                      <p className="text-slate-700 leading-snug">{reg.maxPenalty}</p>
+                      <dt className="text-slate-600 text-xs uppercase tracking-wide mb-0.5">Max Penalty</dt>
+                      <dd className="text-slate-700 leading-snug">{reg.maxPenalty}</dd>
                     </div>
-                  </div>
+                  </dl>
 
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-slate-700 font-semibold text-sm">${reg.price}</span>
                     <Link
                       href={`/products/${reg.slug}`}
-                      className="inline-flex items-center gap-1 bg-blue-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-blue-800 transition shrink-0"
+                      aria-label={`View ${reg.state} compliance package`}
+                      className="inline-flex items-center gap-1 min-h-[44px] bg-blue-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg hover:bg-blue-800 transition shrink-0"
                     >
-                      View Package →
+                      View Package<span aria-hidden="true"> →</span>
                     </Link>
                   </div>
                 </div>
@@ -252,7 +255,7 @@ export default function AIComplianceByStatePage() {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-slate-900 mb-2 sm:mb-3">
               Not Sure Which Applies to You?
             </h2>
-            <p className="text-slate-500 mb-6 sm:mb-10 text-sm sm:text-base">
+            <p className="text-slate-600 mb-6 sm:mb-10 text-sm sm:text-base">
               Your obligations depend on where you operate, who you serve, and how you use AI.
               Here&apos;s a quick guide by situation.
             </p>
@@ -260,7 +263,7 @@ export default function AIComplianceByStatePage() {
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {/* Card 1: Employers using AI in hiring */}
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6">
-                <div className="text-2xl mb-3">🏢</div>
+                <div aria-hidden="true" className="text-2xl mb-3">🏢</div>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
                   Employers using AI in hiring
                 </h3>
@@ -274,7 +277,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/illinois-hb3773"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      Illinois HB3773 →
+                      Illinois HB3773<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                   <li>
@@ -282,7 +285,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/nyc-local-law-144"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      NYC Local Law 144 →
+                      NYC Local Law 144<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                   <li>
@@ -290,7 +293,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/colorado-sb24-205"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      Colorado SB 24-205 →
+                      Colorado SB 24-205<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                 </ul>
@@ -298,13 +301,13 @@ export default function AIComplianceByStatePage() {
                   href="/products/multi-state-employer-ai-disclosure"
                   className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-blue-700 font-medium transition-colors"
                 >
-                  Or get the multi-state employer bundle →
+                  Or get the multi-state employer bundle<span aria-hidden="true"> →</span>
                 </Link>
               </div>
 
               {/* Card 2: Businesses collecting consumer data */}
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6">
-                <div className="text-2xl mb-3">🗂️</div>
+                <div aria-hidden="true" className="text-2xl mb-3">🗂️</div>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
                   Businesses collecting consumer data
                 </h3>
@@ -318,7 +321,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/virginia-cdpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      Virginia CDPA →
+                      Virginia CDPA<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                   <li>
@@ -326,7 +329,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/california-ccpa-admt"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      California CCPA ADMT →
+                      California CCPA ADMT<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                   <li>
@@ -334,7 +337,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/connecticut-ctdpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      Connecticut CTDPA →
+                      Connecticut CTDPA<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                   <li>
@@ -342,7 +345,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/oregon-cpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      Oregon CPA →
+                      Oregon CPA<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                   <li>
@@ -350,7 +353,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/texas-tdpsa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      Texas TDPSA →
+                      Texas TDPSA<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                   <li>
@@ -358,7 +361,7 @@ export default function AIComplianceByStatePage() {
                       href="/products/delaware-pdpa"
                       className="text-blue-700 text-sm font-medium hover:underline"
                     >
-                      Delaware PDPA →
+                      Delaware PDPA<span aria-hidden="true"> →</span>
                     </Link>
                   </li>
                 </ul>
@@ -366,13 +369,13 @@ export default function AIComplianceByStatePage() {
                   href="/products/multi-state-profiling-assessment"
                   className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-blue-700 font-medium transition-colors"
                 >
-                  Or get the multi-state profiling bundle →
+                  Or get the multi-state profiling bundle<span aria-hidden="true"> →</span>
                 </Link>
               </div>
 
               {/* Card 3: Operating in many states */}
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6">
-                <div className="text-2xl mb-3">🗺️</div>
+                <div aria-hidden="true" className="text-2xl mb-3">🗺️</div>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
                   Operating in many states
                 </h3>
@@ -385,7 +388,7 @@ export default function AIComplianceByStatePage() {
                   href="/products/multi-state-profiling-assessment"
                   className="inline-flex items-center gap-1 bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg hover:bg-blue-800 transition"
                 >
-                  Multi-State Profiling Bundle →
+                  Multi-State Profiling Bundle<span aria-hidden="true"> →</span>
                 </Link>
               </div>
             </div>
@@ -406,7 +409,7 @@ export default function AIComplianceByStatePage() {
               href="/products"
               className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-blue-800 transition w-full sm:w-auto"
             >
-              View All Packages →
+              View All Packages<span aria-hidden="true"> →</span>
             </Link>
           </div>
         </section>

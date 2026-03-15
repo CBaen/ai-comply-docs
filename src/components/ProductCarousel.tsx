@@ -54,11 +54,17 @@ export default function ProductCarousel({ products }: Props) {
   return (
     <div
       className="relative"
+      aria-roledescription="carousel"
+      aria-label="Featured compliance products"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       {/* Content — px-12 on mobile reserves space for the nav arrows; expands to px-6 md:px-16 */}
-      <div className="max-w-4xl mx-auto px-12 sm:px-6 md:px-16 py-10 sm:py-16 md:py-24 text-center flex flex-col justify-center">
+      <div
+        aria-live="polite"
+        aria-atomic="true"
+        className="max-w-4xl mx-auto px-12 sm:px-6 md:px-16 py-10 sm:py-16 md:py-24 text-center flex flex-col justify-center"
+      >
         {/* Breadcrumb */}
         <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400 mb-3 sm:mb-4">
           <Link href="/products" className="hover:text-blue-300 transition">
@@ -73,7 +79,7 @@ export default function ProductCarousel({ products }: Props) {
           <span
             className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 sm:px-3 sm:py-1.5 rounded font-semibold border ${statusColor}`}
           >
-            <span className={`inline-block w-1.5 h-1.5 rounded-sm ${dotColor}`} />
+            <span aria-hidden="true" className={`inline-block w-1.5 h-1.5 rounded-sm ${dotColor}`} />
             {statusLabel}
           </span>
           <span className="text-xs sm:text-sm text-slate-400">
@@ -99,6 +105,7 @@ export default function ProductCarousel({ products }: Props) {
           </div>
           <Link
             href={`/products/${p.slug}`}
+            aria-label={`Get started with ${p.shortName}`}
             className="w-full sm:w-auto bg-white text-slate-900 px-7 py-3 sm:py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-gray-100 transition shadow-lg text-center"
           >
             Get Started
@@ -108,13 +115,13 @@ export default function ProductCarousel({ products }: Props) {
         {/* Document count + penalty — wraps cleanly on narrow screens */}
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs sm:text-sm text-slate-400">
           <span className="flex items-center gap-1.5">
-            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg aria-hidden="true" className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
             </svg>
             {p.documentCount} documents included
           </span>
           <span className="flex items-center gap-1.5">
-            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg aria-hidden="true" className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z" />
             </svg>
             {p.maxPenalty}
@@ -125,7 +132,7 @@ export default function ProductCarousel({ products }: Props) {
       {/* Navigation arrows — smaller on mobile, tucked close to edges, vertically centered on content area */}
       <button
         onClick={prev}
-        className="absolute left-1 sm:left-3 md:left-6 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+        className="absolute left-1 sm:left-3 md:left-6 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
         aria-label="Previous product"
       >
         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -134,7 +141,7 @@ export default function ProductCarousel({ products }: Props) {
       </button>
       <button
         onClick={next}
-        className="absolute right-1 sm:right-3 md:right-6 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+        className="absolute right-1 sm:right-3 md:right-6 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
         aria-label="Next product"
       >
         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -142,20 +149,40 @@ export default function ProductCarousel({ products }: Props) {
         </svg>
       </button>
 
-      {/* Dots */}
+      {/* Dots + Pause/Play */}
       <div className="flex items-center justify-center gap-1.5 sm:gap-2 pb-4 sm:pb-6">
         {products.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-1.5 sm:h-2 rounded-full transition-all ${
-              i === current
-                ? "bg-white w-5 sm:w-6"
-                : "w-1.5 sm:w-2 bg-white/30 hover:bg-white/50"
-            }`}
             aria-label={`Go to product ${i + 1}`}
-          />
+            aria-current={i === current ? "true" : undefined}
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center"
+          >
+            <span
+              className={`h-1.5 sm:h-2 rounded-full transition-all pointer-events-none ${
+                i === current
+                  ? "bg-white w-5 sm:w-6"
+                  : "w-1.5 sm:w-2 bg-white/30 hover:bg-white/50"
+              }`}
+            />
+          </button>
         ))}
+        <button
+          onClick={() => setPaused((p) => !p)}
+          aria-label={paused ? "Play carousel" : "Pause carousel"}
+          className="min-w-[44px] min-h-[44px] flex items-center justify-center text-white/60 hover:text-white transition"
+        >
+          {paused ? (
+            <svg aria-hidden="true" className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          ) : (
+            <svg aria-hidden="true" className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
+          )}
+        </button>
       </div>
     </div>
   );

@@ -36,6 +36,7 @@ export default function StepAISystems({
               <button
                 type="button"
                 onClick={() => removeAISystem(idx)}
+                aria-label={`Remove AI system ${idx + 1}`}
                 className="min-h-[44px] min-w-[44px] px-3 flex items-center justify-center text-red-500 hover:text-red-700 text-sm font-medium"
               >
                 Remove
@@ -43,7 +44,7 @@ export default function StepAISystems({
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor={`aiName-${idx}`} className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               AI System/Tool Name{" "}
               <span className="text-red-500">*</span>
             </label>
@@ -52,20 +53,23 @@ export default function StepAISystems({
               Workday AI, Pymetrics, or your custom-built tool.
             </p>
             <input
+              id={`aiName-${idx}`}
               type="text"
               value={sys.name}
               onChange={(e) =>
                 updateAISystem(idx, "name", e.target.value)
               }
               placeholder="e.g., HireVue, Pymetrics, internal ML model"
+              aria-required="true"
               className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor={`aiVendor-${idx}`} className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Vendor (if third-party)
             </label>
             <input
+              id={`aiVendor-${idx}`}
               type="text"
               value={sys.vendor}
               onChange={(e) =>
@@ -100,10 +104,11 @@ export default function StepAISystems({
             </div>
           </fieldset>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor={`aiDesc-${idx}`} className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Brief description of how the AI is used
             </label>
             <textarea
+              id={`aiDesc-${idx}`}
               value={sys.description}
               onChange={(e) =>
                 updateAISystem(idx, "description", e.target.value)
@@ -132,6 +137,7 @@ export default function StepAISystems({
           viewBox="0 0 24 24"
           stroke="currentColor"
           strokeWidth={2}
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"

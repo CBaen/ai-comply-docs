@@ -97,6 +97,8 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
       <main id="main-content">
+        {/* Post header and body wrapped in article for semantic structure */}
+        <article>
         {/* Post header — image left, text right on desktop */}
         <header className="hero-bg text-white py-8 md:py-16">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -145,9 +147,9 @@ export default async function BlogPostPage({ params }: Props) {
                 {/* Meta row */}
                 <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-400 mb-4">
                   <span>{post.author}</span>
-                  <span className="w-1 h-1 bg-slate-500 rounded-full" />
+                  <span className="w-1 h-1 bg-slate-500 rounded-full" aria-hidden="true" />
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
-                  <span className="w-1 h-1 bg-slate-500 rounded-full" />
+                  <span className="w-1 h-1 bg-slate-500 rounded-full" aria-hidden="true" />
                   <span>{post.readTime}</span>
                 </div>
 
@@ -164,7 +166,7 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         {/* Post body — Art of War annotated layout */}
-        <article className="py-8 md:py-12 bg-white">
+        <div className="py-8 md:py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="xl:grid xl:grid-cols-[240px_minmax(0,640px)_240px] xl:gap-10 xl:justify-center">
 
@@ -287,7 +289,7 @@ export default async function BlogPostPage({ params }: Props) {
               </p>
             </div>
           </div>
-        </article>
+        </div>
 
         {/* Related posts */}
         {related.length > 0 && (
@@ -361,6 +363,7 @@ export default async function BlogPostPage({ params }: Props) {
             </Link>
           </div>
         </section>
+        </article>
       </main>
       <Footer />
     </>
