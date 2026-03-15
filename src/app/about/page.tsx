@@ -59,13 +59,15 @@ export default function AboutPage() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-6 mb-8">
               <div className="shrink-0">
-                <Image
-                  src="/cameron-founder.png"
-                  alt="Cameron, Founder of AI Compliance Documents"
-                  width={120}
-                  height={120}
-                  className="rounded-xl"
-                />
+                <div className="w-[120px] h-[120px] rounded-full bg-slate-200 overflow-hidden flex items-center justify-center shadow-md ring-2 ring-slate-300">
+                  <Image
+                    src="/cameron-founder.png"
+                    alt="Cameron, Founder of AI Compliance Documents"
+                    width={120}
+                    height={120}
+                    className="object-cover"
+                  />
+                </div>
               </div>
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
