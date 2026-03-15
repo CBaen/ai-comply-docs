@@ -28,6 +28,21 @@ export function generateRemediationPlan(data: ComplianceFormData): jsPDF {
   );
   y = addTopDisclaimer(doc, y);
 
+  // IDHR rulemaking disclosure
+  doc.setFontSize(8.5);
+  doc.setFont("helvetica", "italic");
+  y = addWrappedText(
+    doc,
+    "Note: IDHR is currently developing implementing rules for the AI notice requirements under 775 ILCS 5/2-102(L). The format, timing, and delivery requirements for employee notice are not yet finalized. This template reflects the statutory text as enacted. Update this document when IDHR publishes its rules.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  doc.setFontSize(10);
+  doc.setFont("helvetica", "normal");
+  y += LINE_HEIGHT;
+
   y = addWrappedText(
     doc,
     `This remediation plan documents the steps ${data.company.name} will take to address a confirmed zip code proxy effect identified in an AI employment decision system. Complete this plan after a proxy effect is confirmed in the Proxy Analysis Worksheet. 775 ILCS 5/2-102(L)(1) prohibits use of AI that has a discriminatory effect through zip code or other geographic proxies.`,

@@ -30,6 +30,21 @@ export function generateProxyAnalysisWorksheet(
   );
   y = addTopDisclaimer(doc, y);
 
+  // IDHR rulemaking disclosure
+  doc.setFontSize(8.5);
+  doc.setFont("helvetica", "italic");
+  y = addWrappedText(
+    doc,
+    "Note: IDHR is currently developing implementing rules for the AI notice requirements under 775 ILCS 5/2-102(L). The format, timing, and delivery requirements for employee notice are not yet finalized. This template reflects the statutory text as enacted. Update this document when IDHR publishes its rules.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  doc.setFontSize(10);
+  doc.setFont("helvetica", "normal");
+  y += LINE_HEIGHT;
+
   y = addWrappedText(
     doc,
     `This worksheet supports a statistical analysis of whether zip code data in AI systems used by ${data.company.name} produces a proxy effect correlated with protected characteristics under the Illinois Human Rights Act (775 ILCS 5/2-102(L)(1)). Protected characteristics include race, color, national origin, sex, religion, disability, sexual orientation, and others. This analysis is required when geographic data inputs are identified in the Data Input Audit.`,

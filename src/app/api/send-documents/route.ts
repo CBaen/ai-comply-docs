@@ -585,11 +585,11 @@ const REGULATION_EMAIL: Record<
     title: "Your California ADMT Access Request Kit",
     statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
     description:
-      "ADMT access request intake forms, logic disclosure response templates, and access request tracking logs for California CPPA ADMT regulations. All three documents are included.",
+      "ADMT access request intake forms, an ADMT output explanation template, and a response timeline tracker for California CPPA ADMT regulations. All three documents are included.",
     steps: [
       "<strong>Make the Access Request Intake Form available</strong> to California consumers through your privacy rights portal or on request.",
-      "<strong>Use the Logic Disclosure Response Template</strong> to explain the ADMT system\u2019s logic and how it affected the consumer\u2019s outcome — responses must be meaningful, not boilerplate.",
-      "<strong>Track every request in the Access Request Log</strong> — note the request date, response date, system involved, and outcome.",
+      "<strong>Use the ADMT Output Explanation Template</strong> to explain the ADMT system\u2019s logic and how it affected the consumer\u2019s outcome — responses must be meaningful, not boilerplate.",
+      "<strong>Track every request in the Response Timeline Tracker</strong> — note the request date, response date, system involved, and outcome.",
     ],
     reminder:
       "California CPPA ADMT regulations give consumers the right to access information about automated decisionmaking technology used on them, including a meaningful explanation of the system\u2019s logic. Responses are due within 45 days of a verified request.",
@@ -598,11 +598,11 @@ const REGULATION_EMAIL: Record<
     title: "Your California Cybersecurity Audit Kit",
     statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
     description:
-      "cybersecurity audit planning templates, audit scope documentation, and audit findings log for California CPPA cybersecurity audit requirements. All three documents are included.",
+      "a cybersecurity audit checklist, risk assessment workbook, and audit remediation tracker for California CPPA cybersecurity audit requirements. All three documents are included.",
     steps: [
-      "<strong>Complete the Audit Planning Template</strong> before each cybersecurity audit cycle — define scope, assign auditors, and document the AI systems under review.",
-      "<strong>Use the Audit Scope Documentation</strong> to confirm which AI systems process personal information and are subject to CPPA cybersecurity audit requirements.",
-      "<strong>Record findings in the Audit Findings Log</strong> and assign remediation owners and deadlines for every identified gap.",
+      "<strong>Complete the Cybersecurity Audit Checklist</strong> before each cybersecurity audit cycle — define scope, assign auditors, and document the AI systems under review.",
+      "<strong>Use the Risk Assessment Workbook</strong> to confirm which AI systems process personal information and assess the risks subject to CPPA cybersecurity audit requirements.",
+      "<strong>Record findings in the Audit Remediation Tracker</strong> and assign remediation owners and deadlines for every identified gap.",
     ],
     reminder:
       "The CPPA cybersecurity audit regulations require businesses that process personal information to conduct annual cybersecurity audits. AI systems that process personal information are in scope. Audit documentation may be requested by the CPPA during an investigation.",
@@ -611,11 +611,11 @@ const REGULATION_EMAIL: Record<
     title: "Your NYC Bias Audit Management Kit",
     statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
     description:
-      "bias audit project management templates, independent auditor coordination checklists, and audit cycle tracking logs for NYC Local Law 144. All three documents are included.",
+      "an auditor RFP template, results publication template, and annual renewal calendar for NYC Local Law 144. All three documents are included.",
     steps: [
-      "<strong>Use the Audit Project Management Template</strong> to scope and schedule your annual bias audit — assign an independent auditor at least 60 days before your AEDT\u2019s next use date.",
-      "<strong>Complete the Auditor Coordination Checklist</strong> to ensure your auditor receives all required data, system access, and documentation before the audit begins.",
-      "<strong>Maintain the Audit Cycle Tracking Log</strong> to record each year\u2019s audit completion date, auditor name, and publication date for the required public summary.",
+      "<strong>Use the Auditor RFP Template</strong> to scope and solicit proposals for an independent bias audit — assign an independent auditor at least 60 days before your AEDT\u2019s next use date.",
+      "<strong>Complete the Results Publication Template</strong> to ensure your auditor receives all required data, system access, and documentation, and to publish the required public audit summary.",
+      "<strong>Maintain the Annual Renewal Calendar</strong> to record each year\u2019s audit completion date, auditor name, and publication date for the required public summary.",
     ],
     reminder:
       "NYC Local Law 144 requires annual independent bias audits for all automated employment decision tools used in NYC. The audit summary must be published on your website at least 10 business days before each AEDT is used. DCWP proactive investigations increased in 2026.",
@@ -624,50 +624,50 @@ const REGULATION_EMAIL: Record<
     title: "Your NYC Candidate Notice Kit",
     statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
     description:
-      "candidate and employee AEDT notification templates, notice delivery tracking logs, and FAQ response templates for NYC Local Law 144. All three documents are included.",
+      "a 10-day advance notice template, alternative process workflow, and data disclosure response for NYC Local Law 144. All three documents are included.",
     steps: [
-      "<strong>Customize the Candidate/Employee Notice Template</strong> with the specific AEDT being used, its purpose, and the contact information for inquiries.",
+      "<strong>Customize the 10-Day Advance Notice Template</strong> with the specific AEDT being used, its purpose, and the contact information for inquiries.",
       "<strong>Send the Notice before using any AEDT</strong> on a job applicant or employee in NYC — delivery must occur before, not at the time of, the tool\u2019s use.",
-      "<strong>Log every notice delivery</strong> in the Tracking Log — record the recipient, delivery method, date, and the AEDT the notice covered.",
+      "<strong>Use the Data Disclosure Response</strong> to respond to candidates who request information about what data the AEDT processed and how it was used.",
     ],
     reminder:
       "NYC Local Law 144 requires employers to notify job candidates and employees before using an automated employment decision tool on them. Notice must include the AEDT\u2019s purpose, the characteristics it evaluates, and contact information. DCWP may request delivery records.",
   },
   "va-consumer-rights-kit": {
     title: "Your Virginia Consumer Rights Processing Kit",
-    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-585",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
     description:
-      "consumer rights request intake forms, response letter templates, and appeal processing documentation for the Virginia Consumer Data Protection Act. All three documents are included.",
+      "a rights request intake form, appeal workflow, and AG complaint referral notice for the Virginia Consumer Data Protection Act. All three documents are included.",
     steps: [
-      "<strong>Make the Consumer Rights Request Intake Form available</strong> through your privacy portal or on request — Virginia consumers have rights to access, correct, delete, and opt out.",
-      "<strong>Use the Response Letter Templates</strong> to respond within 45 days of a verified request — customize with your organization\u2019s contact information and the action taken.",
-      "<strong>Process appeals using the Appeal Documentation Template</strong> — Virginia requires an appeals mechanism for denied requests, with a response due within 60 days.",
+      "<strong>Make the Rights Request Intake Form available</strong> through your privacy portal or on request — Virginia consumers have rights to access, correct, delete, and opt out.",
+      "<strong>Process appeals using the Appeal Workflow</strong> to respond within 60 days of a denied request — Virginia requires a mandatory appeals mechanism with written notice of the outcome.",
+      "<strong>Use the AG Complaint Referral Notice</strong> when a consumer appeal is denied — Virginia requires informing consumers of their right to submit a complaint to the Attorney General (\u00A7 59.1-577(C)(3)).",
     ],
     reminder:
       "The Virginia Consumer Data Protection Act (Va. Code \u00A7\u00A7 59.1-575\u201359.1-584) requires a 45-day response window for consumer rights requests and a mandatory appeals process for denials. The Virginia AG has enforcement authority with civil penalties up to $7,500 per violation (\u00A7 59.1-584(C)).",
   },
   "va-profiling-assessment-kit": {
     title: "Your Virginia Profiling Assessment Workbook",
-    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-585",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
     description:
-      "profiling data protection assessment templates, consequential decision identification worksheets, and assessment filing checklists for the Virginia Consumer Data Protection Act. All three documents are included.",
+      "a profiling assessment template, benefits-risks worksheet, and sensitive data consent form for the Virginia Consumer Data Protection Act. All three documents are included.",
     steps: [
-      "<strong>Use the Consequential Decision Identification Worksheet</strong> to catalog every AI system that makes or assists decisions with legal or similarly significant effects on Virginia consumers.",
-      "<strong>Complete a Data Protection Assessment</strong> for each identified system using the Assessment Template — document the processing purpose, risks, and safeguards.",
-      "<strong>File completed assessments using the Checklist</strong> and make them available to the Virginia AG upon request (\u00A7 59.1-580(B)).",
+      "<strong>Use the Profiling Assessment Template</strong> to document every AI system that makes or assists decisions with legal or similarly significant effects on Virginia consumers.",
+      "<strong>Complete the Benefits-Risks Worksheet</strong> for each identified system — document the processing purpose, benefits, risks, and safeguards.",
+      "<strong>Use the Sensitive Data Consent Form</strong> to obtain and document consumer consent for processing sensitive data, and make completed assessments available to the Virginia AG upon request (\u00A7 59.1-580(B)).",
     ],
     reminder:
       "Virginia CDPA (\u00A7 59.1-580) requires data protection assessments for profiling activities that produce legal or similarly significant effects. Assessments must be made available to the Attorney General on request. There is no private right of action; the AG has exclusive enforcement authority.",
   },
   "va-controller-processor-kit": {
     title: "Your Virginia Controller-Processor Kit",
-    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-585",
+    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
     description:
-      "controller-processor data processing agreement templates, processor instruction documentation, and sub-processor management checklists for the Virginia Consumer Data Protection Act. All three documents are included.",
+      "a processor DPA template, processor audit questionnaire, and subcontractor flowdown addendum for the Virginia Consumer Data Protection Act. All three documents are included.",
     steps: [
-      "<strong>Execute a Data Processing Agreement</strong> with every processor that handles Virginia consumer personal data on your behalf — use the Agreement Template as your starting point.",
-      "<strong>Document your processing instructions</strong> for each processor using the Instruction Documentation template — Virginia requires controllers to provide binding instructions to processors.",
-      "<strong>Complete the Sub-Processor Management Checklist</strong> for each processor relationship to confirm downstream data handling meets CDPA requirements.",
+      "<strong>Execute a Data Processing Agreement</strong> with every processor that handles Virginia consumer personal data on your behalf — use the Processor DPA Template as your starting point.",
+      "<strong>Use the Processor Audit Questionnaire</strong> to assess each processor\u2019s security practices, sub-processing relationships, and compliance posture before sharing Virginia consumer personal data.",
+      "<strong>Complete the Subcontractor Flowdown Addendum</strong> for each processor relationship to confirm downstream data handling meets CDPA requirements.",
     ],
     reminder:
       "Virginia CDPA (\u00A7 59.1-577) requires data processing agreements between controllers and processors. Controllers remain liable for processor conduct. Document every processor relationship before sharing Virginia consumer personal data.",
@@ -676,11 +676,11 @@ const REGULATION_EMAIL: Record<
     title: "Your EU AI Act FRIA Kit",
     statute: "Regulation (EU) 2024/1689",
     description:
-      "Fundamental Rights Impact Assessment templates, stakeholder consultation documentation, and FRIA filing checklists for EU AI Act high-risk AI systems. All three documents are included.",
+      "a Fundamental Rights Impact Assessment template, authority notification letter, and FRIA update trigger assessment for EU AI Act high-risk AI systems. All three documents are included.",
     steps: [
       "<strong>Complete the FRIA Template</strong> for each high-risk AI system before deployment — assess the system\u2019s impact on fundamental rights including non-discrimination, privacy, and due process.",
-      "<strong>Document your stakeholder consultations</strong> using the Consultation Documentation template — the EU AI Act requires meaningful consultation with affected groups for certain high-risk systems.",
-      "<strong>File the completed FRIA</strong> using the Checklist and maintain it throughout the system\u2019s lifecycle — assessments must be updated when the system changes significantly.",
+      "<strong>Use the Authority Notification Letter</strong> to notify the relevant national supervisory authority when required — certain high-risk AI deployments require proactive disclosure to competent authorities.",
+      "<strong>Complete the FRIA Update Trigger Assessment</strong> whenever the AI system changes significantly — Article 27 requires the FRIA to remain current throughout the system\u2019s lifecycle.",
     ],
     reminder:
       "EU AI Act Article 27 requires deployers of certain high-risk AI systems to conduct a Fundamental Rights Impact Assessment before deployment. FRIA obligations apply to bodies governed by public law and private entities providing public services, as well as financial institutions and employers using high-risk systems.",
