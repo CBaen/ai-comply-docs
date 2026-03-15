@@ -110,7 +110,14 @@ export default function SearchModal() {
     }
 
     const raw = searchRef.current.search(query);
-    setResults(raw.map((r) => r as unknown as SearchItem));
+    setResults(raw.map((r) => ({
+      id: String(r.id),
+      type: (r as any).type || "product",
+      title: (r as any).title || "",
+      subtitle: (r as any).subtitle || "",
+      url: (r as any).url || "",
+      keywords: (r as any).keywords || "",
+    })));
   }, [query]);
 
   const handleSelect = useCallback(
@@ -149,7 +156,7 @@ export default function SearchModal() {
         </span>
         <div className="min-w-0 flex-1">
           <div className="font-medium text-gray-900 truncate">
-            {item.title}
+            {item.title || item.id.replace(/^(product|blog|faq)-/, '').replace(/-/g, ' ')}
           </div>
           {item.subtitle && (
             <div className="text-gray-500 text-xs truncate mt-0.5">

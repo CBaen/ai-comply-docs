@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { REGULATION_CONFIG } from "@/lib/regulation-config";
 import type { AISystem, ComplianceFormData } from "@/lib/pdf-types";
 import StepCompanyInfo from "./questionnaire/StepCompanyInfo";
@@ -28,40 +28,69 @@ export default function Questionnaire({
   price,
 }: QuestionnaireProps) {
   const config = REGULATION_CONFIG[regulationSlug];
-  const [step, setStep] = useState(1);
+
+  // Restore saved form state from sessionStorage if available (survives browser Back)
+  const saved = typeof window !== "undefined" ? (() => {
+    try { return JSON.parse(sessionStorage.getItem(`questionnaire-${regulationSlug}`) || "null"); } catch { return null; }
+  })() : null;
+
+  const [step, setStep] = useState<number>(saved?.step || 1);
   const [error, setError] = useState("");
 
   // Step 1
-  const [companyName, setCompanyName] = useState("");
-  const [companyState, setCompanyState] = useState("");
-  const [companySize, setCompanySize] = useState("");
-  const [companyIndustry, setCompanyIndustry] = useState("");
+  const [companyName, setCompanyName] = useState<string>(saved?.companyName || "");
+  const [companyState, setCompanyState] = useState<string>(saved?.companyState || "");
+  const [companySize, setCompanySize] = useState<string>(saved?.companySize || "");
+  const [companyIndustry, setCompanyIndustry] = useState<string>(saved?.companyIndustry || "");
 
   // Step 2
-  const [aiSystems, setAiSystems] = useState<AISystem[]>([emptyAISystem()]);
+  const [aiSystems, setAiSystems] = useState<AISystem[]>(saved?.aiSystems || [emptyAISystem()]);
 
   // Step 3
-  const [dataInputs, setDataInputs] = useState<string[]>([]);
-  const [protectedChars, setProtectedChars] = useState<string[]>([]);
-  const [biasAudit, setBiasAudit] = useState("");
+  const [dataInputs, setDataInputs] = useState<string[]>(saved?.dataInputs || []);
+  const [protectedChars, setProtectedChars] = useState<string[]>(saved?.protectedChars || []);
+  const [biasAudit, setBiasAudit] = useState<string>(saved?.biasAudit || "");
 
   // Step 4
-  const [aiRole, setAiRole] = useState("");
-  const [oversightRole, setOversightRole] = useState("");
-  const [humanReview, setHumanReview] = useState("");
-  const [reviewFrequency, setReviewFrequency] = useState("");
+  const [aiRole, setAiRole] = useState<string>(saved?.aiRole || "");
+  const [oversightRole, setOversightRole] = useState<string>(saved?.oversightRole || "");
+  const [humanReview, setHumanReview] = useState<string>(saved?.humanReview || "");
+  const [reviewFrequency, setReviewFrequency] = useState<string>(saved?.reviewFrequency || "");
 
   // Step 5
-  const [contactName, setContactName] = useState("");
-  const [contactTitle, setContactTitle] = useState("");
-  const [contactEmail, setContactEmail] = useState("");
-  const [contactPhone, setContactPhone] = useState("");
+  const [contactName, setContactName] = useState<string>(saved?.contactName || "");
+  const [contactTitle, setContactTitle] = useState<string>(saved?.contactTitle || "");
+  const [contactEmail, setContactEmail] = useState<string>(saved?.contactEmail || "");
+  const [contactPhone, setContactPhone] = useState<string>(saved?.contactPhone || "");
 
   // Step 6
   const [lawVisited, setLawVisited] = useState(false);
   const [acknowledged, setAcknowledged] = useState(false);
-  const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
+  const [selectedAddons, setSelectedAddons] = useState<string[]>(saved?.selectedAddons || []);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
+
+  // Persist form state to sessionStorage on every change so Back navigation restores it
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(`questionnaire-${regulationSlug}`, JSON.stringify({
+        step,
+        companyName, companyState, companySize, companyIndustry,
+        aiSystems,
+        dataInputs, protectedChars, biasAudit,
+        aiRole, oversightRole, humanReview, reviewFrequency,
+        contactName, contactTitle, contactEmail, contactPhone,
+        selectedAddons,
+      }));
+    } catch {}
+  }, [
+    regulationSlug, step,
+    companyName, companyState, companySize, companyIndustry,
+    aiSystems,
+    dataInputs, protectedChars, biasAudit,
+    aiRole, oversightRole, humanReview, reviewFrequency,
+    contactName, contactTitle, contactEmail, contactPhone,
+    selectedAddons,
+  ]);
 
   const decisions = config?.decisions || [];
   const helpTexts = config?.helpTexts || {};
@@ -222,6 +251,8 @@ export default function Questionnaire({
       const result = await response.json();
 
       if (result.url) {
+        // Clear the draft so a fresh session starts after successful purchase
+        try { sessionStorage.removeItem(`questionnaire-${regulationSlug}`); } catch {}
         window.location.href = result.url;
         return;
       }
