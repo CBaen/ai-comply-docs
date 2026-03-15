@@ -7,6 +7,20 @@ const withMDX = createMDX({
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  async redirects() {
+    return [
+      {
+        source: "/products",
+        destination: "/regulations",
+        permanent: true,
+      },
+      {
+        source: "/products/:slug",
+        destination: "/regulations/:slug",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withMDX(nextConfig);
