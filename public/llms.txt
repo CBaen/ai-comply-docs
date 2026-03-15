@@ -1,16 +1,68 @@
 # AI Compliance Documents
-> AI compliance documentation templates for US state and federal AI regulations.
+> AI compliance documentation templates for 14+ US state laws, the EU AI Act, and federal frameworks. 36 packages covering employment AI laws, consumer data privacy laws, and universal governance documents.
 
 ## About
-AI Compliance Documents generates compliance documentation templates for businesses subject to AI regulations. Products cover Illinois HB3773, Colorado SB24-205, and universal frameworks (Employee AI Policy, Vendor Due Diligence, Bias Audit, Incident Response).
+AI Compliance Documents generates compliance documentation templates for businesses subject to AI regulations. Customers answer a 10-minute questionnaire about their company and AI systems, pay once (no subscription), and download customized fillable PDF documents instantly. Prices range from $49 to $997. Each package is built from the actual enacted statute text — not summaries, not training data, not paraphrases. We are not a law firm and do not provide legal advice.
 
-## Products
-- Illinois HB3773 AI Compliance Package: /regulations/illinois-hb3773
-- Colorado SB24-205 AI Compliance Package: /regulations/colorado-sb24-205
-- Employee AI Acceptable Use Policy: /regulations/employee-ai-policy
-- Vendor AI Due Diligence Kit: /regulations/vendor-ai-due-diligence
-- AI Bias Audit Templates: /regulations/ai-bias-audit-template
-- AI Incident Response Plan: /regulations/ai-incident-response-plan
+## State Employment AI Laws
+- Illinois HB3773 ($299): /regulations/illinois-hb3773
+- NYC Local Law 144 ($399): /regulations/nyc-local-law-144
+- Colorado SB 24-205 ($449): /regulations/colorado-sb24-205
+- Multi-State Employer AI Disclosure ($299): /regulations/multi-state-employer-ai-disclosure
+
+## State Consumer Data Privacy Laws
+- California CCPA ADMT ($499): /regulations/california-ccpa-admt
+- Virginia CDPA ($249): /regulations/virginia-cdpa
+- Connecticut CTDPA ($249): /regulations/connecticut-ctdpa
+- Oregon CPA ($249): /regulations/oregon-cpa
+- Texas TDPSA ($249): /regulations/texas-tdpsa
+- Delaware PDPA ($249): /regulations/delaware-pdpa
+- Minnesota MCDPA ($349): /regulations/minnesota-mcdpa
+- Montana MCDPA ($249): /regulations/montana-mcdpa
+- Indiana ICDPA ($249): /regulations/indiana-icdpa
+- Kentucky KCDPA ($249): /regulations/kentucky-kcdpa
+- New Jersey NJDPA ($249): /regulations/new-jersey-njdpa
+- Multi-State Profiling Bundle ($399): /regulations/multi-state-profiling-assessment
+
+## Federal & International Frameworks
+- EU AI Act ($997): /regulations/eu-ai-act
+- EEOC AI Hiring Compliance ($349): /regulations/eeoc-ai-hiring
+- NIST AI RMF ($397): /regulations/nist-ai-rmf
+- Healthcare AI / HIPAA ($497): /regulations/healthcare-ai-compliance
+- Financial Services AI ($597): /regulations/financial-services-ai
+
+## Universal Governance Documents
+- AI Governance Framework ($349): /regulations/ai-governance-framework
+- AI System Registry ($199): /regulations/ai-system-registry
+- Employee AI Use Policy ($199): /regulations/employee-ai-policy
+- Vendor AI Due Diligence ($199): /regulations/vendor-ai-due-diligence
+- AI Bias Audit Template ($199): /regulations/ai-bias-audit-template
+- AI Incident Response Plan ($199): /regulations/ai-incident-response-plan
+- AI Transparency Report ($149): /regulations/ai-transparency-report
+- AI Whistleblower Policy ($99): /regulations/ai-whistleblower-policy
+- Customer AI Acceptable Use Policy ($99): /regulations/customer-ai-aup
+
+## Add-On Packages
+- Manager AI Training Kit ($79): /regulations/manager-ai-training-kit
+- Annual Compliance Review ($49): /regulations/annual-compliance-review
+- Board AI Summary ($69): /regulations/board-ai-summary
+- Consumer Notice Kit ($49): /regulations/consumer-notice-kit
+- Data Mapping Inventory ($69): /regulations/data-mapping-inventory
+- Consumer Rights Kit ($59): /regulations/consumer-rights-kit
+
+## Resources
+- AI Compliance Requirements by State (comparison table): /ai-compliance-by-state
+- Frequently Asked Questions: /faq
+- Blog (plain-language guides to AI laws): /blog
+- About Our Methodology: /about
+
+## Blog Articles
+- Illinois HB3773 employer guide: /blog/illinois-hb3773-ai-employment-law-what-employers-need
+- California CCPA ADMT risk assessment guide: /blog/california-ccpa-admt-risk-assessment-compliance-2026
+- Virginia CDPA data protection assessment guide: /blog/virginia-cdpa-data-protection-assessment-profiling-requirements
+- Colorado SB 24-205 business compliance guide: /blog/colorado-sb-24-205-ai-law-what-businesses-need-to-know
+- Connecticut CTDPA data protection assessment guide: /blog/connecticut-ctdpa-data-protection-assessment-profiling-requirements
+- AI employment law compliance guide: /blog/hiring-software-uses-ai-employment-law-compliance
 
 ## Important
-All documents are templates for compliance planning purposes. They do not constitute legal advice. AI Compliance Documents is not a law firm.
+All documents are templates for compliance planning purposes. They do not constitute legal advice. AI Compliance Documents is not a law firm. Consult a licensed attorney to verify applicability to your specific situation.
