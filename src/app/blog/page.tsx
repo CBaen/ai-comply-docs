@@ -71,48 +71,61 @@ export default function BlogPage() {
                 {published.map((post) => (
                   <article
                     key={post.slug}
-                    className="bg-white rounded border border-gray-200 p-6 hover:border-blue-700 hover:shadow-md transition flex flex-col"
+                    className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-blue-700 hover:shadow-md transition flex flex-col"
                   >
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-1.5 mb-3">
-                      {post.tags.slice(0, 2).map((tag) => (
-                        <span
-                          key={tag}
-                          className="inline-block text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-0.5 rounded"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    {/* Image */}
+                    {post.image && (
+                      <Link href={`/blog/${post.slug}`} className="block">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-40 object-cover"
+                        />
+                      </Link>
+                    )}
 
-                    {/* Title */}
-                    <h2 className="font-bold text-lg font-display text-gray-900 mb-2 leading-snug flex-1">
+                    <div className="p-5 flex flex-col flex-1">
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        {post.tags.slice(0, 2).map((tag) => (
+                          <span
+                            key={tag}
+                            className="inline-block text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-0.5 rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Title */}
+                      <h2 className="font-bold text-lg font-display text-gray-900 mb-2 leading-snug flex-1">
+                        <Link
+                          href={`/blog/${post.slug}`}
+                          className="hover:text-blue-700 transition"
+                        >
+                          {post.title}
+                        </Link>
+                      </h2>
+
+                      {/* Description */}
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        {post.description}
+                      </p>
+
+                      {/* Meta */}
+                      <div className="flex items-center justify-between text-xs text-gray-400 mb-4 border-t border-gray-100 pt-3">
+                        <time dateTime={post.date}>{formatDate(post.date)}</time>
+                        <span>{post.readTime}</span>
+                      </div>
+
+                      {/* CTA */}
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="hover:text-blue-700 transition"
+                        className="block text-center bg-blue-800 text-white py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-900 transition"
                       >
-                        {post.title}
+                        Read Article
                       </Link>
-                    </h2>
-
-                    {/* Description */}
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                      {post.description}
-                    </p>
-
-                    {/* Meta */}
-                    <div className="flex items-center justify-between text-xs text-gray-400 mb-4 border-t border-gray-100 pt-3">
-                      <time dateTime={post.date}>{formatDate(post.date)}</time>
-                      <span>{post.readTime}</span>
                     </div>
-
-                    {/* CTA */}
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="block text-center bg-blue-800 text-white py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-900 transition"
-                    >
-                      Read Article
-                    </Link>
                   </article>
                 ))}
               </div>

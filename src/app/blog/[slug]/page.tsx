@@ -108,14 +108,14 @@ export default async function BlogPostPage({ params }: Props) {
               Back to Blog
             </Link>
 
-            <div className={`${post.image ? "md:grid md:grid-cols-[280px_1fr] md:gap-8 md:items-start" : ""}`}>
-              {/* Image — left side on desktop, top on mobile */}
+            <div className={`${post.image ? "md:grid md:grid-cols-[300px_1fr] md:gap-8 md:items-stretch" : ""}`}>
+              {/* Image — left side, stretches to full height of text block */}
               {post.image && (
                 <div className="mb-6 md:mb-0">
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-48 md:h-auto md:max-h-72 object-cover rounded-lg shadow-lg"
+                    className="w-full h-48 md:h-full object-cover rounded-lg shadow-lg"
                   />
                 </div>
               )}
