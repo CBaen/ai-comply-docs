@@ -143,6 +143,7 @@ export function generateProxyAnalysisWorksheet(
     { label: "Sex", key: "sex" },
     { label: "Religion", key: "religion" },
     { label: "Disability Status", key: "disability" },
+    { label: "Sexual Orientation", key: "sexual_orientation" },
   ];
 
   characteristics.forEach((char, idx) => {

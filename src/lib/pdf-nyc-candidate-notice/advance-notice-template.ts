@@ -164,12 +164,12 @@ export function generateAdvanceNoticeTemplate(
   // Section 3: Alternative Selection Process Instructions
   y = addSectionHeader(
     doc,
-    "3. Instructions for Requesting an Alternative Selection Process (§20-871(b)(1))",
+    "3. Instructions for Requesting an Alternative Selection Process (§20-871(b)(2))",
     y
   );
   y = addWrappedText(
     doc,
-    "Per §20-871(b)(1), the advance notice must include instructions for requesting an alternative selection process or reasonable accommodation. Include this language in the notice:",
+    "Per §20-871(b)(2), candidates have the right to request an alternative selection process or reasonable accommodation. The advance notice must include instructions for making such a request. There is no statutory sub-deadline for submitting an alternative process request — the only statutory timing requirement is the 10-business-day advance notice before AEDT use. Include this language in the notice:",
     MARGIN,
     y,
     CONTENT_WIDTH,
@@ -189,7 +189,7 @@ export function generateAdvanceNoticeTemplate(
 
   const requestMethods = [
     "Submitting a written request to HR at the contact information below",
-    "Emailing the HR contact below at least 5 business days before your evaluation",
+    "Emailing the HR contact below",
     "Calling the HR department at the number below",
     "Indicating your request in your application portal",
   ];
@@ -217,13 +217,6 @@ export function generateAdvanceNoticeTemplate(
     "Alternative Process Request Contact — Phone:",
     y,
     { prefill: data.contact.phone || "", width: 100 }
-  );
-  y = addFormTextField(
-    doc,
-    "ant_alt_request_deadline",
-    "Deadline for Submitting Alternative Process Request (e.g., at least 5 business days before evaluation):",
-    y,
-    { width: 110 }
   );
   y += LINE_HEIGHT;
 

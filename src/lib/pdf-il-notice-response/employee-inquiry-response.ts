@@ -29,6 +29,21 @@ export function generateEmployeeInquiryResponse(
   );
   y = addTopDisclaimer(doc, y);
 
+  // IDHR rulemaking disclosure
+  doc.setFontSize(8.5);
+  doc.setFont("helvetica", "italic");
+  y = addWrappedText(
+    doc,
+    "Note: IDHR is currently developing implementing rules for the AI notice requirements under 775 ILCS 5/2-102(L). The format, timing, and delivery requirements for employee notice are not yet finalized. This template reflects the statutory text as enacted. Update this document when IDHR publishes its rules.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  doc.setFontSize(10);
+  doc.setFont("helvetica", "normal");
+  y += LINE_HEIGHT;
+
   y = addWrappedText(
     doc,
     `Use this form to document and respond to employee questions about AI system use in employment decisions at ${data.company.name}. 775 ILCS 5/2-102(L)(2) requires employers to notify employees of AI systems used in employment decisions and provide a contact person for questions. Retain completed forms for a minimum of 4 years (recommended).`,

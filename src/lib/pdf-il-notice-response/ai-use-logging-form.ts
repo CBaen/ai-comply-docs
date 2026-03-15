@@ -22,6 +22,21 @@ export function generateAiUseLoggingForm(data: ComplianceFormData): jsPDF {
   let y = addDocHeader(doc, "AI Employment Decision Use Log", data);
   y = addTopDisclaimer(doc, y);
 
+  // IDHR rulemaking disclosure
+  doc.setFontSize(8.5);
+  doc.setFont("helvetica", "italic");
+  y = addWrappedText(
+    doc,
+    "Note: IDHR is currently developing implementing rules for the AI notice requirements under 775 ILCS 5/2-102(L). The format, timing, and delivery requirements for employee notice are not yet finalized. This template reflects the statutory text as enacted. Update this document when IDHR publishes its rules.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  doc.setFontSize(10);
+  doc.setFont("helvetica", "normal");
+  y += LINE_HEIGHT;
+
   y = addWrappedText(
     doc,
     `Complete this form each time an AI system is used to make, facilitate, screen, or inform an employment decision at ${data.company.name}. Retain completed logs for a minimum of 4 years (recommended). The Illinois Department of Human Rights (IDHR) has authority to adopt implementing rules under 775 ILCS 5/2-102(L) — verify current IDHR rules at dhr.illinois.gov.`,

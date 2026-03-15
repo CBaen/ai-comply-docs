@@ -24,6 +24,21 @@ export function generateDataInputAudit(data: ComplianceFormData): jsPDF {
   let y = addDocHeader(doc, "AI Data Input Audit — Zip Code & Proxy Review", data);
   y = addTopDisclaimer(doc, y);
 
+  // IDHR rulemaking disclosure
+  doc.setFontSize(8.5);
+  doc.setFont("helvetica", "italic");
+  y = addWrappedText(
+    doc,
+    "Note: IDHR is currently developing implementing rules for the AI notice requirements under 775 ILCS 5/2-102(L). The format, timing, and delivery requirements for employee notice are not yet finalized. This template reflects the statutory text as enacted. Update this document when IDHR publishes its rules.",
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  doc.setFontSize(10);
+  doc.setFont("helvetica", "normal");
+  y += LINE_HEIGHT;
+
   y = addWrappedText(
     doc,
     `This workbook audits all data inputs to AI systems used in employment decisions at ${data.company.name}. Under 775 ILCS 5/2-102(L)(1), AI systems used in employment decisions may not use zip codes as a proxy for race, color, national origin, or other protected characteristics. Complete one section per AI system.`,
