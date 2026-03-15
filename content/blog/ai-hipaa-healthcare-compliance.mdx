@@ -7,6 +7,36 @@ author: "AI Compliance Documents Team"
 tags: ["HIPAA", "healthcare", "PHI", "Security Rule", "Privacy Rule"]
 published: true
 image: "/blog/blog-hero-hipaa.png"
+summary: "HIPAA is the federal law that protects patient health information, and it applies fully to AI systems used in healthcare — from diagnostic tools to clinical documentation assistants. This article explains what HIPAA's Privacy Rule, Security Rule, and Breach Notification Rule require when healthcare organizations deploy AI, what documentation is mandatory, and what the penalties look like when organizations get it wrong."
+deepDive:
+  title: "What Is a Business Associate Agreement, and Why AI Vendors Need One"
+  content: "Imagine you run a restaurant. You handle your customers' credit card numbers every day. One day, you hire a company to install a new point-of-sale system. To set it up, that company needs access to your transaction records — which include your customers' card numbers. You didn't hand those card numbers to a stranger on the street; you gave them to a vendor performing a specific service. But if that vendor gets hacked and your customers' card numbers leak, you're both on the hook — because you chose that vendor and let them handle sensitive information without making sure they'd protect it.\n\nIn HIPAA terms, a Business Associate Agreement (BAA) is the contract that formalizes this relationship. When a healthcare provider gives a vendor access to patient information — Protected Health Information, or PHI — the law requires a signed contract that spells out exactly what the vendor can and cannot do with that data, what security measures they'll maintain, and what happens if there's a breach. Without a signed BAA in place before any PHI flows, the healthcare provider is violating HIPAA — and it's an ongoing violation, not a one-time mistake.\n\nAI vendors make this more complicated than traditional software vendors. A standard electronic health records company stores and displays patient data, and the BAA covers that storage and display. But an AI vendor might use patient data to train their model, improve their algorithms, or feed it into a system that serves other customers. If the BAA doesn't explicitly address whether the vendor can use PHI for model training — and under what conditions — that training could itself be a HIPAA violation by the vendor and a reportable breach.\n\nThis is why healthcare organizations deploying AI tools need to treat BAAs as living documents, not boilerplate contracts. The traditional BAA template that worked for your EHR vendor five years ago almost certainly doesn't cover AI-specific scenarios like model training on patient data, re-identification risks from model outputs, or the question of what happens to PHI embedded in model weights when you terminate the vendor relationship. Updating your BAAs for AI is not optional — it's a core HIPAA requirement."
+microFacts:
+  - fact: "The FDA has authorized over 1,000 AI-enabled medical devices for marketing in the United States, with the majority concentrated in radiology and cardiology — making healthcare one of the largest regulated AI deployment sectors in the country."
+    source: "U.S. Food and Drug Administration"
+    sourceUrl: "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices"
+  - fact: "HIPAA's criminal penalty provisions allow for up to 10 years in prison and $250,000 in fines for individuals who knowingly obtain or disclose protected health information with intent to sell, transfer, or use it for personal gain or malicious harm."
+    source: "U.S. Department of Health and Human Services"
+    sourceUrl: "https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html"
+  - fact: "HHS Office for Civil Rights investigates all reported breaches of protected health information affecting 500 or more individuals, and publishes them on a public 'Breach Portal' that is searchable by anyone — commonly referred to as the 'Wall of Shame.'"
+    source: "HHS Office for Civil Rights"
+    sourceUrl: "https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf"
+  - fact: "HHS published model Business Associate Agreement provisions as guidance for covered entities, providing template language that healthcare organizations can use as a starting point for their vendor contracts — but most organizations have not updated these templates to address AI-specific data use scenarios."
+    source: "U.S. Department of Health and Human Services"
+    sourceUrl: "https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html"
+externalReferences:
+  - title: "45 C.F.R. Part 164, Subpart C — HIPAA Security Rule (eCFR)"
+    url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+  - title: "45 C.F.R. Part 164, Subpart E — HIPAA Privacy Rule (eCFR)"
+    url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E"
+  - title: "HHS Office for Civil Rights — HIPAA Enforcement"
+    url: "https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html"
+  - title: "HHS — Sample Business Associate Agreement Provisions"
+    url: "https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html"
+  - title: "FDA — Artificial Intelligence-Enabled Medical Devices"
+    url: "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices"
+  - title: "HHS OCR Breach Portal"
+    url: "https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf"
 ---
 
 The question isn't whether HIPAA applies to AI in healthcare. It does. The question is whether your business has done the work to implement HIPAA's requirements for the AI systems you've added to your operations — and whether the agreements, policies, and safeguards you built years ago for traditional software have been updated to cover the new tools.
