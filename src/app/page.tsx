@@ -382,70 +382,70 @@ export default function Home() {
                   What if I don&apos;t know whether my tools use AI?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   You&apos;re not alone. Most modern hiring platforms, CRM systems, marketing tools, and customer service chatbots have AI built in. If a tool screens, scores, ranks, recommends, or personalizes &mdash; there&apos;s likely AI involved. Your vendor can confirm this. Our AI System Inventory document walks you through how to find out what you&apos;re actually running.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   I have no idea where to start.
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   That&apos;s the most common thing we hear. Start by figuring out which states your employees or customers are in. Then look at our state-specific packages for those states. If you operate in a lot of states, the <a href="/regulations/multi-state-profiling-assessment" className="text-blue-700 hover:underline">Multi-State Profiling Bundle</a> covers 15+ states in one package. If you just want to get organized first, the <a href="/regulations/ai-governance-framework" className="text-blue-700 hover:underline">AI Governance Framework</a> ($349) and <a href="/regulations/ai-system-registry" className="text-blue-700 hover:underline">AI System Registry</a> ($199) help you figure out what you have before you worry about which laws apply.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   What AI regulations do you cover?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   We offer 53 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text &mdash; not summaries, not training data, not paraphrases.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   Is this legal advice?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   No. We generate documentation templates based on the actual text of enacted statutes and published regulations. These templates help you get organized and demonstrate compliance effort &mdash; but they&apos;re not a substitute for a licensed attorney who can evaluate your specific situation. We recommend having your legal team review the output.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   How are the documents generated?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   You answer a short questionnaire about your company &mdash; what AI tools you use, what decisions they inform, how your organization is structured. Your answers populate templates that were drafted against each state&apos;s specific statute. Documents generate instantly as fillable PDFs with electronic signature blocks. The whole process takes about ten minutes.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   What if the law changes?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   Laws change. That&apos;s the nature of this space. Our templates reflect the enacted statute text at the time of purchase. If a law is amended or new implementing rules are published, your documents may need updating. We recommend checking back periodically and consulting qualified legal counsel to make sure your compliance posture stays current.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   Do I need this if I already have outside counsel?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   A lot of our customers have lawyers. They use our templates as a starting point &mdash; it gives their attorney something to review and refine instead of drafting from scratch at $400&ndash;$800 an hour. Your lawyer&apos;s time is better spent on the nuances specific to your business, not on formatting a compliance checklist.
                 </div>
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
+                <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
                   Are all sales final?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
                   Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it&apos;s the right fit.
                 </div>
               </details>
@@ -454,17 +454,17 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 bg-slate-900">
+        <section className="py-10 md:py-16 bg-slate-900">
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold font-display text-white mb-4">
               Don&apos;t wait for a complaint
             </h2>
-            <p className="text-slate-300 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-slate-300 text-base md:text-lg mb-8 max-w-xl mx-auto">
               AI regulations are in effect now. Get your compliance documents today for a fraction of what a law firm charges.
             </p>
             <a
               href="#products"
-              className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
             >
               Browse Products
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>

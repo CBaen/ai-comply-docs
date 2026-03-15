@@ -258,9 +258,9 @@ export default async function RegulationPage({
         </div>
 
         {/* Key Stats Bar */}
-        <div className="bg-white border-b border-gray-200 py-4">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="flex flex-wrap items-center justify-start gap-8 text-sm text-gray-600 font-medium">
+        <div className="bg-white border-b border-gray-200 py-3 sm:py-4">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="flex flex-wrap items-center justify-start gap-x-6 gap-y-2 text-xs sm:text-sm text-gray-600 font-medium">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                 <span>{reg.documentCount} documents included</span>
@@ -277,8 +277,8 @@ export default async function RegulationPage({
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {/* Main content */}
             <div className="md:col-span-2 space-y-10">
               {/* Penalties */}
@@ -361,9 +361,9 @@ export default async function RegulationPage({
                           key={addon.slug}
                           className="bg-blue-50 border border-blue-100 rounded-lg p-5"
                         >
-                          <div className="flex items-start justify-between gap-4">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
                             <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-1">
+                              <div className="flex flex-wrap items-center gap-2 mb-1">
                                 <p className="font-semibold text-gray-900">
                                   {addon.shortName}
                                 </p>
@@ -378,7 +378,7 @@ export default async function RegulationPage({
                                 {addon.documentCount} documents
                               </p>
                             </div>
-                            <div className="text-right shrink-0">
+                            <div className="sm:text-right shrink-0">
                               <p className="text-xl font-extrabold text-gray-900 font-display">
                                 ${addon.price}
                               </p>
@@ -429,7 +429,7 @@ export default async function RegulationPage({
             <div className="md:col-span-1">
               <div
                 id="get-started"
-                className="bg-white border-2 border-blue-800 rounded-xl p-6 shadow-lg sticky top-24"
+                className="bg-white border-2 border-blue-800 rounded-xl p-5 sm:p-6 shadow-lg md:sticky md:top-24"
               >
                 <p className="text-sm font-semibold text-blue-700 uppercase tracking-wider mb-1">
                   Complete Package
@@ -511,10 +511,10 @@ export default async function RegulationPage({
 
         {/* Blog Guide Card — only shown when a plain-language guide exists for this law */}
         {blogGuide && (
-          <div className="max-w-4xl mx-auto px-4 pb-2">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-2">
             <Link
               href={blogGuide.url}
-              className="flex items-start gap-4 bg-slate-50 border border-slate-200 rounded-lg px-6 py-5 hover:border-slate-300 hover:bg-slate-100 transition group"
+              className="flex items-start gap-3 sm:gap-4 bg-slate-50 border border-slate-200 rounded-lg px-4 sm:px-6 py-4 sm:py-5 hover:border-slate-300 hover:bg-slate-100 transition group"
             >
               <div className="mt-0.5 shrink-0">
                 <svg className="w-5 h-5 text-slate-500 group-hover:text-blue-700 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
@@ -559,15 +559,15 @@ export default async function RegulationPage({
             .slice(0, 3);
           if (related.length === 0) return null;
           return (
-            <div className="bg-white border-t border-gray-200 py-12">
-              <div className="max-w-4xl mx-auto px-4">
-                <h2 className="text-2xl font-bold font-display text-gray-900 mb-2">
+            <div className="bg-white border-t border-gray-200 py-10 sm:py-12">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-2">
                   You May Also Need
                 </h2>
-                <p className="text-gray-600 text-sm mb-6">
+                <p className="text-gray-600 text-sm mb-5 sm:mb-6">
                   Strengthen your compliance program with related documentation.
                 </p>
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
                   {related.map((r) => (
                     <Link
                       key={r.slug}

@@ -56,7 +56,7 @@ export default function StepOversight({
           value={oversightRole}
           onChange={(e) => setOversightRole(e.target.value)}
           placeholder="e.g., VP of People Operations, HR Director"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>

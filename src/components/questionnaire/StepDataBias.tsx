@@ -46,11 +46,11 @@ export default function StepDataBias({
         <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           What types of data does your AI system process?
         </p>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
           {DATA_INPUT_OPTIONS.map((opt) => (
             <label
               key={opt.value}
-              className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300"
+              className="flex items-center gap-3 min-h-[44px] px-1 text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
             >
               <input
                 type="checkbox"
@@ -58,7 +58,7 @@ export default function StepDataBias({
                 onChange={() =>
                   toggleCheckbox(opt.value, dataInputs, setDataInputs)
                 }
-                className="rounded"
+                className="rounded w-4 h-4 shrink-0"
               />
               {opt.label}
             </label>
@@ -71,11 +71,11 @@ export default function StepDataBias({
           Which protected characteristics could be affected by the AI
           system?
         </p>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
           {PROTECTED_CHAR_OPTIONS.map((opt) => (
             <label
               key={opt.value}
-              className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300"
+              className="flex items-center gap-3 min-h-[44px] px-1 text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
             >
               <input
                 type="checkbox"
@@ -87,7 +87,7 @@ export default function StepDataBias({
                     setProtectedChars
                   )
                 }
-                className="rounded"
+                className="rounded w-4 h-4 shrink-0"
               />
               {opt.label}
             </label>

@@ -270,7 +270,7 @@ function OptionButton({
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left px-5 py-4 rounded-lg border-2 font-medium transition-all ${
+      className={`w-full text-left px-4 py-4 sm:px-5 rounded-lg border-2 font-medium transition-all text-sm sm:text-base min-h-[52px] ${
         selected
           ? "border-blue-700 bg-blue-50 text-blue-900"
           : "border-gray-200 bg-white text-gray-800 hover:border-blue-300 hover:bg-blue-50/50"
@@ -308,7 +308,7 @@ function CheckboxOption({
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left px-5 py-4 rounded-lg border-2 font-medium transition-all ${
+      className={`w-full text-left px-4 py-4 sm:px-5 rounded-lg border-2 font-medium transition-all text-sm sm:text-base min-h-[52px] ${
         selected
           ? "border-blue-700 bg-blue-50 text-blue-900"
           : "border-gray-200 bg-white text-gray-800 hover:border-blue-300 hover:bg-blue-50/50"
@@ -347,15 +347,15 @@ function ResultsCard({
   return (
     <div>
       {/* Green header */}
-      <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
-        <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-green-100 border-2 border-green-300 flex items-center justify-center flex-shrink-0">
-            <svg className="w-5 h-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <div className="bg-green-50 border border-green-200 rounded-xl p-5 sm:p-6 mb-8">
+        <div className="flex items-start gap-3 sm:gap-4">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-green-100 border-2 border-green-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <div>
-            <h2 className="text-xl font-bold font-display text-green-900 mb-1">
+            <h2 className="text-lg sm:text-xl font-bold font-display text-green-900 mb-1">
               Based on your answers, here&apos;s what applies to you:
             </h2>
             <p className="text-green-700 text-sm">
@@ -377,11 +377,11 @@ function ResultsCard({
             {primary.map((rec) => (
               <div
                 key={rec.slug}
-                className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-2 flex-wrap">
                       <h4 className="font-bold text-gray-900 text-base">{rec.name}</h4>
                       <span className="text-blue-700 font-bold text-sm">${rec.price}</span>
                     </div>
@@ -389,7 +389,7 @@ function ResultsCard({
                   </div>
                   <Link
                     href={`/regulations/${rec.slug}`}
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg hover:bg-blue-800 transition whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-1.5 bg-blue-700 text-white text-sm font-semibold px-4 py-3 sm:py-2.5 rounded-lg hover:bg-blue-800 transition whitespace-nowrap w-full sm:w-auto sm:flex-shrink-0 min-h-[44px]"
                   >
                     View Package
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -413,11 +413,11 @@ function ResultsCard({
             {addOns.map((rec) => (
               <div
                 key={rec.slug}
-                className="bg-slate-50 border border-slate-200 rounded-xl p-5"
+                className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-5"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-1.5">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-1.5 flex-wrap">
                       <h4 className="font-semibold text-gray-900 text-sm">{rec.name}</h4>
                       <span className="text-slate-600 font-semibold text-sm">${rec.price}</span>
                     </div>
@@ -425,7 +425,7 @@ function ResultsCard({
                   </div>
                   <Link
                     href={`/regulations/${rec.slug}`}
-                    className="flex-shrink-0 inline-flex items-center gap-1 text-blue-700 font-semibold text-sm hover:text-blue-900 transition whitespace-nowrap"
+                    className="inline-flex items-center gap-1 text-blue-700 font-semibold text-sm hover:text-blue-900 transition whitespace-nowrap min-h-[44px] sm:min-h-0 sm:pt-0.5"
                   >
                     View →
                   </Link>
@@ -571,8 +571,8 @@ export default function ComplianceQuiz() {
   ];
 
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-2xl mx-auto px-4">
+    <section className="py-10 sm:py-12 bg-white">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
         {showResults ? (
           <ResultsCard
             recommendations={computeRecommendations(answers)}
@@ -585,7 +585,7 @@ export default function ComplianceQuiz() {
             {/* Question 1 */}
             {step === 1 && (
               <div>
-                <h2 className="text-xl font-bold font-display text-gray-900 mb-2">
+                <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Does your business use AI or automated tools in any of these areas?
                 </h2>
                 <p className="text-gray-500 text-sm mb-6">
@@ -607,7 +607,7 @@ export default function ComplianceQuiz() {
             {/* Question 2 */}
             {step === 2 && (
               <div>
-                <h2 className="text-xl font-bold font-display text-gray-900 mb-2">
+                <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Where are your employees or customers located?
                 </h2>
                 <p className="text-gray-500 text-sm mb-6">
@@ -634,7 +634,7 @@ export default function ComplianceQuiz() {
             {/* Question 3 */}
             {step === 3 && (
               <div>
-                <h2 className="text-xl font-bold font-display text-gray-900 mb-2">
+                <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   How many employees or consumers does your business interact with?
                 </h2>
                 <p className="text-gray-500 text-sm mb-6">
@@ -656,7 +656,7 @@ export default function ComplianceQuiz() {
             {/* Question 4 */}
             {step === 4 && (
               <div>
-                <h2 className="text-xl font-bold font-display text-gray-900 mb-2">
+                <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Does your business sell or share personal data, or use it for targeted advertising?
                 </h2>
                 <p className="text-gray-500 text-sm mb-6">
@@ -678,7 +678,7 @@ export default function ComplianceQuiz() {
             {/* Question 5 */}
             {step === 5 && (
               <div>
-                <h2 className="text-xl font-bold font-display text-gray-900 mb-2">
+                <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Do you currently have any AI compliance documentation in place?
                 </h2>
                 <p className="text-gray-500 text-sm mb-6">
@@ -698,11 +698,11 @@ export default function ComplianceQuiz() {
             )}
 
             {/* Navigation */}
-            <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-200">
+            <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 mt-8 pt-6 border-t border-gray-200">
               {step > 1 ? (
                 <button
                   onClick={() => setStep((s) => s - 1)}
-                  className="text-sm text-gray-500 hover:text-gray-800 transition flex items-center gap-1.5"
+                  className="text-sm text-gray-500 hover:text-gray-800 transition flex items-center gap-1.5 min-h-[44px] sm:min-h-0 justify-center sm:justify-start"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -715,7 +715,7 @@ export default function ComplianceQuiz() {
               <button
                 onClick={advance}
                 disabled={!canAdvance()}
-                className="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-blue-800 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-blue-800 transition disabled:opacity-40 disabled:cursor-not-allowed w-full sm:w-auto min-h-[48px] sm:min-h-0"
               >
                 {step === TOTAL_STEPS ? "See My Results" : "Next Question"}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

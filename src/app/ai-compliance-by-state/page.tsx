@@ -303,7 +303,7 @@ export default function AIComplianceByStatePage() {
               </div>
 
               {/* Card 2: Businesses collecting consumer data */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6">
                 <div className="text-2xl mb-3">🗂️</div>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
                   Businesses collecting consumer data
@@ -371,7 +371,7 @@ export default function AIComplianceByStatePage() {
               </div>
 
               {/* Card 3: Operating in many states */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6">
                 <div className="text-2xl mb-3">🗺️</div>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
                   Operating in many states
@@ -393,18 +393,18 @@ export default function AIComplianceByStatePage() {
         </section>
 
         {/* ── Bottom CTA ── */}
-        <section className="py-14 bg-slate-900">
-          <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-3">
+        <section className="py-10 sm:py-14 bg-slate-900">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-white mb-3">
               Browse All {regulations.filter((r) => r.ready).length} Compliance Packages
             </h2>
-            <p className="text-slate-300 mb-6 text-base">
+            <p className="text-slate-300 mb-6 text-sm sm:text-base">
               State laws, federal frameworks, multi-state bundles, and industry-specific packages.
               Each built against the actual enacted statute text.
             </p>
             <Link
               href="/regulations"
-              className="inline-flex items-center gap-2 bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-base hover:bg-blue-800 transition"
+              className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-blue-800 transition w-full sm:w-auto"
             >
               View All Packages →
             </Link>

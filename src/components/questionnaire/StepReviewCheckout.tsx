@@ -190,13 +190,13 @@ export default function StepReviewCheckout({
       </div>
 
       {/* Acknowledgment */}
-      <label className="flex items-start gap-3 cursor-pointer">
+      <label className="flex items-start gap-3 cursor-pointer min-h-[44px] py-1">
         <input
           type="checkbox"
           checked={acknowledged}
           onChange={(e) => setAcknowledged(e.target.checked)}
           disabled={!lawVisited}
-          className="mt-1 rounded"
+          className="mt-0.5 rounded w-5 h-5 shrink-0"
         />
         <span className="text-sm text-gray-700 dark:text-gray-300">
           <strong>I confirm:</strong> {acknowledgment}
@@ -216,7 +216,7 @@ export default function StepReviewCheckout({
                 key={addon.id}
                 className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4"
               >
-                <label className="flex items-start gap-3 cursor-pointer">
+                <label className="flex items-start gap-3 cursor-pointer min-h-[44px] py-1">
                   <input
                     type="checkbox"
                     checked={checked}
@@ -227,7 +227,7 @@ export default function StepReviewCheckout({
                         setSelectedAddons([...selectedAddons, addon.id]);
                       }
                     }}
-                    className="mt-0.5 rounded"
+                    className="mt-0.5 rounded w-5 h-5 shrink-0"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">
                     <strong>{addon.label} (+${addon.price})</strong>
@@ -247,7 +247,7 @@ export default function StepReviewCheckout({
         <p className="text-3xl font-extrabold font-display text-gray-900 dark:text-white">
           ${orderTotal}
         </p>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-sm text-gray-500 mt-1 break-words px-2">
           {selectedAddons.length > 0
             ? `Compliance Package $${basePrice} + ${addons
                 .filter((a) => selectedAddons.includes(a.id))
@@ -262,7 +262,7 @@ export default function StepReviewCheckout({
         type="button"
         onClick={handleCheckout}
         disabled={!acknowledged || checkoutLoading}
-        className={`w-full py-4 rounded-lg font-bold text-lg transition shadow-md ${
+        className={`w-full py-4 px-4 rounded-lg font-bold text-base sm:text-lg transition shadow-md leading-snug ${
           acknowledged && !checkoutLoading
             ? "bg-blue-800 hover:bg-blue-900 text-white"
             : "bg-slate-200 text-slate-400 cursor-not-allowed"
@@ -270,7 +270,12 @@ export default function StepReviewCheckout({
       >
         {checkoutLoading
           ? "Redirecting to Checkout..."
-          : `Get My ${regulationName} Documents — $${orderTotal}`}
+          : (
+            <span className="block">
+              Get My {regulationName} Documents
+              <span className="block sm:inline"> — ${orderTotal}</span>
+            </span>
+          )}
       </button>
 
       {/* Support link */}

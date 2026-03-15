@@ -58,7 +58,7 @@ export default function StepAISystems({
                 updateAISystem(idx, "name", e.target.value)
               }
               placeholder="e.g., HireVue, Pymetrics, internal ML model"
-              className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+              className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
             />
           </div>
           <div>
@@ -72,7 +72,7 @@ export default function StepAISystems({
                 updateAISystem(idx, "vendor", e.target.value)
               }
               placeholder="e.g., HireVue Inc., or 'Internal'"
-              className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+              className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
             />
           </div>
           <fieldset>
@@ -82,17 +82,17 @@ export default function StepAISystems({
             <p className="text-xs text-gray-500 mb-2">
               {helpTexts.step2DecisionHelp}
             </p>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
               {decisions.map(([val, label]) => (
                 <label
                   key={val}
-                  className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300"
+                  className="flex items-center gap-3 min-h-[44px] px-1 text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
                 >
                   <input
                     type="checkbox"
                     checked={sys.decisions.includes(val)}
                     onChange={() => toggleDecision(idx, val)}
-                    className="rounded"
+                    className="rounded w-4 h-4 shrink-0"
                   />
                   {label}
                 </label>
@@ -110,7 +110,7 @@ export default function StepAISystems({
               }
               rows={3}
               placeholder="e.g., Screens resumes and ranks candidates..."
-              className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+              className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
             />
           </div>
         </div>
@@ -124,10 +124,10 @@ export default function StepAISystems({
       <button
         type="button"
         onClick={addAISystem}
-        className="text-blue-700 hover:text-blue-900 text-sm font-medium flex items-center gap-1"
+        className="inline-flex items-center gap-2 min-h-[44px] px-4 py-2 rounded-lg border border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-sm font-medium transition"
       >
         <svg
-          className="w-4 h-4"
+          className="w-4 h-4 shrink-0"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

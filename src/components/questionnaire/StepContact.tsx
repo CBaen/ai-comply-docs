@@ -28,7 +28,7 @@ export default function StepContact({
           value={contactName}
           onChange={(e) => setContactName(e.target.value)}
           placeholder="e.g., Jane Smith"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
@@ -40,7 +40,7 @@ export default function StepContact({
           value={contactTitle}
           onChange={(e) => setContactTitle(e.target.value)}
           placeholder="e.g., Chief Compliance Officer"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
@@ -52,7 +52,7 @@ export default function StepContact({
           value={contactEmail}
           onChange={(e) => setContactEmail(e.target.value)}
           placeholder="e.g., compliance@company.com"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
       <div>
@@ -64,7 +64,7 @@ export default function StepContact({
           value={contactPhone}
           onChange={(e) => setContactPhone(e.target.value)}
           placeholder="e.g., (312) 555-0100"
-          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
+          className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         />
       </div>
     </div>

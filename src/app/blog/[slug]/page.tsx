@@ -188,30 +188,30 @@ export default async function BlogPostPage({ params }: Props) {
                 </div>
 
                 {/* ═══ Mobile: Progressive disclosure cards ═══ */}
-                <div className="xl:hidden mt-10 space-y-3">
+                <div className="xl:hidden mt-8 space-y-3">
                   {post.deepDive && (
                     <details className="group border-l-2 border-indigo-300 bg-indigo-50/50 rounded-r-lg overflow-hidden">
-                      <summary className="flex items-center gap-2 px-4 py-3 cursor-pointer list-none">
+                      <summary className="flex items-center gap-2 px-3 sm:px-4 py-3 cursor-pointer list-none">
                         <svg className="w-4 h-4 text-indigo-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                        <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-[0.15em]">Deep Dive</span>
-                        <span className="text-sm font-semibold text-gray-900 flex-1">{post.deepDive.title}</span>
+                        <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-[0.15em] hidden sm:inline">Deep Dive</span>
+                        <span className="text-sm font-semibold text-gray-900 flex-1 min-w-0 truncate">{post.deepDive.title}</span>
                         <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                       </summary>
-                      <div className="px-4 pb-4 text-sm text-gray-700 leading-relaxed whitespace-pre-line">{post.deepDive.content}</div>
+                      <div className="px-3 sm:px-4 pb-4 text-sm text-gray-700 leading-relaxed whitespace-pre-line">{post.deepDive.content}</div>
                     </details>
                   )}
 
                   {post.microFacts && post.microFacts.length > 0 && (
                     <details className="group border-l-2 border-amber-300 bg-amber-50/50 rounded-r-lg overflow-hidden">
-                      <summary className="flex items-center gap-2 px-4 py-3 cursor-pointer list-none">
+                      <summary className="flex items-center gap-2 px-3 sm:px-4 py-3 cursor-pointer list-none">
                         <svg className="w-4 h-4 text-amber-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
-                        <span className="text-[10px] font-bold text-amber-500 uppercase tracking-[0.15em]">Did You Know?</span>
+                        <span className="text-[10px] font-bold text-amber-500 uppercase tracking-[0.15em] hidden sm:inline">Did You Know?</span>
                         <span className="text-sm font-semibold text-gray-900 flex-1">{post.microFacts.length} facts</span>
                         <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                       </summary>
-                      <div className="px-4 pb-4 space-y-3">
+                      <div className="px-3 sm:px-4 pb-4 space-y-3">
                         {post.microFacts.map((fact, i) => (
-                          <a key={i} href={fact.sourceUrl} target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-700 leading-relaxed hover:text-amber-800 transition">
+                          <a key={i} href={fact.sourceUrl} target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-700 leading-relaxed hover:text-amber-800 transition break-words">
                             {fact.fact}
                             <span className="text-amber-600 text-xs ml-1">— {fact.source}</span>
                           </a>
@@ -256,17 +256,17 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* ═══ Sources — full-width bibliography strip ═══ */}
           {post.externalReferences && post.externalReferences.length > 0 && (
-            <div className="mt-12 bg-slate-900 text-white">
-              <div className="max-w-3xl mx-auto px-6 py-10">
-                <div className="flex items-center gap-2 mb-6">
-                  <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
+            <div className="mt-10 md:mt-12 bg-slate-900 text-white">
+              <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 md:py-10">
+                <div className="flex items-center gap-2 mb-5">
+                  <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Sources</span>
                 </div>
                 <ul className="space-y-2.5">
                   {post.externalReferences.map((ref, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="text-slate-500 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
-                      <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 text-sm underline underline-offset-2 decoration-slate-600 hover:decoration-blue-400 transition">
+                      <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 text-sm underline underline-offset-2 decoration-slate-600 hover:decoration-blue-400 transition break-words min-w-0">
                         {ref.title}
                       </a>
                     </li>
@@ -277,7 +277,7 @@ export default async function BlogPostPage({ params }: Props) {
           )}
 
           {/* Legal disclaimer */}
-          <div className="max-w-3xl mx-auto px-4 py-6">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6">
             <div className="pt-6 border-t border-gray-200 text-xs text-gray-500 leading-relaxed">
               <p>
                 <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute legal advice, legal representation, or an attorney-client relationship. Laws and regulations change frequently. You should consult a licensed attorney to verify that the information in this article is current, complete, and applicable to your specific situation before relying on it. AI Compliance Documents is not a law firm and does not practice law.
@@ -288,16 +288,16 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Related posts */}
         {related.length > 0 && (
-          <section className="py-12 bg-slate-50 border-t border-gray-200">
-            <div className="max-w-3xl mx-auto px-4">
-              <h2 className="text-xl font-bold font-display text-gray-900 mb-6">
+          <section className="py-10 md:py-12 bg-slate-50 border-t border-gray-200">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6">
+              <h2 className="text-xl font-bold font-display text-gray-900 mb-5">
                 More from the blog
               </h2>
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 {related.map((p) => (
                   <article
                     key={p.slug}
-                    className="bg-white rounded border border-gray-200 p-5 hover:border-blue-700 hover:shadow-sm transition flex flex-col"
+                    className="bg-white rounded border border-gray-200 p-4 sm:p-5 hover:border-blue-700 hover:shadow-sm transition flex flex-col"
                   >
                     <div className="flex flex-wrap gap-1 mb-2">
                       {p.tags.slice(0, 2).map((tag) => (
@@ -332,17 +332,17 @@ export default async function BlogPostPage({ params }: Props) {
         )}
 
         {/* CTA */}
-        <section className="py-12 bg-slate-900">
-          <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-2xl font-bold font-display text-white mb-3">
+        <section className="py-10 md:py-12 bg-slate-900">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-xl sm:text-2xl font-bold font-display text-white mb-3">
               Get your compliance documentation done
             </h2>
-            <p className="text-slate-300 mb-6 max-w-lg mx-auto">
+            <p className="text-slate-300 mb-6 max-w-lg mx-auto text-sm sm:text-base">
               Stop reading, start complying. Our packages generate the documents you need based on the actual statutes.
             </p>
             <Link
               href="/regulations"
-              className="inline-flex items-center gap-2 bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-base hover:bg-blue-800 transition"
+              className="inline-flex items-center gap-2 bg-blue-700 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-blue-800 transition w-full sm:w-auto justify-center sm:justify-start"
             >
               Browse Compliance Packages
               <svg
