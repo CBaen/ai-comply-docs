@@ -194,9 +194,9 @@ const REGULATION_EMAIL: Record<
   },
   "oregon-cpa": {
     title: "Your Oregon CPA AI Profiling Compliance Package",
-    statute: "ORS §§ 646A.570 through 646A.604",
+    statute: "ORS §§ 646A.570 through 646A.589",
     description:
-      "AI profiling compliance documentation templates, aligned with Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.604) requirements. Review each document with your legal team before deployment.",
+      "AI profiling compliance documentation templates, aligned with Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.589) requirements. Review each document with your legal team before deployment.",
     steps: [
       "<strong>Update your Privacy Notice</strong> to include consumer rights, opt-out disclosures, and your children’s data consent practices for consumers aged 13–15 (§ 646A.578).",
       "<strong>Complete the Data Protection Assessment</strong> for each system that uses profiling for decisions with legal or similarly significant effects (§ 646A.586(1)(a)).",
@@ -204,7 +204,7 @@ const REGULATION_EMAIL: Record<
       "<strong>Implement consent collection</strong> for consumers aged 13–15 before processing their data for targeted advertising or data sales (§ 646A.576(1)(c)).",
     ],
     reminder:
-      "The Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.604) has been in effect since July 1, 2024. The Oregon Attorney General has enforcement authority (§ 646A.604); there is no private right of action. A 30-day cure period applies until January 1, 2026 (§ 646A.604(2)). Penalties: up to $7,500 per violation under UTPA (ORS § 646.642).",
+      "The Oregon Consumer Privacy Act (ORS §§ 646A.570 through 646A.589) has been in effect since July 1, 2024. The Oregon Attorney General has enforcement authority (§ 646A.589); there is no private right of action. A 30-day cure period applies until January 1, 2026 (§ 646A.589(2)). Penalties: up to $7,500 per violation (ORS § 646A.589).",
   },
   "minnesota-mcdpa": {
     title: "Your Minnesota MCDPA Compliance Package",
@@ -302,7 +302,7 @@ const REGULATION_EMAIL: Record<
       "<strong>Implement your Post-Market Monitoring Plan</strong> and assign responsibility for ongoing incident reporting and corrective actions.",
     ],
     reminder:
-      "The EU AI Act has phased effective dates: prohibited AI practices from February 2025, GPAI obligations from August 2025, Annex III high-risk system obligations from August 2027. National market surveillance authorities enforce. High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
+      "The EU AI Act has phased effective dates: prohibited AI practices from February 2025, GPAI obligations from August 2025, Annex III high-risk system obligations from August 2027. National market surveillance authorities enforce. Prohibited AI practices: up to \u20AC35,000,000 or 7% global turnover (Art. 99(3)). High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
   },
   "eeoc-ai-hiring": {
     title: "Your EEOC AI Hiring Compliance Kit",

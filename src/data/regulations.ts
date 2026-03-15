@@ -429,7 +429,7 @@ export const regulations: Regulation[] = [
     description: "Even without a new federal AI law, the EEOC enforces existing anti-discrimination law when AI is involved in hiring. If your AI tools produce disparate impacts on protected groups, that's a Title VII violation. This package documents your compliance with current EEOC enforcement guidance.",
     penaltySummary: "EEOC enforcement under existing federal anti-discrimination law (Title VII, ADA, ADEA). Compensatory damages: $50,000–$300,000 depending on employer size. Punitive damages. Back pay. Injunctive relief. No AI-specific penalty — violations are treated as employment discrimination.",
     maxPenalty: "$300,000 compensatory/punitive cap (employers 500+)",
-    appliesToSummary: "Any US employer with 15+ employees using AI in hiring, performance evaluation, promotion, or termination decisions.",
+    appliesToSummary: "Any US employer using AI in hiring, performance evaluation, promotion, or termination decisions. Title VII and ADA apply to employers with 15+ employees; ADEA (age discrimination) applies to employers with 20+ employees.",
     keywords: ["eeoc", "title vii", "ada", "adea", "ai hiring", "adverse impact", "employment discrimination"],
     documents: [
       "AI Hiring Risk Assessment",

@@ -592,11 +592,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   "oregon-cpa": {
     name: "Oregon CPA",
-    statute: "ORS §§ 646A.570–646A.604",
+    statute: "ORS §§ 646A.570–646A.589",
     lawUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
-    lawLinkText: "Read ORS §§ 646A.570 through 646A.604 on oregonlegislature.gov",
+    lawLinkText: "Read ORS §§ 646A.570 through 646A.589 on oregonlegislature.gov",
     acknowledgment:
-      "I have reviewed ORS §§ 646A.570 through 646A.604 (Oregon Consumer Privacy Act) and understand that these are compliance templates, not legal advice. The Oregon CPA has been in effect since July 1, 2024, with the cure period expiring January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
+      "I have reviewed ORS §§ 646A.570 through 646A.589 (Oregon Consumer Privacy Act) and understand that these are compliance templates, not legal advice. The Oregon CPA has been in effect since July 1, 2024, with the cure period expiring January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
