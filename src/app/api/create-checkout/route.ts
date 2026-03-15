@@ -14,6 +14,11 @@ export async function POST(request: Request) {
   const body = await request.json();
   const { addonIds, regulation } = body;
 
+  // Optional: attach logged-in user info to the session for post-purchase linking
+  const userSession = await auth().catch(() => null);
+  const userEmail = userSession?.user?.email ?? null;
+  const userId = userSession?.user?.id ?? null;
+
   const slug = regulation || "illinois-hb3773";
   const reg = getRegulation(slug);
 
@@ -45,14 +50,25 @@ export async function POST(request: Request) {
     const origin = "https://aicompliancedocuments.com";
 
     const stripe = getStripe();
-    const session = await stripe.checkout.sessions.create({
+
+    const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: "payment",
       line_items: lineItems,
       allow_promotion_codes: true,
       success_url: `${origin}/products/${slug}?payment=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/products/${slug}?payment=cancelled`,
-      metadata: { regulation: slug },
-    });
+      metadata: {
+        regulation: slug,
+        ...(userId ? { user_id: userId } : {}),
+      },
+    };
+
+    // Pre-fill customer email if logged in — reduces friction at checkout
+    if (userEmail) {
+      sessionParams.customer_email = userEmail;
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionParams);
 
     return NextResponse.json({ url: session.url });
   } catch (err) {

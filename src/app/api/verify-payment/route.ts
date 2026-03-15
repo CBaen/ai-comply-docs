@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getRegulation } from "@/data/regulations";
 import { generateDeliveryToken } from "@/lib/delivery-token";
+import { getPool } from "@/lib/db";
 
 function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -51,8 +52,37 @@ async function trackPurchase(session: Stripe.Checkout.Session) {
   }
 }
 
+async function savePurchaseFallback(
+  session: Stripe.Checkout.Session,
+  formData: Record<string, unknown> | null
+) {
+  try {
+    const pool = getPool();
+    const slug = session.metadata?.regulation ?? null;
+    const email = session.customer_details?.email ?? null;
+    const amountCents = session.amount_total ?? 0;
+
+    await pool.query(
+      `INSERT INTO purchases
+         (stripe_session_id, regulation_slug, amount_paid, email_at_purchase, form_data)
+       VALUES ($1, $2, $3, $4, $5)
+       ON CONFLICT (stripe_session_id) DO NOTHING`,
+      [
+        session.id,
+        slug,
+        amountCents,
+        email,
+        formData ? JSON.stringify(formData) : null,
+      ]
+    );
+  } catch (err) {
+    // Fallback save must never block payment verification — webhook is the primary path
+    console.error("verify-payment DB fallback error:", err);
+  }
+}
+
 export async function POST(request: Request) {
-  const { sessionId } = await request.json();
+  const { sessionId, formData } = await request.json();
 
   if (!sessionId || typeof sessionId !== "string") {
     return NextResponse.json(
@@ -77,6 +107,9 @@ export async function POST(request: Request) {
       session.payment_status === "no_payment_required"
     ) {
       trackPurchase(session);
+      // Synchronous fallback: save to DB in case the webhook hasn't fired yet.
+      // ON CONFLICT DO NOTHING means this is safe to call even if webhook already ran.
+      savePurchaseFallback(session, formData ?? null);
       return NextResponse.json({
         verified: true,
         deliveryToken: generateDeliveryToken(sessionId),

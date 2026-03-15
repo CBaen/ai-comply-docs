@@ -102,15 +102,19 @@ export default function PostPaymentHandler({
     }, 50);
 
     try {
+      const parsedData: ComplianceFormData = JSON.parse(savedData);
+
       const response = await fetch("/api/verify-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sessionId }),
+        // formData is included so verify-payment can save the purchase to the DB
+        // as a synchronous fallback before the Stripe webhook fires.
+        body: JSON.stringify({ sessionId, formData: parsedData }),
       });
       const result = await response.json();
 
       if (result.verified) {
-        const data: ComplianceFormData = JSON.parse(savedData);
+        const data: ComplianceFormData = parsedData;
         sessionStorage.removeItem("complianceFormData");
         setFormData(data);
         setDeliveryToken(result.deliveryToken || "");
@@ -557,6 +561,19 @@ export default function PostPaymentHandler({
               {emailStatus.message}
             </p>
           )}
+        </div>
+
+        {/* Account CTA — optional next step, not a gate */}
+        <div className="mt-6 pt-5 border-t border-gray-100 text-center">
+          <p className="text-sm text-gray-500 mb-3">
+            Want to access your documents anytime? Create a free account.
+          </p>
+          <a
+            href="/account/login"
+            className="inline-block px-5 py-2 text-sm font-semibold text-blue-700 border border-blue-300 rounded-lg hover:bg-blue-50 transition"
+          >
+            Create Account
+          </a>
         </div>
           </div>
         </div>
