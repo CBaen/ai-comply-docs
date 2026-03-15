@@ -30,7 +30,7 @@ export interface ComplianceFormData {
     phone: string;
   };
   generatedDate: string;
-  includeTrainingKit: boolean;
+  selectedAddons: string[];
 }
 
 export interface GeneratedDoc {
