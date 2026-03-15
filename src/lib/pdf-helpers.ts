@@ -472,6 +472,9 @@ export function addFormTextField(
     const field = new (AcroFormTextField as any)();
     field.fieldName = fieldName;
     field.fontSize = BODY_SIZE;
+    // Match document font: Helvetica 10pt black
+    field.DA = `/Helv ${BODY_SIZE} Tf 0 g`;
+    field.defaultAppearance = `/Helv ${BODY_SIZE} Tf 0 g`;
     if (o.multiline) {
       const boxH = (o.lines || 4) * (LINE_HEIGHT + 2);
       field.Rect = [fieldX, y, fieldWidth, boxH];
@@ -479,13 +482,13 @@ export function addFormTextField(
       doc.addField(field);
       y += boxH + 2;
     } else {
-      field.Rect = [fieldX, y, fieldWidth, 7];
+      field.Rect = [fieldX, y, fieldWidth, 8];
       if (o.prefill) {
         field.value = o.prefill;
         if (o.readOnly) field.readOnly = true;
       }
       doc.addField(field);
-      y += 9;
+      y += 10;
     }
   } else {
     const lineCount = o.multiline ? o.lines || 4 : 1;
