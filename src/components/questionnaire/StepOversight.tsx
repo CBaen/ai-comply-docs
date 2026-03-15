@@ -1,5 +1,12 @@
 import type { StepOversightProps } from "./types";
 
+const OVERSIGHT_OPTIONS_HIRING = [
+  { value: "screening", label: "AI screens/filters, human reviews remaining candidates" },
+  { value: "primary", label: "AI recommends, human makes final decision" },
+  { value: "sole", label: "AI decides autonomously, human reviews exceptions" },
+  { value: "advisory", label: "Advisory only — AI provides information, human decides independently" },
+];
+
 export default function StepOversight({
   aiRole,
   setAiRole,
@@ -10,7 +17,10 @@ export default function StepOversight({
   reviewFrequency,
   setReviewFrequency,
   helpTexts,
+  oversightOptions,
 }: StepOversightProps) {
+  const roleOptions = oversightOptions ?? OVERSIGHT_OPTIONS_HIRING;
+
   return (
     <div className="space-y-5">
       <h3 className="text-xl font-bold font-display text-gray-900 dark:text-white">
@@ -33,18 +43,11 @@ export default function StepOversight({
           className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
         >
           <option value="">Select...</option>
-          <option value="sole">
-            AI makes final decisions autonomously
-          </option>
-          <option value="primary">
-            AI recommendation is primary factor, with human review
-          </option>
-          <option value="advisory">
-            AI provides advisory input, human makes final decision
-          </option>
-          <option value="screening">
-            AI screens/filters, human reviews remaining candidates
-          </option>
+          {roleOptions.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
         </select>
       </div>
       <div>

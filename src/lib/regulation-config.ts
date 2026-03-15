@@ -1314,6 +1314,8 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the California SB 53 (2025\u20132026 Session) AI whistleblower provisions referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     basePrice: 99,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
 
     documents: [
       "AI Safety Whistleblower Protection Policy",
@@ -1353,6 +1355,9 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     acknowledgment:
       "I have reviewed the FTC and EU AI Act guidance referenced in this product. I understand that this is a customer-facing policy template, not legal advice. I should consult qualified legal counsel to verify the policy is appropriate for my products and jurisdiction.",
     basePrice: 99,
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
+    gateText: "These templates reference FTC guidance on AI consumer practices. We recommend reviewing the guidance before purchasing.",
 
     documents: [
       "Customer AI Acceptable Use Policy",
@@ -1391,6 +1396,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed IC 24-15 (Indiana Consumer Data Protection Act, P.L. 94-2023) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
@@ -1432,6 +1438,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384) and understand that these are compliance templates, not legal advice. Montana has the lowest applicability thresholds of any state privacy law (25,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
@@ -1473,6 +1480,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
@@ -1514,6 +1522,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "I have reviewed the New Jersey Data Protection Act (S332, signed January 16, 2024) and understand that these are compliance templates, not legal advice. The NJDPA is effective January 15, 2025. This is separate from the NJ Law Against Discrimination. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 249,
     skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
 
     documents: [
       "Privacy Notice Template",
