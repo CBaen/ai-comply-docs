@@ -1,9 +1,17 @@
 import { jsPDF } from "jspdf";
 import type { ComplianceFormData } from "./pdf-types";
 
-export const MARGIN = 20;
+// Brand color: dark navy blue — matches welcome page
+export const BRAND_BLUE: [number, number, number] = [30, 58, 95];
+
+export const LEFT_MARGIN = 25;
+export const RIGHT_MARGIN = 20;
+export const TOP_MARGIN = 20;
+export const BOTTOM_MARGIN = 25;
+// Legacy alias used by generators that reference MARGIN
+export const MARGIN = LEFT_MARGIN;
 export const PAGE_WIDTH = 210;
-export const CONTENT_WIDTH = PAGE_WIDTH - MARGIN * 2;
+export const CONTENT_WIDTH = PAGE_WIDTH - LEFT_MARGIN - RIGHT_MARGIN;
 export const LINE_HEIGHT = 6;
 export const HEADER_SIZE = 16;
 export const SUBHEADER_SIZE = 12;
@@ -319,7 +327,7 @@ export function addWrappedText(
   lines.forEach((line) => {
     if (y > 270) {
       doc.addPage();
-      y = MARGIN;
+      y = TOP_MARGIN;
     }
     doc.text(line, x, y);
     y += lineHeight;
@@ -330,18 +338,33 @@ export function addWrappedText(
 export function addSectionHeader(doc: jsPDF, text: string, y: number): number {
   if (y > 255) {
     doc.addPage();
-    y = MARGIN;
+    y = TOP_MARGIN;
   }
+
+  // Measure header height for the left border
   doc.setFontSize(SUBHEADER_SIZE);
   doc.setFont("helvetica", "bold");
-  doc.text(text, MARGIN, y);
-  y += 2;
-  doc.setDrawColor(50, 100, 200);
-  doc.setLineWidth(0.5);
-  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
-  y += LINE_HEIGHT;
+  const headerLines: string[] = doc.splitTextToSize(text, CONTENT_WIDTH - 6);
+  const headerBlockHeight = headerLines.length * LINE_HEIGHT + 2;
+
+  // Draw 3pt dark blue left border spanning the header block height
+  doc.setDrawColor(...BRAND_BLUE);
+  doc.setFillColor(...BRAND_BLUE);
+  doc.setLineWidth(0);
+  doc.rect(LEFT_MARGIN, y - 4, 3, headerBlockHeight + 2, "F");
+
+  // Dark blue text, indented past the border
+  doc.setTextColor(...BRAND_BLUE);
+  doc.setFontSize(SUBHEADER_SIZE);
+  doc.setFont("helvetica", "bold");
+  headerLines.forEach((line, idx) => {
+    doc.text(line, LEFT_MARGIN + 6, y + idx * LINE_HEIGHT);
+  });
+
+  y += headerBlockHeight + 2;
   doc.setFont("helvetica", "normal");
   doc.setFontSize(BODY_SIZE);
+  doc.setTextColor(0);
   return y;
 }
 
@@ -354,40 +377,57 @@ export function addDocHeader(
     REGULATION_HEADER[data.regulation] ||
     REGULATION_HEADER["illinois-hb3773"];
 
-  let y = MARGIN;
-  doc.setFontSize(HEADER_SIZE);
-  doc.setFont("helvetica", "bold");
-  const titleLines: string[] = doc.splitTextToSize(title, CONTENT_WIDTH);
-  titleLines.forEach((line) => {
-    doc.text(line, MARGIN, y);
-    y += 7;
-  });
-  y += 1;
+  // --- Full-width dark blue band ---
+  const bandHeight = 38;
+  doc.setFillColor(...BRAND_BLUE);
+  doc.rect(0, 0, PAGE_WIDTH, bandHeight, "F");
 
+  // White title text inside the band
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(14);
+  doc.setFont("helvetica", "bold");
+  const titleLines: string[] = doc.splitTextToSize(title, CONTENT_WIDTH - 4);
+  let bandY = 12;
+  titleLines.forEach((line) => {
+    doc.text(line, LEFT_MARGIN, bandY);
+    bandY += 7;
+  });
+
+  // Company name inside band
+  doc.setFontSize(9);
+  doc.setFont("helvetica", "normal");
+  doc.text(data.company.name, LEFT_MARGIN, bandY);
+  bandY += 5;
+
+  // Date inside band
+  doc.setFontSize(8);
+  doc.text(data.generatedDate, LEFT_MARGIN, bandY);
+
+  // --- Statute citation below the band (readable, not inside it) ---
+  doc.setTextColor(80, 80, 80);
   doc.setFontSize(SMALL_SIZE);
   doc.setFont("helvetica", "normal");
-  doc.setTextColor(100);
-  doc.text("Prepared for: " + data.company.name, MARGIN, y);
-  y += LINE_HEIGHT - 1;
-  doc.text("Date: " + data.generatedDate, MARGIN, y);
-  y += LINE_HEIGHT - 1;
-  y = addWrappedText(doc, header.statute, MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
-  y = addWrappedText(doc, header.rules, MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
+  let y = bandHeight + 6;
+
+  y = addWrappedText(doc, header.statute, LEFT_MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
+  y = addWrappedText(doc, header.rules, LEFT_MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
   y = addWrappedText(
     doc,
     "Template generated: " +
       data.generatedDate +
       " \u2014 Verify current regulatory status before use",
-    MARGIN,
+    LEFT_MARGIN,
     y,
     CONTENT_WIDTH,
     LINE_HEIGHT - 1
   );
 
-  doc.setDrawColor(0);
+  // Thin separator line
+  doc.setDrawColor(200, 200, 200);
   doc.setLineWidth(0.3);
-  doc.line(MARGIN, y, MARGIN + CONTENT_WIDTH, y);
+  doc.line(LEFT_MARGIN, y, LEFT_MARGIN + CONTENT_WIDTH, y);
   y += LINE_HEIGHT + 2;
+
   doc.setTextColor(0);
   return y;
 }
@@ -400,39 +440,50 @@ export function addDisclaimer(doc: jsPDF): void {
     "Based on regulations as of March 2026. You are solely responsible for verifying currency, accuracy, and applicability. Consult a licensed attorney.";
   for (let i = 1; i <= pageCount; i++) {
     doc.setPage(i);
+
+    // Thin horizontal rule above footer
+    doc.setDrawColor(200, 200, 200);
+    doc.setLineWidth(0.3);
+    doc.line(LEFT_MARGIN, 282, LEFT_MARGIN + CONTENT_WIDTH, 282);
+
     doc.setFontSize(6.5);
     doc.setTextColor(150);
     const footerLines: string[] = doc.splitTextToSize(disclaimerText, CONTENT_WIDTH - 25);
     footerLines.forEach((line, idx) => {
-      doc.text(line, MARGIN, 286 + idx * 3);
+      doc.text(line, LEFT_MARGIN, 286 + idx * 3);
     });
-    doc.text(`Page ${i} of ${pageCount}`, PAGE_WIDTH - MARGIN - 18, 289);
+    doc.text(`Page ${i} of ${pageCount}`, PAGE_WIDTH - RIGHT_MARGIN - 18, 289);
     doc.setTextColor(0);
   }
 }
 
 export function addTopDisclaimer(doc: jsPDF, y: number): number {
+  const disclaimerBody =
+    "This document is a TEMPLATE provided for informational purposes only. It does NOT constitute legal advice, legal representation, or an attorney-client relationship. Laws and regulations change frequently. You must consult a licensed attorney to verify this template is current, complete, and applicable to your specific situation before relying on it.";
+
+  // Calculate dynamic height based on wrapped line count
+  doc.setFontSize(SMALL_SIZE);
+  const bodyLines: string[] = doc.splitTextToSize(disclaimerBody, CONTENT_WIDTH - 8);
+  // 6 = top padding before title, 5 = title line height, 3.5 = per body line, 6 = bottom padding
+  const boxHeight = 6 + 5 + bodyLines.length * 3.5 + 6;
+
   doc.setDrawColor(200, 50, 50);
   doc.setFillColor(255, 245, 245);
   doc.setLineWidth(0.8);
-  doc.roundedRect(MARGIN, y, CONTENT_WIDTH, 24, 2, 2, "FD");
+  doc.roundedRect(LEFT_MARGIN, y, CONTENT_WIDTH, boxHeight, 2, 2, "FD");
   doc.setFontSize(9);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(180, 30, 30);
-  doc.text("IMPORTANT NOTICE", MARGIN + 4, y + 6);
+  doc.text("IMPORTANT NOTICE", LEFT_MARGIN + 4, y + 6);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(SMALL_SIZE);
   doc.setTextColor(100, 30, 30);
-  const lines: string[] = doc.splitTextToSize(
-    "This document is a TEMPLATE provided for informational purposes only. It does NOT constitute legal advice, legal representation, or an attorney-client relationship. Laws and regulations change frequently. You must consult a licensed attorney to verify this template is current, complete, and applicable to your specific situation before relying on it.",
-    CONTENT_WIDTH - 8
-  );
-  lines.forEach((line, i) => {
-    doc.text(line, MARGIN + 4, y + 11 + i * 3.5);
+  bodyLines.forEach((line, i) => {
+    doc.text(line, LEFT_MARGIN + 4, y + 11 + i * 3.5);
   });
   doc.setTextColor(0);
   doc.setFont("helvetica", "normal");
-  return y + 28;
+  return y + boxHeight + 4;
 }
 
 interface TextFieldOpts {
@@ -452,20 +503,33 @@ export function addFormTextField(
   opts?: TextFieldOpts
 ): number {
   const o = opts || {};
-  const fieldX = o.x || MARGIN;
+  const fieldX = o.x || LEFT_MARGIN;
   const fieldWidth = o.width || CONTENT_WIDTH;
 
   if (y > 255) {
     doc.addPage();
-    y = MARGIN;
+    y = TOP_MARGIN;
   }
-  doc.setFontSize(BODY_SIZE);
-  doc.setFont("helvetica", "normal");
 
   if (label) {
+    // Small grey label styling — visually lighter than body text
+    doc.setFontSize(9);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(120, 120, 120);
     doc.text(label, fieldX, y);
-    y += LINE_HEIGHT;
+    y += LINE_HEIGHT - 1;
+    doc.setTextColor(0);
   }
+
+  // Light grey background rectangle behind the field area
+  const fieldHeight = o.multiline ? (o.lines || 4) * (LINE_HEIGHT + 2) : 8;
+  doc.setFillColor(245, 245, 245);
+  doc.setDrawColor(210, 210, 210);
+  doc.setLineWidth(0.3);
+  doc.roundedRect(fieldX, y - 1, fieldWidth, fieldHeight + 2, 1, 1, "FD");
+
+  doc.setFontSize(BODY_SIZE);
+  doc.setFont("helvetica", "normal");
 
   if (AcroFormTextField) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -476,7 +540,7 @@ export function addFormTextField(
     field.DA = `/Helv ${BODY_SIZE} Tf 0 g`;
     field.defaultAppearance = `/Helv ${BODY_SIZE} Tf 0 g`;
     if (o.multiline) {
-      const boxH = (o.lines || 4) * (LINE_HEIGHT + 2);
+      const boxH = fieldHeight;
       field.Rect = [fieldX, y, fieldWidth, boxH];
       field.multiline = true;
       doc.addField(field);
@@ -494,7 +558,7 @@ export function addFormTextField(
     const lineCount = o.multiline ? o.lines || 4 : 1;
     for (let i = 0; i < lineCount; i++) {
       doc.setDrawColor(200);
-      doc.line(fieldX, y, fieldX + fieldWidth, y);
+      doc.line(fieldX + 2, y + 3 + i * (LINE_HEIGHT + 2), fieldX + fieldWidth - 2, y + 3 + i * (LINE_HEIGHT + 2));
       y += LINE_HEIGHT + 2;
     }
   }
@@ -513,18 +577,70 @@ export function addSignatureBlock(
   y = addWrappedText(
     doc,
     "By typing my name below, I acknowledge this constitutes my electronic signature under the ESIGN Act (15 U.S.C. \u00A7 7001) and applicable state law.",
-    MARGIN,
+    LEFT_MARGIN,
     y,
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
-  y += 2;
+  y += 4;
 
-  y = addFormTextField(doc, `${prefix}_sig_name`, "Signature (type full legal name):", y);
-  y = addFormTextField(doc, `${prefix}_sig_title`, "Title/Role:", y);
-  y = addFormTextField(doc, `${prefix}_sig_date`, "Date:", y);
-  y = addFormTextField(doc, `${prefix}_sig_org`, "Organization:", y);
+  // --- Bordered box wrapping the entire signature block ---
+  const boxStartY = y;
+  // We need to draw the box after laying out the fields; draw at the end.
+  // Render fields first, collect end Y, then draw the box behind.
+  // jsPDF draws in painter's order — we draw background first by reserving space.
+  // Strategy: estimate block height, draw box, then render fields on top.
+  // Estimation: 4 fields × ~16mm each + 10mm for X marker + padding
+  const estimatedBlockHeight = 4 * 16 + 14 + 8;
 
+  // Draw the containing box (light background + thin grey border)
+  doc.setFillColor(250, 250, 252);
+  doc.setDrawColor(200, 200, 200);
+  doc.setLineWidth(0.5);
+  doc.roundedRect(LEFT_MARGIN, boxStartY - 2, CONTENT_WIDTH, estimatedBlockHeight, 2, 2, "FD");
+
+  // "X" signature marker line
+  const sigLineY = boxStartY + 6;
+  doc.setFontSize(12);
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor(...BRAND_BLUE);
+  doc.text("X", LEFT_MARGIN + 4, sigLineY);
+  doc.setDrawColor(...BRAND_BLUE);
+  doc.setLineWidth(0.5);
+  doc.line(LEFT_MARGIN + 10, sigLineY, LEFT_MARGIN + CONTENT_WIDTH - 4, sigLineY);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(0);
+  y = sigLineY + 6;
+
+  y = addFormTextField(doc, `${prefix}_sig_name`, "Signature (type full legal name):", y, { x: LEFT_MARGIN + 4, width: CONTENT_WIDTH - 8 });
+  y = addFormTextField(doc, `${prefix}_sig_title`, "Title/Role:", y, { x: LEFT_MARGIN + 4, width: CONTENT_WIDTH - 8 });
+
+  // Date field with format hint
+  if (y > 255) {
+    doc.addPage();
+    y = TOP_MARGIN;
+  }
+  doc.setFontSize(9);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(120, 120, 120);
+  doc.text("Date:", LEFT_MARGIN + 4, y);
+  y += LINE_HEIGHT - 1;
+  doc.setTextColor(0);
+  // Grey background for date field
+  doc.setFillColor(245, 245, 245);
+  doc.setDrawColor(210, 210, 210);
+  doc.setLineWidth(0.3);
+  doc.roundedRect(LEFT_MARGIN + 4, y - 1, CONTENT_WIDTH - 8, 10, 1, 1, "FD");
+  // Date format hint text
+  doc.setFontSize(SMALL_SIZE);
+  doc.setTextColor(170, 170, 170);
+  doc.text("Date:  ____/____/________", LEFT_MARGIN + 6, y + 5);
+  doc.setTextColor(0);
+  y += 12;
+
+  y = addFormTextField(doc, `${prefix}_sig_org`, "Organization:", y, { x: LEFT_MARGIN + 4, width: CONTENT_WIDTH - 8 });
+
+  y += 4;
   return y;
 }
 
@@ -541,11 +657,11 @@ export function addFormCheckbox(
   opts?: CheckboxOpts
 ): number {
   const o = opts || {};
-  const fieldX = o.x || MARGIN;
+  const fieldX = o.x || LEFT_MARGIN;
 
   if (y > 270) {
     doc.addPage();
-    y = MARGIN;
+    y = TOP_MARGIN;
   }
   doc.setFontSize(BODY_SIZE);
   doc.setFont("helvetica", "normal");
@@ -559,7 +675,7 @@ export function addFormCheckbox(
     doc.addField(cb);
     const labelLines: string[] = doc.splitTextToSize(
       label,
-      CONTENT_WIDTH - (fieldX - MARGIN) - 10
+      CONTENT_WIDTH - (fieldX - LEFT_MARGIN) - 10
     );
     labelLines.forEach((line, idx) => {
       doc.text(line, fieldX + 10, y + idx * LINE_HEIGHT);
@@ -571,7 +687,7 @@ export function addFormCheckbox(
       "  [ ] " + label,
       fieldX,
       y,
-      CONTENT_WIDTH - (fieldX - MARGIN),
+      CONTENT_WIDTH - (fieldX - LEFT_MARGIN),
       LINE_HEIGHT
     );
     y += 2;
