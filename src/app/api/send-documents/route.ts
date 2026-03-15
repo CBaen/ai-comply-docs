@@ -148,7 +148,7 @@ const REGULATION_EMAIL: Record<
       "<strong>File everything.</strong> State AGs may request assessment documentation. These documents demonstrate compliance.",
     ],
     reminder:
-      "State consumer privacy laws are enacted and enforced independently. Key active laws: Texas TDPSA (eff. Jul 1, 2024), Delaware PDPA (eff. Jan 1, 2025), Minnesota MCDPA (eff. Jul 31, 2025). Penalties range from $7,500 (TX) to $25,000 per willful violation (MN). Verify current status of each law with qualified legal counsel.",
+      "State consumer privacy laws are enacted and enforced independently. Key active laws: Texas TDPSA (eff. Jul 1, 2024), Delaware PDPA (eff. Jan 1, 2025), Minnesota MCDPA (eff. Jul 31, 2025). Penalties range up to $7,500 per violation (TX, MN). Verify current status of each law with qualified legal counsel.",
   },
   "multi-state-employer-ai-disclosure": {
     title: "Your Multi-State Employer AI Disclosure Kit",
@@ -501,7 +501,7 @@ const REGULATION_EMAIL: Record<
       "<strong>Use the Timeline Tracker</strong> for every active request. Missing the 45-day deadline is itself a violation under every applicable state law.",
     ],
     reminder:
-      "California CCPA, Texas TDPSA, Virginia CDPA, Minnesota MCDPA, Delaware PDPA, and other state laws give consumers the right to access, correct, delete, and opt out of data processing. Most laws require a response within 45 days of a verified request, with a one-time 45-day extension if notice is provided. Penalties for non-response can reach $7,500\u2013$25,000 per violation.",
+      "California CCPA, Texas TDPSA, Virginia CDPA, Minnesota MCDPA, Delaware PDPA, and other state laws give consumers the right to access, correct, delete, and opt out of data processing. Most laws require a response within 45 days of a verified request, with a one-time 45-day extension if notice is provided. Penalties for non-response can reach $7,500 per violation.",
   },
   "il-notice-response-kit": {
     title: "Your Illinois AI Notice & Response Kit",

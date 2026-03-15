@@ -42,7 +42,7 @@ export const regulations: Regulation[] = [
     documentCount: 7,
     description: "If you hire in New York City and use any automated tool to screen or evaluate candidates, you need an annual bias audit and public summary of the results. This package covers the full Local Law 144 requirement.",
     penaltySummary: "NYC Department of Consumer and Worker Protection enforcement. Civil penalties of $500 (first), $500-$1,500 per subsequent violation per day. Proactive DCWP investigations increasing in 2026.",
-    maxPenalty: "$1,500 per violation per day",
+    maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary: "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion.",
     keywords: ["nyc", "local law 144", "aedt", "bias audit", "automated hiring", "employment decision tool", "new york city"],
     documents: [
@@ -124,7 +124,7 @@ export const regulations: Regulation[] = [
     stripePriceId: "price_1TArY4GidFVHIL99gaX2oh3e",
     documentCount: 5,
     description: "If you operate across multiple states and use customer data for profiling, targeting, or automated decisions, you probably need assessments for more than one state. This bundle covers 15+ states with one assessment framework, so you're not building separate documents for each jurisdiction.",
-    penaltySummary: "Penalties vary by state: TX $7,500/violation, DE $10,000/violation, MN $25,000/willful violation, CO $20,000/violation. Each state has independent enforcement authority. This bundle addresses the common assessment requirement across all covered states.",
+    penaltySummary: "Penalties vary by state: TX $7,500/violation, DE $10,000/violation, MN $7,500/violation, CO $20,000/violation. Each state has independent enforcement authority. This bundle addresses the common assessment requirement across all covered states.",
     maxPenalty: "Varies by state \u2014 see State Comparison Matrix",
     appliesToSummary: "Any organization subject to two or more state consumer privacy laws requiring documented data protection assessments for profiling activities.",
     keywords: ["multi-state", "profiling assessment", "data protection assessment", "virginia", "connecticut", "colorado", "texas", "delaware", "minnesota", "bundle"],
@@ -267,8 +267,8 @@ export const regulations: Regulation[] = [
     stripePriceId: "price_1TAqxYGidFVHIL99ba9i5TqX",
     documentCount: 6,
     description: "Minnesota's privacy law includes specific AI provisions — including algorithmic governance documentation requirements — that go beyond most other state privacy laws. If you have Minnesota customers and use profiling or automated decisions, this package covers the full requirement.",
-    penaltySummary: "Minnesota Attorney General exclusive enforcement (\u00A7 325M.20). No private right of action (\u00A7 325M.20(d)). AG may bring civil action under Minn. Stat. \u00A7 8.31 and recover attorney fees. Civil penalties up to $25,000 per willful violation (\u00A7 8.31). 30-day AG cure period for warnings expired January 31, 2026 (\u00A7 325M.20(a)).",
-    maxPenalty: "Up to $25,000 per willful violation (\u00A7 8.31)",
+    penaltySummary: "Minnesota Attorney General exclusive enforcement (\u00A7 325M.20). No private right of action (\u00A7 325M.20(d)). AG may bring civil action and recover attorney fees. Civil penalties up to $7,500 per violation (\u00A7 325M.20(c)). 30-day AG cure period for warnings expired January 31, 2026 (\u00A7 325M.20(a)).",
+    maxPenalty: "Up to $7,500 per violation (\u00A7325M.20(c))",
     appliesToSummary: "Entities doing business in MN or targeting MN residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 25%+ revenue from data sales and process data of 25,000+ consumers.",
     keywords: ["minnesota", "mcdpa", "consumer privacy", "algorithmic profiling", "automated decisions", "325M"],
     documents: [
@@ -1342,7 +1342,7 @@ export const regulations: Regulation[] = [
     documentCount: 3,
     description: "NYC Local Law 144 requires an annual independent bias audit and public posting of results. This kit gives you the auditor RFP template, results publication template formatted for your website, and an annual renewal calendar so you never miss the one-year deadline.",
     penaltySummary: "NYC Department of Consumer and Worker Protection enforcement. Civil penalties of $500 (first), $500-$1,500 per subsequent violation per day. Proactive DCWP investigations increasing in 2026.",
-    maxPenalty: "$1,500 per violation per day",
+    maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary: "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion.",
     keywords: ["nyc", "local law 144", "aedt", "bias audit", "audit management", "publication", "add-on"],
     documents: [
@@ -1368,7 +1368,7 @@ export const regulations: Regulation[] = [
     documentCount: 3,
     description: "NYC requires 10 business days advance notice before using an AEDT on candidates, plus information about an alternative selection process, and a 30-day data disclosure response. Note: the law requires you to tell candidates they can request an alternative process, but does not require you to actually provide one. This kit covers all three workflows.",
     penaltySummary: "NYC Department of Consumer and Worker Protection enforcement. Civil penalties of $500 (first), $500-$1,500 per subsequent violation per day. Proactive DCWP investigations increasing in 2026.",
-    maxPenalty: "$1,500 per violation per day",
+    maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary: "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion.",
     keywords: ["nyc", "local law 144", "aedt", "candidate notice", "alternative process", "10-day notice", "add-on"],
     documents: [

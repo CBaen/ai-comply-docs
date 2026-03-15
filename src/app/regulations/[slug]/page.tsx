@@ -367,9 +367,15 @@ export default async function RegulationPage({
                                 <p className="font-semibold text-gray-900">
                                   {addon.shortName}
                                 </p>
-                                <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-slate-100 text-slate-600 shrink-0">
-                                  Coming Soon
-                                </span>
+                                {addon.ready && addon.stripePriceId ? (
+                                  <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-green-100 text-green-700 shrink-0">
+                                    Available
+                                  </span>
+                                ) : (
+                                  <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-slate-100 text-slate-600 shrink-0">
+                                    Coming Soon
+                                  </span>
+                                )}
                               </div>
                               <p className="text-sm text-gray-600 leading-snug line-clamp-2 mb-2">
                                 {addon.description}
@@ -385,15 +391,24 @@ export default async function RegulationPage({
                             </div>
                           </div>
                           <div className="mt-3 pt-3 border-t border-blue-100">
-                            <p className="text-xs text-gray-500">
-                              Want to add this to your order?{" "}
+                            {addon.ready && addon.stripePriceId ? (
                               <a
-                                href="mailto:info@aicompliancedocuments.com"
-                                className="text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
+                                href={"/regulations/" + addon.slug}
+                                className="text-xs text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
                               >
-                                Contact us at info@aicompliancedocuments.com
+                                View &amp; Purchase &mdash; ${addon.price}
                               </a>
-                            </p>
+                            ) : (
+                              <p className="text-xs text-gray-500">
+                                Want to add this to your order?{" "}
+                                <a
+                                  href="mailto:info@aicompliancedocuments.com"
+                                  className="text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
+                                >
+                                  Contact us at info@aicompliancedocuments.com
+                                </a>
+                              </p>
+                            )}
                           </div>
                         </div>
                       ))}
