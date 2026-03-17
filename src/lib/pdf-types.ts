@@ -48,8 +48,6 @@ export interface AddonConfig {
 }
 
 export interface RegulationConfig {
-  /** Optional: human-readable link text for the law citation. Migrated to Regulation.lawLinkText on the regulations.ts side. */
-  lawLinkText?: string;
   acknowledgment: string;
   addons?: AddonConfig[];
   decisions: [string, string][];
