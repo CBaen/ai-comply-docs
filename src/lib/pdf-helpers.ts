@@ -406,12 +406,14 @@ export function addDocHeader(
 
   // --- Statute citation below the band (readable, not inside it) ---
   doc.setTextColor(80, 80, 80);
-  doc.setFontSize(SMALL_SIZE);
+  doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
-  let y = bandHeight + 6;
+  let y = bandHeight + 7;
 
-  y = addWrappedText(doc, header.statute, LEFT_MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
-  y = addWrappedText(doc, header.rules, LEFT_MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT - 1);
+  y = addWrappedText(doc, header.statute, LEFT_MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+  y += 1;
+  y = addWrappedText(doc, header.rules, LEFT_MARGIN, y, CONTENT_WIDTH, LINE_HEIGHT);
+  y += 1;
   y = addWrappedText(
     doc,
     "Template generated: " +
@@ -420,7 +422,7 @@ export function addDocHeader(
     LEFT_MARGIN,
     y,
     CONTENT_WIDTH,
-    LINE_HEIGHT - 1
+    LINE_HEIGHT
   );
 
   // Thin separator line
