@@ -1,0 +1,4 @@
+- **2026-03-16** | Faceless corporation identity — removed founder name, photo, and personal story from site | Cameron doesn't want personal exposure. Better to be a professional entity than a person with unverifiable credentials.
+- **2026-03-16** | No AI marketing angle — will not disclose AI involvement in document creation | Legal/AI trust landscape is toxic. Research showed it could work with careful framing but Cameron made a clear decision against it.
+- **2026-03-16** | Renamed /regulations to /products | Product pages should be at /products — more intuitive for buyers. Old URLs 301-redirect.
+- **2026-03-16** | Sample document previews generated from real PDFs, not mockups | Buyers need to see the actual product. Generated with jsPDF + pdfjs-dist + sharp pipeline.
