@@ -38,6 +38,7 @@ export default function Questionnaire({
   price,
 }: QuestionnaireProps) {
   const config = REGULATION_CONFIG[regulationSlug];
+  const reg = getRegulation(regulationSlug);
   const skippedSteps = (config?.skippedSteps || []).filter((s: number) => s !== 6);
   const visibleSteps = [1, 2, 3, 4, 5, 6].filter(s => !skippedSteps.includes(s));
   const visibleStepCount = visibleSteps.length;
@@ -296,13 +297,14 @@ export default function Questionnaire({
 
   const visibleStepIndex = visibleSteps.indexOf(step) + 1;
   const progressPercent = Math.round((visibleStepIndex / visibleStepCount) * 100);
+  const regPrice = reg?.price ?? price;
   const orderTotal =
     config && selectedAddons.length > 0 && config.addons
-      ? config.basePrice +
+      ? regPrice +
         config.addons
           .filter((a) => selectedAddons.includes(a.id))
           .reduce((sum, a) => sum + a.price, 0)
-      : price;
+      : regPrice;
 
   if (!config) return null;
 
@@ -312,10 +314,10 @@ export default function Questionnaire({
         {/* Product summary bar */}
         <div className="bg-blue-50 dark:bg-blue-900/30 border-b border-blue-100 dark:border-blue-800 px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-1">
           <span className="text-sm font-medium text-blue-900 dark:text-blue-200">
-            {regulationName} &mdash; {config.documents.length} documents
+            {regulationName} &mdash; {reg?.documents.length ?? 0} documents
           </span>
           <span className="text-sm font-bold text-blue-900 dark:text-blue-200">
-            ${price}
+            ${regPrice}
           </span>
         </div>
 
@@ -460,12 +462,12 @@ export default function Questionnaire({
               checkoutLoading={checkoutLoading}
               orderTotal={orderTotal}
               regulationName={regulationName}
-              statute={config.statute}
-              lawUrl={config.lawUrl}
+              statute={reg?.citation ?? ""}
+              lawUrl={reg?.citationUrl ?? ""}
               lawLinkText={config.lawLinkText}
               acknowledgment={config.acknowledgment}
-              basePrice={config.basePrice}
-              documents={config.documents}
+              basePrice={regPrice}
+              documents={reg?.documents ?? []}
               gateText={config.gateText}
               handleCheckout={handleCheckout}
             />

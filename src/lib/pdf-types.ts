@@ -48,14 +48,10 @@ export interface AddonConfig {
 }
 
 export interface RegulationConfig {
-  name: string;
-  statute: string;
-  lawUrl: string;
-  lawLinkText: string;
+  /** Optional: human-readable link text for the law citation. Migrated to Regulation.lawLinkText on the regulations.ts side. */
+  lawLinkText?: string;
   acknowledgment: string;
-  basePrice: number;
   addons?: AddonConfig[];
-  documents: string[];
   decisions: [string, string][];
   helpTexts: Record<string, string>;
   skippedSteps?: number[];

@@ -5,6 +5,8 @@ export interface Regulation {
   shortName: string;
   citation: string;
   citationUrl: string;
+  /** Human-readable link text for the law citation, shown in the law gate. */
+  lawLinkText?: string;
   status: "in-effect" | "effective-soon" | "proposed";
   effectiveDate: string;
   tier: "state" | "federal" | "universal" | "industry" | "international";
