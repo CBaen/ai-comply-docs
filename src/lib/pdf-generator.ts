@@ -23,7 +23,7 @@ export async function generateDocuments(
   return [welcomeDoc, ...docs];
 }
 
-async function generateDocumentsInner(
+export async function generateDocumentsInner(
   data: ComplianceFormData
 ): Promise<GeneratedDoc[]> {
   const companySlug = toCompanySlug(data.company.name);
@@ -1059,47 +1059,5 @@ async function generateDocumentsInner(
     ];
   }
 
-  // Default: Illinois
-  const il = await import("./pdf-illinois");
-  const docs: GeneratedDoc[] = [
-    {
-      doc: il.generateNotificationLetter(data),
-      name: `${companySlug}_AI_Notification_Letter.pdf`,
-    },
-    {
-      doc: il.generateSystemInventory(data),
-      name: `${companySlug}_AI_System_Inventory.pdf`,
-    },
-    {
-      doc: il.generateImpactAssessment(data),
-      name: `${companySlug}_Impact_Assessment.pdf`,
-    },
-    {
-      doc: il.generateOversightProtocol(data),
-      name: `${companySlug}_Oversight_Protocol.pdf`,
-    },
-    {
-      doc: il.generateComplianceChecklist(data),
-      name: `${companySlug}_Compliance_Checklist.pdf`,
-    },
-    {
-      doc: il.generateAccommodationForm(data),
-      name: `${companySlug}_Accommodation_Request_Form.pdf`,
-    },
-  ];
-
-  if (data.selectedAddons?.includes("manager-training-kit")) {
-    docs.push(
-      {
-        doc: il.generateManagerTraining(data),
-        name: `${companySlug}_Manager_Training_Slides.pdf`,
-      },
-      {
-        doc: il.generateEmployeeFAQ(data),
-        name: `${companySlug}_Employee_FAQ.pdf`,
-      }
-    );
-  }
-
-  return docs;
+  throw new Error(`No PDF generator found for regulation "${data.regulation}". Add a case to generateDocumentsInner.`);
 }
