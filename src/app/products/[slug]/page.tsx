@@ -205,6 +205,21 @@ export default async function RegulationPage({
 
   const blogGuide = BLOG_GUIDES[reg.slug] ?? null;
 
+  const addonSlugs = RELATED_ADDONS[reg.slug];
+  const relatedAddons = addonSlugs
+    ? (addonSlugs.map((s) => getRegulation(s)).filter(Boolean) as NonNullable<ReturnType<typeof getRegulation>>[])
+    : [];
+
+  const relatedProducts = regulations
+    .filter(
+      (r) =>
+        r.slug !== reg.slug &&
+        (r.category === reg.category ||
+          r.tier === reg.tier ||
+          (reg.tier === "state" && r.tier === "universal"))
+    )
+    .slice(0, 3);
+
   return (
     <>
       <Nav />
@@ -367,7 +382,7 @@ export default async function RegulationPage({
               </section>
 
               {/* Static Document Preview (pre-generated PNG, if available) */}
-              {existsSync(join(process.cwd(), "public", "previews", `${reg.slug}.png`)) && (
+              {SLUGS_WITH_PREVIEWS.has(reg.slug) && (
                 <section>
                   <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
                     See Inside Your Documents
@@ -437,82 +452,74 @@ export default async function RegulationPage({
               </section>
 
               {/* Complete Your Compliance — law-specific add-ons */}
-              {(() => {
-                const addonSlugs = RELATED_ADDONS[reg.slug];
-                if (!addonSlugs || addonSlugs.length === 0) return null;
-                const addons = addonSlugs
-                  .map((s) => getRegulation(s))
-                  .filter(Boolean) as NonNullable<ReturnType<typeof getRegulation>>[];
-                if (addons.length === 0) return null;
-                return (
-                  <section>
-                    <h2 className="text-2xl font-bold font-display text-gray-900 mb-1">
-                      Complete Your Compliance
-                    </h2>
-                    <p className="text-gray-500 text-sm mb-5">
-                      Law-specific add-ons for this package
-                    </p>
-                    <div className="space-y-3">
-                      {addons.map((addon) => (
-                        <div
-                          key={addon.slug}
-                          className="bg-blue-50 border border-blue-100 rounded-lg p-5"
-                        >
-                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
-                            <div className="flex-1 min-w-0">
-                              <div className="flex flex-wrap items-center gap-2 mb-1">
-                                <p className="font-semibold text-gray-900">
-                                  {addon.shortName}
-                                </p>
-                                {addon.ready && addon.stripePriceId ? (
-                                  <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-green-100 text-green-700 shrink-0">
-                                    Available
-                                  </span>
-                                ) : (
-                                  <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-slate-100 text-slate-600 shrink-0">
-                                    Coming Soon
-                                  </span>
-                                )}
-                              </div>
-                              <p className="text-sm text-gray-600 leading-snug line-clamp-2 mb-2">
-                                {addon.description}
+              {relatedAddons.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold font-display text-gray-900 mb-1">
+                    Complete Your Compliance
+                  </h2>
+                  <p className="text-gray-500 text-sm mb-5">
+                    Law-specific add-ons for this package
+                  </p>
+                  <div className="space-y-3">
+                    {relatedAddons.map((addon) => (
+                      <div
+                        key={addon.slug}
+                        className="bg-blue-50 border border-blue-100 rounded-lg p-5"
+                      >
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex flex-wrap items-center gap-2 mb-1">
+                              <p className="font-semibold text-gray-900">
+                                {addon.shortName}
                               </p>
-                              <p className="text-xs text-gray-500">
-                                {addon.documentCount} documents
-                              </p>
+                              {addon.ready && addon.stripePriceId ? (
+                                <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-green-100 text-green-700 shrink-0">
+                                  Available
+                                </span>
+                              ) : (
+                                <span className="inline-flex items-center text-xs px-2 py-0.5 rounded font-semibold bg-slate-100 text-slate-600 shrink-0">
+                                  Coming Soon
+                                </span>
+                              )}
                             </div>
-                            <div className="sm:text-right shrink-0">
-                              <p className="text-xl font-extrabold text-gray-900 font-display">
-                                ${addon.price}
-                              </p>
-                            </div>
+                            <p className="text-sm text-gray-600 leading-snug line-clamp-2 mb-2">
+                              {addon.description}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              {addon.documentCount} documents
+                            </p>
                           </div>
-                          <div className="mt-3 pt-3 border-t border-blue-100">
-                            {addon.ready && addon.stripePriceId ? (
-                              <a
-                                href={"/products/" + addon.slug}
-                                className="text-xs text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
-                              >
-                                View &amp; Purchase &mdash; ${addon.price}
-                              </a>
-                            ) : (
-                              <p className="text-xs text-gray-500">
-                                Want to add this to your order?{" "}
-                                <a
-                                  href="mailto:info@aicompliancedocuments.com"
-                                  className="text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
-                                >
-                                  Contact us at info@aicompliancedocuments.com
-                                </a>
-                              </p>
-                            )}
+                          <div className="sm:text-right shrink-0">
+                            <p className="text-xl font-extrabold text-gray-900 font-display">
+                              ${addon.price}
+                            </p>
                           </div>
                         </div>
-                      ))}
-                    </div>
-                  </section>
-                );
-              })()}
+                        <div className="mt-3 pt-3 border-t border-blue-100">
+                          {addon.ready && addon.stripePriceId ? (
+                            <a
+                              href={"/products/" + addon.slug}
+                              className="text-xs text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
+                            >
+                              View &amp; Purchase &mdash; ${addon.price}
+                            </a>
+                          ) : (
+                            <p className="text-xs text-gray-500">
+                              Want to add this to your order?{" "}
+                              <a
+                                href="mailto:info@aicompliancedocuments.com"
+                                className="text-blue-700 hover:text-blue-900 font-medium underline underline-offset-1"
+                              >
+                                Contact us at info@aicompliancedocuments.com
+                              </a>
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {/* Citation */}
               <section>

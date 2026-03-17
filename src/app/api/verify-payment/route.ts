@@ -3,12 +3,7 @@ import Stripe from "stripe";
 import { getRegulation } from "@/data/regulations";
 import { generateDeliveryToken } from "@/lib/delivery-token";
 import { getPool } from "@/lib/db";
-
-function getStripe() {
-  return new Stripe(process.env.STRIPE_SECRET_KEY!, {
-    apiVersion: "2026-02-25.clover",
-  });
-}
+import { getStripe } from "@/lib/stripe";
 
 async function trackPurchase(session: Stripe.Checkout.Session) {
   const measurementId = process.env.GA_MEASUREMENT_ID;

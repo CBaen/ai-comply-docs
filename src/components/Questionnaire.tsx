@@ -21,6 +21,15 @@ function emptyAISystem(): AISystem {
   return { name: "", vendor: "", description: "", decisions: [] };
 }
 
+function loadSavedForm(key: string): Record<string, unknown> | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return JSON.parse(sessionStorage.getItem(key) || "null");
+  } catch {
+    return null;
+  }
+}
+
 export default function Questionnaire({
   regulationSlug,
   regulationName,
@@ -31,10 +40,7 @@ export default function Questionnaire({
   const visibleSteps = [1, 2, 3, 4, 5, 6].filter(s => !skippedSteps.includes(s));
   const visibleStepCount = visibleSteps.length;
 
-  // Restore saved form state from sessionStorage if available (survives browser Back)
-  const saved = typeof window !== "undefined" ? (() => {
-    try { return JSON.parse(sessionStorage.getItem(`questionnaire-${regulationSlug}`) || "null"); } catch { return null; }
-  })() : null;
+  const saved = loadSavedForm(`questionnaire-${regulationSlug}`);
 
   const initialStep = saved?.step && !skippedSteps.includes(saved.step) ? saved.step : visibleSteps[0];
   const [step, setStep] = useState<number>(initialStep);
