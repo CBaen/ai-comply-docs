@@ -587,26 +587,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "nist-ai-rmf": {
-    name: "NIST AI Risk Management Framework",
-    statute: "NIST AI 100-1",
-    lawUrl: "https://airc.nist.gov/",
     lawLinkText: "Read the NIST AI RMF at airc.nist.gov",
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1). I understand that these are implementation templates, not legal advice. The AI RMF is a voluntary framework; NIST is a non-regulatory agency. AI RMF 1.0 is currently being revised. I should verify the current version and consult qualified legal counsel.",
-    basePrice: 397,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     gateText: "These templates implement the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "AI Risk Management Plan",
-      "Govern Function Documentation",
-      "Map Function Documentation",
-      "Measure Function Documentation",
-      "Manage Function Documentation",
-      "AI System Risk Profile Template",
-      "Trustworthy AI Characteristics Assessment",
-    ],
     decisions: [
       ["hiring", "Employment/HR"],
       ["financial", "Financial Services"],
@@ -633,27 +619,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "healthcare-ai-compliance": {
-    name: "Healthcare AI Compliance Package",
-    statute: "HIPAA Privacy Rule (45 CFR Part 164)",
-    lawUrl:
-      "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E",
     lawLinkText: "Read HIPAA Privacy Rule (45 CFR Part 164) on eCFR",
     acknowledgment:
       "I have reviewed the HIPAA Privacy Rule (45 CFR Part 164 Subpart E), Security Rule (45 CFR Part 164 Subpart C), and Breach Notification Rule (45 CFR Part 164 Subpart D) as applied to AI processing of protected health information. I understand that these are compliance templates, not legal advice. HHS may issue additional guidance on AI and HIPAA. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 597,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "HIPAA AI Risk Assessment",
-      "BAA Addendum for AI Vendors",
-      "Minimum Necessary Standard AI Policy",
-      "Patient AI Disclosure Notice",
-      "AI-Generated Output Review Protocol",
-      "De-Identification Protocol for AI",
-      "COPPA Compliance Checklist",
-      "FDA Pre-Submission AI Checklist",
-    ],
     decisions: [
       ["clinical", "Clinical Decision Support"],
       ["diagnostic", "Diagnostic AI"],
@@ -679,26 +649,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "financial-services-ai": {
-    name: "Financial Services AI Compliance Package",
-    statute: "Regulation B (12 CFR Part 1002) + ECOA",
-    lawUrl: "https://www.ecfr.gov/current/title-12/chapter-X/part-1002",
     lawLinkText: "Read Regulation B (ECOA) on eCFR",
     acknowledgment:
       "I have reviewed the Equal Credit Opportunity Act (15 USC \u00A7 1691 et seq.) and Regulation B (12 CFR Part 1002), the Fair Credit Reporting Act (15 USC \u00A7 1681 et seq.), and relevant FINRA rules as applied to AI in financial services. I understand that these are compliance templates, not legal advice. SEC, CFPB, and FINRA may issue additional AI-specific guidance. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 597,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "AI Supervision Policy",
-      "GenAI Communications Recordkeeping Policy",
-      "Model Risk Inventory Template",
-      "Vendor AI Due Diligence (Financial)",
-      "AI Audit Trail Procedure",
-      "Customer Communication Disclosure",
-      "Annual Review Checklist",
-      "CFPB Adverse Action Notice Template",
-    ],
     decisions: [
       ["lending", "Lending/Credit"],
       ["underwriting", "Insurance Underwriting"],
@@ -725,22 +680,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "manager-ai-training-kit": {
-    name: "Manager Communication & Training Kit",
-    statute: "NIST AI RMF + EEOC AI Guidance + State Employment Laws",
-    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
     lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I understand that these are training and communication templates, not legal advice. I should consult qualified legal counsel for my specific situation.",
-    basePrice: 79,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "Manager Talking Points Script",
-      "Employee FAQ \u2014 AI in the Workplace",
-      "Training Attendance & Sign-Off Sheet",
-    ],
     decisions: [
       ["hiring", "Hiring & Recruitment"],
       ["employment", "Employment Decisions"],
@@ -765,20 +710,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "annual-compliance-review": {
-    name: "Annual Compliance Review Checklist",
-    statute: "Multi-State AI Compliance Annual Review Best Practices",
-    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
     lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I understand that these are review templates, not legal advice. Laws change. I should verify current regulatory status annually and consult qualified legal counsel.",
-    basePrice: 49,
     skippedSteps: [3, 4],
     gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "Annual Compliance Review Checklist",
-      "Compliance Update Log",
-    ],
     decisions: [
       ["employment", "Employment/HR AI"],
       ["customer", "Customer-Facing AI"],
