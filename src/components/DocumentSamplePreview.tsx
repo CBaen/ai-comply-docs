@@ -101,7 +101,11 @@ export default function DocumentSamplePreview({ slug }: DocumentSamplePreviewPro
 
   return (
     <div ref={containerRef} className="mt-6">
-      {error ? null : (
+      {error ? (
+        <div className="bg-slate-50 border border-gray-200 rounded-lg p-6 text-center">
+          <p className="text-sm text-gray-500">Preview unavailable for this document.</p>
+        </div>
+      ) : (
         <div
           className="relative bg-gray-100 dark:bg-slate-700 rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600"
           onContextMenu={(e) => e.preventDefault()}

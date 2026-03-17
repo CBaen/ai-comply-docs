@@ -168,13 +168,13 @@ export default function Nav() {
               <DarkModeToggle />
               <span className="text-gray-600 text-sm">Dark Mode</span>
             </div>
-            <a
-              href="/#products"
+            <Link
+              href="/products"
               className="block bg-blue-800 text-white px-5 py-3 rounded-lg text-center text-sm font-semibold mt-3 mb-2 min-h-[44px] flex items-center justify-center"
               onClick={() => setMobileOpen(false)}
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
