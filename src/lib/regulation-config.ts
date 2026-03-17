@@ -739,21 +739,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "board-ai-summary": {
-    name: "Board & Executive AI Summary Report",
-    statute: "NIST AI RMF Govern Function + SEC AI Governance Guidance",
-    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
     lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I understand that these are governance templates, not legal advice. I should consult qualified legal counsel for my specific board reporting obligations.",
-    basePrice: 69,
     skippedSteps: [3, 4],
     gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "Executive AI Compliance Status Report",
-      "Board Presentation Template",
-      "AI Risk Register Excerpt",
-    ],
     decisions: [
       ["employment", "Employment/HR AI"],
       ["customer", "Customer-Facing AI"],
