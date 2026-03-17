@@ -162,21 +162,6 @@ function deriveEmailContent(slug: string): EmailContent {
   return { title, statute, description, steps, reminder };
 }
 
-// Legacy constant kept only as a type anchor — replaced by deriveEmailContent()
-const _UNUSED_REGULATION_EMAIL_REMOVED = true; void _UNUSED_REGULATION_EMAIL_REMOVED;
-  "illinois-hb3773": {
-    title: "Your Illinois AI Compliance Package",
-    statute: "Illinois HB3773 (775 ILCS 5/2-102(L))",
-    description:
-      "AI compliance documentation templates, aligned with Illinois HB3773 (775 ILCS 5/2-102(L)) requirements. Review each document with your legal team before deployment.",
-    steps: [
-      "<strong>Post the Employee Notification</strong> where staff can see it — breakroom, intranet, or onboarding packet.",
-      "<strong>Have HR review the Impact Assessment</strong> and designate your Human Oversight contact.",
-      "<strong>File everything.</strong> IDHR can request proof of compliance. These documents are your evidence.",
-    ],
-    reminder:
-      "Illinois law requires written notice to employees and applicants before AI is used in employment decisions. This law has been in effect since January 1, 2026.",
-  },
   "colorado-sb24-205": {
     title: "Your Colorado AI Compliance Package",
     statute: "Colorado SB 24-205 (C.R.S. §§ 6-1-1701–1707)",
