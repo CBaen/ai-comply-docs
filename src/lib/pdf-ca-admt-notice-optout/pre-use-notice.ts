@@ -115,6 +115,21 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
     LINE_HEIGHT
   );
   y += 4;
+  // Map questionnaire decision keys to ADMT effect labels
+  const EFFECT_MAP: Record<string, string[]> = {
+    "Financial services (credit, lending, banking)": ["financial"],
+    "Housing (rental, purchase, mortgage)": ["housing"],
+    "Employment (hiring, firing, pay, promotion)": [
+      "employment", "hiring", "recruitment", "promotion",
+      "renewal", "training", "discharge", "discipline", "tenure", "terms",
+    ],
+    "Insurance (eligibility, pricing, coverage)": ["insurance"],
+    "Healthcare (treatment, coverage, access)": ["healthcare"],
+    "Education (enrollment, admission, opportunity)": ["education"],
+  };
+  const allDecisionKeysPUN = [
+    ...new Set(data.aiSystems.flatMap((s) => s.decisions)),
+  ];
   const effects = [
     "Financial services (credit, lending, banking)",
     "Housing (rental, purchase, mortgage)",
@@ -127,7 +142,9 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
     "Other similarly significant effect (describe below)",
   ];
   effects.forEach((effect, idx) => {
-    y = addFormCheckbox(doc, `pun_effect_${idx}`, effect, y);
+    const mappedKeys = EFFECT_MAP[effect] || [];
+    const checked = mappedKeys.some((k) => allDecisionKeysPUN.includes(k));
+    y = addFormCheckbox(doc, `pun_effect_${idx}`, effect, y, { checked });
   });
   y = addFormTextField(doc, "pun_effect_other", "Other effect (describe):", y, {
     multiline: true,

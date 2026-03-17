@@ -75,6 +75,19 @@ export function generateADMTRiskAssessment(data: ComplianceFormData): jsPDF {
     LINE_HEIGHT
   );
   y += 4;
+  // Map questionnaire decision keys to the consumer category labels
+  const CONSUMER_CATEGORY_MAP: Record<string, string[]> = {
+    "Employees or job applicants who are California residents": [
+      "employment", "hiring", "recruitment", "promotion",
+      "renewal", "training", "discharge", "discipline", "tenure", "terms",
+    ],
+    "Tenants or housing applicants who are California residents": ["housing"],
+    "Individuals applying for financial services who are California residents": ["financial"],
+    "Students or educational program applicants who are California residents": ["education"],
+  };
+  const allDecisionKeysRC = [
+    ...new Set(data.aiSystems.flatMap((s) => s.decisions)),
+  ];
   const consumerCategories = [
     "Employees or job applicants who are California residents",
     "Existing customers who are California residents",
@@ -84,7 +97,11 @@ export function generateADMTRiskAssessment(data: ComplianceFormData): jsPDF {
     "Students or educational program applicants who are California residents",
   ];
   let cbIdx = 0;
-  consumerCategories.forEach((item) => { y = addFormCheckbox(doc, `consumer_${cbIdx++}`, item, y); });
+  consumerCategories.forEach((item) => {
+    const mappedKeys = CONSUMER_CATEGORY_MAP[item] || [];
+    const checked = mappedKeys.some((k) => allDecisionKeysRC.includes(k));
+    y = addFormCheckbox(doc, `consumer_${cbIdx++}`, item, y, { checked });
+  });
   y = addFormTextField(doc, "consumer_count", "Estimated number of CA consumers affected annually:", y, { width: 80 });
   y += LINE_HEIGHT;
 
