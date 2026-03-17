@@ -4,6 +4,13 @@ import { notFound } from "next/navigation";
 import { existsSync } from "fs";
 import { join } from "path";
 import Link from "next/link";
+
+// Build-time check: which products have preview images
+const SLUGS_WITH_PREVIEWS = new Set(
+  regulations.filter(r => r.ready).map(r => r.slug).filter(slug =>
+    existsSync(join(process.cwd(), "public", "previews", `${slug}.png`))
+  )
+);
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";

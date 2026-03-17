@@ -3,12 +3,7 @@ import Stripe from "stripe";
 import { getRegulation } from "@/data/regulations";
 import { REGULATION_CONFIG } from "@/lib/regulation-config";
 import { auth } from "@/lib/auth";
-
-function getStripe() {
-  return new Stripe(process.env.STRIPE_SECRET_KEY!, {
-    apiVersion: "2026-02-25.clover",
-  });
-}
+import { getStripe } from "@/lib/stripe";
 
 export async function POST(request: Request) {
   const body = await request.json();

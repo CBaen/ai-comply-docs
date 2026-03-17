@@ -14,6 +14,8 @@ export default function PurchaseRedownloadButton({ formData, productName }: Prop
   async function handleRedownload() {
     setStatus("generating");
     try {
+      const { generateDocuments } = await import("@/lib/pdf-generator");
+      const JSZip = (await import("jszip")).default;
       const docs = await generateDocuments(formData as unknown as ComplianceFormData);
       const zip = new JSZip();
       for (const { doc, name } of docs) {

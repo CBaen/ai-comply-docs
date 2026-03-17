@@ -1,15 +1,8 @@
 import dynamic from "next/dynamic";
 import type { StepReviewCheckoutProps } from "./types";
+import { ROLE_LABELS } from "@/lib/pdf-helpers";
 
 const PersonalizedDocPreview = dynamic(() => import("@/components/PersonalizedDocPreview"), { ssr: false });
-
-const ROLE_LABELS: Record<string, string> = {
-  sole: "AI makes final decisions autonomously",
-  primary: "AI recommendation is primary factor",
-  advisory: "AI provides advisory input",
-  screening: "AI screens/filters candidates",
-  processing: "AI processes data, human reviews outputs",
-};
 
 export default function StepReviewCheckout({
   regulationSlug,

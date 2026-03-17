@@ -1,17 +1,21 @@
 import type { ComplianceFormData, GeneratedDoc } from "./pdf-types";
 import { generateWelcomePage } from "./pdf-welcome-page";
 
-export async function generateDocuments(
-  data: ComplianceFormData
-): Promise<GeneratedDoc[]> {
-  const docs = await generateDocumentsInner(data);
-  const companySlug = data.company.name
+function toCompanySlug(name: string): string {
+  return name
     .replace(/[^a-zA-Z0-9\s]/g, "")
     .trim()
     .replace(/\s+/g, "_")
     .replace(/_+/g, "_")
     .substring(0, 40)
     .replace(/_$/, "");
+}
+
+export async function generateDocuments(
+  data: ComplianceFormData
+): Promise<GeneratedDoc[]> {
+  const docs = await generateDocumentsInner(data);
+  const companySlug = toCompanySlug(data.company.name);
   const welcomeDoc: GeneratedDoc = {
     doc: generateWelcomePage(data, docs.map((d) => d.name)),
     name: `${companySlug}_00_Welcome_Package_Overview.pdf`,
@@ -19,16 +23,10 @@ export async function generateDocuments(
   return [welcomeDoc, ...docs];
 }
 
-export async function generateDocumentsInner(
+async function generateDocumentsInner(
   data: ComplianceFormData
 ): Promise<GeneratedDoc[]> {
-  const companySlug = data.company.name
-    .replace(/[^a-zA-Z0-9\s]/g, "")
-    .trim()
-    .replace(/\s+/g, "_")
-    .replace(/_+/g, "_")
-    .substring(0, 40)
-    .replace(/_$/, "");
+  const companySlug = toCompanySlug(data.company.name);
 
   if (data.regulation === "employee-ai-policy") {
     const emp = await import("./pdf-employee-ai-policy");
@@ -90,7 +88,7 @@ export async function generateDocumentsInner(
 
   if (data.regulation === "ai-incident-response-plan") {
     const ir = await import("./pdf-incident-response");
-    const docs: GeneratedDoc[] = [
+    return [
       {
         doc: ir.generateAIIncidentResponsePlan(data),
         name: `${companySlug}_AI_Incident_Response_Plan.pdf`,
@@ -108,7 +106,6 @@ export async function generateDocumentsInner(
         name: `${companySlug}_Post_Incident_Review_Checklist.pdf`,
       },
     ];
-    return docs;
   }
 
   if (data.regulation === "texas-tdpsa") {
@@ -445,7 +442,7 @@ export async function generateDocumentsInner(
 
   if (data.regulation === "colorado-sb24-205") {
     const co = await import("./pdf-colorado");
-    const docs: GeneratedDoc[] = [
+    return [
       {
         doc: co.generateCORiskManagementPolicy(data),
         name: `${companySlug}_CO_Risk_Management_Policy.pdf`,
@@ -479,7 +476,6 @@ export async function generateDocumentsInner(
         name: `${companySlug}_CO_Compliance_Checklist.pdf`,
       },
     ];
-    return docs;
   }
 
   if (data.regulation === "nyc-local-law-144") {
