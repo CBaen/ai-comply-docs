@@ -155,6 +155,13 @@ export default function PostPaymentHandler({
         setDeliveryToken(result.deliveryToken || "");
         setVerifiedSessionId(sessionId);
 
+        // Auto-link purchase to logged-in account (fire-and-forget)
+        fetch("/api/account/link-purchase", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ stripe_session_id: sessionId }),
+        }).catch(() => {}); // Non-blocking — account linking is optional
+
         if (isQP) {
           // Show mini-form before the download panel
           setIsQuickPurchase(true);

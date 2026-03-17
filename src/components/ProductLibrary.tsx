@@ -128,11 +128,11 @@ function DeadlineBanner({
                 </p>
                 <p className="text-xs text-gray-500">{r.state}</p>
               </div>
-              <div className="sm:text-right sm:shrink-0 sm:ml-3">
-                <p className="text-xs sm:text-sm font-bold text-red-700 break-words">
+              <div className="sm:text-right sm:shrink-0 sm:ml-3 max-w-[55%]">
+                <p className="text-xs font-bold text-red-700 line-clamp-2">
                   {isPast ? "In effect since" : "Effective"} {r.effectiveDate}
                 </p>
-                <p className="text-xs text-gray-500 break-words">{r.maxPenalty}</p>
+                <p className="text-xs text-gray-500 line-clamp-1">{r.maxPenalty}</p>
               </div>
             </Link>
           );
