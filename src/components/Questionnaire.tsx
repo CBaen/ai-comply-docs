@@ -464,7 +464,7 @@ export default function Questionnaire({
               regulationName={regulationName}
               statute={reg?.citation ?? ""}
               lawUrl={reg?.citationUrl ?? ""}
-              lawLinkText={config.lawLinkText}
+              lawLinkText={config.lawLinkText ?? reg?.lawLinkText ?? ""}
               acknowledgment={config.acknowledgment}
               basePrice={regPrice}
               documents={reg?.documents ?? []}

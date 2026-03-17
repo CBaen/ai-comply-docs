@@ -1462,20 +1462,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "va-controller-processor-kit": {
-    name: "VA Controller-Processor Kit",
-    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
-    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
     lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 89,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Processor DPA Template",
-      "Processor Audit Questionnaire",
-      "Subcontractor Flowdown Addendum",
-    ],
     decisions: [
       ["data_processing", "Data Processing Agreements"],
       ["profiling", "Profiling/Automated Decisions"],
@@ -1500,21 +1490,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── EU Add-Ons ───────────────────────────────────────────────
   "eu-fria-kit": {
-    name: "EU Fundamental Rights Impact Assessment Kit",
-    statute: "Regulation (EU) 2024/1689",
-    lawUrl:
-      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 149,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "FRIA Template",
-      "Authority Notification Letter",
-      "FRIA Update Trigger Assessment",
-    ],
     decisions: [
       ["employment", "Employment/HR"],
       ["education", "Education"],
@@ -1538,21 +1517,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-post-market-kit": {
-    name: "EU Post-Market Monitoring Kit",
-    statute: "Regulation (EU) 2024/1689",
-    lawUrl:
-      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 139,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Post-Market Monitoring Plan",
-      "Serious Incident Report",
-      "Log Retention Policy",
-    ],
     decisions: [
       ["employment", "Employment/HR"],
       ["education", "Education"],
@@ -1576,21 +1544,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-human-oversight-kit": {
-    name: "EU Human Oversight Implementation Kit",
-    statute: "Regulation (EU) 2024/1689",
-    lawUrl:
-      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 99,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Oversight Implementation Plan",
-      "Worker Notification Template",
-      "Oversight Decision Log",
-    ],
     decisions: [
       ["employment", "Employment/HR"],
       ["education", "Education"],
@@ -1614,21 +1571,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-registration-transparency": {
-    name: "EU Registration & Transparency Kit",
-    statute: "Regulation (EU) 2024/1689",
-    lawUrl:
-      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 89,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Database Registration Checklist",
-      "Transparency Disclosure Templates",
-      "Provider Documentation Verification",
-    ],
     decisions: [
       ["employment", "Employment/HR"],
       ["education", "Education"],
@@ -1652,3 +1598,15 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
 };
+
+/**
+ * Returns a merged object combining the Regulation record (identity, pricing, citation)
+ * with the RegulationConfig record (form behavior, helpTexts, addons).
+ * Returns null if either side is missing.
+ */
+export function getFullConfig(slug: string) {
+  const reg = getRegulation(slug);
+  const config = REGULATION_CONFIG[slug];
+  if (!reg || !config) return null;
+  return { ...reg, ...config };
+}
