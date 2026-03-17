@@ -8,7 +8,7 @@ import Link from "next/link";
 // Build-time check: which products have preview images
 const SLUGS_WITH_PREVIEWS = new Set(
   regulations.filter(r => r.ready).map(r => r.slug).filter(slug =>
-    existsSync(join(process.cwd(), "public", "previews", `${slug}.png`))
+    existsSync(join(process.cwd(), "public", "previews", `${slug}.webp`))
   )
 );
 import Image from "next/image";
@@ -392,14 +392,14 @@ export default async function RegulationPage({
                     name, AI systems, and compliance details.
                   </p>
                   <a
-                    href={`/previews/${reg.slug}.png`}
+                    href={`/previews/${reg.slug}.webp`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block group"
                   >
                     <div className="relative border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition bg-white">
                       <Image
-                        src={`/previews/${reg.slug}.png`}
+                        src={`/previews/${reg.slug}.webp`}
                         alt={`Sample document preview for ${reg.shortName}`}
                         width={800}
                         height={1131}

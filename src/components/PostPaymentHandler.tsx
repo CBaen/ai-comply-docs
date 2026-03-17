@@ -176,10 +176,11 @@ export default function PostPaymentHandler({
           "Payment could not be verified. If you were charged, please contact support with your receipt."
         );
       }
-    } catch {
+    } catch (err) {
+      console.error("Payment verification error:", err);
       setStatus("error");
       setErrorMessage(
-        "Unable to verify payment. Please check your internet connection and refresh the page."
+        "Something went wrong verifying your payment. If you were charged, please email info@aicompliancedocuments.com with your receipt and we'll deliver your documents."
       );
     }
   };
@@ -661,6 +662,15 @@ export default function PostPaymentHandler({
           {downloadState === "error" && "Error \u2014 try again"}
           {downloadState === "idle" && "Download Complete Package (.zip)"}
           </button>
+          {downloadState === "error" && (
+            <p className="text-sm text-red-600 mt-2 text-center">
+              If this keeps happening, email{" "}
+              <a href="mailto:info@aicompliancedocuments.com" className="underline">
+                info@aicompliancedocuments.com
+              </a>{" "}
+              with your Stripe receipt.
+            </p>
+          )}
         </div>
 
         {/* Divider */}

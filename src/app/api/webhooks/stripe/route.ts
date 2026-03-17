@@ -81,5 +81,8 @@ export async function POST(request: Request) {
   }
 
   // Acknowledge all other event types with 200 to prevent Stripe retries
+  if (event.type !== "checkout.session.completed") {
+    console.log("Unhandled Stripe event type (acknowledged):", event.type);
+  }
   return NextResponse.json({ received: true });
 }

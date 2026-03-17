@@ -128,7 +128,7 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-    console.error("Stripe verification error:", stripeErr.message);
+    console.error("Stripe verification error:", { message: stripeErr.message, type: stripeErr.type, sessionId });
     return NextResponse.json(
       { verified: false, error: "Verification failed" },
       { status: 500 }

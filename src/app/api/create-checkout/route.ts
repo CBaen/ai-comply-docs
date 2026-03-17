@@ -14,7 +14,10 @@ export async function POST(request: Request) {
   let userEmail: string | null = null;
   let userId: string | null = null;
   if (process.env.DATABASE_URL) {
-    const userSession = await auth().catch(() => null);
+    const userSession = await auth().catch((err: unknown) => {
+      console.error("Auth session fetch failed (non-blocking):", err);
+      return null;
+    });
     userEmail = userSession?.user?.email ?? null;
     userId = userSession?.user?.id ?? null;
   }
@@ -69,6 +72,14 @@ export async function POST(request: Request) {
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);
+
+    if (!session.url) {
+      console.error("Stripe returned null URL:", { sessionId: session.id, regulation: slug });
+      return NextResponse.json(
+        { error: "Checkout session created but no redirect URL was returned. Please try again." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ url: session.url });
   } catch (err) {
