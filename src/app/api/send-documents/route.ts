@@ -312,7 +312,7 @@ const REGULATION_EMAIL: Record<
       "<strong>Implement your Post-Market Monitoring Plan</strong> and assign responsibility for ongoing incident reporting and corrective actions.",
     ],
     reminder:
-      "The EU AI Act has phased effective dates: prohibited AI practices from February 2025, GPAI obligations from August 2025, Annex III high-risk system obligations from August 2027. National market surveillance authorities enforce. Prohibited AI practices: up to \u20AC35,000,000 or 7% global turnover (Art. 99(3)). High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
+      "The EU AI Act has phased effective dates: prohibited AI practices from February 2025, GPAI obligations from August 2025, Annex III high-risk system obligations from August 2026. National market surveillance authorities enforce. Prohibited AI practices: up to \u20AC35,000,000 or 7% global turnover (Art. 99(3)). High-risk violations: up to \u20AC15,000,000 or 3% global turnover (Art. 99(4)).",
   },
   "eeoc-ai-hiring": {
     title: "Your EEOC AI Hiring Compliance Kit",

@@ -97,7 +97,9 @@ export default function Questionnaire({
         contactName, contactTitle, contactEmail, contactPhone,
         selectedAddons,
       }));
-    } catch {}
+    } catch (err) {
+      console.error("Failed to persist questionnaire state:", err);
+    }
   }, [
     regulationSlug, step,
     companyName, companyState, companySize, companyIndustry,

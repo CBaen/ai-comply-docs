@@ -10,3 +10,6 @@ tsconfig.tsbuildinfo
 # Screenshots from testing
 screenshot_*.png
 screenshots/
+
+.vercel
+.env*.local

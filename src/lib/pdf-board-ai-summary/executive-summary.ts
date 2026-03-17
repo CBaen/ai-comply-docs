@@ -67,7 +67,7 @@ export function generateExecutiveSummary(data: ComplianceFormData): jsPDF {
     { name: "es_law_nyc", label: "NYC Local Law 144 — In effect July 5, 2023. Status:" },
     { name: "es_law_ca", label: "California CCPA/ADMT — In effect January 1, 2026. Status:" },
     { name: "es_law_mn", label: "Minnesota MCDPA — In effect July 31, 2025. Status:" },
-    { name: "es_law_eu", label: "EU AI Act (Regulation (EU) 2024/1689) — Phased effective dates through 2027. Status:" },
+    { name: "es_law_eu", label: "EU AI Act (Regulation (EU) 2024/1689) — Phased effective dates through 2026. Status:" },
     { name: "es_law_other", label: "Other applicable law: [fill in]. Status:" },
   ];
   obligations.forEach((item) => {

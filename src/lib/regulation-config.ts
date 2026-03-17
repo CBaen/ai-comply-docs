@@ -223,7 +223,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "ai-bias-audit-template": {
     name: "AI Bias Audit Report Template",
     statute: "NYC LL144 + EEOC + NIST AI RMF",
-    lawUrl: "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness-initiative",
+    lawUrl: "https://www.eeoc.gov/laws/guidance/select-issues-assessing-adverse-impact-software-algorithms-and-artificial",
     lawLinkText: "Review EEOC AI Guidance",
     acknowledgment:
       "I have reviewed the EEOC AI guidance and NYC LL144 requirements referenced in this product. I understand that these are audit templates, not legal advice. I should consult qualified legal counsel and a qualified auditor for my specific situation.",
@@ -727,7 +727,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
-      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. Member States may adopt additional implementing measures. I should verify the current regulatory status and consult qualified legal counsel.",
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. Member States may adopt additional implementing measures. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 997,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
@@ -1186,7 +1186,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "ai-governance-framework": {
     name: "AI Governance Framework",
     statute: "NIST AI RMF Govern Function + CO SB24-205",
-    lawUrl: "https://www.nist.gov/system/files/documents/2023/01/26/AI-RMF-1-0.pdf",
+    lawUrl: "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
     lawLinkText: "Review the NIST AI Risk Management Framework 1.0 (PDF)",
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (NIST AI 100-1) referenced in this product. I understand that these are governance framework templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization and jurisdiction.",
@@ -1354,7 +1354,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "customer-ai-aup": {
     name: "AI Acceptable Use Policy for Customers",
     statute: "FTC Act \u00A7 5 + EU AI Act Art. 13 + Best Practice",
-    lawUrl: "https://www.ftc.gov/business-guidance/blog/2023/02/ftc-chair-khan-and-officials-from-doj-cfpb-eeoc-release-joint-statement-ai",
+    lawUrl: "https://www.ftc.gov/legal-library/browse/policy-statements",
     lawLinkText: "Review FTC AI Joint Statement on ftc.gov",
     acknowledgment:
       "I have reviewed the FTC and EU AI Act guidance referenced in this product. I understand that this is a customer-facing policy template, not legal advice. I should consult qualified legal counsel to verify the policy is appropriate for my products and jurisdiction.",
@@ -2057,7 +2057,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
-      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 149,
     skippedSteps: [2, 3, 4],
 
@@ -2095,7 +2095,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
-      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 139,
     skippedSteps: [2, 3, 4],
 
@@ -2133,7 +2133,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
-      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 99,
     skippedSteps: [2, 3, 4],
 
@@ -2171,7 +2171,7 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
       "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
-      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2027. I should verify the current regulatory status and consult qualified legal counsel.",
+      "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     basePrice: 89,
     skippedSteps: [2, 3, 4],
 

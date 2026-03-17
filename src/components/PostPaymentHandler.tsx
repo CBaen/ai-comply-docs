@@ -204,8 +204,8 @@ export default function PostPaymentHandler({
         setOrphanedData(data);
         setShowRestoreBanner(true);
       }
-    } catch {
-      // Invalid data
+    } catch (err) {
+      console.error("Failed to parse orphaned form data:", err);
     }
   };
 

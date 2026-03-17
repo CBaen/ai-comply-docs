@@ -42,8 +42,8 @@ async function trackPurchase(session: Stripe.Checkout.Session) {
         }),
       }
     );
-  } catch {
-    // Analytics failure must never block payment verification
+  } catch (err) {
+    console.error("GA analytics track failed (non-blocking):", err);
   }
 }
 
