@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { validateDeliveryToken } from "@/lib/delivery-token";
+import { getRegulation } from "@/data/regulations";
 
 function escapeHtml(s: string): string {
   return s
