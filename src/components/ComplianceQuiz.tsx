@@ -481,8 +481,8 @@ export default function ComplianceQuiz() {
 
   const TOTAL_STEPS = 5;
 
-  const handleQ1 = (value: string) => {
-    setAnswers((prev) => ({ ...prev, q1: value }));
+  const handleAnswer = (key: "q1" | "q3" | "q4" | "q5", value: string) => {
+    setAnswers((prev) => ({ ...prev, [key]: value }));
   };
 
   const handleQ2Toggle = (state: string) => {
@@ -496,18 +496,6 @@ export default function ComplianceQuiz() {
       }
       return { ...prev, q2: [...without, state] };
     });
-  };
-
-  const handleQ3 = (value: string) => {
-    setAnswers((prev) => ({ ...prev, q3: value }));
-  };
-
-  const handleQ4 = (value: string) => {
-    setAnswers((prev) => ({ ...prev, q4: value }));
-  };
-
-  const handleQ5 = (value: string) => {
-    setAnswers((prev) => ({ ...prev, q5: value }));
   };
 
   const canAdvance = () => {
@@ -607,7 +595,7 @@ export default function ComplianceQuiz() {
                       key={opt.value}
                       label={opt.label}
                       selected={answers.q1 === opt.value}
-                      onClick={() => handleQ1(opt.value)}
+                      onClick={() => handleAnswer("q1", opt.value)}
                     />
                   ))}
                 </div>
@@ -656,7 +644,7 @@ export default function ComplianceQuiz() {
                       key={opt.value}
                       label={opt.label}
                       selected={answers.q3 === opt.value}
-                      onClick={() => handleQ3(opt.value)}
+                      onClick={() => handleAnswer("q3", opt.value)}
                     />
                   ))}
                 </div>
@@ -678,7 +666,7 @@ export default function ComplianceQuiz() {
                       key={opt.value}
                       label={opt.label}
                       selected={answers.q4 === opt.value}
-                      onClick={() => handleQ4(opt.value)}
+                      onClick={() => handleAnswer("q4", opt.value)}
                     />
                   ))}
                 </div>
@@ -700,7 +688,7 @@ export default function ComplianceQuiz() {
                       key={opt.value}
                       label={opt.label}
                       selected={answers.q5 === opt.value}
-                      onClick={() => handleQ5(opt.value)}
+                      onClick={() => handleAnswer("q5", opt.value)}
                     />
                   ))}
                 </div>

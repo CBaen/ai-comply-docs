@@ -669,66 +669,54 @@ export default async function RegulationPage({
         )}
 
         {/* Related Products — clear visual divider prevents accidental navigation from questionnaire */}
-        {(() => {
-          const related = regulations
-            .filter(
-              (r) =>
-                r.slug !== reg.slug &&
-                (r.category === reg.category ||
-                  r.tier === reg.tier ||
-                  (reg.tier === "state" && r.tier === "universal"))
-            )
-            .slice(0, 3);
-          if (related.length === 0) return null;
-          return (
-            <div className="border-t border-gray-200 mt-12 pt-12">
-              <div className="bg-white py-10 sm:py-12">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6">
-                  <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-2">
-                    You May Also Need
-                  </h2>
-                  <p className="text-gray-600 text-sm mb-5 sm:mb-6">
-                    Strengthen your compliance program with related documentation.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
-                    {related.map((r) => (
-                      <Link
-                        key={r.slug}
-                        href={`/products/${r.slug}`}
-                        className="border border-gray-200 rounded-lg p-5 hover:border-blue-700 hover:shadow-md transition group"
-                      >
-                        <div className="flex items-center gap-2 mb-2">
-                          <span
-                            className={`inline-block w-1.5 h-1.5 rounded-sm ${r.status === "in-effect" ? "bg-red-500" : r.status === "effective-soon" ? "bg-amber-500" : "bg-slate-400"}`}
-                          />
-                          <span className="text-xs text-gray-500 uppercase font-medium">
-                            {r.state}
-                          </span>
-                        </div>
-                        <h3 className="font-bold text-gray-900 font-display group-hover:text-blue-700 transition mb-1">
-                          {r.shortName}
-                        </h3>
-                        <p className="text-gray-600 text-xs leading-relaxed mb-3">
-                          {r.description.length > 100
-                            ? r.description.slice(0, 100) + "..."
-                            : r.description}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-lg font-bold text-gray-900 font-display">
-                            ${r.price}
-                          </span>
-                          <span className="text-xs text-gray-500">
-                            {r.documentCount} docs
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+        {relatedProducts.length > 0 && (
+          <div className="border-t border-gray-200 mt-12 pt-12">
+            <div className="bg-white py-10 sm:py-12">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-2">
+                  You May Also Need
+                </h2>
+                <p className="text-gray-600 text-sm mb-5 sm:mb-6">
+                  Strengthen your compliance program with related documentation.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+                  {relatedProducts.map((r) => (
+                    <Link
+                      key={r.slug}
+                      href={`/products/${r.slug}`}
+                      className="border border-gray-200 rounded-lg p-5 hover:border-blue-700 hover:shadow-md transition group"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span
+                          className={`inline-block w-1.5 h-1.5 rounded-sm ${r.status === "in-effect" ? "bg-red-500" : r.status === "effective-soon" ? "bg-amber-500" : "bg-slate-400"}`}
+                        />
+                        <span className="text-xs text-gray-500 uppercase font-medium">
+                          {r.state}
+                        </span>
+                      </div>
+                      <h3 className="font-bold text-gray-900 font-display group-hover:text-blue-700 transition mb-1">
+                        {r.shortName}
+                      </h3>
+                      <p className="text-gray-600 text-xs leading-relaxed mb-3">
+                        {r.description.length > 100
+                          ? r.description.slice(0, 100) + "..."
+                          : r.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-bold text-gray-900 font-display">
+                          ${r.price}
+                        </span>
+                        <span className="text-xs text-gray-500">
+                          {r.documentCount} docs
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
-          );
-        })()}
+          </div>
+        )}
 
       </main>
       <Footer />

@@ -42,7 +42,7 @@ export default function Questionnaire({
 
   const saved = loadSavedForm(`questionnaire-${regulationSlug}`);
 
-  const initialStep = saved?.step && !skippedSteps.includes(saved.step) ? saved.step : visibleSteps[0];
+  const initialStep = saved?.step && typeof saved.step === "number" && !skippedSteps.includes(saved.step) ? saved.step : visibleSteps[0];
   const [step, setStep] = useState<number>(initialStep);
   const [error, setError] = useState("");
 
