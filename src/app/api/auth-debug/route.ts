@@ -3,7 +3,13 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const checks: Record<string, string> = {};
 
-  // Check env vars
+  // List all env var NAMES that contain relevant keywords (no values for security)
+  const allKeys = Object.keys(process.env).sort();
+  checks.all_env_var_names = allKeys.filter(k =>
+    /AUTH|SECRET|NEXT|DATABASE|STRIPE|RESEND|GA_|POSTGRES|NEON/i.test(k)
+  ).join(", ");
+
+  // Check specific vars
   checks.AUTH_SECRET = process.env.AUTH_SECRET ? "SET" : "MISSING";
   checks.NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET ? "SET" : "MISSING";
   checks.DATABASE_URL = process.env.DATABASE_URL ? "SET" : "MISSING";
