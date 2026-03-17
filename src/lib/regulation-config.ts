@@ -380,24 +380,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "virginia-cdpa": {
-    name: "Virginia CDPA",
-    statute: "Va. Code §§ 59.1-575–59.1-584",
-    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
     lawLinkText: "Read Va. Code §§ 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code §§ 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. The VCDPA has been in effect since January 1, 2023. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Assessment",
-      "Consumer Rights Request Procedures",
-      "Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -422,24 +409,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "connecticut-ctdpa": {
-    name: "Connecticut CTDPA",
-    statute: "Conn. Gen. Stat. §§ 42-515–42-525",
-    lawUrl: "https://www.cga.ct.gov/current/pub/chap_743jj.htm",
     lawLinkText: "Read Conn. Gen. Stat. §§ 42-515 through 42-525 on cga.ct.gov",
     acknowledgment:
       "I have reviewed Conn. Gen. Stat. §§ 42-515 through 42-525 (Connecticut Data Privacy Act, PA 22-15) and understand that these are compliance templates, not legal advice. The CTDPA has been in effect since July 1, 2023, and the mandatory cure period has expired. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Assessment",
-      "Consumer Rights Request Procedures",
-      "Profiling Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -464,24 +438,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "oregon-cpa": {
-    name: "Oregon CPA",
-    statute: "ORS §§ 646A.570–646A.589",
-    lawUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
     lawLinkText: "Read ORS §§ 646A.570 through 646A.589 on oregonlegislature.gov",
     acknowledgment:
       "I have reviewed ORS §§ 646A.570 through 646A.589 (Oregon Consumer Privacy Act) and understand that these are compliance templates, not legal advice. The Oregon CPA has been in effect since July 1, 2024, with the cure period expiring January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Assessment",
-      "Consumer Rights Request Procedures",
-      "Profiling Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -507,25 +468,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "minnesota-mcdpa": {
-    name: "Minnesota MCDPA",
-    statute: "Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21",
-    lawUrl: "https://www.revisor.mn.gov/statutes/cite/325M.10",
     lawLinkText:
       "Read Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21 on revisor.mn.gov",
     acknowledgment:
       "I have reviewed the Minnesota Consumer Data Privacy Act, Minn. Stat. \u00A7\u00A7 325M.10 through 325M.21. I understand that these are compliance templates, not legal advice. This law is effective July 31, 2025. The 30-day cure period expires January 31, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 349,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Impact Assessment",
-      "Consumer Rights Request Procedures",
-      "Profiling Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -550,24 +498,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "california-ccpa-admt": {
-    name: "California CCPA ADMT",
-    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
-    lawUrl: "https://cppa.ca.gov/regulations/",
     lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations, effective January 1, 2026. I understand that these are compliance templates, not legal advice. The CPPA may update regulations and issue additional guidance. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 499,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Pre-Use ADMT Notice Template",
-      "ADMT Risk Assessment",
-      "Consumer Opt-Out Mechanism Documentation",
-      "Consumer Access/Information Procedures",
-      "Human Review Process Documentation",
-      "ADMT Impact Assessment",
-    ],
     decisions: [
       ["hiring", "Employment Decisions"],
       ["financial", "Financial/Lending"],
@@ -594,29 +529,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-ai-act": {
-    name: "EU AI Act",
-    statute: "Regulation (EU) 2024/1689",
-    lawUrl:
-      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
     lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. Member States may adopt additional implementing measures. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 997,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
-
-    documents: [
-      "Risk Management System Documentation",
-      "Technical Documentation (Annex IV)",
-      "Data Governance Documentation",
-      "Conformity Assessment Records",
-      "Quality Management System",
-      "Human Oversight Design Document",
-      "Post-Market Monitoring Plan",
-      "EU Database Registration Documentation",
-      "Transparency Disclosures",
-      "Fundamental Rights Impact Assessment",
-    ],
     decisions: [
       ["employment", "Employment/HR"],
       ["education", "Education"],
@@ -643,22 +560,9 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eeoc-ai-hiring": {
-    name: "EEOC AI Hiring Compliance Kit",
-    statute: "29 CFR Part 1607 (Uniform Guidelines)",
-    lawUrl: "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607",
     lawLinkText: "Read the Uniform Guidelines (29 CFR Part 1607) on eCFR",
     acknowledgment:
       "I have reviewed Title VII of the Civil Rights Act of 1964 (42 USC \u00A7 2000e et seq.) and the Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607). I understand that these are compliance templates, not legal advice. The EEOC\u2019s AI-specific guidance documents have been modified; previously published technical assistance may no longer be available on eeoc.gov. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 349,
-
-    documents: [
-      "AI Adverse Impact Analysis Template",
-      "Job-Relatedness Validation Documentation",
-      "Reasonable Accommodation Procedures for AI Assessments",
-      "Vendor AI Audit Requirements",
-      "AI Hiring Tool Monitoring Procedures",
-      "Annual Compliance Review",
-    ],
     decisions: [
       ["hiring", "Hiring/Screening"],
       ["promotion", "Promotion"],
