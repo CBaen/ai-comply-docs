@@ -47,6 +47,11 @@ export async function POST(request: Request) {
     const stripeCustomerId =
       typeof session.customer === "string" ? session.customer : null;
 
+    if (!process.env.DATABASE_URL) {
+      // Database not configured — skip purchase recording, acknowledge webhook
+      return NextResponse.json({ received: true });
+    }
+
     try {
       const pool = getPool();
 
