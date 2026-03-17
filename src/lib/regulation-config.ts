@@ -47,14 +47,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         stripePriceId: "price_1TA3XHGidFVHIL99h2UwiLd9",
       },
     ],
-    documents: [
-      "Employee/Applicant AI Notification Template (customized)",
-      "AI System Inventory Document",
-      "Impact Assessment Framework",
-      "Human Oversight Protocol Document",
-      "Accommodation Request Form",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["recruitment", "Recruitment"],
       ["hiring", "Hiring"],
@@ -84,26 +76,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "colorado-sb24-205": {
-    name: "Colorado SB 24-205",
-    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
-    lawUrl: "https://leg.colorado.gov/bills/sb24-205",
     lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       'I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205, effective June 30, 2026 per SB 25B-004) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.',
-    basePrice: 449,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Risk Management Policy & Program",
-      "Impact Assessment Framework",
-      "Consumer Pre-Decision Notice & AI Disclosure",
-      "Adverse Decision Response Kit",
-      "Public Transparency Statement",
-      "Algorithmic Discrimination Incident Response Plan",
-      "Record Retention Policy",
-      "Comprehensive Compliance Checklist",
-    ],
     decisions: [
       ["education", "Education Enrollment or Opportunity"],
       ["employment", "Employment or Employment Opportunities"],
@@ -132,22 +109,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "employee-ai-policy": {
-    name: "Employee AI Acceptable Use Policy",
-    statute: "NIST AI RMF + EEOC Guidance",
-    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
     lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework and EEOC AI guidance referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
-    basePrice: 199,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     gateText: "These templates reference the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "AI Acceptable Use Policy",
-      "Employee AI Training Acknowledgment",
-      "AI Incident Reporting Form",
-    ],
     decisions: [
       ["hiring", "Hiring & Recruitment"],
       ["customer_service", "Customer Service & Support"],
@@ -174,23 +141,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "vendor-ai-due-diligence": {
-    name: "Vendor AI Due Diligence Kit",
-    statute: "NIST AI RMF MAP Function",
-    lawUrl: "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook",
     lawLinkText: "Review the NIST AI RMF Playbook",
     acknowledgment:
       "I have reviewed the NIST AI RMF Playbook and applicable state laws referenced in this product. I understand that these are due diligence templates, not legal advice. I should consult qualified legal counsel for my specific vendor contracts.",
-    basePrice: 249,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
     gateText: "These templates reference the NIST AI RMF Playbook. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "Vendor AI Due Diligence Questionnaire",
-      "AI Vendor Contract Addendum",
-      "Vendor Risk Assessment Template",
-      "Ongoing Monitoring Checklist",
-    ],
     decisions: [
       ["hiring", "Hiring & Employment"],
       ["financial", "Financial & Lending"],
@@ -217,22 +173,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "ai-bias-audit-template": {
-    name: "AI Bias Audit Report Template",
-    statute: "NYC LL144 + EEOC + NIST AI RMF",
-    lawUrl: "https://www.eeoc.gov/laws/guidance/select-issues-assessing-adverse-impact-software-algorithms-and-artificial",
     lawLinkText: "Review EEOC AI Guidance",
     acknowledgment:
       "I have reviewed the EEOC AI guidance and NYC LL144 requirements referenced in this product. I understand that these are audit templates, not legal advice. I should consult qualified legal counsel and a qualified auditor for my specific situation.",
-    basePrice: 149,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
     gateText: "These templates reference EEOC guidance on AI in employment. We recommend reviewing the guidance before purchasing.",
-
-    documents: [
-      "Bias Audit Report Template",
-      "Impact Ratio Calculation Worksheet",
-      "Remediation Action Plan Template",
-    ],
     decisions: [
       ["hiring", "Hiring & Recruitment"],
       ["promotion", "Promotion & Advancement"],
