@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import JSZip from "jszip";
-import { generateDocuments } from "@/lib/pdf-generator";
 import type { ComplianceFormData } from "@/lib/pdf-types";
 
 interface Props {
