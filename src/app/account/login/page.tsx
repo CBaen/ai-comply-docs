@@ -70,8 +70,8 @@ export default function LoginPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-2 font-display">
                 Check your email
               </h2>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                We sent a secure sign-in link to <strong className="text-gray-900">{email}</strong>.
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 break-words">
+                We sent a secure sign-in link to <strong className="text-gray-900 break-all">{email}</strong>.
                 The link expires in 24 hours.
               </p>
               <button
