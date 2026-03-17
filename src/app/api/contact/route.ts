@@ -36,13 +36,28 @@ export async function POST(request: Request) {
     );
   }
 
+  const ALLOWED_SUBJECTS = [
+    "General Inquiry",
+    "Product Question",
+    "Bulk / Enterprise Pricing",
+    "Partnership Opportunity",
+    "Press / Media",
+    "Technical Issue",
+  ];
+  if (subject && !ALLOWED_SUBJECTS.includes(subject)) {
+    return NextResponse.json({ error: "Invalid subject." }, { status: 400 });
+  }
+
+  const safeName = name.replace(/[\r\n]/g, "");
+  const safeSubject = (subject || "General Inquiry").replace(/[\r\n]/g, "");
+
   try {
     const resend = getResend();
     const { error } = await resend.emails.send({
       from: "AI Compliance Documents <noreply@aicompliancedocuments.com>",
       to: "info@aicompliancedocuments.com",
       replyTo: email,
-      subject: `[Contact] ${subject || "General Inquiry"} — ${name}`,
+      subject: `[Contact] ${safeSubject} — ${safeName}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #1e3a5f; border-bottom: 2px solid #2563eb; padding-bottom: 8px;">
