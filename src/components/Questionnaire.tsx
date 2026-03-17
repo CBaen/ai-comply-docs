@@ -21,7 +21,8 @@ function emptyAISystem(): AISystem {
   return { name: "", vendor: "", description: "", decisions: [] };
 }
 
-function loadSavedForm(key: string): Record<string, unknown> | null {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function loadSavedForm(key: string): Record<string, any> | null {
   if (typeof window === "undefined") return null;
   try {
     return JSON.parse(sessionStorage.getItem(key) || "null");

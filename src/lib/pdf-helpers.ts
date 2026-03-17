@@ -69,6 +69,7 @@ export const ROLE_LABELS: Record<string, string> = {
   primary: "AI recommendation is primary factor, with human review",
   advisory: "AI provides advisory input, human makes final decision",
   screening: "AI screens/filters, human reviews remaining candidates",
+  processing: "AI processes data, human reviews outputs",
 };
 
 export const REVIEW_LABELS: Record<string, string> = {
@@ -180,7 +181,7 @@ const REGULATION_HEADER: Record<
   },
   "eu-ai-act": {
     statute:
-      "Regulation: (EU) 2024/1689 (EU AI Act) \u2014 Phased: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2027",
+      "Regulation: (EU) 2024/1689 (EU AI Act) \u2014 Phased: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2026",
     rules:
       "Enforcement: National market surveillance authorities. Member States may adopt additional implementing measures.",
   },
