@@ -1243,20 +1243,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "co-dev-deploy-exchange": {
-    name: "CO Developer-Deployer Exchange Kit",
-    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
-    lawUrl: "https://leg.colorado.gov/bills/sb24-205",
     lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 109,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Developer Disclosure Checklist",
-      "Deployer Gap Analysis",
-      "Third-Party Assessment Addendum",
-    ],
     decisions: [
       ["developer_obligations", "Developer Disclosure Obligations"],
       ["deployer_assessment", "Deployer Risk Assessment"],
@@ -1281,20 +1271,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── California Add-Ons ────────────────────────────────────────
   "ca-admt-notice-optout": {
-    name: "CA ADMT Notice & Opt-Out Kit",
-    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
-    lawUrl: "https://cppa.ca.gov/regulations/",
     lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 99,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Pre-Use Notice Template",
-      "Opt-Out Request Processing Workflow",
-      "Opt-Out Exception Documentation",
-    ],
     decisions: [
       ["hiring", "Employment Decisions"],
       ["financial", "Financial/Lending"],
@@ -1318,20 +1298,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "ca-admt-access-kit": {
-    name: "CA ADMT Access & Explanation Kit",
-    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
-    lawUrl: "https://cppa.ca.gov/regulations/",
     lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 89,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Access Request Intake Form",
-      "ADMT Output Explanation Template",
-      "Response Timeline Tracker",
-    ],
     decisions: [
       ["hiring", "Employment Decisions"],
       ["financial", "Financial/Lending"],
@@ -1355,20 +1325,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "ca-cyber-audit-kit": {
-    name: "CA Cybersecurity Audit Kit",
-    statute: "Cal. Civ. Code \u00A7 1798.100 et seq.",
-    lawUrl: "https://cppa.ca.gov/regulations/",
     lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s cybersecurity audit regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 149,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Cybersecurity Audit Checklist",
-      "Risk Assessment Workbook",
-      "Audit Remediation Tracker",
-    ],
     decisions: [
       ["data_processing", "Personal Data Processing"],
       ["consumer_profiling", "Consumer Profiling"],
@@ -1393,22 +1353,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── NYC Add-Ons ──────────────────────────────────────────────
   "nyc-bias-audit-mgmt": {
-    name: "NYC Bias Audit Management Kit",
-    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
-    lawUrl:
-      "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9",
     lawLinkText:
       "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 129,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Auditor RFP Template",
-      "Results Publication Template",
-      "Annual Renewal Calendar",
-    ],
     decisions: [
       ["hiring", "Hiring/Screening"],
       ["promotion", "Promotion"],
@@ -1431,22 +1380,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "nyc-candidate-notice-kit": {
-    name: "NYC Candidate Notice Kit",
-    statute: "NYC Admin. Code \u00A7\u00A7 20-870\u201320-874",
-    lawUrl:
-      "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9",
     lawLinkText:
       "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 89,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "10-Day Advance Notice Template",
-      "Alternative Process Workflow",
-      "Data Disclosure Response",
-    ],
     decisions: [
       ["hiring", "Hiring/Screening"],
       ["promotion", "Promotion"],
@@ -1470,20 +1408,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── Virginia Add-Ons ─────────────────────────────────────────
   "va-consumer-rights-kit": {
-    name: "VA Consumer Rights Kit",
-    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
-    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
     lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 99,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Rights Request Intake Form",
-      "Appeal Workflow",
-      "AG Complaint Referral Notice",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["data_sales", "Data Sales"],
@@ -1507,20 +1435,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "va-profiling-assessment-kit": {
-    name: "VA Profiling Assessment Kit",
-    statute: "Va. Code \u00A7\u00A7 59.1-575\u201359.1-584",
-    lawUrl: "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
     lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 109,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Profiling Assessment Template",
-      "Benefits-Risks Worksheet",
-      "Sensitive Data Consent Form",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["sensitive_data", "Sensitive Data Processing"],
