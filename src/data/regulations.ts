@@ -239,7 +239,7 @@ export const regulations: Regulation[] = [
     documentCount: 6,
     description: "Oregon's Consumer Privacy Act requires data protection assessments for profiling that presents risk of harm to consumers. If your business processes personal data from Oregon residents, this package covers the assessment and privacy notice requirements.",
     penaltySummary: "Oregon Attorney General enforcement (§ 646A.589). No private right of action. 30-day cure period until January 1, 2026 (§ 646A.589(2)); AG has enforcement discretion after that date. Civil penalties up to $7,500 per violation (ORS § 646A.589(4)(a)).",
-    maxPenalty: "Up to $7,500 per violation (UTPA, ORS § 646A.589)",
+    maxPenalty: "Up to $7,500 per violation (ORS § 646A.589(4)(a))",
     appliesToSummary: "Persons doing business in OR or targeting OR residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 25%+ revenue from data sales and process data of 25,000+ consumers.",
     keywords: ["oregon", "cpa", "consumer privacy", "ai profiling", "automated decisions", "children's data", "646A.570"],
     documents: [
@@ -1042,7 +1042,7 @@ export const regulations: Regulation[] = [
     stripePriceId: "price_1TAsLVGidFVHIL994jcciejf",
     documentCount: 6,
     description: "Montana's privacy law has some of the lowest applicability thresholds in the country. If your business processes personal data from Montana residents — even a relatively small number — you may be in scope. This package covers the data protection assessment and privacy notice requirements.",
-    penaltySummary: "Montana Attorney General enforcement via Title 30, ch. 14, parts 1\u20132. No private right of action (\u00A7 30-14-2817(5)). Civil penalty up to $7,500 per violation (\u00A7 30-14-2820). 30-day cure period (\u00A7 30-14-2817(3)). Data protection assessments not retroactive to pre-January 1, 2025 processing.",
+    penaltySummary: "Montana Attorney General enforcement via Title 30, ch. 14, parts 1\u20132. No private right of action (\u00A7 30-14-2817(5)). Civil penalty up to $7,500 per violation (\u00A7 30-14-2820). 30-day cure period (\u00A7 30-14-2820(2); see also \u00A7 30-14-2817(3)). Data protection assessments not retroactive to pre-January 1, 2025 processing.",
     maxPenalty: "Up to $7,500 per violation (\u00A7 30-14-2820)",
     appliesToSummary: "Entities doing business in Montana or targeting Montana residents that (1) process personal data of 25,000+ consumers/year OR (2) derive 25%+ revenue from data sales and process data of 15,000+ consumers (\u00A7 30-14-2803). Lowest thresholds of any state privacy law.",
     keywords: ["montana", "mcdpa", "consumer data privacy", "privacy", "30-14-2801", "SB 384"],

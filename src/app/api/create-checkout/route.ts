@@ -15,9 +15,14 @@ export async function POST(request: Request) {
   const { addonIds, regulation } = body;
 
   // Optional: attach logged-in user info to the session for post-purchase linking
-  const userSession = await auth().catch(() => null);
-  const userEmail = userSession?.user?.email ?? null;
-  const userId = userSession?.user?.id ?? null;
+  // Skip auth entirely if database is not configured (auth requires PostgreSQL)
+  let userEmail: string | null = null;
+  let userId: string | null = null;
+  if (process.env.DATABASE_URL) {
+    const userSession = await auth().catch(() => null);
+    userEmail = userSession?.user?.email ?? null;
+    userId = userSession?.user?.id ?? null;
+  }
 
   const slug = regulation || "illinois-hb3773";
   const reg = getRegulation(slug);
