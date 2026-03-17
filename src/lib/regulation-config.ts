@@ -1,4 +1,5 @@
 import type { RegulationConfig, AddonConfig } from "./pdf-types";
+import { getRegulation } from "@/data/regulations";
 export type { AddonConfig };
 
 // Shared option sets — referenced by products below to avoid duplication.
@@ -33,14 +34,9 @@ const DATA_INPUT_OPTIONS_GENERIC = [
 
 export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "illinois-hb3773": {
-    name: "Illinois HB3773",
-    statute: "775 ILCS 5/2-102(L)",
-    lawUrl:
-      "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
     lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
       'I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I understand that IDHR is currently developing implementing rules but has not yet published proposed rules. The notice elements in these templates are best-practice recommendations based on the statutory text. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.',
-    basePrice: 299,
     addons: [
       {
         id: "manager-training-kit",
