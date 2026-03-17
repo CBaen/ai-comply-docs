@@ -2,7 +2,7 @@
  * Generate sample document preview images for all products.
  * Run: npx tsx scripts/generate-previews.mts
  *
- * Produces one PNG per regulation slug in public/previews/.
+ * Produces one WebP per regulation slug in public/previews/.
  * Re-run whenever PDF templates change.
  */
 
@@ -87,7 +87,7 @@ async function renderPage1ToPng(pdfBytes: ArrayBuffer): Promise<Buffer> {
 
   // Get raw pixel data and resize with sharp
   const rawPixels = ctx.getImageData(0, 0, viewport.width, viewport.height);
-  const pngBuffer = await sharp(Buffer.from(rawPixels.data), {
+  const webpBuffer = await sharp(Buffer.from(rawPixels.data), {
     raw: {
       width: viewport.width,
       height: viewport.height,
@@ -95,10 +95,10 @@ async function renderPage1ToPng(pdfBytes: ArrayBuffer): Promise<Buffer> {
     },
   })
     .resize(PREVIEW_WIDTH)
-    .png({ quality: 90, compressionLevel: 8 })
+    .webp({ quality: 85 })
     .toBuffer();
 
-  return pngBuffer;
+  return webpBuffer;
 }
 
 async function main() {
@@ -131,9 +131,9 @@ async function main() {
       const pdfBytes = primaryDoc.doc.output("arraybuffer");
       const pngBuffer = await renderPage1ToPng(pdfBytes);
 
-      const outPath = join(PREVIEW_DIR, `${slug}.png`);
-      writeFileSync(outPath, pngBuffer);
-      console.log(`  OK   ${slug} (${(pngBuffer.length / 1024).toFixed(0)}KB)`);
+      const outPath = join(PREVIEW_DIR, `${slug}.webp`);
+      writeFileSync(outPath, webpBuffer);
+      console.log(`  OK   ${slug} (${(webpBuffer.length / 1024).toFixed(0)}KB)`);
       success++;
     } catch (err) {
       console.error(`  FAIL ${slug}:`, (err as Error).message);
