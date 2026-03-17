@@ -56,6 +56,7 @@ async function savePurchaseFallback(
   session: Stripe.Checkout.Session,
   formData: Record<string, unknown> | null
 ) {
+  if (!process.env.DATABASE_URL) return; // Database not configured yet
   try {
     const pool = getPool();
     const slug = session.metadata?.regulation ?? null;
