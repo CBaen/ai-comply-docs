@@ -1,6 +1,7 @@
 import crypto from "crypto";
 
-const SECRET = process.env.STRIPE_SECRET_KEY || "fallback-never-use";
+const SECRET = process.env.STRIPE_SECRET_KEY;
+if (!SECRET) throw new Error("STRIPE_SECRET_KEY is not set — delivery tokens cannot be issued.");
 
 export function generateDeliveryToken(sessionId: string): string {
   const payload = sessionId + "|" + Math.floor(Date.now() / 60000); // 1-minute granularity
