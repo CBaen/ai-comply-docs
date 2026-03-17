@@ -1017,24 +1017,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "indiana-icdpa": {
-    name: "Indiana ICDPA",
-    statute: "IC 24-15 (Indiana Consumer Data Protection Act)",
-    lawUrl: "https://iga.in.gov/laws/2024/ic/titles/24#24-15",
     lawLinkText: "Read IC 24-15 on iga.in.gov",
     acknowledgment:
       "I have reviewed IC 24-15 (Indiana Consumer Data Protection Act, P.L. 94-2023) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Assessment",
-      "Consumer Rights Request Procedures",
-      "Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -1059,24 +1046,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "montana-mcdpa": {
-    name: "Montana MCDPA",
-    statute: "MCA \u00A7\u00A7 30-14-2801 through 30-14-2820",
-    lawUrl: "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0280/sections_index.html",
     lawLinkText: "Read MCA \u00A7\u00A7 30-14-2801\u201330-14-2820 on leg.mt.gov",
     acknowledgment:
       "I have reviewed MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384) and understand that these are compliance templates, not legal advice. Montana has the lowest applicability thresholds of any state privacy law (25,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Assessment",
-      "Consumer Rights Request Procedures",
-      "Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -1101,24 +1075,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "kentucky-kcdpa": {
-    name: "Kentucky KCDPA",
-    statute: "KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15)",
-    lawUrl: "https://apps.legislature.ky.gov/record/24RS/hb15.html",
     lawLinkText: "Read HB 15 (KRS Chapter 367) on apps.legislature.ky.gov",
     acknowledgment:
       "I have reviewed KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Assessment",
-      "Consumer Rights Request Procedures",
-      "Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -1143,24 +1104,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "new-jersey-njdpa": {
-    name: "New Jersey NJDPA",
-    statute: "New Jersey Data Protection Act (S332/A1971)",
-    lawUrl: "https://www.njleg.state.nj.us/bill-search/2022/S332",
     lawLinkText: "Read S332 (New Jersey Data Protection Act) on njleg.state.nj.us",
     acknowledgment:
       "I have reviewed the New Jersey Data Protection Act (S332, signed January 16, 2024) and understand that these are compliance templates, not legal advice. The NJDPA is effective January 15, 2025. This is separate from the NJ Law Against Discrimination. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 249,
     skippedSteps: [3],
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
-
-    documents: [
-      "Privacy Notice Template",
-      "Data Protection Assessment",
-      "Consumer Rights Request Procedures",
-      "Opt-Out Documentation",
-      "Data Processing Agreement Template",
-      "Compliance Checklist",
-    ],
     decisions: [
       ["profiling", "Profiling/Automated Decisions"],
       ["targeted_ads", "Targeted Advertising"],
@@ -1186,21 +1134,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── Illinois Add-Ons ─────────────────────────────────────────
   "il-notice-response-kit": {
-    name: "IL Notice & Response Kit",
-    statute: "775 ILCS 5/2-102(L)",
-    lawUrl:
-      "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
     lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
       "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
-    basePrice: 79,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Employee Notification Template",
-      "AI Use Logging Form",
-      "Employee Inquiry Response Form",
-    ],
     decisions: [
       ["hiring", "Hiring"],
       ["employment", "Employment Decisions"],
@@ -1224,21 +1161,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "il-zip-proxy-audit": {
-    name: "IL ZIP Code Proxy Audit Kit",
-    statute: "775 ILCS 5/2-102(L)",
-    lawUrl:
-      "https://www.ilga.gov/legislation/ilcs/fulltext?DocName=077500050K2-102",
     lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
       "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
-    basePrice: 99,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Data Input Audit",
-      "Proxy Analysis Worksheet",
-      "Remediation Plan",
-    ],
     decisions: [
       ["hiring", "Hiring"],
       ["employment", "Employment Decisions"],
@@ -1263,20 +1189,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── Colorado Add-Ons ─────────────────────────────────────────
   "co-appeal-correction-kit": {
-    name: "CO Appeal & Correction Kit",
-    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
-    lawUrl: "https://leg.colorado.gov/bills/sb24-205",
     lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 99,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Appeal Intake Form",
-      "Data Correction Request Form",
-      "Appeal Outcome Letter",
-    ],
     decisions: [
       ["consumer_rights", "Consumer Appeal Rights"],
       ["data_correction", "Data Correction Requests"],
@@ -1300,20 +1216,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "co-ag-reporting-kit": {
-    name: "CO AG Reporting Kit",
-    statute: "C.R.S. \u00A7\u00A7 6-1-1701\u20131707",
-    lawUrl: "https://leg.colorado.gov/bills/sb24-205",
     lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
-    basePrice: 129,
     skippedSteps: [2, 3, 4],
-
-    documents: [
-      "Discrimination Discovery Form",
-      "AG Notification Letter",
-      "Corrective Action Plan",
-    ],
     decisions: [
       ["discrimination_discovery", "Algorithmic Discrimination Discovery"],
       ["ag_notification", "Attorney General Notification"],
