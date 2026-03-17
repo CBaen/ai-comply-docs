@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { REGULATION_CONFIG } from "@/lib/regulation-config";
+import { getRegulation } from "@/data/regulations";
 import type { AISystem, ComplianceFormData } from "@/lib/pdf-types";
 import StepCompanyInfo from "./questionnaire/StepCompanyInfo";
 import StepAISystems from "./questionnaire/StepAISystems";
