@@ -19,10 +19,151 @@ function getResend() {
 const MAX_RECIPIENTS = 3;
 const FROM_ADDRESS = "AI Compliance Documents <noreply@aicompliancedocuments.com>";
 
-const REGULATION_EMAIL: Record<
-  string,
-  { title: string; statute: string; description: string; steps: string[]; reminder: string }
-> = {
+/**
+ * Slim override map — steps only, keyed by slug.
+ * Only populate this when a product's action steps are genuinely distinct
+ * from the generic three-step fallback. All other fields (title, statute,
+ * description, reminder) are derived from regulations.ts via deriveEmailContent().
+ */
+const STEP_OVERRIDES: Record<string, string[]> = {
+  "illinois-hb3773": [
+    "<strong>Post the Employee Notification</strong> where staff can see it — breakroom, intranet, or onboarding packet.",
+    "<strong>Have HR review the Impact Assessment</strong> and designate your Human Oversight contact.",
+    "<strong>File everything.</strong> IDHR can request proof of compliance. These documents are your evidence.",
+  ],
+  "colorado-sb24-205": [
+    "<strong>Review the Risk Management Policy</strong> with your compliance team and assign responsible parties.",
+    "<strong>Complete the Impact Assessment</strong> for each high-risk AI system you deploy.",
+    "<strong>Post the Consumer Notice &amp; Transparency Statement</strong> on your website.",
+    "<strong>File everything.</strong> The Colorado AG can request proof of compliance. These documents are your evidence.",
+  ],
+  "nyc-local-law-144": [
+    "<strong>Review the Bias Audit Report Template</strong> with your independent auditor before scheduling your annual audit.",
+    "<strong>Post the Bias Audit Summary</strong> on your website at least 10 business days before using each AEDT, per DCWP rules.",
+    "<strong>Send the Candidate/Employee Notification</strong> before using an AEDT on any job applicant or employee.",
+    "<strong>File everything.</strong> DCWP may request audit documentation. These documents are your evidence of compliance.",
+  ],
+  "texas-tdpsa": [
+    "<strong>Complete the Data Protection Assessment</strong> for each AI system used in profiling, targeted advertising, data sales, or sensitive data processing. Make it available to the Texas AG upon request (\u00A7 541.107(b)).",
+    "<strong>Update your Privacy Notice</strong> to include the consumer rights, opt-out disclosures, and contact information required by \u00A7 541.101.",
+    "<strong>Execute Data Processing Agreements</strong> with each processor that handles Texas consumer personal data, per \u00A7 541.105.",
+    "<strong>File everything.</strong> The Texas AG enforces the TDPSA. These documents demonstrate compliance.",
+  ],
+  "delaware-pdpa": [
+    "<strong>Complete the Data Protection Assessment</strong> for each system used in profiling, targeted advertising, data sales, or sensitive data processing. Make it available to the Delaware AG upon request (\u00A7 12D-109(b)).",
+    "<strong>Update your Privacy Notice</strong> to include the consumer rights, opt-out disclosures, and contact information required by \u00A7 12D-106.",
+    "<strong>Implement Universal Opt-Out recognition</strong> (e.g., Global Privacy Control) as required by \u00A7 12D-106(e), effective January 1, 2026.",
+    "<strong>Execute Data Processing Agreements</strong> with each processor handling Delaware consumer personal data, per \u00A7 12D-108.",
+  ],
+  "virginia-cdpa": [
+    "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Virginia CDPA, including targeted advertising and data sales disclosures (\u00A7 59.1-578(D)).",
+    "<strong>Complete the Data Protection Assessment</strong> for each system that uses profiling for decisions with legal or similarly significant effects (\u00A7 59.1-580(A)(3)).",
+    "<strong>Build your Consumer Rights Request process</strong> using the Procedures template — you have 45 days to respond to consumer requests and must provide an appeals mechanism for denied requests (\u00A7 59.1-578(B)).",
+    "<strong>File everything.</strong> The Virginia AG enforces the CDPA and may request Data Protection Assessments (\u00A7 59.1-580(B)). These documents demonstrate compliance.",
+  ],
+  "connecticut-ctdpa": [
+    "<strong>Update your Privacy Notice</strong> to include the consumer rights and opt-out disclosures required by the Connecticut CTDPA (\u00A7 42-520).",
+    "<strong>Complete the Data Protection Assessment</strong> for each system that uses profiling for decisions with legal or similarly significant effects (\u00A7 42-522(a)(3)).",
+    "<strong>Build your Consumer Rights Request process</strong> using the Procedures template — you have 45 days to respond to consumer requests and must provide an appeals mechanism for denied requests (\u00A7 42-519(b)).",
+    "<strong>File everything.</strong> The Connecticut AG enforces the CTDPA and may request Data Protection Assessments (\u00A7 42-522(c)). These documents demonstrate compliance.",
+  ],
+  "oregon-cpa": [
+    "<strong>Update your Privacy Notice</strong> to include consumer rights, opt-out disclosures, and your children\u2019s data consent practices for consumers aged 13\u201315 (\u00A7 646A.578).",
+    "<strong>Complete the Data Protection Assessment</strong> for each system that uses profiling for decisions with legal or similarly significant effects (\u00A7 646A.586(1)(a)).",
+    "<strong>Build your Consumer Rights Request process</strong> using the Procedures template — you have 45 days to respond to consumer requests and must provide an appeals mechanism for denied requests (\u00A7 646A.576(2)(b)).",
+    "<strong>Implement consent collection</strong> for consumers aged 13\u201315 before processing their data for targeted advertising or data sales (\u00A7 646A.576(1)(c)).",
+  ],
+  "california-ccpa-admt": [
+    "<strong>Publish the Pre-Use ADMT Notice</strong> before using any automated decisionmaking technology on California consumers.",
+    "<strong>Implement your Opt-Out Mechanism</strong> using the documentation template and verify it is accessible and functional.",
+    "<strong>Complete the ADMT Risk Assessment</strong> for each system that makes or substantially assists significant decisions about consumers.",
+    "<strong>Establish your Human Review Process</strong> so consumers can request human review of ADMT-driven decisions.",
+  ],
+  "eu-ai-act": [
+    "<strong>Complete the Risk Management System Documentation</strong> for each high-risk AI system \u2014 this is required before placing a system on the EU market.",
+    "<strong>Prepare Technical Documentation (Annex IV)</strong> for each high-risk system and maintain it throughout the system\u2019s lifecycle.",
+    "<strong>Register your high-risk AI systems</strong> in the EU database using the Registration Documentation template (required before deployment for most Annex III systems).",
+    "<strong>Implement your Post-Market Monitoring Plan</strong> and assign responsibility for ongoing incident reporting and corrective actions.",
+  ],
+  "eeoc-ai-hiring": [
+    "<strong>Run the Adverse Impact Analysis</strong> for each AI hiring tool using the Template \u2014 the EEOC 4/5 (80%) rule is the federal standard under 29 CFR \u00A7 1607.4(D).",
+    "<strong>Complete Job-Relatedness Validation Documentation</strong> for each tool to demonstrate the selection criteria are job-related and consistent with business necessity.",
+    "<strong>Establish Reasonable Accommodation Procedures</strong> before using AI assessments on any applicant or employee.",
+    "<strong>Send the Vendor AI Audit Requirements</strong> to each AI tool vendor and keep their responses on file.",
+  ],
+  "nist-ai-rmf": [
+    "<strong>Start with the AI Risk Management Plan</strong> \u2014 it sets your organization\u2019s overall approach and assigns accountability for each RMF function.",
+    "<strong>Complete the AI System Risk Profile</strong> for each system you operate, using the Map Function Documentation to identify context and risks.",
+    "<strong>Use the Measure Function Documentation</strong> to document your metrics, testing, and evaluation procedures for each system.",
+    "<strong>Implement the Manage Function Documentation</strong> to track risks, assign mitigations, and establish your incident and escalation procedures.",
+  ],
+  "employee-ai-policy": [
+    "<strong>Review the Acceptable Use Policy</strong> with your legal team, then distribute to all employees.",
+    "<strong>Schedule AI training</strong> and use the Training Acknowledgment form to track completion.",
+    "<strong>Make the Incident Reporting Form accessible</strong> &mdash; link it in your intranet, employee handbook, or Slack.",
+  ],
+  "vendor-ai-due-diligence": [
+    "<strong>Send the Due Diligence Questionnaire</strong> to each AI vendor before signing or renewing contracts.",
+    "<strong>Use the Contract Addendum</strong> as a starting point for your legal team to negotiate AI-specific contract terms.",
+    "<strong>Complete the Risk Assessment</strong> for each vendor and file it with your procurement records.",
+    "<strong>Set calendar reminders</strong> for the quarterly and annual monitoring items in the Checklist.",
+  ],
+  "ai-bias-audit-template": [
+    "<strong>Use the Impact Ratio Worksheet</strong> to calculate adverse impact ratios for each protected class.",
+    "<strong>Document results in the Bias Audit Report</strong> &mdash; NYC LL144 requires annual publication of audit summaries.",
+    "<strong>If adverse impact is found,</strong> use the Remediation Plan to document corrective actions and timelines.",
+  ],
+  "ai-incident-response-plan": [
+    "<strong>Assign your Incident Response Team.</strong> Fill in the Roles &amp; Responsibilities section of the Incident Response Plan and make sure every team member has a copy.",
+    "<strong>Print and distribute the Classification Matrix.</strong> Anyone who might identify an AI incident should know how to use it.",
+    "<strong>Store the Incident Report Template</strong> where it\u2019s accessible day or night — your ticketing system, SharePoint, or a shared drive.",
+    "<strong>Schedule your first tabletop exercise.</strong> The plan requires one annually. Set the date now.",
+  ],
+  "ai-governance-framework": [
+    "<strong>Start with the AI Governance Policy.</strong> Have leadership sign it, distribute it to all teams, and make it the anchor document for your AI program.",
+    "<strong>Customize the AI Ethics Principles Statement</strong> to reflect your organization\u2019s values and publish it internally and externally.",
+    "<strong>Apply the Risk Classification Matrix</strong> to every AI system in your inventory. High-risk systems need the most oversight.",
+    "<strong>Route every new AI use case through the Approval Workflow</strong> before deployment. Document each approval.",
+    "<strong>Seat your AI Steering Committee</strong> using the Charter as your founding document. Schedule your first meeting.",
+    "<strong>Assign your AI Compliance Officer</strong> using the Role Description. This role is accountable for everything else on this list.",
+  ],
+};
+
+type EmailContent = {
+  title: string;
+  statute: string;
+  description: string;
+  steps: string[];
+  reminder: string;
+};
+
+/**
+ * Derives email content from regulations.ts. Uses STEP_OVERRIDES for
+ * products that have action-specific steps; falls back to generic steps
+ * for all others. Never reads from a separate hardcoded content map.
+ */
+function deriveEmailContent(slug: string): EmailContent {
+  const reg = getRegulation(slug);
+  const name = reg?.shortName || reg?.name || slug;
+  const title = `Your ${name} Compliance Package`;
+  const statute = reg?.citation ?? "";
+  // First ~200 chars of description for the email intro sentence
+  const fullDesc = reg?.description ?? "";
+  const description =
+    fullDesc.length > 200
+      ? fullDesc.slice(0, fullDesc.lastIndexOf(" ", 200)) + "..."
+      : fullDesc;
+  const steps = STEP_OVERRIDES[slug] ?? [
+    `<strong>Review each document</strong> in your ${name} compliance package carefully.`,
+    `<strong>Fill in the form fields</strong> with your company-specific information.`,
+    `<strong>Have your legal team review</strong> the completed documents before implementation.`,
+  ];
+  const reminder = `Keep these documents current. Review annually or when ${name} regulations change.`;
+  return { title, statute, description, steps, reminder };
+}
+
+// Legacy constant kept only as a type anchor — replaced by deriveEmailContent()
+const _UNUSED_REGULATION_EMAIL_REMOVED = true; void _UNUSED_REGULATION_EMAIL_REMOVED;
   "illinois-hb3773": {
     title: "Your Illinois AI Compliance Package",
     statute: "Illinois HB3773 (775 ILCS 5/2-102(L))",
