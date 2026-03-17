@@ -769,21 +769,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "consumer-notice-kit": {
-    name: "Consumer Notice Customization Kit",
-    statute: "Multi-State AI Consumer Disclosure Requirements",
-    lawUrl: "https://www.nist.gov/itl/ai-risk-management-framework",
     lawLinkText: "Review applicable state AI disclosure requirements",
     acknowledgment:
       "I understand that these are disclosure templates, not legal advice. Consumer notice requirements vary by state and context. I should verify applicable disclosure requirements and consult qualified legal counsel.",
-    basePrice: 49,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
-
-    documents: [
-      "Website AI Disclosure Banner",
-      "Email AI Notification Template",
-      "Physical Workplace AI Posting",
-    ],
     decisions: [
       ["customer", "Customer-Facing AI"],
       ["employment", "Employment AI"],
@@ -808,20 +798,10 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "data-mapping-inventory": {
-    name: "Data Mapping & Inventory Kit",
-    statute: "Multi-State Privacy Data Mapping Requirements",
-    lawUrl: "https://cppa.ca.gov/regulations/",
     lawLinkText: "Review CPPA data mapping guidance at cppa.ca.gov",
     acknowledgment:
       "I understand that these are data mapping templates, not legal advice. Data mapping requirements vary by state. I should consult qualified legal counsel before completing any state privacy assessment.",
-    basePrice: 69,
     skippedSteps: [3, 4],
-
-    documents: [
-      "Personal Data Inventory",
-      "AI Data Flow Diagram Template",
-      "Third-Party Data Sharing Register",
-    ],
     decisions: [
       ["profiling", "Consumer Profiling"],
       ["employment", "Employment Decisions"],
@@ -847,21 +827,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "consumer-rights-kit": {
-    name: "Consumer Rights Request Kit",
-    statute: "Multi-State Consumer Rights Requirements",
-    lawUrl: "https://cppa.ca.gov/regulations/",
     lawLinkText: "Review CPPA consumer rights guidance at cppa.ca.gov",
     acknowledgment:
       "I understand that these are consumer rights response templates, not legal advice. Consumer rights requirements and response timelines vary by state. I should consult qualified legal counsel for my specific obligations.",
-    basePrice: 59,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
-
-    documents: [
-      "Consumer Rights Request Intake Form",
-      "Response Letter Templates",
-      "Request Response Timeline Tracker",
-    ],
     decisions: [
       ["profiling", "Consumer Profiling"],
       ["targeted_ads", "Targeted Advertising"],
@@ -887,24 +857,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 1: AI Governance Framework ──────────────────────
   "ai-governance-framework": {
-    name: "AI Governance Framework",
-    statute: "NIST AI RMF Govern Function + CO SB24-205",
-    lawUrl: "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
     lawLinkText: "Review the NIST AI Risk Management Framework 1.0 (PDF)",
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (NIST AI 100-1) referenced in this product. I understand that these are governance framework templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization and jurisdiction.",
-    basePrice: 349,
     skippedSteps: [2, 3, 4],
     gateText: "These templates implement the NIST AI Risk Management Framework. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "AI Governance Policy",
-      "AI Ethics Principles Statement",
-      "AI Risk Classification Matrix",
-      "AI Use Case Approval Workflow",
-      "AI Steering Committee Charter",
-      "AI Compliance Officer Role Description",
-    ],
     decisions: [
       ["hiring", "Hiring & Employment"],
       ["customer_service", "Customer Service & Operations"],
@@ -932,20 +889,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 2: AI System Registry ───────────────────────────
   "ai-system-registry": {
-    name: "AI System Registry",
-    statute: "NIST AI RMF MAP Function",
-    lawUrl: "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook",
     lawLinkText: "Review the NIST AI RMF MAP Function Playbook",
     acknowledgment:
       "I have reviewed the NIST AI RMF MAP Function Playbook referenced in this product. I understand that these are inventory and lifecycle tracking templates, not legal advice. I should consult qualified legal counsel to verify my specific compliance obligations.",
-    basePrice: 199,
     skippedSteps: [3, 4],
     gateText: "These templates reference the NIST AI RMF Playbook. We recommend reviewing the framework before purchasing.",
-
-    documents: [
-      "AI System Inventory Template",
-      "AI System Lifecycle Tracker",
-    ],
     decisions: [
       ["hiring", "Hiring & Employment"],
       ["customer_service", "Customer Service & Operations"],
@@ -973,20 +921,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 3: AI Transparency Report Template ───────────────
   "ai-transparency-report": {
-    name: "AI Transparency Report Template",
-    statute: "EU AI Act Art. 13 + Voluntary Best Practice",
-    lawUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
     lawLinkText: "Review Regulation (EU) 2024/1689 (EU AI Act) on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (EU AI Act) referenced in this product. I understand that these are transparency reporting templates, not legal advice. I should consult qualified legal counsel to verify my specific disclosure and reporting obligations.",
-    basePrice: 149,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
-
-    documents: [
-      "Annual AI Transparency Report Template",
-      "AI System Performance Monitoring Report",
-    ],
     decisions: [
       ["hiring", "Hiring & Employment"],
       ["customer_service", "Customer Service & Operations"],
@@ -1014,20 +953,11 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 4: AI Whistleblower Policy ──────────────────────
   "ai-whistleblower-policy": {
-    name: "AI Whistleblower Policy",
-    statute: "CA SB 53 (2025\u20132026 Session) + Best Practice",
-    lawUrl: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB53",
     lawLinkText: "Review CA SB 53 (2025\u20132026 Session) on leginfo.legislature.ca.gov",
     acknowledgment:
       "I have reviewed the California SB 53 (2025\u20132026 Session) AI whistleblower provisions referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
-    basePrice: 99,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
-
-    documents: [
-      "AI Safety Whistleblower Protection Policy",
-      "Internal AI Concern Reporting Form",
-    ],
     decisions: [
       ["hiring", "Hiring & Employment"],
       ["customer_service", "Customer Service & Operations"],
@@ -1055,20 +985,12 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 5: AI Acceptable Use Policy for Customers ────────
   "customer-ai-aup": {
-    name: "AI Acceptable Use Policy for Customers",
-    statute: "FTC Act \u00A7 5 + EU AI Act Art. 13 + Best Practice",
-    lawUrl: "https://www.ftc.gov/legal-library/browse/policy-statements",
     lawLinkText: "Review FTC AI Joint Statement on ftc.gov",
     acknowledgment:
       "I have reviewed the FTC and EU AI Act guidance referenced in this product. I understand that this is a customer-facing policy template, not legal advice. I should consult qualified legal counsel to verify the policy is appropriate for my products and jurisdiction.",
-    basePrice: 99,
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
     dataInputOptions: DATA_INPUT_OPTIONS_GENERIC,
     gateText: "These templates reference FTC guidance on AI consumer practices. We recommend reviewing the guidance before purchasing.",
-
-    documents: [
-      "Customer AI Acceptable Use Policy",
-    ],
     decisions: [
       ["customer_service", "Customer Service & Support"],
       ["content", "Content Generation & Marketing"],
