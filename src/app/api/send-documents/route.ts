@@ -187,7 +187,7 @@ function buildEmailHtml(
     </div>
     <div style="background:#ffffff;padding:32px 24px;border:1px solid #e2e8f0;border-top:none;">
       <p style="color:#1f2937;font-size:15px;line-height:1.6;margin:0 0 20px;">${greeting}</p>
-      <p style="color:#1f2937;font-size:15px;line-height:1.6;margin:0 0 20px;">Attached are ${companyName}'s ${reg.description}</p>
+      <p style="color:#1f2937;font-size:15px;line-height:1.6;margin:0 0 20px;">Attached are your ${reg.statute ? `${escapeHtml(reg.statute)} ` : ""}compliance documents for ${companyName}.</p>
       <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:8px;padding:16px 20px;margin:0 0 24px;">
         <p style="font-weight:700;color:#1e3a5f;font-size:14px;margin:0 0 8px;">Attached Documents:</p>
         <ul style="margin:0;padding:0 0 0 20px;font-size:14px;">${docList}</ul>

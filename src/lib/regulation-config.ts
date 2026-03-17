@@ -34,7 +34,6 @@ const DATA_INPUT_OPTIONS_GENERIC = [
 
 export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   "illinois-hb3773": {
-    lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
       'I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I understand that IDHR is currently developing implementing rules but has not yet published proposed rules. The notice elements in these templates are best-practice recommendations based on the statutory text. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.',
     addons: [
@@ -76,7 +75,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "colorado-sb24-205": {
-    lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       'I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205, effective June 30, 2026 per SB 25B-004) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.',
     skippedSteps: [3],
@@ -109,7 +107,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "employee-ai-policy": {
-    lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework and EEOC AI guidance referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     skippedSteps: [3],
@@ -141,7 +138,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "vendor-ai-due-diligence": {
-    lawLinkText: "Review the NIST AI RMF Playbook",
     acknowledgment:
       "I have reviewed the NIST AI RMF Playbook and applicable state laws referenced in this product. I understand that these are due diligence templates, not legal advice. I should consult qualified legal counsel for my specific vendor contracts.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -173,7 +169,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "ai-bias-audit-template": {
-    lawLinkText: "Review EEOC AI Guidance",
     acknowledgment:
       "I have reviewed the EEOC AI guidance and NYC LL144 requirements referenced in this product. I understand that these are audit templates, not legal advice. I should consult qualified legal counsel and a qualified auditor for my specific situation.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -205,7 +200,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "ai-incident-response-plan": {
-    lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I have reviewed the NIST AI RMF, California TFAIA, and EU AI Act requirements referenced in this product. I understand that these are incident response templates, not legal advice. I should consult qualified legal counsel for my specific regulatory obligations.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -237,8 +231,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "nyc-local-law-144": {
-    lawLinkText:
-      "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. DCWP began enforcement on July 5, 2023 and may update its rules or guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     decisions: [
@@ -263,7 +255,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "texas-tdpsa": {
-    lawLinkText: "Read Tex. Bus. & Com. Code Ch. 541 on statutes.capitol.texas.gov",
     acknowledgment:
       "I have reviewed Tex. Bus. & Com. Code Ch. 541 (Texas Data Privacy and Security Act, HB 4) and understand that these are compliance templates, not legal advice. The TDPSA has been in effect since July 1, 2024, and includes a permanent 30-day cure period. This is separate from the Texas TRAIGA (HB 149). I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -292,7 +283,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "delaware-pdpa": {
-    lawLinkText: "Read Del. Code tit. 6, ch. 12D on delcode.delaware.gov",
     acknowledgment:
       "I have reviewed Del. Code tit. 6, ch. 12D (Delaware Personal Data Privacy Act, HB 154) and understand that these are compliance templates, not legal advice. The Delaware PDPA has been in effect since January 1, 2025, with the cure period expiring December 31, 2025. Delaware has the lowest compliance thresholds of any state (35,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -321,7 +311,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "multi-state-profiling-assessment": {
-    lawLinkText: "Read Virginia VCDPA (the first state law) on law.lis.virginia.gov",
     acknowledgment:
       "I understand that these are multi-state compliance templates, not legal advice. State privacy laws are enacted independently and may differ in thresholds, cure periods, and specific requirements. I should verify the current status of each state\u2019s law and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -350,7 +339,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "multi-state-employer-ai-disclosure": {
-    lawLinkText: "Read Illinois HB3773 (775 ILCS 5/2-102(L)) on ilga.gov",
     acknowledgment:
       "I understand that these are multi-jurisdiction compliance templates covering IL, NYC, and CO AI employment laws, not legal advice. Each jurisdiction has different requirements, penalties, and enforcement mechanisms. I should verify the current status of each law and consult qualified legal counsel.",
     decisions: [
@@ -380,7 +368,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "virginia-cdpa": {
-    lawLinkText: "Read Va. Code §§ 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code §§ 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. The VCDPA has been in effect since January 1, 2023. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -409,7 +396,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "connecticut-ctdpa": {
-    lawLinkText: "Read Conn. Gen. Stat. §§ 42-515 through 42-525 on cga.ct.gov",
     acknowledgment:
       "I have reviewed Conn. Gen. Stat. §§ 42-515 through 42-525 (Connecticut Data Privacy Act, PA 22-15) and understand that these are compliance templates, not legal advice. The CTDPA has been in effect since July 1, 2023, and the mandatory cure period has expired. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -438,7 +424,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "oregon-cpa": {
-    lawLinkText: "Read ORS §§ 646A.570 through 646A.589 on oregonlegislature.gov",
     acknowledgment:
       "I have reviewed ORS §§ 646A.570 through 646A.589 (Oregon Consumer Privacy Act) and understand that these are compliance templates, not legal advice. The Oregon CPA has been in effect since July 1, 2024, with the cure period expiring January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -468,8 +453,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "minnesota-mcdpa": {
-    lawLinkText:
-      "Read Minn. Stat. \u00A7\u00A7 325M.10\u2013325M.21 on revisor.mn.gov",
     acknowledgment:
       "I have reviewed the Minnesota Consumer Data Privacy Act, Minn. Stat. \u00A7\u00A7 325M.10 through 325M.21. I understand that these are compliance templates, not legal advice. This law is effective July 31, 2025. The 30-day cure period expires January 31, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -498,7 +481,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "california-ccpa-admt": {
-    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations, effective January 1, 2026. I understand that these are compliance templates, not legal advice. The CPPA may update regulations and issue additional guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -529,7 +511,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-ai-act": {
-    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. Member States may adopt additional implementing measures. I should verify the current regulatory status and consult qualified legal counsel.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -560,7 +541,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eeoc-ai-hiring": {
-    lawLinkText: "Read the Uniform Guidelines (29 CFR Part 1607) on eCFR",
     acknowledgment:
       "I have reviewed Title VII of the Civil Rights Act of 1964 (42 USC \u00A7 2000e et seq.) and the Uniform Guidelines on Employee Selection Procedures (29 CFR Part 1607). I understand that these are compliance templates, not legal advice. The EEOC\u2019s AI-specific guidance documents have been modified; previously published technical assistance may no longer be available on eeoc.gov. I should verify the current regulatory status and consult qualified legal counsel.",
     decisions: [
@@ -587,7 +567,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "nist-ai-rmf": {
-    lawLinkText: "Read the NIST AI RMF at airc.nist.gov",
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (AI RMF 1.0, NIST AI 100-1). I understand that these are implementation templates, not legal advice. The AI RMF is a voluntary framework; NIST is a non-regulatory agency. AI RMF 1.0 is currently being revised. I should verify the current version and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -619,7 +598,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "healthcare-ai-compliance": {
-    lawLinkText: "Read HIPAA Privacy Rule (45 CFR Part 164) on eCFR",
     acknowledgment:
       "I have reviewed the HIPAA Privacy Rule (45 CFR Part 164 Subpart E), Security Rule (45 CFR Part 164 Subpart C), and Breach Notification Rule (45 CFR Part 164 Subpart D) as applied to AI processing of protected health information. I understand that these are compliance templates, not legal advice. HHS may issue additional guidance on AI and HIPAA. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -649,7 +627,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "financial-services-ai": {
-    lawLinkText: "Read Regulation B (ECOA) on eCFR",
     acknowledgment:
       "I have reviewed the Equal Credit Opportunity Act (15 USC \u00A7 1691 et seq.) and Regulation B (12 CFR Part 1002), the Fair Credit Reporting Act (15 USC \u00A7 1681 et seq.), and relevant FINRA rules as applied to AI in financial services. I understand that these are compliance templates, not legal advice. SEC, CFPB, and FINRA may issue additional AI-specific guidance. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -680,7 +657,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "manager-ai-training-kit": {
-    lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I understand that these are training and communication templates, not legal advice. I should consult qualified legal counsel for my specific situation.",
     skippedSteps: [3],
@@ -710,7 +686,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "annual-compliance-review": {
-    lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I understand that these are review templates, not legal advice. Laws change. I should verify current regulatory status annually and consult qualified legal counsel.",
     skippedSteps: [3, 4],
@@ -739,7 +714,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "board-ai-summary": {
-    lawLinkText: "Review the NIST AI Risk Management Framework",
     acknowledgment:
       "I understand that these are governance templates, not legal advice. I should consult qualified legal counsel for my specific board reporting obligations.",
     skippedSteps: [3, 4],
@@ -769,7 +743,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "consumer-notice-kit": {
-    lawLinkText: "Review applicable state AI disclosure requirements",
     acknowledgment:
       "I understand that these are disclosure templates, not legal advice. Consumer notice requirements vary by state and context. I should verify applicable disclosure requirements and consult qualified legal counsel.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -798,7 +771,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "data-mapping-inventory": {
-    lawLinkText: "Review CPPA data mapping guidance at cppa.ca.gov",
     acknowledgment:
       "I understand that these are data mapping templates, not legal advice. Data mapping requirements vary by state. I should consult qualified legal counsel before completing any state privacy assessment.",
     skippedSteps: [3, 4],
@@ -827,7 +799,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "consumer-rights-kit": {
-    lawLinkText: "Review CPPA consumer rights guidance at cppa.ca.gov",
     acknowledgment:
       "I understand that these are consumer rights response templates, not legal advice. Consumer rights requirements and response timelines vary by state. I should consult qualified legal counsel for my specific obligations.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -857,7 +828,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 1: AI Governance Framework ──────────────────────
   "ai-governance-framework": {
-    lawLinkText: "Review the NIST AI Risk Management Framework 1.0 (PDF)",
     acknowledgment:
       "I have reviewed the NIST AI Risk Management Framework (NIST AI 100-1) referenced in this product. I understand that these are governance framework templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization and jurisdiction.",
     skippedSteps: [2, 3, 4],
@@ -889,7 +859,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 2: AI System Registry ───────────────────────────
   "ai-system-registry": {
-    lawLinkText: "Review the NIST AI RMF MAP Function Playbook",
     acknowledgment:
       "I have reviewed the NIST AI RMF MAP Function Playbook referenced in this product. I understand that these are inventory and lifecycle tracking templates, not legal advice. I should consult qualified legal counsel to verify my specific compliance obligations.",
     skippedSteps: [3, 4],
@@ -921,7 +890,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 3: AI Transparency Report Template ───────────────
   "ai-transparency-report": {
-    lawLinkText: "Review Regulation (EU) 2024/1689 (EU AI Act) on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (EU AI Act) referenced in this product. I understand that these are transparency reporting templates, not legal advice. I should consult qualified legal counsel to verify my specific disclosure and reporting obligations.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -953,7 +921,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 4: AI Whistleblower Policy ──────────────────────
   "ai-whistleblower-policy": {
-    lawLinkText: "Review CA SB 53 (2025\u20132026 Session) on leginfo.legislature.ca.gov",
     acknowledgment:
       "I have reviewed the California SB 53 (2025\u20132026 Session) AI whistleblower provisions referenced in this product. I understand that these are policy templates, not legal advice. I should consult qualified legal counsel to verify applicability to my organization.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -985,7 +952,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── PRODUCT 5: AI Acceptable Use Policy for Customers ────────
   "customer-ai-aup": {
-    lawLinkText: "Review FTC AI Joint Statement on ftc.gov",
     acknowledgment:
       "I have reviewed the FTC and EU AI Act guidance referenced in this product. I understand that this is a customer-facing policy template, not legal advice. I should consult qualified legal counsel to verify the policy is appropriate for my products and jurisdiction.",
     oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
@@ -1017,7 +983,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "indiana-icdpa": {
-    lawLinkText: "Read IC 24-15 on iga.in.gov",
     acknowledgment:
       "I have reviewed IC 24-15 (Indiana Consumer Data Protection Act, P.L. 94-2023) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -1046,7 +1011,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "montana-mcdpa": {
-    lawLinkText: "Read MCA \u00A7\u00A7 30-14-2801\u201330-14-2820 on leg.mt.gov",
     acknowledgment:
       "I have reviewed MCA \u00A7\u00A7 30-14-2801 through 30-14-2820 (Montana Consumer Data Privacy Act, SB 384) and understand that these are compliance templates, not legal advice. Montana has the lowest applicability thresholds of any state privacy law (25,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -1075,7 +1039,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "kentucky-kcdpa": {
-    lawLinkText: "Read HB 15 (KRS Chapter 367) on apps.legislature.ky.gov",
     acknowledgment:
       "I have reviewed KRS Chapter 367 (Kentucky Consumer Data Protection Act, HB 15) and understand that these are compliance templates, not legal advice. This law is effective January 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -1104,7 +1067,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "new-jersey-njdpa": {
-    lawLinkText: "Read S332 (New Jersey Data Protection Act) on njleg.state.nj.us",
     acknowledgment:
       "I have reviewed the New Jersey Data Protection Act (S332, signed January 16, 2024) and understand that these are compliance templates, not legal advice. The NJDPA is effective January 15, 2025. This is separate from the NJ Law Against Discrimination. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [3],
@@ -1134,7 +1096,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── Illinois Add-Ons ─────────────────────────────────────────
   "il-notice-response-kit": {
-    lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
       "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1161,7 +1122,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "il-zip-proxy-audit": {
-    lawLinkText: "Read 775 ILCS 5/2-102 on ilga.gov",
     acknowledgment:
       "I have reviewed 775 ILCS 5/2-102(L) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status at dhr.illinois.gov and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1189,7 +1149,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── Colorado Add-Ons ─────────────────────────────────────────
   "co-appeal-correction-kit": {
-    lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1216,7 +1175,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "co-ag-reporting-kit": {
-    lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1243,7 +1201,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "co-dev-deploy-exchange": {
-    lawLinkText: "Read SB 24-205 on leg.colorado.gov",
     acknowledgment:
       "I have reviewed C.R.S. \u00A7\u00A7 6-1-1701 through 6-1-1707 (Colorado SB 24-205) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1271,7 +1228,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── California Add-Ons ────────────────────────────────────────
   "ca-admt-notice-optout": {
-    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1298,7 +1254,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "ca-admt-access-kit": {
-    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s Automated Decisionmaking Technology (ADMT) regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1325,7 +1280,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "ca-cyber-audit-kit": {
-    lawLinkText: "Read the CPPA ADMT regulations at cppa.ca.gov",
     acknowledgment:
       "I have reviewed the California Consumer Privacy Act (Cal. Civ. Code \u00A7 1798.100 et seq.) and the CPPA\u2019s cybersecurity audit regulations. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1353,8 +1307,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── NYC Add-Ons ──────────────────────────────────────────────
   "nyc-bias-audit-mgmt": {
-    lawLinkText:
-      "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1380,8 +1332,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "nyc-candidate-notice-kit": {
-    lawLinkText:
-      "Read NYC Admin Code \u00A7\u00A7 20-870\u201320-874 on NYC Council",
     acknowledgment:
       "I have reviewed NYC Administrative Code \u00A7\u00A7 20-870 through 20-874 (Local Law 144 of 2021) and the DCWP implementing rules at 6 RCNY \u00A7 5-300 et seq. I understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1408,7 +1358,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── Virginia Add-Ons ─────────────────────────────────────────
   "va-consumer-rights-kit": {
-    lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1435,7 +1384,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "va-profiling-assessment-kit": {
-    lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1462,7 +1410,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "va-controller-processor-kit": {
-    lawLinkText: "Read Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 on law.lis.virginia.gov",
     acknowledgment:
       "I have reviewed Va. Code \u00A7\u00A7 59.1-575 through 59.1-584 (Virginia Consumer Data Protection Act) and understand that these are compliance templates, not legal advice. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1490,7 +1437,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
   },
   // ── EU Add-Ons ───────────────────────────────────────────────
   "eu-fria-kit": {
-    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1517,7 +1463,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-post-market-kit": {
-    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1544,7 +1489,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-human-oversight-kit": {
-    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1571,7 +1515,6 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
     },
   },
   "eu-registration-transparency": {
-    lawLinkText: "Read Regulation (EU) 2024/1689 on EUR-Lex",
     acknowledgment:
       "I have reviewed Regulation (EU) 2024/1689 (the EU Artificial Intelligence Act). I understand that these are compliance templates, not legal advice. This regulation has phased effective dates from February 2025 through August 2026. I should verify the current regulatory status and consult qualified legal counsel.",
     skippedSteps: [2, 3, 4],
@@ -1608,5 +1551,5 @@ export function getFullConfig(slug: string) {
   const reg = getRegulation(slug);
   const config = REGULATION_CONFIG[slug];
   if (!reg || !config) return null;
-  return { ...reg, ...config };
+  return { ...config, ...reg };
 }

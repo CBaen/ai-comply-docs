@@ -307,6 +307,9 @@ export default function Questionnaire({
       : regPrice;
 
   if (!config) return null;
+  if (!reg) {
+    return <div className="text-red-600 p-4">Product configuration error. Please contact support.</div>;
+  }
 
   return (
     <div id="generator" className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
@@ -464,7 +467,7 @@ export default function Questionnaire({
               regulationName={regulationName}
               statute={reg?.citation ?? ""}
               lawUrl={reg?.citationUrl ?? ""}
-              lawLinkText={config.lawLinkText ?? reg?.lawLinkText ?? ""}
+              lawLinkText={reg?.lawLinkText ?? ""}
               acknowledgment={config.acknowledgment}
               basePrice={regPrice}
               documents={reg?.documents ?? []}
