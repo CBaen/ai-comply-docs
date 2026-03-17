@@ -735,6 +735,32 @@ const REGULATION_EMAIL: Record<
     reminder:
       "EU AI Act Article 49 requires providers of high-risk AI systems to register in the EU database before placing systems on the market. Article 13 requires transparency obligations including instructions for use that enable deployers to understand and operate the system effectively.",
   },
+  "education-k12-ai": {
+    title: "Your K-12 Education AI Compliance Package",
+    statute: "FERPA + COPPA (amended) + SOPIPA",
+    description:
+      "AI compliance documentation for K-12 school districts and EdTech companies, covering FERPA, amended COPPA obligations, student data AI use policies, and parent notification requirements.",
+    steps: [
+      "<strong>Review each document</strong> in your K-12 Education AI compliance package carefully.",
+      "<strong>Fill in the form fields</strong> with your institution-specific information, including AI systems in use and student data handling practices.",
+      "<strong>Have your legal team review</strong> the completed documents before implementation, particularly given the April 2026 COPPA deadline.",
+    ],
+    reminder:
+      "The amended COPPA rule has a compliance deadline of April 22, 2026. FERPA obligations apply continuously. Review annually or when applicable regulations change.",
+  },
+  "hr-recruiting-ai": {
+    title: "Your HR & Recruiting AI Compliance Bundle",
+    statute: "EEOC + NYC LL144 + IL HB3773 + CO SB205",
+    description:
+      "comprehensive AI compliance documentation for HR departments and recruiting firms, consolidating requirements from EEOC, NYC LL144, Illinois HB3773, and Colorado SB205 into a unified compliance program.",
+    steps: [
+      "<strong>Review each document</strong> in your HR & Recruiting AI compliance bundle.",
+      "<strong>Fill in the form fields</strong> with your company-specific information, including AI tools used in hiring and affected jurisdictions.",
+      "<strong>Have your legal team review</strong> the completed documents before deployment, given multi-jurisdiction exposure.",
+    ],
+    reminder:
+      "This bundle covers active obligations across multiple jurisdictions. NYC LL144 annual bias audits and Illinois HB3773 employee notifications are live enforcement obligations. Review annually or when any covered law changes.",
+  },
 };
 
 function buildEmailHtml(
@@ -745,7 +771,22 @@ function buildEmailHtml(
 ) {
   companyName = escapeHtml(companyName);
   contactName = contactName ? escapeHtml(contactName) : "";
-  const reg = REGULATION_EMAIL[regulation] || REGULATION_EMAIL["illinois-hb3773"];
+  let reg = REGULATION_EMAIL[regulation];
+  if (!reg) {
+    console.warn(`[send-documents] No REGULATION_EMAIL entry for slug: "${regulation}" — using generic fallback`);
+    const regData = getRegulation(regulation);
+    reg = {
+      title: `Your ${regData?.name || regulation} Compliance Package`,
+      statute: regData?.citation || "",
+      description: `compliance documentation for your ${regData?.shortName || regulation} package. Review each document with your legal team before deployment.`,
+      steps: [
+        `<strong>Review each document</strong> in your ${regData?.shortName || regulation} compliance package.`,
+        `<strong>Fill in the form fields</strong> with your company-specific information.`,
+        `<strong>Have your legal team review</strong> the completed documents before implementation.`,
+      ],
+      reminder: `Keep these documents current. Review annually or when ${regData?.shortName || "applicable"} regulations change.`,
+    };
+  }
   const greeting = contactName ? `Hi ${contactName},` : "Hi,";
   const docList = documentNames
     .map((name) => `<li style="padding:4px 0;color:#374151;">${escapeHtml(name)}</li>`)
@@ -832,9 +873,39 @@ export async function POST(request: Request) {
   }
 
   try {
-    const attachments = documents.map(
-      (doc: { filename: string; base64: string }) => ({
-        filename: doc.filename,
+    // Validate and sanitize each document before attaching.
+    const MAX_FILENAME_LENGTH = 200;
+    const MAX_BASE64_BYTES = 5 * 1024 * 1024; // 5MB per document
+    for (const doc of documents as { filename: string; base64: string }[]) {
+      if (typeof doc.filename !== "string" || typeof doc.base64 !== "string") {
+        return NextResponse.json({ error: "Invalid document format" }, { status: 400 });
+      }
+      // Strip path separators and enforce .pdf extension
+      const safeName = doc.filename.replace(/[/\\]/g, "");
+      if (!safeName.toLowerCase().endsWith(".pdf")) {
+        return NextResponse.json(
+          { error: `Document filename must end with .pdf: ${safeName}` },
+          { status: 400 }
+        );
+      }
+      if (safeName.length > MAX_FILENAME_LENGTH) {
+        return NextResponse.json(
+          { error: `Document filename too long (max ${MAX_FILENAME_LENGTH} chars)` },
+          { status: 400 }
+        );
+      }
+      // base64 string length ≈ (bytes * 4/3); check against 5MB decoded limit
+      if (doc.base64.length > Math.ceil(MAX_BASE64_BYTES * (4 / 3))) {
+        return NextResponse.json(
+          { error: `Document "${safeName}" exceeds 5MB size limit` },
+          { status: 400 }
+        );
+      }
+    }
+
+    const attachments = (documents as { filename: string; base64: string }[]).map(
+      (doc) => ({
+        filename: doc.filename.replace(/[/\\]/g, ""),
         content: doc.base64,
       })
     );
@@ -846,13 +917,17 @@ export async function POST(request: Request) {
         .replace(/\.pdf$/i, "")
     );
 
-    const reg =
-      REGULATION_EMAIL[regulation] || REGULATION_EMAIL["illinois-hb3773"];
+    const emailEntry = REGULATION_EMAIL[regulation];
+    if (!emailEntry) {
+      console.warn(`[send-documents] No REGULATION_EMAIL entry for slug: "${regulation}" — subject will use generic fallback`);
+    }
+    const regData = emailEntry ? null : getRegulation(regulation);
+    const emailTitle = emailEntry?.title ?? `Your ${regData?.name || regulation} Compliance Package`;
     const resend = getResend();
     const { error } = await resend.emails.send({
       from: FROM_ADDRESS,
       to: emails,
-      subject: `${reg.title} — ${companyName}`,
+      subject: `${emailTitle} — ${companyName}`,
       html: buildEmailHtml(companyName, documentNames, contactName, regulation),
       attachments,
     });

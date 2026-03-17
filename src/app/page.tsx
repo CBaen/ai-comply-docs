@@ -47,7 +47,7 @@ function OrganizationStructuredData() {
   return <script type="application/ld+json">{data}</script>;
 }
 
-function FAQStructuredData() {
+function FAQStructuredData({ readyCount }: { readyCount: number }) {
   const data = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -81,7 +81,7 @@ function FAQStructuredData() {
         name: "What AI regulations do you cover?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer 53 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
+          text: `We offer ${readyCount} compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.`,
         },
       },
       {
