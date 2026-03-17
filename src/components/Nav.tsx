@@ -122,13 +122,13 @@ export default function Nav() {
             >
               How It Works
             </a>
-            <a
-              href="/#products"
+            <Link
+              href="/products"
               className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
               onClick={() => setMobileOpen(false)}
             >
               Products
-            </a>
+            </Link>
             <Link
               href="/blog"
               className="flex items-center min-h-[44px] text-gray-600 hover:text-blue-700 text-sm font-medium border-b border-gray-100 py-2"
