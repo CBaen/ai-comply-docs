@@ -1059,5 +1059,17 @@ export async function generateDocumentsInner(
     ];
   }
 
+  if (data.regulation === "illinois-hb3773") {
+    const il = await import("./pdf-illinois");
+    return [
+      { doc: il.generateNotificationLetter(data), name: `${companySlug}_IL_Employee_AI_Notification.pdf` },
+      { doc: il.generateSystemInventory(data), name: `${companySlug}_IL_AI_System_Inventory.pdf` },
+      { doc: il.generateImpactAssessment(data), name: `${companySlug}_IL_AI_Impact_Assessment.pdf` },
+      { doc: il.generateOversightProtocol(data), name: `${companySlug}_IL_Human_Oversight_Protocol.pdf` },
+      { doc: il.generateComplianceChecklist(data), name: `${companySlug}_IL_Compliance_Checklist.pdf` },
+      { doc: il.generateAccommodationForm(data), name: `${companySlug}_IL_Accommodation_Request_Form.pdf` },
+    ];
+  }
+
   throw new Error(`No PDF generator found for regulation "${data.regulation}". Add a case to generateDocumentsInner.`);
 }
