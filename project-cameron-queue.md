@@ -1,26 +1,38 @@
 # AI Compliance Documents — Work Queue
-## Updated: 2026-03-15 (end of session — Document Sync + Responsive Overhaul + SEO/AEO)
+## Updated: 2026-03-16 (end of session — Analytics, Accessibility, Security Hardening, Sample Previews)
 
 ## CRITICAL (Revenue/Operations)
 
-- [x] Mobile view dedicated audit — DONE. 14 parallel fix teams audited and fixed every page. ~63 issues resolved across ~20 files. Carousel, nav, footer, homepage, blog, products, questionnaire, FAQ, about, state comparison, quiz, privacy, terms all responsive.
+- [x] Checkout auth() bug fixed — was hanging when DATABASE_URL not set (this session)
+- [x] Neon PostgreSQL connected — tables created, Vercel env vars configured (this session)
+- [ ] **Rate limiting on /contact and /send-documents** — needs Upstash Redis. Both endpoints are open to abuse without it. No infrastructure in place.
+- [ ] **Delivery token single-use enforcement** — DB schema exists, enforcement logic not written. A token can currently be reused to re-download files.
+- [ ] **Customer account center end-to-end test** — database is now connected. Test a real purchase: webhook fires, download link appears in account center.
 - [ ] Split product documents onto separate hidden review pages per product — browser Claude needs to audit the actual generated document content for each of the 53 products individually
-- [x] Blog enrichment YAML for articles 1-6 — DONE. All 6 original posts (IL, CA, VA, CO, CT, Hiring) now have summary, deepDive, microFacts, and externalReferences with verified source URLs. 6 of 12 total enriched. Remaining 6 (Cost, Bias Audit, EU AI Act, Penalties, HIPAA, ISO 42001) need browser Claude.
 - [ ] Resend domain verification — confirm email delivery is actually working end-to-end. Test with a real purchase.
 
-## HIGH (Trust & Conversion)
+## HIGH (Security + Architecture)
 
-- [ ] Document sample previews (redacted) on product pages — #1 trust gap per research. Buyers can't see what they're purchasing. Generate a sample first page for each product type, redact fillable fields, display as image on product page.
-- [ ] Questionnaire step 3/4 mismatch — hiring-specific language (bias audits, candidate screening) shows for ALL products including vendor due diligence and incident response. Add `skippedSteps` config or conditional rendering.
-- [ ] Law gate softening for non-law products — NIST, EEOC products force customers to click out to a 100-page federal framework doc before checkout. Soften to "please review" with checkbox available immediately for framework-based products.
+- [ ] **formData validation with Zod on verify-payment** — no schema validation on the payment verification route. Add Zod schema.
+- [ ] **Nav refactor to server component** — nav is currently a client component, preventing full RSC optimization. Flagged in code review, deferred due to scope.
+- [ ] **Email metadata consolidation** — three separate sources for product metadata in email templates. Consolidate to one source of truth (regulations.ts).
+- [ ] **fal.ai key rotation** — key was in git history. Cameron evaluating provider alternatives. Do not use until resolved.
 - [ ] Stripe badge/logo in trust bar — currently text-only "Secure checkout via Stripe." Replace with actual Stripe logo for brand recognition.
 - [ ] Colorado consumer opt-out right (§6-1-1703(3)) — browser Claude review identified this is NOT covered by any existing product. Consider adding to Appeal & Correction Kit or creating separate small product.
 
+## HIGH (Trust & Conversion)
+
+- [x] Document sample previews on all 53 product pages — WebP generated from real PDFs, 63% smaller than PNG (this session)
+- [ ] Questionnaire step 3/4 mismatch — hiring-specific language (bias audits, candidate screening) shows for ALL products including vendor due diligence and incident response. Add `skippedSteps` config or conditional rendering.
+- [ ] Law gate softening for non-law products — NIST, EEOC products force customers to click out to a 100-page federal framework doc before checkout. Soften to "please review" with checkbox available immediately for framework-based products.
+
 ## MEDIUM (Content & SEO)
 
+- [ ] CA ADMT Jan 2027 date — needs browser Claude verification
+- [ ] FRIA Kit scope — needs browser Claude verification
 - [ ] Blog style guide document — document voice, structure, enrichment blocks, image requirements, internal linking rules. Reference for browser Claude when writing new articles.
 - [ ] More blog content — AEO research identified gaps: "Do I Need AI Compliance?" decision guide article (separate from quiz page), state AI law master tracker expansion, free downloadable resource/checklist
-- [x] Blog post images — all 12 hero images exist and are wired into posts with responsive layout (image left, text right on desktop; stacks on mobile)
+- [x] Blog post images — all 12 hero images exist and are wired into posts with responsive layout
 - [ ] Per-post og:image — each blog post should have its own OG image for social sharing instead of the site-wide default
 
 ## MEDIUM (External Presence)
@@ -38,7 +50,6 @@
 
 ## LOW (Polish)
 
-- [x] 3 remaining static checkbox fixes — DONE. All interactive now.
 - [ ] Dark mode toggle removal consideration — research flagged it as "startup side project" signal on a compliance site
 - [ ] "Reviewed by" or "In collaboration with" credit — if Cameron can get one licensed attorney to review templates, it transforms credibility
 - [ ] BBB accreditation ($400-$1,200/year) — skip for now per research. Not worth it at this stage for a digital product.
@@ -57,13 +68,41 @@
 
 ## COMPLETED (Previous Sessions + This Session)
 
+### This Session (2026-03-16)
+- [x] GA4 + server-side purchase tracking via Measurement Protocol wired up
+- [x] Contact page built (/contact) — Resend-powered, honeypot spam protection, CRLF prevention
+- [x] /regulations renamed to /products — 168 references, 34 files, 301 redirect in next.config.js
+- [x] Accessibility audit (5 teams, ~90 issues found) + all fixes applied (5 teams)
+- [x] PDF margin fixes — header wrapping, footer sizing, form field font consistency
+- [x] About page rewritten — founder identity removed, methodology-focused, faceless corporation
+- [x] Penalty display: both tiers shown for CA and IL (not just the scary number)
+- [x] Sample document previews on all 53 product pages — WebP, generated from real PDFs
+- [x] Checkout auth() bug fixed — was hanging when DATABASE_URL not set
+- [x] Neon PostgreSQL database connected — tables created, Vercel env vars configured
+- [x] 5-pass code review completed (security, simplicity, architecture, performance, silent failures)
+- [x] Security: delivery token now throws on missing secret (was silently broken)
+- [x] Security: contact form input validation hardened
+- [x] Security: error boundaries added
+- [x] Security: CRLF prevention on all user inputs
+- [x] Performance: JSZip moved to dynamic import (was 100KB+ shipping to every visitor)
+- [x] Performance: build-time preview check moved to module scope (was per-request filesystem call)
+- [x] Performance: logo image optimized
+- [x] Performance: all previews converted from PNG to WebP (63% smaller)
+- [x] Simplicity: shared getStripe() helper created
+- [x] Simplicity: ROLE_LABELS deduplicated
+- [x] Simplicity: handler consolidation
+- [x] Stripe secret key rotated (was in git history)
+- [x] Resend API key rotated (was in git history)
+
+### Previous Sessions
+- [x] Mobile view dedicated audit — 14 parallel fix teams, ~63 issues resolved across ~20 files
+- [x] Blog enrichment YAML for all 12 posts
+- [x] Art of War annotated layout
 - [x] Checkout route fixed (was broken for 32/34 products)
 - [x] Checkout generalized for multiple add-ons
 - [x] 17 law-specific add-on products built, audited, reviewed, and activated
 - [x] Stripe products created for all 17 add-ons
 - [x] 12 blog posts published with hero images
-- [x] Blog enrichment template (summary, deep dive, micro facts, references)
-- [x] 2 blog posts enriched with YAML blocks
 - [x] Product carousel on homepage
 - [x] Search bar on product catalog
 - [x] "Not sure where to start?" guide
@@ -73,54 +112,30 @@
 - [x] 35 product descriptions rewritten (situation-first)
 - [x] Document explanations on all product pages
 - [x] 54 signature blocks added
-- [x] Homepage reordered, methodology section, founder callout
-- [x] Cameron's photo and bio on About page
+- [x] Homepage reordered, methodology section
 - [x] Trust badges, ESIGN statement, verified statute badges
 - [x] Dynamic OG image
 - [x] All schemas (BlogPosting, Product, ItemList, FAQPage, Organization)
 - [x] AEO: llms.txt rebuilt, robots.txt names AI crawlers
 - [x] Internal links across all blog posts
 - [x] Blog guide cards on product pages
-- [x] Deadline banner corrected
 - [x] Product counts updated to 53
 - [x] Triadic audit of add-on products
 - [x] Browser Claude review of add-on products
-- [x] All review findings corrected
 - [x] fal.ai image generation integration
 - [x] Questionnaire friction fixes (progress bar, product summary, cancellation feedback)
 - [x] FAQ and Compare State Laws in nav/footer
-- [x] Global search modal (Cmd+K) with cmdk + MiniSearch — searches products, blog, FAQ
-- [x] Search modal: ESC/X close, body scroll lock, full browsable content on open
-- [x] Blog index fixed — was reading from empty static array, now uses filesystem reader
-- [x] Connecticut CTDPA blog post published
-- [x] Hiring Software / AI Employment Law blog post published
-- [x] Hero text block removed from homepage — carousel is now the hero
-- [x] Blog enrichment YAML added to articles 1-6 (IL, CA, VA, CO, CT, Hiring)
-- [x] Art of War annotated layout — Deep Dive in left margin, Micro Facts in right margin (desktop)
-- [x] Progressive disclosure cards for annotations on mobile
-- [x] Blog post header: image left, text right (desktop), stacks on mobile
-- [x] Blog index cards now show hero images
-- [x] Founder photo: circular frame with slate background on About + homepage
-- [x] Dark mode toggle: visible colors in both light and dark mode (desktop + mobile)
-- [x] React hydration error #418 fixed (removed unused Tailwind dark: classes, added suppressHydrationWarning)
-- [x] Site-wide responsive overhaul — 14 parallel teams, ~63 issues, ~20 files
-- [x] Deadline banner text overflow fixed on mobile
+- [x] Global search modal (Cmd+K) with cmdk + MiniSearch
+- [x] Google Search Console: sitemap resubmitted
+- [x] Bing Webmaster Tools: registered, site imported from GSC
+- [x] PyMuPDF installed for PDF reading
+- [x] Questionnaire adapts to product type
+- [x] Oregon citation range fixed
+- [x] EU AI Act €35M/7% prohibited tier added
+- [x] EEOC ADEA threshold corrected (20+ employees, not 15+)
+- [x] Document counts synced (MN, Healthcare, Financial)
+- [x] React hydration error #418 fixed
 - [x] SEO metadata: all titles <60 chars, descriptions <155 chars, canonicals absolute
 - [x] Schemas added: Organization on /about, WebApplication on /quiz, Dataset on state comparison
 - [x] Sitemap: /privacy and /terms added
-- [x] AEO: llms.txt updated to 53 products + 12 posts, robots.ts 11 AI crawlers
-- [x] 5 blog posts got internal product links (penalties, HIPAA, EU AI Act, ISO 42001, bias audit)
-- [x] 16 missing PDF index.ts barrel files created (build was failing)
-- [x] Google Search Console: sitemap resubmitted
-- [x] Bing Webmaster Tools: registered, site imported from GSC
-- [x] Nav: mobile dark mode text visibility fixed
-- [x] PyMuPDF installed for PDF reading
-- [x] Business documents copied to project directory
-- [x] Questionnaire adapts to product type — 25 products get generic oversight language, 9 get generic data inputs, 11 get honest framework gate text
-- [x] Oregon citation range fixed (§§646A.570-589) and penalty statute (§646A.589) across 9 files
-- [x] EU AI Act €35M/7% prohibited tier added to email templates and board summary
-- [x] EEOC ADEA threshold corrected (20+ employees, not 15+)
-- [x] Document counts synced: Minnesota (5→6), Healthcare (6→8), Financial (7→8)
-- [x] Organization schema: logo field added
-- [x] Blog index fixed to read from filesystem (was empty static array)
-- [x] Search modal added to nav (cmdk + MiniSearch)
+- [x] 16 missing PDF index.ts barrel files created
