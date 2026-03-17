@@ -3,10 +3,8 @@ import Stripe from "stripe";
 import { getPool } from "@/lib/db";
 
 // Stripe requires the raw body for signature verification.
-// Next.js App Router: request.text() returns the raw body before any parsing.
-export const config = {
-  api: { bodyParser: false },
-};
+// Next.js App Router handles this natively — request.text() returns raw body.
+// No config needed (bodyParser config is a Pages Router pattern).
 
 function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!, {
