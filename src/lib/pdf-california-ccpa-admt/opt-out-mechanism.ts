@@ -136,13 +136,20 @@ export function generateOptOutMechanism(data: ComplianceFormData): jsPDF {
 
   y = addWrappedText(
     doc,
-    "I am a California resident and I request to opt out of the use of automated decision-making technology (ADMT) in connection with decisions that may have legal or similarly significant effects on me. I understand that my request will be processed within [15] business days of verification.",
+    "I am a California resident and I request to opt out of the use of automated decision-making technology (ADMT) in connection with decisions that may have legal or similarly significant effects on me. I understand that my request will be processed within the following number of business days of verification:",
     MARGIN,
     y,
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
-  y += 4;
+  y = addFormTextField(
+    doc,
+    "form_processing_days",
+    "Processing timeline (business days):",
+    y,
+    { width: 80 }
+  );
+  y += 2;
   y = addFormTextField(doc, "form_signature", "Signature:", y, { width: 100 });
   y = addFormTextField(doc, "form_date", "Date:", y, { width: 60 });
   y += LINE_HEIGHT;

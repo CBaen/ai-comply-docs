@@ -520,7 +520,8 @@ export function addFormTextField(
     doc.setFont("helvetica", "normal");
     doc.setTextColor(120, 120, 120);
     doc.text(label, fieldX, y);
-    y += LINE_HEIGHT - 1;
+    // 2mm gap between label bottom and field box top (was LINE_HEIGHT - 1 = 5mm with no gap)
+    y += LINE_HEIGHT + 2;
     doc.setTextColor(0);
   }
 
@@ -529,7 +530,7 @@ export function addFormTextField(
   doc.setFillColor(245, 245, 245);
   doc.setDrawColor(210, 210, 210);
   doc.setLineWidth(0.3);
-  doc.roundedRect(fieldX, y - 1, fieldWidth, fieldHeight + 2, 1, 1, "FD");
+  doc.roundedRect(fieldX, y, fieldWidth, fieldHeight, 1, 1, "FD");
 
   doc.setFontSize(BODY_SIZE);
   doc.setFont("helvetica", "normal");
@@ -547,7 +548,7 @@ export function addFormTextField(
       field.Rect = [fieldX, y, fieldWidth, boxH];
       field.multiline = true;
       doc.addField(field);
-      y += boxH + 2;
+      y += boxH + 4;
     } else {
       field.Rect = [fieldX, y, fieldWidth, 8];
       if (o.prefill) {
@@ -555,7 +556,7 @@ export function addFormTextField(
         if (o.readOnly) field.readOnly = true;
       }
       doc.addField(field);
-      y += 10;
+      y += 12;
     }
   } else {
     const lineCount = o.multiline ? o.lines || 4 : 1;
@@ -564,6 +565,7 @@ export function addFormTextField(
       doc.line(fieldX + 2, y + 3 + i * (LINE_HEIGHT + 2), fieldX + fieldWidth - 2, y + 3 + i * (LINE_HEIGHT + 2));
       y += LINE_HEIGHT + 2;
     }
+    y += 4;
   }
   return y;
 }

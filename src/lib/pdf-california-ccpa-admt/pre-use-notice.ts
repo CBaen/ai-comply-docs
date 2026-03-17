@@ -53,6 +53,21 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
     LINE_HEIGHT
   );
   y += 4;
+  // Map questionnaire decision keys to CCPA decision category labels
+  const CCPA_DECISION_MAP: Record<string, string[]> = {
+    "Financial or credit decisions": ["financial"],
+    "Housing or rental decisions": ["housing"],
+    "Insurance decisions": ["insurance"],
+    "Employment or independent contractor decisions": [
+      "employment", "hiring", "recruitment", "promotion",
+      "renewal", "training", "discharge", "discipline", "tenure", "terms",
+    ],
+    "Education enrollment or opportunity decisions": ["education"],
+    "Access to healthcare services": ["healthcare"],
+  };
+  const allDecisionKeys = [
+    ...new Set(data.aiSystems.flatMap((s) => s.decisions)),
+  ];
   const adtmDecisions = [
     "Financial or credit decisions",
     "Housing or rental decisions",
@@ -65,7 +80,9 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
   ];
   let cbIdx = 0;
   adtmDecisions.forEach((item) => {
-    y = addFormCheckbox(doc, `admt_dec_${cbIdx++}`, item, y);
+    const mappedKeys = CCPA_DECISION_MAP[item] || [];
+    const checked = mappedKeys.some((k) => allDecisionKeys.includes(k));
+    y = addFormCheckbox(doc, `admt_dec_${cbIdx++}`, item, y, { checked });
   });
   y += LINE_HEIGHT;
 
@@ -94,13 +111,20 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
 
   y = addWrappedText(
     doc,
-    `${data.company.name} uses automated decision-making technology (ADMT) in connection with [describe the specific decision or process] that may affect you as a California consumer.`,
+    `${data.company.name} uses automated decision-making technology (ADMT) in connection with the following decision or process that may affect you as a California consumer:`,
     MARGIN,
     y,
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
-  y += 4;
+  y = addFormTextField(
+    doc,
+    "notice_decision_description",
+    "Describe the specific decision or process (required):",
+    y,
+    { multiline: true, lines: 2 }
+  );
+  y += 2;
 
   // AI systems used
   if (data.aiSystems.length > 0) {
@@ -129,13 +153,20 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
   // Logic disclosure
   y = addWrappedText(
     doc,
-    "How ADMT Works: [Describe the logic of the ADMT system in plain language — what data it uses, how it processes that data, and how the output is used in the decision. This must be specific enough for a consumer to understand the significant factors considered.]",
+    "How ADMT Works:",
     MARGIN,
     y,
     CONTENT_WIDTH,
     LINE_HEIGHT
   );
-  y += 4;
+  y = addFormTextField(
+    doc,
+    "notice_admt_logic",
+    "Describe the logic in plain language — what data it uses, how it processes that data, and how the output is used in the decision (required):",
+    y,
+    { multiline: true, lines: 4 }
+  );
+  y += 2;
 
   // Opt-out right
   y = addWrappedText(
@@ -154,7 +185,22 @@ export function generatePreUseNotice(data: ComplianceFormData): jsPDF {
 
   y = addWrappedText(
     doc,
-    `For more information about your privacy rights under California law, see ${data.company.name}'s Privacy Policy at [URL] or contact us at the address above.`,
+    `For more information about your privacy rights under California law, see ${data.company.name}'s Privacy Policy at:`,
+    MARGIN,
+    y,
+    CONTENT_WIDTH,
+    LINE_HEIGHT
+  );
+  y = addFormTextField(
+    doc,
+    "notice_privacy_policy_url",
+    "Privacy Policy URL:",
+    y,
+    { width: 140 }
+  );
+  y = addWrappedText(
+    doc,
+    "or contact us at the address above.",
     MARGIN,
     y,
     CONTENT_WIDTH,
