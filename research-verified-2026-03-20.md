@@ -1,21 +1,20 @@
 # Verified Research — Colorado SB 24-205 — March 20, 2026
 
-## Status: NEEDS CROSS-VERIFICATION on effective date
+## Status: VERIFIED — All facts dual-confirmed
 
 Source: Browser Claude instances visiting primary .gov sources.
 See research-prompts-2026-03-20.md for the prompts used.
 
 ---
 
-## CRITICAL FLAG: Effective Date Discrepancy
+## RESOLVED: Effective Date Confirmed as June 30, 2026
 
-The bill text and AG website both say **February 1, 2026**.
-The site (aicompliancedocuments.com) currently says **June 30, 2026**.
-Prior sibling research cited SB 25B-004 (August 2025 special session) as the delay bill.
-Browser Claude could NOT find SB 25B-004 on leg.colorado.gov.
-
-**THIS MUST BE RESOLVED BEFORE UPDATING THE LANDING PAGE.**
-Cross-verification prompt needed specifically for the delay legislation.
+- Original bill text says February 1, 2026
+- **SB 25B-004** (2025 Extraordinary Session, signed August 28, 2025) delayed it to **June 30, 2026**
+- Verified at: https://leg.colorado.gov/bills/sb25b-004
+- Confirmed by: Moore & Van Allen, Clark Hill, Greenberg Traurig, Baker Botts, Privacy World
+- Note: The AG's website (coag.gov/ai/) STILL says Feb 1, 2026 — it has not been updated
+- The site (aicompliancedocuments.com) already has the correct date
 
 ---
 
