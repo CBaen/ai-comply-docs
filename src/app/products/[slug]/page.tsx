@@ -138,9 +138,8 @@ function StructuredData({ reg }: { reg: { slug: string; name: string; descriptio
     image: `https://aicompliancedocuments.com/previews/${reg.slug}.webp`,
     url: `https://aicompliancedocuments.com/products/${reg.slug}`,
     brand: {
-      "@type": "Organization",
+      "@type": "Brand",
       name: "AI Compliance Documents",
-      url: "https://aicompliancedocuments.com",
     },
     offers: {
       "@type": "Offer",
