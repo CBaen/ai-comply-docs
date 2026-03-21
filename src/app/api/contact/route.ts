@@ -1,11 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
 
 function getResend() {
   return new Resend(process.env.RESEND_API_KEY);
 }
 
 export async function POST(request: Request) {
+  // Rate limit: 5 submissions per 15 minutes per IP
+  const ip = getClientIp(request);
+  const { limited } = rateLimit(`contact:${ip}`, 5, 15 * 60 * 1000);
+  if (limited) {
+    return NextResponse.json(
+      { error: "Too many submissions. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   const body = await request.json();
   const { name, email, company, subject, message, _hp } = body;
 

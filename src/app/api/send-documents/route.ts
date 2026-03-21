@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { validateDeliveryToken } from "@/lib/delivery-token";
 import { getRegulation } from "@/data/regulations";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
 
 function escapeHtml(s: string): string {
   return s
@@ -216,12 +217,34 @@ function buildEmailHtml(
 </html>`;
 }
 
+// Track used delivery tokens in memory — prevents replay within the same instance
+const usedTokens = new Set<string>();
+
 export async function POST(request: Request) {
+  // Rate limit: 3 document sends per 15 minutes per IP
+  const ip = getClientIp(request);
+  const { limited } = rateLimit(`send-docs:${ip}`, 3, 15 * 60 * 1000);
+  if (limited) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   const { emails, documents, companyName, contactName, regulation, deliveryToken, sessionId } =
     await request.json();
 
   if (!deliveryToken || !sessionId || !validateDeliveryToken(sessionId, deliveryToken)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
+  }
+
+  // Single-use enforcement: each sessionId can only send documents once
+  const tokenKey = `${sessionId}:${deliveryToken}`;
+  if (usedTokens.has(tokenKey)) {
+    return NextResponse.json(
+      { error: "Documents have already been sent for this purchase. Check your email." },
+      { status: 409 }
+    );
   }
 
   if (!emails || !Array.isArray(emails) || emails.length === 0) {
@@ -316,6 +339,9 @@ export async function POST(request: Request) {
       console.error("Resend error:", error);
       return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
     }
+
+    // Mark token as used after successful send
+    usedTokens.add(tokenKey);
 
     return NextResponse.json({ sent: true });
   } catch (err) {
