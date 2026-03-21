@@ -56,7 +56,7 @@
 - [ ] Physical contact information — BLOCKED on DBA. Once DBA is filed, 32 N Gould St, Sheridan, WY 82801 can be used.
 - [ ] Free lead magnet — "Which State AI Laws Apply to My Business?" flowchart, gated behind email signup for list building
 
-## BLOCKED (Waiting on DBA Filing)
+## BLOCKED (Waiting on DBA Processing)
 
 - [ ] Bing Places registration
 - [ ] Apple Business Connect (also needs Apple device)
@@ -64,7 +64,7 @@
 - [ ] G2 listing
 - [ ] Any directory requiring business name verification
 
-**Action:** Call Wyoming Registered Agent Services (307-217-4045) Monday. Ask them to file DBA for "AI Compliance Documents" as trade name of Built by Cameron LLC. $100 state fee + service fee. ~15 business days.
+**Action:** DBA filed March 20, 2026 with Wyoming Registered Agent Services. Waiting for processing (~15 business days). Items above remain blocked until processing is complete.
 
 ## COMPLETED (Previous Sessions + This Session)
 
