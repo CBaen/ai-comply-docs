@@ -11,6 +11,22 @@
 - [ ] Split product documents onto separate hidden review pages per product — browser Claude needs to audit the actual generated document content for each of the 53 products individually
 - [ ] Resend domain verification — confirm email delivery is actually working end-to-end. Test with a real purchase.
 
+## NEW — Added 2026-03-20
+
+- [x] Colorado SB 24-205 landing page built — /colorado-ai-compliance, three-column layout with Deep Dive sidebar, Did You Know micro-facts, interactive self-assessment, FAQ, verified statute citations
+- [x] Google Ads research completed — keyword strategy (8 exact-match terms), buyer demographic analysis, platform comparison (Google > LinkedIn > Facebook for B2B compliance)
+- [x] Research prompts for browser Claude — 7 prompts (4 research + 3 cross-verification) for Colorado fact verification, saved to research-prompts-2026-03-20.md
+- [x] Colorado statute facts dual-verified — all facts confirmed against enrolled bill PDF and SB 25B-004 delay legislation
+- [x] Effective date discrepancy resolved — confirmed June 30, 2026 via SB 25B-004 (AG website still shows old Feb 1 date)
+- [x] DBA filed for AI Compliance Documents LLC (March 20, 2026)
+- [x] Google Ads account created, linked to Merchant Center
+- [ ] Google Ads MCP setup (TrueClicks) — for family to manage campaigns
+- [ ] Blog style guide document — in progress
+- [ ] Texas TRAIGA blog post research prompts — in progress
+- [ ] 5 new blog topics identified and prioritized: Texas TRAIGA, NIST AI RMF guide, AI governance checklist, New York AI law, AI healthcare compliance
+- [ ] End-to-end checkout test — verify purchase flow before running ads
+- [ ] Money-back guarantee policy — add to terms page (currently on landing page but not formalized)
+
 ## HIGH (Security + Architecture)
 
 - [ ] **formData validation with Zod on verify-payment** — no schema validation on the payment verification route. Add Zod schema.
@@ -34,6 +50,8 @@
 - [ ] More blog content — AEO research identified gaps: "Do I Need AI Compliance?" decision guide article (separate from quiz page), state AI law master tracker expansion, free downloadable resource/checklist
 - [x] Blog post images — all 12 hero images exist and are wired into posts with responsive layout
 - [ ] Per-post og:image — each blog post should have its own OG image for social sharing instead of the site-wide default
+- [ ] Colorado landing page needs verified research integration — waiting for browser Claude cross-verification results
+- [ ] Google Ads campaign setup — account created, keywords ready, needs landing page deployment first
 
 ## MEDIUM (External Presence)
 
