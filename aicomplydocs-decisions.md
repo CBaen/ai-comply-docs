@@ -1,0 +1,1 @@
+- **2026-03-20** | Colorado landing page uses three-column blog layout with Deep Dive and Did You Know sidebars | Matches the existing blog system visual language. Provides richer, more engaging content than a flat sales page. Two voices (Pragmatic Realist + Precise Credentialist) match the site's established tone. All facts dual-verified from .gov sources.
