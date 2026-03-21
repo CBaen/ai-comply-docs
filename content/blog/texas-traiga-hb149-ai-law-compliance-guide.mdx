@@ -1,0 +1,179 @@
+---
+title: "Texas TRAIGA (HB 149): What the Texas Responsible AI Governance Act Requires and How to Comply"
+slug: "texas-traiga-hb149-ai-law-compliance-guide"
+description: "Texas HB 149, the Responsible AI Governance Act, took effect January 1, 2026. It applies to any AI system — not just high-risk — and covers both developers and deployers with no small-business exemption."
+date: "2026-03-21"
+author: "AI Compliance Documents Team"
+tags: ["Texas", "TRAIGA", "HB 149", "AI governance", "NIST AI RMF", "compliance"]
+published: true
+image: "/blog/blog-hero-texas.png"
+summary: "Texas passed a sweeping AI governance law that took effect January 1, 2026 and applies to businesses of every size — there is no small-business exemption and no high-risk-only carveout. Violations can cost up to $200,000 per incident, but the law also provides a meaningful safe harbor for businesses that build their compliance programs around the NIST AI 600-1 framework."
+deepDive:
+  title: "How TRAIGA Actually Works"
+  content: "Most AI laws work like a parking ticket: you park wrong, you get fined. Texas HB 149 works more like a professional license exam — it tells you exactly what studying earns you legal protection, and it starts you off with the benefit of the doubt.\n\nUnder Section 552.105(c) of the enrolled bill, there is a rebuttable presumption that any defendant used reasonable care. This is different from Colorado's approach, where a business must affirmatively raise a defense after being accused. In Texas, the assumption you did the right thing is built in — the government has to overcome it to prove otherwise.\n\nHow do you lock that presumption in place? Section 552.105(e) provides a safe harbor for businesses that substantially comply with the NIST Generative AI Profile (AI 600-1) or an equivalent framework. The NIST AI 600-1 is NIST's published guidance specifically for generative AI risk management — more targeted than the general AI RMF 1.0. If your compliance program is built around it, and documented, you are in a materially stronger legal position.\n\nThe law distinguishes between developers (those who create or substantially modify AI systems) and deployers (those who use AI systems in their operations). Both have obligations, but they are not the same obligations. Developers are responsible for transparency documentation and system-level disclosures. Deployers are responsible for consumer-facing obligations — disclosure, anti-discrimination controls, and notification.\n\nBefore the Attorney General can bring an enforcement action, the business must receive notice and have 60 days to cure the violation (Section 552.104). Enforcement is complaint-driven — businesses don't face random audits. The AG will be required to operate a public complaint portal by September 1, 2026 (Section 552.102).\n\nPenalty tiers escalate by violation type. Curable violations: $10,000–$12,000. Uncurable violations: $80,000–$200,000. Continuing violations: an additional $2,000–$40,000 per day on top of the base penalty. Colorado's maximum for a first violation is $20,000 — Texas's uncurable floor starts at four times that.\n\nThe practical upshot: build a documented compliance program around NIST AI 600-1, make your disclosures, train your people, and you have a strong legal posture. Wait and see, and a single uncurable violation could cost more than a year of compliance work ever would."
+microFacts:
+  - fact: "TRAIGA passed the Texas House 146-3 and the Senate 31-0 — one of the most bipartisan AI governance laws ever enacted."
+    source: "Texas Legislature Online"
+    sourceUrl: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+  - fact: "A single uncurable violation under TRAIGA can cost between $80,000 and $200,000, with continuing violations adding $2,000–$40,000 per day on top."
+    source: "HB 149 Sec. 552.105(a)"
+    sourceUrl: "https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149"
+  - fact: "TRAIGA creates a 36-month regulatory sandbox allowing companies to test AI systems without a state license — with legal immunity during the testing period."
+    source: "HB 149 Sec. 553.051"
+    sourceUrl: "https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149"
+  - fact: "Unlike Colorado's SB 24-205, TRAIGA never uses the term 'high-risk' — its rules apply to any AI system regardless of risk tier."
+    source: "HB 149 Enrolled Text"
+    sourceUrl: "https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149"
+externalReferences:
+  - title: "Texas Legislature Online — HB 149 Bill History (89th Legislature)"
+    url: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+  - title: "Texas Legislature Online — HB 149 Enrolled Text (Texas Responsible AI Governance Act)"
+    url: "https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149"
+  - title: "NCSL — Artificial Intelligence 2025 Legislation"
+    url: "https://www.ncsl.org/technology-and-communication/artificial-intelligence-2025-legislation"
+  - title: "IAPP — Governor Signs Texas Responsible Artificial Intelligence Governance Act"
+    url: "https://iapp.org/news/a/governor-signs-texas-responsible-artificial-intelligence-governance-act"
+  - title: "IAPP — Texas Responsible AI Governance Act Compliance: A Sample Policy Framework"
+    url: "https://iapp.org/news/a/texas-responsible-ai-governance-act-compliance-a-sample-policy-framework"
+  - title: "Colorado General Assembly — SB24-205: Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
+---
+
+Texas signed HB 149 — the Texas Responsible Artificial Intelligence Governance Act — into law on June 22, 2025. It took effect January 1, 2026. If your business uses AI systems in Texas — or if you build AI systems used in Texas — you have obligations under this law right now. ([HB 149 History](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+Texas is now the fourth state to pass a cross-sectoral AI governance law, joining California, Colorado, and Utah. But Texas took a notably different approach from what came before it. There is no high-risk classification. There is no small-business exemption. There is no revenue threshold. If you operate in Texas and you use AI, this law is in your scope.
+
+The good news: the law is structured to reward businesses that build a real compliance program. The penalty exposure for businesses that don't is substantial.
+
+## What TRAIGA Is
+
+House Bill 149, officially titled the Texas Responsible Artificial Intelligence Governance Act, was authored by Representative Giovanni Capriglione and passed the Texas House 146-3 and the Senate 31-0. ([HB 149 History](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149)) It was signed by Governor Greg Abbott on June 22, 2025 and took effect January 1, 2026.
+
+The vote margin matters. Most AI regulation has been contested. TRAIGA wasn't. That tells you something about how the Texas legislature views AI governance: not as a partisan issue but as a business and consumer protection issue that crosses party lines.
+
+Rulemaking authority under the law sits with the Texas Department of Information Resources (DIR). The Attorney General has exclusive enforcement authority — there is no private right of action under this law. ([HB 149 Sec. 552.101](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
+
+Texas also did something no other state has done: it preempts local governments from enacting their own AI ordinances. ([HB 149 Sec. 552.003](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) If you operate across multiple Texas cities, there is one framework to follow — not a patchwork of local rules.
+
+## Who TRAIGA Covers
+
+This is where Texas differs most sharply from every other state AI law.
+
+Colorado's SB 24-205 uses a "high-risk" classification — if your AI system doesn't meet the definition of high-risk, you're largely outside the law's scope. Texas doesn't do that. TRAIGA applies to **any AI system**, and it applies to two categories of business: developers and deployers. ([HB 149 Enrolled Text](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
+
+A **developer** is a person or business that creates, trains, or substantially modifies an AI system and makes it available to others. If you build AI tools and sell or license them — to any Texas business, or to any business that uses them in Texas — you are a developer under this law.
+
+A **deployer** is a person or business that uses an AI system in a product or service offered to consumers or employees in Texas. If you have purchased or licensed an AI tool and you're using it in your business operations in Texas, you are a deployer.
+
+There is no minimum size. No revenue floor. No employee count threshold. A company with five employees that uses an AI-powered tool to help screen job applicants is a deployer under TRAIGA. A company with five hundred employees that built its own AI system and licensed it to another company is a developer.
+
+One safe harbor exists for federally insured financial institutions. Banks and credit unions that are already subject to federal oversight of their AI systems qualify for a safe harbor under Section 552.056(e). ([HB 149 Sec. 552.056(e)](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) If you're in that category, check whether your existing federal compliance program satisfies the conditions of this exemption.
+
+## What TRAIGA Requires
+
+The obligations vary by role — developers have disclosure duties, deployers have consumer-facing duties — but both categories carry real requirements.
+
+### Disclosure obligations
+
+Developers must provide deployers with documentation about the AI system — what it does, how it works, its known limitations, and the data it relies on. This is the information a deployer needs to run their own compliance program. If you build AI and sell it, your customers are going to need this documentation from you. ([HB 149 Enrolled Text](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
+
+Deployers must notify consumers when they are interacting with or affected by an AI system. The consumer notice obligation is not limited to high-stakes decisions — it applies to AI systems generally.
+
+### Anti-discrimination requirements
+
+TRAIGA prohibits AI-driven discrimination against consumers based on protected characteristics. But the standard is intentional, not statistical. Under Section 552.056(c), disparate impact alone is not sufficient to establish a violation — intent is required. ([HB 149 Sec. 552.056(c)](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
+
+This is a meaningful departure from how discrimination law typically works. If your AI system produces statistically unequal outcomes by race or gender, that fact alone doesn't create a TRAIGA violation. The law asks whether discrimination was intended. That's a higher bar for plaintiffs — and a lower risk for businesses whose AI produces disparate outcomes without any discriminatory design.
+
+This does not mean bias testing is unimportant. It means that documented good-faith efforts to identify and address bias in your AI system are relevant to whether intent can be established.
+
+### Consumer notification and correction
+
+Deployers must give consumers meaningful notification about how AI systems affect decisions that concern them, and consumers must have a mechanism to submit corrections or concerns. The specifics of these processes will be shaped by DIR rulemaking, but the obligation to have them exists now.
+
+## The Rebuttable Presumption — Texas's Version of a Safe Harbor
+
+Texas's approach to legal protection is different from Colorado's, and the difference is significant.
+
+Colorado gives businesses an **affirmative defense** — meaning if you're accused of a violation, you can raise your compliance with NIST frameworks as a defense. You start accused; you argue your way out.
+
+Texas builds in a **rebuttable presumption of reasonable care** under Section 552.105(c). ([HB 149 Sec. 552.105(c)](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) You start with the legal assumption that you acted reasonably. The government has to overcome that presumption to make a violation stick.
+
+The safe harbor that reinforces this presumption: substantial compliance with the NIST Generative AI Profile (AI 600-1) or an equivalent recognized framework. ([HB 149 Sec. 552.105(e)](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) NIST AI 600-1 is NIST's framework specifically designed for generative AI risk — a more targeted document than the general AI Risk Management Framework 1.0.
+
+Our [NIST AI RMF implementation package](/products/ai-governance-framework) maps the NIST AI 600-1 requirements to the specific policies and documentation that satisfy TRAIGA's safe harbor standard.
+
+If you build your compliance program around NIST AI 600-1, document it, and keep it current, you are in the strongest available legal position under this law.
+
+## The Penalty Structure
+
+TRAIGA creates three tiers of penalties. Understanding all three matters for any risk calculation. ([HB 149 Sec. 552.105(a)](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
+
+**Curable violations: $10,000–$12,000.** These are violations that the business can correct. Before any enforcement action can be filed, the business must receive written notice and have 60 days to cure the violation. ([HB 149 Sec. 552.104](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) If you cure within that window, enforcement cannot proceed.
+
+**Uncurable violations: $80,000–$200,000.** Some violations, by their nature or severity, cannot be remediated after the fact. These carry a substantially higher penalty range. A single uncurable violation floor of $80,000 is four times Colorado's maximum first-offense penalty of $20,000.
+
+**Continuing violations: $2,000–$40,000 per day.** If a violation persists after notice, the per-day penalties accumulate on top of the base penalty. A violation that runs 30 days into the per-day tier could add $60,000–$1.2 million to the underlying penalty — before the base amount.
+
+The 60-day cure period is meaningful. It is not a loophole — the AG can still investigate and build a record. But for businesses with a real compliance program in place, it provides a legitimate opportunity to correct mistakes before penalties attach. Build your compliance documentation now so you have something real to show during a cure period.
+
+For comparison: Colorado's Consumer Protection Act allows civil penalties for violations of SB 24-205, with AG discretion over the amount. Texas makes the penalty tiers explicit in the statute itself, which removes that discretion and makes the exposure more predictable. See our [AI compliance penalties by state breakdown](/blog/ai-compliance-penalties-by-state) for a full comparison.
+
+## The Regulatory Sandbox
+
+TRAIGA creates something unusual in AI law: a 36-month regulatory sandbox that grants legal immunity to businesses testing AI systems. ([HB 149 Sec. 553.051, 553.053](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
+
+During the sandbox period, a participating business can test AI systems without holding a state license, and without exposure to TRAIGA penalties for the tested systems. This is explicitly designed to allow innovation without compliance risk during the development phase.
+
+The sandbox is not a general exemption from the law. It applies to testing and development activity during the defined period, not to deployed production systems. If you are an AI developer working on new products, this provision is worth examining with counsel to understand whether your development activities qualify.
+
+## How Texas Compares to Colorado
+
+If you're already familiar with Colorado's SB 24-205, the comparison to TRAIGA is instructive — because the two laws reflect genuinely different philosophies about AI governance. For a deeper look at Colorado's requirements, see our [Colorado SB 24-205 compliance guide](/blog/colorado-sb-24-205-ai-law-what-businesses-need-to-know).
+
+**Scope.** Colorado targets high-risk AI systems — those used in consequential decisions about employment, lending, housing, healthcare, and similar categories. Texas has no such filter. TRAIGA covers any AI system. If you use AI at all in Texas, you are in scope.
+
+**The legal defense structure.** Colorado gives businesses an affirmative defense they must raise after an accusation. Texas gives businesses a rebuttable presumption of reasonable care that the government must overcome. Texas's structure is more favorable to defendants in this regard.
+
+**Discrimination standard.** Colorado's law focuses on algorithmic discrimination as an outcome — disparate impact can be relevant. Texas requires intent for a discrimination violation. ([HB 149 Sec. 552.056(c)](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) This is a higher burden for enforcement.
+
+**Impact assessments.** Colorado requires deployers to complete formal impact assessments for each high-risk system. Texas does not have an equivalent mandatory impact assessment requirement — though the substantive work of bias testing and risk documentation is still implied by the compliance and safe harbor structure.
+
+**Penalties.** Colorado's penalties flow through the Consumer Protection Act with AG discretion. Texas specifies penalty ranges in the statute itself, with an uncurable violation range of $80,000–$200,000 compared to Colorado's $20,000 maximum for a first offense.
+
+**Preemption.** Texas preempts local AI ordinances. Colorado does not have an equivalent provision.
+
+The common thread: both laws reward documented, structured AI risk management. Both reference NIST frameworks as the path to legal protection. Both give the AG exclusive enforcement authority with no private right of action. If you're building a compliance program for Colorado, a significant portion of that work transfers to Texas.
+
+## What Documents You Need
+
+Whether you are a developer, a deployer, or both, TRAIGA creates a documentation obligation that cannot be satisfied with a policy you write the night before an AG complaint arrives. The documents need to exist, be current, and reflect how your AI systems actually work.
+
+For developers, this means technical disclosure documentation for each AI system you make available — something you can hand to a deployer that tells them what they need to know to run their own compliance program.
+
+For deployers, this means a risk management policy, consumer notice materials, a process for handling consumer correction requests, and evidence that you evaluated your AI systems for discriminatory potential before deploying them. Our [AI governance framework](/products/ai-governance-framework) covers the foundational policy layer. Our [AI bias audit template](/products/ai-bias-audit-template) covers the discrimination evaluation. Both are built to the NIST AI 600-1 standard that supports TRAIGA's safe harbor.
+
+If you operate in both Texas and Colorado, read our [AI governance checklist covering every major state law](/blog/ai-governance-framework-checklist-every-state-law) — the overlap between the two laws is significant and a unified program can satisfy both.
+
+## Where to Start
+
+Texas HB 149 is in effect. January 1, 2026 has passed. There is no delay period, no extended phase-in. If you use AI in Texas, you are operating under this law today.
+
+**Identify every AI system your business uses or produces.** Unlike Colorado, you cannot limit this review to "high-risk" systems. Any AI system in scope — which means any AI system in your Texas operations.
+
+**Determine whether you are a developer, a deployer, or both.** The obligations are different and the documentation requirements flow from that determination.
+
+**Start with consumer-facing disclosures.** These are the most visible obligation and the most likely to generate complaints. Make sure consumers know when AI is affecting decisions that concern them.
+
+**Build or adopt a risk management framework aligned with NIST AI 600-1.** This is the documented path to TRAIGA's safe harbor. Our [NIST AI RMF implementation package](/products/ai-governance-framework) is designed for exactly this.
+
+**Document your bias evaluation process.** Even though TRAIGA requires intent for a discrimination violation, documented good-faith evaluation is material evidence of that intent — or absence of it.
+
+The AG's complaint portal goes live by September 1, 2026. ([HB 149 Sec. 552.102](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) Once it does, consumer complaints will have a direct path to enforcement review. The window between now and then is real compliance time — not a grace period, but an opportunity to build the program before complaints arrive.
+
+---
+
+**Sources** — Every legal fact in this article was verified against the enrolled HB 149 bill text and bill history at these .gov URLs:
+
+- [Texas Legislature Online — HB 149 History](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149) — Vote margins (146-3 House, 31-0 Senate), signing date, author.
+- [Texas Legislature Online — HB 149 Enrolled Text](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149) — All penalty tiers, safe harbor provisions, rebuttable presumption, cure period, AG enforcement authority, anti-discrimination intent standard, preemption, sandbox, complaint portal deadline.
