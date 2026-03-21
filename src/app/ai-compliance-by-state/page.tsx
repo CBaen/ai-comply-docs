@@ -40,8 +40,15 @@ function StateComparisonSchema({ stateRegs }: { stateRegs: typeof regulations })
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "AI Compliance Requirements by State — 2026",
+    description: "Comparison of enacted US state AI and data privacy laws, including effective dates, penalty amounts, enforcement mechanisms, and required documentation. Covers 14+ state jurisdictions as of 2026.",
     about: "Comparison of US state AI and data privacy laws requiring business documentation",
     url: "https://aicompliancedocuments.com/ai-compliance-by-state",
+    creator: {
+      "@type": "Organization",
+      name: "AI Compliance Documents",
+      url: "https://aicompliancedocuments.com",
+    },
+    license: "https://aicompliancedocuments.com/terms",
   });
   return <script type="application/ld+json">{data}</script>;
 }
