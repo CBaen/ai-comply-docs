@@ -1,0 +1,139 @@
+---
+title: "The NIST AI Risk Management Framework: What It Is and Why Colorado Made It a Legal Shield"
+slug: "nist-ai-rmf-compliance-guide-colorado-legal-shield"
+description: "The NIST AI RMF 1.0 is the US government's voluntary AI governance framework. Colorado SB 24-205 made following it an affirmative defense. Here's what the framework actually requires and how to use it."
+date: "2026-03-21"
+author: "AI Compliance Documents Team"
+tags: ["NIST AI RMF", "AI risk management", "Colorado SB 24-205", "affirmative defense", "AI governance", "ISO 42001"]
+published: true
+summary: "The NIST AI Risk Management Framework is a voluntary 48-page document published by the US government in January 2023 that organizes AI governance into four functions: Govern, Map, Measure, and Manage. Colorado's AI law gives businesses that follow a framework like this one a legal defense — meaning if something goes wrong with your AI system and you followed the NIST framework, the burden shifts to the other side to prove you were negligent."
+deepDive:
+  title: "What Is the NIST AI Risk Management Framework?"
+  content: "The NIST AI Risk Management Framework — officially NIST AI 100-1 — is a voluntary document published by the National Institute of Standards and Technology in January 2023. It was built with input from more than 240 contributing organizations over 18 months, including businesses, academic researchers, civil society groups, and government agencies. The goal was to create a shared language and structure for managing AI-related risks before any single company or regulator invented their own incompatible system.\n\nThe framework is organized into four functions: Govern, Map, Measure, and Manage. Think of these as the four rooms in a house where AI risk management happens. Govern is the foundation — the policies, roles, and culture that determine how your organization thinks about AI risk at all. Map is where you identify which AI systems you have and what risks they pose. Measure is where you actually test and evaluate those risks. Manage is where you act — mitigating what you found, monitoring ongoing performance, and responding when something goes wrong.\n\nWithin those four functions, the framework defines 19 categories and 72 subcategories of specific practices. These aren't requirements — the framework is voluntary, not a regulation. They are a structured menu of what responsible AI governance looks like, organized so that any organization can assess where they stand and what they're missing.\n\nWhy does Colorado's AI law point to this framework specifically? Because Colorado SB 24-205 provides an affirmative defense at C.R.S. section 6-1-1706(3) for businesses that comply with a nationally or internationally recognized AI risk management framework. The NIST AI RMF is the most prominent US framework that fits that description. If you build your AI compliance program around it, you aren't just following good practice — you are building a documented legal shield. If something goes wrong and your compliance is challenged, the burden shifts to the other side to prove your use of the framework was inadequate."
+microFacts:
+  - fact: "The AI RMF 1.0 was developed with input from more than 240 contributing organizations over 18 months of public engagement, workshops, and draft comment periods."
+    source: "NIST AI RMF Resources page"
+    sourceUrl: "https://airc.nist.gov/airmf-resources/"
+  - fact: "The AI RMF Core contains 4 functions, 19 categories, and 72 subcategories of AI risk management practices."
+    source: "NIST AI RMF Core, Section 5"
+    sourceUrl: "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
+  - fact: "12 crosswalk documents map the AI RMF to international standards and frameworks from 5 or more countries, enabling organizations to use one implementation to satisfy multiple governance requirements simultaneously."
+    source: "NIST AIRC Crosswalk Documents"
+    sourceUrl: "https://airc.nist.gov/airmf-resources/crosswalks/"
+  - fact: "NIST's AI policy page now references the July 2025 'Winning the Race' AI Action Plan rather than the Biden-era EO 14110, reflecting the current administration's approach to AI governance."
+    source: "NIST Artificial Intelligence"
+    sourceUrl: "https://www.nist.gov/artificial-intelligence"
+externalReferences:
+  - title: "NIST AI 100-1 — Artificial Intelligence Risk Management Framework 1.0 (DOI)"
+    url: "https://doi.org/10.6028/NIST.AI.100-1"
+  - title: "AI RMF Core — Functions, Categories, and Subcategories (NIST AIRC)"
+    url: "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
+  - title: "Crosswalk Documents — AI RMF Mapped to International Standards (NIST AIRC)"
+    url: "https://airc.nist.gov/airmf-resources/crosswalks/"
+  - title: "NIST Artificial Intelligence — Official NIST AI Program Page"
+    url: "https://www.nist.gov/artificial-intelligence"
+  - title: "Colorado General Assembly — SB24-205: Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
+  - title: "Brownstein Hyatt — Colorado's Landmark AI Law: What Developers and Deployers Should Know"
+    url: "https://www.bhfs.com/insight/colorados-landmark-ai-law-coming-online-what-developers-and-deployers-should-know/"
+---
+
+You've probably heard someone say "just follow NIST" when the topic of AI compliance comes up. That advice is everywhere right now — in legal memos, vendor pitches, state legislative hearings, procurement checklists. But most of the people saying it can't tell you what the framework actually contains, what following it looks like in practice, or why a Colorado law made it a statutory legal defense.
+
+This article is about what the NIST AI RMF actually is, what its four functions require you to do, and why it now matters beyond voluntary good practice. If you're trying to understand whether your AI governance program is defensible — legally and operationally — this is the foundation.
+
+## What the AI RMF Is
+
+The NIST AI Risk Management Framework — published as [NIST AI 100-1](https://doi.org/10.6028/NIST.AI.100-1) — is a 48-page document released by the National Institute of Standards and Technology in January 2023. It is voluntary. No federal law requires you to follow it. No penalty attaches to ignoring it.
+
+What it is, specifically, is the US government's attempt to create a shared, consensus-driven structure for managing AI risks before the regulatory landscape fragmented into dozens of incompatible state and agency frameworks. NIST built it through 18 months of public engagement with more than 240 contributing organizations — businesses, researchers, civil society groups, and government agencies. The goal was a framework any organization could use regardless of industry, size, or which AI systems they deploy.
+
+The framework distinguishes itself from compliance checklists by being explicitly outcome-oriented. It doesn't tell you which specific controls to implement. It describes the categories of activity that constitute responsible AI risk management, and then lets organizations determine the right implementation for their context. That flexibility is a feature, not a gap.
+
+The framework has two components: the **Core** and the **Profiles**. The Core is the structured set of functions, categories, and subcategories that describe what AI risk management involves. Profiles are how organizations apply the Core to their specific context — mapping current state against desired state, identifying gaps, and building a roadmap. For most businesses, getting into the Core is the essential first step.
+
+## The Four Functions
+
+The AI RMF Core organizes everything into four functions. ([AI RMF Core, Section 5](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)) These are not sequential steps — they are ongoing, interdependent activities that a mature AI governance program runs in parallel. But for understanding what the framework asks, walking through each function in order is the right starting point.
+
+### Govern
+
+**Govern** is the organizational foundation. It covers the policies, processes, roles, culture, and oversight structures that determine how your organization thinks about AI risk at the institutional level — before any specific AI system is in scope.
+
+In practice, Govern asks: Does your organization have a documented AI risk policy? Is there someone accountable for AI risk at the leadership level? Do employees who work with AI systems understand your organization's expectations for responsible AI? Is AI risk integrated into enterprise risk management, or handled as a sidecar?
+
+Govern is where most organizations have the most work to do, and where skipping ahead causes problems everywhere else. You cannot Map risks systematically if no one owns the process. You cannot Manage what you haven't measured. Govern is the room where the rest of the work gets its authority.
+
+### Map
+
+**Map** is where you identify and contextualize the risks associated with your specific AI systems. Before you can measure a risk, you have to know it exists, understand the context it operates in, and have a way to talk about it across your organization.
+
+Map asks: What AI systems do you have? What decisions do they influence? Who is affected? What are the potential harms — to individuals, to groups, to your organization? What data does each system use, and what biases might that data carry? What is the intended use, and what are the foreseeable misuses?
+
+The Map function is also where the framework asks organizations to consider societal and third-party risks, not just internal operational risks. An AI system that performs well by internal metrics can still harm people outside your organization. Map is where that possibility gets surfaced before deployment, not discovered after.
+
+### Measure
+
+**Measure** is where you test, evaluate, and quantify the risks you identified in Map. The framework does not prescribe specific metrics — it establishes that measurement must happen through structured, repeatable processes, and that the results must be documented and communicated.
+
+Measure asks: How are you evaluating your AI systems for bias, accuracy, robustness, and reliability? Are your evaluation methods appropriate for the risk level of each system? Are the people doing the evaluation sufficiently independent from the people who built the system? When you find a problem in testing, how does that result get escalated and acted on?
+
+For many organizations, the Measure function reveals that informal processes ("we tested it and it seemed fine") don't satisfy the framework's expectations for rigor. Structured evaluation, documented results, and clear escalation paths are what Measure requires.
+
+### Manage
+
+**Manage** is where you act on what you've measured. It covers the ongoing work of mitigating identified risks, monitoring deployed systems, responding to incidents, and updating your risk posture as systems and contexts change.
+
+Manage asks: What happens when an AI system produces a harmful outcome? Do you have a process to detect it, respond to it, and correct it? Do you have a plan to decommission or modify a system that is no longer performing as intended? Are you monitoring for emergent risks — things that weren't visible at deployment but develop over time? Do you track AI-related incidents and feed that information back into future AI development and deployment decisions?
+
+Manage is also where the framework intersects most directly with legal obligations like Colorado's. The requirement to take measures to discover and correct violations — which is the other half of Colorado's affirmative defense standard — maps directly to what Manage describes.
+
+## Why This Matters Legally Now
+
+The NIST AI RMF was designed as a voluntary tool. But state legislatures, writing AI laws that needed a compliance benchmark, looked at the framework and found exactly what they needed: a credible, consensus-driven, publicly available standard with a structure comprehensive enough to serve as a legal benchmark.
+
+**Colorado SB 24-205** is the clearest example. The law provides an affirmative defense at [C.R.S. section 6-1-1706(3)](https://leg.colorado.gov/bills/sb24-205) for developers and deployers of high-risk AI systems who comply with a nationally or internationally recognized AI risk management framework and take measures to discover and correct algorithmic discrimination. The NIST AI RMF is the most prominent framework that fits that description. If you implement the framework and something goes wrong, you have a documented legal defense — the burden shifts to the other party to prove your compliance was inadequate.
+
+Colorado's effective date is June 30, 2026. ([SB25B-004](https://leg.colorado.gov/bills/sb25b-004)) That's the compliance deadline for deployers of high-risk AI systems in the state. If your AI systems make or substantially factor into decisions about employment, lending, insurance, housing, healthcare, education, or legal services in Colorado, that date matters to you. Our [Colorado SB 24-205 compliance package](/products/colorado-sb24-205) includes the impact assessment and risk management documentation the law requires for deployers.
+
+**Texas HB 149** takes a similar approach and references NIST's Generative AI Profile — a companion document to the AI RMF that applies the framework's structure specifically to large language models and other generative AI systems. The pattern is consistent: legislatures are writing the NIST framework into their enforcement structure, not as a mandate, but as the standard that earns you legal protection.
+
+What this means in practice: following the NIST AI RMF is no longer just a governance best practice. For any business operating AI systems in covered categories in Colorado, it is the most direct path to the statutory affirmative defense the legislature explicitly provided.
+
+## AI RMF vs. ISO/IEC 42001
+
+If you've read our [post on ISO 42001](/blog/iso-42001-ai-certification-enterprise), you may be wondering how the two frameworks relate and which one you should focus on. The short answer is that they are complementary, not competing, and the most defensible compliance programs use both.
+
+ISO/IEC 42001 is a management system standard — it defines the organizational infrastructure (policies, processes, documentation, internal audit, management review) that must exist to govern AI responsibly. The NIST AI RMF is a risk management framework — it defines what risk identification, evaluation, and management activity looks like across the AI system lifecycle.
+
+ISO 42001 asks: does your organization have the governance infrastructure to manage AI risk? The NIST AI RMF asks: are you actually identifying, measuring, and managing the specific risks your AI systems pose?
+
+Both questions need answers. An organization with mature NIST AI RMF implementation but no management system infrastructure is doing good risk work without the organizational foundation to sustain it. An organization with a robust ISO 42001 management system but shallow NIST AI RMF implementation has the structure without the substance.
+
+NIST has published crosswalk documents that explicitly map the AI RMF to ISO 42001 and other international standards. ([NIST AIRC Crosswalk Documents](https://airc.nist.gov/airmf-resources/crosswalks/)) Microsoft and other large organizations have published their own crosswalk analyses showing how AI RMF implementation satisfies ISO 42001 requirements in practice. The two frameworks were designed in parallel and are intentionally consistent. Organizations that implement one are building the foundation for the other.
+
+For Colorado's affirmative defense specifically, the NIST AI RMF is the more direct reference — it is the framework Colorado's legislative history points to most explicitly. For enterprise procurement and third-party verification, ISO 42001 certification provides the external evidence that documented AI governance is real. Our [AI Governance Framework package](/products/ai-governance-framework) is designed to satisfy both frameworks through a single documentation structure.
+
+## What to Do With This
+
+If your business uses AI systems in consequential decisions — employment, lending, housing, healthcare, insurance, education, legal services — here is the practical sequence.
+
+**Start with Govern.** Document your organization's AI risk policy. Assign clear ownership for AI risk management at the leadership level. Establish a process for reviewing AI systems before deployment. These are Govern activities, and they are the prerequisite for everything else. Our [NIST AI RMF implementation package](/products/nist-ai-rmf) includes the policy templates, roles and responsibilities documentation, and governance structure required to satisfy the Govern function.
+
+**Map your AI systems.** Create an inventory of every AI system your organization uses in covered decision categories. For each one, document what decisions it influences, who is affected, what data it uses, and what the known risk surface is. This is the Map function, and it is also the foundation of the impact assessment that Colorado's law requires deployers to complete.
+
+**Build your Measure and Manage processes.** Define how you will evaluate each system for bias, accuracy, and reliability. Define what happens when something goes wrong. Document both. These processes need to exist and be followed — not just described in a policy document — for the affirmative defense to be credible.
+
+**Understand your Colorado obligations specifically.** If you deploy high-risk AI systems as defined by [SB 24-205](https://leg.colorado.gov/bills/sb24-205), you have documentation, notice, and assessment obligations that go beyond the NIST framework itself. The law requires impact assessments, consumer notices, annual reviews, and disclosure to the Attorney General if you discover algorithmic discrimination. Our [Colorado SB 24-205 package](/products/colorado-sb24-205) covers those specific requirements.
+
+The NIST AI RMF is not a compliance destination. It is the structure that makes compliance legible — to regulators, to enterprise procurement teams, and to courts. Building your program around it is how you turn good intentions about AI responsibility into documented, defensible practice.
+
+---
+
+**Sources** — Every factual claim about the framework and applicable laws in this article was verified against primary sources at these URLs:
+
+- [NIST AI 100-1 — Artificial Intelligence Risk Management Framework 1.0](https://doi.org/10.6028/NIST.AI.100-1) — The framework document itself. Published January 2023.
+- [NIST AIRC — AI RMF Core, Section 5](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) — Functions, categories, and subcategories of the Core.
+- [NIST AIRC — Crosswalk Documents](https://airc.nist.gov/airmf-resources/crosswalks/) — Mappings from the AI RMF to ISO 42001 and international standards.
+- [Colorado General Assembly — SB24-205](https://leg.colorado.gov/bills/sb24-205) — Affirmative defense provision at C.R.S. section 6-1-1706(3).
+- [Colorado General Assembly — SB25B-004](https://leg.colorado.gov/bills/sb25b-004) — Effective date extension to June 30, 2026.

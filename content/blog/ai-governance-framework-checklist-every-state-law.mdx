@@ -1,0 +1,183 @@
+---
+title: "AI governance framework checklist: what every enacted state law actually requires"
+slug: "ai-governance-framework-checklist-every-state-law"
+description: "Colorado, Texas, and Illinois have enacted AI governance laws — all effective by mid-2026. Here's what each law requires, how they compare, and why one NIST-aligned program satisfies all three."
+date: "2026-03-21"
+author: "AI Compliance Documents Team"
+tags: ["AI governance", "compliance checklist", "Colorado", "Texas", "Illinois", "NIST AI RMF", "state AI laws"]
+published: true
+summary: "Three states — Colorado, Texas, and Illinois — have enacted AI governance laws with compliance deadlines landing between January and June 2026. If you're building compliance state by state, you're already behind. A single NIST-aligned governance program satisfies the core obligations of all three simultaneously."
+deepDive:
+  title: "Why a Unified Governance Approach Wins"
+  content: "Imagine your company is building a new office and suddenly three different city inspectors show up — one from Colorado, one from Texas, one from Illinois. Each has their own checklist. But when you look closely, most of the items are the same: fire exits, electrical panels, load-bearing walls. A smart contractor builds to all three codes at once, not sequentially.\n\nThat's the situation with state AI governance laws right now. Colorado SB 24-205, Texas HB 149, and Illinois HB 3773 all have different structures, different enforcers, and different penalty regimes — but they converge on a shared set of underlying requirements: document what AI you're using, assess the risks, tell people when AI is involved in decisions about them, and have a process for fixing problems.\n\nThe compounding complexity isn't just the volume of laws. It's that each new state that enacts a law creates potential contradictions — a compliance program built narrowly for Colorado may satisfy 80% of Texas but miss a critical notification requirement. Build state by state and you're patching a quilt that keeps growing.\n\nBoth Colorado SB 24-205 and Texas HB 149 reference the NIST AI Risk Management Framework as a recognized standard — Colorado explicitly offers an affirmative defense for businesses that follow a recognized framework like NIST AI RMF, and Texas's TRAIGA references NIST-aligned risk management practices. Illinois HB 3773, which takes a civil rights enforcement approach, doesn't cite NIST, but its core anti-discrimination requirements are satisfied by the same impact assessment and monitoring work that NIST-aligned programs require.\n\nThe practical outcome: a single governance program built around the NIST AI RMF Govern, Map, Measure, and Manage functions — with documented policies, an AI inventory, risk assessments, and consumer notice processes — absorbs new state requirements by mapping to existing controls rather than starting over. As more states enact laws, you extend the map, not rebuild the house."
+microFacts:
+  - fact: "45 states plus DC introduced AI bills in 2024, but only 30 jurisdictions enacted at least one."
+    source: "NCSL"
+    sourceUrl: "https://www.ncsl.org/technology-and-communication/artificial-intelligence-2024-legislation"
+  - fact: "64 AI bills were enacted across 30 jurisdictions in 2024, while 135 failed and only 3 were vetoed."
+    source: "NCSL"
+    sourceUrl: "https://www.ncsl.org/technology-and-communication/artificial-intelligence-2024-legislation"
+  - fact: "Texas HB 149 sets the highest per-violation penalties in enacted state AI law: up to $200,000 per uncurable violation and $40,000 per day for continuing violations."
+    source: "Texas Legislature, HB 149 section 552.105(a)"
+    sourceUrl: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+  - fact: "Colorado SB 24-205, Texas HB 149, and Illinois HB 3773 all converge on a shared effective date window of January through June 2026."
+    source: "Multiple state legislatures"
+    sourceUrl: "https://www.ncsl.org/technology-and-communication/artificial-intelligence-2024-legislation"
+externalReferences:
+  - title: "NCSL — Artificial Intelligence 2024 Legislation"
+    url: "https://www.ncsl.org/technology-and-communication/artificial-intelligence-2024-legislation"
+  - title: "Colorado General Assembly — SB24-205: Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
+  - title: "Texas Legislature — HB 149 (89th Legislature Regular Session)"
+    url: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+  - title: "Illinois General Assembly — HB 3773 (103rd General Assembly)"
+    url: "https://www.ilga.gov/legislation/BillStatus.asp?DocNum=3773&GESSION=103&GAID=17&DocTypeID=HB&LegID=&SessionID=112"
+  - title: "California Civil Code § 1798.185 (CPPA rulemaking authority)"
+    url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.185.&lawCode=CIV"
+  - title: "NIST AI Risk Management Framework 1.0"
+    url: "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
+---
+
+Three states. Three different AI laws. All effective by mid-2026. If you're building compliance state by state, you're already behind.
+
+Colorado's SB 24-205 takes effect June 30, 2026. Texas's HB 149 — the Texas Responsible AI Governance Act — is effective January 1, 2026. Illinois HB 3773 took effect January 1, 2026. Each law has a different structure, a different enforcer, and a different penalty regime. But all three are asking for the same foundational thing: prove that you know what AI you're using, that you've assessed its risks, and that you have a process for addressing the harm it could cause.
+
+The businesses that will struggle are the ones treating each state as a separate project. The ones that won't struggle built a governance program first.
+
+## The Three Enacted Governance Laws
+
+### Colorado SB 24-205
+
+Colorado was the first state to enact a comprehensive law regulating both developers and deployers of high-risk AI systems. Governor Polis signed SB 24-205 on May 17, 2024. The effective date was originally February 1, 2026, but the legislature delayed it to June 30, 2026 via SB 25B-004 during an August 2025 special session. ([SB24-205](https://leg.colorado.gov/bills/sb24-205)) ([SB25B-004](https://leg.colorado.gov/bills/sb25b-004))
+
+The law covers **high-risk AI systems** — defined as systems that make, or substantially factor into, a "consequential decision" about a consumer. Consequential decisions include determinations that materially affect access to or the cost of employment, education, financial services, housing, insurance, healthcare, or legal services. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+Colorado's distinguishing feature is the **affirmative defense**: businesses that comply with a nationally recognized AI risk management framework — such as the NIST AI RMF — and take measures to discover and correct violations, receive a rebuttable presumption of reasonable care. That's a meaningful legal protection that no other enacted state AI law currently matches.
+
+### Texas HB 149 (TRAIGA)
+
+Texas enacted the Texas Responsible AI Governance Act — TRAIGA — as HB 149. It took effect January 1, 2026. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+Texas covers **developers** and **deployers** of high-risk AI systems, defined as systems that pose a significant risk of harm and make, or are a substantial contributing factor in making, a consequential decision. The categories of consequential decisions largely mirror Colorado's: employment, education, financial services, healthcare, housing, and legal services.
+
+Where Texas diverges from Colorado is in its penalty structure. The Texas Attorney General enforces TRAIGA under section 552.105(a). Penalties reach up to $200,000 per violation for uncurable violations, and $40,000 per day for violations that continue after a cure period expires. ([HB 149, § 552.105(a)](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149)) These are the highest per-violation penalties in any enacted state AI governance law. Texas also references NIST-aligned risk management practices as a compliance benchmark, echoing Colorado's framework approach.
+
+### Illinois HB 3773
+
+Illinois HB 3773 took effect January 1, 2026. It does not follow Colorado's or Texas's developer-deployer structure. Instead, it amends the Illinois Human Rights Act to prohibit employers from using AI in employment decisions in ways that result in discriminatory outcomes. ([HB 3773](https://www.ilga.gov/legislation/BillStatus.asp?DocNum=3773&GESSION=103&GAID=17&DocTypeID=HB&LegID=&SessionID=112))
+
+The law is employment-specific. It applies to any Illinois employer using AI in recruitment, hiring, promotion, discharge, discipline, or the terms and conditions of employment. (775 ILCS 5/2-102(L)) It does not regulate AI broadly — it regulates the outcome of AI use in the employment context. The enforcer is the Illinois Department of Human Rights (IDHR), and the Illinois Human Rights Commission imposes penalties. Unlike Colorado and Texas, Illinois HB 3773 includes a **private right of action**: employees and applicants can bring civil claims with uncapped actual damages and attorney fees. (775 ILCS 5/8A-104)
+
+For a deeper look at the Illinois law, read our full post on [Illinois HB3773 and what it requires of employers](/blog/illinois-hb3773-ai-employment-law-what-employers-need).
+
+## What All Three Laws Require
+
+These three laws use different language and different enforcement mechanisms, but they converge on a set of common obligations. Here's how they compare — without a table, because the nuances matter more than a grid suggests.
+
+### Risk management program
+
+**Colorado** requires deployers to implement a formal risk management policy and program. It does not have to follow NIST specifically, but using a recognized framework triggers the affirmative defense. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**Texas** requires developers and deployers of high-risk AI to implement a risk management policy. The law references NIST-aligned practices as the applicable standard. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+**Illinois** does not use the term "risk management program," but its anti-discrimination requirement functionally demands one — you cannot document that an AI system is not discriminating unless you have a process for assessing and monitoring it.
+
+### Impact assessment
+
+**Colorado** requires deployers to complete an impact assessment for each high-risk AI system before deployment, and annually thereafter. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**Texas** does not require a standing impact assessment, but the Attorney General can demand records and assessments under the law's investigative authority. In practice, not having one ready is a serious liability. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+**Illinois** does not use the term "impact assessment," but employers need documentation to demonstrate their AI tools do not produce discriminatory outcomes. Our [AI bias audit template](/products/ai-bias-audit-template) covers this documentation requirement across all three states.
+
+### Consumer and employee notification
+
+All three laws require some form of disclosure to the people affected by AI decisions, but the scope differs.
+
+**Colorado** requires deployers to notify consumers before or at the time a high-risk AI system makes or substantially factors into a consequential decision. The notice must describe the role AI played and explain the consumer's right to appeal. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**Texas** requires disclosure to consumers when a high-risk AI system makes a consequential decision, with similar content requirements to Colorado. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+**Illinois** requires employers to notify employees and applicants that AI is being used in employment decisions. The notice obligation applies to current AI use, not just to adverse outcomes. (775 ILCS 5/2-102(L))
+
+### NIST AI RMF alignment
+
+**Colorado** explicitly references a nationally recognized AI risk management framework — NIST AI RMF is the primary framework that fits this description — as the basis for the affirmative defense. ([SB24-205](https://leg.colorado.gov/bills/sb24-205)) ([NIST AI RMF](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/))
+
+**Texas** references NIST-aligned risk management practices as the applicable compliance standard. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+**Illinois** does not reference NIST. Its framework is the Illinois Human Rights Act — the compliance question is whether your AI is discriminating, not whether you followed a risk management standard.
+
+### Private right of action
+
+**Colorado**: No private right of action. The Attorney General has exclusive enforcement authority under the Colorado Consumer Protection Act. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**Texas**: No private right of action. The Attorney General enforces TRAIGA under section 552.105. ([HB 149, § 552.105](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+**Illinois**: Private right of action. Employees and applicants can sue employers directly. Actual damages are uncapped. Attorney fees are available. (775 ILCS 5/8A-104)
+
+### Penalties
+
+**Colorado**: Attorney General enforcement under the Colorado Consumer Protection Act (C.R.S. § 6-1-112). Penalties up to $20,000 per violation (§ 6-1-112(1)(a)). Up to $50,000 per violation involving persons age 60 or older (§ 6-1-112(1)(c)). No cure period is specified in the AI statute itself — cure provisions would apply under the CCPA framework. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**Texas**: Attorney General enforcement under TRAIGA § 552.105(a). Civil penalties up to $200,000 per violation for uncurable violations. For violations subject to a cure period, $40,000 per day after the cure period expires without remediation. These are per-violation amounts — each affected consumer or each deployment decision could constitute a separate violation. ([HB 149, § 552.105(a)](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+**Illinois**: Penalties are imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) as amended by P.A. 104-0425. Up to $16,000 for a first violation. Up to $42,500 if the employer has committed one prior civil rights violation within the past five years. Up to $70,000 if the employer has two or more prior violations within the past seven years. Penalties are assessed per violation and per affected person. Private civil action adds uncapped actual damages and attorney fees on top of Commission penalties. (775 ILCS 5/8A-104)
+
+For a full side-by-side of penalties across all enacted state AI laws, see our [AI compliance penalties by state](/blog/ai-compliance-penalties-by-state) post.
+
+## What's Coming Next
+
+The three enacted governance laws are the leading edge of a much larger wave. According to the National Conference of State Legislatures, 45 states plus DC introduced AI bills in 2024, and 64 bills were enacted across 30 jurisdictions. ([NCSL](https://www.ncsl.org/technology-and-communication/artificial-intelligence-2024-legislation))
+
+Several states have enacted governance-adjacent laws that create partial obligations. Utah's artificial intelligence policy act requires disclosure when consumers interact with generative AI. Maryland and Virginia have enacted requirements for automated decision tools in employment. Florida has consumer AI disclosure requirements. None of these rise to the comprehensive developer-deployer framework that Colorado and Texas established, but they create real notice and documentation obligations for businesses operating in those states.
+
+California is a separate case. The California Privacy Protection Agency has rulemaking authority over automated decision-making technology (ADMT) under California Civil Code § 1798.185. ([Cal. Civ. Code § 1798.185](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.185.&lawCode=CIV)) As of this writing, California ADMT regulations are still in the rulemaking process and have not been enacted. The CPPA has published proposed regulations and conducted public comment periods, but the rules are not yet final and do not yet create enforceable obligations. Watch this space — California's population size means these regulations, when finalized, will affect more businesses than Colorado and Texas combined.
+
+New York has no comprehensive AI governance law in effect. The state has appropriated funds for AI-related initiatives, but there is no enacted statute creating the kind of developer-deployer obligations that Colorado and Texas have established.
+
+## The Unified Approach
+
+If you scope your AI compliance program to a single state, you build something that breaks when the next state law passes. If you scope it to a framework — specifically the NIST AI Risk Management Framework — you build something that absorbs new laws by mapping to existing controls.
+
+Here is why this works: both Colorado and Texas explicitly point toward NIST-aligned risk management as the compliance standard. Illinois's anti-discrimination requirements are satisfied by the same impact assessment and monitoring work that a NIST-aligned program produces. The NIST AI RMF's four core functions — Govern, Map, Measure, and Manage — correspond directly to what all three laws are asking for: organizational accountability (Govern), AI system inventory and context (Map), risk and impact assessment (Measure), and ongoing monitoring with response processes (Manage).
+
+A business with a functioning NIST-aligned program already has the risk management policy that Colorado and Texas require. It already has the impact assessment documentation that Colorado mandates and Texas can demand. It already has the AI inventory that underlies every notification and monitoring obligation. It already has the consumer and employee notice processes that all three laws require. It doesn't need to build separately for each state — it needs to verify that its existing program covers each state's specific triggers and thresholds.
+
+Our [AI Governance Framework](/products/ai-governance-framework) is built around the NIST AI RMF Govern, Map, Measure, and Manage functions. It produces the specific policies and documentation that satisfy the core obligations of Colorado SB 24-205 and Texas HB 149, and provides the infrastructure that Illinois HB 3773 compliance rests on.
+
+## What Documents You Need
+
+The answer depends on which states you operate in and what role you play — developer, deployer, or employer.
+
+If you operate in **Colorado**, you need: a risk management program document, an impact assessment for each high-risk system, annual review records, consumer notice templates, an appeal and data correction process, and a public transparency statement. The [Colorado SB 24-205 compliance package](/products/colorado-sb24-205) covers all deployer obligations.
+
+If you operate in **Texas**, you need: a risk management program aligned to NIST practices, developer or deployer documentation depending on your role, and consumer notice processes. Watch for AG guidance on TRAIGA as it matures — the law is newer and AG rulemaking activity may clarify specific documentation requirements.
+
+If you operate in **Illinois** and use AI in employment decisions, you need: employee and applicant AI notices, an AI system inventory for employment tools, and documentation that your AI systems are not producing discriminatory outcomes. The [Illinois HB3773 compliance package](/products/illinois-hb3773) covers these employer obligations.
+
+If you operate in **multiple states** or want a foundation that satisfies the core requirements of all enacted state AI laws simultaneously, start with the [AI Governance Framework](/products/ai-governance-framework). It's the backbone. State-specific packages build on top of it.
+
+Not sure which laws apply to your business? The [do I need AI compliance](/do-i-need-ai-compliance) self-assessment walks you through the applicability questions for each enacted law.
+
+## Where to Start
+
+The most important thing you can do right now is understand what AI systems your business uses and what decisions they affect. You cannot assess risk, provide notices, or demonstrate compliance without that inventory. Every compliance obligation under every enacted state AI law traces back to knowing what systems you have and what they do.
+
+Once you have that inventory, the rest follows a logical sequence: assess the risk of each system, implement a governance program that addresses the requirements of the states you operate in, and build the notice and response processes your consumers and employees are entitled to.
+
+If you've already started on Colorado or Illinois, you have more foundation than you think. Map what you've built to the NIST AI RMF functions. Find the gaps. Fill them systematically. That program — maintained and updated as new laws arrive — is what compliance looks like for a business taking AI governance seriously.
+
+The deadline cluster of January through June 2026 is here. Three laws are already in effect or will be within the quarter. Building state by state from here means constantly catching up. Build the framework now, and each new state law becomes an extension, not a crisis.
+
+---
+
+**Sources** — Every legal fact in this article was verified against enacted statute text at these .gov URLs:
+
+- [Colorado General Assembly — SB24-205 Consumer Protections for Artificial Intelligence](https://leg.colorado.gov/bills/sb24-205) — Developer/deployer obligations, impact assessment requirements, affirmative defense, penalty structure.
+- [Colorado General Assembly — SB25B-004 Effective Date Extension](https://leg.colorado.gov/bills/sb25b-004) — Extends SB 24-205 effective date to June 30, 2026.
+- [Texas Legislature — HB 149 (TRAIGA), 89th Legislature](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149) — Developer/deployer obligations, penalty amounts in § 552.105(a), effective date.
+- [Illinois General Assembly — HB 3773, 103rd General Assembly](https://www.ilga.gov/legislation/BillStatus.asp?DocNum=3773&GESSION=103&GAID=17&DocTypeID=HB&LegID=&SessionID=112) — Employment AI anti-discrimination requirements, penalty tiers under 775 ILCS 5/8A-104.
+- [California Civil Code § 1798.185 — CPPA rulemaking authority](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.185.&lawCode=CIV) — Confirms rulemaking authority; ADMT regulations not yet enacted.
+- [NIST AI Risk Management Framework](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) — Core framework functions: Govern, Map, Measure, Manage.
+- [NCSL — Artificial Intelligence 2024 Legislation](https://www.ncsl.org/technology-and-communication/artificial-intelligence-2024-legislation) — Legislative volume data: 64 enacted bills, 30 jurisdictions, 45 states introduced bills.
