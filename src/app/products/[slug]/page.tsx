@@ -135,6 +135,7 @@ function StructuredData({ reg }: { reg: { slug: string; name: string; descriptio
     "@type": "Product",
     name: reg.name,
     description: reg.description,
+    image: `https://aicompliancedocuments.com/previews/${reg.slug}.webp`,
     url: `https://aicompliancedocuments.com/products/${reg.slug}`,
     brand: {
       "@type": "Organization",
@@ -149,6 +150,15 @@ function StructuredData({ reg }: { reg: { slug: string; name: string; descriptio
       availability: reg.ready
         ? "https://schema.org/InStock"
         : "https://schema.org/PreOrder",
+      itemCondition: "https://schema.org/NewCondition",
+      isAccessibleForFree: false,
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 30,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/FreeReturn",
+      },
       seller: {
         "@type": "Organization",
         name: "AI Compliance Documents",
