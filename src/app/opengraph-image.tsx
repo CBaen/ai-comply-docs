@@ -73,7 +73,7 @@ export default async function Image() {
             justifyContent: "center",
           }}
         >
-          {["Illinois", "Colorado", "California", "Virginia", "NYC", "EU AI Act"].map(
+          {["Illinois", "Colorado", "Texas", "California", "NYC", "EU AI Act"].map(
             (state) => (
               <div
                 key={state}
