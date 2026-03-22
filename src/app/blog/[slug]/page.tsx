@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -201,7 +202,11 @@ export default async function BlogPostPage({ params }: Props) {
                         <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-[0.15em]">Deep Dive</span>
                       </div>
                       <h4 className="text-sm font-bold text-gray-900 mb-3 leading-snug">{post.deepDive.title}</h4>
-                      <div className="text-xs text-gray-600 leading-[1.7] whitespace-pre-line">{post.deepDive.content}</div>
+                      <div className="text-xs text-gray-600 leading-[1.7] space-y-2">
+                        {post.deepDive.content.split("\n\n").map((para, i) => (
+                          <p key={i}>{renderWithLinks(para)}</p>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </aside>
@@ -223,7 +228,11 @@ export default async function BlogPostPage({ params }: Props) {
                         <span className="text-sm font-semibold text-gray-900 flex-1 min-w-0 truncate">{post.deepDive.title}</span>
                         <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                       </summary>
-                      <div className="px-3 sm:px-4 pb-4 text-sm text-gray-700 leading-relaxed whitespace-pre-line">{post.deepDive.content}</div>
+                      <div className="px-3 sm:px-4 pb-4 text-sm text-gray-700 leading-relaxed space-y-2">
+                        {post.deepDive.content.split("\n\n").map((para, i) => (
+                          <p key={i}>{renderWithLinks(para)}</p>
+                        ))}
+                      </div>
                     </details>
                   )}
 
