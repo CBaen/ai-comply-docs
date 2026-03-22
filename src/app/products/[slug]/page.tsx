@@ -18,6 +18,7 @@ import Questionnaire from "@/components/Questionnaire";
 import PostPaymentHandler from "@/components/PostPaymentHandler";
 import DocumentSamplePreview from "@/components/DocumentSamplePreview";
 import QuickPurchaseButton from "@/components/QuickPurchaseButton";
+import SoftScrollButton from "@/components/SoftScrollButton";
 
 export async function generateStaticParams() {
   // Only generate pages for ready products — non-ready products
@@ -280,12 +281,12 @@ export default async function RegulationPage({
                 </span>
               </div>
               {reg.ready ? (
-                <a
-                  href="#get-started"
-                  className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg"
+                <SoftScrollButton
+                  targetId="generator"
+                  className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg cursor-pointer"
                 >
                   Customize Now
-                </a>
+                </SoftScrollButton>
               ) : (
                 <span className="w-full sm:w-auto text-center bg-slate-700 text-slate-300 px-8 py-3 rounded-lg font-semibold text-lg cursor-default">
                   Coming Soon
@@ -589,12 +590,12 @@ export default async function RegulationPage({
                 </ul>
                 {reg.ready ? (
                   <>
-                    <a
-                      href={`/products/${reg.slug}#generator`}
-                      className="block text-center bg-blue-800 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md"
+                    <SoftScrollButton
+                      targetId="generator"
+                      className="block w-full text-center bg-blue-800 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md cursor-pointer"
                     >
                       Customize Now &mdash; ${reg.price}
-                    </a>
+                    </SoftScrollButton>
                     <QuickPurchaseButton slug={reg.slug} price={reg.price} />
                   </>
                 ) : (
