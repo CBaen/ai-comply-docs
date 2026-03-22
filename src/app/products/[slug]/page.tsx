@@ -682,7 +682,13 @@ export default async function RegulationPage({
         {reg.ready && (
           <>
             <PostPaymentHandler regulationSlug={reg.slug} />
-            <div className="border-t border-gray-200">
+            <div id="generator" className="scroll-mt-8 border-t border-gray-200">
+              <h2 className="text-2xl font-bold font-display text-gray-900 mb-2 max-w-4xl mx-auto px-4 sm:px-6 pt-8">
+                Customize Your {reg.shortName} Package
+              </h2>
+              <p className="text-gray-500 text-sm mb-6 max-w-4xl mx-auto px-4 sm:px-6">
+                Fill in your company details below. Your answers will be used to pre-fill your compliance documents.
+              </p>
               <Questionnaire
                 regulationSlug={reg.slug}
                 regulationName={reg.shortName}

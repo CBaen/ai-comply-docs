@@ -48,10 +48,7 @@ async function trackPurchase(session: Stripe.Checkout.Session) {
   }
 }
 
-async function savePurchaseFallback(
-  session: Stripe.Checkout.Session,
-  formData: Record<string, unknown> | null
-) {
+async function savePurchaseFallback(session: Stripe.Checkout.Session) {
   if (!process.env.DATABASE_URL) return; // Database not configured yet
   try {
     const pool = getPool();
@@ -61,16 +58,10 @@ async function savePurchaseFallback(
 
     await pool.query(
       `INSERT INTO purchases
-         (stripe_session_id, regulation_slug, amount_paid, email_at_purchase, form_data)
-       VALUES ($1, $2, $3, $4, $5)
+         (stripe_session_id, regulation_slug, amount_paid, email_at_purchase)
+       VALUES ($1, $2, $3, $4)
        ON CONFLICT (stripe_session_id) DO NOTHING`,
-      [
-        session.id,
-        slug,
-        amountCents,
-        email,
-        formData ? JSON.stringify(formData) : null,
-      ]
+      [session.id, slug, amountCents, email]
     );
   } catch (err) {
     // Fallback save must never block payment verification — webhook is the primary path

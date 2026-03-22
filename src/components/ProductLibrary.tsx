@@ -288,41 +288,53 @@ export default function ProductLibrary({
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        {filtered.map((reg) => (
+        {filtered.map((reg) => {
+          // Show only the first sentence of the description for scannability
+          const firstSentence = reg.description.match(/^[^.!?]+[.!?]/)?.[0] ?? reg.description;
+          return (
           <div
             key={reg.slug}
             className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6 hover:border-blue-700 hover:shadow-md transition flex flex-col"
           >
-            <div className="flex justify-between items-start mb-3 gap-2">
+            {/* Header: name + status badge */}
+            <div className="flex justify-between items-start mb-1 gap-2">
               <div className="min-w-0">
                 <h3 className="font-bold text-base sm:text-lg font-display text-gray-900 leading-snug">
                   {reg.shortName}
                 </h3>
-                <p className="text-gray-500 text-xs mt-0.5 truncate">
-                  {reg.citation}
-                </p>
               </div>
               <StatusBadge status={reg.status} ready={reg.ready} />
             </div>
-            <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-1">
-              {reg.description.length > 140
-                ? reg.description.slice(0, 140) + "..."
-                : reg.description}
+
+            {/* Effective date — scannable at a glance */}
+            <p className="text-xs text-gray-400 mb-3">
+              {reg.status === "in-effect" ? "In effect" : "Effective"} {reg.effectiveDate} &middot; {reg.state}
             </p>
-            <div className="flex items-center justify-between mb-4 pt-2 border-t border-gray-100">
-              <span className="text-xl sm:text-2xl font-bold text-gray-900 font-display">
-                ${reg.price}
-              </span>
+
+            {/* First-sentence description only */}
+            <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-1">
+              {firstSentence}
+            </p>
+
+            {/* Price (prominent) + doc count */}
+            <div className="flex items-end justify-between mb-4 pt-3 border-t border-gray-100">
+              <div>
+                <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-display leading-none">
+                  ${reg.price}
+                </span>
+                <span className="text-gray-400 text-xs ml-1">one-time</span>
+              </div>
               <span className="text-gray-500 text-xs">
                 {reg.documentCount} documents
               </span>
             </div>
+
             {reg.ready ? (
               <Link
                 href={`/products/${reg.slug}`}
                 className="block text-center bg-blue-800 text-white py-3 rounded-lg font-semibold text-sm hover:bg-blue-900 transition"
               >
-                View Package
+                See Details
               </Link>
             ) : (
               <Link
@@ -333,7 +345,8 @@ export default function ProductLibrary({
               </Link>
             )}
           </div>
-        ))}
+          );
+        })}
       </div>
 
       {filtered.length === 0 && (
