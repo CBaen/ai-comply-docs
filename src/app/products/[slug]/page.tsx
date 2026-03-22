@@ -433,7 +433,7 @@ export default async function RegulationPage({
               </div>
 
               {/* What Happens After You Purchase */}
-              <section className="bg-blue-50/50 border border-blue-100 rounded-xl p-6">
+              <section className="bg-blue-50 border border-blue-100 rounded-xl p-6">
                 <h2 className="text-lg font-bold font-display text-gray-900 mb-4">
                   What Happens After You Purchase
                 </h2>
