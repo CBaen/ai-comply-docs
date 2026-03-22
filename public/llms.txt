@@ -1,104 +1,109 @@
 # AI Compliance Documents
-> AI compliance documentation templates for US state laws, the EU AI Act, and federal frameworks. 53 packages covering employment AI laws, consumer data privacy laws, industry-specific compliance, universal governance documents, and jurisdiction-specific add-ons.
+> AI compliance documentation templates for US state laws, the EU AI Act, and federal frameworks. 55 packages covering employment AI laws, consumer data privacy laws, industry-specific compliance, universal governance documents, and jurisdiction-specific add-ons.
 
 ## About
 AI Compliance Documents generates compliance documentation templates for businesses subject to AI regulations. Customers answer a 10-minute questionnaire about their company and AI systems, pay once (no subscription), and download customized fillable PDF documents instantly. Prices range from $49 to $997. Each package is built from the actual enacted statute text — not summaries, not training data, not paraphrases. We are not a law firm and do not provide legal advice.
 
 ## State Employment AI Laws
-- NYC Local Law 144 ($399): https://aicompliancedocuments.com/products/nyc-local-law-144
-- Illinois HB3773 ($299): https://aicompliancedocuments.com/products/illinois-hb3773
-- Colorado SB 24-205 ($449): https://aicompliancedocuments.com/products/colorado-sb24-205
-- Multi-State Employer AI Disclosure Kit ($299): https://aicompliancedocuments.com/products/multi-state-employer-ai-disclosure
+- [NYC Local Law 144 ($399)](https://aicompliancedocuments.com/products/nyc-local-law-144): Bias audit + candidate notification for NYC employers using automated hiring tools
+- [Illinois HB3773 ($299)](https://aicompliancedocuments.com/products/illinois-hb3773): Employee/applicant AI notice and impact assessment for Illinois employers
+- [Colorado SB 24-205 ($449)](https://aicompliancedocuments.com/products/colorado-sb24-205): Risk management, impact assessment, and consumer notices for high-risk AI (effective June 30, 2026)
+- [Multi-State Employer AI Disclosure Kit ($299)](https://aicompliancedocuments.com/products/multi-state-employer-ai-disclosure): Combined IL + NYC + CO employer disclosure requirements in one package
 
 ## State Consumer Data Privacy Laws
-- California CCPA ADMT ($499): https://aicompliancedocuments.com/products/california-ccpa-admt
-- Virginia CDPA ($249): https://aicompliancedocuments.com/products/virginia-cdpa
-- Connecticut CTDPA ($249): https://aicompliancedocuments.com/products/connecticut-ctdpa
-- Oregon CPA ($249): https://aicompliancedocuments.com/products/oregon-cpa
-- Texas TDPSA ($249): https://aicompliancedocuments.com/products/texas-tdpsa
-- Delaware PDPA ($249): https://aicompliancedocuments.com/products/delaware-pdpa
-- Minnesota MCDPA ($349): https://aicompliancedocuments.com/products/minnesota-mcdpa
-- Montana MCDPA ($249): https://aicompliancedocuments.com/products/montana-mcdpa
-- Indiana ICDPA ($249): https://aicompliancedocuments.com/products/indiana-icdpa
-- Kentucky KCDPA ($249): https://aicompliancedocuments.com/products/kentucky-kcdpa
-- New Jersey NJDPA ($249): https://aicompliancedocuments.com/products/new-jersey-njdpa
-- Multi-State Profiling Assessment Bundle ($399): https://aicompliancedocuments.com/products/multi-state-profiling-assessment
+- [California CCPA ADMT ($499)](https://aicompliancedocuments.com/products/california-ccpa-admt): Automated decision-making risk assessments and consumer opt-out notices under CCPA
+- [Virginia CDPA ($249)](https://aicompliancedocuments.com/products/virginia-cdpa): Data protection assessments and privacy notices for Virginia consumer data
+- [Connecticut CTDPA ($249)](https://aicompliancedocuments.com/products/connecticut-ctdpa): Data protection assessments and profiling opt-out documentation for Connecticut
+- [Oregon CPA ($249)](https://aicompliancedocuments.com/products/oregon-cpa): Consumer privacy and AI profiling documentation for Oregon
+- [Texas TDPSA ($249)](https://aicompliancedocuments.com/products/texas-tdpsa): Data protection assessments and privacy notices for Texas consumer data
+- [Delaware PDPA ($249)](https://aicompliancedocuments.com/products/delaware-pdpa): Privacy documentation for Delaware's lowest-threshold state privacy law
+- [Minnesota MCDPA ($349)](https://aicompliancedocuments.com/products/minnesota-mcdpa): Algorithmic governance documentation with AI-specific provisions
+- [Montana MCDPA ($249)](https://aicompliancedocuments.com/products/montana-mcdpa): Consumer privacy and profiling documentation for Montana
+- [Indiana ICDPA ($249)](https://aicompliancedocuments.com/products/indiana-icdpa): Consumer data privacy documentation for Indiana
+- [Kentucky KCDPA ($249)](https://aicompliancedocuments.com/products/kentucky-kcdpa): Consumer data privacy documentation for Kentucky
+- [New Jersey NJDPA ($249)](https://aicompliancedocuments.com/products/new-jersey-njdpa): Consumer data privacy documentation for New Jersey
+- [Multi-State Profiling Assessment Bundle ($399)](https://aicompliancedocuments.com/products/multi-state-profiling-assessment): Single assessment framework covering 15+ states with one document set
 
 ## Federal & International Frameworks
-- EU AI Act ($997): https://aicompliancedocuments.com/products/eu-ai-act
-- EEOC AI Hiring Compliance Kit ($349): https://aicompliancedocuments.com/products/eeoc-ai-hiring
-- NIST AI RMF ($397): https://aicompliancedocuments.com/products/nist-ai-rmf
-- Healthcare AI Compliance Package ($597): https://aicompliancedocuments.com/products/healthcare-ai-compliance
-- Financial Services AI Compliance Package ($597): https://aicompliancedocuments.com/products/financial-services-ai
+- [EU AI Act ($997)](https://aicompliancedocuments.com/products/eu-ai-act): Full Annex IV technical documentation for high-risk AI systems under Regulation (EU) 2024/1689
+- [EEOC AI Hiring Compliance Kit ($349)](https://aicompliancedocuments.com/products/eeoc-ai-hiring): Title VII, ADA, and ADEA compliance documentation for AI in employment decisions
+- [NIST AI RMF ($397)](https://aicompliancedocuments.com/products/nist-ai-rmf): Implementation documents for the NIST AI Risk Management Framework (GOVERN, MAP, MEASURE, MANAGE)
+- [Healthcare AI Compliance Package ($597)](https://aicompliancedocuments.com/products/healthcare-ai-compliance): HIPAA and healthcare-specific AI governance documentation
+- [Financial Services AI Compliance Package ($597)](https://aicompliancedocuments.com/products/financial-services-ai): AI compliance documentation for financial services regulations
+
+## Industry-Specific Packages
+- [K-12 Education AI Compliance Package ($397)](https://aicompliancedocuments.com/products/education-k12-ai): AI governance documentation for K-12 schools and districts
+- [HR & Recruiting AI Compliance Bundle ($697)](https://aicompliancedocuments.com/products/hr-recruiting-ai): Comprehensive AI compliance for HR departments using AI in recruiting and employment decisions
 
 ## Universal Governance Documents
-- AI Governance Framework ($349): https://aicompliancedocuments.com/products/ai-governance-framework
-- AI System Registry ($199): https://aicompliancedocuments.com/products/ai-system-registry
-- Employee AI Acceptable Use Policy ($199): https://aicompliancedocuments.com/products/employee-ai-policy
-- Vendor AI Due Diligence Kit ($249): https://aicompliancedocuments.com/products/vendor-ai-due-diligence
-- AI Bias Audit Report Template ($149): https://aicompliancedocuments.com/products/ai-bias-audit-template
-- AI Incident Response Plan ($149): https://aicompliancedocuments.com/products/ai-incident-response-plan
-- AI Transparency Report Template ($149): https://aicompliancedocuments.com/products/ai-transparency-report
-- AI Whistleblower Policy ($99): https://aicompliancedocuments.com/products/ai-whistleblower-policy
-- AI Acceptable Use Policy for Customers ($99): https://aicompliancedocuments.com/products/customer-ai-aup
+- [AI Governance Framework ($349)](https://aicompliancedocuments.com/products/ai-governance-framework): Foundation document establishing your organization's AI governance policies and procedures
+- [AI System Registry ($199)](https://aicompliancedocuments.com/products/ai-system-registry): Inventory of all AI tools in use — required before any state-specific compliance work
+- [Employee AI Acceptable Use Policy ($199)](https://aicompliancedocuments.com/products/employee-ai-policy): Internal policy governing how employees may use AI tools at work
+- [Vendor AI Due Diligence Kit ($249)](https://aicompliancedocuments.com/products/vendor-ai-due-diligence): Questionnaire and contract language for vetting third-party AI vendors
+- [AI Bias Audit Report Template ($149)](https://aicompliancedocuments.com/products/ai-bias-audit-template): Structured template for documenting whether AI tools produce discriminatory outcomes
+- [AI Incident Response Plan ($149)](https://aicompliancedocuments.com/products/ai-incident-response-plan): Documented plan for identifying, responding to, and reporting AI incidents
+- [AI Transparency Report Template ($149)](https://aicompliancedocuments.com/products/ai-transparency-report): Public-facing transparency report template for AI use disclosures
+- [AI Whistleblower Policy ($99)](https://aicompliancedocuments.com/products/ai-whistleblower-policy): Internal policy for reporting AI misuse or compliance violations
+- [AI Acceptable Use Policy for Customers ($99)](https://aicompliancedocuments.com/products/customer-ai-aup): Customer-facing terms governing AI use in your products and services
 
 ## Universal Add-On Packages
-- Manager Communication & Training Kit ($79): https://aicompliancedocuments.com/products/manager-ai-training-kit
-- Annual Compliance Review Checklist ($49): https://aicompliancedocuments.com/products/annual-compliance-review
-- Board & Executive AI Summary Report ($69): https://aicompliancedocuments.com/products/board-ai-summary
-- Consumer Notice Customization Kit ($49): https://aicompliancedocuments.com/products/consumer-notice-kit
-- Data Mapping & Inventory Kit ($69): https://aicompliancedocuments.com/products/data-mapping-inventory
-- Consumer Rights Request Kit ($59): https://aicompliancedocuments.com/products/consumer-rights-kit
+- [Manager Communication & Training Kit ($79)](https://aicompliancedocuments.com/products/manager-ai-training-kit): Talking points, employee FAQ, and sign-off sheets for communicating AI policies internally
+- [Annual Compliance Review Checklist ($49)](https://aicompliancedocuments.com/products/annual-compliance-review): Structured checklist to keep compliance documents current as laws and AI tools change
+- [Board & Executive AI Summary Report ($69)](https://aicompliancedocuments.com/products/board-ai-summary): One-page status report and presentation template for board-level AI governance reporting
+- [Consumer Notice Customization Kit ($49)](https://aicompliancedocuments.com/products/consumer-notice-kit): AI disclosure notices in website, email, and physical posting formats
+- [Data Mapping & Inventory Kit ($69)](https://aicompliancedocuments.com/products/data-mapping-inventory): Personal data inventory and AI data flow diagrams — prerequisite for state privacy assessments
+- [Consumer Rights Request Kit ($59)](https://aicompliancedocuments.com/products/consumer-rights-kit): Templates for responding to consumer data rights requests under state privacy laws
 
 ## Illinois Add-Ons
-- Illinois Employee AI Notice & Response Kit ($79): https://aicompliancedocuments.com/products/il-notice-response-kit
-- Illinois Zip Code Proxy Audit Workbook ($99): https://aicompliancedocuments.com/products/il-zip-proxy-audit
+- [Illinois Employee AI Notice & Response Kit ($79)](https://aicompliancedocuments.com/products/il-notice-response-kit): Supplemental notice and response templates for Illinois HB3773
+- [Illinois Zip Code Proxy Audit Workbook ($99)](https://aicompliancedocuments.com/products/il-zip-proxy-audit): Workbook for auditing geographic proxy discrimination under Illinois law
 
 ## Colorado Add-Ons
-- Colorado Consumer Appeal & Correction Process Kit ($99): https://aicompliancedocuments.com/products/co-appeal-correction-kit
-- Colorado Algorithmic Discrimination Discovery & AG Reporting Kit ($129): https://aicompliancedocuments.com/products/co-ag-reporting-kit
-- Colorado Developer-Deployer Documentation Exchange Kit ($109): https://aicompliancedocuments.com/products/co-dev-deploy-exchange
+- [Colorado Consumer Appeal & Correction Process Kit ($99)](https://aicompliancedocuments.com/products/co-appeal-correction-kit): Consumer appeal procedures required under Colorado SB 24-205
+- [Colorado Algorithmic Discrimination Discovery & AG Reporting Kit ($129)](https://aicompliancedocuments.com/products/co-ag-reporting-kit): AG reporting documentation for algorithmic discrimination findings
+- [Colorado Developer-Deployer Documentation Exchange Kit ($109)](https://aicompliancedocuments.com/products/co-dev-deploy-exchange): Documentation exchange templates for AI developer-deployer relationships under Colorado law
 
 ## California Add-Ons
-- California ADMT Pre-Use Notice & Opt-Out Processing Kit ($99): https://aicompliancedocuments.com/products/ca-admt-notice-optout
-- California ADMT Access Request Response Kit ($89): https://aicompliancedocuments.com/products/ca-admt-access-kit
-- California Cybersecurity Audit & Risk Assessment Companion Kit ($149): https://aicompliancedocuments.com/products/ca-cyber-audit-kit
+- [California ADMT Pre-Use Notice & Opt-Out Processing Kit ($99)](https://aicompliancedocuments.com/products/ca-admt-notice-optout): Consumer opt-out processing for California ADMT regulations
+- [California ADMT Access Request Response Kit ($89)](https://aicompliancedocuments.com/products/ca-admt-access-kit): Response templates for ADMT access requests under CCPA
+- [California Cybersecurity Audit & Risk Assessment Companion Kit ($149)](https://aicompliancedocuments.com/products/ca-cyber-audit-kit): Cybersecurity audit documentation companion for California compliance
 
 ## NYC Add-Ons
-- NYC Bias Audit Management & Publication Kit ($129): https://aicompliancedocuments.com/products/nyc-bias-audit-mgmt
-- NYC Candidate/Employee Notice & Alternative Process Kit ($89): https://aicompliancedocuments.com/products/nyc-candidate-notice-kit
+- [NYC Bias Audit Management & Publication Kit ($129)](https://aicompliancedocuments.com/products/nyc-bias-audit-mgmt): Annual bias audit management and required public summary publication templates
+- [NYC Candidate/Employee Notice & Alternative Process Kit ($89)](https://aicompliancedocuments.com/products/nyc-candidate-notice-kit): Candidate notification and alternative process documentation for NYC LL144
 
 ## Virginia Add-Ons
-- Virginia Consumer Rights Exercise & Appeal Processing Kit ($99): https://aicompliancedocuments.com/products/va-consumer-rights-kit
-- Virginia Profiling & AI Data Protection Assessment Workbook ($109): https://aicompliancedocuments.com/products/va-profiling-assessment-kit
-- Virginia Controller-Processor Contract & Vendor Compliance Kit ($89): https://aicompliancedocuments.com/products/va-controller-processor-kit
+- [Virginia Consumer Rights Exercise & Appeal Processing Kit ($99)](https://aicompliancedocuments.com/products/va-consumer-rights-kit): Consumer rights response and appeal procedures for Virginia CDPA
+- [Virginia Profiling & AI Data Protection Assessment Workbook ($109)](https://aicompliancedocuments.com/products/va-profiling-assessment-kit): Extended workbook for profiling risk assessments under Virginia CDPA
+- [Virginia Controller-Processor Contract & Vendor Compliance Kit ($89)](https://aicompliancedocuments.com/products/va-controller-processor-kit): Controller-processor contract templates for Virginia data processing relationships
 
 ## EU AI Act Add-Ons
-- EU AI Act Fundamental Rights Impact Assessment Kit ($149): https://aicompliancedocuments.com/products/eu-fria-kit
-- EU AI Act Post-Market Monitoring & Serious Incident Response Kit ($139): https://aicompliancedocuments.com/products/eu-post-market-kit
-- EU AI Act Human Oversight & Worker Notification Kit ($99): https://aicompliancedocuments.com/products/eu-human-oversight-kit
-- EU AI Act Database Registration & Transparency Kit ($89): https://aicompliancedocuments.com/products/eu-registration-transparency
+- [EU AI Act Fundamental Rights Impact Assessment Kit ($149)](https://aicompliancedocuments.com/products/eu-fria-kit): Fundamental rights impact assessment documentation for EU high-risk AI systems
+- [EU AI Act Post-Market Monitoring & Serious Incident Response Kit ($139)](https://aicompliancedocuments.com/products/eu-post-market-kit): Post-market surveillance and incident reporting templates for EU AI Act compliance
+- [EU AI Act Human Oversight & Worker Notification Kit ($99)](https://aicompliancedocuments.com/products/eu-human-oversight-kit): Human oversight design documentation and worker notification templates
+- [EU AI Act Database Registration & Transparency Kit ($89)](https://aicompliancedocuments.com/products/eu-registration-transparency): EU AI database registration and transparency documentation
 
 ## Resources
-- Do I Need AI Compliance? (free 5-question assessment): https://aicompliancedocuments.com/do-i-need-ai-compliance
-- AI Compliance Requirements by State (comparison table): https://aicompliancedocuments.com/ai-compliance-by-state
-- Frequently Asked Questions: https://aicompliancedocuments.com/faq
-- Blog (plain-language guides to AI laws): https://aicompliancedocuments.com/blog
-- About Our Methodology: https://aicompliancedocuments.com/about
+- [Do I Need AI Compliance? (free 5-question assessment)](https://aicompliancedocuments.com/do-i-need-ai-compliance)
+- [AI Compliance Requirements by State (comparison table)](https://aicompliancedocuments.com/ai-compliance-by-state)
+- [Frequently Asked Questions](https://aicompliancedocuments.com/faq)
+- [Blog (plain-language guides to AI laws)](https://aicompliancedocuments.com/blog)
+- [About Our Methodology](https://aicompliancedocuments.com/about)
 
-## Blog Articles
-- Illinois HB3773 Is Live. If You Use AI in Hiring, Here's What the Law Actually Says.: https://aicompliancedocuments.com/blog/illinois-hb3773-ai-employment-law-what-employers-need
-- California Just Finalized Its AI Regulations. Here's What Your Business Actually Needs to Do.: https://aicompliancedocuments.com/blog/california-ccpa-admt-risk-assessment-compliance-2026
-- Virginia's CDPA Requires Data Protection Assessments — Here's What That Actually Means: https://aicompliancedocuments.com/blog/virginia-cdpa-data-protection-assessment-profiling-requirements
-- Colorado's AI Law (SB 24-205): What It Requires and When It Takes Effect: https://aicompliancedocuments.com/blog/colorado-sb-24-205-ai-law-what-businesses-need-to-know
-- Connecticut's CTDPA Requires Data Protection Assessments — Here's What to Know: https://aicompliancedocuments.com/blog/connecticut-ctdpa-data-protection-assessment-profiling-requirements
-- Your Hiring Software Probably Uses AI. Here's Why That Matters Now.: https://aicompliancedocuments.com/blog/hiring-software-uses-ai-employment-law-compliance
-- EU AI Act Compliance Checklist: What US Businesses Need Before August 2026: https://aicompliancedocuments.com/blog/eu-ai-act-compliance-checklist-us-businesses-august-2026
-- What Does AI Compliance Actually Cost a Small Business in 2026?: https://aicompliancedocuments.com/blog/ai-compliance-cost-small-business-2026
-- AI Compliance Penalties by State: What Happens If You Ignore the Law: https://aicompliancedocuments.com/blog/ai-compliance-penalties-by-state
-- AI and HIPAA: What Healthcare Businesses Must Do Now: https://aicompliancedocuments.com/blog/ai-hipaa-healthcare-compliance
-- ISO 42001: The AI Certification Your Enterprise Clients Will Soon Require: https://aicompliancedocuments.com/blog/iso-42001-ai-certification-enterprise
-- What Is an AI Bias Audit and Does Your Business Need One?: https://aicompliancedocuments.com/blog/what-is-ai-bias-audit-does-your-business-need-one
+## Optional
+
+- [Illinois HB3773 Is Live. If You Use AI in Hiring, Here's What the Law Actually Says.](https://aicompliancedocuments.com/blog/illinois-hb3773-ai-employment-law-what-employers-need)
+- [California Just Finalized Its AI Regulations. Here's What Your Business Actually Needs to Do.](https://aicompliancedocuments.com/blog/california-ccpa-admt-risk-assessment-compliance-2026)
+- [Virginia's CDPA Requires Data Protection Assessments — Here's What That Actually Means](https://aicompliancedocuments.com/blog/virginia-cdpa-data-protection-assessment-profiling-requirements)
+- [Colorado's AI Law (SB 24-205): What It Requires and When It Takes Effect](https://aicompliancedocuments.com/blog/colorado-sb-24-205-ai-law-what-businesses-need-to-know)
+- [Connecticut's CTDPA Requires Data Protection Assessments — Here's What to Know](https://aicompliancedocuments.com/blog/connecticut-ctdpa-data-protection-assessment-profiling-requirements)
+- [Your Hiring Software Probably Uses AI. Here's Why That Matters Now.](https://aicompliancedocuments.com/blog/hiring-software-uses-ai-employment-law-compliance)
+- [EU AI Act Compliance Checklist: What US Businesses Need Before August 2026](https://aicompliancedocuments.com/blog/eu-ai-act-compliance-checklist-us-businesses-august-2026)
+- [What Does AI Compliance Actually Cost a Small Business in 2026?](https://aicompliancedocuments.com/blog/ai-compliance-cost-small-business-2026)
+- [AI Compliance Penalties by State: What Happens If You Ignore the Law](https://aicompliancedocuments.com/blog/ai-compliance-penalties-by-state)
+- [AI and HIPAA: What Healthcare Businesses Must Do Now](https://aicompliancedocuments.com/blog/ai-hipaa-healthcare-compliance)
+- [ISO 42001: The AI Certification Your Enterprise Clients Will Soon Require](https://aicompliancedocuments.com/blog/iso-42001-ai-certification-enterprise)
+- [What Is an AI Bias Audit and Does Your Business Need One?](https://aicompliancedocuments.com/blog/what-is-ai-bias-audit-does-your-business-need-one)
 
 ## Important
 All documents are templates for compliance planning purposes. They do not constitute legal advice. AI Compliance Documents is not a law firm. Consult a licensed attorney to verify applicability to your specific situation.
