@@ -313,33 +313,15 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </div>
 
-          {/* ═══ Sources — full-width bibliography strip ═══ */}
+          {/* ═══ Sources — full-width bibliography strip (desktop only, mobile uses accordion above) ═══ */}
           {post.externalReferences && post.externalReferences.length > 0 && (
-            <div className="mt-10 md:mt-12 bg-slate-900 text-white">
-              <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 md:py-10">
+            <div className="hidden xl:block mt-10 md:mt-12 bg-slate-900 text-white">
+              <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-10">
                 <div className="flex items-center gap-2 mb-5">
                   <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Sources</span>
                 </div>
-                {/* Mobile: accordion */}
-                <details className="md:hidden">
-                  <summary className="text-slate-400 text-xs cursor-pointer hover:text-slate-300 transition">
-                    View all {post.externalReferences.length} sources
-                  </summary>
-                  <ul className="space-y-2.5 mt-3">
-                    {post.externalReferences.map((ref, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-slate-500 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
-                        <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 text-sm underline underline-offset-2 decoration-slate-600 hover:decoration-blue-400 transition break-words min-w-0">
-                          {ref.title}
-                          <span className="sr-only"> (opens in new tab)</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
-                {/* Desktop: two columns */}
-                <ul className="hidden md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-2.5">
+                <ul className="grid grid-cols-3 gap-x-8 gap-y-2.5">
                   {post.externalReferences.map((ref, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="text-slate-500 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
