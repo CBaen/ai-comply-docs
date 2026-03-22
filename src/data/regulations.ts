@@ -1153,6 +1153,33 @@ export const regulations: Regulation[] = [
     ready: true,
   },
 
+  // ── Vibe Coding Security Compliance Checklist ───────────────
+  {
+    slug: "vibe-coding-security-checklist",
+    state: "Universal",
+    name: "Vibe Coding Security Compliance Checklist",
+    shortName: "Vibe Coding Security Checklist",
+    citation: "OWASP Top 10 + NIST SP 800-53 + Best Practice",
+    citationUrl: "https://owasp.org/www-project-top-ten/",
+    lawLinkText: "Review the OWASP Top 10 on owasp.org",
+    status: "in-effect",
+    effectiveDate: "Available now",
+    tier: "universal",
+    category: "Universal Tools",
+    price: 149,
+    stripePriceId: "",
+    documentCount: 1,
+    description: "A security audit checklist built for AI-generated code. 10 critical rules covering CORS, redirect validation, storage access, webhook verification, server-side permissions, dependency hygiene, rate limiting, error handling, session management, and debug cleanup — each with a plain-English problem statement, business impact summary, fix prompt for your AI, and a verification step to confirm it's resolved.",
+    penaltySummary: "Unaddressed vulnerabilities in AI-generated code expose applications to data breaches, account takeovers, payment fraud, and regulatory penalties under CCPA, GDPR, PCI DSS, and HIPAA. Security incidents caused by vibe-coded applications are not covered by most cyber insurance policies when basic controls are absent.",
+    maxPenalty: "Breach liability + regulatory exposure",
+    appliesToSummary: "Any developer or team using AI coding tools (Cursor, Copilot, Claude, ChatGPT, etc.) to build or ship web applications. Especially critical before first deployment or when adding payment, authentication, or file upload features.",
+    keywords: ["vibe coding", "security", "ai generated code", "cors", "owasp", "checklist", "web security", "cursor", "copilot", "universal"],
+    documents: [
+      "Vibe Coding Security Compliance Checklist",
+    ],
+    ready: true,
+  },
+
   // ═══════════════════════════════════════════
   // STATE ADD-ONS — jurisdiction-specific supplemental kits
   // ═══════════════════════════════════════════
