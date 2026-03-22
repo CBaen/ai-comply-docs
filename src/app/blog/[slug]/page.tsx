@@ -256,7 +256,11 @@ export default async function BlogPostPage({ params }: Props) {
                     </details>
                   )}
 
-                  {post.externalReferences && post.externalReferences.length > 0 && (
+                </div>
+
+                {/* ═══ Mobile-only: Sources accordion (separate from xl:hidden group above) ═══ */}
+                {post.externalReferences && post.externalReferences.length > 0 && (
+                  <div className="md:hidden mt-3">
                     <details className="group border-l-2 border-slate-400 bg-slate-50/50 rounded-r-lg overflow-hidden" aria-label="Sources">
                       <summary className="flex items-center gap-2 px-3 sm:px-4 py-3 cursor-pointer list-none">
                         <svg className="w-4 h-4 text-slate-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
@@ -276,8 +280,8 @@ export default async function BlogPostPage({ params }: Props) {
                         ))}
                       </div>
                     </details>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
 
               {/* ═══ Right margin: Micro Facts ═══ */}
