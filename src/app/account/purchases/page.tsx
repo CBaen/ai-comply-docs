@@ -5,7 +5,6 @@ import { getPool } from "@/lib/db";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { getRegulation } from "@/data/regulations";
-import PurchaseRedownloadButton from "./PurchaseRedownloadButton";
 
 interface Purchase {
   id: string;
@@ -24,8 +23,7 @@ async function getUserPurchases(userId: string): Promise<Purchase[]> {
          stripe_session_id,
          regulation_slug,
          amount_paid,
-         created_at,
-         form_data
+         created_at
        FROM purchases
        WHERE user_id = $1
        ORDER BY created_at DESC`,
@@ -140,20 +138,19 @@ export default async function PurchasesPage() {
                         </span>
                       </div>
                     </div>
-                    <div className="shrink-0">
-                      {purchase.form_data ? (
-                        <PurchaseRedownloadButton
-                          formData={purchase.form_data}
-                          productName={productName}
-                        />
-                      ) : (
-                        <Link
-                          href={`/products/${purchase.regulation_slug}`}
-                          className="inline-block border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition"
-                        >
-                          View Product
-                        </Link>
-                      )}
+                    <div className="shrink-0 flex gap-2">
+                      <Link
+                        href={`/products/${purchase.regulation_slug}`}
+                        className="inline-block border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition"
+                      >
+                        View Product
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="inline-block border border-blue-300 text-blue-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-50 transition"
+                      >
+                        Need Help?
+                      </Link>
                     </div>
                   </div>
                 );

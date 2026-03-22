@@ -16,8 +16,8 @@ export function generateDeliveryToken(sessionId: string): string {
 export function validateDeliveryToken(sessionId: string, token: string): boolean {
   const secret = getSecret();
   const now = Math.floor(Date.now() / 60000);
-  // Check current minute and previous 14 minutes (15-minute window)
-  for (let i = 0; i <= 14; i++) {
+  // Check current minute and previous 59 minutes (60-minute window)
+  for (let i = 0; i <= 59; i++) {
     const payload = sessionId + "|" + (now - i);
     const expected = crypto.createHmac("sha256", secret).update(payload).digest("hex");
     if (crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(token))) {
