@@ -4,8 +4,19 @@ import { getRegulation } from "@/data/regulations";
 import { REGULATION_CONFIG } from "@/lib/regulation-config";
 import { auth } from "@/lib/auth";
 import { getStripe } from "@/lib/stripe";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
+  // Rate limit: 10 checkout attempts per minute per IP
+  const ip = getClientIp(request);
+  const { limited } = rateLimit(`create-checkout:${ip}`, 10, 60 * 1000);
+  if (limited) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   const body = await request.json();
   const { addonIds, regulation } = body;
 

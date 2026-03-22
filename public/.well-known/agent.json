@@ -1,0 +1,65 @@
+{
+  "name": "AI Compliance Documents",
+  "description": "AI compliance documentation generator for businesses subject to US state AI laws, the EU AI Act, and federal frameworks. Produces customized fillable PDF compliance documents from enacted statute text. Covers employment AI laws, consumer data privacy laws, industry-specific compliance, and universal governance documents. 55 packages available. One-time purchase, instant download, no subscription.",
+  "version": "1.0.0",
+  "url": "https://aicompliancedocuments.com",
+  "documentationUrl": "https://aicompliancedocuments.com/faq",
+  "iconUrl": "https://aicompliancedocuments.com/logo.png",
+  "provider": {
+    "organization": "AI Compliance Documents",
+    "url": "https://aicompliancedocuments.com",
+    "email": "info@aicompliancedocuments.com"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/plain", "application/json"],
+  "skills": [
+    {
+      "id": "compliance-discovery",
+      "name": "Compliance Discovery",
+      "description": "Determine which AI regulations apply to a business based on location, industry, employee count, and AI use cases.",
+      "tags": ["ai-compliance", "regulation", "discovery", "assessment"],
+      "examples": [
+        "Which AI laws apply to my business?",
+        "Do I need AI compliance documentation?",
+        "What states have AI regulations that affect employers?",
+        "Does the EU AI Act apply to US companies?"
+      ]
+    },
+    {
+      "id": "product-recommendation",
+      "name": "Product Recommendation",
+      "description": "Recommend appropriate compliance document packages based on business profile. Covers 14+ US state laws (NYC LL144, IL HB3773, CO SB24-205, CA CCPA ADMT, TX TDPSA, VA CDPA, CT CTDPA, OR CPA, DE PDPA, MN MCDPA, MT MCDPA, IN ICDPA, KY KCDPA, NJ NJDPA), the EU AI Act, and federal frameworks (EEOC, NIST AI RMF). Packages range from $49 to $997.",
+      "tags": ["product", "recommendation", "compliance", "documents", "state-law"],
+      "examples": [
+        "What compliance documents do I need for hiring in New York City?",
+        "I operate in Illinois and use AI in hiring — what do I need?",
+        "Which package covers Colorado SB 24-205?",
+        "I need EU AI Act compliance — what documents are required?"
+      ]
+    },
+    {
+      "id": "law-explanation",
+      "name": "Law Explanation",
+      "description": "Explain what specific AI laws require in plain language — who they apply to, what documentation is needed, and what penalties apply for non-compliance.",
+      "tags": ["law", "regulation", "explanation", "penalties", "requirements"],
+      "examples": [
+        "What does NYC Local Law 144 actually require?",
+        "When does Colorado SB 24-205 take effect?",
+        "What are the penalties for violating Illinois HB3773?",
+        "What is an automated employment decision tool under NYC law?"
+      ]
+    }
+  ],
+  "security": [{"public": []}],
+  "securitySchemes": {
+    "public": {
+      "type": "public",
+      "description": "No authentication required for browsing products and accessing compliance information."
+    }
+  }
+}
