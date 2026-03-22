@@ -13,7 +13,6 @@ interface Purchase {
   regulation_slug: string;
   amount_paid: number;
   created_at: string;
-  form_data: Record<string, unknown> | null;
 }
 
 async function getUserPurchases(userId: string): Promise<Purchase[]> {

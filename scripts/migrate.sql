@@ -68,9 +68,8 @@ CREATE TABLE IF NOT EXISTS purchases
   stripe_session_id VARCHAR(255) NOT NULL,
   stripe_customer_id VARCHAR(255),
   regulation_slug VARCHAR(255) NOT NULL,
-  amount_cents INTEGER NOT NULL,
-  purchased_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  form_data JSONB,
+  amount_paid INTEGER NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   email_at_purchase VARCHAR(255),
 
   PRIMARY KEY (id),
