@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { getAllBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "AI Compliance Blog — News, Guides & Regulation Updates",
+  title: "What's New in AI Compliance — News, Guides & Regulation Updates",
   description:
     "Plain-language guides to AI compliance laws. We break down what Illinois HB3773, Colorado SB24-205, and other state AI regulations mean for your business.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "small business ai compliance",
   ],
   openGraph: {
-    title: "AI Compliance Blog — AI Compliance Documents",
+    title: "What's New in AI Compliance — AI Compliance Documents",
     description:
       "Plain-language guides to AI compliance. What the laws actually say, who they apply to, and what you need to do.",
     url: "https://aicompliancedocuments.com/blog",
@@ -51,7 +51,7 @@ export default function BlogPage() {
               Plain language. No jargon.
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white mb-3 leading-tight tracking-tight">
-              AI Compliance Blog
+              What&apos;s New in AI Compliance
             </h1>
             <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
               State AI regulations are real, confusing, and genuinely important. We explain them
@@ -107,9 +107,9 @@ export default function BlogPage() {
                         </Link>
                       </h2>
 
-                      {/* Description */}
+                      {/* Card summary — plain language hook for scanning */}
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                        {post.description}
+                        {post.cardSummary || post.description}
                       </p>
 
                       {/* Meta */}

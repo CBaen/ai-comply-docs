@@ -55,6 +55,7 @@ export function getAllBlogPosts(): BlogPostMeta[] {
       tags: (data.tags as string[]) ?? [],
       published: (data.published as boolean) ?? false,
       image: (data.image as string) ?? undefined,
+      cardSummary: (data.cardSummary as string) ?? undefined,
     };
   });
 
