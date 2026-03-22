@@ -5,8 +5,8 @@
 
 - [x] Checkout auth() bug fixed — was hanging when DATABASE_URL not set (this session)
 - [x] Neon PostgreSQL connected — tables created, Vercel env vars configured (this session)
-- [ ] **Rate limiting on /contact and /send-documents** — needs Upstash Redis. Both endpoints are open to abuse without it. No infrastructure in place.
-- [ ] **Delivery token single-use enforcement** — DB schema exists, enforcement logic not written. A token can currently be reused to re-download files.
+- [x] Rate limiting on /contact and /send-documents — added this session
+- [x] Delivery token single-use enforcement — DB schema + enforcement logic written this session
 - [ ] **Customer account center end-to-end test** — database is now connected. Test a real purchase: webhook fires, download link appears in account center.
 - [ ] Split product documents onto separate hidden review pages per product — browser Claude needs to audit the actual generated document content for each of the 53 products individually
 - [ ] Resend domain verification — confirm email delivery is actually working end-to-end. Test with a real purchase.
@@ -21,11 +21,35 @@
 - [x] DBA filed for AI Compliance Documents LLC (March 20, 2026)
 - [x] Google Ads account created, linked to Merchant Center
 - [ ] Google Ads MCP setup (TrueClicks) — for family to manage campaigns
-- [ ] Blog style guide document — in progress
-- [ ] Texas TRAIGA blog post research prompts — in progress
-- [ ] 5 new blog topics identified and prioritized: Texas TRAIGA, NIST AI RMF guide, AI governance checklist, New York AI law, AI healthcare compliance
-- [ ] End-to-end checkout test — verify purchase flow before running ads
-- [ ] Money-back guarantee policy — add to terms page (currently on landing page but not formalized)
+- [x] 5 new blog posts written, fact-checked, deployed (Healthcare, NIST, Governance, Texas, EEOC)
+- [x] Blog renamed to "What's New in AI Compliance"
+- [x] Dual summary system (cardSummary + summary) implemented
+- [x] 4 blog hero images generated (Texas, NIST, Governance, EEOC)
+- [x] Google Search Console schema fixes (Product brand type, Dataset description)
+- [x] All blog post links audited — 7 homepage links identified, 2 fixed, 5 pending browser Claude verification
+- [x] WCAG 2.1 AA accessibility audit — 5 critical issues fixed (checkboxes, skip nav, focus rings, nav trap, search modal)
+- [x] Privacy policy updated — Google Analytics disclosed, questionnaire data accurately described as browser-only
+- [x] Terms updated — 30-day money-back guarantee formalized
+- [x] form_data removed from database — questionnaire answers no longer stored server-side
+- [x] Product page UX — "Does This Apply to You?" section added, form heading added, CTAs clarified
+- [x] Product cards — first-sentence descriptions, prominent pricing, "See Details" CTA
+- [x] SoftScrollButton — fade transition replaces scroll/jump on Customize Now
+- [x] Deep dive renderer — markdown links now clickable in sidebar
+- [x] Sources section — accordion on mobile, two columns on desktop
+- [x] New logo/favicon deployed across all touch points
+- [x] NLR article submitted ($250 paid, working with editor Tim Keane)
+- [x] EEOC article rewritten as definitive analysis — 15 external references, dual fact-checked
+
+## NEW — Added 2026-03-22
+
+- [ ] 5 remaining homepage blog links need browser Claude URL verification (CA legislature, CPPA, CT AG, ANAB)
+- [ ] 6 major accessibility issues remaining (text contrast, questionnaire error focus, dark mode contrast)
+- [ ] 10 minor accessibility issues remaining (aria labels, SVG hidden, carousel dots)
+- [ ] Texas HB 149 product — no entry in regulations.ts yet
+- [ ] End-to-end checkout test still not completed
+- [ ] Google Ads campaign — account created but no ads running yet
+- [ ] Account portal re-download button disabled (form_data removed) — consider removing or updating UI
+- [ ] Column name mismatch in migrate.sql (amount_cents vs amount_paid)
 
 ## HIGH (Security + Architecture)
 

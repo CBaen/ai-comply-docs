@@ -201,3 +201,18 @@ Reviewed by every instance on arrival. Append-only. Keep entries atomic and acti
 - **Pattern**: `import JSZip from "jszip"` at the top level of a client component caused the full JSZip bundle (~100KB+) to be included in the initial page load for every visitor, even those who never trigger a download.
 - **Rule**: Use dynamic `import()` inside the function that needs the library, not at the top of the file. For client components, this creates a code-split chunk that only loads when the feature is triggered.
 - **Why**: Every kilobyte in the initial bundle costs load time and Core Web Vitals score for 100% of visitors to pay for a feature used by a small fraction of them.
+
+### Never Link to a Homepage When Citing a Specific Article
+- **Pattern**: Linked to bloomberglaw.com and natlawreview.com instead of specific article URLs in blog posts and the EEOC article.
+- **Rule**: Every hyperlink must go to the exact page being referenced. If you don't have the specific URL, don't hyperlink — mention the source by name without a link and flag it for browser Claude verification.
+- **Why**: Homepage links look like hallucination. A compliance site that can't cite its own sources properly destroys credibility.
+
+### Privacy Policy Must Match Actual Data Practices
+- **Pattern**: Privacy policy said questionnaire data was browser-only. Code stored it in PostgreSQL via the form_data column.
+- **Rule**: After any code change that affects data collection or storage, re-read the privacy policy and verify every claim still matches reality.
+- **Why**: A compliance company with an inaccurate privacy policy is a lawsuit waiting to happen.
+
+### Two-Sentence Summaries Mean Two Sentences
+- **Pattern**: Wrote 3-5 sentence "two-sentence summaries" for blog card descriptions.
+- **Rule**: Count the sentences. Two means two. If you can't say it in two, rewrite until you can.
+- **Why**: ADHD users need scannable content. The constraint is the feature.
