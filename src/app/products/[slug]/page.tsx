@@ -284,7 +284,7 @@ export default async function RegulationPage({
                   href="#get-started"
                   className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg"
                 >
-                  Get Started
+                  Customize Now
                 </a>
               ) : (
                 <span className="w-full sm:w-auto text-center bg-slate-700 text-slate-300 px-8 py-3 rounded-lg font-semibold text-lg cursor-default">
@@ -593,7 +593,7 @@ export default async function RegulationPage({
                       href={`/products/${reg.slug}#generator`}
                       className="block text-center bg-blue-800 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md"
                     >
-                      Get My Documents &mdash; ${reg.price}
+                      Customize Now &mdash; ${reg.price}
                     </a>
                     <QuickPurchaseButton slug={reg.slug} price={reg.price} />
                   </>

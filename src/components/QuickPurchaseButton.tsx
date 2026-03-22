@@ -64,7 +64,7 @@ export default function QuickPurchaseButton({ slug, price }: QuickPurchaseButton
         disabled={loading}
         className="w-full py-3 px-4 rounded-lg font-semibold text-sm border-2 border-blue-700 text-blue-700 hover:bg-blue-50 transition text-center disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {loading ? "Redirecting..." : "Quick Purchase — Skip to Checkout"}
+        {loading ? "Redirecting..." : "Buy Now, Fill Out Later"}
       </button>
       <p className="text-center text-xs text-gray-500 mt-2">
         Purchase now, customize your documents after checkout
