@@ -316,10 +316,13 @@ export default function PostPaymentHandler({
           message: result.error || "Failed to send. Please try again.",
         });
       }
-    } catch {
+    } catch (err) {
+      const msg = err instanceof Error && err.message.includes("form data")
+        ? "Document generation failed. Please try downloading instead, or email info@aicompliancedocuments.com."
+        : "Could not send. Check your internet and try again, or email info@aicompliancedocuments.com for help.";
       setEmailStatus({
         type: "error",
-        message: "Could not connect. Check your internet and try again.",
+        message: msg,
       });
     } finally {
       setSendingEmail(false);
