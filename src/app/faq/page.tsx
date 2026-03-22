@@ -101,7 +101,7 @@ function FAQStructuredData() {
         name: "What is your refund policy?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "All sales are final. Documents are generated and delivered digitally at the time of purchase, so we do not offer refunds. Take a look at the product description and document list before purchasing to make sure it's the right fit.",
+          text: "We offer a 30-day money-back guarantee. If you're not satisfied with your documents, contact us within 30 days of purchase for a full refund.",
         },
       },
       {
@@ -256,7 +256,7 @@ export default function FAQPage() {
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">
-                  All sales are final. Documents are generated and delivered digitally at the time of purchase, so we do not offer refunds. Take a look at the product description and document list before purchasing to make sure it&apos;s the right fit.
+                  We offer a 30-day money-back guarantee. If you&apos;re not satisfied with your documents, contact us within 30 days of purchase for a full refund.
                 </div>
               </details>
 
