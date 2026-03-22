@@ -127,6 +127,7 @@ const DOC_EXPLANATIONS: Record<string, string> = {
   "Contract Addendum": "AI-specific contract language to add to your vendor agreements.",
   "Monitoring Checklist": "A structured checklist for ongoing review of your AI vendors' compliance.",
   "Vendor Risk Assessment": "An assessment of the risks each AI vendor poses to your compliance posture.",
+  "Vibe Coding Security Compliance Checklist": "10 security rules for AI-generated code — each with a problem statement, business impact, fix prompt for your AI, and a verification step to confirm it's resolved.",
 };
 
 function StructuredData({ reg }: { reg: { slug: string; name: string; description: string; price: number; ready: boolean } }) {
