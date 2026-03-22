@@ -261,10 +261,10 @@ export default async function BlogPostPage({ params }: Props) {
                 {/* ═══ Mobile-only: Sources accordion (separate from xl:hidden group above) ═══ */}
                 {post.externalReferences && post.externalReferences.length > 0 && (
                   <div className="md:hidden mt-3">
-                    <details className="group border-l-2 border-slate-400 bg-slate-50/50 rounded-r-lg overflow-hidden" aria-label="Sources">
+                    <details className="group border-l-2 border-green-400 bg-green-50/50 rounded-r-lg overflow-hidden" aria-label="Sources">
                       <summary className="flex items-center gap-2 px-3 sm:px-4 py-3 cursor-pointer list-none">
-                        <svg className="w-4 h-4 text-slate-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
-                        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.15em] hidden sm:inline">Sources</span>
+                        <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                        <span className="text-[10px] font-bold text-green-600 uppercase tracking-[0.15em] hidden sm:inline">Sources</span>
                         <span className="text-sm font-semibold text-gray-900 flex-1">{post.externalReferences.length} references</span>
                         <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                       </summary>
