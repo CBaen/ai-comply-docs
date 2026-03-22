@@ -1540,6 +1540,36 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be listed as the EU registration coordinator responsible for database submissions, transparency disclosures, and provider documentation review.",
     },
   },
+  // ── Vibe Coding Security Compliance Checklist ────────────────
+  "vibe-coding-security-checklist": {
+    acknowledgment:
+      "I understand this is a security checklist template, not a security audit or legal advice. I am responsible for verifying each control is correctly implemented in my specific codebase and stack.",
+    skippedSteps: [2, 3, 4],
+    decisions: [
+      ["web_app", "Web Application"],
+      ["api", "API / Backend Service"],
+      ["fullstack", "Full-Stack Application"],
+      ["saas", "SaaS Product"],
+    ],
+    helpTexts: {
+      step2Help:
+        "Which application are you auditing? Name the project or codebase this checklist covers. You can run a separate checklist for each application.",
+      step2Intro:
+        "Name the application or codebase you are auditing with this checklist.",
+      step2DecisionHelp:
+        "Check the type that best describes the application. This helps tailor the checklist context.",
+      step2MultiHelp:
+        "Auditing multiple applications? Run a separate checklist for each one \u2014 each application has its own security surface.",
+      step3BiasHelp:
+        "Not applicable to this security checklist.",
+      step4Help:
+        "Not applicable to this security checklist.",
+      step5Intro:
+        "This contact will appear on the checklist as the developer or team lead responsible for the security review.",
+    },
+    gateText:
+      "This checklist references OWASP Top 10 and NIST SP 800-53 security controls. These are best-practice frameworks, not mandatory legal requirements. Review your specific stack requirements before purchasing.",
+  },
 };
 
 /**

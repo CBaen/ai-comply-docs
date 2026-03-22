@@ -1071,5 +1071,15 @@ export async function generateDocumentsInner(
     ];
   }
 
+  if (data.regulation === "vibe-coding-security-checklist") {
+    const vibe = await import("./pdf-vibe-security");
+    return [
+      {
+        doc: vibe.generateVibeSecurityChecklist(data),
+        name: `${companySlug}_Vibe_Coding_Security_Compliance_Checklist.pdf`,
+      },
+    ];
+  }
+
   throw new Error(`No PDF generator found for regulation "${data.regulation}". Add a case to generateDocumentsInner.`);
 }
