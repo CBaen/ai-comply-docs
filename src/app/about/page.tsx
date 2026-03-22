@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "https://aicompliancedocuments.com/about",
   },
   openGraph: {
-    title: "About AI Compliance Documents — Our Methodology",
+    title: "About — Our Methodology",
     description:
       "AI compliance templates verified against enacted statute text. Not summaries. Not AI-generated legal claims. The actual law, turned into usable templates.",
     url: "https://aicompliancedocuments.com/about",

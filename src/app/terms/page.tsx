@@ -3,14 +3,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | AI Compliance Documents",
+  title: "Terms of Service",
   description:
     "Terms of Service for AI Compliance Documents. Our templates are for compliance planning purposes only and do not constitute legal advice.",
   alternates: {
     canonical: "https://aicompliancedocuments.com/terms",
   },
   openGraph: {
-    title: "Terms of Service | AI Compliance Documents",
+    title: "Terms of Service",
     description:
       "Terms of Service for AI Compliance Documents. Our templates are for compliance planning purposes only.",
     url: "https://aicompliancedocuments.com/terms",

@@ -4,7 +4,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://aicompliancedocuments.com";
-  const siteLastUpdated = new Date("2026-03-14");
+  const siteLastUpdated = new Date("2026-03-22");
 
   const regulationPages = regulations.filter((r) => r.ready).map((r) => ({
     url: `${base}/products/${r.slug}`,
@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/products`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ai-compliance-by-state`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.85 },
     { url: `${base}/blog`, lastModified: siteLastUpdated, changeFrequency: "daily", priority: 0.8 },
+    { url: `${base}/colorado-ai-compliance`, lastModified: siteLastUpdated, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/do-i-need-ai-compliance`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/faq`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/about`, lastModified: siteLastUpdated, changeFrequency: "monthly", priority: 0.5 },
