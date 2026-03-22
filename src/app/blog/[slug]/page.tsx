@@ -319,7 +319,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* ═══ Sources — full-width bibliography strip (desktop only, mobile uses accordion above) ═══ */}
           {post.externalReferences && post.externalReferences.length > 0 && (
-            <div className="hidden xl:block mt-10 md:mt-12 bg-slate-900 text-white">
+            <div className="hidden md:block mt-10 md:mt-12 bg-slate-900 text-white">
               <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-10">
                 <div className="flex items-center gap-2 mb-5">
                   <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
