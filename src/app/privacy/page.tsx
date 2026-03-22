@@ -3,14 +3,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AI Compliance Documents",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for AI Compliance Documents. We don't sell your data. Learn what we collect, how we use it, and your rights.",
   alternates: {
     canonical: "https://aicompliancedocuments.com/privacy",
   },
   openGraph: {
-    title: "Privacy Policy | AI Compliance Documents",
+    title: "Privacy Policy",
     description:
       "Privacy Policy for AI Compliance Documents. We don't sell your data.",
     url: "https://aicompliancedocuments.com/privacy",
