@@ -120,14 +120,13 @@ export default function PrivacyPage() {
                 The compliance questionnaire you complete before purchase is stored in your
                 browser&apos;s <span className="font-medium text-gray-900">sessionStorage</span> only.
                 This means the questionnaire data exists locally in your browser for the duration of
-                your session. It is not transmitted to or stored on our servers prior to document
-                generation. When your session ends or your browser tab is closed, sessionStorage is
-                cleared automatically.
+                your session. It is not transmitted to or stored on our servers. When your session ends
+                or your browser tab is closed, sessionStorage is cleared automatically.
               </p>
               <p className="mt-3">
-                At the time of document generation (upon payment confirmation), the questionnaire data
-                is used to produce your document. After your document is generated and delivered, we do
-                not retain a copy of your questionnaire responses.
+                Your questionnaire answers are used to generate your documents in your browser. They
+                are not stored on our servers. If you need to generate documents again, you will need
+                to fill out the questionnaire again.
               </p>
             </section>
 
@@ -146,6 +145,21 @@ export default function PrivacyPage() {
                 <li>
                   <span className="font-medium">Vercel</span> — Website hosting and infrastructure.
                   Vercel may collect server logs as described above.
+                </li>
+                <li>
+                  <span className="font-medium">Google Analytics (Google LLC)</span> — We use Google
+                  Analytics to understand how visitors use our website. Google Analytics collects
+                  anonymized usage data including pages visited, time on site, and device information.
+                  No personally identifiable information is shared with Google Analytics.{" "}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 underline"
+                  >
+                    Google&apos;s privacy policy
+                  </a>
+                  .
                 </li>
               </ul>
               <p className="mt-3">
@@ -201,10 +215,9 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">8. Data Retention</h2>
               <p>
-                We retain your email address and the record of your purchase for as long as reasonably
-                necessary to support your transaction (for example, to resend a document if delivery
-                fails) and to comply with applicable legal obligations. We do not retain questionnaire
-                data beyond what is needed to generate and deliver your document.
+                Purchase records (email address, product purchased, amount paid) are retained for
+                accounting and customer support purposes. Questionnaire responses are not retained
+                after document generation.
               </p>
             </section>
 

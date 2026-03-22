@@ -17,8 +17,7 @@ export async function GET() {
          stripe_session_id,
          regulation_slug,
          amount_paid,
-         created_at,
-         form_data
+         created_at
        FROM purchases
        WHERE user_id = $1
        ORDER BY created_at DESC`,

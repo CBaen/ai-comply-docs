@@ -80,7 +80,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { sessionId, formData } = await request.json();
+  const { sessionId } = await request.json();
 
   if (!sessionId || typeof sessionId !== "string") {
     return NextResponse.json(
@@ -105,19 +105,9 @@ export async function POST(request: Request) {
       session.payment_status === "no_payment_required"
     ) {
       trackPurchase(session);
-      // Validate formData before storing — reject oversized or non-object values.
-      let validatedFormData: Record<string, unknown> | null = null;
-      if (formData && typeof formData === "object") {
-        const serialized = JSON.stringify(formData);
-        if (serialized.length <= 50000) { // 50KB max
-          validatedFormData = formData;
-        } else {
-          console.error("formData too large, skipping storage:", serialized.length);
-        }
-      }
       // Synchronous fallback: save to DB in case the webhook hasn't fired yet.
       // ON CONFLICT DO NOTHING means this is safe to call even if webhook already ran.
-      savePurchaseFallback(session, validatedFormData);
+      savePurchaseFallback(session);
       return NextResponse.json({
         verified: true,
         deliveryToken: generateDeliveryToken(sessionId),
