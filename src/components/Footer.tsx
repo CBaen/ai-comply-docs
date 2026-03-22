@@ -119,7 +119,7 @@ export default function Footer() {
           <p className="text-gray-500 text-xs flex flex-wrap gap-x-1">
             <span>&copy; {new Date().getFullYear()} AI Compliance Documents.</span>
             <span>All rights reserved.</span>
-            <span>All sales final.</span>
+            <span>30-day money-back guarantee.</span>
           </p>
         </div>
       </div>

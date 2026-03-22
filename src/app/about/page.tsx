@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About AI Compliance Documents — Our Methodology",
+  title: "About — Our Methodology",
   description:
     "AI compliance templates verified against enacted statute text. Learn how we build documents and why every citation is checked against the actual law.",
   keywords: [

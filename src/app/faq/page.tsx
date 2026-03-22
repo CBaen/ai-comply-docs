@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "FAQ — AI Compliance Documents",
+  title: "Frequently Asked Questions",
   description:
     "Answers to common questions about AI compliance documentation. Do I need AI compliance? What laws apply to my business? How are documents generated?",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://aicompliancedocuments.com/faq",
   },
   openGraph: {
-    title: "FAQ — AI Compliance Documents",
+    title: "Frequently Asked Questions",
     description:
       "Do I need AI compliance? What laws apply? How are documents generated? Answers to the questions we hear most.",
     url: "https://aicompliancedocuments.com/faq",

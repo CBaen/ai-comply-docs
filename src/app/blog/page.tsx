@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "small business ai compliance",
   ],
   openGraph: {
-    title: "What's New in AI Compliance — AI Compliance Documents",
+    title: "What's New in AI Compliance",
     description:
       "Plain-language guides to AI compliance. What the laws actually say, who they apply to, and what you need to do.",
     url: "https://aicompliancedocuments.com/blog",
