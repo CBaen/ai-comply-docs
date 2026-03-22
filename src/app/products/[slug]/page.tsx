@@ -356,6 +356,19 @@ export default async function RegulationPage({
                 </div>
               )}
 
+              {/* Does This Apply to You? */}
+              <section className="bg-amber-50 border border-amber-200 rounded-xl p-6">
+                <h2 className="text-lg font-bold font-display text-gray-900 mb-2">
+                  Does This Apply to You?
+                </h2>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {reg.appliesToSummary}
+                </p>
+                <p className="text-gray-500 text-xs mt-3">
+                  Not sure? Try our free <a href="/do-i-need-ai-compliance" className="text-blue-700 underline hover:text-blue-900">compliance assessment</a> to find out which laws cover your business.
+                </p>
+              </section>
+
               {/* What You Get */}
               <section>
                 <h2 className="text-2xl font-bold font-display text-gray-900 mb-4">
