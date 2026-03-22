@@ -239,7 +239,7 @@ export default async function BlogPostPage({ params }: Props) {
                   {post.microFacts && post.microFacts.length > 0 && (
                     <details className="group border-l-2 border-amber-300 bg-amber-50/50 rounded-r-lg overflow-hidden">
                       <summary className="flex items-center gap-2 px-3 sm:px-4 py-3 cursor-pointer list-none">
-                        <svg className="w-4 h-4 text-amber-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
+                        <svg className="w-4 h-4 text-amber-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.06 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
                         <span className="text-[10px] font-bold text-amber-500 uppercase tracking-[0.15em] hidden sm:inline">Did You Know?</span>
                         <span className="text-sm font-semibold text-gray-900 flex-1">{post.microFacts.length} facts</span>
                         <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
@@ -251,6 +251,28 @@ export default async function BlogPostPage({ params }: Props) {
                             <span className="text-amber-700 text-xs ml-1">— {fact.source}</span>
                             <span className="sr-only"> (opens in new tab)</span>
                           </a>
+                        ))}
+                      </div>
+                    </details>
+                  )}
+
+                  {post.externalReferences && post.externalReferences.length > 0 && (
+                    <details className="group border-l-2 border-slate-400 bg-slate-50/50 rounded-r-lg overflow-hidden" aria-label="Sources">
+                      <summary className="flex items-center gap-2 px-3 sm:px-4 py-3 cursor-pointer list-none">
+                        <svg className="w-4 h-4 text-slate-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.556a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25" /></svg>
+                        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.15em] hidden sm:inline">Sources</span>
+                        <span className="text-sm font-semibold text-gray-900 flex-1">{post.externalReferences.length} references</span>
+                        <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                      </summary>
+                      <div className="px-3 sm:px-4 pb-4 space-y-2.5">
+                        {post.externalReferences.map((ref, i) => (
+                          <div key={i} className="flex items-start gap-2">
+                            <span className="text-slate-400 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
+                            <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 text-sm underline underline-offset-2 decoration-slate-300 hover:decoration-blue-400 transition break-words min-w-0">
+                              {ref.title}
+                              <span className="sr-only"> (opens in new tab)</span>
+                            </a>
+                          </div>
                         ))}
                       </div>
                     </details>
