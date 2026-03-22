@@ -467,28 +467,34 @@ export default function ColoradoAICompliancePage() {
                   likely covers your business. There is no revenue threshold. No
                   employee minimum for most obligations.
                 </p>
-                <div className="space-y-3 mb-8">
-                  {selfAssessment.map((item, i) => (
-                    <label
-                      key={i}
-                      className="flex items-start gap-3 bg-gray-800/50 border border-gray-700/50 rounded-lg p-4 cursor-pointer hover:border-blue-500/30 transition-colors group"
-                    >
-                      <input
-                        type="checkbox"
-                        className="mt-1 w-4 h-4 rounded border-gray-600 text-blue-600 focus:ring-blue-500 bg-gray-700"
-                      />
-                      <div>
-                        <p className="text-gray-200 text-sm group-hover:text-white transition-colors">
-                          {item.question}
-                        </p>
-                        <p className="text-gray-600 text-xs mt-0.5">
-                          Consequential decision domain: {item.domain} (&sect;
-                          6-1-1701(3))
-                        </p>
-                      </div>
-                    </label>
-                  ))}
-                </div>
+                <fieldset>
+                  <legend className="sr-only">Self-assessment: Does Colorado SB 24-205 apply to you?</legend>
+                  <div className="space-y-3 mb-8">
+                    {selfAssessment.map((item, i) => (
+                      <label
+                        key={i}
+                        htmlFor={`assessment-${i}`}
+                        className="flex items-start gap-3 bg-gray-800/50 border border-gray-700/50 rounded-lg p-4 cursor-pointer hover:border-blue-500/30 transition-colors group"
+                      >
+                        <input
+                          type="checkbox"
+                          id={`assessment-${i}`}
+                          name={`assessment-${i}`}
+                          className="mt-1 w-4 h-4 rounded border-gray-600 text-blue-600 focus:ring-blue-500 bg-gray-700"
+                        />
+                        <div>
+                          <p className="text-gray-200 text-sm group-hover:text-white transition-colors">
+                            {item.question}
+                          </p>
+                          <p className="text-gray-600 text-xs mt-0.5">
+                            Consequential decision domain: {item.domain} (&sect;
+                            6-1-1701(3))
+                          </p>
+                        </div>
+                      </label>
+                    ))}
+                  </div>
+                </fieldset>
 
                 {/* Credentialist voice — size exemption detail */}
                 <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-5 mb-8">

@@ -33,11 +33,21 @@ export default function SearchModal() {
   const [results, setResults] = useState<SearchItem[]>([]);
   const [loaded, setLoaded] = useState(false);
   const searchRef = useRef<MiniSearch<SearchItem> | null>(null);
+  const previousFocus = useRef<HTMLElement | null>(null);
   const router = useRouter();
+
+  // Store the focused element when dialog opens so we can return to it on close
+  useEffect(() => {
+    if (open) {
+      previousFocus.current = document.activeElement as HTMLElement;
+    }
+  }, [open]);
 
   const close = useCallback(() => {
     setOpen(false);
     setQuery("");
+    setResults([]);
+    previousFocus.current?.focus();
   }, []);
 
   // Cmd+K / Ctrl+K to open, Escape to close

@@ -49,6 +49,16 @@ html.dark summary:focus-visible {
   box-shadow: 0 0 0 4px #1e293b, 0 0 0 6px #93c5fd;
 }
 
+/* Focus rings on dark-background sections (bg-gray-9xx classes used on Colorado page) */
+[class*="bg-gray-9"] a:focus-visible,
+[class*="bg-gray-9"] button:focus-visible,
+[class*="bg-gray-9"] input:focus-visible,
+[class*="bg-gray-9"] summary:focus-visible,
+[class*="bg-gray-9"] [tabindex]:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

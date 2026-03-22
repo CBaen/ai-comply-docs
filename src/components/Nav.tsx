@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import DarkModeToggle from "./DarkModeToggle";
@@ -8,6 +8,37 @@ import SearchModal from "./SearchModal";
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!mobileOpen || !menuRef.current) return;
+    const menu = menuRef.current;
+    const focusable = menu.querySelectorAll<HTMLElement>('a, button');
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    first.focus();
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setMobileOpen(false);
+        hamburgerRef.current?.focus();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [mobileOpen]);
 
   return (
     <>
@@ -86,6 +117,7 @@ export default function Nav() {
           <div className="flex items-center gap-1 md:hidden shrink-0">
             <SearchModal />
             <button
+              ref={hamburgerRef}
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 text-gray-600 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md hover:bg-gray-100 transition"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -111,6 +143,7 @@ export default function Nav() {
         </div>
         <div
           id="mobile-nav"
+          ref={menuRef}
           className={`mobile-menu md:hidden border-t border-gray-100 bg-white ${mobileOpen ? "open" : ""}`}
           aria-hidden={!mobileOpen}
         >
