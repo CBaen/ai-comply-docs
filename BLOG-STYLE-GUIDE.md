@@ -42,6 +42,7 @@ Every blog post is an `.mdx` file in `content/blog/`. The file begins with a YAM
 |-------|------|-------|
 | `image` | string | Absolute path from site root. Example: `/blog/blog-hero-illinois.png`. If omitted, the header renders without an image column. If provided, the hero renders as a two-column layout (image left, text right on desktop). |
 | `summary` | string | 1–2 sentences rendered inside a "Two-Sentence Summary" callout box in the post header. Write it for someone who may read only this and nothing else. Use plain language — no citations, no jargon. |
+| `cardSummary` | string | 1–2 sentences rendered on the article card on the What's New in AI Compliance index page. Hook-first, plain language. If omitted, falls back to `description`. |
 | `deepDive` | object | See [Section 5](#5-enrichment-blocks). Renders in the left sidebar column on desktop. One per post. |
 | `microFacts` | array of objects | See [Section 5](#5-enrichment-blocks). Renders in the right sidebar column on desktop. 2–4 facts per post. |
 | `externalReferences` | array of objects | See [Section 5](#5-enrichment-blocks). Renders as a dark bibliography strip below the article body. Every `.gov` source you consulted should appear here. |
@@ -86,6 +87,26 @@ externalReferences:
 **`readTime`** — This field is NOT in frontmatter. It is computed automatically from the full file by the `reading-time` library and injected at build time. Do not add it to frontmatter.
 
 **`summary`** — This renders in the hero header in a styled callout box. It is also used by some feed consumers. Write it after you've written the full post. It is not the same as `description` — `description` is SEO-facing and can include the citation; `summary` is reader-facing and should be plain language.
+
+### The Dual Summary System
+
+Every blog post has two summaries that serve different purposes:
+
+**`summary`** (renders inside the blog post, in the blue "Two-Sentence Summary" box)
+- Audience: Someone who already clicked the article but hasn't committed to reading 2,000 words
+- Purpose: Answers "what will I learn if I keep reading?"
+- Tone: Slightly more specific than the card summary. Can mention law names and key findings.
+- Example: "The EEOC has removed all of its AI employment guidance, including the Algorithmic Fairness Initiative it launched in 2021. Texas, Colorado, and Illinois have each enacted their own AI laws with different legal standards for discrimination, and employers operating across state lines now have no federal baseline to build on."
+
+**`cardSummary`** (renders on the What's New in AI Compliance index page, on the article card)
+- Audience: Someone scanning 17 cards deciding which article to click
+- Purpose: Answers "why should I care about this?"
+- Tone: Plain language hook. No statute citations, no section numbers. Accessible to someone who doesn't know what AI compliance is. Make them curious.
+- Example: "The EEOC deleted every page of AI hiring guidance it ever published. Three states wrote their own rules instead — and none of them agree."
+
+Both are 1-2 sentences. Same facts, different angles. The cardSummary hooks; the summary informs.
+
+If `cardSummary` is not provided in frontmatter, the blog index falls back to the `description` field.
 
 **YAML string quoting** — Use double-quoted strings for `title`, `description`, and `summary` if they contain colons, apostrophes, or special characters. The `deepDive.content` field frequently contains paragraph breaks; represent them as `\n\n` within the quoted string, not as actual newlines (which would break YAML parsing).
 
