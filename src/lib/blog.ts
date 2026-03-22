@@ -25,6 +25,7 @@ export interface BlogPostMeta {
   published: boolean;
   image?: string;
   summary?: string;
+  cardSummary?: string;
 }
 
 export interface BlogPostFull extends BlogPostMeta {
