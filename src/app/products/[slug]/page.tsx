@@ -569,8 +569,8 @@ export default async function RegulationPage({
               </section>
             </div>
 
-            {/* Sidebar — purchase card (shows first on mobile so CTA isn't buried) */}
-            <div className="md:col-span-1 order-first md:order-last">
+            {/* Sidebar — purchase card (after content on mobile, sticky sidebar on desktop) */}
+            <div className="md:col-span-1">
               <div
                 id="get-started"
                 className="bg-white border-2 border-blue-800 rounded-xl p-5 sm:p-6 shadow-lg md:sticky md:top-24"
