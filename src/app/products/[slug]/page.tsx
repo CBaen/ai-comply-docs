@@ -320,30 +320,21 @@ export default async function RegulationPage({
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {/* Main content */}
             <div className="md:col-span-2 space-y-10">
-              {/* Penalties */}
-              <section>
-                <h2 className="text-2xl font-bold font-display text-gray-900 mb-4">
-                  Penalties for Non-Compliance
+              {/* Does This Apply to You? — FIRST section, answers the visitor's top question */}
+              <section className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
+                  Does This Apply to You?
                 </h2>
-                <div className="bg-red-50 border border-red-100 rounded p-6 border-l-4 border-l-red-400">
-                  <p className="text-gray-700 leading-relaxed mb-3">
-                    {reg.penaltySummary}
-                  </p>
-                  <p className="font-bold text-red-800 text-lg">
-                    Maximum: {reg.maxPenalty}
-                  </p>
-                </div>
-              </section>
-
-              {/* Who Must Comply */}
-              <section>
-                <h2 className="text-2xl font-bold font-display text-gray-900 mb-4">
-                  Who Must Comply
-                </h2>
-                <div className="bg-slate-50 border border-gray-200 rounded p-6">
-                  <p className="text-gray-700 leading-relaxed">
-                    {reg.appliesToSummary}
-                  </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {reg.appliesToSummary}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="/do-i-need-ai-compliance"
+                    className="text-sm font-semibold text-blue-700 hover:text-blue-900 underline underline-offset-2"
+                  >
+                    Not sure? Take the free assessment →
+                  </a>
                 </div>
               </section>
 
@@ -355,19 +346,6 @@ export default async function RegulationPage({
                   </p>
                 </div>
               )}
-
-              {/* Does This Apply to You? */}
-              <section className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h2 className="text-lg font-bold font-display text-gray-900 mb-2">
-                  Does This Apply to You?
-                </h2>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {reg.appliesToSummary}
-                </p>
-                <p className="text-gray-500 text-xs mt-3">
-                  Not sure? Try our free <a href="/do-i-need-ai-compliance" className="text-blue-700 underline hover:text-blue-900">compliance assessment</a> to find out which laws cover your business.
-                </p>
-              </section>
 
               {/* What You Get */}
               <section>
