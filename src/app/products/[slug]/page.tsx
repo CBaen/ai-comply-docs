@@ -281,12 +281,20 @@ export default async function RegulationPage({
                 </span>
               </div>
               {reg.ready ? (
-                <SoftScrollButton
-                  targetId="generator"
-                  className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg cursor-pointer"
-                >
-                  Customize Now
-                </SoftScrollButton>
+                <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                  <SoftScrollButton
+                    targetId="generator"
+                    className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg cursor-pointer"
+                  >
+                    Customize Now
+                  </SoftScrollButton>
+                  <a
+                    href="#details"
+                    className="w-full sm:w-auto text-center border border-white/30 text-white px-8 py-3 rounded-lg font-semibold text-sm hover:bg-white/10 transition"
+                  >
+                    Is this for me?
+                  </a>
+                </div>
               ) : (
                 <span className="w-full sm:w-auto text-center bg-slate-700 text-slate-300 px-8 py-3 rounded-lg font-semibold text-lg cursor-default">
                   Coming Soon
@@ -321,7 +329,7 @@ export default async function RegulationPage({
             {/* Main content */}
             <div className="md:col-span-2 space-y-10">
               {/* Does This Apply to You? — FIRST section, answers the visitor's top question */}
-              <section className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+              <section id="details" className="bg-blue-50 border border-blue-200 rounded-xl p-6 scroll-mt-20">
                 <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
                   Does This Apply to You?
                 </h2>
@@ -417,6 +425,21 @@ export default async function RegulationPage({
                   </a>
                 </section>
               )}
+
+              {/* Penalties — shown after documents so visitors understand what they get before seeing risk */}
+              <section>
+                <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
+                  What Happens Without Compliance
+                </h2>
+                <div className="bg-red-50 border border-red-100 rounded p-5 border-l-4 border-l-red-400">
+                  <p className="text-gray-700 leading-relaxed mb-2 text-sm">
+                    {reg.penaltySummary}
+                  </p>
+                  <p className="font-bold text-red-800">
+                    Maximum: {reg.maxPenalty}
+                  </p>
+                </div>
+              </section>
 
               {/* ESIGN Act note */}
               <div className="flex items-start gap-3 bg-slate-50 border border-gray-200 rounded p-4 text-sm text-gray-600">
