@@ -139,7 +139,16 @@ export default function Home() {
       <Nav />
       <main id="main-content">
         {/* Hero Section with Product Carousel */}
-        <header className="hero-bg text-white">
+        <header className="hero-bg text-white relative overflow-hidden">
+          <div className="absolute inset-0 z-0" aria-hidden="true">
+            <img
+              src="/images/landing/homepage-hero.png"
+              alt=""
+              className="w-full h-full object-cover opacity-10"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-900/80" />
+          </div>
+          <div className="relative z-10">
           <h1 className="sr-only">AI Compliance Documents — State AI Compliance Templates</h1>
           <ProductCarousel
             products={regulations
