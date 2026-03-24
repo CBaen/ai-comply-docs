@@ -84,6 +84,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Attorney General enforcement only (\u00A7 541.151). No private right of action. Civil penalties up to $7,500 per violation (\u00A7 541.155). Permanent 30-day cure period \u2014 never expires (\u00A7 541.154).",
     maxPenalty: "Up to $7,500 per violation (\u00A7 541.155)",
     appliesToSummary: "Persons conducting business in Texas or targeting Texas residents who process personal data AND are not a small business (SBA definition) \u2014 except small businesses that sell sensitive data.",
+    appliesToBullets: [
+      "You do business in Texas or target Texas residents",
+      "You are not classified as a small business under SBA definitions (OR you sell sensitive data regardless of size)",
+      "You process personal data for targeted advertising, data sales, or profiling activities",
+    ],
     keywords: ["texas", "tdpsa", "hb4", "consumer privacy", "data privacy", "profiling", "541"],
     documents: [
       "Data Protection Assessment for Profiling",
@@ -111,6 +116,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Attorney General enforcement only (\u00A7 12D-111). No private right of action. Civil penalties up to $10,000 per violation (\u00A7 12D-111). 60-day cure period until December 31, 2025; AG discretion after (\u00A7 12D-111).",
     maxPenalty: "Up to $10,000 per violation (\u00A7 12D-111)",
     appliesToSummary: "Entities doing business in Delaware or targeting Delaware residents that process data of 35,000+ consumers OR 10,000+ consumers with 20%+ revenue from data sales. Lowest thresholds of any state.",
+    appliesToBullets: [
+      "You do business in Delaware or target Delaware residents",
+      "You process personal data of 35,000+ consumers per year",
+      "OR: You process data of 10,000+ consumers AND get 20%+ of revenue from data sales",
+    ],
     keywords: ["delaware", "pdpa", "hb154", "consumer privacy", "data privacy", "profiling", "12D"],
     documents: [
       "Data Protection Assessment for Profiling",
@@ -139,6 +149,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Penalties vary by state: TX $7,500/violation, DE $10,000/violation, MN $7,500/violation, CO $20,000/violation. Each state has independent enforcement authority. This bundle addresses the common assessment requirement across all covered states.",
     maxPenalty: "Varies by state \u2014 see State Comparison Matrix",
     appliesToSummary: "Any organization subject to two or more state consumer privacy laws requiring documented data protection assessments for profiling activities.",
+    appliesToBullets: [
+      "You operate in multiple states or target consumers in multiple states",
+      "You meet the data thresholds for at least two state privacy laws (VA, CT, CO, TX, DE, MN, OR, MT, MD, IN, or others)",
+      "You use personal data for profiling, targeted advertising, or automated decisions",
+    ],
     keywords: ["multi-state", "profiling assessment", "data protection assessment", "virginia", "connecticut", "colorado", "texas", "delaware", "minnesota", "oregon", "montana", "maryland", "indiana", "bundle"],
     documents: [
       "Multi-State Data Protection Assessment",
@@ -168,6 +183,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "IL: up to $70,000 per violation (775 ILCS 5/8A-104(K)). NYC LL144: $500\u2013$1,500 per violation per day. CO SB24-205: up to $20,000 per violation (C.R.S. \u00A7 6-1-112). Each jurisdiction enforces independently.",
     maxPenalty: "Multi-jurisdiction exposure \u2014 see Multi-Jurisdiction Compliance Matrix",
     appliesToSummary: "Employers using AI in hiring, promotion, or employment decisions in Illinois, New York City, and/or Colorado. This bundle addresses all three sets of employer notification and disclosure requirements.",
+    appliesToBullets: [
+      "You hire or evaluate employees in Illinois, New York City, or Colorado",
+      "You use AI tools that assist or automate hiring, promotion, or performance decisions",
+      "You need to satisfy disclosure or notice obligations in two or more of these jurisdictions",
+    ],
     keywords: ["employer", "ai disclosure", "illinois", "hb3773", "nyc", "local law 144", "colorado", "sb24-205", "hiring", "employment", "multi-state", "bundle"],
     documents: [
       "Multi-Jurisdiction Compliance Matrix",
@@ -197,6 +217,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Virginia Attorney General exclusive enforcement (§ 59.1-584(A)). No private right of action. AG must provide 30-day cure period before seeking penalties (§ 59.1-584(B)). Civil penalties up to $7,500 per violation (§ 59.1-584(C)).",
     maxPenalty: "Up to $7,500 per violation (§ 59.1-584(C))",
     appliesToSummary: "Controllers doing business in VA or targeting VA residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 50%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Virginia or target Virginia residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 50%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for targeted advertising, profiling, or automated decisions",
+    ],
     keywords: ["virginia", "cdpa", "vcdpa", "consumer privacy", "ai profiling", "automated decisions", "59.1-575"],
     documents: [
       "Privacy Notice Template",
@@ -227,6 +253,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Connecticut Attorney General exclusive enforcement (§ 42-525(a)). No private right of action. Mandatory 60-day cure period expired December 31, 2024; AG has enforcement discretion after that date. Civil penalties up to $5,000 per violation under CUTPA (§ 42-110o).",
     maxPenalty: "Up to $5,000 per violation (CUTPA, § 42-110o)",
     appliesToSummary: "Persons doing business in CT or targeting CT residents that (1) process personal data of 100,000+ consumers (excluding payment-only transactions)/year OR (2) derive 25%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Connecticut or target Connecticut residents",
+      "You process personal data of 100,000+ consumers per year (excluding payment-only transactions)",
+      "OR: You derive 25%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for targeted advertising, profiling, or automated decisions",
+    ],
     keywords: ["connecticut", "ctdpa", "pa 22-15", "consumer privacy", "ai profiling", "automated decisions", "42-515"],
     documents: [
       "Privacy Notice Template",
@@ -257,6 +289,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Oregon Attorney General enforcement (§ 646A.589). No private right of action. 30-day cure period until January 1, 2026 (§ 646A.589(2)); AG has enforcement discretion after that date. Civil penalties up to $7,500 per violation (ORS § 646A.589(4)(a)).",
     maxPenalty: "Up to $7,500 per violation (ORS § 646A.589(4)(a))",
     appliesToSummary: "Persons doing business in OR or targeting OR residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 25%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Oregon or target Oregon residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 25%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for targeted advertising, profiling, or automated decisions",
+    ],
     keywords: ["oregon", "cpa", "consumer privacy", "ai profiling", "automated decisions", "children's data", "646A.570"],
     documents: [
       "Privacy Notice Template",
@@ -287,6 +325,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Minnesota Attorney General exclusive enforcement (\u00A7 325M.20). No private right of action (\u00A7 325M.20(d)). AG may bring civil action and recover attorney fees. Civil penalties up to $7,500 per violation (\u00A7 325M.20(c)). 30-day AG cure period for warnings expired January 31, 2026 (\u00A7 325M.20(a)).",
     maxPenalty: "Up to $7,500 per violation (\u00A7325M.20(c))",
     appliesToSummary: "Entities doing business in MN or targeting MN residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 25%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Minnesota or target Minnesota residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 25%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use profiling, automated decisions, or algorithmic tools that affect consumers",
+    ],
     keywords: ["minnesota", "mcdpa", "consumer privacy", "algorithmic profiling", "automated decisions", "325M"],
     documents: [
       "Privacy Notice Template",
@@ -317,6 +361,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Civil penalties imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425): up to $16,000 (first violation), $42,500 (second within 5 years), $70,000 (two+ within 7 years). IDHR investigates charges; the Commission imposes penalties. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
     maxPenalty: "Up to $70,000 per violation (repeat); $16,000 first offense",
     appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, renewal of employment, selection for training or apprenticeship, discharge, discipline, tenure, or the terms, privileges, or conditions of employment (775 ILCS 5/2-102(L)).",
+    appliesToBullets: [
+      "You are an employer operating in Illinois",
+      "You use any AI or automated tool in hiring, promotion, discipline, or other employment decisions",
+      "The tool affects candidates or employees in Illinois, regardless of your company's headquarters",
+    ],
     keywords: ["illinois", "hb3773", "ai hiring", "employment", "idhr", "775 ilcs"],
     documents: [
       "Employee & Applicant AI Notification",
@@ -347,6 +396,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "CPPA administrative enforcement and AG civil enforcement. $2,500 per violation, $7,500 per intentional violation (Cal. Civ. Code § 1798.155). No private right of action for ADMT-specific violations.",
     maxPenalty: "$2,500 per violation; $7,500 per intentional violation",
     appliesToSummary: "Any business subject to CCPA that uses automated decision-making technology to make significant decisions about California consumers.",
+    appliesToBullets: [
+      "You are subject to the California Consumer Privacy Act (CCPA applies to businesses above certain revenue/data thresholds doing business in California)",
+      "You use automated systems to make significant decisions about California consumers — such as in hiring, lending, insurance, or service eligibility",
+      "Your system substantially determines outcomes rather than just assisting a human review",
+    ],
     keywords: ["california", "ccpa", "cpra", "admt", "automated decision-making", "privacy"],
     documents: [
       "Pre-Use Notice Template",
@@ -382,6 +436,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Attorney General enforcement under Colorado Consumer Protection Act (C.R.S. § 6-1-112). Up to $20,000 per violation (§ 6-1-112(1)(a)). Up to $50,000 per violation involving persons age 60+ (§ 6-1-112(1)(c)). No private right of action.",
     maxPenalty: "Up to $20,000 per violation ($50,000 for age 60+)",
     appliesToSummary: "Any deployer of a high-risk AI system that makes consequential decisions about Colorado consumers in employment, education, financial services, housing, insurance, or legal services.",
+    appliesToBullets: [
+      "You deploy AI systems that affect Colorado consumers",
+      "The AI makes consequential decisions in employment, education, financial services, housing, insurance, or legal services",
+      "You are a deployer (you use the AI to make decisions) — developers who supply high-risk AI to others also have separate obligations",
+    ],
     keywords: ["colorado", "sb24-205", "high-risk ai", "consumer protection", "algorithmic discrimination"],
     documents: [
       "Risk Management Policy",
