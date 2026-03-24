@@ -313,14 +313,8 @@ export default function ProductLibrary({
             </p>
 
             {/* First-sentence description */}
-            <p className="text-gray-600 text-sm mb-3 leading-relaxed">
+            <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-1">
               {firstSentence}
-            </p>
-
-            {/* Who needs this — the key question */}
-            <p className="text-xs text-blue-800 bg-blue-50 rounded px-3 py-2 mb-4 leading-relaxed flex-1">
-              <span className="font-semibold">Applies to: </span>
-              {reg.appliesToSummary.split(/[.!]/)[0]}.
             </p>
 
             {/* Price (prominent) + doc count */}
