@@ -18,6 +18,7 @@ export interface Regulation {
   penaltySummary: string;
   maxPenalty: string;
   appliesToSummary: string;
+  appliesToBullets?: string[];
   keywords: string[];
   documents: string[];
   ready: boolean;
