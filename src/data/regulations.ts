@@ -1242,6 +1242,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Montana Attorney General enforcement via Title 30, ch. 14, parts 1\u20132. No private right of action (\u00A7 30-14-2817(5)). Civil penalty up to $7,500 per violation (\u00A7 30-14-2820). 30-day cure period (\u00A7 30-14-2820(2); see also \u00A7 30-14-2817(3)). Data protection assessments not retroactive to pre-January 1, 2025 processing.",
     maxPenalty: "Up to $7,500 per violation (\u00A7 30-14-2820)",
     appliesToSummary: "Entities doing business in Montana or targeting Montana residents that (1) process personal data of 25,000+ consumers/year OR (2) derive 25%+ revenue from data sales and process data of 15,000+ consumers (\u00A7 30-14-2803). Lowest thresholds of any state privacy law.",
+    appliesToBullets: [
+      "You do business in Montana or target Montana residents",
+      "You process personal data of 25,000+ consumers per year (the lowest threshold of any state law)",
+      "OR: You derive 25%+ of revenue from data sales and process data of 15,000+ consumers",
+      "You use that data for profiling, targeted advertising, or automated decisions",
+    ],
     keywords: ["montana", "mcdpa", "consumer data privacy", "privacy", "30-14-2801", "SB 384"],
     documents: [
       "Privacy Notice Template",
@@ -1272,6 +1278,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Kentucky Attorney General exclusive enforcement. No private right of action. Civil penalties apply. 30-day cure period. This law is effective January 1, 2026.",
     maxPenalty: "Civil penalty per violation (KRS Chapter 367)",
     appliesToSummary: "Entities doing business in Kentucky or targeting Kentucky residents that process personal data of 100,000+ consumers/year OR derive 50%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Kentucky or target Kentucky residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 50%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for profiling, targeted advertising, or automated decisions",
+    ],
     keywords: ["kentucky", "kcdpa", "consumer data protection", "privacy", "HB 15", "KRS 367"],
     documents: [
       "Privacy Notice Template",
@@ -1302,6 +1314,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "New Jersey Attorney General enforcement. No private right of action. Civil penalties apply. This law is separate from the NJ Law Against Discrimination (LAD).",
     maxPenalty: "Civil penalty per violation (NJDPA)",
     appliesToSummary: "Entities doing business in New Jersey or targeting New Jersey residents that process personal data of 100,000+ consumers/year OR derive 50%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in New Jersey or target New Jersey residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 50%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for profiling, targeted advertising, or automated decisions",
+    ],
     keywords: ["new jersey", "njdpa", "data protection", "privacy", "S332", "A1971"],
     documents: [
       "Privacy Notice Template",
@@ -1334,6 +1352,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Unaddressed vulnerabilities in AI-generated code expose applications to data breaches, account takeovers, payment fraud, and regulatory penalties under CCPA, GDPR, PCI DSS, and HIPAA. Security incidents caused by vibe-coded applications are not covered by most cyber insurance policies when basic controls are absent.",
     maxPenalty: "Breach liability + regulatory exposure",
     appliesToSummary: "Any developer or team using AI coding tools (Cursor, Copilot, Claude, ChatGPT, etc.) to build or ship web applications. Especially critical before first deployment or when adding payment, authentication, or file upload features.",
+    appliesToBullets: [
+      "You use AI coding tools (Cursor, Copilot, Claude, ChatGPT, etc.) to build or ship web applications",
+      "You are approaching first deployment or adding features that handle payments, authentication, or file uploads",
+      "You have not done a security review of AI-generated code and want to catch critical vulnerabilities before they ship",
+    ],
     keywords: ["vibe coding", "security", "ai generated code", "cors", "owasp", "checklist", "web security", "cursor", "copilot", "universal"],
     documents: [
       "Vibe Coding Security Compliance Checklist",
@@ -1363,6 +1386,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Civil penalties up to $16,000 per violation (first offense), $42,500 (one prior violation within 5 years), or $70,000 (two+ prior violations within 7 years). Penalties assessed per violation and per affected person. Imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425). IDHR investigates charges. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
     maxPenalty: "Up to $70,000 per violation (repeat offenders); $16,000 first offense",
     appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, renewal of employment, selection for training or apprenticeship, discharge, discipline, tenure, or the terms, privileges, or conditions of employment (775 ILCS 5/2-102(L)).",
+    appliesToBullets: [
+      "You are an employer operating in Illinois",
+      "You use any AI or automated tool in hiring, promotion, discipline, or other employment decisions",
+      "The tool affects candidates or employees in Illinois, regardless of your company's headquarters",
+    ],
     keywords: ["illinois", "hb3773", "employee notice", "ai notice", "response kit", "775 ilcs", "add-on"],
     documents: [
       "Employee Notification Template",
@@ -1390,6 +1418,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Civil penalties up to $16,000 per violation (first offense), $42,500 (one prior violation within 5 years), or $70,000 (two+ prior violations within 7 years). Penalties assessed per violation and per affected person. Imposed by the Illinois Human Rights Commission per 775 ILCS 5/8A-104(K) (as amended by P.A. 104-0425). IDHR investigates charges. Private civil action with uncapped actual damages and attorney fees (775 ILCS 5/8A-104).",
     maxPenalty: "Up to $70,000 per violation (repeat offenders); $16,000 first offense",
     appliesToSummary: "Any Illinois employer using AI in recruitment, hiring, promotion, renewal of employment, selection for training or apprenticeship, discharge, discipline, tenure, or the terms, privileges, or conditions of employment (775 ILCS 5/2-102(L)).",
+    appliesToBullets: [
+      "You are an employer operating in Illinois",
+      "You use any AI or automated tool in hiring, promotion, discipline, or other employment decisions",
+      "The tool affects candidates or employees in Illinois, regardless of your company's headquarters",
+    ],
     keywords: ["illinois", "hb3773", "zip code", "proxy audit", "protected class", "775 ilcs", "add-on"],
     documents: [
       "Data Input Audit",
@@ -1417,6 +1450,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Attorney General enforcement under Colorado Consumer Protection Act (C.R.S. § 6-1-112). Up to $20,000 per violation (§ 6-1-112(1)(a)). Up to $50,000 per violation involving persons age 60+ (§ 6-1-112(1)(c)). No private right of action.",
     maxPenalty: "Up to $20,000 per violation ($50,000 for age 60+)",
     appliesToSummary: "Any deployer of a high-risk AI system that makes consequential decisions about Colorado consumers in employment, education, financial services, housing, insurance, or legal services.",
+    appliesToBullets: [
+      "You deploy AI systems that affect Colorado consumers",
+      "The AI makes consequential decisions in employment, education, financial services, housing, insurance, or legal services",
+      "You are a deployer (you use the AI to make decisions) — developers who supply high-risk AI to others also have separate obligations",
+    ],
     keywords: ["colorado", "sb24-205", "consumer appeal", "data correction", "adverse decision", "add-on"],
     documents: [
       "Appeal Intake Form",
@@ -1444,6 +1482,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Attorney General enforcement under Colorado Consumer Protection Act (C.R.S. § 6-1-112). Up to $20,000 per violation (§ 6-1-112(1)(a)). Up to $50,000 per violation involving persons age 60+ (§ 6-1-112(1)(c)). No private right of action.",
     maxPenalty: "Up to $20,000 per violation ($50,000 for age 60+)",
     appliesToSummary: "Any deployer of a high-risk AI system that makes consequential decisions about Colorado consumers in employment, education, financial services, housing, insurance, or legal services.",
+    appliesToBullets: [
+      "You deploy AI systems that affect Colorado consumers",
+      "The AI makes consequential decisions in employment, education, financial services, housing, insurance, or legal services",
+      "You are a deployer (you use the AI to make decisions) — developers who supply high-risk AI to others also have separate obligations",
+    ],
     keywords: ["colorado", "sb24-205", "algorithmic discrimination", "ag reporting", "attorney general", "add-on"],
     documents: [
       "Discrimination Discovery Form",
@@ -1471,6 +1514,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Attorney General enforcement under Colorado Consumer Protection Act (C.R.S. § 6-1-112). Up to $20,000 per violation (§ 6-1-112(1)(a)). Up to $50,000 per violation involving persons age 60+ (§ 6-1-112(1)(c)). No private right of action.",
     maxPenalty: "Up to $20,000 per violation ($50,000 for age 60+)",
     appliesToSummary: "Developers of high-risk AI systems who must provide documentation per §6-1-1702, and deployers who need to verify they've received adequate documentation for impact assessments.",
+    appliesToBullets: [
+      "You develop high-risk AI systems that are sold or licensed to deployers in Colorado",
+      "OR you are a deployer who purchased a high-risk AI system and need to verify you received the required documentation from the developer",
+      "Colorado SB 24-205 creates obligations on both sides of the developer-deployer relationship",
+    ],
     keywords: ["colorado", "sb24-205", "developer", "deployer", "documentation exchange", "model card", "add-on"],
     documents: [
       "Developer Disclosure Checklist",
@@ -1498,6 +1546,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "CPPA administrative enforcement and AG civil enforcement. $2,500 per violation; $7,500 per intentional violation (Cal. Civ. Code § 1798.155). No private right of action for ADMT-specific violations.",
     maxPenalty: "$2,500 per violation; $7,500 per intentional violation",
     appliesToSummary: "Any business subject to CCPA that uses automated decision-making technology to make significant decisions about California consumers.",
+    appliesToBullets: [
+      "You are subject to the California Consumer Privacy Act (CCPA applies to businesses above certain revenue/data thresholds doing business in California)",
+      "You use automated systems to make significant decisions about California consumers — such as in hiring, lending, insurance, or service eligibility",
+      "Your system substantially determines outcomes rather than just assisting a human review",
+    ],
     keywords: ["california", "ccpa", "admt", "pre-use notice", "opt-out", "automated decision-making", "add-on"],
     documents: [
       "Pre-Use Notice Template",
