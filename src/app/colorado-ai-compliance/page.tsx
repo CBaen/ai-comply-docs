@@ -198,8 +198,17 @@ export default function ColoradoAICompliancePage() {
 
       <main id="main-content">
         {/* Hero — Realist voice */}
-        <section className="bg-gray-950 text-white py-16 sm:py-20 md:py-24">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <section className="bg-gray-950 text-white py-16 sm:py-20 md:py-24 relative overflow-hidden">
+          {/* Background image — Denver skyline */}
+          <div className="absolute inset-0">
+            <img
+              src="/images/landing/colorado-denver-skyline.png"
+              alt=""
+              className="w-full h-full object-cover opacity-15"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/90 to-gray-950" />
+          </div>
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10">
             <p className="text-red-400 text-sm font-semibold uppercase tracking-wider mb-4">
               Colorado SB 24-205 &middot; Enforcement begins June 30, 2026
             </p>
