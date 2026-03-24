@@ -48,6 +48,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "NYC Department of Consumer and Worker Protection enforcement. Civil penalties of $500 (first), $500-$1,500 per subsequent violation per day. Proactive DCWP investigations increasing in 2026.",
     maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary: "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion. Includes intersectional testing across race/ethnicity and sex categories as required by DCWP implementing rules (6 RCNY § 5-301).",
+    appliesToBullets: [
+      "You hire or promote employees in New York City",
+      "You use any automated tool to screen, evaluate, or rank candidates",
+      "The tool substantially assists or replaces human decision-making in hiring or promotion",
+    ],
     keywords: ["nyc", "local law 144", "aedt", "bias audit", "automated hiring", "employment decision tool", "new york city"],
     documents: [
       "Bias Audit Summary Report Template",

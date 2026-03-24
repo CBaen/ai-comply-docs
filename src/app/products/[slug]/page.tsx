@@ -315,10 +315,20 @@ export default async function RegulationPage({
             <div className="md:col-span-2 space-y-10">
               {/* Does This Apply to You? — FIRST section, answers the visitor's top question */}
               <section className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
+                <h2 className="text-xl font-bold font-display text-gray-900 mb-4">
                   Does This Apply to You?
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                {reg.appliesToBullets && reg.appliesToBullets.length > 0 && (
+                  <ul className="space-y-2.5 mb-4">
+                    {reg.appliesToBullets.map((bullet, i) => (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <svg className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span className="text-gray-800 text-sm leading-relaxed">{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {reg.appliesToSummary}
                 </p>
               </section>
