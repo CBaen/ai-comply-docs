@@ -273,7 +273,7 @@ export default async function RegulationPage({
                 <span className="text-3xl sm:text-4xl font-extrabold font-display text-white">
                   ${reg.price}
                 </span>
-                <span className="text-slate-400 text-sm ml-2">
+                <span className="text-slate-300 text-sm ml-2">
                   one-time purchase
                 </span>
               </div>
@@ -356,7 +356,7 @@ export default async function RegulationPage({
                       <div>
                         <p className="font-semibold text-gray-900">{doc}</p>
                         {DOC_EXPLANATIONS[doc] && (
-                          <p className="text-sm text-gray-500 mt-1">{DOC_EXPLANATIONS[doc]}</p>
+                          <p className="text-sm text-gray-600 mt-1">{DOC_EXPLANATIONS[doc]}</p>
                         )}
                       </div>
                     </div>
@@ -369,7 +369,7 @@ export default async function RegulationPage({
                 <h2 className="text-2xl font-bold font-display text-gray-900 mb-1">
                   Preview Your Documents
                 </h2>
-                <p className="text-gray-500 text-sm mb-3">
+                <p className="text-gray-600 text-sm mb-3">
                   See what your compliance package includes — sample shown with example data
                 </p>
                 <DocumentSamplePreview slug={reg.slug} />
@@ -381,7 +381,7 @@ export default async function RegulationPage({
                   <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
                     See Inside Your Documents
                   </h2>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <p className="text-sm text-gray-600 mb-4">
                     Sample page using demo data. Your documents will include your company
                     name, AI systems, and compliance details.
                   </p>
@@ -466,7 +466,7 @@ export default async function RegulationPage({
                   <h2 className="text-2xl font-bold font-display text-gray-900 mb-1">
                     Complete Your Compliance
                   </h2>
-                  <p className="text-gray-500 text-sm mb-5">
+                  <p className="text-gray-600 text-sm mb-5">
                     Law-specific add-ons for this package
                   </p>
                   <div className="space-y-3">
@@ -494,7 +494,7 @@ export default async function RegulationPage({
                             <p className="text-sm text-gray-600 leading-snug line-clamp-2 mb-2">
                               {addon.description}
                             </p>
-                            <p className="text-xs text-gray-500">
+                            <p className="text-xs text-gray-600">
                               {addon.documentCount} documents
                             </p>
                           </div>
@@ -601,12 +601,12 @@ export default async function RegulationPage({
                     <span className="block bg-slate-100 text-slate-500 py-4 rounded-lg font-semibold text-lg cursor-default mb-3">
                       Coming Soon
                     </span>
-                    <p className="text-gray-500 text-xs">
+                    <p className="text-gray-600 text-xs">
                       This package is under development. Check back soon.
                     </p>
                   </div>
                 )}
-                <p className="text-center text-xs text-gray-500 mt-4">
+                <p className="text-center text-xs text-gray-600 mt-4">
                   vs. $5,000&ndash;$25,000 at a law firm
                 </p>
 
@@ -629,7 +629,7 @@ export default async function RegulationPage({
                 </div>
 
                 {/* Pre-purchase contact */}
-                <p className="text-center text-xs text-gray-500 mt-4">
+                <p className="text-center text-xs text-gray-600 mt-4">
                   Questions before purchasing?{" "}
                   <a href="mailto:info@aicompliancedocuments.com" className="text-blue-700 hover:underline">
                     Email us
@@ -672,7 +672,7 @@ export default async function RegulationPage({
                 <h2 className="text-2xl font-bold font-display text-gray-900 mb-2">
                   Customize Your {reg.shortName} Package
                 </h2>
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-600 text-sm">
                   Fill in your company details below. Your answers will be used to pre-fill your compliance documents.
                 </p>
               </div>

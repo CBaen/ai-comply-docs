@@ -241,10 +241,6 @@ export default function ColoradoAICompliancePage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
                 Statute-cited
               </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                Instant digital download
-              </span>
             </div>
           </div>
         </section>

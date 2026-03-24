@@ -510,10 +510,11 @@ export default function PostPaymentHandler({
             <form onSubmit={handleQuickPurchaseSubmit} noValidate className="space-y-5">
               {/* Company Name */}
               <div>
-                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                <label htmlFor="quick-company-name" className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
                   Company Name <span className="text-red-500">*</span>
                 </label>
                 <input
+                  id="quick-company-name"
                   type="text"
                   value={quickFields.companyName}
                   onChange={(e) => {
@@ -526,16 +527,17 @@ export default function PostPaymentHandler({
                   }`}
                 />
                 {quickFieldErrors.companyName && (
-                  <p className="text-red-500 text-xs mt-1">{quickFieldErrors.companyName}</p>
+                  <p role="alert" className="text-red-500 text-xs mt-1">{quickFieldErrors.companyName}</p>
                 )}
               </div>
 
               {/* AI Tool Name */}
               <div>
-                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                <label htmlFor="quick-ai-tool-name" className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
                   AI System / Tool Name <span className="text-red-500">*</span>
                 </label>
                 <input
+                  id="quick-ai-tool-name"
                   type="text"
                   value={quickFields.aiToolName}
                   onChange={(e) => {
@@ -548,16 +550,17 @@ export default function PostPaymentHandler({
                   }`}
                 />
                 {quickFieldErrors.aiToolName && (
-                  <p className="text-red-500 text-xs mt-1">{quickFieldErrors.aiToolName}</p>
+                  <p role="alert" className="text-red-500 text-xs mt-1">{quickFieldErrors.aiToolName}</p>
                 )}
               </div>
 
               {/* AI Role dropdown */}
               <div>
-                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                <label htmlFor="quick-ai-role" className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
                   Your Role in AI Decisions <span className="text-red-500">*</span>
                 </label>
                 <select
+                  id="quick-ai-role"
                   value={quickFields.aiRole}
                   onChange={(e) => setQuickFields((f) => ({ ...f, aiRole: e.target.value }))}
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none dark:bg-slate-700 dark:text-white dark:border-slate-600"
@@ -570,11 +573,12 @@ export default function PostPaymentHandler({
 
               {/* Contact Name */}
               <div>
-                <label className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+                <label htmlFor="quick-contact-name" className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
                   Your Name <span className="text-red-500">*</span>
                 </label>
                 <p className="text-xs text-gray-400 dark:text-gray-500 mb-1">Name for compliance documents</p>
                 <input
+                  id="quick-contact-name"
                   type="text"
                   value={quickFields.contactName}
                   onChange={(e) => {
@@ -587,7 +591,7 @@ export default function PostPaymentHandler({
                   }`}
                 />
                 {quickFieldErrors.contactName && (
-                  <p className="text-red-500 text-xs mt-1">{quickFieldErrors.contactName}</p>
+                  <p role="alert" className="text-red-500 text-xs mt-1">{quickFieldErrors.contactName}</p>
                 )}
               </div>
 

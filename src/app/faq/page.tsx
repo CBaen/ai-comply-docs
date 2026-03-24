@@ -61,7 +61,7 @@ function FAQStructuredData() {
         name: "What AI regulations do you cover?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer 53 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
+          text: "We offer 54 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
         },
       },
       {
@@ -252,7 +252,7 @@ export default function FAQPage() {
 
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
                 <summary className="flex items-center justify-between gap-3 p-4 sm:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
-                  <span className="flex-1 min-w-0">What is your refund policy?</span>
+                  <span className="flex-1 min-w-0">Are all sales final?</span>
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-700 leading-relaxed text-sm sm:text-base">

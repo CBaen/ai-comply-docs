@@ -186,6 +186,7 @@ export default function ProductLibrary({
       <div className="mb-4">
         <input
           type="search"
+          aria-label="Search products"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search by state, law, or topic..."
