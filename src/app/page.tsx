@@ -302,7 +302,7 @@ export default function Home() {
               </h2>
               <p className="text-gray-700 text-base md:text-lg max-w-2xl">
                 AI regulations aren&apos;t suggestions. They&apos;re law, with real
-                enforcement teeth and penalties up to $200,000 per violation.
+                enforcement teeth and penalties up to $200,000 per violation (Texas TRAIGA, uncurable violations).
               </p>
             </div>
             <hr className="border-t border-gray-200 my-4" />

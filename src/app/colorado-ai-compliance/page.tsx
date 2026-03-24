@@ -138,7 +138,7 @@ const documents = [
   {
     name: "Affirmative Defense Documentation",
     citation: "\u00A7 6-1-1706(3)",
-    desc: "The affirmative defense requires two things: following NIST AI RMF and having a process to discover and cure violations. This builds both.",
+    desc: "The affirmative defense requires two things: following NIST AI RMF and ISO/IEC 42001 (or an equivalent framework), and having a process to discover and cure violations. This builds both.",
   },
 ];
 
@@ -403,9 +403,10 @@ export default function ColoradoAICompliancePage() {
                     </p>
                     <p>
                       The affirmative defense (&sect; 6-1-1706(3)) requires two
-                      things: following NIST AI RMF or ISO/IEC 42001,{" "}
-                      <em>and</em> having a process to discover and cure
-                      violations. Following NIST alone is not enough.
+                      things: following NIST AI RMF <em>and</em> ISO/IEC 42001
+                      (or an equivalent framework), <em>and</em> having a
+                      process to discover and cure violations. Following NIST
+                      alone is not enough.
                     </p>
                     <p>
                       If you discover algorithmic discrimination, a 90-day clock
