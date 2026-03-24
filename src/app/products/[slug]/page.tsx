@@ -314,21 +314,13 @@ export default async function RegulationPage({
             {/* Main content */}
             <div className="md:col-span-2 space-y-10">
               {/* Does This Apply to You? — FIRST section, answers the visitor's top question */}
-              <section id="details" className="bg-blue-50 border border-blue-200 rounded-xl p-6 scroll-mt-20">
+              <section className="bg-blue-50 border border-blue-200 rounded-xl p-6">
                 <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
                   Does This Apply to You?
                 </h2>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed">
                   {reg.appliesToSummary}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="/do-i-need-ai-compliance"
-                    className="text-sm font-semibold text-blue-700 hover:text-blue-900 underline underline-offset-2"
-                  >
-                    Not sure? Take the free assessment →
-                  </a>
-                </div>
               </section>
 
               {/* IDHR implementing rules notice — Illinois HB3773 only */}
