@@ -163,8 +163,43 @@ export default function PostPaymentHandler({
         }).catch(() => {}); // Non-blocking — account linking is optional
 
         if (isQP) {
-          // Show mini-form before the download panel
-          setIsQuickPurchase(true);
+          // Skip the mini-form — deliver immediately with placeholder data.
+          // The PDFs are fillable; buyers type their own info into the fields.
+          const placeholderData: ComplianceFormData = {
+            regulation: regulationSlug,
+            company: {
+              name: "[Your Company Name]",
+              state: "",
+              size: "",
+              industry: "",
+            },
+            aiSystems: [
+              {
+                name: "[Your AI System]",
+                vendor: "",
+                description: "",
+                decisions: [],
+              },
+            ],
+            dataInputs: [],
+            protectedCharacteristics: [],
+            biasAudit: "",
+            oversight: {
+              aiRole: "AI provides advisory input",
+              oversightRole: "",
+              humanReview: "",
+              reviewFrequency: "",
+            },
+            contact: {
+              name: "[Your Name]",
+              title: "",
+              email: "",
+              phone: "",
+            },
+            generatedDate: new Date().toISOString().split("T")[0],
+            selectedAddons: [],
+          };
+          setFormData(placeholderData);
           setStatus("ready");
         } else {
           setFormData(parsedData as ComplianceFormData);
