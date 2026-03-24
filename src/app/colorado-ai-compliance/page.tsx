@@ -334,7 +334,8 @@ export default function ColoradoAICompliancePage() {
                       </p>
                       <p>
                         The affirmative defense (&sect; 6-1-1706(3)) requires
-                        two things: following NIST AI RMF or ISO/IEC 42001,{" "}
+                        two things: following NIST AI RMF <em>and</em> ISO/IEC
+                        42001 (or an equivalent framework),{" "}
                         <em>and</em> having a process to discover and cure
                         violations through feedback, adversarial testing, or
                         internal review. Following NIST alone is not enough.
