@@ -519,8 +519,14 @@ export default function ColoradoAICompliancePage() {
                   </p>
                 </div>
 
-                {/* Divider */}
-                <hr className="border-gray-700/50 my-10" />
+                {/* Lifestyle image break */}
+                <div className="my-10 rounded-xl overflow-hidden">
+                  <img
+                    src="/images/landing/team-compliance-meeting.png"
+                    alt="Compliance team reviewing AI risk assessment documents in a modern office"
+                    className="w-full h-48 sm:h-56 object-cover"
+                  />
+                </div>
 
                 {/* Documents section — both voices */}
                 <h2 className="text-2xl font-bold font-display text-white mb-2">
@@ -976,6 +982,17 @@ export default function ColoradoAICompliancePage() {
             </ol>
           </div>
         </section>
+
+        {/* Lifestyle image before CTA */}
+        <div className="bg-gray-950">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-8">
+            <img
+              src="/images/landing/professional-reviewing-documents.png"
+              alt="Professional reviewing compliance documents on a laptop"
+              className="w-full h-48 sm:h-64 object-cover rounded-xl"
+            />
+          </div>
+        </div>
 
         {/* Final CTA */}
         <section className="bg-gray-950 py-16 sm:py-20">
