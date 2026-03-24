@@ -92,6 +92,11 @@ export default function ProductCarousel({ products }: Props) {
           {p.shortName}
         </h2>
 
+        {/* Description — two sentences about what this is */}
+        <p className="text-sm sm:text-base text-slate-300 mb-5 sm:mb-6 max-w-2xl mx-auto leading-relaxed">
+          {p.description.match(/^[^.!?]*[.!?]\s*[^.!?]*[.!?]/)?.[0] ?? p.description.split(/[.!?]\s/)[0] + '.'}
+        </p>
+
         {/* Who is this for — bullet points */}
         {p.appliesToBullets && p.appliesToBullets.length > 0 ? (
           <div className="mb-6 sm:mb-8 max-w-xl mx-auto">
