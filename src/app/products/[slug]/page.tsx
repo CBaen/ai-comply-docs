@@ -281,20 +281,12 @@ export default async function RegulationPage({
                 </span>
               </div>
               {reg.ready ? (
-                <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                  <SoftScrollButton
-                    targetId="generator"
-                    className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg cursor-pointer"
-                  >
-                    Customize Now
-                  </SoftScrollButton>
-                  <a
-                    href="#details"
-                    className="w-full sm:w-auto text-center border border-white/30 text-white px-8 py-3 rounded-lg font-semibold text-sm hover:bg-white/10 transition"
-                  >
-                    Is this for me?
-                  </a>
-                </div>
+                <a
+                  href="#details"
+                  className="hero-cta w-full sm:w-auto text-center bg-white text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg"
+                >
+                  See If This Applies to You
+                </a>
               ) : (
                 <span className="w-full sm:w-auto text-center bg-slate-700 text-slate-300 px-8 py-3 rounded-lg font-semibold text-lg cursor-default">
                   Coming Soon
