@@ -37,8 +37,8 @@ export const faqItems: FAQItem[] = [
     answer: "A lot of our customers have lawyers. They use our templates as a starting point — it gives their attorney something to review and refine instead of drafting from scratch at $400–$800 an hour. Your lawyer's time is better spent on the nuances specific to your business, not on formatting a compliance checklist.",
   },
   {
-    question: "What is your refund policy?",
-    answer: "We offer a 30-day money-back guarantee. If you're not satisfied with your documents, contact us within 30 days of purchase for a full refund.",
+    question: "Are all sales final?",
+    answer: "Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it's the right fit.",
   },
   {
     question: "How long does it take to fill out the questionnaire?",
@@ -54,7 +54,7 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: "Do you offer refunds?",
-    answer: "Yes. We offer a 30-day money-back guarantee. If you're not satisfied with your documents, contact us within 30 days of purchase for a full refund.",
+    answer: "All sales are final because documents are generated and delivered digitally at the time of purchase. We recommend reviewing the product description and document list before purchasing.",
   },
   {
     question: "How often should I update my compliance documents?",

@@ -98,10 +98,10 @@ function FAQStructuredData() {
       },
       {
         "@type": "Question",
-        name: "What is your refund policy?",
+        name: "Are all sales final?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer a 30-day money-back guarantee. If you're not satisfied with your documents, contact us within 30 days of purchase for a full refund.",
+          text: "Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it's the right fit.",
         },
       },
       {

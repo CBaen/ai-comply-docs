@@ -110,21 +110,21 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">6. 30-Day Money-Back Guarantee</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">6. All Sales Final</h2>
               <p>
-                We stand behind our documents. If the documents do not meet your compliance needs,
-                email{" "}
+                All sales are final. Documents are generated and delivered digitally at the time
+                of purchase. We recommend reviewing the product description and document list
+                before purchasing to ensure it meets your needs.
+              </p>
+              <p className="mt-3">
+                If you experience a technical issue with delivery of your documents, contact us at{" "}
                 <a
                   href="mailto:info@aicompliancedocuments.com"
                   className="text-blue-700 underline"
                 >
                   info@aicompliancedocuments.com
                 </a>{" "}
-                within 30 days of purchase for a full refund. No lengthy explanations required.
-              </p>
-              <p className="mt-3">
-                If you experience a technical issue with delivery of your document, contact us at the
-                same address and we will make it right.
+                and we will make it right.
               </p>
             </section>
 
