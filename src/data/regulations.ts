@@ -473,6 +473,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "National authorities enforcement. Prohibited AI practices: up to €35,000,000 or 7% of global annual turnover (Art. 99(3)). Other high-risk AI violations: up to €15,000,000 or 3% of global annual turnover (Art. 99(4)). False or misleading information: up to €7,500,000 or 1% of global annual turnover (Art. 99(5)).",
     maxPenalty: "€35M or 7% of global annual turnover (prohibited AI practices)",
     appliesToSummary: "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
+    appliesToBullets: [
+      "You develop or deploy AI systems used in the EU market — this includes US companies if their AI affects EU users",
+      "Your AI system falls into a high-risk category: hiring, credit, insurance, healthcare, education, law enforcement, or critical infrastructure",
+      "OR your system uses a prohibited AI practice (social scoring, real-time biometric surveillance, subliminal manipulation)",
+    ],
     keywords: ["eu ai act", "european union", "high-risk ai", "conformity assessment", "ce marking", "international"],
     documents: [
       "Risk Classification Worksheet",
@@ -511,6 +516,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "EEOC enforcement under existing federal anti-discrimination law (Title VII, ADA, ADEA). Compensatory damages: $50,000–$300,000 depending on employer size. Punitive damages. Back pay. Injunctive relief. No AI-specific penalty — violations are treated as employment discrimination.",
     maxPenalty: "$300,000 compensatory/punitive cap (employers 500+)",
     appliesToSummary: "Any US employer using AI in hiring, performance evaluation, promotion, or termination decisions. Title VII and ADA apply to employers with 15+ employees; ADEA (age discrimination) applies to employers with 20+ employees.",
+    appliesToBullets: [
+      "You are a US employer with 15 or more employees (20+ for age discrimination rules)",
+      "You use AI or automated tools in hiring, performance reviews, promotion, or termination",
+      "Your AI tool could produce outcomes that disproportionately affect a protected group — even unintentionally",
+    ],
     keywords: ["eeoc", "title vii", "ada", "adea", "ai hiring", "adverse impact", "employment discrimination"],
     documents: [
       "AI Hiring Risk Assessment",
@@ -541,6 +551,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Not directly enforceable, but referenced as the compliance standard by state laws, federal agencies, and enterprise procurement. Demonstrates reasonable care.",
     maxPenalty: "Best practice standard",
     appliesToSummary: "Any organization implementing AI governance. Especially valuable for companies subject to multiple state AI laws or seeking federal contracts.",
+    appliesToBullets: [
+      "Your organization uses AI systems in any capacity",
+      "You are subject to multiple state AI laws that reference NIST as a compliance benchmark",
+      "OR you seek federal contracts or enterprise deals that require a recognized AI risk framework",
+    ],
     keywords: ["nist", "ai rmf", "risk management", "ai governance", "govern", "map", "measure", "manage"],
     documents: [
       "AI Risk Profile Template",
@@ -572,6 +587,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Reduces organizational liability. Required foundation for most state-specific compliance programs.",
     maxPenalty: "Liability reduction",
     appliesToSummary: "Any organization where employees use AI tools in their work. Foundational document for all other compliance programs.",
+    appliesToBullets: [
+      "Your employees use AI tools like ChatGPT, Copilot, or other AI assistants at work",
+      "You need a clear policy defining what employees can and can't do with AI",
+    ],
     keywords: ["ai policy", "acceptable use", "nist", "eeoc", "employee policy", "universal"],
     documents: [
       "AI Acceptable Use Policy",
@@ -599,6 +618,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Required by multiple state laws (CO, TX, IL) for deployers using third-party AI systems. Protects against downstream liability.",
     maxPenalty: "Liability protection",
     appliesToSummary: "Any organization purchasing or licensing AI systems from third-party vendors.",
+    appliesToBullets: [
+      "You buy or license AI tools from third-party vendors rather than building them yourself",
+      "You need to assess whether vendor AI systems meet your compliance obligations before purchasing",
+      "Multiple state laws (CO, TX, IL) require deployers to verify that AI vendors provide adequate documentation",
+    ],
     keywords: ["vendor", "due diligence", "procurement", "third-party ai", "risk assessment"],
     documents: [
       "Vendor AI Due Diligence Questionnaire",
@@ -627,6 +651,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Required annually under NYC LL144. Recommended by EEOC, Colorado, and NIST frameworks. Demonstrates proactive discrimination prevention.",
     maxPenalty: "Required for LL144 compliance",
     appliesToSummary: "Any organization using AI systems that affect people — employment, lending, insurance, housing, or consumer services.",
+    appliesToBullets: [
+      "You use AI tools that make or influence decisions about people — hiring, lending, insurance, housing, or services",
+      "You need to document whether those tools produce discriminatory outcomes across demographic groups",
+      "Required annually for NYC employers under Local Law 144; recommended practice under EEOC and Colorado law",
+    ],
     keywords: ["bias audit", "adverse impact", "discrimination testing", "fairness", "audit report"],
     documents: [
       "Bias Audit Report Template",
@@ -654,6 +683,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "California TFAIA requires incident reporting within 15 days. EU AI Act requires serious incident reporting. NIST RMF recommends documented response procedures.",
     maxPenalty: "Required by CA TFAIA & EU AI Act",
     appliesToSummary: "Any organization deploying AI systems, especially those subject to California TFAIA, EU AI Act, or enterprise procurement requirements.",
+    appliesToBullets: [
+      "You deploy AI systems that make or influence decisions affecting people",
+      "You need a documented plan for what to do when an AI system fails, discriminates, or causes harm",
+      "Required reporting timelines apply if you are subject to California TFAIA (15 days) or the EU AI Act",
+    ],
     keywords: ["incident response", "ai safety", "risk management", "reporting", "containment"],
     documents: [
       "AI Incident Response Plan",
@@ -686,6 +720,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Supports compliance with IL 775 ILCS 5/2-102(L), NYC LL144, and CO SB24-205 training and notice requirements. Communication templates, not legal advice.",
     maxPenalty: "Liability reduction",
     appliesToSummary: "Any organization that needs to explain AI use policies to employees and managers. Supplements employment-related AI compliance packages.",
+    appliesToBullets: [
+      "You have managers who need to explain your company's AI use to their teams",
+      "You need ready-made communication materials rather than building them from scratch",
+      "Supplements any employment AI compliance package (IL HB3773, NYC LL144, CO SB24-205)",
+    ],
     keywords: ["manager", "training", "employee faq", "talking points", "training kit", "communication", "add-on"],
     documents: [
       "Manager Talking Points Script",
@@ -713,6 +752,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Supports annual review obligations under CO SB24-205, IL HB3773, and other state AI laws. Review templates, not legal advice.",
     maxPenalty: "Liability reduction",
     appliesToSummary: "Any organization that has purchased AI compliance documentation and needs an annual review process to keep it current.",
+    appliesToBullets: [
+      "You have existing AI compliance documents that need to stay current as laws change",
+      "State laws like CO SB24-205 and IL HB3773 require ongoing compliance, not just a one-time document",
+    ],
     keywords: ["annual review", "compliance review", "update log", "checklist", "recertification", "add-on"],
     documents: [
       "Annual Compliance Review Checklist",
@@ -739,6 +782,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Supports board-level governance obligations under NIST AI RMF Govern function, SEC AI guidance, and enterprise procurement requirements. Governance templates, not legal advice.",
     maxPenalty: "Governance best practice",
     appliesToSummary: "Any organization that needs to report AI compliance status to a board of directors, audit committee, or C-suite executives.",
+    appliesToBullets: [
+      "Your board, audit committee, or C-suite asks about your organization's AI compliance status",
+      "You need executive-level reporting materials — not legal documents, but governance summaries",
+    ],
     keywords: ["board", "executive", "summary", "risk register", "presentation", "governance", "add-on"],
     documents: [
       "Executive AI Compliance Status Report",
@@ -766,6 +813,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Supports consumer disclosure requirements under CO SB24-205, CA CCPA ADMT, MN MCDPA, and other state laws. Disclosure templates, not legal advice.",
     maxPenalty: "Liability reduction",
     appliesToSummary: "Any organization that needs to disclose AI use to consumers across website, email, and physical channels. Supplements all state AI compliance packages.",
+    appliesToBullets: [
+      "You are required by state law to notify consumers when AI is used in decisions about them (CO, CA, MN, and others)",
+      "You need disclosure materials formatted for web, email, and physical posting",
+    ],
     keywords: ["consumer notice", "disclosure", "website banner", "email notification", "physical posting", "add-on"],
     documents: [
       "Website AI Disclosure Banner",
