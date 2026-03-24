@@ -44,8 +44,12 @@ export default function BlogPage() {
       <Nav />
       <main id="main-content">
         {/* Hero */}
-        <header className="hero-bg text-white py-10 md:py-20">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <header className="hero-bg text-white py-10 md:py-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img src="/images/landing/hands-typing-compliance.png" alt="" className="w-full h-full object-cover opacity-15" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/90 to-slate-900" />
+          </div>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
             <div className="inline-flex items-center gap-2 border border-blue-400/40 px-3 py-1.5 mb-4 text-xs sm:text-sm rounded text-blue-200">
               <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" aria-hidden="true" />
               Plain language. No jargon.

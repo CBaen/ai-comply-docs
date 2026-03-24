@@ -47,8 +47,12 @@ export default function AboutPage() {
       <main id="main-content" className="min-h-screen bg-white">
 
         {/* Hero */}
-        <header className="bg-gray-900 text-white py-12 md:py-24">
-          <div className="max-w-3xl mx-auto px-6 sm:px-8">
+        <header className="bg-gray-900 text-white py-12 md:py-24 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img src="/images/landing/team-compliance-meeting.png" alt="" className="w-full h-full object-cover opacity-15" />
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/90 to-gray-900" />
+          </div>
+          <div className="max-w-3xl mx-auto px-6 sm:px-8 relative z-10">
             <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">
               About Us
             </p>
