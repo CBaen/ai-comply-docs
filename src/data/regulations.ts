@@ -1901,6 +1901,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "National authorities enforcement. High-risk AI violations: up to €15,000,000 or 3% global turnover (Art. 99(4)). Prohibited AI practices: up to €35,000,000 or 7% global turnover (Art. 99(3)). False information: up to €7,500,000 or 1% global turnover (Art. 99(5)).",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary: "Public authorities, EU institutions, and persons acting on their behalf who deploy high-risk AI systems listed in Annex III (except point 2 employment systems, which register at national level). Private sector deployers have transparency obligations under Art. 50 but are not required to register in the EU database.",
+    appliesToBullets: [
+      "You are a public authority or EU institution deploying high-risk AI systems listed in Annex III",
+      "OR you are a private-sector deployer subject to Art. 50 transparency obligations (emotion recognition, deep fake systems, AI interacting with people)",
+      "You deploy AI systems in the EU market, including as a US company serving EU users",
+    ],
     keywords: ["eu ai act", "european union", "database registration", "transparency", "emotion recognition", "deep fake", "add-on"],
     documents: [
       "Database Registration Checklist",
