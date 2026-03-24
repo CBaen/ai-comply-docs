@@ -243,7 +243,7 @@ export default function ColoradoAICompliancePage() {
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                30-day money-back guarantee
+                Instant digital download
               </span>
             </div>
           </div>
@@ -767,11 +767,11 @@ export default function ColoradoAICompliancePage() {
                 {/* Trust section — Credentialist */}
                 <div className="bg-green-950/30 border border-green-800/40 rounded-xl p-6 mb-8">
                   <p className="text-green-400 font-semibold mb-2">
-                    30-Day Money-Back Guarantee
+                    Verified Against Enacted Statute Text
                   </p>
                   <p className="text-gray-300 text-sm">
-                    If the documents don&apos;t meet your compliance needs,
-                    email us within 30 days for a full refund.
+                    Every requirement in these documents traces to a specific
+                    section of SB 24-205. No summaries. No AI-generated legal claims.
                   </p>
                 </div>
                 <div className="grid sm:grid-cols-3 gap-4 mb-10">

@@ -440,11 +440,11 @@ export default function Home() {
               </details>
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
                 <summary className="flex items-center justify-between px-4 py-4 md:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none text-sm md:text-base">
-                  What is your refund policy?
+                  Are all sales final?
                   <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                 </summary>
                 <div className="px-4 pb-4 md:px-6 md:pb-6 text-gray-700 leading-relaxed text-sm md:text-base">
-                  We offer a 30-day money-back guarantee. If you&apos;re not satisfied with your documents, contact us within 30 days of purchase for a full refund.
+                  Yes. Documents are generated and delivered digitally at the time of purchase, so all sales are final. Take a look at the product description and document list before purchasing to make sure it&apos;s the right fit.
                 </div>
               </details>
             </div>
