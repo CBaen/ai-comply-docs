@@ -844,6 +844,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Data mapping is a prerequisite for data protection assessments required under CA CCPA, CO SB24-205, MN MCDPA, TX TDPSA, DE PDPA, and other state privacy laws. Inventory templates, not legal advice.",
     maxPenalty: "Compliance prerequisite",
     appliesToSummary: "Any organization subject to state consumer privacy laws that require data protection assessments. Data mapping is a prerequisite for all assessment work.",
+    appliesToBullets: [
+      "You are subject to any state consumer privacy law that requires a data protection assessment",
+      "You need to document what personal data you collect, where it goes, and who you share it with before completing that assessment",
+    ],
     keywords: ["data mapping", "data inventory", "data flow", "third-party register", "personal data", "add-on"],
     documents: [
       "Personal Data Inventory",
@@ -871,6 +875,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Supports consumer rights response obligations under CA CCPA, CO SB24-205, MN MCDPA, TX TDPSA, DE PDPA, and other state privacy laws. Response templates, not legal advice.",
     maxPenalty: "Liability reduction",
     appliesToSummary: "Any organization subject to state consumer privacy laws that grant consumers rights to access, correct, delete, or opt out of profiling.",
+    appliesToBullets: [
+      "You are subject to any state consumer privacy law (CA, CO, VA, CT, MN, TX, DE, and others)",
+      "Consumers in those states have rights to access, correct, delete, or opt out — and you need a documented process to respond within legal deadlines",
+    ],
     keywords: ["consumer rights", "data subject request", "access request", "deletion request", "opt-out", "response templates", "add-on"],
     documents: [
       "Consumer Rights Request Intake Form",
@@ -902,6 +910,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "HIPAA penalties up to $2.1M per violation category per year. COPPA penalties up to $50,120 per violation. FDA enforcement for medical devices.",
     maxPenalty: "$2.1M per HIPAA violation category",
     appliesToSummary: "Hospitals, clinics, health tech companies, health plan administrators, and any HIPAA-covered entity using AI.",
+    appliesToBullets: [
+      "You are a HIPAA-covered entity or business associate — hospital, clinic, health plan, or health tech company",
+      "You use AI in clinical decisions, patient intake, diagnostics, or health administration",
+      "You collect or process health data from children under 13 (COPPA deadline: April 22, 2026)",
+    ],
     keywords: ["healthcare", "hipaa", "fda", "coppa", "medical ai", "patient data", "health tech"],
     documents: [
       "HIPAA AI Risk Assessment",
@@ -934,6 +947,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "FINRA disciplinary actions, SEC enforcement, CFPB penalties up to $1M per day for violations. FINRA explicitly flagged AI as a 2026 regulatory priority.",
     maxPenalty: "$1M per day (CFPB)",
     appliesToSummary: "Broker-dealers, RIAs, banks, fintech companies, wealth management firms, and any financial institution using AI.",
+    appliesToBullets: [
+      "You are a broker-dealer, RIA, bank, fintech, or other financial institution regulated by FINRA, SEC, or CFPB",
+      "You use AI in customer communications, investment recommendations, credit decisions, or compliance supervision",
+      "FINRA explicitly flagged AI supervision as a 2026 examination priority",
+    ],
     keywords: ["finra", "sec", "cfpb", "financial services", "ai supervision", "model risk", "lending ai"],
     documents: [
       "AI Supervision Policy",
@@ -1030,6 +1048,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "Documented governance is required evidence of \"reasonable care\" under CO SB24-205 and similar deployer-liability statutes. Framework templates, not legal advice.",
     maxPenalty: "Governance foundation",
     appliesToSummary: "Any organization deploying AI systems. Required foundation for demonstrating reasonable care under state AI laws and for enterprise AI procurement programs.",
+    appliesToBullets: [
+      "Your organization uses AI systems and lacks a formal governance structure for approving and overseeing them",
+      "State laws like CO SB24-205 require documented evidence of reasonable care — a governance framework is that evidence",
+      "Enterprise customers increasingly require a documented AI governance program as a procurement requirement",
+    ],
     keywords: ["ai governance", "ethics", "risk classification", "steering committee", "approval workflow", "nist ai rmf", "universal"],
     documents: [
       "AI Governance Policy",
@@ -1061,6 +1084,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "AI system inventory is a prerequisite for compliance with CO SB24-205, TX TRAIGA, EU AI Act, and other AI statutes requiring deployers to assess and document each system. Templates, not legal advice.",
     maxPenalty: "Compliance prerequisite",
     appliesToSummary: "Any organization using AI systems. An inventory is a prerequisite for every state and federal AI compliance obligation.",
+    appliesToBullets: [
+      "Your organization uses AI tools and does not have a complete list of what those systems are and what they do",
+      "Every state and federal AI compliance obligation requires you to assess specific AI systems — you can't do that without an inventory",
+    ],
     keywords: ["ai inventory", "ai registry", "system lifecycle", "ai systems", "asset management", "universal"],
     documents: [
       "AI System Inventory Template",
@@ -1088,6 +1115,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Public transparency reporting is required by EU AI Act Art. 13 for high-risk AI systems. Voluntary transparency is increasingly expected by enterprise customers and regulators. Templates, not legal advice.",
     maxPenalty: "Compliance & reputational",
     appliesToSummary: "Organizations subject to EU AI Act high-risk requirements, or any organization wishing to demonstrate AI transparency voluntarily.",
+    appliesToBullets: [
+      "You deploy high-risk AI systems covered by the EU AI Act (transparency reporting is required under Art. 13)",
+      "OR you want to proactively disclose your AI practices to build trust with customers, regulators, or enterprise buyers",
+    ],
     keywords: ["transparency report", "ai disclosure", "public reporting", "eu ai act", "performance monitoring", "universal"],
     documents: [
       "Annual AI Transparency Report Template",
@@ -1115,6 +1146,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "California SB 53 requires certain AI developers to maintain safety and whistleblower protections. Strong internal reporting protects organizations from escalating AI harms. Templates, not legal advice.",
     maxPenalty: "Liability reduction",
     appliesToSummary: "Required for California AI frontier developers. Recommended best practice for any organization using AI where employees may observe harmful outputs or unsafe practices.",
+    appliesToBullets: [
+      "You develop or fine-tune large AI models and are based in or do business in California (required under CA SB 53)",
+      "OR you use AI systems where employees might observe harmful, discriminatory, or unsafe outputs and need a formal channel to report them",
+    ],
     keywords: ["whistleblower", "ai safety", "internal reporting", "california sb 53", "concern reporting", "universal"],
     documents: [
       "AI Safety Whistleblower Protection Policy",
@@ -1142,6 +1177,10 @@ export const regulations: Regulation[] = [
     penaltySummary: "Customer AUPs limit vendor liability for misuse of AI products and are increasingly required by enterprise procurement. Aligns with FTC Act § 5 unfair practice avoidance and EU AI Act Art. 13 transparency obligations. Templates, not legal advice.",
     maxPenalty: "Liability limitation",
     appliesToSummary: "Any company that offers AI-powered products or services to customers. Distinct from the Employee AI Use Policy, which governs internal employee AI usage.",
+    appliesToBullets: [
+      "Your product or service includes AI features that customers interact with or rely on",
+      "You need terms that define permitted and prohibited uses — and limit your liability when customers misuse those features",
+    ],
     keywords: ["customer aup", "acceptable use", "ai product", "saas ai", "customer policy", "ai vendor", "universal"],
     documents: [
       "Customer AI Acceptable Use Policy",
@@ -1167,6 +1206,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Indiana Attorney General exclusive enforcement (IC 24-15-10-4). No private right of action. Civil penalty up to $7,500 per violation (IC 24-15-10-2). AG may recover attorney fees. 30-day cure period before civil action (IC 24-15-10-3).",
     maxPenalty: "Up to $7,500 per violation (IC 24-15-10-2)",
     appliesToSummary: "Entities doing business in Indiana or targeting Indiana residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 50%+ revenue from data sales and process data of 25,000+ consumers (IC 24-15-1-1).",
+    appliesToBullets: [
+      "You do business in Indiana or target Indiana residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 50%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for profiling, targeted advertising, or automated decisions",
+    ],
     keywords: ["indiana", "icdpa", "consumer data protection", "privacy", "24-15", "IC 24-15"],
     documents: [
       "Privacy Notice Template",
