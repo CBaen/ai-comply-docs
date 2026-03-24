@@ -477,7 +477,7 @@ export default function PostPaymentHandler({
           <p className="text-lg font-semibold text-gray-900">
             Verifying your payment...
           </p>
-          <p className="text-gray-500 text-sm mt-2">
+          <p className="text-gray-600 text-sm mt-2">
             This usually takes just a moment.
           </p>
         </div>

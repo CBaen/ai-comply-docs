@@ -285,7 +285,7 @@ export default function Home() {
                 <p className="text-gray-700 text-sm leading-relaxed">
                   <strong className="text-gray-900">Every citation verified against the enacted statute text.</strong> We don&apos;t summarize laws or paraphrase regulations. We go to the official .gov source, read the enacted text, and build templates that reference the specific sections that apply to your business.
                 </p>
-                <p className="text-gray-500 text-xs mt-1">
+                <p className="text-gray-600 text-xs mt-1">
                   <a href="/about" className="text-blue-700 underline">Learn about our methodology</a>
                 </p>
               </div>
@@ -467,7 +467,7 @@ export default function Home() {
               Browse Products
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
             </a>
-            <p className="text-slate-500 text-sm mt-4">
+            <p className="text-slate-400 text-sm mt-4">
               Not sure which package? <a href="mailto:info@aicompliancedocuments.com" className="text-blue-400 hover:text-blue-300 underline">info@aicompliancedocuments.com</a>
             </p>
           </div>

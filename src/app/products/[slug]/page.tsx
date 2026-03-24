@@ -707,7 +707,7 @@ export default async function RegulationPage({
                         <span
                           className={`inline-block w-1.5 h-1.5 rounded-sm ${r.status === "in-effect" ? "bg-red-500" : r.status === "effective-soon" ? "bg-amber-500" : "bg-slate-400"}`}
                         />
-                        <span className="text-xs text-gray-500 uppercase font-medium">
+                        <span className="text-xs text-gray-600 uppercase font-medium">
                           {r.state}
                         </span>
                       </div>
@@ -723,7 +723,7 @@ export default async function RegulationPage({
                         <span className="text-lg font-bold text-gray-900 font-display">
                           ${r.price}
                         </span>
-                        <span className="text-xs text-gray-500">
+                        <span className="text-xs text-gray-600">
                           {r.documentCount} docs
                         </span>
                       </div>

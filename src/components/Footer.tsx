@@ -51,7 +51,7 @@ export default function Footer() {
                   info@aicompliancedocuments.com
                 </a>
               </li>
-              <li className="text-slate-500 text-xs leading-relaxed pt-1">
+              <li className="text-slate-400 text-xs leading-relaxed pt-1">
                 Responses within one business day.
               </li>
             </ul>
@@ -61,7 +61,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-slate-700 pt-6">
           {/* Disclaimer */}
-          <p className="text-slate-500 text-xs leading-relaxed mb-4">
+          <p className="text-slate-400 text-xs leading-relaxed mb-4">
             AI Compliance Documents generates documentation templates based on published
             regulatory text. This is not legal advice. Templates are based on
             statutes and proposed rules current at the time of purchase.
@@ -70,7 +70,7 @@ export default function Footer() {
           </p>
 
           {/* Bottom bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-slate-500">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-slate-400">
             <p>
               &copy; {new Date().getFullYear()} AI Compliance Documents. All rights reserved.
             </p>

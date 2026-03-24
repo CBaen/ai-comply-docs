@@ -122,7 +122,7 @@ export default function LoginPage() {
                   {status === "loading" ? "Sending link..." : "Send Sign-In Link"}
                 </button>
 
-                <p className="text-xs text-gray-500 text-center leading-relaxed">
+                <p className="text-xs text-gray-600 text-center leading-relaxed">
                   We&apos;ll email you a secure sign-in link. No password needed.
                 </p>
               </form>

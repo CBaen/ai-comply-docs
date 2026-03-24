@@ -271,7 +271,7 @@ export default async function BlogPostPage({ params }: Props) {
                       <div className="px-3 sm:px-4 pb-4 space-y-2.5">
                         {post.externalReferences.map((ref, i) => (
                           <div key={i} className="flex items-start gap-2">
-                            <span className="text-slate-400 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
+                            <span className="text-slate-300 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
                             <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 text-sm underline underline-offset-2 decoration-slate-300 hover:decoration-blue-400 transition break-words min-w-0">
                               {ref.title}
                               <span className="sr-only"> (opens in new tab)</span>
@@ -328,7 +328,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <ul className="grid grid-cols-3 gap-x-8 gap-y-2.5">
                   {post.externalReferences.map((ref, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-slate-500 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
+                      <span className="text-slate-400 text-xs font-mono mt-0.5 shrink-0">[{i + 1}]</span>
                       <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 text-sm underline underline-offset-2 decoration-slate-600 hover:decoration-blue-400 transition break-words min-w-0">
                         {ref.title}
                         <span className="sr-only"> (opens in new tab)</span>
@@ -342,7 +342,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* Legal disclaimer */}
           <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6">
-            <div className="pt-6 border-t border-gray-200 text-xs text-gray-500 leading-relaxed">
+            <div className="pt-6 border-t border-gray-200 text-xs text-gray-600 leading-relaxed">
               <p>
                 <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute legal advice, legal representation, or an attorney-client relationship. Laws and regulations change frequently. You should consult a licensed attorney to verify that the information in this article is current, complete, and applicable to your specific situation before relying on it. AI Compliance Documents is not a law firm and does not practice law.
               </p>
