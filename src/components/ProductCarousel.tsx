@@ -92,10 +92,24 @@ export default function ProductCarousel({ products }: Props) {
           {p.shortName}
         </h2>
 
-        {/* Description */}
-        <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed line-clamp-3">
-          {p.description}
-        </p>
+        {/* Who is this for — bullet points */}
+        {p.appliesToBullets && p.appliesToBullets.length > 0 ? (
+          <div className="mb-6 sm:mb-8 max-w-xl mx-auto">
+            <p className="text-xs font-semibold text-blue-300 uppercase tracking-wider mb-3">This applies to you if:</p>
+            <ul className="space-y-2 text-left">
+              {p.appliesToBullets.slice(0, 3).map((bullet, i) => (
+                <li key={i} className="flex items-start gap-2.5">
+                  <svg className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <span className="text-sm text-slate-300 leading-relaxed">{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed line-clamp-3">
+            {p.description}
+          </p>
+        )}
 
         {/* Price + CTA — stacks vertically on mobile, side-by-side on sm+ */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-6 sm:mb-8">
