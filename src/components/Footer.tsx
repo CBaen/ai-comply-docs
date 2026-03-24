@@ -2,125 +2,80 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 border-t border-gray-200 py-10 sm:py-12">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        {/* Brand row — full width on all screens */}
-        <div className="mb-8">
-          <span className="text-lg font-bold font-display text-gray-900">
-            AI Compliance Documents
-          </span>
-          <p className="text-gray-600 text-sm mt-2 leading-relaxed max-w-sm">
-            AI compliance documentation for state and federal regulations.
-            Self-service, instant download, fraction of legal fees.
-          </p>
-        </div>
-        {/* Link columns — 2-col on mobile, 2-col on md+ */}
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-8">
+    <footer className="bg-slate-900 text-white py-12 sm:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Top: 4 balanced columns */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+          {/* Products */}
           <nav aria-label="Products">
-            <h4 className="font-bold text-sm text-gray-900 mb-3">Products</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/products/illinois-hb3773"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  Illinois HB3773
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products/colorado-sb24-205"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  Colorado SB 24-205
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  All Products
-                </Link>
-              </li>
+            <h4 className="font-bold text-sm text-white mb-4">Products</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li><Link href="/products/colorado-sb24-205" className="text-slate-400 hover:text-white transition">Colorado SB 24-205</Link></li>
+              <li><Link href="/products/illinois-hb3773" className="text-slate-400 hover:text-white transition">Illinois HB3773</Link></li>
+              <li><Link href="/products/california-ccpa-admt" className="text-slate-400 hover:text-white transition">California CCPA ADMT</Link></li>
+              <li><Link href="/products/nyc-local-law-144" className="text-slate-400 hover:text-white transition">NYC Local Law 144</Link></li>
+              <li><Link href="/products" className="text-slate-400 hover:text-white transition">All Products</Link></li>
             </ul>
           </nav>
+
+          {/* Resources */}
+          <nav aria-label="Resources">
+            <h4 className="font-bold text-sm text-white mb-4">Resources</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li><Link href="/blog" className="text-slate-400 hover:text-white transition">Blog</Link></li>
+              <li><Link href="/ai-compliance-by-state" className="text-slate-400 hover:text-white transition">Compare State Laws</Link></li>
+              <li><Link href="/do-i-need-ai-compliance" className="text-slate-400 hover:text-white transition">Free Assessment</Link></li>
+              <li><Link href="/faq" className="text-slate-400 hover:text-white transition">FAQ</Link></li>
+              <li><Link href="/colorado-ai-compliance" className="text-slate-400 hover:text-white transition">Colorado AI Compliance</Link></li>
+            </ul>
+          </nav>
+
+          {/* Company */}
           <nav aria-label="Company">
-            <h4 className="font-bold text-sm text-gray-900 mb-3">Company</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/ai-compliance-by-state"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  Compare State Laws
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  Terms
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-gray-600 hover:text-blue-700 transition"
-                >
-                  Privacy
-                </Link>
-              </li>
+            <h4 className="font-bold text-sm text-white mb-4">Company</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li><Link href="/about" className="text-slate-400 hover:text-white transition">About &amp; Methodology</Link></li>
+              <li><Link href="/contact" className="text-slate-400 hover:text-white transition">Contact</Link></li>
+              <li><Link href="/terms" className="text-slate-400 hover:text-white transition">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="text-slate-400 hover:text-white transition">Privacy Policy</Link></li>
+              <li><Link href="/account" className="text-slate-400 hover:text-white transition">My Account</Link></li>
             </ul>
           </nav>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-bold text-sm text-white mb-4">Get in Touch</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <a href="mailto:info@aicompliancedocuments.com" className="text-slate-400 hover:text-white transition">
+                  info@aicompliancedocuments.com
+                </a>
+              </li>
+              <li className="text-slate-500 text-xs leading-relaxed pt-1">
+                Responses within one business day.
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="border-t border-gray-200 pt-6">
-          <p className="text-gray-500 text-xs leading-relaxed mb-3">
-            <strong className="text-gray-600">Legal Disclaimer:</strong> AI
-            Compliance Documents generates documentation templates based on published
+
+        {/* Divider */}
+        <div className="border-t border-slate-700 pt-6">
+          {/* Disclaimer */}
+          <p className="text-slate-500 text-xs leading-relaxed mb-4">
+            AI Compliance Documents generates documentation templates based on published
             regulatory text. This is not legal advice. Templates are based on
             statutes and proposed rules current at the time of purchase.
             Regulatory requirements may change. Consult qualified legal counsel
             for formal compliance verification.
           </p>
-          <p className="text-gray-500 text-xs flex flex-wrap gap-x-1">
-            <span>&copy; {new Date().getFullYear()} AI Compliance Documents.</span>
-            <span>All rights reserved.</span>
-            <span>30-day money-back guarantee.</span>
-          </p>
+
+          {/* Bottom bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-slate-500">
+            <p>
+              &copy; {new Date().getFullYear()} AI Compliance Documents. All rights reserved.
+            </p>
+            <p>30-day money-back guarantee. Secure checkout via Stripe.</p>
+          </div>
         </div>
       </div>
     </footer>
