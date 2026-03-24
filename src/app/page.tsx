@@ -163,6 +163,7 @@ export default function Home() {
               )
             }
           />
+          </div>
         </header>
 
         {/* Trust Bar */}
@@ -346,6 +347,17 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Lifestyle Image Strip */}
+        <div className="py-8 md:py-10 bg-white">
+          <div className="max-w-5xl mx-auto px-4">
+            <img
+              src="/images/landing/team-compliance-meeting.png"
+              alt="Compliance team reviewing AI documentation"
+              className="w-full h-48 sm:h-56 object-cover rounded-xl"
+            />
+          </div>
+        </div>
 
         {/* Product Library */}
         <section id="products" className="py-10 md:py-16 bg-slate-50">

@@ -339,6 +339,13 @@ export default async function RegulationPage({
                 </div>
               )}
 
+              {/* Lifestyle image */}
+              <img
+                src="/images/landing/product-tablet-desk.png"
+                alt="Compliance document on tablet at desk"
+                className="w-full h-40 sm:h-48 object-cover rounded-xl"
+              />
+
               {/* What You Get */}
               <section>
                 <h2 className="text-2xl font-bold font-display text-gray-900 mb-4">
