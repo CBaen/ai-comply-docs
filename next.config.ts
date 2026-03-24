@@ -40,6 +40,11 @@ const nextConfig: NextConfig = {
         destination: "/products/:slug",
         permanent: true,
       },
+      {
+        source: "/blog/colorado-ai-compliance",
+        destination: "/colorado-ai-compliance",
+        permanent: true,
+      },
     ];
   },
 };
