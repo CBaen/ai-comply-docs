@@ -179,7 +179,7 @@ export default function ContactPage() {
                 placeholder="Tell us how we can help..."
                 className={`${inputClass} resize-y`}
               />
-              <p className="text-xs text-gray-400 mt-1 text-right" aria-live="polite">
+              <p className="text-xs text-gray-500 mt-1 text-right" aria-live="polite">
                 {form.message.length}/5,000
               </p>
             </div>
@@ -198,7 +198,7 @@ export default function ContactPage() {
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>
 
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-gray-500">
               You can also reach us directly at{" "}
               <a href="mailto:info@aicompliancedocuments.com" className="text-blue-600 hover:underline">
                 info@aicompliancedocuments.com

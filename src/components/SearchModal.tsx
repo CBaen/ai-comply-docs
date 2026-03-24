@@ -169,7 +169,7 @@ export default function SearchModal() {
             {item.title || item.id.replace(/^(product|blog|faq)-/, '').replace(/-/g, ' ')}
           </div>
           {item.subtitle && (
-            <div className="text-gray-500 text-xs truncate mt-0.5">
+            <div className="text-gray-600 text-xs truncate mt-0.5">
               {item.subtitle}
             </div>
           )}
@@ -276,7 +276,7 @@ export default function SearchModal() {
                   {allProducts.length > 0 && (
                     <Command.Group
                       heading={
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
                           Products ({allProducts.length})
                         </span>
                       }
@@ -287,7 +287,7 @@ export default function SearchModal() {
                   {allBlog.length > 0 && (
                     <Command.Group
                       heading={
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
                           Blog ({allBlog.length})
                         </span>
                       }
@@ -298,7 +298,7 @@ export default function SearchModal() {
                   {allFaq.length > 0 && (
                     <Command.Group
                       heading={
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
                           FAQ ({allFaq.length})
                         </span>
                       }
@@ -317,7 +317,7 @@ export default function SearchModal() {
                       <Command.Group
                         key={type}
                         heading={
-                          <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 px-2">
+                          <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
                             {TYPE_PILL[type]} ({grouped[type].length})
                           </span>
                         }
@@ -343,7 +343,7 @@ export default function SearchModal() {
             </Command.List>
 
             {/* Footer */}
-            <div className="border-t border-gray-100 px-4 py-2 flex items-center gap-3 text-[11px] text-gray-400">
+            <div className="border-t border-gray-100 px-4 py-2 flex items-center gap-3 text-[11px] text-gray-500">
               <span className="flex items-center gap-1">
                 <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-200 rounded text-[10px]">↑↓</kbd>
                 navigate

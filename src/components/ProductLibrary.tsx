@@ -208,7 +208,7 @@ export default function ProductLibrary({
           >
             {f.label}
             <span
-              className={`ml-1.5 text-xs ${activeFilter === f.key ? "text-blue-200" : "text-gray-400"}`}
+              className={`ml-1.5 text-xs ${activeFilter === f.key ? "text-blue-200" : "text-gray-500"}`}
             >
               {counts[f.key]}
             </span>
@@ -307,7 +307,7 @@ export default function ProductLibrary({
             </div>
 
             {/* Effective date — scannable at a glance */}
-            <p className="text-xs text-gray-400 mb-3">
+            <p className="text-xs text-gray-500 mb-3">
               {reg.status === "in-effect" ? "In effect" : "Effective"} {reg.effectiveDate} &middot; {reg.state}
             </p>
 
@@ -328,9 +328,9 @@ export default function ProductLibrary({
                 <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-display leading-none">
                   ${reg.price}
                 </span>
-                <span className="text-gray-400 text-xs ml-1">one-time</span>
+                <span className="text-gray-500 text-xs ml-1">one-time</span>
               </div>
-              <span className="text-gray-500 text-xs">
+              <span className="text-gray-600 text-xs">
                 {reg.documentCount} documents
               </span>
             </div>

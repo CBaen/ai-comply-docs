@@ -725,7 +725,7 @@ export default function ComplianceQuiz() {
         )}
 
         {/* Legal disclaimer */}
-        <p className="mt-12 text-xs text-gray-400 text-center leading-relaxed">
+        <p className="mt-12 text-xs text-gray-500 text-center leading-relaxed">
           This assessment provides general guidance only and does not constitute legal advice.
           Results are based on the information you provide and may not capture every applicable law.
           Consult a licensed attorney to verify your specific compliance obligations.

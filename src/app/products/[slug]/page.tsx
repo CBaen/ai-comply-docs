@@ -243,8 +243,8 @@ export default async function RegulationPage({
               >
                 &larr; All Products
               </Link>
-              <span className="text-slate-500">|</span>
-              <span className="text-slate-400 text-sm">{reg.state}</span>
+              <span className="text-slate-400">|</span>
+              <span className="text-slate-300 text-sm">{reg.state}</span>
             </div>
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
               <StatusBadge status={reg.status} ready={reg.ready} />
