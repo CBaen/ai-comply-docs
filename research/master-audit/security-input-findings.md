@@ -1,10 +1,4 @@
-import os
-
-path = r"C:\Users\baenb\projects\project _cameron\aicomplydocs\research\master-audit\security-input-findings.md"
-
-sections = []
-
-sections.append("""# Security Audit: Input Validation and Injection
+# Security Audit: Input Validation and Injection
 **Scope:** All API routes in src/app/api/ and form-handling components
 **Auditor:** Security Agent A
 **Date:** 2026-03-24
@@ -34,9 +28,8 @@ architectural weakness in the rate limiter.
 
 ## Detailed Findings
 
-""")
 
-sections.append("""### F-01: Missing length and type validation on contactName and regulation
+### F-01: Missing length and type validation on contactName and regulation
 
 **File:** src/app/api/send-documents/route.ts:234
 **Severity:** Medium
@@ -73,9 +66,8 @@ is called, but email content is corrupted and unnecessary data is processed serv
 
 ---
 
-""")
 
-sections.append("""### F-02: No upper-bound limit on the documents array count
+### F-02: No upper-bound limit on the documents array count
 
 **File:** src/app/api/send-documents/route.ts:274
 **Severity:** Medium
@@ -106,9 +98,8 @@ base64 string. Approximately 335MB of request body. Server memory spikes; Resend
 
 ---
 
-""")
 
-sections.append("""### F-03: addonIds array elements not validated as strings
+### F-03: addonIds array elements not validated as strings
 
 **File:** src/app/api/create-checkout/route.ts:52
 **Severity:** Low
@@ -142,9 +133,8 @@ Send `{ addonIds: [null, null, ... x10000] }`. No harmful outcome but needless C
 
 ---
 
-""")
 
-sections.append("""### F-04: Rate limiter trusts x-forwarded-for without infrastructure guarantee
+### F-04: Rate limiter trusts x-forwarded-for without infrastructure guarantee
 
 **File:** src/lib/rate-limit.ts:67
 **Severity:** Low
@@ -190,9 +180,8 @@ Consider Upstash Redis rate limiting before any non-Vercel deployment.
 
 ---
 
-""")
 
-sections.append("""### F-05: Inline script JSON-LD uses HTML insertion API
+### F-05: Inline script JSON-LD uses HTML insertion API
 
 **File:** src/app/blog/[slug]/page.tsx:119
 **Severity:** Informational (safe in current context)
@@ -214,9 +203,8 @@ content in the future, this pattern should be re-evaluated at that time.
 
 ---
 
-""")
 
-sections.append("""### F-06: name and company fields in contact route have no length caps
+### F-06: name and company fields in contact route have no length caps
 
 **File:** src/app/api/contact/route.ts:28
 **Severity:** Informational
@@ -245,9 +233,8 @@ email. No injection is possible. Resend also imposes its own upstream limits.
 
 ---
 
-""")
 
-sections.append("""## What Was Checked and Found Clean
+## What Was Checked and Found Clean
 
 | Check | Result |
 |-------|--------|
@@ -276,9 +263,3 @@ sections.append("""## What Was Checked and Found Clean
 3. **F-03** (addonId string type check and count cap): completes input contract validation
 4. **F-04** (IP header handling): document Vercel dependency; fix before any non-Vercel deployment
 5. **F-06** (name and company length in contact): trivial to add, not urgent
-""")
-
-with open(path, "w", encoding="utf-8") as f:
-    f.write("\n".join(sections))
-
-print("Written:", os.path.getsize(path), "bytes")

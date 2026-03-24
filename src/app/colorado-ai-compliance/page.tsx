@@ -482,7 +482,7 @@ export default function ColoradoAICompliancePage() {
                           <p className="text-gray-200 text-sm group-hover:text-white transition-colors">
                             {item.question}
                           </p>
-                          <p className="text-gray-600 text-xs mt-0.5">
+                          <p className="text-gray-500 text-xs mt-0.5">
                             Consequential decision domain: {item.domain} (&sect;
                             6-1-1701(3))
                           </p>
@@ -542,7 +542,7 @@ export default function ColoradoAICompliancePage() {
                             <h3 className="text-white font-semibold">
                               {doc.name}
                             </h3>
-                            <span className="text-gray-600 text-xs">
+                            <span className="text-gray-500 text-xs">
                               {doc.citation}
                             </span>
                           </div>
@@ -985,7 +985,7 @@ export default function ColoradoAICompliancePage() {
             >
               Get Your Compliance Package Now
             </Link>
-            <p className="text-gray-600 text-xs mt-6">
+            <p className="text-gray-400 text-xs mt-6">
               These documents are compliance templates, not legal advice. We
               recommend attorney review for your specific situation.
             </p>
@@ -995,7 +995,7 @@ export default function ColoradoAICompliancePage() {
 
       {/* Minimal footer */}
       <footer className="bg-gray-950 border-t border-gray-800 py-6">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <p>
             &copy; {new Date().getFullYear()} AI Compliance Documents LLC. All
             rights reserved.
