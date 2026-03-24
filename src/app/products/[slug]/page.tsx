@@ -155,10 +155,7 @@ function StructuredData({ reg }: { reg: { slug: string; name: string; descriptio
       isAccessibleForFree: false,
       hasMerchantReturnPolicy: {
         "@type": "MerchantReturnPolicy",
-        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-        merchantReturnDays: 30,
-        returnMethod: "https://schema.org/ReturnByMail",
-        returnFees: "https://schema.org/FreeReturn",
+        returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
       },
       seller: {
         "@type": "Organization",

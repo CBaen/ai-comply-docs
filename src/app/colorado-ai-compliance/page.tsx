@@ -981,7 +981,7 @@ export default function ColoradoAICompliancePage() {
             </h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">
               8 documents. Mapped to the statute. Aligned to NIST AI RMF.
-              Instant download. 30-day guarantee. $449.
+              Instant download. All sales final. $449.
             </p>
             <Link
               href="/products/colorado-sb24-205"
