@@ -640,7 +640,7 @@ export default function PostPaymentHandler({
           </p>
         </div>
 
-        <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+        <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-4">
           How would you like your documents?
         </p>
 
@@ -714,7 +714,7 @@ export default function PostPaymentHandler({
               Email to Your Team
             </h3>
           </div>
-          <p className="text-gray-500 text-sm mb-4">
+          <p className="text-gray-600 text-sm mb-4">
             Send all documents as attachments &mdash; up to 3 recipients.
           </p>
 
@@ -802,7 +802,7 @@ export default function PostPaymentHandler({
 
         {/* Account CTA — optional next step, not a gate */}
         <div className="mt-6 pt-5 border-t border-gray-100 text-center">
-          <p className="text-sm text-gray-500 mb-3">
+          <p className="text-sm text-gray-600 mb-3">
             Want to access your documents anytime? Create a free account.
           </p>
           <a

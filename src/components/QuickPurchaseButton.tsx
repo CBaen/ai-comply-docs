@@ -66,7 +66,7 @@ export default function QuickPurchaseButton({ slug, price }: QuickPurchaseButton
       >
         {loading ? "Redirecting..." : "Buy Template Now"}
       </button>
-      <p className="text-center text-xs text-gray-500 mt-2">
+      <p className="text-center text-xs text-gray-600 mt-2">
         Purchase now, customize your documents after checkout
       </p>
       {error && (

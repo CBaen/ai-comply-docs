@@ -213,7 +213,7 @@ export default function ColoradoAICompliancePage() {
               healthcare, housing, or education for Colorado residents — you need
               compliance documentation. That&apos;s the law.
             </p>
-            <p className="text-gray-500 text-sm mb-8 max-w-xl mx-auto">
+            <p className="text-gray-400 text-sm mb-8 max-w-xl mx-auto">
               Built from the{" "}
               <a
                 href="https://leg.colorado.gov/bills/sb24-205"
@@ -256,7 +256,7 @@ export default function ColoradoAICompliancePage() {
                 <p className="text-gray-400 text-sm mt-1">
                   per violation
                   <br />
-                  <span className="text-gray-600 text-xs">
+                  <span className="text-gray-500 text-xs">
                     C.R.S. &sect; 6-1-112(1)(a)
                   </span>
                 </p>
@@ -268,7 +268,7 @@ export default function ColoradoAICompliancePage() {
                 <p className="text-gray-400 text-sm mt-1">
                   per violation, age 60+
                   <br />
-                  <span className="text-gray-600 text-xs">
+                  <span className="text-gray-500 text-xs">
                     C.R.S. &sect; 6-1-112(1)(c)
                   </span>
                 </p>
@@ -280,7 +280,7 @@ export default function ColoradoAICompliancePage() {
                 <p className="text-gray-400 text-sm mt-1">
                   no private right of action
                   <br />
-                  <span className="text-gray-600 text-xs">
+                  <span className="text-gray-500 text-xs">
                     C.R.S. &sect; 6-1-1706(6)
                   </span>
                 </p>
