@@ -575,7 +575,7 @@ export default function ColoradoAICompliancePage() {
                       42001, or an equivalent framework the AG designates
                     </li>
                   </ol>
-                  <p className="text-gray-500 text-xs mt-3">
+                  <p className="text-gray-400 text-xs mt-3">
                     The burden is on you. Following NIST alone is not enough —
                     you also need the discovery-and-cure process. Our Affirmative
                     Defense Documentation template builds both.
@@ -593,11 +593,11 @@ export default function ColoradoAICompliancePage() {
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-5 text-center">
-                    <p className="text-gray-500 text-sm mb-1">Law firm</p>
-                    <p className="text-2xl font-bold text-gray-500 line-through">
+                    <p className="text-gray-400 text-sm mb-1">Law firm</p>
+                    <p className="text-2xl font-bold text-gray-400 line-through">
                       $5,000–$25,000
                     </p>
-                    <p className="text-gray-600 text-xs mt-1">
+                    <p className="text-gray-500 text-xs mt-1">
                       Weeks of back-and-forth
                     </p>
                   </div>
@@ -775,13 +775,13 @@ export default function ColoradoAICompliancePage() {
                     <p className="text-white font-semibold text-sm mb-1">
                       Statute-sourced
                     </p>
-                    <p className="text-gray-500 text-xs">
+                    <p className="text-gray-400 text-xs">
                       Built from the enacted text on{" "}
                       <a
                         href="https://leg.colorado.gov/bills/sb24-205"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-gray-300 underline"
+                        className="text-gray-300 hover:text-white underline"
                       >
                         leg.colorado.gov
                       </a>
@@ -791,13 +791,13 @@ export default function ColoradoAICompliancePage() {
                     <p className="text-white font-semibold text-sm mb-1">
                       NIST-aligned
                     </p>
-                    <p className="text-gray-500 text-xs">
+                    <p className="text-gray-400 text-xs">
                       Risk management mapped to{" "}
                       <a
                         href="https://airc.nist.gov/airmf-resources/crosswalks/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-gray-300 underline"
+                        className="text-gray-300 hover:text-white underline"
                       >
                         NIST AI RMF
                       </a>
@@ -807,7 +807,7 @@ export default function ColoradoAICompliancePage() {
                     <p className="text-white font-semibold text-sm mb-1">
                       Attorney-ready
                     </p>
-                    <p className="text-gray-500 text-xs">
+                    <p className="text-gray-400 text-xs">
                       Hand directly to legal counsel for review
                     </p>
                   </div>
@@ -898,10 +898,10 @@ export default function ColoradoAICompliancePage() {
         {/* Sources bibliography */}
         <section className="bg-slate-900 py-8">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
-            <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-3">
+            <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
               Sources
             </p>
-            <ol className="list-decimal list-inside text-gray-500 text-xs space-y-1.5">
+            <ol className="list-decimal list-inside text-gray-400 text-xs space-y-1.5">
               <li>
                 <a
                   href="https://leg.colorado.gov/bills/sb24-205"
