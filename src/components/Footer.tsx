@@ -74,7 +74,7 @@ export default function Footer() {
             <p>
               &copy; {new Date().getFullYear()} AI Compliance Documents. All rights reserved.
             </p>
-            <p>30-day money-back guarantee. Secure checkout via Stripe.</p>
+            <p>All sales final. Secure checkout via Stripe.</p>
           </div>
         </div>
       </div>
