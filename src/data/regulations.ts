@@ -1578,6 +1578,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "CPPA administrative enforcement and AG civil enforcement. $2,500 per violation; $7,500 per intentional violation (Cal. Civ. Code § 1798.155). No private right of action for ADMT-specific violations.",
     maxPenalty: "$2,500 per violation; $7,500 per intentional violation",
     appliesToSummary: "Any business subject to CCPA that uses automated decision-making technology to make significant decisions about California consumers.",
+    appliesToBullets: [
+      "You are subject to the California Consumer Privacy Act (CCPA applies to businesses above certain revenue/data thresholds doing business in California)",
+      "You use automated systems to make significant decisions about California consumers — such as in hiring, lending, insurance, or service eligibility",
+      "Your system substantially determines outcomes rather than just assisting a human review",
+    ],
     keywords: ["california", "ccpa", "admt", "access request", "consumer rights", "automated decision-making", "add-on"],
     documents: [
       "Access Request Intake Form",
@@ -1605,6 +1610,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "CPPA administrative enforcement and AG civil enforcement. $2,500 per violation; $7,500 per intentional violation (Cal. Civ. Code § 1798.155). No private right of action for ADMT-specific violations.",
     maxPenalty: "$2,500 per violation; $7,500 per intentional violation",
     appliesToSummary: "Any business subject to CCPA that uses automated decision-making technology to make significant decisions about California consumers.",
+    appliesToBullets: [
+      "You are subject to the California Consumer Privacy Act (CCPA applies to businesses above certain revenue/data thresholds doing business in California)",
+      "You use automated systems to make significant decisions about California consumers — such as in hiring, lending, insurance, or service eligibility",
+      "Your system substantially determines outcomes rather than just assisting a human review",
+    ],
     keywords: ["california", "ccpa", "cybersecurity audit", "risk assessment", "annual audit", "add-on"],
     documents: [
       "Cybersecurity Audit Checklist",
@@ -1632,6 +1642,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "NYC Department of Consumer and Worker Protection enforcement. Civil penalties of $500 (first), $500-$1,500 per subsequent violation per day. Proactive DCWP investigations increasing in 2026.",
     maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary: "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion. Includes intersectional testing across race/ethnicity and sex categories as required by DCWP implementing rules (6 RCNY § 5-301).",
+    appliesToBullets: [
+      "You hire or promote employees in New York City",
+      "You use any automated tool to screen, evaluate, or rank candidates",
+      "The tool substantially assists or replaces human decision-making in hiring or promotion",
+    ],
     keywords: ["nyc", "local law 144", "aedt", "bias audit", "audit management", "publication", "add-on"],
     documents: [
       "Auditor RFP Template",
@@ -1659,6 +1674,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "NYC Department of Consumer and Worker Protection enforcement. Civil penalties of $500 (first), $500-$1,500 per subsequent violation per day. Proactive DCWP investigations increasing in 2026.",
     maxPenalty: "$500 first violation; $500–$1,500 per subsequent violation per day",
     appliesToSummary: "Any employer or employment agency in NYC using an automated employment decision tool to screen candidates or employees for hiring or promotion. Includes intersectional testing across race/ethnicity and sex categories as required by DCWP implementing rules (6 RCNY § 5-301).",
+    appliesToBullets: [
+      "You hire or promote employees in New York City",
+      "You use any automated tool to screen, evaluate, or rank candidates",
+      "The tool substantially assists or replaces human decision-making in hiring or promotion",
+    ],
     keywords: ["nyc", "local law 144", "aedt", "candidate notice", "alternative process", "10-day notice", "add-on"],
     documents: [
       "10-Day Advance Notice Template",
@@ -1686,6 +1706,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Virginia Attorney General exclusive enforcement (§ 59.1-584(A)). No private right of action. AG must provide 30-day cure period before seeking penalties (§ 59.1-584(B)). Civil penalties up to $7,500 per violation (§ 59.1-584(C)).",
     maxPenalty: "Up to $7,500 per violation (§ 59.1-584(C))",
     appliesToSummary: "Controllers doing business in VA or targeting VA residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 50%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Virginia or target Virginia residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 50%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for targeted advertising, profiling, or automated decisions",
+    ],
     keywords: ["virginia", "cdpa", "vcdpa", "consumer rights", "appeal", "ag referral", "add-on"],
     documents: [
       "Rights Request Intake Form",
@@ -1713,6 +1739,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Virginia Attorney General exclusive enforcement (§ 59.1-584(A)). No private right of action. AG must provide 30-day cure period before seeking penalties (§ 59.1-584(B)). Civil penalties up to $7,500 per violation (§ 59.1-584(C)).",
     maxPenalty: "Up to $7,500 per violation (§ 59.1-584(C))",
     appliesToSummary: "Controllers doing business in VA or targeting VA residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 50%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Virginia or target Virginia residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 50%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for targeted advertising, profiling, or automated decisions",
+    ],
     keywords: ["virginia", "cdpa", "vcdpa", "profiling", "data protection assessment", "weighing factors", "add-on"],
     documents: [
       "Profiling Assessment Template",
@@ -1740,6 +1772,12 @@ export const regulations: Regulation[] = [
     penaltySummary: "Virginia Attorney General exclusive enforcement (§ 59.1-584(A)). No private right of action. AG must provide 30-day cure period before seeking penalties (§ 59.1-584(B)). Civil penalties up to $7,500 per violation (§ 59.1-584(C)).",
     maxPenalty: "Up to $7,500 per violation (§ 59.1-584(C))",
     appliesToSummary: "Controllers doing business in VA or targeting VA residents that (1) process personal data of 100,000+ consumers/year OR (2) derive 50%+ revenue from data sales and process data of 25,000+ consumers.",
+    appliesToBullets: [
+      "You do business in Virginia or target Virginia residents",
+      "You process personal data of 100,000+ consumers per year",
+      "OR: You derive 50%+ of revenue from data sales and process data of 25,000+ consumers",
+      "You use that data for targeted advertising, profiling, or automated decisions",
+    ],
     keywords: ["virginia", "cdpa", "vcdpa", "controller", "processor", "dpa", "vendor compliance", "add-on"],
     documents: [
       "Processor DPA Template",
@@ -1767,6 +1805,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "National authorities enforcement. High-risk AI violations: up to €15,000,000 or 3% global turnover (Art. 99(4)). Prohibited AI practices: up to €35,000,000 or 7% global turnover (Art. 99(3)). False information: up to €7,500,000 or 1% global turnover (Art. 99(5)).",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary: "Deployers that are public authorities, agencies providing public services, or private entities providing public services, AND deployers using high-risk AI systems listed in Annex III points 1, 6, and 7 (biometrics, law enforcement, migration/border, justice/democracy).",
+    appliesToBullets: [
+      "You deploy AI systems in the EU market, including as a US company serving EU users",
+      "You are a public authority, public service provider, or private entity providing public services",
+      "Your AI system falls under Annex III points 1, 6, or 7: biometrics, law enforcement, migration/border, or justice/democracy applications",
+    ],
     keywords: ["eu ai act", "european union", "fria", "fundamental rights", "impact assessment", "article 27", "add-on"],
     documents: [
       "FRIA Template",
@@ -1794,6 +1837,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "National authorities enforcement. High-risk AI violations: up to €15,000,000 or 3% global turnover (Art. 99(4)). Prohibited AI practices: up to €35,000,000 or 7% global turnover (Art. 99(3)). False information: up to €7,500,000 or 1% global turnover (Art. 99(5)).",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary: "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
+    appliesToBullets: [
+      "You develop or deploy AI systems used in the EU market — this includes US companies if their AI affects EU users",
+      "Your AI system falls into a high-risk category: hiring, credit, insurance, healthcare, education, law enforcement, or critical infrastructure",
+      "OR your system uses a prohibited AI practice (social scoring, real-time biometric surveillance, subliminal manipulation)",
+    ],
     keywords: ["eu ai act", "european union", "post-market monitoring", "serious incident", "incident response", "add-on"],
     documents: [
       "Post-Market Monitoring Plan",
@@ -1821,6 +1869,11 @@ export const regulations: Regulation[] = [
     penaltySummary: "National authorities enforcement. High-risk AI violations: up to €15,000,000 or 3% global turnover (Art. 99(4)). Prohibited AI practices: up to €35,000,000 or 7% global turnover (Art. 99(3)). False information: up to €7,500,000 or 1% global turnover (Art. 99(5)).",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary: "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
+    appliesToBullets: [
+      "You develop or deploy AI systems used in the EU market — this includes US companies if their AI affects EU users",
+      "Your AI system falls into a high-risk category: hiring, credit, insurance, healthcare, education, law enforcement, or critical infrastructure",
+      "OR your system uses a prohibited AI practice (social scoring, real-time biometric surveillance, subliminal manipulation)",
+    ],
     keywords: ["eu ai act", "european union", "human oversight", "worker notification", "oversight log", "add-on"],
     documents: [
       "Oversight Implementation Plan",
