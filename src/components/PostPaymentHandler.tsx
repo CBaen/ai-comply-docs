@@ -835,18 +835,6 @@ export default function PostPaymentHandler({
           )}
         </div>
 
-        {/* Account CTA — optional next step, not a gate */}
-        <div className="mt-6 pt-5 border-t border-gray-100 text-center">
-          <p className="text-sm text-gray-600 mb-3">
-            Want to access your documents anytime? Create a free account.
-          </p>
-          <a
-            href="/account/login"
-            className="inline-block px-5 py-2 text-sm font-semibold text-blue-700 border border-blue-300 rounded-lg hover:bg-blue-50 transition"
-          >
-            Create Account
-          </a>
-        </div>
           </div>
         </div>
       </div>

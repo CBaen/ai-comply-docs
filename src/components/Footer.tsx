@@ -38,7 +38,6 @@ export default function Footer() {
               <li><Link href="/contact" className="text-slate-400 hover:text-white transition">Contact</Link></li>
               <li><Link href="/terms" className="text-slate-400 hover:text-white transition">Terms of Service</Link></li>
               <li><Link href="/privacy" className="text-slate-400 hover:text-white transition">Privacy Policy</Link></li>
-              <li><Link href="/account" className="text-slate-400 hover:text-white transition">My Account</Link></li>
             </ul>
           </nav>
 
