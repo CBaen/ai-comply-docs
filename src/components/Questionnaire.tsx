@@ -75,9 +75,14 @@ export default function Questionnaire({
   const [contactEmail, setContactEmail] = useState<string>(saved?.contactEmail || "");
   const [contactPhone, setContactPhone] = useState<string>(saved?.contactPhone || "");
 
-  // Focus management: move focus to step heading when step changes
+  // Focus management: move focus to step heading when step changes (but NOT on initial mount)
   const stepHeadingRef = useRef<HTMLHeadingElement>(null);
+  const hasInteracted = useRef(false);
   useEffect(() => {
+    if (!hasInteracted.current) {
+      hasInteracted.current = true;
+      return; // Skip focus on initial mount — prevents auto-scroll to form
+    }
     stepHeadingRef.current?.focus();
   }, [step]);
 
