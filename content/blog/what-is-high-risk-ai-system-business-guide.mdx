@@ -1,0 +1,170 @@
+---
+title: "What Is a High-Risk AI System? A Plain-Language Guide for Business Owners"
+slug: "what-is-high-risk-ai-system-business-guide"
+description: "Colorado, the EU, and California all use the phrase 'high-risk AI' — but they define it differently. This guide explains what each law means, gives concrete business examples, and walks you through how to figure out whether your AI qualifies."
+date: "2026-03-25"
+author: "AI Compliance Documents Team"
+tags: ["high-risk AI", "AI risk classification", "Colorado AI law", "EU AI Act", "AI compliance"]
+published: true
+image: "/blog/blog-hero-colorado.png"
+summary: "Three major AI laws — Colorado SB 24-205, the EU AI Act, and California's ADMT regulations — all use the concept of 'high-risk AI,' but they draw the lines in different ways. Colorado focuses on consequential decisions about consumers. The EU uses an eight-category list covering hiring, credit, healthcare, education, and more. California focuses on automated technology that substantially determines outcomes. This guide explains all three definitions side by side and helps business owners figure out whether any of their AI tools qualify — with direct links to the compliance products that cover each law."
+cardSummary: "Three different laws. Three different definitions of 'high-risk AI.' If your business uses AI to make decisions about people, here's how to figure out which rules apply to you."
+deepDive:
+  title: "Why 'High-Risk' Is About the Decision, Not the Technology"
+  content: "People often assume that 'high-risk AI' means AI that is technically sophisticated — powerful models, large language models, advanced neural networks. But that's not how any of these laws define the term. The laws aren't classifying technology. They're classifying decisions.\n\nThink about it this way. A hammer is a simple tool. But a hammer used to build a child's toy and a hammer used to perform surgery are in completely different risk categories — not because the hammers are different, but because the consequences of getting it wrong are different.\n\nThe same logic applies to AI. A basic scoring algorithm that screens job applications carries real risk — not because the algorithm is technically impressive, but because the outcome affects someone's livelihood. A loan decisioning model built on straightforward statistics affects someone's ability to buy a home. The risk is in what the AI decides about people, not in how the AI works under the hood.\n\nThis is why Colorado's law defines high-risk based on 'consequential decisions' — decisions about employment, lending, insurance, housing, healthcare, and education. The EU AI Act builds its high-risk list around the same life-affecting contexts, published in what it calls Annex III. California focuses on automated technology that 'substantially determines' outcomes for consumers.\n\nThe practical implication for business owners is that you shouldn't be asking 'is our AI sophisticated enough to be high-risk?' You should be asking 'what does our AI decide, and who does that decision affect?' A simple algorithm that helps determine who gets an interview, who gets approved for a loan, or who gets offered an insurance policy at what rate is high-risk under these laws — full stop.\n\nThis framing also explains why so many businesses discover they're covered when they first look carefully at their software stack. They don't think of themselves as running 'high-risk AI.' But they're running tools that make consequential decisions about people every day. Those two things are the same thing."
+microFacts:
+  - fact: "Colorado's SB 24-205 was originally set to take effect February 1, 2026, but during an extraordinary legislative session in August 2025, lawmakers passed SB 25B-004 to extend the deadline to June 30, 2026, after failing to reach agreement on substantive revisions."
+    source: "Colorado General Assembly"
+    sourceUrl: "https://leg.colorado.gov/bills/sb25b-004"
+  - fact: "The EU AI Act's prohibitions on unacceptable-risk AI practices — including social scoring, real-time biometric identification in public spaces, and emotion recognition in workplaces — took effect on February 2, 2025, making them the first enforceable provisions of the Act."
+    source: "European Commission"
+    sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+  - fact: "The California Office of Administrative Law approved the ADMT, risk assessment, and cybersecurity audit regulations on September 22, 2025, concluding a rulemaking process that began with preliminary public comments in February 2023."
+    source: "California Privacy Protection Agency"
+    sourceUrl: "https://cppa.ca.gov/announcements/2025/20250923.html"
+  - fact: "The EU AI Act penalties for deploying a prohibited AI system can reach EUR 35 million or 7% of total worldwide annual turnover, whichever is higher — the largest AI-specific penalty structure enacted by any jurisdiction in the world."
+    source: "Official Journal of the European Union"
+    sourceUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+externalReferences:
+  - title: "Colorado SB 24-205 — Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
+  - title: "Colorado SB 25B-004 — Effective Date Extension to June 30, 2026"
+    url: "https://leg.colorado.gov/bills/sb25b-004"
+  - title: "Regulation (EU) 2024/1689 — EU AI Act Full Text (EUR-Lex)"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+  - title: "European Commission — EU AI Act Annex III (High-Risk Categories)"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+  - title: "CalPrivacy — ADMT and Risk Assessment Regulations"
+    url: "https://cppa.ca.gov/regulations/ccpa_updates.html"
+---
+
+If you've been reading about AI compliance lately, you've probably encountered the phrase "high-risk AI system" in multiple places. Colorado uses it. The EU AI Act uses it. California's regulations circle the same idea. And in every case, being classified as high-risk triggers serious compliance obligations — impact assessments, risk management programs, consumer notices, ongoing monitoring.
+
+The problem is that these laws don't all define "high-risk" the same way. What qualifies in Colorado may not be the same framing used in Brussels, and California approaches the concept from a different angle entirely.
+
+This guide explains all three definitions in plain language, gives concrete examples of what qualifies and what doesn't, and walks you through a practical test for figuring out whether your own AI systems fall into the high-risk category under any of these laws.
+
+## Why the Definition Matters
+
+Before getting into the specifics, it's worth understanding why the high-risk classification is so consequential.
+
+For most AI laws, the risk tier determines the compliance burden. Low-risk or minimal-risk systems often face little more than basic transparency requirements — maybe a disclosure that the user is interacting with AI. High-risk systems, by contrast, face the full weight of the regulation: documented risk assessments, impact analysis, human oversight requirements, consumer notification rights, appeal processes, and in some cases third-party conformity assessments.
+
+This is by design. These laws are not trying to regulate every AI system on the planet. They're trying to regulate AI systems where getting it wrong has real consequences for real people — where an algorithm's output affects whether someone gets a job, a loan, an insurance policy, a place to live, or access to healthcare.
+
+The high-risk classification is the line between "this system needs attention" and "this system can proceed with minimal requirements." Getting that classification right — for your specific tools and your specific context — is where compliance planning starts.
+
+## How Colorado Defines High-Risk
+
+Colorado's SB 24-205, signed into law on May 17, 2024, and effective June 30, 2026, defines a high-risk AI system based on what the system does rather than what it is. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+Under the law, an AI system is "high-risk" if it makes, or is a substantial factor in making, a **consequential decision** about a consumer. The law then defines "consequential decision" as a decision that materially affects a consumer's access to, or the cost or terms of, any of the following:
+
+- Education or educational opportunities
+- Employment or employment opportunities
+- Financial or lending services
+- Government services
+- Healthcare services
+- Housing
+- Insurance
+- Legal services
+
+That's the entire test. If an AI system is involved — even as one factor among several — in decisions about those eight categories, it's a high-risk system under Colorado law.
+
+**Concrete examples:** A resume screening tool that ranks job applicants is a high-risk system. A lending algorithm that evaluates creditworthiness for a personal loan is a high-risk system. An insurance pricing model that uses consumer data to calculate premium rates is a high-risk system. A healthcare platform that uses AI to triage patient intake or prioritize care is a high-risk system. A tenant screening tool that scores rental applications is a high-risk system.
+
+**What doesn't qualify:** A chatbot that helps customers navigate your website. A tool that generates marketing copy. An AI system that recommends products on an e-commerce platform. These tools don't make consequential decisions about consumers in the categories above, so they aren't high-risk under SB 24-205.
+
+The Colorado law applies to both "developers" (companies that build high-risk AI systems) and "deployers" (companies that use those systems to make decisions about consumers). If you use a third-party AI tool to help with hiring or lending decisions, you're a deployer and the law's obligations apply to you — regardless of whether you built the tool.
+
+If your business deploys high-risk AI systems and serves Colorado consumers, our [Colorado SB 24-205 compliance package](/products/colorado-sb24-205) ($449) covers all deployer obligations: risk management policy, impact assessment, consumer notice templates, and the documentation required for the law's affirmative defense.
+
+## How the EU AI Act Defines High-Risk
+
+The EU AI Act, [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689), takes a more structured approach. It classifies AI systems into four tiers — prohibited, high-risk, limited risk, and minimal risk — and defines high-risk systems in two ways.
+
+The first category covers AI systems that are built into products already regulated by EU product safety legislation (medical devices, vehicles, industrial machinery, and similar). If the AI is a safety component of one of those products, it's automatically high-risk.
+
+The second category is defined by a list of use cases published in Annex III of the regulation. These are the categories most relevant to US businesses. AI systems in the following areas are high-risk under the Act: ([Regulation (EU) 2024/1689, Art. 6 and Annex III](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689))
+
+- **Biometrics** — remote identification, emotion recognition, biometric categorization
+- **Critical infrastructure** — safety components in roads, water, gas, heating, electricity
+- **Education** — systems that determine access to institutions or evaluate learning outcomes
+- **Employment** — recruitment and selection, task allocation, performance monitoring, evaluation, and promotion decisions
+- **Essential services** — creditworthiness assessment, credit scoring, life and health insurance risk assessment, emergency dispatch
+- **Law enforcement** — individual risk assessments, evidence evaluation, profiling
+- **Migration and border control** — risk assessment of persons, application examination
+- **Administration of justice** — judicial decisions, dispute resolution, electoral processes
+
+For most US businesses, the categories that matter are employment, essential services, and education. An AI hiring tool is high-risk. A credit scoring model is high-risk. An insurance underwriting algorithm is high-risk. These are the same contexts Colorado covers, but the EU's framework is more granular and the compliance obligations are substantially more demanding.
+
+The EU AI Act applies to US companies if their AI systems are used in Europe — even if the US company has no office there. ([Regulation (EU) 2024/1689, Art. 2](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)) The compliance requirements for high-risk systems under Annex III take full effect on August 2, 2026.
+
+The EU's penalty structure for violations of the high-risk requirements reaches EUR 15,000,000 or 3% of global annual turnover, whichever is higher. For prohibited practices — the tier above high-risk — it reaches EUR 35,000,000 or 7% of global annual turnover. ([Regulation (EU) 2024/1689, Art. 99](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689))
+
+If your AI touches EU markets, our [EU AI Act compliance package](/products/eu-ai-act) ($997) covers all Annex IV technical documentation, conformity assessment, risk management system, and registration requirements for high-risk systems.
+
+## How California Approaches the Same Concept
+
+California's approach, through the CCPA's Automated Decisionmaking Technology (ADMT) regulations that took effect January 1, 2026, uses different terminology but targets the same territory.
+
+California's rules apply when a business uses "automated decisionmaking technology" to make a "significant decision" concerning a consumer. The regulations define ADMT as technology that processes personal information and uses computation — including machine learning, statistics, or other data processing or AI techniques — to make or execute a decision. ([CPPA regulations](https://cppa.ca.gov/regulations/ccpa_updates.html))
+
+"Significant decisions" under California's framework include decisions about providing or denying goods, services, or employment — which overlaps substantially with Colorado's consequential decision categories.
+
+The key threshold in California's framework is whether the automated technology **substantially determines** the outcome rather than merely assisting a human who makes the final call. A system that filters candidates down to a shortlist — before a human ever reviews the full applicant pool — is likely substantially determining outcomes even though a human technically makes the final hire.
+
+California's ADMT requirements apply to businesses subject to the CCPA that use these systems to make significant decisions about California consumers. Risk assessments are required now. Consumer-facing notice and opt-out requirements begin January 1, 2027.
+
+Our [California CCPA ADMT compliance package](/products/california-ccpa-admt) ($499) covers both deadlines: the risk assessment framework required now and the pre-use notice and opt-out documentation required for 2027.
+
+## How Do I Know If MY AI System Is High-Risk?
+
+The most useful test isn't jurisdiction-specific — it's a sequence of questions you can apply to any AI tool your business uses.
+
+**Question 1: Does the system produce an output that affects a person?**
+
+The output could be a score, a ranking, a recommendation, a classification, a flag, a filter, or an approval or denial. If the system's output is purely internal — analyzing your inventory, optimizing your supply chain, generating internal reports — it's not making decisions *about* people. If the output affects whether a specific person gets something, loses something, or is treated differently, proceed to question 2.
+
+**Question 2: What is the decision actually about?**
+
+Map the decision to the categories these laws cover: employment, lending, insurance, housing, healthcare, education, government services, or legal services. If the AI's output affects access to any of those, you are almost certainly in high-risk territory under Colorado law and the EU AI Act. If it affects what a consumer receives, is charged, or is denied in a significant way, California's ADMT framework likely applies.
+
+**Question 3: Is the AI a substantial factor, or just background infrastructure?**
+
+All three laws use some version of this qualifier. A system that plays a minor supporting role — logging data that a human then independently analyzes — is different from a system whose output directly drives a decision. The practical question is: would the decision change if you removed the AI from the process? If yes, the AI is a substantial factor.
+
+**Question 4: Where are the affected people located?**
+
+Colorado's law covers consumers who receive consequential decisions in Colorado. The EU AI Act covers anyone in the EU. California's rules cover California consumers. A single AI system can trigger all three if it operates across those geographies.
+
+If you've worked through these four questions and your AI system lands in the high-risk zone, the next step is figuring out which law's requirements apply and what documentation you need to be in compliance. That's a more tractable problem than it sounds — most of the underlying work (risk assessments, human oversight documentation, consumer notices) overlaps significantly across these laws.
+
+## A Note on Scope Creep
+
+One practical reality: AI vendors update their tools. A system that was low-risk when you deployed it — because it was purely advisory — can become high-risk if the vendor updates it to produce binding recommendations, or if your internal processes shift to give its outputs more weight.
+
+Colorado's law requires annual reviews of deployed high-risk systems for this reason. The EU AI Act requires ongoing monitoring. Both recognize that the risk classification of an AI system isn't set once at purchase — it can change as the system and how it's used evolve.
+
+The safest practice is to conduct a brief classification review for each AI system your business uses at least once a year, and whenever a vendor pushes a significant update. The questions above work just as well for re-evaluation as for initial assessment.
+
+## Where to Start
+
+If this is the first time you've mapped your AI tools against these definitions, the practical starting point is a simple inventory: every AI system your business uses, what it produces as output, who it produces that output about, and what decision that output influences. You don't need to be a lawyer or an AI engineer to do this — you need to understand your own software stack well enough to answer those four questions for each tool.
+
+Once you have that inventory, the classification follows logically. And once you know which systems are high-risk, you know which laws apply, which compliance deadlines you're working toward, and what documentation you need to build.
+
+The three laws covered here — Colorado SB 24-205, the EU AI Act, and California's ADMT regulations — each have specific requirements that go beyond classification. But classification is the prerequisite for everything else. You can't build a risk management program for a system you haven't identified as high-risk yet.
+
+Start there.
+
+---
+
+**Sources** — Every legal definition, deadline, and product price in this article was drawn from the enacted statutes, regulations, and verified facts in these sources:
+
+- [Colorado SB 24-205 — Consumer Protections for Artificial Intelligence](https://leg.colorado.gov/bills/sb24-205) — Definitions of "high-risk AI system" and "consequential decision," deployer/developer obligations, affirmative defense. Signed May 17, 2024.
+- [Colorado SB 25B-004 — Effective Date Extension](https://leg.colorado.gov/bills/sb25b-004) — Extended compliance deadline to June 30, 2026. Signed August 28, 2025.
+- [Regulation (EU) 2024/1689 — EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) — Art. 2 (territorial scope), Art. 6 and Annex III (high-risk definitions), Art. 99 (penalties). Published July 12, 2024.
+- [California Privacy Protection Agency — ADMT and Risk Assessment Regulations](https://cppa.ca.gov/regulations/ccpa_updates.html) — ADMT definitions, significant decision threshold, compliance deadlines. Approved September 22, 2025; effective January 1, 2026.
+
+**Disclaimer:** This article is for general informational purposes only and does not constitute legal advice. The risk classification of any specific AI system depends on the facts of how it is built and used. Consult qualified legal counsel before making compliance decisions.
