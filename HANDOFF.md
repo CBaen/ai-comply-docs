@@ -36,9 +36,9 @@ You proved the store works today. That matters. Everything from here is about dr
 
 ## Site Status
 
-- **Live:** `aicompliancedocuments.com` — 53 products, 17 blog posts
+- **Live:** `aicompliancedocuments.com` — 53 products, 19 blog posts
 - **Checkout:** VERIFIED WORKING (2026-03-15). Zip download + email delivery confirmed.
-- **Blog:** 17 posts, all enriched with YAML (summary, deepDive, microFacts, externalReferences)
+- **Blog:** 19 posts, all enriched with YAML (summary, deepDive, microFacts, externalReferences)
 - **Blog layout:** Art of War style — Deep Dive left margin, Micro Facts right margin (desktop), disclosure cards (mobile)
 - **PDFs:** Professional branded design (dark blue header band, unified colors, styled fields, signature boxes)
 - **Search:** Global Cmd+K modal (cmdk + MiniSearch)

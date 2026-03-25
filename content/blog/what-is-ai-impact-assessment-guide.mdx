@@ -1,0 +1,148 @@
+---
+title: "What Is an AI Impact Assessment? The Document Every State Law Now Requires"
+slug: "what-is-ai-impact-assessment-guide"
+description: "Colorado calls it an impact assessment. California calls it a risk assessment. Illinois doesn't name it at all — but effectively requires one. Here's what goes into this document, why it exists, and what each state actually demands."
+date: "2026-03-25"
+author: "AI Compliance Documents Team"
+tags: ["AI impact assessment", "risk assessment", "AI compliance", "Colorado AI law", "California ADMT"]
+published: true
+image: "/blog/blog-hero-governance.png"
+summary: "Every state AI law that has passed in the US — Colorado, California, Illinois, Texas — asks businesses to stop and formally document the risks of using AI before they deploy it. The document goes by different names depending on the state, but the underlying question is the same: have you thought through what could go wrong, who could be harmed, and what you're doing about it? This guide explains what that document is, what goes into it, and why a template matters when the law doesn't prescribe the exact format."
+cardSummary: "Colorado, California, and Illinois all require some version of an AI impact assessment — but they don't call it the same thing or require the same format. Here's what every version has in common, and what each state specifically demands."
+deepDive:
+  title: "Why Laws Don't Prescribe the Exact Format — and Why That Makes Templates More Valuable, Not Less"
+  content: "Imagine a city that requires every new building to have a fire safety plan, but doesn't specify whether the plan should be one page or fifty, whether it should use diagrams or just text, or even exactly which rooms need to be labeled. Some people hear 'no prescribed format' and think the requirement must not be serious. But the absence of a mandatory format actually creates more risk, not less.\n\nWhen a law tells you to do something without telling you exactly how to do it, you face two problems. First, you have to figure out what 'doing it right' even looks like. Second, if something goes wrong and an enforcement agency or a court reviews your work, you can't just point to a checklist and say 'we followed the form.' You have to demonstrate that your document actually addressed the law's intent — that it was substantive, not perfunctory.\n\nState AI laws take this approach for a practical reason: the risks of deploying an AI hiring tool are completely different from the risks of deploying an AI loan approval model. A format rigid enough to be meaningful for one would be useless or misleading for the other. So legislatures wrote the requirements in terms of purpose rather than format: assess the risk of harm, weigh the benefits against those risks, document your mitigation measures.\n\nThis is why a well-designed template has real value. It doesn't just give you a form to fill out — it guides you through the substantive questions the law is asking. It makes sure you've considered the data sources the AI uses, the categories of people it affects, the types of harm it could produce, and the controls you have in place. A blank page with 'write your impact assessment here' at the top isn't a template. A document that walks you through each element the law's intent requires — with explanations of why each section matters — is genuinely useful, because it's the difference between a document that would hold up to scrutiny and one that wouldn't."
+microFacts:
+  - fact: "Colorado's SB 24-205 was originally set to take effect February 1, 2026, but during an extraordinary legislative session in August 2025, lawmakers passed SB 25B-004 to extend the deadline to June 30, 2026, after failing to reach agreement on substantive revisions."
+    source: "Colorado General Assembly"
+    sourceUrl: "https://leg.colorado.gov/bills/sb25b-004"
+  - fact: "SB 24-205 was signed by Governor Jared Polis on May 17, 2024, making Colorado the first state to enact a comprehensive law regulating both developers and deployers of high-risk AI systems."
+    source: "Colorado General Assembly"
+    sourceUrl: "https://leg.colorado.gov/bills/sb24-205"
+  - fact: "The California Office of Administrative Law approved the ADMT, risk assessment, and cybersecurity audit regulations on September 22, 2025, concluding a rulemaking process that began with preliminary public comments in February 2023."
+    source: "California Privacy Protection Agency"
+    sourceUrl: "https://cppa.ca.gov/announcements/2025/20250923.html"
+  - fact: "CalPrivacy fined Tractor Supply Company $1.35 million in September 2025 — the largest fine in the agency's history — for failing to properly notify consumers and job applicants of their privacy rights under the CCPA."
+    source: "California Privacy Protection Agency"
+    sourceUrl: "https://cppa.ca.gov/announcements/2025/20250930.html"
+  - fact: "Under the Illinois Human Rights Act, repeat violators face escalating penalties: up to $16,000 for a first offense, $42,500 for a second within five years, and $70,000 for employers with two or more prior violations within seven years."
+    source: "Illinois General Assembly (775 ILCS 5/8A-104)"
+    sourceUrl: "https://www.ilga.gov/Documents/legislation/ilcs/documents/077500050K8A-104.htm"
+externalReferences:
+  - title: "Colorado General Assembly — SB24-205: Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
+  - title: "Colorado General Assembly — SB25B-004: Effective Date Extension to June 30, 2026"
+    url: "https://leg.colorado.gov/bills/sb25b-004"
+  - title: "California Privacy Protection Agency — Finalized ADMT and Risk Assessment Regulations (September 23, 2025)"
+    url: "https://cppa.ca.gov/announcements/2025/20250923.html"
+  - title: "CCPA Updates, Risk Assessments, ADMT, and Cybersecurity Audit Regulations"
+    url: "https://cppa.ca.gov/regulations/ccpa_updates.html"
+  - title: "Illinois Human Rights Act, Section 2-102 (775 ILCS 5/2-102)"
+    url: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64"
+  - title: "Illinois Human Rights Act, Section 8A-104 — Penalties (775 ILCS 5/8A-104)"
+    url: "https://www.ilga.gov/Documents/legislation/ilcs/documents/077500050K8A-104.htm"
+---
+
+If you've been following state AI legislation, you've probably noticed a phrase that keeps appearing across different laws, in different states, with slightly different names: the "impact assessment." Or the "risk assessment." Or the "data protection assessment." Or sometimes just "documentation that demonstrates you evaluated the risks before deploying this system."
+
+Different words, same underlying requirement. Every state AI law that has passed in the US asks businesses to formally document the risks of using AI — before deployment, not after something goes wrong. This post explains what that document actually is, what the three primary state laws require, what goes into one, and why its format isn't prescribed (and why that makes getting it right more important, not less).
+
+## What an AI Impact Assessment Actually Is
+
+An AI impact assessment is a written document that answers a specific question: before your organization uses this AI system in a way that affects people, have you formally thought through what could go wrong, who could be harmed, and what you're doing about it?
+
+Think of it like a construction site safety review. Before a building project begins, the project team walks through the site, identifies hazards — electrical risks, fall zones, load-bearing concerns — documents them, and records what they're doing to mitigate each one. No one expects the review to prevent every possible accident. But it creates a record that the organization asked the right questions, and it creates accountability for the answers.
+
+An AI impact assessment works the same way. You document the AI system, what decisions it affects, who it affects, what categories of harm it could cause, what data it uses, and what controls you have in place. The document becomes the record that you took the risk seriously before deploying the system — not a defensive artifact you produced after a complaint was filed.
+
+## Why Multiple States Now Require One
+
+The reason states started mandating impact assessments is simple: AI systems can cause harm in ways that are invisible at the time of deployment and only become apparent after they've been running for months. A hiring algorithm that screens out candidates from certain zip codes. A lending model that assigns higher rates to applicants from certain neighborhoods. An insurance pricing system that uses data that correlates with race even if race isn't directly input.
+
+None of these problems require malicious intent. They can emerge from biases in training data, from flawed assumptions in model design, from gaps in testing. The assessment requirement is the legislature's way of forcing organizations to confront these risks before they materialize — not just respond to complaints about them afterward.
+
+## How Each State Defines It
+
+The three primary state laws that have enacted AI governance requirements each use slightly different terminology and create slightly different obligations. Here's what each one actually requires.
+
+### Colorado: "Impact Assessment"
+
+Colorado's SB 24-205 — the first comprehensive AI governance law in the country, signed by Governor Jared Polis on May 17, 2024 — uses the term "impact assessment" directly. The law requires deployers of high-risk AI systems to complete an impact assessment for each system they deploy. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+A high-risk AI system under Colorado's law is one that makes, or is a substantial factor in making, a "consequential decision" — a decision that materially affects a consumer's access to or the cost of employment, education, financial services, government services, healthcare, housing, insurance, or legal services. If your AI system is involved in those kinds of decisions, you're a deployer, and you need an impact assessment before deployment and an annual review thereafter.
+
+The law also requires that developers — businesses that build and sell AI systems — provide deployers with the documentation they need to complete their own impact assessments. If you're on the development side, you have an obligation to your customers.
+
+Colorado also offers a meaningful legal protection built around this work: if you comply with a nationally recognized AI risk management framework — the NIST AI Risk Management Framework being the primary example — and take measures to discover and correct violations, you receive an affirmative defense against claims under the law. The impact assessment is one of the central outputs of that framework alignment. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+The new effective date is June 30, 2026, after the legislature delayed the original date during an August 2025 special session. ([SB25B-004](https://leg.colorado.gov/bills/sb25b-004))
+
+### California: "Risk Assessment"
+
+California's approach comes through the California Consumer Privacy Act and regulations finalized by the California Privacy Protection Agency (CalPrivacy). The agency approved the ADMT and risk assessment regulations on September 22, 2025, and they took effect January 1, 2026. ([CalPrivacy press release](https://cppa.ca.gov/announcements/2025/20250923.html))
+
+California uses the term "risk assessment" rather than "impact assessment," but the underlying concept is the same. Businesses that process personal information in ways that present significant risk to consumers' privacy — including using automated decisionmaking technology (ADMT) for significant decisions — must conduct and document a risk assessment for each qualifying processing activity.
+
+The California risk assessment must weigh the benefits of the processing against the risks to consumers' privacy. Each assessment must document the purpose of the processing, the data involved, the potential harms, and the measures the business is taking to mitigate those harms. By April 1, 2028, businesses must submit an attestation to CalPrivacy confirming the assessments were completed, along with a summary of the risk assessment information. ([CalPrivacy regulations](https://cppa.ca.gov/regulations/ccpa_updates.html))
+
+CalPrivacy is an active enforcement agency. It issued its largest fine ever — $1.35 million against Tractor Supply Company in September 2025 — and has brought enforcement actions against more than ten data brokers in a single year. The risk assessment requirement is live now, not just an upcoming deadline to plan for. ([CalPrivacy enforcement](https://cppa.ca.gov/announcements/2025/20250930.html))
+
+### Illinois: No Named Document, But Effectively Required
+
+Illinois HB3773 — which amended the Illinois Human Rights Act and took effect January 1, 2026 — doesn't use the phrase "impact assessment" or "risk assessment" at all. What it does is make it a civil rights violation to use AI in employment decisions in a way that has a discriminatory effect on protected classes. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64))
+
+That prohibition creates a documentation imperative. If an employee or applicant files a charge with the Illinois Department of Human Rights alleging that your AI tool discriminated against them, your defense depends on being able to demonstrate that you evaluated the tool's potential for discriminatory outcomes and took steps to address them. You cannot demonstrate that without documentation.
+
+This is why practitioners treat Illinois as functionally requiring an impact assessment even though the statute doesn't name one. A documented process for evaluating AI tools for disparate impact, records of those evaluations, and evidence of remediation when problems are found — that's the paper trail that separates a defensible compliance posture from one that leaves you exposed. The penalties under the Illinois Human Rights Act reach up to $70,000 per violation for repeat offenders, and the law includes a private right of action, meaning employees can sue directly. ([775 ILCS 5/8A-104](https://www.ilga.gov/Documents/legislation/ilcs/documents/077500050K8A-104.htm))
+
+## What Goes Into an AI Impact Assessment
+
+Across all three state frameworks, the assessment document is trying to answer the same set of questions. The terminology varies, the specific requirements vary, but the underlying elements are consistent.
+
+**System identification.** What is the AI system? What does it do? What inputs does it take, and what outputs does it produce? Where is it deployed, and by whom?
+
+**Decision scope.** What decisions does the system affect? Who are the people subject to those decisions? Does the system fall into a regulated category under the applicable law — consequential decisions in Colorado, significant decisions in California, employment decisions in Illinois?
+
+**Data inventory.** What data does the system use? Where did it come from? Does it include sensitive categories — race, gender, health information, location — that could produce discriminatory or privacy-invasive outcomes?
+
+**Risk identification.** What could go wrong? Who could be harmed? The harm categories that state laws focus on are: algorithmic discrimination against protected classes, privacy violations, inaccurate decisions that affect people's access to services or opportunities, and lack of transparency about how decisions are made.
+
+**Benefit and proportionality analysis.** What benefits does the system provide — efficiency, accuracy, consistency? California's regulations explicitly require weighing the benefits against the identified risks. Are those benefits proportionate to the risks?
+
+**Mitigation measures.** What controls are in place to address the identified risks? Human review processes, appeal and correction mechanisms, monitoring for discriminatory outcomes, data minimization practices. The assessment should document both what the risks are and what the organization is doing about them.
+
+**Ongoing review.** Colorado requires annual review of each deployed high-risk system. California requires assessments to be updated as processing activities change. The assessment is not a one-time artifact — it's a living document that needs to reflect the current state of how the system is operating.
+
+## Why the Format Isn't Prescribed — and Why That Matters
+
+None of the three laws tells you exactly what the assessment document has to look like. There's no mandated page count, no required section headers, no standard form to submit to the state.
+
+This is intentional. The risks of deploying an AI hiring tool are entirely different from the risks of deploying an AI credit scoring model or an AI insurance pricing system. A format rigid enough to be meaningful for one would be inadequate or misleading for another. So the laws define the purpose — assess the risk of harm, document your analysis, record your mitigations — and leave the format to the organization.
+
+The practical consequence is that a well-designed template has real value. Not because it fills in a form, but because it structures the analysis the law is actually asking for. It makes sure you've worked through the data sources, the affected populations, the harm categories, and the mitigation controls — the substance, not just the paperwork.
+
+Our [Colorado SB 24-205 compliance package](/products/colorado-sb24-205) includes an impact assessment built specifically around Colorado's deployer requirements. Our [California CCPA ADMT compliance package](/products/california-ccpa-admt) covers the risk assessment framework the CalPrivacy regulations require. For employment AI across multiple states, our [Multi-State Employer AI Disclosure Kit](/products/multi-state-employer-ai-disclosure) covers the documentation Illinois, NYC, and Colorado each require of employers.
+
+If you're operating across multiple states and want a governance foundation that satisfies the underlying assessment requirements of all enacted state AI laws simultaneously, our [AI Governance Framework](/products/ai-governance-framework) is built around the NIST AI RMF functions — the same framework that triggers Colorado's affirmative defense and that both Colorado and Texas reference as the applicable compliance standard.
+
+## One Document, Multiple Obligations
+
+One thing worth understanding: a well-built impact assessment doesn't just satisfy one state's requirement. The elements it captures — system identification, data inventory, risk analysis, mitigation measures — are the same elements that every state AI law is asking for, even when the laws use different names.
+
+A business that has completed a rigorous impact assessment for its Colorado obligations has already done most of the substantive work that California's risk assessment requires. The summary and attestation that California wants by April 2028 can draw directly from that same documentation. The Illinois employer who documents that they evaluated their AI hiring tools for discriminatory outcomes is creating the exact evidence that matters if a charge is ever filed with IDHR.
+
+This is the compounding value of doing the assessment work properly the first time. It's not a box to check for each separate state. It's a piece of analysis about your AI systems that, once done rigorously, translates across the compliance landscape.
+
+The effective dates are here. Colorado's is June 30, 2026. California's risk assessment obligation started January 1, 2026. Illinois has been in effect since January 1, 2026. If you use AI in decisions that affect people's access to services, employment, or financial products — and you haven't yet documented those risks — this is the work to start with.
+
+---
+
+**Sources** — Every legal fact in this article was verified against the enacted statute text and agency publications at these URLs:
+
+- [Colorado General Assembly — SB24-205 Consumer Protections for Artificial Intelligence](https://leg.colorado.gov/bills/sb24-205) — Impact assessment requirements for deployers, consequential decision definitions, affirmative defense. Signed May 17, 2024.
+- [Colorado General Assembly — SB25B-004 Effective Date Extension](https://leg.colorado.gov/bills/sb25b-004) — Extends SB 24-205 effective date to June 30, 2026.
+- [California Privacy Protection Agency — Finalized Regulations (September 23, 2025)](https://cppa.ca.gov/announcements/2025/20250923.html) — Risk assessment and ADMT regulations effective January 1, 2026.
+- [CCPA Updates — Risk Assessments and ADMT Regulations](https://cppa.ca.gov/regulations/ccpa_updates.html) — Risk assessment requirements, April 2028 attestation deadline, ADMT compliance timeline.
+- [CalPrivacy Enforcement: Tractor Supply Company $1.35M Fine](https://cppa.ca.gov/announcements/2025/20250930.html) — Largest fine in CalPrivacy history, September 2025.
+- [Illinois Human Rights Act, Section 2-102 (775 ILCS 5/2-102)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64) — AI employment discrimination prohibition under subdivision (L); effective January 1, 2026.
+- [Illinois Human Rights Act, Section 8A-104 — Penalties (775 ILCS 5/8A-104)](https://www.ilga.gov/Documents/legislation/ilcs/documents/077500050K8A-104.htm) — Penalty tiers up to $70,000 per violation.
