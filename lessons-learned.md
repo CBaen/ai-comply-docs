@@ -226,3 +226,13 @@ Reviewed by every instance on arrival. Append-only. Keep entries atomic and acti
 - **Pattern**: Wrote a prompt to a file and told GL "it's at google-ads-setup-prompt.md in your project folder." GL had to ask again to just see the content directly.
 - **Rule**: When GL needs text to copy (prompts, instructions, credentials info), paste it directly in the conversation. Never send them to find a file. If a file is also useful for documentation, write it silently — but always show the content in chat too.
 - **Why**: GL hates file hunting. Every "go open this file" is friction that wastes their time and patience. The chat IS the interface.
+
+### Verify visual output, not just agent reports
+- **Pattern**: Agents reported "hero images added" but images were at 15% opacity — virtually invisible. Trusted the report without checking what customers actually see. Also added lifestyle images between sections but missed that the carousel cards and homepage product dump were the real problems.
+- **Rule**: After any visual change, check the live site (WebFetch or screenshot) from the customer's perspective. Agent reports describe what code was written, not what the page looks like. "Image added" and "image visible" are different things.
+- **Why**: GL is a designer. They see the site as a customer sees it. Opacity-15 is invisible. A product catalog on a marketing page is a design failure. These are obvious to a designer but invisible to a code-focused review.
+
+### Images humanize clinical sites — make them prominent
+- **Pattern**: Added images at opacity-15 as subtle background textures. GL said the site "looks like AI made it and forgot about it." Clinical sites with walls of text don't convert — they need visible photography to feel trustworthy and human-made.
+- **Rule**: When adding images, make them visible (opacity-30+ for hero backgrounds). Add images to carousel cards, product cards, and between content sections. Every major page should have at least 2-3 visible images. Audit the site from a "does this feel like humans care about it?" perspective.
+- **Why**: Compliance buyers need to trust the site with hundreds of dollars. Visual quality signals care and professionalism. A technically perfect site that looks like a spreadsheet doesn't sell.
