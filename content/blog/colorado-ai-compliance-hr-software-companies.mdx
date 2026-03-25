@@ -1,0 +1,125 @@
+---
+title: "Colorado AI Compliance for HR Software Companies: What SB 24-205 Means for Your Product"
+slug: "colorado-ai-compliance-hr-software-companies"
+description: "Colorado SB 24-205 takes effect June 30, 2026 and directly targets HR software in hiring, performance, and workforce decisions. Here's what it requires of the companies that build and sell those tools — and the HR departments that use them."
+date: "2026-03-25"
+author: "AI Compliance Documents Team"
+tags: ["Colorado AI law", "HR software compliance", "AI hiring compliance", "SB 24-205", "employment AI"]
+published: true
+image: "/blog/blog-hero-colorado.png"
+summary: "Colorado's SB 24-205 classifies AI tools used in hiring, promotion, termination, and compensation as high-risk systems subject to mandatory documentation, impact assessments, consumer notices, and annual audits — with a compliance deadline of June 30, 2026. If you build or sell HR software with AI-driven features, you have developer obligations. If you deploy it internally, you have deployer obligations. Both categories are enforceable by the Colorado Attorney General."
+cardSummary: "HR software that screens candidates, scores performance, or ranks employees is classified as high-risk AI under Colorado's law. The June 30, 2026 deadline applies to both the companies that build these tools and the HR teams that use them."
+deepDive:
+  title: "What Does 'Substantial Factor' Mean in Practice?"
+  content: "Colorado's law doesn't just cover AI systems that make the final call on an employment decision. It covers any AI system that is a 'substantial factor' in making a consequential decision. That phrase is worth unpacking, because it's the reason so many HR software products are in scope even when a human manager technically makes the final choice.\n\nThink of it this way: if a hiring manager looks at a ranked shortlist produced by an AI resume screener and chooses from the top five candidates, the AI was a substantial factor in who got considered — even though the manager picked the winner. The candidates who were filtered out of that shortlist never got to the manager's desk. The AI's role in their exclusion was substantial, even if invisible.\n\nThe same logic applies to performance review tools that generate a 'flight risk' score, scheduling platforms that flag attendance patterns, and promotion recommendation engines that surface certain employees over others. In each case, a human may be the technical decision-maker, but the AI shaped the decision space those humans operated in. Colorado's law is designed to capture exactly that dynamic.\n\nFor HR software companies, this means the threshold for triggering the law's requirements isn't 'does your product make the final decision?' It's 'does your product meaningfully influence the decision?' If the answer is yes — and for most AI-driven HR tools, it is — your product is likely a high-risk system under SB 24-205, and both you as the developer and your customers as deployers have obligations that need to be in place before June 30, 2026."
+microFacts:
+  - fact: "Colorado SB 24-205 was signed by Governor Jared Polis on May 17, 2024, making Colorado the first state to enact a comprehensive law regulating both developers and deployers of high-risk AI systems."
+    source: "Colorado General Assembly"
+    sourceUrl: "https://leg.colorado.gov/bills/sb24-205"
+  - fact: "Colorado's original effective date of February 1, 2026 was extended to June 30, 2026 when the legislature passed SB 25B-004 during an August 2025 extraordinary session after failing to reach agreement on substantive revisions."
+    source: "Colorado General Assembly"
+    sourceUrl: "https://leg.colorado.gov/bills/sb25b-004"
+  - fact: "Colorado's law references the NIST AI Risk Management Framework as the type of nationally recognized framework that can provide businesses with an affirmative defense against claims under SB 24-205."
+    source: "NIST AI Resource Center"
+    sourceUrl: "https://airc.nist.gov/"
+  - fact: "Under the Colorado Consumer Protection Act (C.R.S. § 6-1-112), penalties for SB 24-205 violations can reach up to $20,000 per violation, and up to $50,000 per violation when the affected person is age 60 or older."
+    source: "Colorado General Assembly"
+    sourceUrl: "https://leg.colorado.gov/bills/sb24-205"
+externalReferences:
+  - title: "Colorado General Assembly — SB24-205: Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
+  - title: "Colorado General Assembly — SB25B-004: Increase Transparency for Algorithmic Systems (Effective Date Extension)"
+    url: "https://leg.colorado.gov/bills/sb25b-004"
+  - title: "NIST AI Resource Center — AI Risk Management Framework"
+    url: "https://airc.nist.gov/"
+---
+
+If you build HR software — applicant tracking systems, performance management platforms, workforce analytics tools, compensation benchmarking engines — and any of those products use AI to rank, score, recommend, or filter people in employment decisions, Colorado's SB 24-205 applies to your product. Not to your customers. To you.
+
+The law takes effect June 30, 2026. ([SB24-205](https://leg.colorado.gov/bills/sb24-205)) ([SB25B-004](https://leg.colorado.gov/bills/sb25b-004)) That's roughly three months from now. And unlike most compliance deadlines that mostly concern the businesses using a product, Colorado's law is built around two distinct roles — developers and deployers — with independent obligations for each. As an HR software company, you may be one, the other, or both.
+
+## Why HR Software Is Directly in Scope
+
+Colorado's law applies to "high-risk artificial intelligence systems" — specifically, AI systems that make or are a substantial factor in making a "consequential decision." ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+Employment and employment opportunities are explicitly listed as consequential decision categories. The law's coverage isn't limited to hiring — it extends to any decision that materially affects a person's access to, or the cost or terms of, employment. That includes:
+
+- **Hiring and candidate selection** — resume screening, candidate ranking, interview scheduling prioritization, pre-employment assessments
+- **Promotion decisions** — AI-generated promotion recommendations or workforce planning outputs that surface certain employees over others
+- **Termination and discipline** — performance analytics tools that flag employees for review, discipline, or termination
+- **Compensation and benefits** — benchmarking and pay equity tools that feed into compensation decisions
+
+If your product generates any kind of score, classification, ranking, or recommendation that influences any of these decisions, it is almost certainly a high-risk AI system under this law. The threshold isn't whether your product makes the final decision — it's whether it is a substantial factor in one. For most AI-powered HR tools, that threshold is cleared by design.
+
+## Developer Obligations: What Your Company Owes Before Sale
+
+Colorado draws a clear line between companies that build AI systems (developers) and companies that use them (deployers). As an HR software company selling AI-powered tools, you are a developer. That carries its own obligations, independent of what your customers are required to do. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**Disclosure package for deployers.** You need to provide each deployer — each customer using your AI in employment decisions — with a disclosure statement that documents what your system does, how it works, its known limitations, and what data it was trained on. Critically, you also need to give deployers the documentation they need to complete their own impact assessments. If your customers can't document what your product does, they can't comply with the law. That's your responsibility to solve.
+
+**Public statement on algorithmic discrimination risk.** You need to publish a publicly available statement describing the types of high-risk systems you develop and how you manage algorithmic discrimination risks across those systems. This isn't a legal disclaimer in your terms of service — it's a substantive description of your risk management approach, visible to deployers and the public.
+
+**90-day disclosure obligation.** If you discover — or receive a credible report — that your system has caused or is reasonably likely to have caused algorithmic discrimination, you must disclose that to the Colorado Attorney General and to all known deployers within 90 days.
+
+**Rebuttable presumption of reasonable care.** If you meet all of these requirements, Colorado's law creates a legal presumption that you used reasonable care. That shifts the burden in any enforcement action — the other side has to prove your compliance was inadequate, rather than you having to prove you acted properly.
+
+## Deployer Obligations: What Your HR Customers Owe
+
+Your customers — the HR departments, talent acquisition teams, and people operations leaders using your software — are deployers under this law. If your product is a high-risk AI system, they have a full set of obligations that must be in place by June 30, 2026. Understanding these matters to you as the developer, because deployers will increasingly require your documentation to satisfy their own obligations. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**Risk management program.** Deployers must implement a formal, ongoing risk management policy for every high-risk AI system they use. This is a living program, not a one-time document.
+
+**Impact assessment.** For each high-risk system, deployers must complete a documented impact assessment that evaluates the potential for algorithmic discrimination and the steps being taken to mitigate it. Our [Colorado SB 24-205 compliance package](/products/colorado-sb24-205) includes the impact assessment documentation the law requires.
+
+**Annual review.** Each deployed high-risk system must be reviewed annually to confirm it isn't producing algorithmic discrimination. This is ongoing monitoring, not just a deployment-time check.
+
+**Consumer notice.** Before or at the time a consequential decision is made, the affected person must be notified that an AI system was involved. For HR deployers, this means candidates and employees need disclosure.
+
+**Right to correct.** Consumers must be able to correct inaccurate personal data the AI used in making a decision about them.
+
+**Right to appeal.** Consumers must have the opportunity to appeal adverse consequential decisions, with human review where technically feasible.
+
+**Public statement and AG disclosure.** Deployers have the same public statement obligation as developers — and the same 90-day reporting requirement if they discover their AI system has caused algorithmic discrimination.
+
+That's a substantial compliance infrastructure. Your customers won't be able to build most of it without the documentation your product generates and the disclosures your company provides. Which is why developer obligations aren't academic — they're the foundation your customers' compliance programs rest on.
+
+## The Affirmative Defense: Why NIST Matters Here
+
+Colorado's law contains something most AI statutes don't: an explicit legal reward for businesses that take a structured approach to AI risk management. If a developer or deployer complies with a nationally or internationally recognized risk management framework for AI — and takes measures to discover and correct violations — they have an affirmative defense against claims under the law. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+The most prominent framework that satisfies this standard is the NIST AI Risk Management Framework (NIST AI 100-1). The NIST AI RMF organizes AI governance into four functions — Govern, Map, Measure, and Manage — and provides a structured approach to identifying, evaluating, and mitigating the exact types of risks Colorado's law targets.
+
+For HR software companies, this has two practical implications. First, building your internal AI governance program around NIST AI RMF gives you the affirmative defense as a developer. Second, your customers will be better positioned to satisfy their own affirmative defense if your developer documentation maps to the NIST framework's structure — because it makes their impact assessments and risk programs more credible and more complete.
+
+Our [NIST AI RMF implementation package](/products/nist-ai-rmf) turns the framework's four functions into the specific policies, risk registers, and governance documentation that satisfy Colorado's affirmative defense standard. It's the governance layer that supports everything else.
+
+## Operating in Multiple States? The Disclosure Picture Gets More Complex
+
+Colorado isn't the only jurisdiction with AI employment obligations. Illinois HB3773 (effective January 1, 2026) requires employers using AI in employment decisions to notify employees — and creates civil rights liability for AI that has a discriminatory effect. New York City's Local Law 144 requires annual bias audits of any automated employment decision tool and public disclosure of results. California has its own framework under the CPRA.
+
+If your HR software customers operate across multiple states — which most do — they're managing a matrix of overlapping requirements. The notice language that satisfies Colorado isn't identical to what Illinois requires. The bias audit documentation for NYC has its own format. Our [Multi-State Employer AI Disclosure Kit](/products/multi-state-employer-ai-disclosure) consolidates the notice and disclosure requirements across Illinois, New York City, and Colorado into one package, so customers aren't managing each jurisdiction separately.
+
+For you as a developer, this also means the documentation you provide deployers should be comprehensive enough to support compliance across jurisdictions — not just Colorado. That's increasingly part of what enterprise HR buyers expect before signing.
+
+## Where to Focus Before June 30, 2026
+
+If your product is in scope and you haven't started on SB 24-205 compliance, the remaining time is workable but not generous. Here's how to sequence it.
+
+**Classify your products.** For each AI-powered feature in your product suite, determine whether it makes or substantially factors into consequential employment decisions. If it generates a score, ranking, recommendation, or classification that influences hiring, promotion, performance management, or compensation — it's in scope.
+
+**Build your developer disclosure package.** Draft the disclosure statement each deployer needs. Document how your system works, what data it was trained on, what its known limitations are, and what documentation a customer would need to complete their own impact assessment. This is the artifact your sales and customer success teams will start fielding requests for.
+
+**Publish your public statement.** Your statement on algorithmic discrimination risk management needs to be publicly available before the June 30 deadline. It should describe your in-scope systems and your approach to managing discrimination risk in each.
+
+**Align your governance program with NIST AI RMF.** If you want the affirmative defense, your governance program needs to map to a recognized framework. NIST AI RMF is the right target. Start with the Govern function — policy, ownership, and oversight — before moving to Map, Measure, and Manage.
+
+**Prepare your customers.** Your deployer customers have more obligations than you do, and they can't meet most of them without your documentation. Getting ahead of their requests — publishing disclosure packages, preparing FAQ materials, briefing customer success teams — is both a compliance strategy and a retention strategy. Companies that make their customers' compliance easier will have a competitive advantage as this law takes effect.
+
+The June 30, 2026 deadline is the compliance line. But the more important deadline is the one before it — the point at which your customers start asking whether your product is compliant and whether you can help them comply. That deadline is now.
+
+---
+
+**Sources** — Every legal fact in this article was verified against the enacted statute text at these .gov URLs:
+
+- [Colorado General Assembly — SB24-205 Consumer Protections for Artificial Intelligence](https://leg.colorado.gov/bills/sb24-205) — Full bill including developer/deployer obligations, consequential decision definitions, affirmative defense, and enforcement. Signed May 17, 2024.
+- [Colorado General Assembly — SB25B-004 Increase Transparency for Algorithmic Systems](https://leg.colorado.gov/bills/sb25b-004) — Extends effective date to June 30, 2026. Passed during 2025 Extraordinary Session. Signed August 28, 2025.
