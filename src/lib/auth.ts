@@ -7,6 +7,8 @@ const adapter = process.env.DATABASE_URL
   ? PostgresAdapter(getPool())
   : undefined;
 
+const authSecret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET;
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter,
   providers: [
@@ -18,7 +20,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   session: {
     strategy: adapter ? "database" : "jwt",
   },
-  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
+  secret: authSecret,
   trustHost: true,
   debug: process.env.NODE_ENV === "development",
+  callbacks: {
+    async signIn() {
+      if (!authSecret) {
+        console.error("AUTH_SECRET is not set — sessions will not persist. Generate one with: openssl rand -base64 32");
+      }
+      return true;
+    },
+  },
 });
