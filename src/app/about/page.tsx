@@ -32,9 +32,27 @@ function OrganizationSchema() {
     "@type": "Organization",
     name: "AI Compliance Documents",
     url: "https://aicompliancedocuments.com",
+    logo: "https://aicompliancedocuments.com/logo.png",
     email: "info@aicompliancedocuments.com",
     description:
       "AI compliance documentation templates for US state and federal AI regulations. Built from enacted statute text.",
+    sameAs: [
+      "https://www.linkedin.com/company/ai-compliance-documents",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "info@aicompliancedocuments.com",
+      contactType: "customer support",
+    },
+    knowsAbout: [
+      "AI compliance",
+      "Colorado SB 24-205",
+      "Illinois HB3773",
+      "EU AI Act",
+      "NIST AI RMF",
+      "algorithmic discrimination",
+      "AI governance",
+    ],
   });
   return <script type="application/ld+json">{data}</script>;
 }

@@ -141,6 +141,8 @@ function StructuredData({ reg }: { reg: { slug: string; name: string; descriptio
     "@type": "Product",
     name: reg.name,
     description: reg.description,
+    sku: reg.slug,
+    category: "Legal & Compliance Documents",
     image: `https://aicompliancedocuments.com/previews/${reg.slug}.webp`,
     url: `https://aicompliancedocuments.com/products/${reg.slug}`,
     brand: {
@@ -164,6 +166,7 @@ function StructuredData({ reg }: { reg: { slug: string; name: string; descriptio
       seller: {
         "@type": "Organization",
         name: "AI Compliance Documents",
+        url: "https://aicompliancedocuments.com",
       },
     },
   });

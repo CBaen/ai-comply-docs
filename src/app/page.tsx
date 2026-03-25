@@ -42,6 +42,45 @@ function OrganizationStructuredData() {
     email: "info@aicompliancedocuments.com",
     description:
       "AI compliance documentation templates for US state and federal AI regulations.",
+    sameAs: [
+      "https://www.linkedin.com/company/ai-compliance-documents",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "info@aicompliancedocuments.com",
+      contactType: "customer support",
+    },
+    areaServed: "US",
+    knowsAbout: [
+      "AI compliance",
+      "Colorado SB 24-205",
+      "Illinois HB3773",
+      "EU AI Act",
+      "NIST AI RMF",
+      "algorithmic discrimination",
+      "AI governance",
+    ],
+  });
+
+  return <script type="application/ld+json">{data}</script>;
+}
+
+function WebSiteStructuredData() {
+  const data = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "AI Compliance Documents",
+    url: "https://aicompliancedocuments.com",
+    description:
+      "AI compliance documentation templates for US state and federal AI regulations. Built from enacted statute text.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://aicompliancedocuments.com/products?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
   });
 
   return <script type="application/ld+json">{data}</script>;
@@ -135,6 +174,7 @@ export default function Home() {
   return (
     <>
       <OrganizationStructuredData />
+      <WebSiteStructuredData />
       <FAQStructuredData readyCount={readyCount} />
       <Nav />
       <main id="main-content">

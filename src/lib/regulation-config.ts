@@ -282,6 +282,37 @@ export const REGULATION_CONFIG: Record<string, RegulationConfig> = {
         "This contact will be listed in your privacy notices and consumer rights procedures as the designated data privacy contact under the Texas TDPSA.",
     },
   },
+  "texas-traiga": {
+    acknowledgment:
+      "I have reviewed HB 149 (Texas Responsible AI Governance Act, 89th Legislature) and understand that these are compliance templates, not legal advice. TRAIGA took effect January 1, 2026 and applies to both developers and deployers of AI systems in Texas. The Texas Department of Information Resources (DIR) has rulemaking authority and may publish additional guidance. The AG complaint portal goes live by September 1, 2026. I should verify the current regulatory status and consult qualified legal counsel.",
+    skippedSteps: [3],
+    oversightOptions: OVERSIGHT_OPTIONS_GENERIC,
+    decisions: [
+      ["employment", "Employment & Hiring Decisions"],
+      ["financial", "Financial & Lending Services"],
+      ["healthcare", "Healthcare & Clinical Decisions"],
+      ["housing", "Housing & Tenant Screening"],
+      ["insurance", "Insurance & Underwriting"],
+      ["customer", "Customer-Facing Services"],
+      ["internal_ops", "Internal Business Operations"],
+    ],
+    helpTexts: {
+      step2Help:
+        "What AI systems are covered? Under TRAIGA (HB 149), any AI system your business develops or deploys in Texas is in scope — there is no high-risk carveout and no minimum size threshold. If you build AI tools and make them available to others, you are a developer. If you use AI tools in your products or services offered to Texas consumers or employees, you are a deployer. When in doubt, include the system.",
+      step2Intro:
+        "List each AI system your business develops or deploys in Texas. We'll generate documentation covering both developer and deployer obligations under TRAIGA.",
+      step2DecisionHelp:
+        "Check every area where this AI system influences decisions. Unlike Colorado's SB 24-205, TRAIGA has no 'consequential decision' filter — it applies to any AI system. Select all that apply to understand the full scope of your documentation needs.",
+      step2MultiHelp:
+        "Many businesses use multiple AI systems. List each one separately — each needs its own disclosure documentation (if you're a developer) and its own entry in your AI System Inventory. If you only have one AI system, skip this button.",
+      step3BiasHelp:
+        "TRAIGA (§ 552.056(c)) requires intent for a discrimination violation — disparate impact alone is not sufficient. However, documented good-faith bias evaluation is material evidence that no discriminatory intent existed. It also supports the NIST AI 600-1 safe harbor. Select what fits your situation.",
+      step4Help:
+        "This section captures your AI oversight and governance structure. Strong human oversight is a core element of the NIST AI 600-1 framework that supports TRAIGA's rebuttable presumption of reasonable care (§ 552.105(c)). Deployers must provide consumers with a mechanism to submit corrections regarding AI-driven decisions.",
+      step5Intro:
+        "This contact will appear in your consumer AI notifications and developer disclosure documentation as the designated AI compliance contact under TRAIGA. Deployers must give consumers a way to submit corrections and concerns regarding AI systems affecting them.",
+    },
+  },
   "delaware-pdpa": {
     acknowledgment:
       "I have reviewed Del. Code tit. 6, ch. 12D (Delaware Personal Data Privacy Act, HB 154) and understand that these are compliance templates, not legal advice. The Delaware PDPA has been in effect since January 1, 2025, with the cure period expiring December 31, 2025. Delaware has the lowest compliance thresholds of any state (35,000 consumers). I should verify the current regulatory status and consult qualified legal counsel.",

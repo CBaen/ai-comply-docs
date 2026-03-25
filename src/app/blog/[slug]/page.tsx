@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const blogPostingSchema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "TechArticle",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
@@ -101,12 +101,22 @@ export default async function BlogPostPage({ params }: Props) {
       "@type": "Organization",
       name: "AI Compliance Documents",
       url: "https://aicompliancedocuments.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://aicompliancedocuments.com/logo.png",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://aicompliancedocuments.com/blog/${post.slug}`,
     },
     keywords: post.tags.join(", "),
+    about: post.tags.map((tag) => ({ "@type": "Thing", name: tag })),
+    audience: {
+      "@type": "Audience",
+      audienceType: "Business compliance professionals and legal teams",
+    },
+    proficiencyLevel: "Expert",
     ...(post.image ? { image: `https://aicompliancedocuments.com${post.image}` } : {}),
   };
 
