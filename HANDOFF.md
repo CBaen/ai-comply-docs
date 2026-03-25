@@ -38,7 +38,7 @@ You proved the store works today. That matters. Everything from here is about dr
 
 - **Live:** `aicompliancedocuments.com` — 53 products (+1 Texas TRAIGA pending), 21 blog posts
 - **Checkout:** VERIFIED WORKING (2026-03-15). Zip download + email delivery confirmed.
-- **Blog:** 19 posts, all enriched with YAML (summary, deepDive, microFacts, externalReferences)
+- **Blog:** 21 posts, all enriched with YAML (summary, deepDive, microFacts, externalReferences). New this session: high-risk AI guide, impact assessment guide, Colorado HR vertical, "Do I need compliance?" decision framework
 - **Blog layout:** Art of War style — Deep Dive left margin, Micro Facts right margin (desktop), disclosure cards (mobile)
 - **PDFs:** Professional branded design (dark blue header band, unified colors, styled fields, signature boxes)
 - **Search:** Global Cmd+K modal (cmdk + MiniSearch)
