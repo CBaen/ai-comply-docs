@@ -90,7 +90,6 @@ export default function ProductCarousel({ products }: Props) {
             alt=""
             aria-hidden="true"
             className="w-full h-32 object-cover rounded-xl"
-            onError={(e) => { (e.target as HTMLImageElement).src = fallbackImage; }}
           />
         </div>
 
