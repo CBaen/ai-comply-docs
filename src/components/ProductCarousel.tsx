@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import type { Regulation } from "@/data/regulations";
 
@@ -81,13 +80,12 @@ export default function ProductCarousel({ products }: Props) {
       >
         {/* Category image */}
         <div className="mb-5 sm:mb-6 overflow-hidden rounded-xl">
-          <Image
+          <img
             src={cardImage}
             alt=""
             aria-hidden="true"
-            width={800}
-            height={128}
             className="w-full h-32 object-cover rounded-xl"
+            onError={(e) => { (e.target as HTMLImageElement).src = fallbackImage; }}
           />
         </div>
 
