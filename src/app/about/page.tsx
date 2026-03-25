@@ -107,9 +107,36 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Lifestyle image break */}
+          {/* Founder */}
+          <section className="bg-slate-50 border border-slate-200 rounded-xl p-5 sm:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-5">
+              Who built this
+            </h2>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                AI Compliance Documents was founded by Cameron B. Paul, a regulatory compliance
+                professional with experience spanning healthcare, finance, technology, and federal
+                agency engagement.
+              </p>
+              <p>
+                Paul has supported compliance programs for organizations including Citi Financial,
+                Houston Methodist Hospital, and MedTrack LLC, and has worked directly with federal
+                agencies and regulatory frameworks including EEOC, HIPAA, DOJ, IRS Whistleblower
+                statutes, OSHA, HHS Office for Civil Rights, and HHS Office of Inspector General.
+              </p>
+              <p>
+                A serial entrepreneur, Mr. Paul has founded and operated a U.S.-based manufacturing
+                company and is an award-winning product designer and published author. That breadth
+                of experience &mdash; building businesses, navigating federal compliance firsthand,
+                and understanding how regulatory failures cascade through organizations &mdash;
+                informs the company&apos;s approach to AI governance documentation.
+              </p>
+            </div>
+          </section>
+
+          {/* Document preview */}
           <div className="my-10 rounded-xl overflow-hidden">
-            <img src="/images/landing/documents-on-desk.png" alt="Compliance documents reviewed on a desk" className="w-full h-48 sm:h-56 object-cover" />
+            <img src="/previews/colorado-sb24-205.webp" alt="Sample compliance document preview" className="w-full h-48 sm:h-56 object-cover" />
           </div>
 
           {/* Methodology */}
