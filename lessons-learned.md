@@ -216,3 +216,8 @@ Reviewed by every instance on arrival. Append-only. Keep entries atomic and acti
 - **Pattern**: Wrote 3-5 sentence "two-sentence summaries" for blog card descriptions.
 - **Rule**: Count the sentences. Two means two. If you can't say it in two, rewrite until you can.
 - **Why**: ADHD users need scannable content. The constraint is the feature.
+
+### Don't surface infrastructure decisions to Guiding Light
+- **Pattern**: Explained Upstash Redis setup steps and asked GL to create an account, configure env vars, and understand what rate limiting is. GL responded "none of this makes sense."
+- **Rule**: Infrastructure that only matters at scale should be handled silently. Write the code with graceful fallbacks. Don't ask GL to create accounts, configure environment variables, or understand infrastructure concepts. Either handle it yourself or leave it for the next technical session.
+- **Why**: GL is a designer, not an engineer. Asking them to understand Redis, rate limiting, and environment variables violates "never ask GL technical questions." The code works without Redis — the fallback is fine for now.
