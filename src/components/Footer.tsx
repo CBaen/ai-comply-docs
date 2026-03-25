@@ -27,6 +27,9 @@ export default function Footer() {
               <li><Link href="/do-i-need-ai-compliance" className="text-slate-400 hover:text-white transition">Free Assessment</Link></li>
               <li><Link href="/faq" className="text-slate-400 hover:text-white transition">FAQ</Link></li>
               <li><Link href="/colorado-ai-compliance" className="text-slate-400 hover:text-white transition">Colorado AI Compliance</Link></li>
+              <li><Link href="/illinois-ai-compliance" className="text-slate-400 hover:text-white transition">Illinois AI Compliance</Link></li>
+              <li><Link href="/california-ai-compliance" className="text-slate-400 hover:text-white transition">California AI Compliance</Link></li>
+              <li><Link href="/texas-ai-compliance" className="text-slate-400 hover:text-white transition">Texas AI Compliance</Link></li>
             </ul>
           </nav>
 
