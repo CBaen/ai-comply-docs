@@ -85,3 +85,14 @@ CREATE INDEX IF NOT EXISTS purchases_stripe_session_id_idx ON purchases(stripe_s
 ALTER TABLE purchases
   ADD CONSTRAINT IF NOT EXISTS "purchases_user_id_fkey"
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL;
+
+-- Single-use delivery tokens — prevents replay attacks on document delivery
+CREATE TABLE IF NOT EXISTS used_tokens
+(
+  token_key VARCHAR(512) NOT NULL,
+  used_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (token_key)
+);
+
+-- Auto-expire old tokens after 24 hours (cleanup index)
+CREATE INDEX IF NOT EXISTS used_tokens_used_at_idx ON used_tokens(used_at);

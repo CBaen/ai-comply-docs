@@ -4,7 +4,7 @@ import { getRegulation } from "@/data/regulations";
 import { generateDeliveryToken } from "@/lib/delivery-token";
 import { getPool } from "@/lib/db";
 import { getStripe } from "@/lib/stripe";
-import { rateLimit, getClientIp } from "@/lib/rate-limit";
+import { rateLimitAsync, getClientIp } from "@/lib/rate-limit";
 
 async function trackPurchase(session: Stripe.Checkout.Session) {
   const measurementId = process.env.GA_MEASUREMENT_ID;
@@ -72,7 +72,7 @@ async function savePurchaseFallback(session: Stripe.Checkout.Session) {
 export async function POST(request: Request) {
   // Rate limit: 10 verification attempts per minute per IP
   const ip = getClientIp(request);
-  const { limited } = rateLimit(`verify-payment:${ip}`, 10, 60 * 1000);
+  const { limited } = await rateLimitAsync(`verify-payment:${ip}`, 10, 60 * 1000);
   if (limited) {
     return NextResponse.json(
       { verified: false, error: "Too many requests. Please try again later." },

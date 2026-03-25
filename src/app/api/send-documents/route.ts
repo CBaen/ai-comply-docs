@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { validateDeliveryToken } from "@/lib/delivery-token";
 import { getRegulation } from "@/data/regulations";
-import { rateLimit, getClientIp } from "@/lib/rate-limit";
+import { rateLimitAsync, getClientIp } from "@/lib/rate-limit";
 
 function escapeHtml(s: string): string {
   return s
@@ -223,7 +223,7 @@ const usedTokens = new Set<string>();
 export async function POST(request: Request) {
   // Rate limit: 3 document sends per 15 minutes per IP
   const ip = getClientIp(request);
-  const { limited } = rateLimit(`send-docs:${ip}`, 3, 15 * 60 * 1000);
+  const { limited } = await rateLimitAsync(`send-docs:${ip}`, 3, 15 * 60 * 1000);
   if (limited) {
     return NextResponse.json(
       { error: "Too many requests. Please try again later." },

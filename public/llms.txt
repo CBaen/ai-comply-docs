@@ -1,5 +1,5 @@
 # AI Compliance Documents
-> AI compliance documentation templates for US state laws, the EU AI Act, and federal frameworks. 55 packages covering employment AI laws, consumer data privacy laws, industry-specific compliance, universal governance documents, and jurisdiction-specific add-ons.
+> AI compliance documentation templates for US state laws, the EU AI Act, and federal frameworks. 56 packages covering employment AI laws, consumer data privacy laws, AI governance laws, industry-specific compliance, universal governance documents, and jurisdiction-specific add-ons.
 
 ## About
 AI Compliance Documents generates compliance documentation templates for businesses subject to AI regulations. Customers answer a 10-minute questionnaire about their company and AI systems, pay once (no subscription), and download customized fillable PDF documents instantly. Prices range from $49 to $997. Each package is built from the actual enacted statute text — not summaries, not training data, not paraphrases. We are not a law firm and do not provide legal advice.
@@ -16,6 +16,7 @@ AI Compliance Documents generates compliance documentation templates for busines
 - [Connecticut CTDPA ($249)](https://aicompliancedocuments.com/products/connecticut-ctdpa): Data protection assessments and profiling opt-out documentation for Connecticut
 - [Oregon CPA ($249)](https://aicompliancedocuments.com/products/oregon-cpa): Consumer privacy and AI profiling documentation for Oregon
 - [Texas TDPSA ($249)](https://aicompliancedocuments.com/products/texas-tdpsa): Data protection assessments and privacy notices for Texas consumer data
+- [Texas TRAIGA (HB 149) ($299)](https://aicompliancedocuments.com/products/texas-traiga): Texas HB 149 — the Responsible AI Governance Act — covers both developer and deployer obligations for any business that develops or deploys AI systems in Texas, built around the NIST AI 600-1 safe harbor standard (effective January 1, 2026)
 - [Delaware PDPA ($249)](https://aicompliancedocuments.com/products/delaware-pdpa): Privacy documentation for Delaware's lowest-threshold state privacy law
 - [Minnesota MCDPA ($349)](https://aicompliancedocuments.com/products/minnesota-mcdpa): Algorithmic governance documentation with AI-specific provisions
 - [Montana MCDPA ($249)](https://aicompliancedocuments.com/products/montana-mcdpa): Consumer privacy and profiling documentation for Montana
