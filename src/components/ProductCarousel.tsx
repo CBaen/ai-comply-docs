@@ -25,7 +25,7 @@ export default function ProductCarousel({ products }: Props) {
 
   useEffect(() => {
     if (paused || reducedMotion.current) return;
-    const timer = setInterval(next, 6000);
+    const timer = setInterval(next, 12000);
     return () => clearInterval(timer);
   }, [paused, next]);
 
