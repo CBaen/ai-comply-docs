@@ -56,15 +56,28 @@ export default function ContactPage() {
   return (
     <>
       <Nav />
-      <main id="main-content" className="max-w-2xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <h1 className="text-3xl sm:text-4xl font-bold font-display text-gray-900 mb-2">
-          Contact Us
-        </h1>
-        <p className="text-gray-600 text-sm mb-8 leading-relaxed">
-          Have a question about our compliance documents, need help choosing the right
-          package, or want to discuss enterprise pricing? Send us a message and
-          we&apos;ll get back to you within one business day.
-        </p>
+      <main id="main-content">
+
+        {/* Hero */}
+        <header className="bg-gray-950 relative overflow-hidden py-16 sm:py-24">
+          <img
+            src="/images/landing/professional-on-phone.png"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover opacity-15"
+          />
+          <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 text-white">
+            <h1 className="text-3xl sm:text-4xl font-bold font-display mb-3">
+              Contact Us
+            </h1>
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              Have a question about our compliance documents, need help choosing the right
+              package, or want to discuss enterprise pricing? Send us a message and
+              we&apos;ll get back to you within one business day.
+            </p>
+          </div>
+        </header>
+
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
 
         {status === "sent" ? (
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
@@ -206,6 +219,17 @@ export default function ContactPage() {
             </p>
           </form>
         )}
+        </div>
+
+        {/* Lifestyle image break */}
+        <div className="my-10 rounded-xl overflow-hidden max-w-2xl mx-auto px-4 sm:px-6">
+          <img
+            src="/images/landing/team-compliance-meeting.png"
+            alt="Team reviewing compliance documentation together"
+            className="w-full h-48 sm:h-56 object-cover rounded-xl"
+          />
+        </div>
+
       </main>
       <Footer />
     </>

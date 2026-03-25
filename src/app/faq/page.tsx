@@ -244,6 +244,15 @@ export default function FAQPage() {
                 </div>
               </details>
 
+              {/* Lifestyle image break */}
+              <div className="my-10 rounded-xl overflow-hidden">
+                <img
+                  src="/images/landing/professional-reviewing-documents.png"
+                  alt="Professional reviewing compliance documents at a desk"
+                  className="w-full h-48 sm:h-56 object-cover"
+                />
+              </div>
+
               <details className="group bg-slate-50 rounded border border-gray-200 overflow-hidden">
                 <summary className="flex items-center justify-between gap-3 p-4 sm:p-6 cursor-pointer font-bold font-display text-gray-900 hover:text-blue-700 transition list-none">
                   <span className="flex-1 min-w-0">Do I need this if I already have outside counsel?</span>

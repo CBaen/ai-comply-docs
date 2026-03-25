@@ -107,6 +107,11 @@ export default function AboutPage() {
             </div>
           </section>
 
+          {/* Lifestyle image break */}
+          <div className="my-10 rounded-xl overflow-hidden">
+            <img src="/images/landing/documents-on-desk.png" alt="Compliance documents reviewed on a desk" className="w-full h-48 sm:h-56 object-cover" />
+          </div>
+
           {/* Methodology */}
           <section>
             <h2 className="text-xl sm:text-2xl font-bold font-display text-gray-900 mb-5">
@@ -190,6 +195,11 @@ export default function AboutPage() {
               starting point &mdash; not to replace it.
             </p>
           </section>
+
+          {/* Lifestyle image break */}
+          <div className="my-10 rounded-xl overflow-hidden">
+            <img src="/images/landing/professional-reviewing-documents.png" alt="Professional reviewing compliance documents" className="w-full h-48 sm:h-56 object-cover" />
+          </div>
 
           {/* Products */}
           <section>

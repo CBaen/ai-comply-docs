@@ -273,6 +273,10 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
+          <img src="/images/landing/hands-typing-compliance.png" alt="Professional typing compliance documentation on a laptop" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+        </div>
+
         {/* Methodology Section — between How It Works and penalties */}
         <section className="py-10 md:py-14 bg-white border-b border-gray-100">
           <div className="max-w-5xl mx-auto px-4">
@@ -321,6 +325,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
+          <img src="/images/landing/documents-on-desk.png" alt="Compliance documents organized on a desk" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+        </div>
 
         {/* Methodology Trust Statement */}
         <section className="py-10 bg-slate-50 border-y border-gray-200">
@@ -413,6 +421,10 @@ export default function Home() {
             <ProductLibrary regulations={regulations.filter(r => r.ready)} />
           </div>
         </section>
+
+        <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
+          <img src="/images/landing/professional-reviewing-documents.png" alt="Professional reviewing compliance documents" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+        </div>
 
         {/* FAQ Section */}
         <section id="faq" className="py-10 md:py-16 bg-white">
@@ -511,6 +523,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
+          <img src="/images/landing/product-tablet-desk.png" alt="AI compliance product on a tablet at a desk" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+        </div>
 
         {/* Final CTA */}
         <section className="py-10 md:py-16 bg-slate-900">
