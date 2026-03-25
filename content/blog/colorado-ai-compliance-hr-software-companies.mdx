@@ -19,10 +19,10 @@ microFacts:
   - fact: "Colorado's original effective date of February 1, 2026 was extended to June 30, 2026 when the legislature passed SB 25B-004 during an August 2025 extraordinary session after failing to reach agreement on substantive revisions."
     source: "Colorado General Assembly"
     sourceUrl: "https://leg.colorado.gov/bills/sb25b-004"
-  - fact: "Colorado's law references the NIST AI Risk Management Framework as the type of nationally recognized framework that can provide businesses with an affirmative defense against claims under SB 24-205."
-    source: "NIST AI Resource Center"
-    sourceUrl: "https://airc.nist.gov/"
-  - fact: "Under the Colorado Consumer Protection Act (C.R.S. § 6-1-112), penalties for SB 24-205 violations can reach up to $20,000 per violation, and up to $50,000 per violation when the affected person is age 60 or older."
+  - fact: "Colorado's SB 24-205 affirmative defense is available to businesses that comply with a 'nationally or internationally recognized risk management framework' designated under the Act or by the Attorney General, AND take measures to discover and correct violations. The statute does not name NIST specifically, but the NIST AI Risk Management Framework (NIST AI 100-1) is the most prominent candidate framework practitioners expect to qualify."
+    source: "Colorado General Assembly"
+    sourceUrl: "https://leg.colorado.gov/bills/sb24-205"
+  - fact: "Violations of SB 24-205 are treated as deceptive trade practices under the Colorado Consumer Protection Act (C.R.S. § 6-1-105 et seq.), which sets penalties at up to $20,000 per violation under C.R.S. § 6-1-112, and up to $50,000 per violation when the affected person is age 60 or older. The penalty authority flows from the CCPA's deceptive trade practice provisions, not from a penalty provision within SB 24-205 itself."
     source: "Colorado General Assembly"
     sourceUrl: "https://leg.colorado.gov/bills/sb24-205"
 externalReferences:
@@ -42,12 +42,14 @@ The law takes effect June 30, 2026. ([SB24-205](https://leg.colorado.gov/bills/s
 
 Colorado's law applies to "high-risk artificial intelligence systems" — specifically, AI systems that make or are a substantial factor in making a "consequential decision." ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
 
-Employment and employment opportunities are explicitly listed as consequential decision categories. The law's coverage isn't limited to hiring — it extends to any decision that materially affects a person's access to, or the cost or terms of, employment. That includes:
+The statute uses the phrase "employment or an employment opportunity" (§ 6-1-1701(3)(b)) as the consequential decision category. The law's coverage isn't limited to hiring — it extends to any decision that materially affects a person's access to, or the cost or terms of, employment. Interpretive examples of what falls within this statutory category include:
 
 - **Hiring and candidate selection** — resume screening, candidate ranking, interview scheduling prioritization, pre-employment assessments
 - **Promotion decisions** — AI-generated promotion recommendations or workforce planning outputs that surface certain employees over others
 - **Termination and discipline** — performance analytics tools that flag employees for review, discipline, or termination
 - **Compensation and benefits** — benchmarking and pay equity tools that feed into compensation decisions
+
+These examples reflect how the statutory category is commonly interpreted — they are not a separate list of categories enumerated in the statute itself.
 
 If your product generates any kind of score, classification, ranking, or recommendation that influences any of these decisions, it is almost certainly a high-risk AI system under this law. The threshold isn't whether your product makes the final decision — it's whether it is a substantial factor in one. For most AI-powered HR tools, that threshold is cleared by design.
 
@@ -85,11 +87,11 @@ That's a substantial compliance infrastructure. Your customers won't be able to 
 
 ## The Affirmative Defense: Why NIST Matters Here
 
-Colorado's law contains something most AI statutes don't: an explicit legal reward for businesses that take a structured approach to AI risk management. If a developer or deployer complies with a nationally or internationally recognized risk management framework for AI — and takes measures to discover and correct violations — they have an affirmative defense against claims under the law. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+Colorado's law contains something most AI statutes don't: an explicit legal reward for businesses that take a structured approach to AI risk management. The affirmative defense requires satisfying **two conditions**: (1) the business must comply with a nationally or internationally recognized risk management framework for AI that is designated by the Act or by the Attorney General, and (2) the business must take measures to discover and correct violations of the statute. Both conditions must be met — framework compliance alone is not sufficient. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
 
-The most prominent framework that satisfies this standard is the NIST AI Risk Management Framework (NIST AI 100-1). The NIST AI RMF organizes AI governance into four functions — Govern, Map, Measure, and Manage — and provides a structured approach to identifying, evaluating, and mitigating the exact types of risks Colorado's law targets.
+The statute does not name the NIST AI Risk Management Framework (NIST AI 100-1) by name. It references a framework "designated" under the Act or by the AG. The NIST AI RMF is the most prominent nationally recognized framework that practitioners expect to qualify — its four functions (Govern, Map, Measure, and Manage) map directly to the risk identification, evaluation, and mitigation work the law targets — but businesses should confirm designation status as the AG's guidance develops.
 
-For HR software companies, this has two practical implications. First, building your internal AI governance program around NIST AI RMF gives you the affirmative defense as a developer. Second, your customers will be better positioned to satisfy their own affirmative defense if your developer documentation maps to the NIST framework's structure — because it makes their impact assessments and risk programs more credible and more complete.
+For HR software companies, the affirmative defense has two practical implications. First, building your internal AI governance program around a qualifying framework satisfies the first condition as a developer — but you must also demonstrate active measures to discover and correct violations. Second, your customers will be better positioned to satisfy their own affirmative defense if your developer documentation maps to the same framework's structure, because it makes their impact assessments and risk programs more credible and more complete.
 
 Our [NIST AI RMF implementation package](/products/nist-ai-rmf) turns the framework's four functions into the specific policies, risk registers, and governance documentation that satisfy Colorado's affirmative defense standard. It's the governance layer that supports everything else.
 
