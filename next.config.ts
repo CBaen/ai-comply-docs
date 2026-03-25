@@ -60,6 +60,21 @@ const nextConfig: NextConfig = {
         destination: "/colorado-ai-compliance",
         permanent: true,
       },
+      {
+        source: "/blog/illinois-ai-compliance",
+        destination: "/illinois-ai-compliance",
+        permanent: true,
+      },
+      {
+        source: "/blog/texas-ai-compliance",
+        destination: "/texas-ai-compliance",
+        permanent: true,
+      },
+      {
+        source: "/blog/california-ai-compliance",
+        destination: "/california-ai-compliance",
+        permanent: true,
+      },
     ];
   },
 };
