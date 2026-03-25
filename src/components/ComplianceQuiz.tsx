@@ -252,7 +252,7 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
           )}
         </div>
       ))}
-      <span className="ml-1 text-xs sm:text-sm text-gray-500 font-medium">
+      <span className="ml-1 text-xs sm:text-sm text-gray-700 font-medium">
         Question {current} of {total}
       </span>
     </div>
@@ -379,7 +379,7 @@ function ResultsCard({
       {/* Primary recommendations */}
       {primary.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-700 mb-4">
             Recommended packages
           </h3>
           <div className="space-y-4">
@@ -415,7 +415,7 @@ function ResultsCard({
       {/* Add-on recommendations */}
       {addOns.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-700 mb-4">
             Recommended add-ons
           </h3>
           <div className="space-y-3">
@@ -430,7 +430,7 @@ function ResultsCard({
                       <h4 className="font-semibold text-gray-900 text-sm">{rec.name}</h4>
                       <span className="text-slate-600 font-semibold text-sm">${rec.price}</span>
                     </div>
-                    <p className="text-gray-500 text-sm leading-relaxed">{rec.reason}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{rec.reason}</p>
                   </div>
                   <Link
                     href={`/products/${rec.slug}`}
@@ -457,7 +457,7 @@ function ResultsCard({
         </a>
         <button
           onClick={onRestart}
-          className="sm:ml-auto text-sm text-gray-500 hover:text-gray-800 transition underline"
+          className="sm:ml-auto text-sm text-gray-700 hover:text-gray-800 transition underline"
         >
           Start over
         </button>
@@ -586,7 +586,7 @@ export default function ComplianceQuiz() {
                 <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Does your business use AI or automated tools in any of these areas?
                 </h2>
-                <p className="text-gray-500 text-sm mb-6">
+                <p className="text-gray-600 text-sm mb-6">
                   Select the one that best describes your primary use case.
                 </p>
                 <div className="space-y-3" role="radiogroup" aria-label="Does your business use AI or automated tools in any of these areas?">
@@ -608,7 +608,7 @@ export default function ComplianceQuiz() {
                 <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Where are your employees or customers located?
                 </h2>
-                <p className="text-gray-500 text-sm mb-6">
+                <p className="text-gray-600 text-sm mb-6">
                   Select all that apply. This determines which state laws are relevant to you.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5" role="group" aria-label="Where are your employees or customers located?">
@@ -635,7 +635,7 @@ export default function ComplianceQuiz() {
                 <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   How many employees or consumers does your business interact with?
                 </h2>
-                <p className="text-gray-500 text-sm mb-6">
+                <p className="text-gray-600 text-sm mb-6">
                   Many state laws have applicability thresholds based on volume.
                 </p>
                 <div className="space-y-3" role="radiogroup" aria-label="How many employees or consumers does your business interact with?">
@@ -657,7 +657,7 @@ export default function ComplianceQuiz() {
                 <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Does your business sell or share personal data, or use it for targeted advertising?
                 </h2>
-                <p className="text-gray-500 text-sm mb-6">
+                <p className="text-gray-600 text-sm mb-6">
                   Selling, sharing, or using personal data for targeted ads triggers additional requirements in most state laws.
                 </p>
                 <div className="space-y-3" role="radiogroup" aria-label="Does your business sell or share personal data, or use it for targeted advertising?">
@@ -679,7 +679,7 @@ export default function ComplianceQuiz() {
                 <h2 className="text-lg sm:text-xl font-bold font-display text-gray-900 mb-2">
                   Do you currently have any AI compliance documentation in place?
                 </h2>
-                <p className="text-gray-500 text-sm mb-6">
+                <p className="text-gray-600 text-sm mb-6">
                   This helps us understand where you&apos;re starting from.
                 </p>
                 <div className="space-y-3" role="radiogroup" aria-label="Do you currently have any AI compliance documentation in place?">
@@ -700,7 +700,7 @@ export default function ComplianceQuiz() {
               {step > 1 ? (
                 <button
                   onClick={() => setStep((s) => s - 1)}
-                  className="text-sm text-gray-500 hover:text-gray-800 transition flex items-center gap-1.5 min-h-[44px] sm:min-h-0 justify-center sm:justify-start"
+                  className="text-sm text-gray-700 hover:text-gray-800 transition flex items-center gap-1.5 min-h-[44px] sm:min-h-0 justify-center sm:justify-start"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -725,7 +725,7 @@ export default function ComplianceQuiz() {
         )}
 
         {/* Legal disclaimer */}
-        <p className="mt-12 text-xs text-gray-500 text-center leading-relaxed">
+        <p className="mt-12 text-xs text-gray-600 text-center leading-relaxed">
           This assessment provides general guidance only and does not constitute legal advice.
           Results are based on the information you provide and may not capture every applicable law.
           Consult a licensed attorney to verify your specific compliance obligations.

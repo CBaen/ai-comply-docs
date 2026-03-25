@@ -137,7 +137,7 @@ export default function ContactPage() {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Company <span className="text-gray-400 font-normal">(optional)</span>
+                  Company <span className="text-gray-600 font-normal">(optional)</span>
                 </label>
                 <input
                   id="company"
@@ -179,7 +179,7 @@ export default function ContactPage() {
                 placeholder="Tell us how we can help..."
                 className={`${inputClass} resize-y`}
               />
-              <p className="text-xs text-gray-500 mt-1 text-right" aria-live="polite">
+              <p className="text-xs text-gray-600 mt-1 text-right" aria-live="polite">
                 {form.message.length}/5,000
               </p>
             </div>
@@ -198,7 +198,7 @@ export default function ContactPage() {
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-600">
               You can also reach us directly at{" "}
               <a href="mailto:info@aicompliancedocuments.com" className="text-blue-600 hover:underline">
                 info@aicompliancedocuments.com

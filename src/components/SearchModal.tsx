@@ -276,7 +276,7 @@ export default function SearchModal() {
                   {allProducts.length > 0 && (
                     <Command.Group
                       heading={
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-700 px-2">
                           Products ({allProducts.length})
                         </span>
                       }
@@ -287,7 +287,7 @@ export default function SearchModal() {
                   {allBlog.length > 0 && (
                     <Command.Group
                       heading={
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-700 px-2">
                           Blog ({allBlog.length})
                         </span>
                       }

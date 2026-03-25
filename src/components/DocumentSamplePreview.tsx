@@ -103,7 +103,7 @@ export default function DocumentSamplePreview({ slug }: DocumentSamplePreviewPro
     <div ref={containerRef} className="mt-6">
       {error ? (
         <div className="bg-slate-50 border border-gray-200 rounded-lg p-6 text-center">
-          <p className="text-sm text-gray-500">Preview unavailable for this document.</p>
+          <p className="text-sm text-gray-600">Preview unavailable for this document.</p>
         </div>
       ) : (
         <div
@@ -114,7 +114,7 @@ export default function DocumentSamplePreview({ slug }: DocumentSamplePreviewPro
             <div className="flex items-center justify-center py-20">
               <div className="animate-pulse flex flex-col items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-slate-600" />
-                <p className="text-sm text-gray-500">Generating preview...</p>
+                <p className="text-sm text-gray-600">Generating preview...</p>
               </div>
             </div>
           )}

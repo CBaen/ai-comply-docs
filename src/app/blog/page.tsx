@@ -117,7 +117,7 @@ export default function BlogPage() {
                       </p>
 
                       {/* Meta */}
-                      <div className="flex items-center justify-between text-xs text-gray-500 mb-4 border-t border-gray-100 pt-3">
+                      <div className="flex items-center justify-between text-xs text-gray-600 mb-4 border-t border-gray-100 pt-3">
                         <time dateTime={post.date}>{formatDate(post.date)}</time>
                         <span>{post.readTime}</span>
                       </div>

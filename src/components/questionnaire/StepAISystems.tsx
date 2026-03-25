@@ -48,9 +48,9 @@ export default function StepAISystems({
               AI System/Tool Name{" "}
               <span className="text-red-500">*</span>
             </label>
-            <p className="text-xs text-gray-500 mb-2">
-              The name of the software or tool. Examples: HireVue,
-              Workday AI, Pymetrics, or your custom-built tool.
+            <p className="text-xs text-gray-600 mb-2">
+              The name of the AI software, tool, or model your
+              organization uses.
             </p>
             <input
               id={`aiName-${idx}`}
@@ -59,7 +59,7 @@ export default function StepAISystems({
               onChange={(e) =>
                 updateAISystem(idx, "name", e.target.value)
               }
-              placeholder="e.g., HireVue, Pymetrics, internal ML model"
+              placeholder="e.g., ChatGPT, Salesforce Einstein, internal ML model"
               aria-required="true"
               className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
             />
@@ -75,7 +75,7 @@ export default function StepAISystems({
               onChange={(e) =>
                 updateAISystem(idx, "vendor", e.target.value)
               }
-              placeholder="e.g., HireVue Inc., or 'Internal'"
+              placeholder="e.g., OpenAI, Salesforce, or 'Internal'"
               className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
             />
           </div>
@@ -83,7 +83,7 @@ export default function StepAISystems({
             <legend className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               What decisions does this AI influence?
             </legend>
-            <p className="text-xs text-gray-500 mb-2">
+            <p className="text-xs text-gray-600 mb-2">
               {helpTexts.step2DecisionHelp}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">

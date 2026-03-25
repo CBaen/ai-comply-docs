@@ -126,13 +126,13 @@ function DeadlineBanner({
                 <p className="font-semibold text-gray-900 text-sm group-hover:text-blue-700 transition truncate">
                   {r.shortName}
                 </p>
-                <p className="text-xs text-gray-500">{r.state}</p>
+                <p className="text-xs text-gray-600">{r.state}</p>
               </div>
               <div className="sm:text-right sm:shrink-0 sm:ml-3 max-w-[55%]">
                 <p className="text-xs font-bold text-red-700 line-clamp-2">
                   {isPast ? "In effect since" : "Effective"} {r.effectiveDate}
                 </p>
-                <p className="text-xs text-gray-500 line-clamp-1">{r.maxPenalty}</p>
+                <p className="text-xs text-gray-600 line-clamp-1">{r.maxPenalty}</p>
               </div>
             </Link>
           );
@@ -209,7 +209,7 @@ export default function ProductLibrary({
           >
             {f.label}
             <span
-              className={`ml-1.5 text-xs ${activeFilter === f.key ? "text-blue-200" : "text-gray-500"}`}
+              className={`ml-1.5 text-xs ${activeFilter === f.key ? "text-blue-200" : "text-gray-600"}`}
             >
               {counts[f.key]}
             </span>
@@ -308,7 +308,7 @@ export default function ProductLibrary({
             </div>
 
             {/* Effective date — scannable at a glance */}
-            <p className="text-xs text-gray-500 mb-3">
+            <p className="text-xs text-gray-600 mb-3">
               {reg.status === "in-effect" ? "In effect" : "Effective"} {reg.effectiveDate} &middot; {reg.state}
             </p>
 
@@ -323,7 +323,7 @@ export default function ProductLibrary({
                 <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-display leading-none">
                   ${reg.price}
                 </span>
-                <span className="text-gray-500 text-xs ml-1">one-time</span>
+                <span className="text-gray-600 text-xs ml-1">one-time</span>
               </div>
               <span className="text-gray-600 text-xs">
                 {reg.documentCount} documents

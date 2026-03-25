@@ -537,7 +537,7 @@ export default function PostPaymentHandler({
               <h2 className="text-xl font-bold font-display text-gray-900 dark:text-white mb-1">
                 Almost there — customize your documents
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
+              <p className="text-gray-700 dark:text-gray-300 text-sm">
                 We just need a few details to personalize your compliance documents.
               </p>
             </div>
@@ -611,7 +611,7 @@ export default function PostPaymentHandler({
                 <label htmlFor="quick-contact-name" className="block text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
                   Your Name <span className="text-red-500">*</span>
                 </label>
-                <p className="text-xs text-gray-400 dark:text-gray-500 mb-1">Name for compliance documents</p>
+                <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">Name for compliance documents</p>
                 <input
                   id="quick-contact-name"
                   type="text"

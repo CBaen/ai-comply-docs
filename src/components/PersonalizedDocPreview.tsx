@@ -149,7 +149,7 @@ export default function PersonalizedDocPreview({ formData, regulationSlug }: Per
         <div className="bg-gray-100 dark:bg-slate-700 rounded-lg flex items-center justify-center py-16">
           <div className="animate-pulse flex flex-col items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gray-300 dark:bg-slate-600" />
-            <p className="text-sm text-gray-500">Generating your documents...</p>
+            <p className="text-sm text-gray-600">Generating your documents...</p>
           </div>
         </div>
       ) : (

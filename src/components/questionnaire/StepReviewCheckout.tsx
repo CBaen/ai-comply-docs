@@ -264,7 +264,7 @@ export default function StepReviewCheckout({
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">
                     <strong>{addon.label} (+${addon.price})</strong>
-                    <span className="block text-gray-500 dark:text-gray-400 mt-0.5">
+                    <span className="block text-gray-700 dark:text-gray-300 mt-0.5">
                       {addon.description}
                     </span>
                   </span>
@@ -280,7 +280,7 @@ export default function StepReviewCheckout({
         <p className="text-3xl font-extrabold font-display text-gray-900 dark:text-white">
           ${orderTotal}
         </p>
-        <p className="text-sm text-gray-500 mt-1 break-words px-2">
+        <p className="text-sm text-gray-700 mt-1 break-words px-2">
           {selectedAddons.length > 0
             ? `Compliance Package $${basePrice} + ${addons
                 .filter((a) => selectedAddons.includes(a.id))
@@ -313,7 +313,7 @@ export default function StepReviewCheckout({
       </button>
 
       {/* Support link */}
-      <p className="text-center text-sm text-gray-500 dark:text-gray-400">
+      <p className="text-center text-sm text-gray-700 dark:text-gray-300">
         Questions before purchasing?{" "}
         <a
           href="mailto:info@aicompliancedocuments.com"

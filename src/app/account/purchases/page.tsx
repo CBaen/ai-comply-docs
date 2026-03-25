@@ -104,7 +104,7 @@ export default async function PurchasesPage() {
               <h2 className="text-lg font-bold text-gray-900 mb-2 font-display">
                 No purchases yet
               </h2>
-              <p className="text-gray-500 text-sm mb-6 max-w-xs mx-auto">
+              <p className="text-gray-700 text-sm mb-6 max-w-xs mx-auto">
                 Browse our compliance templates to get started.
               </p>
               <Link
@@ -130,10 +130,10 @@ export default async function PurchasesPage() {
                         {productName}
                       </h2>
                       <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1.5">
-                        <span className="text-xs text-gray-500">
+                        <span className="text-xs text-gray-600">
                           Purchased {formatDate(purchase.created_at)}
                         </span>
-                        <span className="text-xs text-gray-500">
+                        <span className="text-xs text-gray-600">
                           {formatAmount(purchase.amount_paid)}
                         </span>
                       </div>

@@ -182,7 +182,7 @@ export default function ProductCarousel({ products }: Props) {
               className={`h-1.5 sm:h-2 rounded-full transition-all pointer-events-none ${
                 i === current
                   ? "bg-white w-5 sm:w-6"
-                  : "w-1.5 sm:w-2 bg-white/30 hover:bg-white/50"
+                  : "w-1.5 sm:w-2 bg-white/50 hover:bg-white/70"
               }`}
             />
           </button>
@@ -190,7 +190,7 @@ export default function ProductCarousel({ products }: Props) {
         <button
           onClick={() => setPaused((p) => !p)}
           aria-label={paused ? "Play carousel" : "Pause carousel"}
-          className="min-w-[44px] min-h-[44px] flex items-center justify-center text-white/60 hover:text-white transition"
+          className="min-w-[44px] min-h-[44px] flex items-center justify-center text-white/80 hover:text-white transition"
         >
           {paused ? (
             <svg aria-hidden="true" className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

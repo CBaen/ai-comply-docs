@@ -528,7 +528,7 @@ export default async function RegulationPage({
                               View &amp; Purchase &mdash; ${addon.price}
                             </a>
                           ) : (
-                            <p className="text-xs text-gray-500">
+                            <p className="text-xs text-gray-600">
                               Want to add this to your order?{" "}
                               <a
                                 href="mailto:info@aicompliancedocuments.com"
