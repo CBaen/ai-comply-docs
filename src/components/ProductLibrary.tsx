@@ -351,7 +351,7 @@ export default function ProductLibrary({
       </div>
 
       {filtered.length === 0 && (
-        <p className="text-center text-gray-500 py-12">
+        <p className="text-center text-gray-700 py-12">
           {searchTerm.trim()
             ? `No products match "${searchTerm}".`
             : "No products match this filter."}

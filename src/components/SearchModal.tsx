@@ -298,7 +298,7 @@ export default function SearchModal() {
                   {allFaq.length > 0 && (
                     <Command.Group
                       heading={
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-700 px-2">
                           FAQ ({allFaq.length})
                         </span>
                       }
@@ -317,7 +317,7 @@ export default function SearchModal() {
                       <Command.Group
                         key={type}
                         heading={
-                          <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 px-2">
+                          <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-700 px-2">
                             {TYPE_PILL[type]} ({grouped[type].length})
                           </span>
                         }
@@ -332,10 +332,10 @@ export default function SearchModal() {
               {/* No results */}
               {query.trim() && loaded && results.length === 0 && (
                 <Command.Empty className="px-4 py-8 text-center">
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-700">
                     No results for &ldquo;{query}&rdquo;
                   </p>
-                  <p className="text-xs text-gray-400 mt-1">
+                  <p className="text-xs text-gray-600 mt-1">
                     Try searching by state name, law, or topic
                   </p>
                 </Command.Empty>
@@ -343,7 +343,7 @@ export default function SearchModal() {
             </Command.List>
 
             {/* Footer */}
-            <div className="border-t border-gray-100 px-4 py-2 flex items-center gap-3 text-[11px] text-gray-500">
+            <div className="border-t border-gray-100 px-4 py-2 flex items-center gap-3 text-[11px] text-gray-700">
               <span className="flex items-center gap-1">
                 <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-200 rounded text-[10px]">↑↓</kbd>
                 navigate

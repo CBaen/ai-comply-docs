@@ -114,7 +114,7 @@ export default function StepAISystems({
                 updateAISystem(idx, "description", e.target.value)
               }
               rows={3}
-              placeholder="e.g., Screens resumes and ranks candidates..."
+              placeholder="e.g., Analyzes data and generates recommendations..."
               className="w-full border border-gray-300 dark:border-slate-600 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"
             />
           </div>
