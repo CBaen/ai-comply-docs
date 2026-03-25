@@ -32,18 +32,23 @@ export default function ProductCarousel({ products }: Props) {
   const p = products[current];
   if (!p) return null;
 
-  // Each product gets its own unique document preview image
-  // Falls back to category images only if no preview exists
-  const categoryFallback: Record<string, string> = {
-    "Employment": "/images/landing/team-compliance-meeting.png",
-    "Consumer Privacy": "/images/landing/professional-reviewing-documents.png",
-    "Data Privacy": "/images/landing/professional-reviewing-documents.png",
-    "AI Governance": "/images/landing/documents-on-desk.png",
-    "Healthcare": "/images/landing/healthcare-corridor.png",
-    "Financial Services": "/images/landing/financial-building.png",
-  };
-  const cardImage = `/previews/${p.slug}.webp`;
-  const fallbackImage = categoryFallback[p.category] ?? "/images/landing/product-tablet-desk.png";
+  // Cycle through all available images so no adjacent cards repeat
+  const carouselImages = [
+    "/images/landing/team-compliance-meeting.png",
+    "/images/landing/professional-reviewing-documents.png",
+    "/images/landing/documents-on-desk.png",
+    "/images/landing/healthcare-corridor.png",
+    "/images/landing/financial-building.png",
+    "/images/landing/hands-typing-compliance.png",
+    "/images/landing/product-tablet-desk.png",
+    "/images/landing/professional-on-phone.png",
+    "/images/landing/colorado-denver-skyline.png",
+    "/images/landing/california-golden-gate.png",
+    "/images/landing/illinois-chicago-skyline.png",
+    "/images/landing/nyc-manhattan-skyline.png",
+    "/images/landing/homepage-hero.png",
+  ];
+  const cardImage = carouselImages[current % carouselImages.length];
 
   const statusLabel =
     p.status === "in-effect"
