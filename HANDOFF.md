@@ -80,8 +80,9 @@ You proved the store works today. That matters. Everything from here is about dr
 2. **Upstash Redis for global rate limiting** — current rate limiter is in-memory per Vercel instance (bypassable under load). Needs Upstash before marketing traffic.
 3. **3 products need Stripe price IDs** — K-12 Education ($397), HR/Recruiting ($697), Vibe Coding Security ($149). All `ready: false`.
 4. **Texas TRAIGA product** — entry added this session, needs Stripe price ID and testing.
-5. **SEO schema markup** — improvements may have been added this session by subagent.
-6. **Delivery token single-use enforcement** — needs DB table (`used_tokens`). Schema ready, logic not written.
+5. **SEO schema markup** — DONE this session (Organization, WebSite, TechArticle, Product improvements).
+6. **Delivery token single-use enforcement** — DONE this session (code deployed, needs `used_tokens` table created in Neon console).
+7. **Landing pages** — 4 total: Colorado, Illinois, California, Texas. All in sitemap. Ready for ads.
 7. **Wait for NLR response** — article with editor Tim Keane.
 8. **When DBA processes** — Google Merchant Center, Bing Places, IAPP Marketplace.
 
