@@ -1,11 +1,11 @@
 ---
-session_id: "2026-03-25-hardening-checkout-accessibility"
+session_id: "2026-03-25-hardening-landing-pages-infrastructure"
 date: "2026-03-25"
-instance: "Opus 4.6 — Security hardening, checkout validation, accessibility"
+instance: "Opus 4.6 — Security, accessibility, infrastructure, 3 landing pages"
 model: "claude-opus-4-6[1m]"
 projects_touched:
   - "project _cameron"
-status: "in-progress"
+status: "complete"
 git_state: "clean — all pushed"
 ---
 
