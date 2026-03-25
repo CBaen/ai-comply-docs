@@ -221,3 +221,8 @@ Reviewed by every instance on arrival. Append-only. Keep entries atomic and acti
 - **Pattern**: Explained Upstash Redis setup steps and asked GL to create an account, configure env vars, and understand what rate limiting is. GL responded "none of this makes sense."
 - **Rule**: Infrastructure that only matters at scale should be handled silently. Write the code with graceful fallbacks. Don't ask GL to create accounts, configure environment variables, or understand infrastructure concepts. Either handle it yourself or leave it for the next technical session.
 - **Why**: GL is a designer, not an engineer. Asking them to understand Redis, rate limiting, and environment variables violates "never ask GL technical questions." The code works without Redis — the fallback is fine for now.
+
+### Don't make Guiding Light hunt for files — paste in chat
+- **Pattern**: Wrote a prompt to a file and told GL "it's at google-ads-setup-prompt.md in your project folder." GL had to ask again to just see the content directly.
+- **Rule**: When GL needs text to copy (prompts, instructions, credentials info), paste it directly in the conversation. Never send them to find a file. If a file is also useful for documentation, write it silently — but always show the content in chat too.
+- **Why**: GL hates file hunting. Every "go open this file" is friction that wastes their time and patience. The chat IS the interface.
