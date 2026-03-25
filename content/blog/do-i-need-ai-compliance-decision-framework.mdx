@@ -1,0 +1,195 @@
+---
+title: "Do I Need AI Compliance? A Decision Framework for Every Business Using AI"
+slug: "do-i-need-ai-compliance-decision-framework"
+description: "If your business uses AI, compliance obligations may already apply to you — whether you built the tool or just bought it. This decision framework walks you through the questions that determine which laws apply and what you need to do."
+date: "2026-03-25"
+author: "AI Compliance Documents Team"
+tags: ["AI compliance", "do I need AI compliance", "AI regulation guide", "compliance checklist", "AI risk assessment"]
+published: true
+image: "/blog/blog-hero-governance.png"
+summary: "Most businesses using AI don't know whether compliance laws apply to them — and the ones that do often assume it's only for companies that built the AI, not companies that bought it. This decision framework walks through the four questions that determine your compliance exposure: Do you use AI? Does it affect people? Where are those people? Which laws apply? It covers employment AI, consumer-facing AI, healthcare AI, financial AI, and explains why even voluntary frameworks like NIST AI RMF matter for your legal defense."
+cardSummary: "Not sure if AI compliance applies to your business? Walk through four questions — and know exactly which laws apply, which documents you need, and where to start."
+deepDive:
+  title: "Why 'The Vendor Is Compliant' Doesn't Mean You Are"
+  content: "Imagine you hire a contractor to build a deck. The contractor follows all the building codes. The materials meet every safety standard. But you never pulled a permit. When the city inspector comes, the contractor's compliance doesn't protect you — you're the property owner, and the permit obligation was yours.\n\nThat's exactly how AI compliance works. Every major AI law passed in the US — Colorado SB 24-205, Texas HB 149, Illinois HB 3773, NYC Local Law 144 — distinguishes between the companies that build AI systems and the companies that deploy them. The law calls them 'developers' and 'deployers.' And in almost every case, the deployer has independent legal obligations that the developer's compliance cannot satisfy.\n\nColorado's law makes this explicit. A vendor who sells you an AI system has its own compliance duties. But you, as the deployer, have separate duties: complete an impact assessment for each high-risk system you use, implement a risk management program, provide consumer notices, and maintain an appeal process. Your vendor cannot do those things for you. Your vendor's documentation can help you do them — but the obligation is yours.\n\nIllinois takes a civil rights enforcement approach, which makes the point even more starkly. If your AI hiring tool produces discriminatory outcomes — screens out qualified candidates from protected groups at a higher rate — that's a civil rights violation committed by the employer, not the vendor. You cannot point to the vendor's terms of service as a defense. The Illinois Human Rights Act asks whether the tool had a discriminatory effect in your hiring process. Your process, not the vendor's product.\n\nNYC Local Law 144 places the annual bias audit obligation on the employer directly. The employer must ensure the audit was conducted within the prior year. The employer must post the results on their website. The employer must provide notice to candidates and employees. None of these steps involve the vendor at all.\n\nThe practical takeaway: when you evaluate whether you need AI compliance, the question isn't whether your vendor is compliant. The question is whether you are."
+microFacts:
+  - fact: "Colorado SB 24-205 explicitly separates 'developers' (who build AI systems) and 'deployers' (who use them), placing independent legal duties on both — a business using a third-party AI tool is a deployer with its own compliance obligations regardless of the vendor's compliance status."
+    source: "Colorado General Assembly — SB24-205"
+    sourceUrl: "https://leg.colorado.gov/bills/sb24-205"
+  - fact: "Illinois HB 3773 makes it a civil rights violation for an employer to use AI that 'has the effect of subjecting employees to discrimination' — liability belongs to the employer, not the vendor, and intent is not a defense."
+    source: "Illinois General Assembly (775 ILCS 5/2-102(L))"
+    sourceUrl: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64"
+  - fact: "Texas HB 149 (TRAIGA) sets the highest per-violation penalties in any enacted state AI law: up to $200,000 per uncurable violation and $40,000 per day for continuing violations after a cure period expires."
+    source: "Texas Legislature, HB 149 section 552.105(a)"
+    sourceUrl: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+  - fact: "California's ADMT and risk assessment regulations, approved by the California Privacy Protection Agency on September 22, 2025, took effect January 1, 2026 — meaning California risk assessment obligations are already active."
+    source: "California Privacy Protection Agency"
+    sourceUrl: "https://cppa.ca.gov/announcements/2025/20250923.html"
+externalReferences:
+  - title: "Colorado General Assembly — SB24-205: Consumer Protections for Artificial Intelligence"
+    url: "https://leg.colorado.gov/bills/sb24-205"
+  - title: "Colorado General Assembly — SB25B-004: Effective Date Extension to June 30, 2026"
+    url: "https://leg.colorado.gov/bills/sb25b-004"
+  - title: "Texas Legislature — HB 149 (TRAIGA), 89th Legislature"
+    url: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+  - title: "Illinois General Assembly — HB 3773 (775 ILCS 5/2-102)"
+    url: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64"
+  - title: "NYC Local Law 144 — Automated Employment Decision Tools"
+    url: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page"
+  - title: "California Privacy Protection Agency — ADMT and Risk Assessment Regulations (September 23, 2025)"
+    url: "https://cppa.ca.gov/announcements/2025/20250923.html"
+  - title: "NIST AI Risk Management Framework 1.0"
+    url: "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
+---
+
+If you use AI in your business, you probably need compliance documentation. Here's how to know for sure.
+
+That sentence makes a lot of people uncomfortable. "We just use a chatbot for customer service." "Our hiring software came with AI built in — we didn't really choose that." "We're a small company. Surely these laws are for the big players."
+
+These are completely understandable reactions. But they're also the assumptions that the latest wave of AI legislation was specifically written to challenge. The laws that have passed in Colorado, Texas, Illinois, and New York City — and the regulations that took effect in California in January 2026 — are not aimed at AI developers. They are aimed at every business that uses AI to make decisions affecting people. That includes businesses that bought their AI tools off the shelf, from a vendor, or baked into software they already use.
+
+This post is a decision framework. Walk through it honestly, and you'll know whether compliance applies to you — and if it does, where to start.
+
+---
+
+## Step 1: Do you use AI?
+
+This sounds like an easy question. It isn't.
+
+The legal definitions of "artificial intelligence" in state laws are deliberately broad. Illinois defines it as "a machine-based system that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions." ([775 ILCS 5/2-102(N)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266)) Colorado and Texas both cover systems that make or substantially factor into "consequential decisions" about people.
+
+What does that mean in practice? It means the question isn't whether your software has "AI" in the product name. It means asking: does any system your business uses take in data about a person and generate a score, ranking, recommendation, classification, or automated decision?
+
+Here are the categories to check:
+
+**Hiring and HR software.** Does your applicant tracking system rank or filter candidates? Does your performance management platform score employees? Does any tool generate a "fit score," flag attendance patterns, or recommend who gets promoted? If it processes data about a person and produces an output that affects an employment decision, it almost certainly qualifies under at least one enacted state AI law.
+
+**Customer-facing tools.** Do you use a chatbot that routes or resolves customer inquiries? A pricing engine that adjusts offers based on customer data? A recommendation system that surfaces different products to different users? Any system that makes automated decisions affecting individual customers is in scope for consumer-facing AI laws.
+
+**Operational tools with people data.** Scheduling algorithms. Credit or risk scoring. Fraud detection. Insurance pricing models. These tools often don't advertise themselves as "AI," but they process data about people and generate outputs that affect those people's access to services, pricing, or opportunities.
+
+If any of these apply, you use AI in the legal sense. Move to Step 2.
+
+---
+
+## Step 2: Does it affect people in ways that matter to the law?
+
+Not all AI use triggers compliance obligations. The laws that have been enacted focus on AI that affects people's access to meaningful things: jobs, housing, credit, healthcare, education, insurance, government services, legal services.
+
+Colorado's SB 24-205 uses the phrase "consequential decision" — a decision that materially affects a consumer's access to, or the cost of, those categories. ([SB24-205](https://leg.colorado.gov/bills/sb24-205)) Texas HB 149 uses substantially the same definition. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+If your AI is helping you write internal memos, generate image captions, or analyze your own sales data with no output that affects individual people's access to anything — you're likely outside the scope of these laws.
+
+But if your AI is involved in:
+
+- Deciding who gets hired, promoted, or fired
+- Determining what credit terms or loan decisions a person receives
+- Affecting what healthcare services or insurance coverage someone can access
+- Influencing who gets housing or at what price
+- Making or substantially contributing to any decision in those categories
+
+...then you are operating AI in a way that triggers compliance obligations in multiple states. Move to Step 3.
+
+---
+
+## Step 3: Where are the people your AI affects?
+
+AI compliance is state-by-state in the US right now. The laws that have been enacted apply based on where the affected people are located — not where your company is headquartered.
+
+This is the part that catches businesses off guard. You don't need an office in Illinois for Illinois's AI employment law to apply to you. You need to have employees or applicants in Illinois. You don't need to be incorporated in Colorado for Colorado's AI law to cover you. You need to be making consequential decisions about Colorado consumers.
+
+Here is where the major enacted laws stand as of March 2026:
+
+**Illinois** — HB 3773 amended the Illinois Human Rights Act to prohibit employers from using AI in employment decisions in ways that produce discriminatory outcomes. In effect since January 1, 2026. Applies to any employer with employees or applicants in Illinois. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266))
+
+**Texas** — HB 149, the Texas Responsible AI Governance Act, covers developers and deployers of high-risk AI systems. In effect since January 1, 2026. Applies to businesses making consequential decisions about Texas residents. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+**Colorado** — SB 24-205 covers deployers of high-risk AI systems, with an effective date of June 30, 2026 after the legislature extended the original deadline. Applies to businesses making consequential decisions about Colorado consumers. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+**New York City** — Local Law 144 requires any employer or employment agency using an automated employment decision tool to conduct an annual bias audit and post results publicly. Applies to any employer hiring for roles in NYC. ([NYC DCWP](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page))
+
+**California** — The California Privacy Protection Agency finalized ADMT and risk assessment regulations on September 22, 2025. These took effect January 1, 2026 and apply to businesses processing personal information for automated decision-making. ([CalPrivacy](https://cppa.ca.gov/announcements/2025/20250923.html))
+
+If any of your AI-affected users, employees, or customers are in these states, the applicable laws apply to you.
+
+---
+
+## Step 4: Which type of AI do you use — and what does that trigger?
+
+Once you know you're in scope, the specific obligations depend on what your AI is doing. Here's how the major use categories break down.
+
+### Employment and hiring AI
+
+This is the most active area of AI law enforcement right now. If you use AI tools in any part of your hiring, performance management, promotion, scheduling, or termination process, you are operating in a regulated space in multiple jurisdictions simultaneously.
+
+The Illinois Human Rights Act makes it a civil rights violation to use AI that has the effect of discriminating against employees based on protected characteristics — regardless of intent. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266)) NYC's Local Law 144 requires an annual independent bias audit and public posting of results for any automated employment decision tool. Colorado and Texas both cover AI used in employment decisions as a subcategory of their broader high-risk AI laws.
+
+The documents you need in this category: employee and applicant notices that AI is being used, a record of how your AI tools work and what data they use, and documentation that you have evaluated your tools for potential discriminatory outcomes. Our [Multi-State Employer AI Disclosure Kit](/products/multi-state-employer-ai-disclosure) covers the notice and disclosure requirements across Illinois, Colorado, and NYC. Our [AI Bias Audit Report Template](/products/ai-bias-audit-template) covers the documentation needed to demonstrate non-discrimination.
+
+For a deeper look at employment AI specifically, read our post on [why your hiring software probably counts as AI under these laws](/blog/hiring-software-uses-ai-employment-law-compliance).
+
+### Consumer-facing AI
+
+If your business uses AI that interacts with or makes decisions about individual customers — chatbots, recommendation engines, pricing algorithms, fraud scoring — California's ADMT regulations and the Colorado and Texas consumer protection frameworks apply.
+
+These laws require you to: notify consumers when AI is being used in significant decisions, provide a way for them to request human review or appeal an automated decision, and maintain a documented risk assessment of how the AI system could harm the people it affects.
+
+California requires businesses to complete a risk assessment for each processing activity that involves ADMT and presents significant risk to consumers' privacy. ([CalPrivacy regulations](https://cppa.ca.gov/regulations/ccpa_updates.html)) Colorado requires an impact assessment for each high-risk AI system before deployment. ([SB24-205](https://leg.colorado.gov/bills/sb24-205)) Our [California CCPA ADMT compliance package](/products/california-ccpa-admt) covers the risk assessment and consumer rights documentation California requires.
+
+### Healthcare AI
+
+Healthcare AI exists at the intersection of multiple regulatory frameworks. HIPAA has always applied to health data. But AI adds new layers: systems that assist clinical decision-making, that process protected health information to generate recommendations, or that affect patient access to services all carry compliance obligations that go beyond traditional HIPAA requirements.
+
+Colorado's consequential decision categories explicitly include healthcare. Texas's TRAIGA covers AI making consequential decisions in healthcare. Any healthcare AI that processes protected health information while making or influencing decisions about patient care or access sits at the intersection of HIPAA and these newer state AI laws simultaneously. Our [Healthcare AI Compliance Package](/products/healthcare-ai-compliance) addresses the combined obligations.
+
+### Financial services AI
+
+Credit scoring models, loan approval systems, fraud detection algorithms, insurance pricing tools — these represent the original high-stakes AI applications, and the new state AI laws treat them as high-risk by definition.
+
+Colorado's "consequential decision" definition specifically includes financial services. Texas's TRAIGA mirrors that category. If your business uses AI in credit, lending, insurance, or financial services decisions affecting people in these states, you are a deployer of a high-risk AI system under both Colorado and Texas law — and both laws are now in effect or effective within the quarter. Our [Financial Services AI Compliance Package](/products/financial-services-ai) is built for these obligations.
+
+---
+
+## What about "voluntary" frameworks? Do they matter?
+
+Yes — and this is one of the most important points for legal defense.
+
+The NIST AI Risk Management Framework is a voluntary document. No law requires you to follow it. But Colorado SB 24-205 explicitly provides an affirmative defense for businesses that comply with a nationally recognized AI risk management framework — and the NIST AI RMF is the primary framework that fits that description. ([SB24-205](https://leg.colorado.gov/bills/sb24-205), [NIST AI RMF](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)) Texas HB 149 references NIST-aligned risk management practices as the applicable compliance benchmark. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+
+What this means practically: if something goes wrong with your AI system — a discrimination claim, a regulatory inquiry, a consumer complaint — a documented governance program built around the NIST AI RMF shifts the burden. Instead of being asked to prove your AI didn't cause harm, you can demonstrate that you implemented recognized risk management practices, assessed your systems before deployment, and maintained oversight. That is a substantively different legal position than having no documentation at all.
+
+The EEOC's AI hiring guidance was removed from the federal website in early 2025, creating a gap in federal enforcement guidance. But the underlying federal anti-discrimination laws — Title VII, the ADA, the ADEA — still apply to AI hiring tools. ([Title VII, 42 U.S.C. § 2000e-2](https://www.law.cornell.edu/uscode/text/42/2000e-2)) Following a framework like NIST AI RMF creates a documented record of due diligence that matters whether the enforcement comes from a state agency, a federal agency, or a private plaintiff.
+
+Our [AI Governance Framework](/products/ai-governance-framework) is built around the NIST AI RMF's four functions — Govern, Map, Measure, and Manage — and produces the specific policies and documentation that satisfy the core obligations of Colorado SB 24-205 and Texas HB 149, while providing the infrastructure that Illinois HB 3773 compliance rests on.
+
+---
+
+## The one document every business needs first
+
+Before any of the specific compliance work can happen, you need to know what AI systems your business actually uses. This is called an AI system inventory, and it is the foundation everything else builds on.
+
+You cannot assess risk on systems you haven't identified. You cannot provide legally required notices about AI use you don't know about. You cannot complete an impact assessment on a system that isn't documented. Every compliance obligation under every enacted state AI law traces back to a maintained record of what systems you have and what they do.
+
+Our [AI System Registry](/products/ai-system-registry) provides the structure for this step.
+
+---
+
+## Still not sure? Take the free assessment.
+
+If you've walked through this framework and you're still uncertain which laws apply to your specific situation — or you want a faster path to an answer — the [free AI compliance assessment at /do-i-need-ai-compliance](/do-i-need-ai-compliance) asks five questions and maps your answers to the specific laws and documentation packages that apply to you. It takes about two minutes and covers 14+ state laws and federal requirements. No email required.
+
+The goal of this post, and that assessment, is the same: help you understand your actual situation clearly, without alarm and without oversimplification. Most businesses that use AI do have compliance obligations now. Most of those obligations are manageable. The ones who struggle are the ones who wait until there's a complaint to find out what the requirements were.
+
+---
+
+**Sources** — Every legal fact in this article was verified against enacted statute text and agency publications at these URLs:
+
+- [Colorado General Assembly — SB24-205 Consumer Protections for Artificial Intelligence](https://leg.colorado.gov/bills/sb24-205) — Deployer obligations, consequential decision definition, affirmative defense, effective date.
+- [Colorado General Assembly — SB25B-004 Effective Date Extension](https://leg.colorado.gov/bills/sb25b-004) — Extends SB 24-205 effective date to June 30, 2026.
+- [Texas Legislature — HB 149 (TRAIGA), 89th Legislature](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149) — Deployer obligations, penalty amounts under § 552.105(a), effective date January 1, 2026.
+- [Illinois General Assembly — HB 3773 (775 ILCS 5/2-102)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64) — Employment AI anti-discrimination provision, effective January 1, 2026.
+- [NYC Department of Consumer and Worker Protection — Local Law 144](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page) — Bias audit requirements, employer obligations, annual renewal.
+- [California Privacy Protection Agency — ADMT and Risk Assessment Regulations (September 23, 2025)](https://cppa.ca.gov/announcements/2025/20250923.html) — Regulations finalized, effective January 1, 2026.
+- [CCPA Updates — Risk Assessments and ADMT Regulations](https://cppa.ca.gov/regulations/ccpa_updates.html) — Risk assessment scope and consumer rights.
+- [NIST AI Risk Management Framework — Core Functions](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) — Govern, Map, Measure, Manage functions.
+- [Title VII of the Civil Rights Act — 42 U.S.C. § 2000e-2](https://www.law.cornell.edu/uscode/text/42/2000e-2) — Federal anti-discrimination law applicable to AI hiring tools.
