@@ -230,7 +230,7 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
                 ? "bg-blue-700 text-white"
                 : i + 1 === current
                 ? "bg-blue-700 text-white ring-2 ring-blue-300 ring-offset-2"
-                : "bg-gray-200 text-gray-500"
+                : "bg-gray-200 text-gray-700"
             }`}
           >
             {i + 1 < current ? (
