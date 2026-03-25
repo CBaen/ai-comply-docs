@@ -845,6 +845,16 @@ export default function PostPaymentHandler({
           )}
         </div>
 
+        {/* Done / Close button */}
+        <div className="border-t border-gray-200 px-6 py-4 text-center">
+          <button
+            onClick={() => setStatus("idle")}
+            className="text-gray-500 hover:text-gray-700 text-sm font-medium transition"
+          >
+            Close &amp; return to product page
+          </button>
+        </div>
+
           </div>
         </div>
       </div>
