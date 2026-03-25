@@ -243,7 +243,7 @@ export default async function RegulationPage({
         {/* Hero */}
         <div className="hero-bg text-white py-10 md:py-20 relative overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/images/landing/professional-reviewing-documents.png" alt="" className="w-full h-full object-cover opacity-15" />
+            <img src="/images/landing/professional-reviewing-documents.png" alt="" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/90 to-slate-900" />
           </div>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">

@@ -152,7 +152,7 @@ export default function FAQPage() {
         {/* Hero */}
         <header className="bg-gray-900 text-white py-12 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/images/landing/documents-on-desk.png" alt="" className="w-full h-full object-cover opacity-15" />
+            <img src="/images/landing/documents-on-desk.png" alt="" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/90 to-gray-900" />
           </div>
           <div className="max-w-3xl mx-auto px-6 sm:px-8 relative z-10">

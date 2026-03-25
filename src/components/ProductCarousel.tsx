@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Regulation } from "@/data/regulations";
 
@@ -31,6 +32,16 @@ export default function ProductCarousel({ products }: Props) {
 
   const p = products[current];
   if (!p) return null;
+
+  const categoryImageMap: Record<string, string> = {
+    "Employment": "/images/landing/team-compliance-meeting.png",
+    "Consumer Privacy": "/images/landing/professional-reviewing-documents.png",
+    "Data Privacy": "/images/landing/professional-reviewing-documents.png",
+    "AI Governance": "/images/landing/documents-on-desk.png",
+    "Healthcare": "/images/landing/healthcare-corridor.png",
+    "Financial": "/images/landing/financial-building.png",
+  };
+  const cardImage = categoryImageMap[p.category] ?? "/images/landing/product-tablet-desk.png";
 
   const statusLabel =
     p.status === "in-effect"
@@ -65,6 +76,18 @@ export default function ProductCarousel({ products }: Props) {
         aria-atomic="true"
         className="max-w-4xl mx-auto px-12 sm:px-6 md:px-16 py-10 sm:py-16 md:py-24 text-center flex flex-col justify-center"
       >
+        {/* Category image */}
+        <div className="mb-5 sm:mb-6 overflow-hidden rounded-xl">
+          <Image
+            src={cardImage}
+            alt=""
+            aria-hidden="true"
+            width={800}
+            height={128}
+            className="w-full h-32 object-cover rounded-xl"
+          />
+        </div>
+
         {/* Breadcrumb */}
         <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400 mb-3 sm:mb-4">
           <Link href="/products" className="hover:text-blue-300 transition">

@@ -63,7 +63,7 @@ export default function ContactPage() {
           <img
             src="/images/landing/professional-on-phone.png"
             alt=""
-            className="absolute inset-0 w-full h-full object-cover opacity-15"
+            className="absolute inset-0 w-full h-full object-cover opacity-30"
           />
           <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 text-white">
             <h1 className="text-3xl sm:text-4xl font-bold font-display mb-3">

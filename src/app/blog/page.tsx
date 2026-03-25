@@ -46,7 +46,7 @@ export default function BlogPage() {
         {/* Hero */}
         <header className="hero-bg text-white py-10 md:py-20 relative overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/images/landing/hands-typing-compliance.png" alt="" className="w-full h-full object-cover opacity-15" />
+            <img src="/images/landing/hands-typing-compliance.png" alt="" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/90 to-slate-900" />
           </div>
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">

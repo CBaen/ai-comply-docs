@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import ProductLibrary from "@/components/ProductLibrary";
 import ProductCarousel from "@/components/ProductCarousel";
 import { regulations } from "@/data/regulations";
 
@@ -265,7 +264,7 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center mt-8 md:mt-10">
-              <a href="#products" className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md">
+              <a href="/products" className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-md">
                 Browse Products
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
               </a>
@@ -407,25 +406,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Product Library */}
-        <section id="products" className="py-10 md:py-16 bg-slate-50">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold font-display mb-3 text-gray-900">
-                Compliance Document Library
-              </h2>
-              <p className="text-gray-700 text-base md:text-lg">
-                State-specific and universal AI compliance packages. Each includes customized documentation, instant download.
-              </p>
-            </div>
-            <ProductLibrary regulations={regulations.filter(r => r.ready)} />
-          </div>
-        </section>
-
-        <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
-          <img src="/images/landing/professional-reviewing-documents.png" alt="Professional reviewing compliance documents" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
-        </div>
-
         {/* FAQ Section */}
         <section id="faq" className="py-10 md:py-16 bg-white">
           <div className="max-w-3xl mx-auto px-4">
@@ -538,7 +518,7 @@ export default function Home() {
               AI regulations are in effect now. Get your compliance documents today for a fraction of what a law firm charges.
             </p>
             <a
-              href="#products"
+              href="/products"
               className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
             >
               Browse Products

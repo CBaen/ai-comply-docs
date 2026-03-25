@@ -175,7 +175,7 @@ export default function IllinoisAICompliancePage() {
             <img
               src="/images/landing/illinois-chicago-skyline.png"
               alt=""
-              className="w-full h-full object-cover opacity-15"
+              className="w-full h-full object-cover opacity-30"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/90 to-gray-950" />
           </div>
