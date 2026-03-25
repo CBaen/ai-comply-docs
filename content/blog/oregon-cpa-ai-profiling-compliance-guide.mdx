@@ -7,8 +7,8 @@ author: "AI Compliance Documents Team"
 tags: ["Oregon", "CPA", "AI profiling", "data privacy", "consumer privacy"]
 published: false
 image: "/blog/blog-hero-oregon.png"
-summary: "Oregon's Consumer Privacy Act took effect July 1, 2024 and requires businesses that meet certain data thresholds to conduct documented data protection assessments when they use personal data for profiling, targeted advertising, or processing sensitive information. The law is enforced exclusively by the Oregon Attorney General with penalties up to $7,500 per violation, and a 30-day cure period that runs until January 1, 2026 — after which the AG has full enforcement discretion. Oregon also added a distinct protection not found in most other state laws: businesses must obtain consent before processing data of consumers aged 13 through 15 for targeted advertising or data sales."
-cardSummary: "Oregon's privacy law has been in effect since July 2024, requires data protection assessments for AI profiling, and includes a specific consent requirement for teen data not found in most other state laws. The 30-day cure period expires January 1, 2026."
+summary: "Oregon's Consumer Privacy Act took effect July 1, 2024 and requires businesses that meet certain data thresholds to conduct documented data protection assessments when they use personal data for profiling, targeted advertising, or processing sensitive information. The law is enforced exclusively by the Oregon Attorney General with penalties up to $7,500 per violation, and a 30-day cure period that pursuant to Oregon Laws 2025, c.417 effectively expired for most businesses on January 1, 2026 — after which the AG has full enforcement discretion. Oregon also added a distinct protection not found in most other state laws: businesses are flatly prohibited from processing personal data of consumers known to be under 16 years of age for targeted advertising or data sales under ORS § 646A.578."
+cardSummary: "Oregon's privacy law has been in effect since July 2024, requires data protection assessments for AI profiling, and flatly prohibits processing personal data of consumers under 16 for targeted advertising or data sales — a protection not found in most other state laws. The 30-day cure period effectively expired for most businesses on January 1, 2026 (Oregon Laws 2025, c.417)."
 deepDive:
   title: "What Does 'Profiling That Presents Risk of Harm' Actually Mean?"
   content: "Most state privacy laws don't require a data protection assessment for every use of personal data — only for profiling that 'presents a risk of harm to consumers.' That phrase does real legal work, and understanding it helps you figure out which of your AI systems actually trigger the assessment requirement.\n\nThink of it this way: imagine you run a grocery store and you track what customers buy. Using that data to stock more of what people want is one thing. But using it to predict which customers are likely to be in financial distress — and then offering them high-interest credit products — is something else entirely. The second use takes the same data and applies it in a way that could directly hurt people. That's the kind of processing the law is worried about.\n\nIn practice, profiling 'with risk of harm' tends to describe AI systems that make or influence decisions about people's access to things that matter: credit, insurance, jobs, housing, healthcare, education. It also covers profiling that could produce discriminatory outcomes — even unintentionally — based on where someone lives, what they look like, or who they are. And it extends to behavioral targeting that could be manipulative or that a reasonable person would find an intrusive invasion of their privacy.\n\nThe assessment requirement exists precisely because these risks are often invisible to the person being profiled. They never see the score. They never know an algorithm shaped the offer they received or the application that got rejected. The law's answer is to require businesses to think carefully — and document that thinking — before the processing happens, not after something goes wrong.\n\nFor Oregon businesses, this means asking a concrete question about each AI or data system you operate: could this system, if it produced a wrong or biased output, cause real harm to the person it processed? If the honest answer is yes, you need an assessment."
@@ -22,8 +22,8 @@ microFacts:
   - fact: "Oregon's CPA includes a 30-day cure period under ORS § 646A.589(2) that runs until January 1, 2026. After that date, the AG has discretion on whether to offer a cure opportunity before pursuing enforcement."
     source: "Oregon Legislative Assembly — ORS § 646A.589(2)"
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html"
-  - fact: "Oregon's law includes a distinct protection for consumers aged 13 through 15: businesses must obtain consent before processing their personal data for targeted advertising or data sales — a requirement not present in many other state privacy laws."
-    source: "Oregon Legislative Assembly — ORS Chapter 646A"
+  - fact: "Oregon's law includes a distinct protection under ORS § 646A.578: businesses are flatly prohibited from processing personal data of consumers they know to be under 16 years of age for targeted advertising or data sales — this is a prohibition, not a consent requirement, and it applies to consumers under 16, not just those aged 13 through 15."
+    source: "Oregon Legislative Assembly — ORS § 646A.578"
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html"
 externalReferences:
   - title: "Oregon Consumer Privacy Act — Full Statute Text (ORS §§ 646A.570–646A.589)"
@@ -36,7 +36,7 @@ If your business uses personal data from Oregon residents for targeted advertisi
 
 It's called the Oregon Consumer Privacy Act, codified at [ORS §§ 646A.570 through 646A.589](https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html). It has been in effect since July 1, 2024. And it includes a requirement that many businesses haven't addressed yet: documented data protection assessments for profiling activities that present a risk of harm to consumers.
 
-Oregon's law follows a framework that's become familiar across state privacy legislation — assessment requirements, consumer opt-out rights, AG-only enforcement — but it adds at least one notable requirement that distinguishes it from most of its peers: a specific consent obligation for processing data of consumers aged 13 through 15.
+Oregon's law follows a framework that's become familiar across state privacy legislation — assessment requirements, consumer opt-out rights, AG-only enforcement — but it adds at least one notable requirement that distinguishes it from most of its peers: a flat prohibition on processing personal data of consumers known to be under 16 years of age for targeted advertising or data sales, under ORS § 646A.578.
 
 Here's what the law requires, who it applies to, and what you need to have documented.
 
@@ -73,13 +73,15 @@ Sensitive data under the law includes categories like racial or ethnic origin, r
 
 If your business processes Oregon consumer data in any of these categories, you need a documented assessment for each qualifying activity.
 
-## Oregon's Distinct Requirement: Children's Data Consent
+## Oregon's Distinct Requirement: Prohibition on Processing Data of Consumers Under 16
 
-Oregon's law includes a protection for younger consumers that goes beyond what most other state privacy laws require. Before processing the personal data of a consumer known to be between 13 and 15 years of age for purposes of targeted advertising or data sales, a business must obtain that consumer's consent. ([ORS §§ 646A.570–646A.589](https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html))
+Oregon's law includes a protection for younger consumers that goes beyond what most other state privacy laws require. Under ORS § 646A.578, a business is prohibited from processing the personal data of a consumer it knows to be under 16 years of age for purposes of targeted advertising or data sales. This is a flat prohibition — not a consent-based framework. If you know a consumer is under 16, targeted advertising and data sales are not permitted regardless of whether consent is sought or obtained. ([ORS § 646A.578](https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html))
 
-This matters for any business whose platform, app, or service reaches or targets teenagers. It's not a notice-and-opt-out model for this group — it's an opt-in requirement. If your product has teen users and you run targeted advertising or any form of data monetization, you need a consent mechanism in place for consumers in this age bracket.
+Note that the statute separately defines "child" as a consumer under 13, with additional protections for that group. The under-16 prohibition in ORS § 646A.578 is distinct and covers the broader category of consumers the business knows to be under 16.
 
-This requirement sits alongside the assessment requirements as a distinct obligation with its own compliance logic. A data protection assessment won't satisfy the consent requirement, and vice versa. Both apply where relevant.
+This matters for any business whose platform, app, or service reaches or targets minors. If your product has users under 16 and you run targeted advertising or any form of data monetization, you must ensure those consumers are excluded from those processing activities — not given an opportunity to consent to them.
+
+This obligation sits alongside the assessment requirements as a distinct compliance requirement. A data protection assessment won't satisfy the under-16 prohibition, and vice versa. Both apply where relevant.
 
 ## What a Data Protection Assessment Needs to Cover
 
@@ -111,7 +113,7 @@ If you're subject to multiple state laws, the [multi-state profiling assessment 
 
 If your business is in scope for the Oregon CPA and you haven't completed data protection assessments, here's the practical starting point.
 
-Make a list of every way you use Oregon consumer data that falls into one of the four triggering categories: targeted advertising, data sales, profiling with foreseeable risk of harm, and sensitive data processing. If you have teen users on your platform, add the consent question for the 13-through-15 age group to that list as a separate item.
+Make a list of every way you use Oregon consumer data that falls into one of the four triggering categories: targeted advertising, data sales, profiling with foreseeable risk of harm, and sensitive data processing. If you have users under 16 on your platform, add the under-16 prohibition under ORS § 646A.578 to that list as a separate compliance item — targeted advertising and data sales for that group are prohibited, not merely subject to consent requirements.
 
 For each activity you identify, write an assessment. Document what you're doing, who benefits, what the risks are to consumers, and what safeguards you have in place. The assessment is most useful — and most defensible — when it's honest rather than optimistic.
 
