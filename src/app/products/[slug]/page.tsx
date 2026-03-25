@@ -45,7 +45,11 @@ export async function generateMetadata({
       title: `${reg.name} — AI Compliance Documents`,
       description: reg.description,
       url: `https://aicompliancedocuments.com/products/${reg.slug}`,
-      images: [{ url: "https://aicompliancedocuments.com/opengraph-image", width: 1200, height: 630 }],
+      images: [
+        SLUGS_WITH_PREVIEWS.has(reg.slug)
+          ? { url: `https://aicompliancedocuments.com/previews/${reg.slug}.webp`, width: 1200, height: 630 }
+          : { url: "https://aicompliancedocuments.com/opengraph-image", width: 1200, height: 630 },
+      ],
     },
   };
 }

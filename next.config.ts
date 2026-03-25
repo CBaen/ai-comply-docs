@@ -24,6 +24,21 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
+          {
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://www.googletagmanager.com https://www.google-analytics.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https://aicompliancedocuments.com https://www.google-analytics.com",
+              "font-src 'self'",
+              "connect-src 'self' https://api.stripe.com https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
+              "frame-src https://js.stripe.com",
+              "frame-ancestors 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+            ].join("; "),
+          },
         ],
       },
     ];

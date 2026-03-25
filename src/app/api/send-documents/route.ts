@@ -279,6 +279,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Company name is required" }, { status: 400 });
   }
 
+  if (companyName.length > 200) {
+    return NextResponse.json({ error: "Company name too long (max 200 characters)" }, { status: 400 });
+  }
+
+  if (contactName && typeof contactName === "string" && contactName.length > 200) {
+    return NextResponse.json({ error: "Contact name too long (max 200 characters)" }, { status: 400 });
+  }
+
+  if (!regulation || typeof regulation !== "string" || !getRegulation(regulation)) {
+    return NextResponse.json({ error: "Invalid regulation" }, { status: 400 });
+  }
+
   try {
     // Validate and sanitize each document before attaching.
     const MAX_FILENAME_LENGTH = 200;
