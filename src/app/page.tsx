@@ -273,7 +273,7 @@ export default function Home() {
         </section>
 
         <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
-          <img src="/images/landing/hands-typing-compliance.png" alt="Professional typing compliance documentation on a laptop" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+          <img src="/previews/colorado-sb24-205.webp" alt="Colorado SB 24-205 compliance document preview" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
         </div>
 
         {/* Methodology Section — between How It Works and penalties */}
