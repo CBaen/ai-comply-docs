@@ -247,6 +247,28 @@ export async function POST(request: Request) {
     );
   }
 
+  // Database enforcement — durable single-use check across all instances/restarts
+  if (process.env.DATABASE_URL) {
+    try {
+      const pool = (await import("@/lib/db")).getPool();
+      const result = await pool.query(
+        `INSERT INTO used_tokens (token_key) VALUES ($1) ON CONFLICT DO NOTHING`,
+        [tokenKey]
+      );
+      if (result.rowCount === 0) {
+        return NextResponse.json(
+          { error: "Documents have already been sent for this purchase. Check your email." },
+          { status: 409 }
+        );
+      }
+      // Mark in-memory cache now that DB insert succeeded
+      usedTokens.add(tokenKey);
+    } catch (err) {
+      // Database check failed — fall through to in-memory only
+      console.error("Token DB check failed (non-blocking):", err);
+    }
+  }
+
   if (!emails || !Array.isArray(emails) || emails.length === 0) {
     return NextResponse.json(
       { error: "At least one email address is required" },
@@ -352,8 +374,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
     }
 
-    // Mark token as used after successful send
-    usedTokens.add(tokenKey);
+    // If DATABASE_URL is not set, mark token used in memory after successful send
+    if (!process.env.DATABASE_URL) {
+      usedTokens.add(tokenKey);
+    }
 
     return NextResponse.json({ sent: true });
   } catch (err) {
