@@ -33,15 +33,18 @@ export default function ProductCarousel({ products }: Props) {
   const p = products[current];
   if (!p) return null;
 
-  const categoryImageMap: Record<string, string> = {
+  // Each product gets its own unique document preview image
+  // Falls back to category images only if no preview exists
+  const categoryFallback: Record<string, string> = {
     "Employment": "/images/landing/team-compliance-meeting.png",
     "Consumer Privacy": "/images/landing/professional-reviewing-documents.png",
     "Data Privacy": "/images/landing/professional-reviewing-documents.png",
     "AI Governance": "/images/landing/documents-on-desk.png",
     "Healthcare": "/images/landing/healthcare-corridor.png",
-    "Financial": "/images/landing/financial-building.png",
+    "Financial Services": "/images/landing/financial-building.png",
   };
-  const cardImage = categoryImageMap[p.category] ?? "/images/landing/product-tablet-desk.png";
+  const cardImage = `/previews/${p.slug}.webp`;
+  const fallbackImage = categoryFallback[p.category] ?? "/images/landing/product-tablet-desk.png";
 
   const statusLabel =
     p.status === "in-effect"
