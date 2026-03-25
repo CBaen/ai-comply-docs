@@ -244,11 +244,11 @@ export default function FAQPage() {
                 </div>
               </details>
 
-              {/* Lifestyle image break */}
+              {/* Document preview break */}
               <div className="my-10 rounded-xl overflow-hidden">
                 <img
-                  src="/images/landing/professional-reviewing-documents.png"
-                  alt="Professional reviewing compliance documents at a desk"
+                  src="/previews/colorado-sb24-205.webp"
+                  alt="Colorado SB 24-205 compliance document preview"
                   className="w-full h-48 sm:h-56 object-cover"
                 />
               </div>

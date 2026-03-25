@@ -221,14 +221,6 @@ export default function ContactPage() {
         )}
         </div>
 
-        {/* Lifestyle image break */}
-        <div className="my-10 rounded-xl overflow-hidden max-w-2xl mx-auto px-4 sm:px-6">
-          <img
-            src="/images/landing/team-compliance-meeting.png"
-            alt="Team reviewing compliance documentation together"
-            className="w-full h-48 sm:h-56 object-cover rounded-xl"
-          />
-        </div>
 
       </main>
       <Footer />

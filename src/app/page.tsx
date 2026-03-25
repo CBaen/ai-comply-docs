@@ -237,6 +237,74 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Methodology — strongest trust signal, shown before How It Works */}
+        <section className="py-12 md:py-16 bg-blue-50 border-b border-blue-100">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="mb-8 md:mb-10">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                  </svg>
+                </div>
+                <h2 className="text-2xl md:text-4xl font-bold font-display text-gray-900">
+                  How We Build Our Templates
+                </h2>
+              </div>
+              <p className="text-gray-700 text-base md:text-lg max-w-2xl">
+                Every document starts with the actual enacted law — not summaries, not AI-generated overviews. We go to the official .gov source, read the statute, and build templates that cite the specific sections that apply to your business.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              <div className="flex flex-col gap-2 bg-white rounded-lg p-4 border border-blue-100 shadow-sm">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-9 h-9 bg-blue-100 border border-blue-200 rounded flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" /></svg>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wide text-blue-700 bg-blue-50 border border-blue-200 rounded px-2 py-0.5">.gov source</span>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Read the enacted statute</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Every template starts with the actual law text from official .gov sources — the primary document, not a summary</p>
+              </div>
+              <div className="flex flex-col gap-2 bg-white rounded-lg p-4 border border-blue-100 shadow-sm">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-9 h-9 bg-blue-100 border border-blue-200 rounded flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wide text-green-700 bg-green-50 border border-green-200 rounded px-2 py-0.5">verified</span>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Verify every citation</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Section numbers, penalty amounts, effective dates — all checked against primary sources</p>
+              </div>
+              <div className="flex flex-col gap-2 bg-white rounded-lg p-4 border border-amber-100 shadow-sm">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-9 h-9 bg-amber-50 border border-amber-200 rounded flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wide text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-0.5">transparent</span>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Flag what&apos;s pending</p>
+                <p className="text-gray-600 text-sm leading-relaxed">If implementing rules haven&apos;t been published yet, we say so explicitly — no false confidence</p>
+              </div>
+              <div className="flex flex-col gap-2 bg-white rounded-lg p-4 border border-slate-200 shadow-sm">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-9 h-9 bg-slate-100 border border-slate-200 rounded flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wide text-slate-600 bg-slate-100 border border-slate-200 rounded px-2 py-0.5">clear scope</span>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm">Templates, not legal opinions</p>
+                <p className="text-gray-600 text-sm leading-relaxed">We document what the law requires. Your attorney verifies it applies to you.</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <a href="/about" className="text-sm font-semibold text-blue-700 hover:underline">
+                Read more about our methodology &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* How It Works — comes BEFORE penalties so visitors understand the solution first */}
         <section id="how-it-works" className="py-10 md:py-16 bg-slate-50">
           <div className="max-w-5xl mx-auto px-4">
@@ -326,7 +394,7 @@ export default function Home() {
         </section>
 
         <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
-          <img src="/images/landing/documents-on-desk.png" alt="Compliance documents organized on a desk" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+          <img src="/previews/illinois-hb3773.webp" alt="Illinois HB 3773 compliance document preview" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
         </div>
 
         {/* Methodology Trust Statement */}
@@ -395,12 +463,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Lifestyle Image Strip */}
+        {/* Document Preview Strip */}
         <div className="py-8 md:py-10 bg-white">
           <div className="max-w-5xl mx-auto px-4">
             <img
-              src="/images/landing/team-compliance-meeting.png"
-              alt="Compliance team reviewing AI documentation"
+              src="/previews/eu-ai-act.webp"
+              alt="EU AI Act compliance document preview"
               className="w-full h-48 sm:h-56 object-cover rounded-xl"
             />
           </div>
@@ -505,7 +573,7 @@ export default function Home() {
         </section>
 
         <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
-          <img src="/images/landing/product-tablet-desk.png" alt="AI compliance product on a tablet at a desk" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+          <img src="/previews/california-ccpa-admt.webp" alt="California CCPA ADMT compliance document preview" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
         </div>
 
         {/* Final CTA */}
