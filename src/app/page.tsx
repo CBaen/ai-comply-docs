@@ -190,16 +190,12 @@ export default function Home() {
           <div className="relative z-10">
           <h1 className="sr-only">AI Compliance Documents — State AI Compliance Templates</h1>
           <ProductCarousel
-            products={regulations
-              .filter((r) => r.ready && r.tier === "state")
-              .sort((a, b) => b.price - a.price)
-              .slice(0, 8)
-              .concat(
-                regulations
-                  .filter((r) => r.ready && (r.tier === "international" || r.tier === "industry"))
-                  .sort((a, b) => b.price - a.price)
-                  .slice(0, 4)
-              )
+            products={[
+              "colorado-sb24-205",
+              "illinois-hb3773",
+              "california-ccpa-admt",
+              "multi-state-employer-ai-disclosure",
+            ].map((slug) => regulations.find((r) => r.slug === slug)!).filter(Boolean)
             }
           />
           </div>
