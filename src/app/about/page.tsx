@@ -134,9 +134,9 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Document preview */}
+          {/* Lifestyle image */}
           <div className="my-10 rounded-xl overflow-hidden">
-            <img src="/previews/colorado-sb24-205.webp" alt="Sample compliance document preview" className="w-full h-48 sm:h-56 object-cover" />
+            <img src="/images/landing/nyc-manhattan-skyline.png" alt="Manhattan skyline representing regulatory landscape" className="w-full h-48 sm:h-56 object-cover" />
           </div>
 
           {/* Methodology */}
@@ -225,7 +225,7 @@ export default function AboutPage() {
 
           {/* Lifestyle image break */}
           <div className="my-10 rounded-xl overflow-hidden">
-            <img src="/images/landing/professional-reviewing-documents.png" alt="Professional reviewing compliance documents" className="w-full h-48 sm:h-56 object-cover" />
+            <img src="/images/landing/homepage-hero.png" alt="Professional workspace with compliance materials" className="w-full h-48 sm:h-56 object-cover" />
           </div>
 
           {/* Products */}

@@ -499,7 +499,7 @@ export default function Home() {
         </section>
 
         <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
-          <img src="/previews/california-ccpa-admt.webp" alt="California CCPA ADMT compliance document preview" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+          <img src="/images/landing/healthcare-corridor.png" alt="Modern office corridor in a professional setting" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
         </div>
 
         {/* Final CTA */}
