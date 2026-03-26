@@ -389,12 +389,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Document Preview Strip */}
+        {/* Lifestyle image break */}
         <div className="py-8 md:py-10 bg-white">
           <div className="max-w-5xl mx-auto px-4">
             <img
-              src="/previews/eu-ai-act.webp"
-              alt="EU AI Act compliance document preview"
+              src="/images/landing/professional-reviewing-documents.png"
+              alt="Professional reviewing regulatory compliance materials"
               className="w-full h-48 sm:h-56 object-cover rounded-xl"
             />
           </div>
