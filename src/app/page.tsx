@@ -341,7 +341,7 @@ export default function Home() {
         </section>
 
         <div className="my-10 rounded-xl overflow-hidden max-w-5xl mx-auto px-4">
-          <img src="/previews/colorado-sb24-205.webp" alt="Colorado SB 24-205 compliance document preview" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
+          <img src="/images/landing/team-compliance-meeting.png" alt="Compliance team reviewing regulatory documentation" className="w-full h-48 sm:h-56 object-cover rounded-xl" />
         </div>
 
         {/* Pain Section — after How It Works so penalties hit harder */}
