@@ -18,7 +18,7 @@ microFacts:
     sourceUrl: "https://leg.colorado.gov/bills/sb24-205"
   - fact: "Illinois HB 3773 makes it a civil rights violation for an employer to use AI that 'has the effect of subjecting employees to discrimination' — liability belongs to the employer, not the vendor, and intent is not a defense."
     source: "Illinois General Assembly (775 ILCS 5/2-102(L))"
-    sourceUrl: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64"
+    sourceUrl: "https://www.ilga.gov/legislation/publicacts/fulltext.asp?Name=103-0804"
   - fact: "Texas HB 149 (TRAIGA) sets the highest per-violation penalties in any enacted state AI law: up to $200,000 per uncurable violation and $40,000 per day for continuing violations after a cure period expires."
     source: "Texas Legislature, HB 149 section 552.105(a)"
     sourceUrl: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
@@ -33,7 +33,7 @@ externalReferences:
   - title: "Texas Legislature — HB 149 (TRAIGA), 89th Legislature"
     url: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
   - title: "Illinois General Assembly — HB 3773 (775 ILCS 5/2-102)"
-    url: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64"
+    url: "https://www.ilga.gov/legislation/publicacts/fulltext.asp?Name=103-0804"
   - title: "NYC Local Law 144 — Automated Employment Decision Tools"
     url: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page"
   - title: "California Privacy Protection Agency — ADMT and Risk Assessment Regulations (September 23, 2025)"
@@ -56,7 +56,7 @@ This post is a decision framework. Walk through it honestly, and you'll know whe
 
 This sounds like an easy question. It isn't.
 
-The legal definitions of "artificial intelligence" in state laws are deliberately broad. Illinois defines it as "a machine-based system that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions." ([775 ILCS 5/2-102(N)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266)) Colorado and Texas both cover systems that make or substantially factor into "consequential decisions" about people.
+The legal definitions of "artificial intelligence" in state laws are deliberately broad. Illinois defines it as "a machine-based system that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions." ([775 ILCS 5/2-102(N)](https://www.ilga.gov/legislation/publicacts/fulltext.asp?Name=103-0804)) Colorado and Texas both cover systems that make or substantially factor into "consequential decisions" about people.
 
 What does that mean in practice? It means the question isn't whether your software has "AI" in the product name. It means asking: does any system your business uses take in data about a person and generate a score, ranking, recommendation, classification, or automated decision?
 
@@ -100,9 +100,9 @@ This is the part that catches businesses off guard. You don't need an office in 
 
 Here is where the major enacted laws stand as of March 2026:
 
-**Illinois** — HB 3773 amended the Illinois Human Rights Act to prohibit employers from using AI in employment decisions in ways that produce discriminatory outcomes. In effect since January 1, 2026. Applies to any employer with employees or applicants in Illinois. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266))
+**Illinois** — HB 3773 amended the Illinois Human Rights Act to prohibit employers from using AI in employment decisions in ways that produce discriminatory outcomes. In effect since January 1, 2026. Applies to any employer with employees or applicants in Illinois. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/publicacts/fulltext.asp?Name=103-0804))
 
-**Texas** — HB 149, the Texas Responsible AI Governance Act, covers developers and deployers of high-risk AI systems. In effect since January 1, 2026. Applies to businesses making consequential decisions about Texas residents. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+**Texas** — HB 149, the Texas Responsible AI Governance Act, covers developers and deployers of high-risk AI systems. In effect since January 1, 2026. Applies to businesses making consequential decisions about Texas residents. ([HB 149 — Enrolled Text](https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00149F.htm); [Bill History](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
 
 **Colorado** — SB 24-205 covers deployers of high-risk AI systems, with an effective date of June 30, 2026 after the legislature extended the original deadline. Applies to businesses making consequential decisions about Colorado consumers. ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
 
@@ -122,7 +122,7 @@ Once you know you're in scope, the specific obligations depend on what your AI i
 
 This is the most active area of AI law enforcement right now. If you use AI tools in any part of your hiring, performance management, promotion, scheduling, or termination process, you are operating in a regulated space in multiple jurisdictions simultaneously.
 
-The Illinois Human Rights Act makes it a civil rights violation to use AI that has the effect of discriminating against employees based on protected characteristics — regardless of intent. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266)) NYC's Local Law 144 requires an annual independent bias audit and public posting of results for any automated employment decision tool. Colorado and Texas both cover AI used in employment decisions as a subcategory of their broader high-risk AI laws.
+The Illinois Human Rights Act makes it a civil rights violation to use AI that has the effect of discriminating against employees based on protected characteristics — regardless of intent. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/publicacts/fulltext.asp?Name=103-0804)) NYC's Local Law 144 requires an annual independent bias audit and public posting of results for any automated employment decision tool. Colorado and Texas both cover AI used in employment decisions as a subcategory of their broader high-risk AI laws.
 
 The documents you need in this category: employee and applicant notices that AI is being used, a record of how your AI tools work and what data they use, and documentation that you have evaluated your tools for potential discriminatory outcomes. Our [Multi-State Employer AI Disclosure Kit](/products/multi-state-employer-ai-disclosure) covers the notice and disclosure requirements across Illinois, Colorado, and NYC. Our [AI Bias Audit Report Template](/products/ai-bias-audit-template) covers the documentation needed to demonstrate non-discrimination.
 
@@ -154,7 +154,7 @@ Colorado's "consequential decision" definition specifically includes financial s
 
 Yes — and this is one of the most important points for legal defense.
 
-The NIST AI Risk Management Framework is a voluntary document. No law requires you to follow it. But Colorado SB 24-205 explicitly provides an affirmative defense for businesses that: (1) comply with a nationally or internationally recognized AI risk management framework, and (2) take measures to discover and correct violations of the law — the NIST AI RMF is the most prominent framework that fits that description, though the statute does not name it specifically. ([SB24-205](https://leg.colorado.gov/bills/sb24-205), [NIST AI RMF](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)) Texas HB 149 takes a different approach: under Sec. 552.105(e), a defendant who discovers a violation through an internal review process while substantially complying with the NIST "AI Risk Management Framework: Generative AI Profile" (or another recognized framework) "may not be found liable" — this is a liability defense, not merely a penalty-reduction factor. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
+The NIST AI Risk Management Framework is a voluntary document. No law requires you to follow it. But Colorado SB 24-205 explicitly provides an affirmative defense for businesses that: (1) comply with a nationally or internationally recognized AI risk management framework, and (2) take measures to discover and correct violations of the law — the NIST AI RMF is the most prominent framework that fits that description, though the statute does not name it specifically. ([SB24-205](https://leg.colorado.gov/bills/sb24-205), [NIST AI RMF](https://airc.nist.gov/)) Texas HB 149 takes a different approach: under Sec. 552.105(e), a defendant who discovers a violation through an internal review process while substantially complying with the NIST "AI Risk Management Framework: Generative AI Profile" (or another recognized framework) "may not be found liable" — this is a liability defense, not merely a penalty-reduction factor. ([HB 149](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149))
 
 What this means practically: if something goes wrong with your AI system — a discrimination claim, a regulatory inquiry, a consumer complaint — a documented governance program built around the NIST AI RMF shifts the burden. Instead of being asked to prove your AI didn't cause harm, you can demonstrate that you implemented recognized risk management practices, assessed your systems before deployment, and maintained oversight. That is a substantively different legal position than having no documentation at all.
 
@@ -182,14 +182,13 @@ The goal of this post, and that assessment, is the same: help you understand you
 
 ---
 
-**Sources** — Every legal fact in this article was verified against enacted statute text and agency publications at these URLs:
+## Sources
 
-- [Colorado General Assembly — SB24-205 Consumer Protections for Artificial Intelligence](https://leg.colorado.gov/bills/sb24-205) — Deployer obligations, consequential decision definition, affirmative defense, effective date.
-- [Colorado General Assembly — SB25B-004 Effective Date Extension](https://leg.colorado.gov/bills/sb25b-004) — Extends SB 24-205 effective date to June 30, 2026.
-- [Texas Legislature — HB 149 (TRAIGA), 89th Legislature](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149) — Deployer obligations, penalty amounts under § 552.105(a), effective date January 1, 2026.
-- [Illinois General Assembly — HB 3773 (775 ILCS 5/2-102)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64) — Employment AI anti-discrimination provision, effective January 1, 2026.
-- [NYC Department of Consumer and Worker Protection — Local Law 144](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page) — Bias audit requirements, employer obligations, annual renewal.
-- [California Privacy Protection Agency — ADMT and Risk Assessment Regulations (September 23, 2025)](https://cppa.ca.gov/announcements/2025/20250923.html) — Regulations finalized, effective January 1, 2026.
-- [CCPA Updates — Risk Assessments and ADMT Regulations](https://cppa.ca.gov/regulations/ccpa_updates.html) — Risk assessment scope and consumer rights.
-- [NIST AI Risk Management Framework — Core Functions](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) — Govern, Map, Measure, Manage functions.
-- [Title VII of the Civil Rights Act — 42 U.S.C. § 2000e-2](https://www.law.cornell.edu/uscode/text/42/2000e-2) — Federal anti-discrimination law applicable to AI hiring tools.
+- [Colorado SB 24-205 — Consumer Protections for Artificial Intelligence](https://leg.colorado.gov/bills/sb24-205) — Deployer obligations, consequential decision definition, affirmative defense, effective date.
+- [Colorado SB 25B-004 — Effective Date Extension to June 30, 2026](https://leg.colorado.gov/bills/sb25b-004) — Extends SB 24-205 effective date to June 30, 2026.
+- [Texas HB 149 (TRAIGA) — Bill History, 89th Legislature](https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149) — Deployer obligations, penalty amounts under § 552.105(a), effective date January 1, 2026.
+- [Texas HB 149 (TRAIGA) — Enrolled Bill Text](https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00149F.htm) — Full enacted text of the Texas Responsible AI Governance Act.
+- [Illinois PA 103-0804 — HB 3773 (775 ILCS 5/2-102)](https://www.ilga.gov/legislation/publicacts/fulltext.asp?Name=103-0804) — Employment AI anti-discrimination provision, effective January 1, 2026.
+- [NYC Local Law 144 — Automated Employment Decision Tools](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page) — Bias audit requirements, employer obligations, annual renewal.
+- [California Privacy Protection Agency — ADMT and Risk Assessment Regulations](https://cppa.ca.gov/regulations/ccpa_updates.html) — Risk assessment scope and consumer rights.
+- [NIST AI Risk Management Framework](https://airc.nist.gov/) — Govern, Map, Measure, Manage functions.
