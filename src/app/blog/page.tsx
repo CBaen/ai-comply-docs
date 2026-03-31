@@ -75,6 +75,7 @@ export default function BlogPage() {
                 {published.map((post) => (
                   <article
                     key={post.slug}
+                    aria-label={post.title}
                     className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-blue-700 hover:shadow-md transition flex flex-col"
                   >
                     {/* Image */}
