@@ -3,10 +3,6 @@
 
 ## CRITICAL (Revenue/Operations)
 
-- [x] Checkout auth() bug fixed — was hanging when DATABASE_URL not set (this session)
-- [x] Neon PostgreSQL connected — tables created, Vercel env vars configured (this session)
-- [x] Rate limiting on /contact and /send-documents — added this session
-- [x] Delivery token single-use enforcement — DB schema + enforcement logic written this session
 - [ ] **Customer account center end-to-end test** — database is now connected. Test a real purchase: webhook fires, download link appears in account center.
 - [ ] Split product documents onto separate hidden review pages per product — browser Claude needs to audit the actual generated document content for each of the 53 products individually
 - [ ] Resend domain verification — confirm email delivery is actually working end-to-end. Test with a real purchase.
