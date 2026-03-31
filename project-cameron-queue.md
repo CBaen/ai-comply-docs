@@ -9,32 +9,7 @@
 
 ## NEW — Added 2026-03-20
 
-- [x] Colorado SB 24-205 landing page built — /colorado-ai-compliance, three-column layout with Deep Dive sidebar, Did You Know micro-facts, interactive self-assessment, FAQ, verified statute citations
-- [x] Google Ads research completed — keyword strategy (8 exact-match terms), buyer demographic analysis, platform comparison (Google > LinkedIn > Facebook for B2B compliance)
-- [x] Research prompts for browser Claude — 7 prompts (4 research + 3 cross-verification) for Colorado fact verification, saved to research-prompts-2026-03-20.md
-- [x] Colorado statute facts dual-verified — all facts confirmed against enrolled bill PDF and SB 25B-004 delay legislation
-- [x] Effective date discrepancy resolved — confirmed June 30, 2026 via SB 25B-004 (AG website still shows old Feb 1 date)
-- [x] DBA filed for AI Compliance Documents LLC (March 20, 2026)
-- [x] Google Ads account created, linked to Merchant Center
 - [ ] Google Ads MCP setup (TrueClicks) — for family to manage campaigns
-- [x] 5 new blog posts written, fact-checked, deployed (Healthcare, NIST, Governance, Texas, EEOC)
-- [x] Blog renamed to "What's New in AI Compliance"
-- [x] Dual summary system (cardSummary + summary) implemented
-- [x] 4 blog hero images generated (Texas, NIST, Governance, EEOC)
-- [x] Google Search Console schema fixes (Product brand type, Dataset description)
-- [x] All blog post links audited — 7 homepage links identified, 2 fixed, 5 pending browser Claude verification
-- [x] WCAG 2.1 AA accessibility audit — 5 critical issues fixed (checkboxes, skip nav, focus rings, nav trap, search modal)
-- [x] Privacy policy updated — Google Analytics disclosed, questionnaire data accurately described as browser-only
-- [x] Terms updated — 30-day money-back guarantee formalized
-- [x] form_data removed from database — questionnaire answers no longer stored server-side
-- [x] Product page UX — "Does This Apply to You?" section added, form heading added, CTAs clarified
-- [x] Product cards — first-sentence descriptions, prominent pricing, "See Details" CTA
-- [x] SoftScrollButton — fade transition replaces scroll/jump on Customize Now
-- [x] Deep dive renderer — markdown links now clickable in sidebar
-- [x] Sources section — accordion on mobile, two columns on desktop
-- [x] New logo/favicon deployed across all touch points
-- [x] NLR article submitted ($250 paid, working with editor Tim Keane)
-- [x] EEOC article rewritten as definitive analysis — 15 external references, dual fact-checked
 
 ## NEW — Added 2026-03-22
 
@@ -58,7 +33,6 @@
 
 ## HIGH (Trust & Conversion)
 
-- [x] Document sample previews on all 53 product pages — WebP generated from real PDFs, 63% smaller than PNG (this session)
 - [ ] Questionnaire step 3/4 mismatch — hiring-specific language (bias audits, candidate screening) shows for ALL products including vendor due diligence and incident response. Add `skippedSteps` config or conditional rendering.
 - [ ] Law gate softening for non-law products — NIST, EEOC products force customers to click out to a 100-page federal framework doc before checkout. Soften to "please review" with checkbox available immediately for framework-based products.
 
@@ -68,7 +42,6 @@
 - [ ] FRIA Kit scope — needs browser Claude verification
 - [ ] Blog style guide document — document voice, structure, enrichment blocks, image requirements, internal linking rules. Reference for browser Claude when writing new articles.
 - [ ] More blog content — AEO research identified gaps: "Do I Need AI Compliance?" decision guide article (separate from quiz page), state AI law master tracker expansion, free downloadable resource/checklist
-- [x] Blog post images — all 12 hero images exist and are wired into posts with responsive layout
 - [ ] Per-post og:image — each blog post should have its own OG image for social sharing instead of the site-wide default
 - [ ] Colorado landing page needs verified research integration — waiting for browser Claude cross-verification results
 - [ ] Google Ads campaign setup — account created, keywords ready, needs landing page deployment first
@@ -104,76 +77,3 @@
 
 **Action:** DBA filed March 20, 2026 with Wyoming Registered Agent Services. Waiting for processing (~15 business days). Items above remain blocked until processing is complete.
 
-## COMPLETED (Previous Sessions + This Session)
-
-### This Session (2026-03-16)
-- [x] GA4 + server-side purchase tracking via Measurement Protocol wired up
-- [x] Contact page built (/contact) — Resend-powered, honeypot spam protection, CRLF prevention
-- [x] /regulations renamed to /products — 168 references, 34 files, 301 redirect in next.config.js
-- [x] Accessibility audit (5 teams, ~90 issues found) + all fixes applied (5 teams)
-- [x] PDF margin fixes — header wrapping, footer sizing, form field font consistency
-- [x] About page rewritten — founder identity removed, methodology-focused, faceless corporation
-- [x] Penalty display: both tiers shown for CA and IL (not just the scary number)
-- [x] Sample document previews on all 53 product pages — WebP, generated from real PDFs
-- [x] Checkout auth() bug fixed — was hanging when DATABASE_URL not set
-- [x] Neon PostgreSQL database connected — tables created, Vercel env vars configured
-- [x] 5-pass code review completed (security, simplicity, architecture, performance, silent failures)
-- [x] Security: delivery token now throws on missing secret (was silently broken)
-- [x] Security: contact form input validation hardened
-- [x] Security: error boundaries added
-- [x] Security: CRLF prevention on all user inputs
-- [x] Performance: JSZip moved to dynamic import (was 100KB+ shipping to every visitor)
-- [x] Performance: build-time preview check moved to module scope (was per-request filesystem call)
-- [x] Performance: logo image optimized
-- [x] Performance: all previews converted from PNG to WebP (63% smaller)
-- [x] Simplicity: shared getStripe() helper created
-- [x] Simplicity: ROLE_LABELS deduplicated
-- [x] Simplicity: handler consolidation
-- [x] Stripe secret key rotated (was in git history)
-- [x] Resend API key rotated (was in git history)
-
-### Previous Sessions
-- [x] Mobile view dedicated audit — 14 parallel fix teams, ~63 issues resolved across ~20 files
-- [x] Blog enrichment YAML for all 12 posts
-- [x] Art of War annotated layout
-- [x] Checkout route fixed (was broken for 32/34 products)
-- [x] Checkout generalized for multiple add-ons
-- [x] 17 law-specific add-on products built, audited, reviewed, and activated
-- [x] Stripe products created for all 17 add-ons
-- [x] 12 blog posts published with hero images
-- [x] Product carousel on homepage
-- [x] Search bar on product catalog
-- [x] "Not sure where to start?" guide
-- [x] "Do I Need AI Compliance?" quiz page
-- [x] Standalone FAQ page
-- [x] State comparison page (/ai-compliance-by-state)
-- [x] 35 product descriptions rewritten (situation-first)
-- [x] Document explanations on all product pages
-- [x] 54 signature blocks added
-- [x] Homepage reordered, methodology section
-- [x] Trust badges, ESIGN statement, verified statute badges
-- [x] Dynamic OG image
-- [x] All schemas (BlogPosting, Product, ItemList, FAQPage, Organization)
-- [x] AEO: llms.txt rebuilt, robots.txt names AI crawlers
-- [x] Internal links across all blog posts
-- [x] Blog guide cards on product pages
-- [x] Product counts updated to 53
-- [x] Triadic audit of add-on products
-- [x] Browser Claude review of add-on products
-- [x] fal.ai image generation integration
-- [x] Questionnaire friction fixes (progress bar, product summary, cancellation feedback)
-- [x] FAQ and Compare State Laws in nav/footer
-- [x] Global search modal (Cmd+K) with cmdk + MiniSearch
-- [x] Google Search Console: sitemap resubmitted
-- [x] Bing Webmaster Tools: registered, site imported from GSC
-- [x] PyMuPDF installed for PDF reading
-- [x] Questionnaire adapts to product type
-- [x] Oregon citation range fixed
-- [x] EU AI Act €35M/7% prohibited tier added
-- [x] EEOC ADEA threshold corrected (20+ employees, not 15+)
-- [x] Document counts synced (MN, Healthcare, Financial)
-- [x] React hydration error #418 fixed
-- [x] SEO metadata: all titles <60 chars, descriptions <155 chars, canonicals absolute
-- [x] Schemas added: Organization on /about, WebApplication on /quiz, Dataset on state comparison
-- [x] Sitemap: /privacy and /terms added
-- [x] 16 missing PDF index.ts barrel files created
