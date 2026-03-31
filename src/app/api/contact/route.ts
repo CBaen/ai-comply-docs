@@ -32,6 +32,16 @@ export async function POST(request: Request) {
     );
   }
 
+  if (typeof name !== "string" || name.length > 200) {
+    return NextResponse.json({ error: "Name too long (200 character limit)." }, { status: 400 });
+  }
+  if (typeof email !== "string" || email.length > 254) {
+    return NextResponse.json({ error: "Email too long." }, { status: 400 });
+  }
+  if (typeof company === "string" && company.length > 200) {
+    return NextResponse.json({ error: "Company name too long (200 character limit)." }, { status: 400 });
+  }
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return NextResponse.json(
