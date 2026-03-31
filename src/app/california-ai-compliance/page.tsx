@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "California CCPA ADMT Compliance — Risk Assessments Required Now, Opt-Out Notices Due January 2027",
+    "California AI Compliance — CCPA ADMT Risk Assessments & Opt-Out Notices",
   description:
     "California's CCPA ADMT and risk assessment regulations are in effect. Risk assessments required January 1, 2026. ADMT opt-out notices due January 1, 2027. Penalties up to $7,500 per intentional violation. Get all 7 compliance documents — built from CalPrivacy's published regulations. $499, instant download.",
   keywords: [
