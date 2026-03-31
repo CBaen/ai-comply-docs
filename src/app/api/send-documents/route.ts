@@ -247,24 +247,23 @@ export async function POST(request: Request) {
     );
   }
 
-  // Database enforcement — durable single-use check across all instances/restarts
+  // Database pre-check — reject if token was already used in a prior request
+  // The actual durable insert happens AFTER successful email send (prevents
+  // burning the token if Resend is down)
   if (process.env.DATABASE_URL) {
     try {
       const pool = (await import("@/lib/db")).getPool();
-      const result = await pool.query(
-        `INSERT INTO used_tokens (token_key) VALUES ($1) ON CONFLICT DO NOTHING`,
+      const existing = await pool.query(
+        `SELECT 1 FROM used_tokens WHERE token_key = $1`,
         [tokenKey]
       );
-      if (result.rowCount === 0) {
+      if (existing.rowCount && existing.rowCount > 0) {
         return NextResponse.json(
           { error: "Documents have already been sent for this purchase. Check your email." },
           { status: 409 }
         );
       }
-      // Mark in-memory cache now that DB insert succeeded
-      usedTokens.add(tokenKey);
     } catch (err) {
-      // Database check failed — fall through to in-memory only
       console.error("Token DB check failed (non-blocking):", err);
     }
   }
