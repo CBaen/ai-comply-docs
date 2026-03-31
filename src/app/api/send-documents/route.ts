@@ -373,9 +373,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
     }
 
-    // If DATABASE_URL is not set, mark token used in memory after successful send
-    if (!process.env.DATABASE_URL) {
-      usedTokens.add(tokenKey);
+    // Mark token as used AFTER successful send — never burn a token on failed delivery
+    usedTokens.add(tokenKey);
+    if (process.env.DATABASE_URL) {
+      try {
+        const pool = (await import("@/lib/db")).getPool();
+        await pool.query(
+          `INSERT INTO used_tokens (token_key) VALUES ($1) ON CONFLICT DO NOTHING`,
+          [tokenKey]
+        );
+      } catch (err) {
+        console.error("Token DB insert failed (email already sent):", err);
+      }
     }
 
     return NextResponse.json({ sent: true });
