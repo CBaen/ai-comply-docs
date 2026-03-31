@@ -79,7 +79,7 @@ export default function BlogPage() {
                   >
                     {/* Image */}
                     {post.image && (
-                      <Link href={`/blog/${post.slug}`} className="block">
+                      <Link href={`/blog/${post.slug}`} className="block" tabIndex={-1} aria-hidden="true">
                         <img
                           src={post.image}
                           alt={post.title}
