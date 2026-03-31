@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | AI Compliance Documents",
   },
   description:
-    "Generate AI compliance documents for state and federal regulations. Self-service, instant download, fraction of legal fees. Illinois, Colorado, Texas, California, and more.",
+    "AI compliance documents for state and federal AI regulations. Illinois, Colorado, Texas, California, NYC, EU AI Act. Instant download, fraction of legal fees.",
   keywords: [
     "AI compliance", "AI regulation", "compliance documents", "AI hiring law",
     "algorithmic discrimination", "AI governance", "HB3773", "SB 24-205", "TRAIGA", "CCPA ADMT",
@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Compliance Documents",
     description: "AI compliance documents for every state. Self-service, instant download.",
+    images: ["https://aicompliancedocuments.com/opengraph-image"],
   },
   icons: {
     icon: "/favicon.png",

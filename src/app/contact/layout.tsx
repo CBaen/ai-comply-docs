@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "Questions about AI compliance documents? Contact our team for help choosing the right package, enterprise pricing, or partnership opportunities.",
     url: "https://aicompliancedocuments.com/contact",
+    type: "website",
   },
 };
 
