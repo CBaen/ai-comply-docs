@@ -7,10 +7,10 @@ import type { Regulation } from "@/data/regulations";
 const HERO_SLUGS = ["colorado-sb24-205", "illinois-hb3773", "california-ccpa-admt", "eu-ai-act"] as const;
 
 const HERO_META: Record<string, { image: string; imageAlt: string; accentBg: string; accentText: string; attorneyComparison: string; tagline: string }> = {
-  "colorado-sb24-205": { image: "/images/landing/colorado-denver-skyline.png", imageAlt: "Denver, Colorado skyline", accentBg: "bg-amber-500", accentText: "text-amber-600", attorneyComparison: "vs. $3,000–$8,000 in attorney time", tagline: "Consequential AI decisions. Deadline: June 30, 2026." },
-  "illinois-hb3773": { image: "/images/landing/illinois-chicago-skyline.png", imageAlt: "Chicago, Illinois skyline", accentBg: "bg-blue-600", accentText: "text-blue-600", attorneyComparison: "vs. $2,500–$6,000 in attorney time", tagline: "AI in hiring or promotions? Illinois requires documentation." },
-  "california-ccpa-admt": { image: "/images/landing/california-golden-gate.png", imageAlt: "Golden Gate Bridge, San Francisco", accentBg: "bg-rose-500", accentText: "text-rose-600", attorneyComparison: "vs. $4,000–$10,000 in attorney time", tagline: "Automated decisions about California consumers. Two deadlines." },
-  "eu-ai-act": { image: "/images/landing/financial-building.png", imageAlt: "EU regulatory compliance", accentBg: "bg-indigo-600", accentText: "text-indigo-600", attorneyComparison: "vs. $15,000–$40,000 in attorney time", tagline: "The world's first comprehensive AI law. Fines up to 7% of global revenue." },
+  "colorado-sb24-205": { image: "/images/landing/colorado-denver-skyline.png", imageAlt: "Denver, Colorado skyline", accentBg: "bg-amber-500", accentText: "text-amber-600", attorneyComparison: "One-time purchase, instant download", tagline: "Consequential AI decisions. Deadline: June 30, 2026." },
+  "illinois-hb3773": { image: "/images/landing/illinois-chicago-skyline.png", imageAlt: "Chicago, Illinois skyline", accentBg: "bg-blue-600", accentText: "text-blue-600", attorneyComparison: "One-time purchase, instant download", tagline: "AI in hiring or promotions? Illinois requires documentation." },
+  "california-ccpa-admt": { image: "/images/landing/california-golden-gate.png", imageAlt: "Golden Gate Bridge, San Francisco", accentBg: "bg-rose-500", accentText: "text-rose-600", attorneyComparison: "One-time purchase, instant download", tagline: "Automated decisions about California consumers. Two deadlines." },
+  "eu-ai-act": { image: "/images/landing/financial-building.png", imageAlt: "EU regulatory compliance", accentBg: "bg-indigo-600", accentText: "text-indigo-600", attorneyComparison: "One-time purchase, instant download", tagline: "Comprehensive AI law. Applies to US companies serving EU residents." },
 };
 
 type FilterKey = "all" | "in-effect" | "effective-soon" | "federal" | "industry";
@@ -198,7 +198,7 @@ export default function PremiumPricingClient({ regulations }: { regulations: Reg
             State-specific and universal AI compliance packages built directly against enacted statute text. Instant download — at a fraction of attorney fees.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {["Statute citations included", "Instant PDF download", "No subscription", "Attorney-reviewed"].map((prop) => (
+            {["Statute citations included", "Instant PDF download", "No subscription", "Built from .gov sources"].map((prop) => (
               <span key={prop} className="flex items-center gap-1.5 text-sm text-slate-300">
                 <svg className="w-4 h-4 text-blue-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
