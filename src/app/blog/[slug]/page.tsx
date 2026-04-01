@@ -82,7 +82,7 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const related = getRelatedPosts(slug, 2);
+  const related = getRelatedPosts(slug, 20);
   const bodyNodes = renderMarkdown(post.content);
 
   const blogPostingSchema = {
