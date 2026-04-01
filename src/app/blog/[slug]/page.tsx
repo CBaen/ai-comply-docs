@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { getBlogPost, getRelatedPosts, getAllBlogPosts } from "@/lib/blog";
 import { renderMarkdown } from "@/lib/mdx-to-jsx";
+import BlogSlider from "@/components/BlogSlider";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -360,48 +361,14 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Related posts */}
+        {/* Related posts slider */}
         {related.length > 0 && (
           <section className="py-10 md:py-12 bg-slate-50 border-t border-gray-200">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6">
               <h2 className="text-xl font-bold font-display text-gray-900 mb-5">
                 More from the blog
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                {related.map((p) => (
-                  <article
-                    key={p.slug}
-                    className="bg-white rounded border border-gray-200 p-4 sm:p-5 hover:border-blue-700 hover:shadow-sm transition flex flex-col"
-                  >
-                    <div className="flex flex-wrap gap-1 mb-2">
-                      {p.tags.slice(0, 2).map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-0.5 rounded"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <h3 className="font-bold font-display text-gray-900 mb-2 leading-snug flex-1">
-                      <Link href={`/blog/${p.slug}`} className="hover:text-blue-700 transition">
-                        {p.title}
-                      </Link>
-                    </h3>
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-                      <time dateTime={p.date}>{formatDate(p.date)}</time>
-                      <span>{p.readTime}</span>
-                    </div>
-                    <Link
-                      href={`/blog/${p.slug}`}
-                      aria-label={`Read ${p.title}`}
-                      className="text-blue-700 hover:text-blue-900 text-sm font-semibold transition"
-                    >
-                      Read <span aria-hidden="true">→</span>
-                    </Link>
-                  </article>
-                ))}
-              </div>
+              <BlogSlider posts={related} />
             </div>
           </section>
         )}
