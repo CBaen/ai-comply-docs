@@ -146,8 +146,8 @@ function AttorneyFeeBanner() {
         </svg>
       </div>
       <div>
-        <p className="text-sm font-bold text-blue-900 leading-snug">Built by attorneys. Priced for businesses.</p>
-        <p className="text-sm text-blue-700 mt-0.5">Attorney-drafted compliance documents typically run $2,500–$40,000 per project. Every package below is a fraction of that — with the statute citations included.</p>
+        <p className="text-sm font-bold text-blue-900 leading-snug">Built from enacted statute text. Priced for businesses.</p>
+        <p className="text-sm text-blue-700 mt-0.5">Every package is built directly from the .gov source — the actual enacted law, not summaries or AI-generated content. Statute citations included. One-time purchase, instant download.</p>
       </div>
     </div>
   );
