@@ -116,7 +116,7 @@ function TrustStrip() {
   const stats = [
     { value: "53", label: "Compliance packages" },
     { value: "10+", label: "US state laws covered" },
-    { value: "1/20th", label: "The cost of attorney fees" },
+    { value: ".gov", label: "Primary sources verified" },
     { value: "Instant", label: "Download after purchase" },
   ];
   return (
