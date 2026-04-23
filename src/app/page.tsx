@@ -381,7 +381,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-bold text-lg font-display mb-2 text-gray-900">The Cost of Starting from Scratch</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Hiring a law firm to build a compliance package from scratch typically runs $5,000 to $25,000. Our templates give you a professional, statute-based starting point for $49&ndash;$997 &mdash; and your attorney can review and finalize them in a fraction of the time.
+                  Compliance packages drafted by outside counsel can run into the thousands of dollars and take weeks. Our templates give you a professional, statute-based starting point for $49&ndash;$997 &mdash; and your attorney can review and finalize them in a fraction of the time.
                 </p>
               </div>
             </div>
