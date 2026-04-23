@@ -625,7 +625,7 @@ export default async function RegulationPage({
                   </div>
                 )}
                 <p className="text-center text-xs text-gray-600 mt-4">
-                  vs. $5,000&ndash;$25,000 at a law firm
+                  vs. thousands at a law firm
                 </p>
 
                 {/* Verified badge */}

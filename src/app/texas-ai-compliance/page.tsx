@@ -201,7 +201,7 @@ export default function TexasAICompliancePage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display leading-tight mb-6">
               Texas AI Law Covers
               <br />
-              Every Business. No Exceptions.
+              Every Business. No Size Carveout.
             </h1>
             <p className="text-gray-300 text-lg sm:text-xl leading-relaxed mb-4 max-w-2xl mx-auto">
               Texas HB 149 — the Responsible AI Governance Act — took effect
@@ -589,13 +589,13 @@ export default function TexasAICompliancePage() {
                 <p className="text-gray-300 leading-relaxed mb-6">
                   They don&apos;t buy these templates instead of legal counsel.
                   They buy them so their attorney isn&apos;t starting from a
-                  blank page at $400 an hour.
+                  blank page at hundreds of dollars per hour.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-5 text-center">
                     <p className="text-gray-400 text-sm mb-1">Law firm</p>
                     <p className="text-2xl font-bold text-gray-400 line-through">
-                      $5,000–$25,000
+                      Thousands
                     </p>
                     <p className="text-gray-500 text-xs mt-1">
                       Weeks of back-and-forth

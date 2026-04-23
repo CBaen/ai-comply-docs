@@ -152,7 +152,7 @@ function FAQStructuredData({ readyCount }: { readyCount: number }) {
         name: "Do I need this if I already have outside counsel?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A lot of our customers have lawyers. They use our templates as a starting point — it gives their attorney something to review and refine instead of drafting from scratch at $400–$800 an hour. Your lawyer's time is better spent on the nuances specific to your business, not on formatting a compliance checklist.",
+          text: "A lot of our customers have lawyers. They use our templates as a starting point — it gives their attorney something to review and refine instead of drafting from scratch at hundreds of dollars per hour. Your lawyer's time is better spent on the nuances specific to your business, not on formatting a compliance checklist.",
         },
       },
       {

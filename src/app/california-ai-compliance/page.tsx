@@ -546,11 +546,11 @@ export default function CaliforniaAICompliancePage() {
                     CalPrivacy Is Actively Enforcing
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                    In the last six months, CalPrivacy fined Tractor Supply
-                    Company $1.35 million, American Honda Motor Co. $632,500,
-                    and Todd Snyder $345,178. In January 2026 they issued two
-                    more enforcement decisions and ordered Datamasters to stop
-                    selling all Californians&apos; personal information.
+                    In September 2025 CalPrivacy fined Tractor Supply
+                    Company $1.35 million &mdash; the largest penalty in the
+                    agency&apos;s history. In January 2026 they issued
+                    additional enforcement decisions and ordered Datamasters
+                    to stop selling all Californians&apos; personal information.
                   </p>
                   <p className="text-gray-400 text-xs">
                     The California Attorney General retains independent
@@ -567,13 +567,13 @@ export default function CaliforniaAICompliancePage() {
                 <p className="text-gray-300 leading-relaxed mb-6">
                   They don&apos;t buy these templates instead of legal counsel.
                   They buy them so their attorney isn&apos;t starting from a
-                  blank page at $400 an hour.
+                  blank page at hundreds of dollars per hour.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-5 text-center">
                     <p className="text-gray-400 text-sm mb-1">Law firm</p>
                     <p className="text-2xl font-bold text-gray-400 line-through">
-                      $5,000–$25,000
+                      Thousands
                     </p>
                     <p className="text-gray-500 text-xs mt-1">
                       Weeks of back-and-forth
@@ -679,7 +679,7 @@ export default function CaliforniaAICompliancePage() {
                       defensible starting point, not a substitute for legal
                       counsel. Many of our customers hand these to their
                       attorney for review. That saves their attorney hours of
-                      drafting time at $400 an hour.
+                      drafting time at hundreds of dollars per hour.
                     </div>
                   </details>
                   <details className="bg-gray-800/50 border border-gray-700/50 rounded-lg group">

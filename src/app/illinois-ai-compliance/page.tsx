@@ -587,13 +587,13 @@ export default function IllinoisAICompliancePage() {
                 <p className="text-gray-300 leading-relaxed mb-6">
                   They don&apos;t buy these templates instead of legal counsel.
                   They buy them so their attorney isn&apos;t starting from a
-                  blank page at $400 an hour.
+                  blank page at hundreds of dollars per hour.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-5 text-center">
                     <p className="text-gray-400 text-sm mb-1">Law firm</p>
                     <p className="text-2xl font-bold text-gray-400 line-through">
-                      $3,000–$15,000
+                      Thousands
                     </p>
                     <p className="text-gray-500 text-xs mt-1">
                       Weeks of back-and-forth
@@ -716,7 +716,7 @@ export default function IllinoisAICompliancePage() {
                       starting point, not a substitute for legal counsel. A lot
                       of our customers hand these to their employment attorney
                       for review. That saves their attorney hours of drafting
-                      time at $400 an hour.
+                      time at hundreds of dollars per hour.
                     </div>
                   </details>
                   <details className="bg-gray-800/50 border border-gray-700/50 rounded-lg group">
