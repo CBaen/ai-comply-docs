@@ -177,6 +177,7 @@ export default function Home() {
       <WebSiteStructuredData />
       <FAQStructuredData readyCount={readyCount} />
       <Nav />
+      <FeaturedInBar />
       <main id="main-content">
         {/* Hero Section with Product Carousel */}
         <header className="hero-bg text-white relative overflow-hidden">

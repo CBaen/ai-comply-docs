@@ -73,10 +73,32 @@ export default function AIComplianceByStatePage() {
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display text-white mb-3 sm:mb-4 leading-tight tracking-tight">
               AI Compliance Requirements by State
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed mb-6">
               {stateRegs.length} states have enacted AI or data privacy laws that require specific
               documentation from businesses using AI. Here&apos;s how they compare.
             </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl">
+              <Link href="/colorado-ai-compliance" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-400/40 rounded-lg p-3 transition-colors">
+                <div className="text-amber-300 text-xs font-semibold uppercase tracking-widest mb-1">Colorado</div>
+                <div className="text-white text-sm font-bold leading-snug group-hover:underline">SB 24-205 →</div>
+                <div className="text-slate-400 text-xs mt-1">June 30, 2026</div>
+              </Link>
+              <Link href="/illinois-ai-compliance" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/40 rounded-lg p-3 transition-colors">
+                <div className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1">Illinois</div>
+                <div className="text-white text-sm font-bold leading-snug group-hover:underline">HB3773 →</div>
+                <div className="text-slate-400 text-xs mt-1">In effect</div>
+              </Link>
+              <Link href="/california-ai-compliance" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-rose-400/40 rounded-lg p-3 transition-colors">
+                <div className="text-rose-300 text-xs font-semibold uppercase tracking-widest mb-1">California</div>
+                <div className="text-white text-sm font-bold leading-snug group-hover:underline">CCPA ADMT →</div>
+                <div className="text-slate-400 text-xs mt-1">In effect</div>
+              </Link>
+              <Link href="/texas-ai-compliance" className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-indigo-400/40 rounded-lg p-3 transition-colors">
+                <div className="text-indigo-300 text-xs font-semibold uppercase tracking-widest mb-1">Texas</div>
+                <div className="text-white text-sm font-bold leading-snug group-hover:underline">TRAIGA HB 149 →</div>
+                <div className="text-slate-400 text-xs mt-1">In effect</div>
+              </Link>
+            </div>
           </div>
         </header>
 
