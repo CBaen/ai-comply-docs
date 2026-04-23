@@ -149,7 +149,7 @@ export const regulations: Regulation[] = [
     stripePriceId: "price_1TArY3GidFVHIL99Tn7tLlo2",
     documentCount: 4,
     description: "Delaware has the lowest applicability threshold of any state privacy law — just 35,000 consumers. If your business has any meaningful presence in Delaware, you may be in scope. This package covers the data protection assessment and privacy notice requirements.",
-    penaltySummary: "Attorney General enforcement only (\u00A7 12D-111). No private right of action. Civil penalties up to $10,000 per violation (\u00A7 12D-111). 60-day cure period until December 31, 2025; AG discretion after (\u00A7 12D-111).",
+    penaltySummary: "Attorney General enforcement only (\u00A7 12D-111). No private right of action. Civil penalties up to $10,000 per violation (\u00A7 12D-111). Mandatory 60-day cure period expired December 31, 2025; AG now has enforcement discretion and can act without prior warning (\u00A7 12D-111).",
     maxPenalty: "Up to $10,000 per violation (\u00A7 12D-111)",
     appliesToSummary: "Entities doing business in Delaware or targeting Delaware residents that process data of 35,000+ consumers OR 10,000+ consumers with 20%+ revenue from data sales. Lowest thresholds of any state.",
     appliesToBullets: [
