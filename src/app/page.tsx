@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ProductCarousel from "@/components/ProductCarousel";
+import FeaturedInBar from "@/components/FeaturedInBar";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
@@ -200,6 +201,8 @@ export default function Home() {
           />
           </div>
         </header>
+
+        <FeaturedInBar />
 
         {/* Trust Bar */}
         <div className="bg-white border-b border-gray-200 py-5">

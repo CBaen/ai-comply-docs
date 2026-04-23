@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FeaturedInBar from "@/components/FeaturedInBar";
 
 export const metadata: Metadata = {
   title:
@@ -162,6 +163,8 @@ export default function CaliforniaAICompliancePage() {
           </span>
         </div>
       </header>
+
+      <FeaturedInBar />
 
       <main id="main-content">
         {/* Hero */}
