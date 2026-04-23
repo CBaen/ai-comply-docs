@@ -71,7 +71,7 @@ const microFacts = [
   },
   {
     fact: "TRAIGA creates a 36-month regulatory sandbox allowing companies to test AI systems without a state license — with legal immunity during the testing period.",
-    source: "HB 149 Sec. 553.051",
+    source: "HB 149 Sec. 553.053(a)",
     sourceUrl:
       "https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149",
   },
