@@ -423,9 +423,9 @@ const ADDONS = [
     effectiveDate: "Staggered: Prohibited AI Feb 2025, GPAI Aug 2025, Annex III high-risk Aug 2026",
     maxPenalty: "€15M or 3% global turnover (high-risk); €35M or 7% (prohibited)",
     appliesToSummary:
-      "Any company deploying high-risk AI systems in the EU market, including US companies serving EU customers.",
+      "Per Art. 27(1): public bodies, private entities providing public services, or any deployer of Annex III 5(b) (creditworthiness / credit scoring) or 5(c) (life/health insurance risk pricing) AI systems. US deployers are in scope if output is used in the EU and they fit one of these four categories.",
     description:
-      "Article 27 of the EU AI Act requires deployers of certain high-risk AI systems to complete a Fundamental Rights Impact Assessment before first use, covering 6 specific elements. This kit provides the FRIA template, authority notification letter, and update trigger assessment.",
+      "Article 27(1) of the EU AI Act requires specific deployer categories to complete a Fundamental Rights Impact Assessment before first use of a high-risk AI system, covering 6 required elements. Scope: (1) bodies governed by public law, (2) private entities providing public services, and (3) any deployer of Annex III 5(b) AI (credit scoring) or Annex III 5(c) AI (life/health insurance risk and pricing). This kit provides the FRIA template, authority notification letter, and update trigger assessment.",
     penaltySummary:
       "National authorities enforcement. High-risk AI violations: up to €15,000,000 or 3% global turnover (Art. 99(4)). Prohibited AI practices: up to €35,000,000 or 7% global turnover (Art. 99(3)). False information: up to €7,500,000 or 1% global turnover (Art. 99(5)).",
     documents: [

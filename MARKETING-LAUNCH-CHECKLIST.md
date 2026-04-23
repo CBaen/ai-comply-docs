@@ -106,42 +106,12 @@ The Stripe MCP is in test mode, so Claude Code cannot create live products. Use 
 
 ---
 
-## 3 — Verify CA ADMT Date + FRIA Kit Scope (Browser Claude, 5 min each)
+## 3 — ~~Verify CA ADMT Date + FRIA Kit Scope~~ ✅ DONE 2026-04-23
 
-Both are in the HANDOFF.md Known Issues list. Both need a browser Claude session with web access to verify against primary sources.
+Both completed in-session. Summary:
 
-### CA ADMT January 2027 date
-
-Prompt for browser Claude:
-
-```
-Visit https://cppa.ca.gov/regulations/ccpa_updates.html
-What is the CURRENT effective date for California's ADMT (Automated
-Decision-Making Technology) regulations under the CCPA? I have a site
-claiming "ADMT opt-out notices due January 1, 2027" — confirm whether
-that's still accurate after the September 2025 rulemaking.
-Report back: (a) the actual effective date, (b) the source URL you
-confirmed from, (c) if different from Jan 1 2027, the exact text that
-should appear.
-```
-
-### FRIA Kit scope
-
-Prompt for browser Claude:
-
-```
-Visit https://artificialintelligenceact.eu/ and eur-lex.europa.eu for
-EU AI Act Regulation 2024/1689.
-Confirm: does the FRIA (Fundamental Rights Impact Assessment) apply
-to US businesses serving EU residents? Or only to EU-established
-deployers of high-risk AI? I have a compliance product that claims
-FRIA applies to US businesses — I need you to either verify that or
-tell me exactly which Article of the EU AI Act defines the scope.
-Report back: (a) yes/no applies to US businesses, (b) the exact
-Article citation, (c) quoted statutory text.
-```
-
-Paste the responses back to Claude Code next session for integration.
+- **CA ADMT:** Regulations effective Jan 1, 2026 with staggered compliance deadlines. ADMT opt-out Jan 1, 2027 dates on the site are accurate — no change needed.
+- **FRIA Kit:** Browser Claude caught that the previous product description listed the wrong Annex III points. Real scope per Art. 27(1): (a) public bodies, (b) private entities providing public services, (c) credit scoring deployers (Annex III 5(b)), (d) life/health insurance risk deployers (Annex III 5(c)). Description fixed in `src/data/regulations.ts` and `src/app/review-addons-x7k9m/page.tsx`.
 
 ---
 

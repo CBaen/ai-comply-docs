@@ -116,8 +116,8 @@ Do not shut the site down. The foundation is stronger than your gut was telling 
 ## Known Issues
 
 - **fal.ai key not rotated** — Cameron evaluating provider alternatives. Do not generate images.
-- **CA ADMT Jan 2027 date** — needs browser Claude verification (prompt in `MARKETING-LAUNCH-CHECKLIST.md` §3)
-- **FRIA Kit scope** — needs browser Claude verification (prompt in `MARKETING-LAUNCH-CHECKLIST.md` §3)
+- **~~CA ADMT Jan 2027 date~~** — VERIFIED 2026-04-23 via browser Claude against cppa.ca.gov. Regulations effective Jan 1, 2026 with staggered compliance; ADMT opt-out Jan 1, 2027 is consistent with published legal analyses. Site is accurate.
+- **~~FRIA Kit scope~~** — VERIFIED + FIXED 2026-04-23. Art. 27(1) applies to: (a) public bodies, (b) private entities providing public services, (c) Annex III 5(b) credit scoring deployers, (d) Annex III 5(c) life/health insurance deployers. Site previously listed Annex III points 1/6/7 — incorrect. Fixed in `src/data/regulations.ts:1840` and `src/app/review-addons-x7k9m/page.tsx:428`.
 - **Stripe MCP is in test mode** — cannot create live products from Claude Code. Use Stripe dashboard.
 - **`vercel env pull` risk** — overwrites .env.local without warning. Always back up first.
 - **Workday case (active litigation)** — blog post at `workday-ai-hiring-lawsuit-employer-liability.mdx` is current as of last session but will need updating when class certification is fully ruled on. Monitor.

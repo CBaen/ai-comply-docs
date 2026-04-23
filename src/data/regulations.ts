@@ -110,7 +110,7 @@ export const regulations: Regulation[] = [
     tier: "state",
     category: "AI Governance",
     price: 299,
-    stripePriceId: "",
+    stripePriceId: "price_1TPLxLGidFVHIL99hNo2FOQO",
     documentCount: 7,
     description: "Texas HB 149 — the Responsible AI Governance Act — took effect January 1, 2026 and applies to any business that develops or deploys AI systems in Texas. There is no high-risk carveout and no small-business exemption. This package covers both developer and deployer obligations, built around the NIST AI 600-1 safe harbor standard that gives businesses a rebuttable presumption of reasonable care.",
     penaltySummary: "Attorney General enforcement only (§ 552.101). No private right of action. Curable violations: $10,000–$12,000 (§ 552.105(a)). Uncurable violations: $80,000–$200,000 (§ 552.105(a)). Continuing violations: $2,000–$40,000 per day on top of base penalty (§ 552.105(a)). 60-day cure period before enforcement action (§ 552.104).",
