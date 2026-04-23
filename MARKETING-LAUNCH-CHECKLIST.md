@@ -98,6 +98,69 @@ The Stripe MCP is in test mode, so Claude Code cannot create live products. Use 
 
 9. **Review + Publish.**
 
+---
+
+## 2b — Texas TRAIGA Campaign (run in parallel with Colorado)
+
+Texas HB 149 (TRAIGA) is already in effect (Jan 1, 2026). 4 months of enforcement live → high purchase intent. Run this as a SECOND campaign so each has its own budget and conversion tracking.
+
+### Steps in Google Ads UI
+
+1. Same flow as Colorado, but:
+   - Campaign name: `AI Compliance Texas TRAIGA HB149`
+   - Locations: `Texas, United States` (state-level)
+   - Daily budget: **$5.00**
+   - Same bidding strategy: `Maximize clicks`
+
+2. **Keywords:**
+
+| Keyword | Match type |
+|---|---|
+| `texas ai law compliance` | Phrase match |
+| `texas traiga compliance` | Phrase match |
+| `texas hb 149 ai compliance` | Phrase match |
+| `texas ai governance act` | Phrase match |
+| `texas ai compliance template` | Phrase match |
+| `texas responsible ai governance` | Phrase match |
+| `nist ai 600-1 safe harbor texas` | Phrase match |
+| `"texas traiga compliance documents"` | Exact match |
+| `"texas hb 149 deployer documents"` | Exact match |
+
+3. **Responsive Search Ad:**
+
+   **Headlines (10):**
+   - Texas TRAIGA Compliance Now
+   - HB 149 Deployer Documents
+   - All 7 Required Documents
+   - Built from Enrolled Statute Text
+   - In Effect: January 1, 2026
+   - Up to $200,000 Per Violation
+   - NIST AI 600-1 Safe Harbor
+   - One-Time Purchase, $299
+   - No Subscription, No Law Firm
+   - Featured in National Law Review
+
+   **Descriptions (4):**
+   - Texas HB 149 (TRAIGA) is in effect. 7 compliance documents covering developer + deployer obligations. NIST AI 600-1 safe harbor framework. $299, instant download.
+   - Penalties up to $200,000 per uncurable violation. Built directly from the enrolled statute text on capitol.texas.gov. No high-risk carveout, no size exemption.
+   - Featured in the National Law Review. Texas TRAIGA compliance documents from the primary source — every citation verified against the enrolled bill.
+   - 60-day cure period before AG enforcement. Get the documents your attorney can finalize in a fraction of the time. One-time purchase, no subscription.
+
+   **Final URL:** `https://aicompliancedocuments.com/texas-ai-compliance`
+   **Display path:** `/texas-ai-compliance`
+
+4. **Sitelink extensions (4):**
+   - About Our Methodology → `/about`
+   - Texas TRAIGA Product Page → `/products/texas-traiga`
+   - Texas TRAIGA Compliance Guide → `/blog/texas-traiga-hb149-ai-law-compliance-guide`
+   - All AI Compliance Products → `/products`
+
+5. Review + Publish.
+
+**Combined daily spend:** $10/day ($5 Colorado + $5 Texas). At $299–$449 product prices, you need ~1 sale per month per campaign to be net-positive at a 5% conversion rate.
+
+---
+
 ### After launch
 
 - **Day 3:** Check CTR. If >2%, you're in the healthy range. If <1%, pause and review which keywords are burning budget.
