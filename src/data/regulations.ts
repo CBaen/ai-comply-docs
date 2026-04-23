@@ -131,7 +131,7 @@ export const regulations: Regulation[] = [
       "Bias Evaluation & Anti-Discrimination Documentation",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "delaware-pdpa",
@@ -1013,7 +1013,7 @@ export const regulations: Regulation[] = [
     tier: "industry",
     category: "Education",
     price: 397,
-    stripePriceId: "",
+    stripePriceId: "price_1TPLxMGidFVHIL99bfHqbuRT",
     documentCount: 7,
     description: "AI compliance documentation for K-12 school districts and EdTech companies. Covers FERPA requirements for AI systems, amended COPPA obligations (April 2026 deadline), student data AI use policies, and parent notification requirements.",
     penaltySummary: "FERPA: loss of federal funding. COPPA: FTC penalties up to $50,120 per violation. State student privacy laws add additional exposure.",
@@ -1029,7 +1029,7 @@ export const regulations: Regulation[] = [
       "FERPA Compliance Attestation",
       "Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
   {
     slug: "hr-recruiting-ai",
@@ -1043,7 +1043,7 @@ export const regulations: Regulation[] = [
     tier: "industry",
     category: "Human Resources",
     price: 697,
-    stripePriceId: "",
+    stripePriceId: "price_1TPLxNGidFVHIL99QPisUuUQ",
     documentCount: 10,
     description: "Comprehensive AI compliance bundle for HR departments and recruiting firms. Consolidates requirements from EEOC, NYC LL144, Illinois HB3773, and Colorado SB205 into a unified compliance program for AI-driven hiring and talent management.",
     penaltySummary: "Combined exposure from federal EEOC enforcement, NYC LL144 daily penalties, and state AG enforcement across multiple jurisdictions.",
@@ -1062,7 +1062,7 @@ export const regulations: Regulation[] = [
       "AI System Inventory (HR)",
       "Compliance Matrix by State",
     ],
-    ready: false,
+    ready: true,
   },
   // ── PRODUCT 1: AI Governance Framework ──────────────────────
   {
@@ -1382,7 +1382,7 @@ export const regulations: Regulation[] = [
     tier: "universal",
     category: "Universal Tools",
     price: 149,
-    stripePriceId: "",
+    stripePriceId: "price_1TPLxNGidFVHIL995PE5Zril",
     documentCount: 1,
     description: "A security audit checklist built for AI-generated code. 10 critical rules covering CORS, redirect validation, storage access, webhook verification, server-side permissions, dependency hygiene, rate limiting, error handling, session management, and debug cleanup — each with a plain-English problem statement, business impact summary, fix prompt for your AI, and a verification step to confirm it's resolved.",
     penaltySummary: "Unaddressed vulnerabilities in AI-generated code expose applications to data breaches, account takeovers, payment fraud, and regulatory penalties under CCPA, GDPR, PCI DSS, and HIPAA. Security incidents caused by vibe-coded applications are not covered by most cyber insurance policies when basic controls are absent.",
@@ -1397,7 +1397,7 @@ export const regulations: Regulation[] = [
     documents: [
       "Vibe Coding Security Compliance Checklist",
     ],
-    ready: false,
+    ready: true,
   },
 
   // ═══════════════════════════════════════════

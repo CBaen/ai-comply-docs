@@ -76,6 +76,12 @@ export default function Nav() {
               Products
             </Link>
             <Link
+              href="/ai-compliance-by-state"
+              className="text-gray-600 hover:text-blue-700 transition"
+            >
+              By State
+            </Link>
+            <Link
               href="/blog"
               className="text-gray-600 hover:text-blue-700 transition"
             >
