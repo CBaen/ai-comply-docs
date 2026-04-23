@@ -7,7 +7,7 @@ import { regulations } from "@/data/regulations";
 export const metadata: Metadata = {
   title: "AI Compliance Requirements by State — 2026 Guide",
   description:
-    "Compare AI compliance laws across all 50 states. See which states require AI documentation, what the penalties are, and when deadlines hit. Updated March 2026.",
+    "Compare AI compliance laws across all 50 states. See which states require AI documentation, what the penalties are, and when deadlines hit. Updated April 2026.",
   keywords: [
     "ai compliance by state",
     "state ai laws",
@@ -68,7 +68,7 @@ export default function AIComplianceByStatePage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="inline-flex items-center gap-2 border border-blue-400/40 px-3 py-1 sm:px-4 sm:py-1.5 mb-4 sm:mb-5 text-xs sm:text-sm rounded text-blue-200">
               <span aria-hidden="true" className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm" />
-              Updated March 2026
+              Updated April 2026
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display text-white mb-3 sm:mb-4 leading-tight tracking-tight">
               AI Compliance Requirements by State
