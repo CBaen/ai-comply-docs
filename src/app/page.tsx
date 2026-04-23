@@ -203,8 +203,6 @@ export default function Home() {
           </div>
         </header>
 
-        <FeaturedInBar />
-
         {/* Trust Bar */}
         <div className="bg-white border-b border-gray-200 py-5">
           <div className="max-w-5xl mx-auto px-4">
