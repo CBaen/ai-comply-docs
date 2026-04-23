@@ -88,8 +88,8 @@ const microFacts = [
     sourceUrl: "https://leg.colorado.gov/bills/sb24-205",
   },
   {
-    fact: "Even the Colorado Attorney General's own website still lists the original February 1, 2026 effective date. SB 25B-004 delayed it to June 30, 2026, but the AG hasn't updated their page.",
-    source: "Colorado AG / SB 25B-004",
+    fact: "SB 25B-004, signed August 28, 2025, delayed the AI Act's effective date from February 1, 2026 to June 30, 2026 — giving businesses four additional months to prepare.",
+    source: "Colorado SB 25B-004",
     sourceUrl: "https://leg.colorado.gov/bills/sb25b-004",
   },
   {
