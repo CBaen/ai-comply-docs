@@ -19,6 +19,7 @@ import PostPaymentHandler from "@/components/PostPaymentHandler";
 import DocumentSamplePreview from "@/components/DocumentSamplePreview";
 import QuickPurchaseButton from "@/components/QuickPurchaseButton";
 import SoftScrollButton from "@/components/SoftScrollButton";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export async function generateStaticParams() {
   // Only generate pages for ready products — non-ready products
@@ -239,6 +240,13 @@ export default async function RegulationPage({
     <>
       <Nav />
       <StructuredData reg={reg} />
+      <BreadcrumbSchema
+        crumbs={[
+          { name: "Home", url: "https://aicompliancedocuments.com/" },
+          { name: "Products", url: "https://aicompliancedocuments.com/products" },
+          { name: reg.name, url: `https://aicompliancedocuments.com/products/${reg.slug}` },
+        ]}
+      />
       <main id="main-content">
         {/* Hero */}
         <div className="hero-bg text-white py-10 md:py-20 relative overflow-hidden">

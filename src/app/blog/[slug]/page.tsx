@@ -95,9 +95,17 @@ export default async function BlogPostPage({ params }: Props) {
     datePublished: post.date,
     dateModified: post.date,
     author: {
-      "@type": "Organization",
-      name: post.author,
-      url: "https://aicompliancedocuments.com",
+      "@type": "Person",
+      name: "Cameron B. Paul",
+      url: "https://aicompliancedocuments.com/about",
+      jobTitle: "Founder, AI Compliance Documents",
+      description:
+        "Regulatory compliance professional with experience spanning healthcare, finance, technology, and federal agency engagement (EEOC, HIPAA, DOJ, OSHA, HHS OCR, HHS OIG).",
+      worksFor: {
+        "@type": "Organization",
+        name: "AI Compliance Documents",
+        url: "https://aicompliancedocuments.com",
+      },
     },
     publisher: {
       "@type": "Organization",
@@ -125,10 +133,14 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <Nav />
-      {/* BlogPosting JSON-LD — all data is server-side from our own MDX frontmatter, not user input */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      {/* BlogPosting JSON-LD — all data is server-side from our own MDX frontmatter */}
+      <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
+      <BreadcrumbSchema
+        crumbs={[
+          { name: "Home", url: "https://aicompliancedocuments.com/" },
+          { name: "Blog", url: "https://aicompliancedocuments.com/blog" },
+          { name: post.title, url: `https://aicompliancedocuments.com/blog/${post.slug}` },
+        ]}
       />
       <main id="main-content">
         {/* Post header and body wrapped in article for semantic structure */}
