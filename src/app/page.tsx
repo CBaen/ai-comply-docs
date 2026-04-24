@@ -351,7 +351,7 @@ export default function Home() {
               </h2>
               <p className="text-gray-700 text-base md:text-lg max-w-2xl">
                 AI regulations aren&apos;t suggestions. They&apos;re law, with real
-                enforcement teeth and penalties up to $200,000 per violation (Texas TRAIGA, uncurable violations).
+                enforcement teeth and penalties up to $200,000 per violation (<a href="/texas-ai-compliance" className="text-blue-700 hover:underline">Texas TRAIGA</a>, uncurable violations). See state-specific requirements for <a href="/colorado-ai-compliance" className="text-blue-700 hover:underline">Colorado</a>, <a href="/illinois-ai-compliance" className="text-blue-700 hover:underline">Illinois</a>, <a href="/california-ai-compliance" className="text-blue-700 hover:underline">California</a>, and <a href="/texas-ai-compliance" className="text-blue-700 hover:underline">Texas</a>.
               </p>
             </div>
             <hr className="border-t border-gray-200 my-4" />
