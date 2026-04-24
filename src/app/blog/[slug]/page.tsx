@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { getBlogPost, getRelatedPosts, getAllBlogPosts } from "@/lib/blog";
 import { renderMarkdown } from "@/lib/mdx-to-jsx";
 import BlogSlider from "@/components/BlogSlider";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 interface Props {
   params: Promise<{ slug: string }>;

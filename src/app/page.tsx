@@ -371,7 +371,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-bold text-lg font-display mb-2 text-gray-900">State Enforcement</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Attorney General offices enforce these laws. Penalties range from $5,000 per violation (Connecticut) to $70,000 per violation (Illinois). Several states assess penalties per violation and per person affected &mdash; so for automated systems that process many people, the numbers add up quickly.
+                  Attorney General offices enforce these laws. Penalties range from $5,000 per violation (Connecticut) to $70,000 per violation (<a href="/illinois-ai-compliance" className="text-red-700 hover:underline">Illinois</a>). Several states assess penalties per violation and per person affected &mdash; so for automated systems that process many people, the numbers add up quickly.
                 </p>
               </div>
               <div className="bg-slate-100 border border-slate-200 rounded p-6 border-l-4 border-l-slate-400">
