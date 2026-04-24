@@ -13,12 +13,12 @@ export const faqItems: FAQItem[] = [
     answer: "Most modern hiring platforms, CRM systems, marketing tools, and customer service chatbots have AI built in. If a tool screens, scores, ranks, recommends, or personalizes — there's likely AI involved. The vendor can confirm this. Our AI System Inventory document walks you through how to find out.",
   },
   {
-    question: "I have no idea where to start.",
+    question: "Where do I start if I don't know which law applies to me?",
     answer: "That's the most common thing we hear. Start by figuring out which states your employees or customers are in. Then look at our state-specific packages for those states. If you operate in a lot of states, the Multi-State Profiling Bundle covers 15+ states in one package. If you just want to get organized first, the AI Governance Framework ($349) and AI System Registry ($199) help you figure out what you have before you worry about which laws apply.",
   },
   {
     question: "What AI regulations do you cover?",
-    answer: "We offer 53 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
+    answer: "We offer 57 compliance packages covering 14 state-specific AI and privacy laws (Illinois, Colorado, NYC, California, Virginia, Connecticut, Oregon, Texas, Delaware, Minnesota, Montana, Indiana, Kentucky, New Jersey), the EU AI Act, EEOC AI hiring guidance, NIST AI RMF, healthcare AI (HIPAA), financial services AI, and universal tools like bias audit templates, incident response plans, and vendor due diligence. Each package is built from the actual enacted statute text.",
   },
   {
     question: "Is this legal advice?",

@@ -109,7 +109,7 @@ function FAQStructuredData({ readyCount }: { readyCount: number }) {
       },
       {
         "@type": "Question",
-        name: "I have no idea where to start.",
+        name: "Where do I start if I don't know which law applies to me?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "That's the most common thing we hear. Start by figuring out which states your employees or customers are in. Then look at our state-specific packages for those states. If you operate in a lot of states, the Multi-State Profiling Bundle covers 15+ states in one package. If you just want to get organized first, the AI Governance Framework ($349) and AI System Registry ($199) help you figure out what you have before you worry about which laws apply.",
