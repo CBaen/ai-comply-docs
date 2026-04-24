@@ -37,7 +37,7 @@ function OrganizationSchema() {
     description:
       "AI compliance documentation templates for US state and federal AI regulations. Built from enacted statute text.",
     sameAs: [
-      "https://www.linkedin.com/company/ai-compliance-documents",
+      "https://www.natlawreview.com/",
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -234,7 +234,7 @@ export default function AboutPage() {
               Available templates
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              We offer 54 compliance packages covering state AI employment laws (Illinois, NYC,
+              We offer 57 compliance packages covering state AI employment laws (Illinois, NYC,
               Colorado), state consumer data privacy laws (Virginia, Connecticut, California, Oregon,
               Texas, Delaware, Minnesota, Montana, New Jersey, Indiana, Kentucky), federal frameworks
               (EEOC, NIST AI RMF), industry-specific packages (healthcare, financial services), the
@@ -285,7 +285,7 @@ export default function AboutPage() {
               href="/products"
               className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 underline"
             >
-              View all 54 products<span aria-hidden="true"> →</span>
+              View all 57 products<span aria-hidden="true"> →</span>
             </Link>
           </section>
 

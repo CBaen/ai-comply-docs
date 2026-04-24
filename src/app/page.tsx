@@ -43,7 +43,7 @@ function OrganizationStructuredData() {
     description:
       "AI compliance documentation templates for US state and federal AI regulations.",
     sameAs: [
-      "https://www.linkedin.com/company/ai-compliance-documents",
+      "https://www.natlawreview.com/",
     ],
     contactPoint: {
       "@type": "ContactPoint",
