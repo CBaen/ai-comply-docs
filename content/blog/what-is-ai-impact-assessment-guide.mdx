@@ -47,7 +47,9 @@ If you've been following state AI legislation, you've probably noticed a phrase 
 
 Different words, same underlying requirement. Every state AI law that has passed in the US asks businesses to formally document the risks of using AI — before deployment, not after something goes wrong. This post explains what that document actually is, what the three primary state laws require, what goes into one, and why its format isn't prescribed (and why that makes getting it right more important, not less).
 
-## What an AI Impact Assessment Actually Is
+## What is an AI impact assessment and what question does it answer?
+
+An AI impact assessment is a written document that formally answers one question before deployment: have you identified what could go wrong with this AI system, who could be harmed, and what you are doing about it? It documents the AI system, the decisions it affects, the populations it affects, the categories of harm it could cause, the data it uses, and the controls in place — creating a pre-deployment record that the organization evaluated risk seriously rather than responding to complaints after the fact.
 
 An AI impact assessment is a written document that answers a specific question: before your organization uses this AI system in a way that affects people, have you formally thought through what could go wrong, who could be harmed, and what you're doing about it?
 
@@ -55,13 +57,17 @@ Think of it like a construction site safety review. Before a building project be
 
 An AI impact assessment works the same way. You document the AI system, what decisions it affects, who it affects, what categories of harm it could cause, what data it uses, and what controls you have in place. The document becomes the record that you took the risk seriously before deploying the system — not a defensive artifact you produced after a complaint was filed.
 
-## Why Multiple States Now Require One
+## Why do multiple states now require an AI impact assessment before deploying AI systems?
+
+States mandate impact assessments because AI harms — discriminatory hiring algorithms, biased lending models, insurance pricing that correlates with race — are typically invisible at deployment and emerge only after months of operation. The assessment requirement forces organizations to confront risks like training data bias, flawed model assumptions, and testing gaps before deployment, not after a regulatory complaint or a discrimination lawsuit.
 
 The reason states started mandating impact assessments is simple: AI systems can cause harm in ways that are invisible at the time of deployment and only become apparent after they've been running for months. A hiring algorithm that screens out candidates from certain zip codes. A lending model that assigns higher rates to applicants from certain neighborhoods. An insurance pricing system that uses data that correlates with race even if race isn't directly input.
 
 None of these problems require malicious intent. They can emerge from biases in training data, from flawed assumptions in model design, from gaps in testing. The assessment requirement is the legislature's way of forcing organizations to confront these risks before they materialize — not just respond to complaints about them afterward.
 
-## How Each State Defines It
+## How do Colorado, California, and Illinois each define the AI impact assessment requirement?
+
+Colorado's SB 24-205 (effective June 30, 2026) requires deployers of high-risk AI systems to complete a formal "impact assessment" for each system before deployment and annually thereafter. California's finalized ADMT regulations (effective January 1, 2026) require a "risk assessment" weighing benefits against consumer privacy risks, with attestation due to CalPrivacy by April 1, 2028. Illinois HB3773 (effective January 1, 2026) does not name an assessment requirement but creates legal exposure for discriminatory AI outcomes that makes documentation a practical necessity.
 
 The three primary state laws that have enacted AI governance requirements each use slightly different terminology and create slightly different obligations. Here's what each one actually requires.
 
@@ -95,7 +101,9 @@ The statute does not explicitly require employers to create or maintain any spec
 
 The prohibition on discriminatory AI use creates an implicit need for internal documentation, but characterizing Illinois as "requiring" an impact assessment would overstate what the statute actually says. Illinois requires transparency about AI use and prohibits discriminatory AI — the documentation practices that prudent employers maintain follow from that prohibition, not from an express statutory documentation mandate. The penalties under the Illinois Human Rights Act reach up to $70,000 per violation for repeat offenders, and the law includes a private right of action, meaning employees can sue directly. ([775 ILCS 5/8A-104](https://www.ilga.gov/Documents/legislation/ilcs/documents/077500050K8A-104.htm))
 
-## What Goes Into an AI Impact Assessment
+## What elements must an AI impact assessment contain to satisfy state law requirements?
+
+Across Colorado's C.R.S. § 6-1-1702, California's ADMT regulations, and Illinois HB3773's compliance context, six elements are consistently required: system identification (what the AI does and produces), decision scope (what consequential decisions it affects and for whom), data inventory (sources, sensitive categories, bias risk), risk identification (harm categories including discrimination, privacy violations, and inaccurate decisions), benefit and proportionality analysis, and mitigation measures with documentation of controls. Colorado also requires annual review of each deployed system.
 
 Across all three state frameworks, the assessment document is trying to answer the same set of questions. The terminology varies, the specific requirements vary, but the underlying elements are consistent. The elements described below are drawn from the statutory framework, including Colorado's impact assessment provisions at C.R.S. § 6-1-1702; businesses relying on these for compliance should verify the current full list of required elements against the enacted statute text.
 
