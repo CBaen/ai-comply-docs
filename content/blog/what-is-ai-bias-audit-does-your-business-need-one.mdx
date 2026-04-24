@@ -58,7 +58,9 @@ The standard measurement is something called an impact ratio. The impact ratio c
 
 New York City's rules require the audit to calculate selection rates and impact ratios for each race/ethnicity category and each sex category as defined in the EEO-1 form categories — the same demographic categories employers already use in federal EEOC reporting. ([6 RCNY § 5-301](https://rules.cityofnewyork.us/wp-content/uploads/2023/04/DCWP-NOA-for-Use-of-Automated-Employment-Decisionmaking-Tools-2.pdf))
 
-## Where the Legal Requirement Comes From
+## Where does the legal requirement for an annual AI bias audit come from?
+
+The requirement is in NYC Administrative Code § 20-871, enacted as Local Law 144 of 2021 and implemented by NYC DCWP rules at 6 RCNY § 5-301. It makes it unlawful to use an AEDT in employment decisions unless the tool has been audited within the past year, results are publicly posted, and candidates receive advance notice. Enforcement began July 5, 2023.
 
 The requirement is in New York City Administrative Code Section 20-871, which was enacted as [Local Law 144 of 2021](https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9). The full city rules implementing the statute are at Title 6 of the Rules of the City of New York, Section 5-301, adopted by the NYC Department of Consumer and Worker Protection (DCWP). The law and its implementing rules together form what's typically called the "AEDT rules."
 
@@ -72,7 +74,9 @@ Enforcement began on July 5, 2023. ([NYC Department of Consumer and Worker Prote
 
 The law applies to employers who use automated employment decision tools for decisions about candidates or employees who work in New York City. "Automated employment decision tool" is defined as any computational process, derived from machine learning, statistical modeling, data analytics, or artificial intelligence, that issues simplified output — including a score, classification, or recommendation — that is used to substantially assist or replace discretionary decision making for employment decisions. ([NYC Admin. Code § 20-870](https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9))
 
-## What the Audit Actually Involves
+## What does an NYC Local Law 144 bias audit technically require?
+
+Under 6 RCNY § 5-301, the audit must be conducted by a genuinely independent third party (not the vendor or internal team), use historical employment data or — if insufficient — test data with explanation, calculate selection rates and impact ratios for each EEO-1 race/ethnicity and sex category, and produce a public summary including audit date, data source, category counts, selection rates, and impact ratios. The audit is valid for twelve months, then must be repeated.
 
 The bias audit has specific technical requirements set out in the NYC DCWP rules. Here's what the implementing regulations actually require. ([6 RCNY § 5-301](https://rules.cityofnewyork.us/wp-content/uploads/2023/04/DCWP-NOA-for-Use-of-Automated-Employment-Decisionmaking-Tools-2.pdf))
 
@@ -90,7 +94,9 @@ The bias audit has specific technical requirements set out in the NYC DCWP rules
 
 This is a technical process. The auditor needs access to the tool's output data — who it selected, who it didn't, and what demographic categories they fall into. It requires actual numbers, actual calculations, and a formal write-up. It is not a policy review or a design inspection; it is a measurement of real outcomes.
 
-## Who Needs a Bias Audit Under NYC LL144
+## Which employers need an annual AI bias audit under NYC Local Law 144?
+
+Any employer or employment agency using an AEDT for hiring or promotion decisions involving New York City roles is covered — regardless of where the employer is headquartered. The tool must use machine learning, statistical modeling, data analytics, or AI to produce a score, classification, or recommendation that substantially assists or replaces discretionary decision-making (NYC Admin. Code § 20-870). Employers cannot delegate the audit obligation to their vendor.
 
 The law applies to employers and employment agencies who use an AEDT in employment decisions for roles located in New York City. This includes:
 
@@ -103,7 +109,9 @@ The scope is limited to tools that "substantially assist or replace" discretiona
 
 If you use a third-party platform like an applicant tracking system or a talent intelligence tool, you need to check whether it uses machine learning, statistical modeling, or algorithmic scoring. Many do. The law applies to the employer, not just the vendor. You cannot outsource the audit obligation to the platform provider.
 
-## What Happens If You Don't Do One
+## What are the penalties for not conducting an annual AI bias audit under NYC Local Law 144?
+
+NYC DCWP can impose up to $500 for a first violation (§ 20-872(a)) and $500–$1,500 per subsequent violation per day. Each use of a non-audited AEDT on each candidate or employee is a potential separate violation — meaning a busy HR department processing hundreds of applications monthly faces compounding daily exposure. DCWP can also require the employer to cease using the tool and mandate corrective action.
 
 The NYC Department of Consumer and Worker Protection can impose civil penalties for violations. The penalty amounts are:
 
@@ -116,7 +124,9 @@ In addition to fines, the DCWP can require employers to cease using the tool and
 
 Beyond NYC's specific penalties, using a biased hiring tool exposes an employer to federal civil rights liability. The EEOC has been explicit that AI hiring tools producing discriminatory outcomes violate Title VII of the Civil Rights Act, regardless of whether the discrimination was intentional. ([EEOC Technical Assistance on Artificial Intelligence](https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines)) The bias audit requirement is NYC's mechanism for making employers catch and address disparate impact before it generates individual discrimination claims.
 
-## What a Bias Audit Does Not Do
+## What are the limits of an AI bias audit under NYC Local Law 144?
+
+A bias audit does not certify a tool as fair — it measures whether current outcomes show statistically significant disparities across demographic groups. It does not evaluate decision quality (an equally wrong tool for all groups would pass). It does not satisfy Illinois HB3773, EEOC guidelines, or other state notice and oversight requirements. And it is a point-in-time snapshot — if the tool is retrained or updated, the prior audit may no longer reflect current performance, which is why annual audits are required.
 
 Understanding the limits of a bias audit matters as much as understanding what it does.
 
@@ -128,7 +138,9 @@ A bias audit does not protect you from other legal obligations. Even a tool with
 
 A bias audit does not prevent future problems. It's a snapshot. If a tool is retrained, fine-tuned, or updated, the prior audit may no longer reflect current performance. This is one reason NYC requires annual audits rather than a one-time certification.
 
-## How to Get a Bias Audit Done
+## How does an employer actually get an NYC Local Law 144 bias audit completed?
+
+If using a major enterprise platform, ask whether the vendor has retained an independent auditor and whether results are available — verify the auditor's independence and that the audit used real employment data within the past year. If the vendor doesn't provide this, retain an independent firm with statistical expertise. Before the audit, prepare a dataset of tool outputs with EEO-1 demographic categories and documentation of how the tool was used in actual decisions.
 
 There are several paths, depending on your situation.
 
@@ -142,7 +154,9 @@ There are several paths, depending on your situation.
 
 **After the audit**, post the required summary on your website and maintain the documentation. If the audit reveals a significant disparity, you'll need to address it — either by adjusting how the tool is used, requesting that the vendor retrain or reconfigure the model, or discontinuing the tool.
 
-## The Notice Requirements Under LL144
+## What notice requirements does NYC Local Law 144 impose beyond the annual bias audit?
+
+Employers must provide written notice to candidates at least ten business days before using an AEDT, identifying that an AEDT will be used, the job qualifications and characteristics the tool will evaluate, and instructions for requesting an alternative process or accommodation (NYC Admin. Code § 20-871). Current employees must receive the same notice at least ten business days in advance. Both notices must include a link to the publicly posted bias audit summary. Notice and audit are separate obligations — satisfying one does not satisfy the other.
 
 The bias audit is only one part of LL144 compliance. The law also requires employers to provide specific notices before using the tool.
 
