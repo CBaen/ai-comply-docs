@@ -46,7 +46,9 @@ It's also not the full picture anymore.
 
 HIPAA was designed to protect health information — to ensure that data about patients is kept confidential, transmitted securely, and disclosed only in permitted ways. It does that well. What it was not designed to do is regulate whether your AI system makes biased clinical recommendations, whether patients have the right to appeal a coverage decision an algorithm helped make, or whether you've documented the discrimination risk your AI tools carry. Those obligations are coming from somewhere else — from state legislatures, from CMS, from HHS, and from the FDA — and healthcare organizations that are reading their HIPAA checklist and calling it done are building a compliance gap they may not see until it becomes a problem.
 
-## What Changed
+## What changed in healthcare AI regulation beyond HIPAA since 2024?
+
+HIPAA hasn't changed — but in the past two years, federal agencies and state legislatures have layered AI-specific requirements on top of it that address territory HIPAA never contemplated. The FDA has authorized [1,430 AI-enabled medical devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices) as of March 2026, CMS finalized rule CMS-4201-F governing algorithmic coverage decisions, and nine states enacted health-related AI legislation in 2024 alone.
 
 HIPAA hasn't changed. What changed is everything around it.
 
@@ -54,7 +56,9 @@ In the last two years, federal agencies and state legislatures have layered AI-s
 
 Healthcare is one of the domains most explicitly targeted by new AI regulation — and for a straightforward reason. The FDA has authorized [1,430 AI-enabled medical devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices) as of March 2026. AI is no longer an edge case in healthcare; it's embedded in radiology, cardiology, prior authorization, clinical documentation, patient triage, and care management at scale. Regulators have noticed.
 
-## What the New State Laws Require
+## What do new state AI laws require of healthcare organizations that HIPAA does not?
+
+[Colorado SB 24-205](https://leg.colorado.gov/bills/sb24-205), effective June 30, 2026, explicitly covers healthcare as a consequential decision domain and requires deployers to complete pre-deployment impact assessments evaluating algorithmic discrimination risk, notify patients before or at the time of AI-assisted decisions, provide a right to appeal with human review, and report discovered algorithmic discrimination to the Colorado Attorney General within 90 days. None of these are HIPAA requirements.
 
 Colorado's SB 24-205 is the most comprehensive state AI law currently on the books, and healthcare is explicitly one of its covered domains. ([SB24-205](https://leg.colorado.gov/bills/sb24-205)) The law applies to "high-risk artificial intelligence systems" — systems that make or substantially factor into "consequential decisions." The statute defines healthcare services decisions as consequential. That definition is broad enough to cover clinical decision support tools, patient triage algorithms, prior authorization AI, and care management systems.
 
@@ -72,7 +76,9 @@ If your organization deploys AI in any of those contexts in Colorado, SB 24-205 
 
 The effective date for SB 24-205 is June 30, 2026. The date was originally February 1, 2026, but was extended to June 30 during a special legislative session in August 2025 when the legislature passed [SB 25B-004](https://leg.colorado.gov/bills/sb25b-004). Colorado is first, but nine states enacted health-related AI legislation in 2024 alone. ([NCSL](https://www.ncsl.org/technology-and-communication/artificial-intelligence-2024-legislation)) This is a trend, not an outlier.
 
-## What Federal Agencies Are Doing
+## What are federal agencies requiring from healthcare organizations using AI systems?
+
+Three federal agencies have moved simultaneously on healthcare AI: CMS finalized [CMS-4201-F](https://www.cms.gov/newsroom/fact-sheets/2024-medicare-advantage-and-part-d-final-rule-cms-4201-f) requiring Medicare Advantage plans to base coverage decisions on individual circumstances rather than algorithmic blanket denials; HHS OCR proposed Section 1557 rulemaking targeting algorithmic discrimination in clinical decision-making; and ONC's HTI-1 rule added transparency requirements for AI-powered clinical decision support tools.
 
 State legislation is one front. Federal agencies are another — and in healthcare, several of them have moved simultaneously.
 
@@ -96,7 +102,9 @@ The Office of the National Coordinator for Health Information Technology (ONC) f
 
 The FDA's [Predetermined Change Control Plan (PCCP) guidance](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device) governs how AI-enabled medical devices can update their algorithms after initial authorization. If your organization uses FDA-authorized AI medical devices — which is increasingly common in radiology, pathology, and cardiology — your compliance obligations include understanding the authorized scope of those devices and how changes to them are managed. HIPAA tells you how to protect the data those devices handle. FDA guidance governs the devices themselves.
 
-## The Gap
+## What compliance gap exists between HIPAA requirements and new healthcare AI obligations?
+
+HIPAA requires security risk analysis, Business Associate Agreements, and breach notification — all focused on data protection. It does not require bias audits, impact assessments, patient notification before AI-assisted decisions, documented appeal processes, or reporting to a state Attorney General when algorithmic discrimination is discovered. A healthcare organization fully compliant with HIPAA may still be non-compliant with Colorado SB 24-205, CMS-4201-F, and emerging HHS Section 1557 rules.
 
 Here is the practical difference, stated plainly.
 
@@ -115,7 +123,9 @@ Those are different obligations entirely. They come from different statutes, enf
 
 The healthcare organization that has a complete HIPAA compliance program but no impact assessment, no bias audit, and no consumer notification process for AI-assisted decisions is compliant with the 1996 law. It is not compliant with what the regulatory landscape looks like in 2026.
 
-## What Documents You Need
+## What documents do healthcare organizations need to comply with AI laws beyond HIPAA?
+
+Healthcare organizations using AI in Colorado need impact assessments for each high-risk AI system, a risk management policy, consumer notification procedures, and a documented appeal process — none of which are part of standard HIPAA documentation. Organizations subject to CMS-4201-F additionally need records demonstrating that coverage decisions account for individual patient circumstances rather than algorithmic defaults.
 
 If you use AI in healthcare in Colorado, or in other states with similar laws, the compliance infrastructure you need goes beyond your existing HIPAA documentation.
 
@@ -127,7 +137,9 @@ If you use AI in healthcare in Colorado, or in other states with similar laws, t
 
 If you're not sure which of these laws apply to your organization, the [compliance self-assessment](/do-i-need-ai-compliance) is a practical starting point.
 
-## Where to Start
+## Where should healthcare organizations start to close the gap between HIPAA compliance and AI compliance?
+
+Start by separating two distinct questions for each AI system you deploy: "Are we HIPAA-compliant for this system?" (data protection) and "Are we AI-compliant for this system?" (algorithmic risk, bias, transparency, patient rights). Audit each clinical or coverage AI system against the new obligation set — impact assessment, consumer notification, bias evaluation, appeals process — and treat any "no" as a gap under state AI law, not a HIPAA gap.
 
 The first step is separating two questions that healthcare organizations often conflate: "Are we HIPAA-compliant for this AI system?" and "Are we AI-compliant for this AI system?" The first question is about data protection. The second is about algorithmic risk, bias, transparency, and patient rights. Both matter. They require different documentation and different processes.
 
