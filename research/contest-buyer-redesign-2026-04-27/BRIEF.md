@@ -2,8 +2,8 @@
 
 **Contest:** buyer-redesign-2026-04-27
 **Mode:** Standard (full machinery — Proxy coach, two-round visibility, reflective loops, dissent moment, tightening)
-**Contestants:** N=3
-**Top-K for tightening:** 2
+**Contestants:** N=5
+**Top-K for tightening:** 3
 **Domain:** Positioning + on-page redesign + keyword strategy
 **Stakes:** Real revenue. Site has 10,513 impressions / 28 days / 0 sales.
 
