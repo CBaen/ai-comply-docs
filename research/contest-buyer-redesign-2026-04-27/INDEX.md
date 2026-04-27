@@ -1,6 +1,6 @@
 # Contest Index — buyer-redesign-2026-04-27
 
-**Status:** Round 1 complete (all 5 contestants delivered all 8 deliverables + 4 of 5 produced the optional new-page-spec). Phase 1a — reflective loops — in progress.
+**Status:** Round 2 in progress with expanded scope. GL course-corrected mid-stream — original brief was too narrow (copy + keywords + CTAs); expanded to full brand presentation (visual web design + new brand voice + IA + ad creative). Round 1 substrate carries forward; new deliverables added; existing copy rewritten in new voice. Loop 2 of Round 1 SKIPPED (perspective shifts no longer fit the pivoted scope).
 
 ## Contest Configuration
 
