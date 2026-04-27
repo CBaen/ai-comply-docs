@@ -1,130 +1,172 @@
-# Homepage Rewrite — Contestant 5
+# Homepage Rewrite — Contestant 5 (v2 — new marketing voice + full IA)
+
+*v1 preserved at `homepage-rewrite-v1.md` for comparison. v1 diagnosed the SERP problem correctly; v2 applies the new voice and the full visual/IA overhaul from `visual-direction.md` and `ia-proposal.md`.*
 
 ---
 
 ## `<title>` tag
 
-**Proposed:**
+**Proposed (unchanged from v1 — still correct):**
 ```
 Colorado AI Law Deadline: June 30, 2026 — Compliance Documents for Small Business | AI Compliance Documents
 ```
 
-**Rationale:** The Colorado deadline is the most immediate, highest-intent buyer signal. Position 4.5 on "ai compliance packages" with only 4 impressions tells us we have zero buyer-query traffic on that term — the title needs to earn buyer-query impressions, not describe the catalog. The format "State Law + Deadline + Who It's For" matches what a buyer actually types. 78 characters — within Google's ~80-character title sweet spot.
-
-**Alternative for A/B (if Colorado is too narrow for homepage):**
+**Multi-state alternative (if Colorado scope feels too narrow):**
 ```
-AI Compliance Documents for Small Business — State Law Templates, Instant Download
+State AI Compliance Documents — Colorado, Illinois, NYC, Texas | AI Compliance Documents
 ```
 
 ---
 
 ## Meta description
 
-**Proposed:**
+**Proposed (160 chars, tightened from v1):**
 ```
-Colorado AI law takes effect June 30, 2026. Illinois, Texas, and NYC laws are in effect now. Get the compliance documents your business needs — built from enacted statute text. From $49, instant download.
+Colorado AI law: June 30, 2026. Illinois, Texas, NYC: in effect now. Statute-verified compliance documents — from $49, instant download. No subscription.
 ```
-
-**Rationale:** 196 characters — slightly over the ~160-character soft limit, but leads with the buyer's most urgent fact (the deadline), names the specific states they're in or operating in, specifies what the product IS (compliance documents, not "templates" which sounds generic), anchors price, anchors delivery. Stat signal: the Colorado blog post is at 855 impressions / 0 clicks — buyers are encountering the page in SERP but not clicking. The meta description is the click driver; this one earns it.
-
-**Shortened version (160 chars):**
-```
-Colorado AI law: June 30, 2026. Illinois, Texas, NYC laws in effect now. Statute-based compliance documents for your business — from $49, instant download.
-```
+(154 chars)
 
 ---
 
-## H1
+## Hero section — full spec in new voice
 
-**Current (hidden via `sr-only`, effectively invisible):**
+### Eyebrow label (above H1)
 ```
-AI Compliance Documents — State AI Compliance Templates
+STATE AI COMPLIANCE DOCUMENTS
 ```
+12px, uppercase, letter-spacing 0.1em, Signal Blue `#2563EB`. No punctuation. No "welcome to" prefix.
 
-**Proposed:**
+### H1 (visible — not sr-only)
+
+**v1 proposed:**
+> "Your business uses AI. These states have laws about that. Here's what you need."
+
+**v2 — new voice, shorter, offer-forward:**
 ```
-Your business uses AI. These states have laws about that. Here's what you need.
-```
-
-**Rationale:** This is a Pragmatic Realist opening. It does three things in one sentence: confirms audience (your business uses AI), anchors the threat (state laws), and promises resolution (here's what you need). It does NOT say "discover," "unlock," "transform," or "trusted by." It does not name Colorado or any state — that burden shifts to the sub-H1 and product carousel. The H1 is currently screen-reader-only, which is a missed opportunity — this copy should render visibly as the hero deck's primary statement above the product carousel.
-
----
-
-## Sub-H1 / Hero deck
-
-**Proposed (rendered below the H1, above the product carousel):**
-```
-Colorado SB 24-205 takes effect June 30, 2026. Illinois, Texas, and NYC AI laws are already in effect. If you use AI in hiring, lending, insurance, or consumer decisions — and you don't have compliance documents — the clock is running.
-
-Compliance packages from $49. Instant download. Built from the enacted statute text, not summaries.
+Your state has an AI law.
+We built the documents that comply with it.
 ```
 
-**Rationale:** The two paragraphs move through the BRIEF's prescribed arc. First paragraph is pure Pragmatic Realist: names the specific laws, names the effective date, names the use cases, makes the threat concrete. Second paragraph resolves the anxiety with product facts. No adjectives. No "discover." The phrase "the clock is running" is the only emotive element — earned by the preceding specifics, not floating in a vacuum.
+Two short lines. Inter 700. 48px desktop / 32px mobile. `#1E293B`. Line height 1.1.
 
----
+**Why the change from v1:** The v1 H1 was still Pragmatic Realist — explanation-mode, three-sentence arc. The new voice earns the same territory in 14 words by being declarative and offer-forward. "We built the documents that comply with it" is a promise and a claim in one sentence. The buyer hears: they have the specific thing I need.
 
-## Primary CTA
+### Urgency band (directly below H1, above CTA)
 
-**Current:**
+Not a paragraph. A single horizontal strip of deadline facts in the new voice:
+
 ```
-Browse Products →
+Colorado: June 30, 2026  ·  Illinois: in effect now  ·  NYC: in effect now  ·  Texas: in effect now
 ```
 
-**Proposed:**
+14px. State names link to respective product pages. Deadline dates render in Deadline Red `#DC2626`. Separator dots in `#94A3B8`. No label like "Deadlines:" — the facts speak for themselves.
+
+**This replaces the current trust bar** ("Multi-State Coverage / Instant Download / Built for the person who...") which belongs below the fold. The urgency band is the first thing below the H1 because it confirms the buyer's problem before asking them to click.
+
+### Primary CTA
+
 ```
 Find My Compliance Documents →
 ```
 
-**Rationale:** "Browse Products" is catalog language. It tells the buyer they're entering a store to look around. "Find My Compliance Documents" is task language — it positions the click as the beginning of getting their specific problem solved, not the beginning of browsing. The possessive "My" does important work: it personalizes the click and implies that the site will route them to the right thing, not make them figure it out themselves.
+Signal Blue `#2563EB`, white text. 18px, Inter 600. Padding: 16px 32px. Border-radius: 8px. Full-width on mobile, auto-width on desktop.
+
+**Unchanged from v1.** "Browse Products" → "Find My Compliance Documents" remains the single highest-impact copy change on the site.
+
+### Sub-CTA (below primary button)
+
+```
+Not sure which law applies to you?  Find your state's deadline →
+```
+
+14px text link, `#2563EB`. Links to `/compliance-deadline-by-state`.
+
+### Trust strip (below sub-CTA, last element above the fold)
+
+```
+From $49  ·  Instant download  ·  No subscription  ·  Powered by Stripe
+```
+
+12px, `#64748B`. Replace the current trust bar icons with plain text — the icon strip reads as marketing decoration; plain text reads as factual.
+
+### Right column (40% on desktop)
+
+One stationary product card for Colorado SB 24-205 — the highest-urgency product with the nearest hard deadline. Uses the new card design from `visual-direction.md`:
+
+- Status badge: EFFECTIVE SOON (amber)
+- Law name: Colorado SB 24-205
+- Deadline: June 30, 2026 (red)
+- Description: Risk management program, impact assessment, consumer notices
+- Price: $449
+- CTA: Get documents →
+
+This replaces the hero carousel. One product, visible immediately, no interaction required.
 
 ---
 
-## Sub-CTA (below primary)
+## Section order (5 sections per `ia-proposal.md`)
 
-**Current:**
+### Section 1: Hero (above the fold)
+As specced above. No FeaturedInBar above the hero — moves below.
+
+### Section 2: Product grid
+6 products, ordered by enforcement urgency. Static grid, no carousel. New product card design. Below the grid: "Not sure which one you need? [Find your state's deadline →](/compliance-deadline-by-state)"
+
+FeaturedInBar renders here — below the hero, after the buyer knows what the site is.
+
+### Section 3: Pain / Stakes ("What Happens If You Don't Comply?")
+Moved from section 7 to section 3. Copy largely unchanged — it's correct. Minor addition: per-consumer multiplication fact for Colorado with statute citation. See `ia-proposal.md` for detail.
+
+### Section 4: Trust strip (compressed methodology)
+Three trust signals in one horizontal row:
 ```
-(none — single CTA path)
+[✓] Built from enacted .gov statute text  ·  [✓] Citations verified against primary source  ·  [↓] Instant download via Stripe
+```
+No full-section treatment. The methodology depth lives on `/about`.
+
+### Section 5: Final CTA
+
+**v1 proposed:** "Don't wait for a complaint" (already good — kept)
+
+**v2 — new voice, two lines only:**
+```
+The deadline doesn't move because you weren't ready.
+Get your documents today.
 ```
 
-**Proposed:**
-```
-Not sure which law applies to you? Start here →
-```
-(Links to `/compliance-deadline-by-state` new page OR the FAQ `#faq` anchor)
+Primary CTA: "Find My Compliance Documents →" (Signal Blue, same as hero)
 
-**Rationale:** The GSC data shows "ai compliance packages" at position 4.5 — buyers are finding the homepage but converting at 0%. The two most common reasons buyers don't convert: (1) they don't know which specific product to buy, or (2) they're not sure whether they even need to comply. A secondary CTA that explicitly addresses the "not sure" case catches the buyer who would otherwise leave. This does NOT replace the primary CTA; it catches the person who would otherwise bounce.
+Support text (below button): `Questions? info@aicompliancedocuments.com`
 
 ---
 
-## Above-fold supporting elements
+## What is removed from the current homepage
 
-### Urgency bar (new, immediately below the hero deck)
+| Removed | Why |
+|---|---|
+| ProductCarousel with navigation arrows | Replaced by static product grid |
+| "How We Build Our Templates" as a full section | Compressed to 3-item trust strip |
+| "How It Works" 3-step section | Eliminated — this is an information-site section; the process is in the product page |
+| Both lifestyle image breaks | No visual function; signals editorial pacing not solution-provider pacing |
+| Blog/What's New section | Blog demoted to Resources in nav; not featured on homepage |
+| FeaturedInBar above the hero | Moved to below the product grid |
+| FAQ section on homepage | FAQ still lives at `/faq` (or `/#faq`) — not needed on homepage for the buyer who already knows what they need; accessible via nav |
 
-**Proposed:**
-
-A horizontal bar reading:
-
-```
-Colorado deadline: June 30, 2026  ·  Illinois: in effect now  ·  Texas: in effect now  ·  NYC: in effect now
-```
-
-With each state name linked to its respective product page.
-
-**Rationale:** The current trust bar ("Multi-State Coverage / Instant Download / Built for the person who...") is methodological, not urgency-anchored. It describes the product rather than confirming the buyer's problem. The urgency bar replaces OR supplements the current trust bar with a single row of deadline facts. Each date is a real, verified date — no editorializing, no "could face fines," just the facts. This is the Precise Credentialist voice operating at the page-structure level.
+**Note on FAQ removal from homepage:** The FAQ is valuable content that addresses real buyer objections. It stays accessible — in the nav, on a dedicated FAQ page, and potentially as a sidebar element on product pages. But a 9-item FAQ accordion on the homepage reads as a manual the buyer must read before they can purchase. The new homepage assumes the buyer has a specific problem and routes them to the product that solves it. The FAQ is for the buyer with pre-purchase objections — that buyer is better served by a dedicated FAQ page linked from the product sidebar than by a homepage section they have to scroll past.
 
 ---
 
-## What stays the same
+## Voice comparison: v1 sub-H1 vs. v2 H1
 
-- The "How We Build Our Templates" methodology section — this is a genuine trust differentiator that no competitor at the SMB price point has
-- The "What Happens If You Don't Comply?" section with specific penalty amounts by state — this is exactly right, keep it
-- The FAQ section — the questions match real buyer objections
-- The final CTA section ("Don't wait for a complaint") — tone is right
+**v1 sub-H1 (Pragmatic Realist, explanation mode):**
+> "Colorado SB 24-205 takes effect June 30, 2026. Illinois, Texas, and NYC AI laws are already in effect. If you use AI in hiring, lending, insurance, or consumer decisions — and you don't have compliance documents — the clock is running. Compliance packages from $49. Instant download. Built from the enacted statute text, not summaries."
 
-## What changes
+That's 57 words. Correct, complete, clear. Also: an explainer. A buyer who already knows they have a problem reads past this to find the product.
 
-- H1 moves from `sr-only` to visible
-- Meta title pivots from catalog ("Templates for Every State AI Law") to urgency+buyer ("Colorado Deadline: June 30, 2026")
-- Primary CTA copy: "Browse Products" → "Find My Compliance Documents"
-- Urgency bar added immediately below hero deck, above methodology section
-- Product carousel remains, but the four featured products should reorder: Colorado first (most urgent deadline), then Illinois (in effect now, highest penalty at $70K), then NYC (in effect since 2023, high search volume), then Texas
+**v2 H1 + urgency band + trust strip (new marketing voice):**
+> "Your state has an AI law. We built the documents that comply with it."
+> [Colorado: June 30, 2026 · Illinois: in effect now · NYC: in effect now · Texas: in effect now]
+> [Find My Compliance Documents →]
+> [From $49 · Instant download · No subscription · Powered by Stripe]
+
+That's 30 words plus 4 deadline facts. The same information. The urgency, the states, the price, the delivery — all present. But now in the offer-forward voice, not the explainer voice. The buyer who arrived deadline-anxious clicks in 5 seconds.

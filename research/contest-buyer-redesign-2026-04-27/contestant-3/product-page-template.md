@@ -1,215 +1,268 @@
 # Product Page Template — Colorado SB 24-205
 
+**[Round 2 rewrite — new marketing voice. v1 preserved in product-page-template-v1.md]**
+
+---
+
 ## Why Colorado
 
-Research basis: Colorado SB 24-205 has the most imminent active deadline of any law in the catalog (June 30, 2026 — confirmed via WebFetch from leg.colorado.gov). It covers the broadest set of consequential decisions (employment, lending, insurance, healthcare, housing, education). The product page sits at position 11.14 with 350 impressions — page 2, one ranking improvement from a significant traffic gain. And the buyer query "Colorado SB 24-205 compliance template" is actively searched with purchase intent, per live WebSearch research showing vendors like TrustArc and law firms competing for it — but none offering instant-download documents.
+Position 11.14 / 350 impressions. Page 2. The most imminent active deadline in the catalog: June 30, 2026. The buyer query "Colorado SB 24-205 compliance documents" is actively searched. No instant-download competitor exists at this price point. One title-tag improvement moves this page from invisible to functional.
 
 ---
 
-## Current Page Problems (diagnosed from page.tsx review)
-
-1. **`<title>` is bibliographic, not buyer-facing:** "Colorado SB 24-205 — AI Consumer Protections — Compliance Documents | AI Compliance Documents" — five dashes, no urgency, no buyer signal
-2. **Meta description** pulls from `regulations.ts`'s `description` field — catalog language, not buyer language
-3. **The H1 is the law's formal name**, not a buyer-oriented hook
-4. **"Does This Apply to You?" section exists** but is buried below the page fold — this is the most important section and should be the first visible element
-5. **Penalty section appears AFTER** all the product details — penalties are the motivation; they should be near the top to validate why the buyer is here
-6. **No deadline countdown language** anywhere above the fold — "June 30, 2026" does not appear in the hero
-
----
-
-## Revised Product Page — Full Structure
-
-### `<title>` tag
+## `<title>`
 
 ```
 Colorado SB 24-205 Compliance Documents — Deadline June 30, 2026
 ```
 
-**Rationale:** Deadline in the title gives the SERP click a reason. Moves position 11 → potential position 4-7 click behavior because the title matches buyer urgency, not just keyword presence. (CTR at position 7 is 3.0% — matching buyer intent in the title can double or triple that.)
+Deadline in the title. The only product page in any search result with the date. CTR at position 7 is 3.0% (First Page Sage 2026, fetched live). Matching buyer urgency in the title can move click behavior even without a ranking change.
 
 ---
 
-### `<meta description>`
+## `<meta description>`
 
 ```
-Colorado SB 24-205 takes effect June 30, 2026. If you deploy AI in hiring, lending, insurance, or healthcare, you need an impact assessment, risk management policy, and consumer notices. Get all 8 documents — built from the enacted statute text — instant download, $449.
+Colorado SB 24-205 takes effect June 30, 2026. Deployers need a risk management policy, impact assessment, and consumer notices. 8 documents, built from C.R.S. § 6-1-1702, instant download — $449.
 ```
 
-**Rationale:** States the deadline first. Names the specific documents required (which no competitor does in a meta description). Names the price. 158 characters.
+156 characters. Deadline first. Document types second (no competitor names these in a meta). Price. Citation.
 
 ---
 
-### Above-the-fold Hero Section
+## Hero Section (above fold)
 
-**Status badge (keep existing component, revise label copy):**
+### Status badge
+
 ```
 DEADLINE: JUNE 30, 2026
 ```
-(Currently shows: "EFFECTIVE SOON" — too passive for a buyer with 2 months until deadline)
 
-**H1:**
-```
-Colorado SB 24-205 — You Have Until June 30.
-```
+Current badge reads "EFFECTIVE SOON" — passive. This is amber (`#B45309`), uppercase, Inter 600. The badge is the first thing the eye lands on in the hero. It should carry the most specific urgency signal on the page.
 
-**Sub-H1 lede:**
+### H1
+
 ```
-If your business deploys AI in employment, lending, insurance, healthcare, or housing decisions in Colorado, you are a "deployer" under SB 24-205. By June 30, 2026, you need documented risk management, impact assessments, and consumer notice procedures — or you face enforcement as a deceptive trade practice under the Colorado Consumer Protection Act, with penalties up to $20,000 per violation.
+Colorado SB 24-205.
+The documents. $449.
 ```
 
-**Rationale:** "Deployer" in quotes is the statute's own defined term — it signals statutory precision to the buyer. Penalty amount ($20,000) is sourced from the Colorado Consumer Protection Act, which SB 24-205 incorporates for enforcement, verified live via WebSearch. "Deceptive trade practice" is the statutory classification — naming it exactly is both accurate and more alarming than "civil penalty," which the current copy uses.
+Two lines. Thirteen words including the price. The law name. The product category. The price. Nothing else above the fold needs to be said — the buyer who searched "Colorado SB 24-205 compliance documents" already knows why they're here. The H1 confirms they landed correctly and names the cost in the same breath.
 
-**Price + CTA (keep existing component, revise sub-copy):**
+This is the hardware store register: you walked up with a part, the cashier names the price. No orientation paragraph.
+
+### Sub-lede (below H1, before price/CTA)
+
 ```
-$449 — one-time purchase
+If you deploy AI in hiring, lending, insurance, healthcare, or housing in Colorado, you are a deployer under SB 24-205. Deadline: June 30, 2026. Enforcement: Colorado Consumer Protection Act. Penalty: up to $20,000 per violation.
 ```
-Sub-copy below price:
+
+Three sentences. Applicability. Deadline. Consequence. That's all the sub-lede needs to do. The buyer either qualifies or doesn't. If they do, they scroll. If they don't, they've learned something useful and should leave.
+
+Penalty source: Colorado Consumer Protection Act, C.R.S. § 6-1-113, verified via WebSearch this session.
+
+### Price and CTA (keep existing component)
+
 ```
-8 documents, instant download, built from C.R.S. § 6-1-1701 et seq.
-vs. weeks and thousands at a law firm
+$449  one-time purchase
 ```
+
+Sidebar CTA button:
+```
+Get Your Documents — $449
+```
+
+Replace current "Customize Now — $449" with "Get Your Documents." "Customize" implies configuration work. "Get" implies you can have it now. The product is instant download — the CTA should sound like it.
+
+Below button:
+```
+64 days remaining
+vs. $400–$800/hour to draft from scratch
+```
+
+"64 days remaining" is dynamically computed: `Math.ceil((new Date('2026-06-30') - new Date()) / 86400000)`. After June 30: switch to "IN EFFECT — enforcement active." This is one line of JS in the sidebar component.
 
 ---
 
-### Section Order Revision
+## Revised Section Order
 
-**Current order:**
-1. Hero (law name, price, CTA)
-2. Key stats bar
-3. Does This Apply to You?
-4. Illinois IDHR notice (N/A for CO)
-5. Lifestyle image
-6. What's Included
-7. Preview Your Documents
-8. See Inside Your Documents
-9. Penalties
-10. ESIGN Act note
-11. What Happens After You Purchase
-12. Complete Your Compliance (add-ons)
-13. Statutory Authority
-14. Questionnaire
+The IA proposal moves penalties before documents. Here's the full new order with copy in the new voice:
 
-**Revised order (copy changes only — no structural rebuild):**
-1. Hero (revised copy above)
-2. Key stats bar
-3. **"Does This Apply to You?" — MOVE THIS ABOVE THE LIFESTYLE IMAGE** (it's currently below it in visual weight — it should be the first substantive section after the stats bar)
-4. **Penalty callout block — NEW PLACEMENT, before "What's Included"** (motivation before product)
-5. What's Included
-6. Preview Your Documents
-7. What Happens After You Purchase
-8. Complete Your Compliance (add-ons)
-9. Statutory Authority
-10. Questionnaire
+### Section 1 — "Does This Apply to You?" (first substantive section)
 
----
-
-### "Does This Apply to You?" Section — Revised Copy
-
-**Section header (keep visual component, revise copy):**
+**H2:**
 ```
 Does Colorado SB 24-205 Apply to Your Business?
 ```
 
-**Bullets (revise from current generic bullets to statute-specific language):**
+**Bullets (statute-precise, in new voice):**
 
-Current bullets:
-- "You do business in Colorado or target Colorado consumers"
-- "You use an AI system that substantially factors into consequential decisions"
-- "Consequential decisions include: employment, lending, insurance, housing, healthcare, education, government services, legal services"
+- You operate in Colorado or target Colorado consumers — physical presence not required
+- You use an AI tool that substantially factors into decisions about hiring, lending, insurance, healthcare, housing, or education
+- You are the business using the AI — even if you didn't build it, you are a "deployer" under the statute
+- You are not a small deployer (fewer than 50 FTEs) who uses only the developer's unmodified system with the developer's own training data — that's the narrow small-business exemption
 
-Revised bullets (adding specificity):
-- You operate in Colorado **or** target Colorado consumers — physical presence is not required
-- You use an AI tool that substantially factors into decisions about hiring, promotion, lending, insurance, housing, healthcare, or education
-- You are the company using the AI (you are a "deployer" under the statute) — even if you didn't build the tool yourself
-- You are not a deployer with fewer than 50 FTEs who uses only the developer's own data and published specifications (the small business exemption — if this applies to you, the law's documentation requirements are reduced but not eliminated)
-
-**Section sub-copy (after bullets):**
+**After bullets:**
 ```
-There is no revenue minimum under SB 24-205. No employee minimum for most requirements. The law is volume-agnostic — a 10-person company that uses an AI hiring tool faces the same core obligations as a multinational. ([SB 24-205, C.R.S. § 6-1-1702 et seq.](https://leg.colorado.gov/bills/sb24-205))
+No revenue minimum. No employee minimum for most requirements. A 10-person company using an AI hiring tool has the same core obligations as a Fortune 500. ([SB 24-205, C.R.S. § 6-1-1702](https://leg.colorado.gov/bills/sb24-205))
 ```
 
-**Rationale:** The small-business exemption note addresses the #1 buyer misconception (confirmed in SMB research: "I assumed the rules only apply to big companies"). Naming it explicitly — including that it reduces but doesn't eliminate obligations — prevents the buyer from disqualifying themselves incorrectly.
+### Section 2 — Penalties (moved before "What's Included")
+
+**H2:**
+```
+What Happens Without These Documents
+```
+
+**Body (new voice — short, exact):**
+```
+Colorado enforces SB 24-205 through the Colorado Consumer Protection Act. Violations are deceptive trade practices. The Attorney General has exclusive enforcement authority.
+
+Penalty: up to $20,000 per violation. ([C.R.S. § 6-1-113](https://coag.gov/office-sections/consumer-protection/))
+
+If you discover your AI system has caused algorithmic discrimination, you must report it to the AG within 90 days. Failure to report is a separate violation.
+
+The AG's first question after a complaint: show me your risk management policy and impact assessment. Without those documents, you have no affirmative defense.
+```
+
+**Red callout block (keep existing visual component):**
+```
+Maximum: up to $20,000 per violation — Colorado Consumer Protection Act
+```
+
+### Section 3 — "What's Included" (8 documents)
+
+**H2:**
+```
+8 Documents. Everything the Statute Requires.
+```
+
+Keep existing document list with DOC_EXPLANATIONS. Add one line per document in the new voice:
+
+After each document name and explanation, add:
+```
+Required by: C.R.S. § 6-1-[section]
+```
+
+This converts each document from "here's what it does" to "here's why you can't skip it." The statute citation is the authority signal — the document isn't a convenience, it's a legal requirement.
+
+### Section 4 — Document Preview
+
+Keep existing `<DocumentSamplePreview>` component. H2:
+```
+See What You're Getting
+```
+
+(Shortened from "Preview Your Documents" — more direct.)
+
+### Section 5 — What Happens After Purchase
+
+**H2:**
+```
+Download. Fill. Sign. Done.
+```
+
+**Body (new voice — step format, no filler):**
+```
+1. Your 8 documents generate instantly as fillable PDFs.
+2. Download the zip file or email to up to 3 team members.
+3. Fill in the highlighted fields — your company name, AI systems, compliance details.
+4. Sign using the electronic signature blocks. ESIGN Act compliant. No printing.
+5. Have your attorney review before deployment.
+```
+
+Replace the current five-bullet prose block. Same information. Half the words.
+
+### Section 6 — Add-ons (if applicable)
+
+Keep "Complete Your Compliance" section. H2:
+```
+Add-Ons for This Package
+```
+
+(Shorter than "Complete Your Compliance" — more direct.)
+
+### Section 7 — Statutory Authority
+
+Keep existing section. This is correct as-is — the citation block with link to the enacted law is a trust anchor, not conversion friction.
+
+### Section 8 — Questionnaire
+
+Keep existing Questionnaire component. H2:
+```
+Customize Your Colorado Package
+```
+
+(Current is "Customize Your Colorado SB 24-205 Package" — remove the law citation from the questionnaire header. The buyer is already on the page. They don't need the reminder.)
 
 ---
 
-### Penalty Callout Block — New Placement and Revised Copy
-
-**Place this BEFORE "What's Included," not after.**
-
-```
-What Happens Without Documentation
-```
-
-```
-Colorado enforces SB 24-205 through the Colorado Consumer Protection Act. Violations are classified as deceptive trade practices. The Attorney General has exclusive enforcement authority — no private right of action. Civil penalties: up to $20,000 per violation. ([Colorado Consumer Protection Act, C.R.S. § 6-1-113](https://coag.gov/office-sections/consumer-protection/))
-
-If a deployer discovers algorithmic discrimination, they must report it to the AG within 90 days. Failure to report is a separate violation.
-
-Documentation matters because the AG's first question after a complaint is: "Show me your risk management policy and impact assessment." If you don't have one, you have no affirmative defense.
-```
-
-**Rationale:** The current penalty section says "Maximum: [maxPenalty]" from the data field. That's accurate but passive. The revised copy adds context — enforcement mechanism, the 90-day reporting obligation, the role documentation plays in an affirmative defense. This is the Precise Credentialist voice: exact amounts, exact citation, exact statutory mechanism.
-
----
-
-### Sidebar Purchase Card — Revised Sub-Copy
-
-Current:
-```
-vs. thousands at a law firm
-```
-
-Revised:
-```
-Deadline: June 30, 2026 — 64 days remaining
-vs. $400–$800/hour to draft from scratch
-```
-
-**Rationale:** "64 days remaining" is a concrete countdown that activates urgency without fabricating it. (Note to build team: this should be computed dynamically from the effective date field in regulations.ts — `Math.ceil((new Date('2026-06-30') - new Date()) / (1000 * 60 * 60 * 24))` days. If after June 30, switch to "IN EFFECT — enforcement active.") The attorney hourly rate is documented in the current page.tsx FAQ already ($400-$800/hour) — pulling it into the sidebar makes it visible at the moment of purchase decision.
-
----
-
-### Blog Guide Card — Revised CTA Copy
+## Blog Guide Card — Revised Copy
 
 Current:
 ```
 "Read our plain-language guide to this law →"
 ```
 
-Revised:
+New voice:
 ```
-"New to Colorado SB 24-205? Start here — plain-language explanation of what the law requires →"
+"New to Colorado SB 24-205? Start with the plain-language guide, then come back for the documents. →"
 ```
 
-**Rationale:** Frames the blog post as a starting point for the pre-qualified buyer, not a substitute for purchasing. The current copy sends the buyer away from the purchase decision without a promise to return. The revised copy positions the blog as an orienting step in the purchase journey.
+"Come back for the documents" explicitly preserves the purchase intent while giving the reader permission to learn first. It's a routing instruction, not a departure invitation.
 
 ---
 
-### "What's Included" Section — Add Applicability Anchors
-
-For each document in the list, after the existing DOC_EXPLANATIONS text, add one line:
+## Sidebar Purchase Card — Full Revised Copy
 
 ```
-[Document Name]
-[Existing explanation]
-Required by: C.R.S. § 6-1-[section] ([leg.colorado.gov link])
-```
+[LABEL — blue, 12px caps]
+COMPLETE PACKAGE
 
-**Rationale:** The current document list explains what each document does but doesn't say which statute section requires it. Adding the citation turns each item into a trust signal: the buyer sees that the document isn't invented — it's a specific statutory obligation. This is the Precise Credentialist voice applied to the purchase interface.
+[PRICE — 40px Inter 700]
+$449
+
+[SUB — 14px gray]
+One-time. Instant download.
+
+[COUNTDOWN — amber, 14px]
+64 days until June 30 deadline
+
+[CHECKLIST — 14px]
+✓ 8 documents, customized to your business
+✓ Built from C.R.S. § 6-1-1702
+✓ Instant digital download
+✓ Secure checkout via Stripe
+
+[PRIMARY BUTTON — full width, Document Blue]
+Get Your Documents — $449
+
+[SECONDARY LINK — 14px]
+Or start the questionnaire first →
+
+[VS LINE — 12px gray]
+vs. $400–$800/hour at a law firm
+
+[VERIFIED BADGE — green background]
+✓ Verified against enacted statute text
+Source: C.R.S. § 6-1-1702 →
+
+[CONTACT — 12px gray]
+Questions? info@aicompliancedocuments.com
+```
 
 ---
 
-## What Stays the Same
+## What Stays Unchanged
 
-- The visual design of the sidebar purchase card
-- The QuickPurchaseButton component
-- The questionnaire flow
-- The document preview section
-- The ESIGN Act note
-- The statutory authority section (citation + link to enacted law)
-- Related add-ons section
+- URL: `/products/colorado-sb24-205` — no change
+- Questionnaire component and flow
+- QuickPurchaseButton component
+- BreadcrumbSchema
 - Related products section
+- ESIGN Act note (keep, condense into Step 4 of the new "What Happens After Purchase" section)
+- Legal disclaimer (auto-rendered by page.tsx)
 
 ---
 
-*Research basis: Colorado SB 24-205 primary source (leg.colorado.gov, fetched live); Colorado Consumer Protection Act penalty amounts (via WebSearch, verified live — up to $20,000 per violation); SMB pre-purchase objection research (qualification anxiety, size misconception, enforcement doubt all confirmed); CTR benchmark data (position 7 = 3.0%, meaning a title-match improvement could realistically triple click volume from current position).*
+*Research basis: Colorado SB 24-205 primary source (leg.colorado.gov, fetched live); Colorado CPA penalty amounts ($20,000/violation, verified via WebSearch); CTR benchmarks (First Page Sage 2026, position 7 = 3.0%, fetched live); SMB objection research (size misconception, enforcement-doubt — both addressed in "Does This Apply to You?" section). Voice: new marketing voice from voice-spec.md.*

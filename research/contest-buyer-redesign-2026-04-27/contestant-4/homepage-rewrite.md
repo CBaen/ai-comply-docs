@@ -1,10 +1,6 @@
-# Homepage Rewrite — Contestant 4
+# Homepage Rewrite — Contestant 4 (v2)
 
-## The Concept
-
-The current homepage is optimized for researchers: generic AI compliance coverage statements, methodological trust signals, then product carousels. The buyer — a business owner who just realized they owe legal documents by a specific date — needs the opposite: lead with the deadline, lead with the law's name, lead with the consequence. Then show them the document that solves it.
-
-The redesign reorders the page around deadline urgency and state-specific action, not catalog browsing.
+*(Round 1 version archived as `homepage-rewrite-v1.md`. This version rewrites all marketing-surface copy in the new voice. The structural section order and metadata rationale carry forward; the copy is the change.)*
 
 ---
 
@@ -12,180 +8,234 @@ The redesign reorders the page around deadline urgency and state-specific action
 
 ### `<title>` tag
 ```
-AI Compliance Documents — Colorado, Illinois, NYC, Texas AI Law Templates | Instant Download
+AI Compliance Documents — Colorado, Illinois, NYC & Texas AI Law Templates
 ```
 
-**Rationale:** The current title ("Templates for Every State AI Law") is catalog copy. No one searches "templates for every state AI law." Buyers search for the specific law they just discovered applies to them. The new title includes the four highest-priority state names — the same terms buyers type into Google — while preserving the instant-download signal that separates this product from law firm retainers. Character count: 88 (within Google's display range for most titles).
+**Rationale:** Names the four highest-traffic state laws buyers are already searching. 71 characters. No "Templates for Every State AI Law" catalog description. A buyer searching "Colorado AI compliance documents" sees their state in the title — that's the click signal.
 
-### Meta description
+### Meta description (157 chars — fits SERP fully)
 ```
-Colorado SB 24-205 takes effect June 30, 2026. Illinois HB3773 is in effect now. NYC Local Law 144 enforcement is increasing. Get the documents the law requires — built from enacted statute text, not AI summaries. Download in minutes. $49–$697.
+Colorado SB 24-205 deadline: June 30, 2026. Illinois HB3773 is in effect. Get the documents your state's AI law requires. Built from statute. $49–$697. Instant download.
 ```
 
-**Rationale:** Three specific law names, three specific urgency signals, one differentiator (built from statute, not AI summaries — which directly counters the buyer's biggest trust objection in this niche), and price range to filter qualified buyers. 248 characters — slightly over the 160-character Google limit, so the SERP will truncate, but the first 160 characters carry the three law names and the enforcement signal. This is intentional: the buyer who sees "Colorado SB 24-205 takes effect June 30, 2026. Illinois HB3773 is in effect now. NYC Local Law 144..." already knows this is for them.
-
-Shorter alternative (157 chars, fits SERP fully):
-```
-Colorado SB 24-205 deadline: June 30, 2026. Illinois HB3773 is in effect now. Get the compliance documents the law requires — built from enacted statute text. $49–$697.
-```
+**Rationale:** Two laws named, two urgency modes covered (deadline approaching / in force), price range, speed signal. Every word earns its place.
 
 ---
 
-## Above-the-Fold (Hero Section)
+## Hero (Above the Fold)
 
-### H1
+### New H1 (visible — not sr-only)
 ```
-Your State Has an AI Law. It Applies to You Now.
-```
-
-**Rationale:** The current H1 is screen-reader-only: "AI Compliance Documents — State AI Compliance Templates." The buyer never sees it. The new H1 speaks directly to the buyer's first question — "does this apply to me?" — and answers it before they read anything else. The word "now" carries the enforcement urgency without being hyperbolic. Short sentences. Direct address. Realist voice.
-
-**Alternative H1 (more specific, lower volume):**
-```
-The AI Law Deadline Is June 30, 2026. Here Are Your Documents.
+Your State Has an AI Law. Here Are the Documents It Requires.
 ```
 
-### Sub-H1 / Deck
+**Voice note:** Short. Declarative. Offer-shaped. Not "AI compliance templates help businesses navigate state AI regulations." No preamble.
+
+### Sub-H1
 ```
-Colorado SB 24-205. Illinois HB3773. NYC Local Law 144. California ADMT. Texas TRAIGA. These laws are in effect or taking effect soon. If you use AI in hiring, lending, insurance, or consumer decisions — and you operate in any of these states — you have legal obligations right now. Here's how to meet them.
+Colorado. Illinois. NYC. California. Texas.
+The documents the law requires. Built from statute. Instant download.
 ```
 
-**Rationale:** Names the specific laws buyers are already searching for. Uses the exact phrasing that matches buyer-intent queries. Specifies the use-case categories (hiring, lending, insurance, consumer decisions) so the business owner can self-qualify without reading the FAQ. No jargon. No softening qualifiers. Realist voice exactly per BLOG-STYLE-GUIDE.md.
+**Voice note:** Two sentences. Law names first. What you get second. How it's built third. In that order. No explanation of what AI compliance is — the buyer already knows.
 
-### Primary CTA Button
+### Primary CTA button
 ```
 Find Your State's Documents →
 ```
 
-**Rationale:** The current CTA is "Browse Products." That's catalog copy. "Find Your State's Documents" is a task — the buyer already knows which state they're worried about. This CTA implies the site knows which documents they need, not just a catalog to browse. Links to `/products` filtered by state, or to the compliance-deadline page (see `new-page-spec.md`).
+**Voice note:** A task, not a catalog invitation. Buyer-oriented verb. Specific enough to imply "we know which documents your state requires."
 
-### Sub-CTA
+### Sub-CTA (below button, smaller text)
 ```
-Not sure which law applies to you? Start here →
+Not sure which law applies? See deadlines by state →
 ```
 
-**Rationale:** Addresses the #1 buyer objection surfaced in research: "Do we really need to worry if we're just using basic tools?" and "decision paralysis — not knowing whether their specific situation triggers obligations." Links to `/compliance-deadline-by-state` (new page spec) or the FAQ section.
+Links to `/compliance-deadline-by-state`.
 
 ---
 
-## Urgency Bar (New Element — Replace "FeaturedInBar")
+## Urgency Panel (Replaces FeaturedInBar)
 
-Immediately below the hero, before any other content. Replaces the generic "Featured In" bar with a live deadline ticker.
+Three rows. One per highest-urgency law. Two urgency modes — Deadline Approaching (amber) and Already Exposed (red). Each row links directly to the product page.
 
+**Row 1 — Already Exposed:**
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│  COLORADO SB 24-205     │  ILLINOIS HB3773       │  NYC LL 144       │
-│  June 30, 2026          │  In Effect Now         │  In Effect Now    │
-│  $20,000/violation      │  Up to $70,000/viol.   │  $500–$1,500/day  │
-└─────────────────────────────────────────────────────────────────────┘
+🔴 Illinois HB3773   |   In Effect Now   |   Up to $70,000/violation   |   [Get Documents →]
 ```
 
-Each penalty figure links to the product page for that state. The "In Effect Now" badges use the existing red `in-effect` status badge design. The date/penalty information is primary-source verified.
+**Row 2 — Deadline Approaching:**
+```
+🟡 Colorado SB 24-205   |   June 30, 2026   |   Up to $20,000/violation   |   [Get Documents →]
+```
 
-**Penalty source citations (for developer implementation):**
-- Colorado $20,000: Colorado Consumer Protection Act (C.R.S. § 6-1-112), via SB24-205 enforcement mechanism — [leg.colorado.gov/bills/sb24-205](https://leg.colorado.gov/bills/sb24-205)
-- Illinois up to $70,000: ILCS 5/8A-104, repeat violation tier — [ilga.gov](https://www.ilga.gov/legislation/ilcs/documents/077500050K8A-104.htm)
-- NYC $500–$1,500/day: NYC Admin. Code § 20-871(d) — [NYC DCWP](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page)
+**Row 3 — Already Exposed:**
+```
+🔴 NYC Local Law 144   |   In Effect — Enforcement Rising   |   $500–$1,500/day   |   [Get Documents →]
+```
 
-**Rationale:** Research finding: The site's top queries are researcher-intent ("ai governance framework template"), while the buyer-intent queries ("ai compliance packages", "ai compliance cost") get almost no traffic despite ranking at positions 3–4.5. The urgency bar is the first thing a buyer sees. It replaces a researcher-appealing "featured in" signal with a buyer-triggering penalty signal. It also serves as the state navigation shortcut that the product carousel currently fails to provide clearly.
+**Implementation note:** Penalty figures are statute-verified. Colorado $20,000 derives from the Colorado Consumer Protection Act (C.R.S. § 6-1-112) via SB24-205 enforcement mechanism — verify against current statute before publishing. Illinois $70,000 from [ILCS 5/8A-104](https://www.ilga.gov/legislation/ilcs/documents/077500050K8A-104.htm) (repeat violation tier). NYC $500–$1,500/day from NYC Admin. Code § 20-871(d).
 
 ---
 
-## Section Order (Full Page)
+## Section 2: Products Grid
 
-### Current order:
-1. Hero (product carousel — catalog)
-2. Featured In bar
-3. Methodology (how we build)
-4. How It Works (process)
-5. [Image break]
-6. Pain section (consequences)
-7. FAQ
-8. Final CTA
+### Already Exposed (header)
+```
+These laws are in effect now. Enforcement is active.
+```
 
-### Proposed order:
-1. **Hero** — deadline-anchored H1, deck with law names, primary CTA
-2. **Urgency Bar** — state penalties with deadlines (replaces FeaturedInBar)
-3. **"Does This Apply to You?" section** — three buyer scenarios (new, short)
-4. **Pain section** — consequences, moved up before How It Works
-5. **How It Works** — 3-step process, now comes after pain is established
-6. **Methodology** — trust signals (stays, moves to after conversion section)
-7. **State Documents Grid** — replaces product carousel with state-organized view
-8. **FAQ** — reordered to address buyer objections first (see below)
-9. **Final CTA**
+**Voice note:** Not "Laws currently in force." That's documentation language. "In effect now. Enforcement is active." — that's the buyer's situation named plainly.
 
-### Rationale for reorder:
-The current order shows the solution (methodology, how it works) before establishing the problem (pain/consequences). A buyer landing from a search like "Colorado AI law compliance template" needs the pain confirmed first — the deadline, the penalty — before they can evaluate whether the solution is right for them. Moving the pain section above "How It Works" follows the persuasion logic: establish the cost of inaction before offering the resolution.
+Product cards use the new card pattern from `visual-direction.md`. Each card shows:
+- Status pill (IN EFFECT — red)
+- Law name + price (same row)
+- Enforcement signal ("DCWP investigations increasing" / "Penalties active")
+- Document count
+- "Get [State] Documents →" button
+
+### Deadline Approaching (header)
+```
+Colorado SB 24-205 takes effect June 30, 2026. The window is closing.
+```
+
+**Voice note:** Specific date. Specific law. "The window is closing" — forward pressure without catastrophizing.
 
 ---
 
-## "Does This Apply to You?" Section (New, Short — 3 scenarios)
+## Section 3: Consequences (Compressed — 3 penalty cards, no preamble paragraph)
 
 **Section header:**
 ```
-Three situations where this matters right now
+The cost of not having these documents
 ```
 
-**Scenario 1 (Employment):**
+**Card 1 (Colorado — Deadline Approaching):**
 ```
-You use any tool that screens, ranks, or scores job candidates. If you have employees or applicants in Illinois, NYC, or Colorado, you have legal obligations today. HB3773 requires employee notifications and an AI use policy. NYC Local Law 144 requires an annual independent bias audit. Colorado SB 24-205 requires impact assessments.
-```
-
-**Scenario 2 (Consumer decisions):**
-```
-Your business uses AI in lending, insurance, healthcare, or housing decisions. Colorado and California both regulate AI in these contexts specifically. If an AI system is a substantial factor in a decision that affects someone's access to credit, insurance, housing, or healthcare — the law applies to you, not just to the company that built the AI tool.
+Up to $20,000 per violation
+Colorado SB 24-205 — enforced as deceptive trade practice under C.R.S. § 6-1-112.
+Each affected consumer may be a separate violation.
+[Get Colorado Documents →]
 ```
 
-**Scenario 3 (You're not sure):**
+**Card 2 (Illinois — Already Exposed):**
 ```
-Your software vendor uses AI and you don't know the details. If the tool screens, scores, ranks, recommends, or personalizes outcomes for people — there's almost certainly AI involved. Most compliance obligations fall on the business deploying the tool, not the vendor. If you're in a state with an active law, "I didn't know the vendor used AI" is not a legal defense.
+Up to $70,000 per violation
+Illinois HB3773 — enforced by IDHR under 775 ILCS 5/8A-104.
+Repeat-offense tier. First offense up to $16,000.
+[Get Illinois Documents →]
 ```
 
-**Rationale:** Research finding: The #1 buyer objection is "Do we really need to worry if we're just using basic tools?" and "scope confusion — unclear whether their specific revenue size, state location, or industry triggers obligations." These three scenarios answer the scope question in buyer language, not legal language, before the buyer reaches the FAQ.
+**Card 3 (NYC — Already Exposed):**
+```
+$500–$1,500 per day
+NYC Local Law 144 — enforced by DCWP under NYC Admin. Code § 20-871(d).
+Each day without compliance = a separate violation.
+[Get NYC Documents →]
+```
+
+**Voice note:** No preceding paragraph that says "AI regulations aren't suggestions." Skip the wind-up. The numbers speak.
 
 ---
 
-## FAQ Reorder (Existing FAQs, New Priority Order)
+## Section 4: How It Works (Compressed)
 
-Current first FAQ: "How do I know if any of this applies to my business?" — this is good, keep it first.
-
-**Proposed FAQ order:**
-1. How do I know if any of this applies to my business? (keep)
-2. What if I don't know whether my tools use AI? (keep)
-3. Where do I start if I don't know which law applies to me? (keep)
-4. **NEW: What documents do I actually need?** (see below)
-5. Is this legal advice? (keep)
-6. How are the documents generated? (keep)
-7. What AI regulations do you cover? (move later — researcher question)
-8. Do I need this if I already have outside counsel? (keep)
-9. What if the law changes? (keep)
-10. Are all sales final? (keep)
-
-**New FAQ #4 copy:**
+**Header:**
 ```
-Q: What documents do I actually need?
-
-A: That depends on which law applies to you and what role your business plays. For Colorado SB 24-205 (effective June 30, 2026), deployers need an impact assessment, a risk management policy, and a consumer notice for each AI system used in consequential decisions. For Illinois HB3773 (in effect now), employers need an employee AI notification, an internal AI system inventory, and a human oversight protocol. For NYC Local Law 144 (in effect, enforcement increasing), you need an annual bias audit, public disclosure of results, and advance candidate notification. Each product page lists the exact documents included and what the law requires each one to cover.
+Three steps. Five minutes.
 ```
 
-**Rationale:** Current FAQs are well-written but miss the most practical buyer question: "what exactly do I buy?" Adding this FAQ converts FAQ reading into product navigation.
+**Step 1:**
+```
+Pick your state's law
+Colorado, Illinois, NYC, California, Texas — or search all 57 packages.
+```
+
+**Step 2:**
+```
+Answer 8 questions
+Your company name, AI systems in use, which decisions they inform. That's it.
+```
+
+**Step 3:**
+```
+Download your documents
+Fillable PDFs, instantly. Electronic signature blocks included.
+```
+
+**CTA below steps:**
+```
+[ Browse All State Packages → ]
+```
+
+**Voice note:** The current step copy says "Select the state regulation you need to comply with. Answer a short questionnaire about your company and AI systems. Takes about 10 minutes." The v2 version cuts the word count by 60%, removes the time qualifier ("10 minutes" is process information the buyer doesn't need in the steps), and puts the output ("Fillable PDFs, instantly") before the detail (electronic signature blocks).
 
 ---
 
-## Final CTA (Existing — Minimal Change)
+## Section 5: FAQ (6 Questions, New Priority Order)
 
-**Current:**
+**Header:**
 ```
-Don't wait for a complaint
-AI regulations are in effect now. Get your compliance documents today for a fraction of what a law firm charges.
-[Browse Products →]
+Before you buy
 ```
 
-**Proposed:**
+**Voice note:** Not "Frequently Asked Questions." Not "Everything you need to know." Just: "Before you buy." That's what it is.
+
+**Q1: What documents do I actually need?**
+> That depends on your state and your role. Colorado SB 24-205 requires impact assessments, a risk management policy, and consumer notices — 8 documents total for deployers. Illinois HB3773 requires employee notifications, an AI system inventory, and a human oversight protocol. NYC Local Law 144 requires an annual bias audit, candidate notifications, and public disclosure. Each product page lists exactly what's included and which statutory section requires it.
+
+**Q2: How do I know if this applies to my business?**
+> If you use AI in hiring and have employees or applicants in Illinois, NYC, or Colorado — yes. If you use AI in lending, insurance, healthcare, housing, or consumer decisions and your AI system affects those consumers — yes. If you're a software vendor whose tool is used in these decisions — your customers are the deployers, but you may have developer-side obligations under Colorado's law specifically.
+
+**Q3: Where do I start if I don't know which law applies?**
+> [State Deadlines page →](/compliance-deadline-by-state) — organized by state, with the specific deadline or enforcement status, the penalty, and a direct link to the relevant package.
+
+**Q4: Is this legal advice?**
+> No. These are documentation templates built from enacted statute text. They help you get organized and demonstrate compliance effort. Your attorney reviews the completed documents — not drafts them from scratch at $400–$800 an hour.
+
+**Q5: How are the documents generated?**
+> You answer 8 questions: company name, AI systems in use, which decisions they inform. Your answers populate the templates. Documents generate instantly as fillable PDFs. Download, fill in the highlighted fields, sign with the included electronic signature blocks. Done.
+
+**Q6: Do I need this if I already have outside counsel?**
+> A lot of our customers have lawyers. The templates give their attorney something to review instead of drafting from scratch. Eight hours of attorney time at $600/hour is $4,800. The Colorado package is $449. Your lawyer's time is better spent on the nuances specific to your situation — not formatting a compliance checklist.
+
+**Voice note:** Each answer is shorter than the v1 version. The voice is direct, offer-aware, specific. Q4 is the only one that sounds like the old blog voice — that's intentional. The legal disclaimer question warrants the more measured register.
+
+---
+
+## Final CTA (Section bottom)
+
+**Header:**
 ```
-The deadline doesn't move
-Colorado's AI law takes effect June 30, 2026. Illinois HB3773 is in effect now. NYC Local Law 144 enforcement is increasing. Get your compliance documents today — built from the enacted statute, not a law firm's summary, not an AI generator.
-[Find Your State's Documents →]
+The deadline doesn't move.
 ```
 
-**Rationale:** "Don't wait for a complaint" is a good Realist-voice line. "The deadline doesn't move" is sharper — it names the buyer's specific anxiety (hoping the deadline will be delayed again) directly. The sub-copy names three specific laws instead of the generic "AI regulations are in effect now." The CTA button matches the hero CTA for consistency.
+**Body:**
+```
+Colorado's AI law takes effect June 30, 2026. Illinois HB3773 is in effect now. NYC enforcement is increasing. Your compliance documents are here. Built from the statute. One-time purchase. Instant download.
+```
+
+**Button:**
+```
+[ Find Your State's Documents → ]
+```
+
+**Below button (small text):**
+```
+Questions before purchasing? info@aicompliancedocuments.com
+```
+
+**Voice note:** "The deadline doesn't move" is the v2 final CTA header — sharpened from Round 1's "Don't wait for a complaint." Both are Realist-voice. The v2 version is more specific: it names the buyer's specific hope (that the deadline will be delayed again, as it was from February to June) and refuses it. "Don't wait for a complaint" is general urgency. "The deadline doesn't move" is targeted at the Colorado buyer's psychological loophole.
+
+---
+
+## What Changed from v1 (Voice Diff)
+
+| v1 (journalist-explainer) | v2 (compliance specialist at the counter) |
+|---|---|
+| "The current homepage is optimized for researchers..." | Removed — rationale is in the spec, not the page |
+| "Colorado SB 24-205 takes effect June 30, 2026. Illinois HB3773 is in effect now. NYC Local Law 144 enforcement is increasing. Get the documents the law requires..." | "Colorado. Illinois. NYC. California. Texas. The documents the law requires. Built from statute. Instant download." |
+| "AI regulations aren't suggestions. They're law, with real enforcement teeth and penalties up to $200,000 per violation..." | "The cost of not having these documents" + direct penalty cards |
+| "Everything you need to know before getting started." | "Before you buy." |
+| "If you use AI in hiring and you have employees or applicants in Illinois, NYC, or Colorado — yes." | Same — this was already good. Kept. |
+| "State AI regulations are here. Generate compliance documentation for a fraction of legal fees." (OG description) | Removed from all surfaces |
