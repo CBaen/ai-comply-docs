@@ -36,7 +36,9 @@ export async function generateMetadata({
   const reg = getRegulation(slug);
   if (!reg) return {};
   return {
-    title: `${reg.name} — Compliance Documents`,
+    title: slug === "colorado-sb24-205"
+      ? "Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline"
+      : `${reg.name} — Compliance Documents`,
     description: reg.description,
     keywords: reg.keywords,
     alternates: {
