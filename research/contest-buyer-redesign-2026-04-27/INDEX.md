@@ -23,8 +23,8 @@
 | 1a. Reflective loops Round 1 | PARTIAL | Loop 1 done (meta-strategy coaching); Loop 2 skipped due to GL scope-pivot |
 | 2. Field summary | COMPLETE | FIELD-AT-ROUND-1.md written + SCOPE-EXPANSION.md issued |
 | 3. Round 2 (expanded scope) | COMPLETE | All 5 produced 4 new + 4 rewritten deliverables; v1 copies preserved for voice-before/after comparison |
-| 3a. Reflective loops Round 2 | IN PROGRESS | Loop 2 dispatched — redesign-focused perspectives (calibration after Loop 1 was off-altitude) |
-| 4. Mutual peer scoring | PENDING | |
+| 3a. Reflective loops Round 2 | COMPLETE | Loop 2 redesign-focused perspectives applied by all 5; sharp polish across the field |
+| 4. Mutual peer scoring | IN PROGRESS | All 5 dispatched in parallel for peer scoring on 3 dimensions |
 | 5. Aggregation + top-K | PENDING | |
 | 6. Dissent moment | PENDING | |
 | 7. Tightening pass on top-K | PENDING | |
