@@ -1,0 +1,9 @@
+# Round 2 Complete — Contestant 4
+
+## Concept Summary
+
+The Round 1 frame — single structural bet, deadline and law name in every above-the-fold surface — held and stretched into four new dimensions. The frame now has two modes: **Deadline Approaching** (Colorado, future effective laws) and **Already Exposed** (NYC, Illinois, Texas — laws in force with active enforcement). Both modes flow from the same bet: name the specific law, name the specific date or enforcement status, deliver the product offer in the next sentence. The buyer who arrives at this site is not browsing. The site must look and feel like a place that has exactly what they need.
+
+**What was added in Round 2:** A new marketing voice (compliance specialist at the counter — short, declarative, offer-shaped, not the journalist-explainer voice of the blog); visual direction anchoring on Midnight Navy / Enforcement Red / Deadline Amber to make urgency visible before copy is read; an information architecture that demotes the blog to "Resources," promotes "Get Your Documents" and "State Deadlines" to primary nav, and compresses the homepage from 8 sections to 5; Google RSA ad creative in three states (Colorado / Illinois / NYC) with deadline-mode and already-exposed-mode copy variants; a Reddit native ad for r/smallbusiness; a retargeting concept for product-page bouncers; and complete rewrites of all four marketing-surface files in the new voice with v1 archives preserved. The Proxy's gap — no frame for already-in-force laws — is closed.
+
+**Integrity status:** All penalty figures, effective dates, and statute citations carried forward from Round 1 with provenance intact. Colorado $20,000/violation flag (derives from C.R.S. § 6-1-112 via SB24-205 enforcement mechanism, not from the statute text directly) is noted in every instance where the figure appears in buyer-facing copy. No new legal claims were introduced without primary-source grounding.
