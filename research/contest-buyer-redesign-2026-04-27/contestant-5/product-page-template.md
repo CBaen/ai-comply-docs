@@ -1,212 +1,247 @@
 # Product Page Template — Colorado SB 24-205
-# `/products/colorado-sb24-205`
+# `/products/colorado-sb24-205` — v2 (new marketing voice)
 
-**Why Colorado:** Most immediate hard deadline (June 30, 2026 — verified from the site's own blog post sourced against SB 25B-004), highest buyer-urgency window, site already has verified blog content and 350 impressions at position 11. This is the page that needs to move from position 11 to the first page and convert when it gets there.
+*v1 preserved at `product-page-template-v1.md`. v1 got the structural insight right (penalties before documents, affirmative defense as conversion bridge). v2 applies the new marketing voice to all copy surfaces and tightens section order.*
 
 ---
 
 ## `<title>` tag
 
-**Current:**
-```
-Colorado SB 24-205 — AI Consumer Protections — Compliance Documents | AI Compliance Documents
-```
-
-**Proposed:**
+**Proposed (unchanged from v1):**
 ```
 Colorado AI Law Compliance Package — SB 24-205 Deadline June 30, 2026 | AI Compliance Documents
 ```
 
-**Rationale:** "Compliance Package" is what a buyer searches for. "AI Consumer Protections" is how the legislature named it. These are not the same thing. The deadline in the title creates SERP urgency — a buyer who sees this result on April 27 with a June 30 deadline feels the pressure before they click.
+---
+
+## Meta description (160 chars)
+
+```
+Colorado SB 24-205: June 30, 2026. Up to $20,000 per consumer (C.R.S. § 6-1-112). Risk program, impact assessment, consumer notices — $449, instant download.
+```
+(159 chars)
 
 ---
 
-## Meta description
+## Hero section — new voice
 
-**Proposed:**
-```
-Colorado SB 24-205 takes effect June 30, 2026. Violations: up to $20,000 per consumer under C.R.S. § 6-1-112(1)(a). Get your risk management program, impact assessment, and consumer notices — instant download, $449.
-```
-
-**Rationale:** Contains the verified penalty amount and citation (fetched from the site's own primary-source verified blog post). Names the specific documents buyers need. Anchors price and delivery. 198 characters — slightly over; trim if needed:
-
-```
-Colorado SB 24-205 takes effect June 30, 2026. Up to $20,000 per consumer under C.R.S. § 6-1-112. Risk management program, impact assessment, consumer notices — $449, instant download.
-```
-
----
-
-## H1
-
-**Current:**
-```
-Colorado SB 24-205 — AI Consumer Protections
-```
-
-**Proposed:**
+### H1
 ```
 Colorado SB 24-205 Compliance Package
 ```
 
-**Rationale:** Remove the law's marketing subtitle ("AI Consumer Protections") which reads as legislative copy, not buyer copy. "Compliance Package" is the buyer's vocabulary.
-
----
-
-## REVISED PAGE STRUCTURE (section by section)
-
-### Section 1: Urgency anchor (NEW — insert before current "Does This Apply to You?" section)
-
-Replace the current "Effective: {date}" status badge with a more prominent urgency block:
-
+### Deck (below H1, new marketing voice — short, offer-forward)
 ```
-[AMBER WARNING BOX]
-June 30, 2026 is the compliance deadline for Colorado SB 24-205.
-Violations are enforced under the Colorado Consumer Protection Act — up to $20,000 per consumer under C.R.S. § 6-1-112(1)(a).
-A single non-compliant AI system affecting 1,000 consumers creates exposure of up to $20 million.
-[Source: C.R.S. § 6-1-112(1)(a) via leg.colorado.gov/bills/sb24-205]
+June 30, 2026 is the deadline. These are the documents the law requires.
+Risk management program. Impact assessment. Consumer notices. $449, yours today.
 ```
 
-**Rationale:** The current page opens with a status badge that says "EFFECTIVE SOON" and a small text note of the date. That is invisible to a deadline-anxious buyer scanning the page. This urgency block, placed at the very top of the content area (below the hero, before "Does This Apply to You?"), answers the buyer's first question — "is this real and is the deadline close?" — with statute-cited precision.
+Two lines. No explanation of the law. No preamble. The buyer who landed on this page already knows why they're here — they just searched "Colorado AI law compliance." Give them the offer, not the lecture.
 
----
+**Voice comparison:**
 
-### Section 2: "Does This Apply to You?" (KEEP, improve copy)
+v1 proposed opening for urgency block (explainer mode):
+> "June 30, 2026 is the compliance deadline for Colorado SB 24-205. Violations are enforced under the Colorado Consumer Protection Act — up to $20,000 per consumer under C.R.S. § 6-1-112(1)(a). A single non-compliant AI system affecting 1,000 consumers creates exposure of up to $20 million."
 
-**Current appliesToBullets — good, keep these. Strengthen the section header and add a plain-language opener:**
+v2 hero deck (new voice):
+> "June 30, 2026 is the deadline. These are the documents the law requires."
 
-```
-[H2] Does This Apply to Your Business?
+The penalty detail still appears — in section 2, with full statute citations. The hero doesn't lead with it because the first job of the hero is to confirm: yes, this is the product you came for. Then the penalty section confirms why they need it.
 
-[Plain language opener, Pragmatic Realist voice:]
-If you use any software that helps make decisions about employment, housing, credit, healthcare, insurance, or education in Colorado — and you deploy that software to serve Colorado consumers — this law applies to you. It doesn't matter where your company is headquartered.
+### Status badge
+`EFFECTIVE SOON` in amber — kept. Deadline date in Deadline Red `#DC2626` directly below the badge: `Deadline: June 30, 2026`.
 
-[then the existing bullets]
-```
-
-**What to cut:** The current `appliesToSummary` is passive. Replace with the opener above.
-
----
-
-### Section 3: Penalty section (MOVE UP — currently buried after document list)
-
-**Current position:** After documents, after preview, after lifestyle image
-**Proposed position:** After "Does This Apply to You?" — before "What's Included"
-
-**Rationale (the most important structural change on this page):** The BRIEF identifies the core problem as "reads as authoritative-resource rather than 'you owe up to $20K/violation, here's the template.'" The penalty section is the conversion trigger. It must precede the document list, not follow it. A buyer who doesn't feel the stakes won't care how many documents are in the package.
-
-**Proposed penalty section copy (Precise Credentialist voice):**
-
-```
-[H2] What Happens If You Don't Comply
-
-Under [C.R.S. § 6-1-112(1)(a)](https://leg.colorado.gov/bills/sb24-205), violations of Colorado SB 24-205 are enforced as deceptive trade practices under the Colorado Consumer Protection Act. The penalty is up to $20,000 per violation.
-
-Each consumer counts as a separate violation. A hiring tool that processes 500 applicants without the required risk management program creates potential exposure of up to $10 million.
-
-The Colorado Attorney General has exclusive enforcement authority ([C.R.S. § 6-1-1706](https://leg.colorado.gov/bills/sb24-205)). There is no private right of action.
-
-An affirmative defense is available if you can demonstrate you followed a nationally recognized AI risk management framework (such as NIST AI RMF) and implemented mechanisms to discover and correct algorithmic discrimination ([C.R.S. § 6-1-1706(3)](https://leg.colorado.gov/bills/sb24-205)). These documents are your affirmative defense documentation.
-```
-
-**Why the affirmative defense is the conversion bridge:** Every other compliance copy ends with "you could face fines." This ends with "these documents are your affirmative defense" — which directly connects the product to the legal protection it provides. This is the most powerful conversion sentence on the page.
-
----
-
-### Section 4: "What's Included" (KEEP, restructure)
-
-**Current:** Long list of documents with explanations.
-**Proposed change:** Prefix the section with a one-sentence bridge from the penalty section:
-
-```
-[H2] What's Included — {documentCount} Documents
-
-Colorado SB 24-205 requires specific documentation across four compliance areas.
-Your package covers all of them.
-
-[then the existing document list]
-```
-
-**Also:** Group documents by compliance area with sub-headers:
-- Risk Management Program
-- Impact Assessment
-- Consumer Disclosures
-- Incident Response
-
-(These sub-groups map directly to the statute's deployer obligations — showing the document list organized by statutory obligation rather than alphabetically makes the package feel like a complete statutory solution, not a document dump.)
-
----
-
-### Section 5: Purchase sidebar (REVISE copy)
-
-**Current primary CTA:**
-```
-Customize Now — $449
-```
-
-**Proposed primary CTA:**
+### Hero CTA (sidebar card — visible on desktop above the fold)
 ```
 Get My Colorado Compliance Package — $449
 ```
+Signal Blue button, full sidebar width. Below it:
 
-**Current secondary note:**
 ```
-vs. thousands at a law firm
-```
-
-**Proposed secondary note:**
-```
-Law firm compliance packages for SB 24-205 start at $3,000–$10,000 and take 4–8 weeks. This is $449 and instant.
+One-time purchase. Instant download.
+Statute-verified against SB 24-205 as amended.
+[Source: leg.colorado.gov/bills/sb24-205]
 ```
 
-**Rationale:** The current sidebar note is vague ("vs. thousands"). Making the comparison specific — naming the law firm price range and timeline — makes the value proposition concrete without fabricating statistics. (The $3,000–$10,000 range is a reasonable industry floor for compliance package drafting, but I am not fabricating this as a statistic — it should be verified before publishing. If unverifiable, use: "A fraction of what outside counsel charges to draft these documents from scratch.")
+---
 
-**Verified badge — keep, strengthen:**
+## Revised section order — new voice throughout
+
+### Section 1: Does This Apply to You?
+
+**H2 (new voice):**
+```
+Does This Apply to Your Business?
+```
+
+**Opening — new voice (3 lines, replaces the v1 Pragmatic Realist paragraph):**
+```
+You use AI in employment, housing, credit, healthcare, insurance, or education decisions.
+You serve Colorado consumers.
+This law applies to you.
+```
+
+Then the existing `appliesToBullets` — they are already well-written and need no change.
+
+**Why three short lines instead of a paragraph:** The v1 opener ("If you use any software that helps make decisions...") is 43 words. The v2 opener makes the same determination in 3 declarative lines. A buyer scanning this page gets the applicability answer in 2 seconds, not after reading a conditional clause.
+
+---
+
+### Section 2: What Happens Without Compliance
+
+**H2 (new voice — renamed from "What Happens If You Don't Comply"):**
+```
+The Penalty for Non-Compliance
+```
+
+**Body — new voice. Statute citations preserved exactly:**
+
+```
+Up to $20,000 per consumer. That is the penalty under C.R.S. § 6-1-112(1)(a).
+
+Each consumer is a separate violation. One non-compliant AI system. One thousand Colorado applicants.
+Up to $20 million in exposure.
+
+Enforcement: Colorado Attorney General only. No private right of action. (C.R.S. § 6-1-1706)
+
+An affirmative defense applies if you followed a nationally recognized AI risk management
+framework and implemented mechanisms to discover and correct algorithmic discrimination.
+(C.R.S. § 6-1-1706(3))
+
+These documents are your affirmative defense.
+```
+
+**Why "These documents are your affirmative defense" stays as the last line:** This sentence, identified in v1, is unchanged in v2. It is the conversion bridge — it is the moment the buyer understands that the product is not just a paperwork exercise but a legal shield. Short sentence, last position, maximum weight. The new voice makes the lines before it shorter and harder, so when this sentence lands it hits harder.
+
+---
+
+### Section 3: What's Included
+
+**H2 (new voice):**
+```
+7 Documents. All of Them Required.
+```
+
+**One-line bridge (new voice):**
+```
+Colorado SB 24-205 requires documentation across four compliance areas.
+This package covers all four.
+```
+
+Then the document list, grouped by statutory obligation:
+
+**Risk Management Program**
+- Risk Management Policy
+- Risk Classification Matrix
+
+**Impact Assessment**
+- Impact Assessment Framework
+
+**Consumer Disclosures**
+- Consumer Notice (pre-decision)
+- Transparency Statement
+
+**Oversight & Response**
+- Human Oversight Protocol
+- Incident Response Plan
+
+*(Exact document names should match `regulations.ts` for this slug — the grouping above is illustrative based on the document types in `DOC_EXPLANATIONS`. Verify exact document list against the Colorado product's `documents` array before shipping.)*
+
+**After the list — new voice, not a bullet:**
+```
+Each document includes the specific statutory section it satisfies.
+Your attorney reviews the filled-in output. You don't start from scratch.
+```
+
+---
+
+### Section 4: Preview (unchanged)
+
+`DocumentSamplePreview` component and WebP preview image stay as-is. No voice change needed — these are visual, not copy.
+
+---
+
+### Section 5: After You Purchase
+
+**H2 (new voice — shortened from "What Happens After You Purchase"):**
+```
+How It Works After Purchase
+```
+
+Keep the existing 5 checklist items. They are already clear and specific. One voice adjustment — the current item "Have your legal team review the completed documents before deployment" becomes:
+
+```
+Have your attorney review the completed output. (Optional — but recommended.)
+```
+
+"Legal team" implies an in-house team the buyer likely doesn't have. "Your attorney" is one person they probably do have access to, even occasionally.
+
+---
+
+### Section 6: Blog guide card
+
+**Placement:** Moved to after Section 1 ("Does This Apply?"), per v1 recommendation. The buyer who isn't ready to purchase yet clicks through to the plain-language guide, gets the full law explained, and returns via the blog post's CTA.
+
+**New voice copy for the card:**
+```
+Not ready to buy yet? Read the full breakdown first.
+"Colorado's AI Law Takes Effect June 30, 2026. Here's What It Requires." →
+```
+
+---
+
+### Section 7: Add-ons / Related products
+
+Unchanged. The `relatedAddons` (co-appeal-correction-kit, co-ag-reporting-kit, co-dev-deploy-exchange) serve cross-sell appropriately.
+
+**One voice update to the add-on section header:**
+
+Current: "Complete Your Compliance"
+New: "Also Required? These Add-Ons Cover the Rest."
+
+This shift turns the add-on section from a upsell feel into a completeness signal — the buyer isn't being sold more, they're being told what else the law covers that the base package doesn't include.
+
+---
+
+### Section 8: Statutory Authority
+
+Unchanged. The citation link to leg.colorado.gov is a trust cornerstone. Keep.
+
+---
+
+## Sidebar purchase card — new voice
+
+**Current primary CTA:** "Customize Now — $449"
+**New:** "Get My Colorado Compliance Package — $449"
+
+**Current trust line below button:** "vs. thousands at a law firm"
+**New:** "From $449. Outside counsel drafts these from scratch — at hundreds of dollars per hour."
+
+*(The "$3,000–$10,000" law firm range from v1 should remain flagged as REQUIRES VERIFICATION before publishing. The softer version above is defensible without a citation.)*
+
+**Verified badge (new voice — slightly tighter):**
 ```
 [GREEN BOX]
-Templates verified against SB 24-205 as amended by SB 25B-004 (effective June 30, 2026)
+Verified against SB 24-205, as amended by SB 25B-004.
 Source: leg.colorado.gov/bills/sb24-205
 ```
 
 ---
 
-### Section 6: Blog guide card (STRENGTHEN placement and copy)
+## EEOC post title/meta — addressing the Proxy gap
 
-**Current placement:** After the questionnaire — effectively invisible to non-buyers.
-**Proposed placement:** Move to immediately after "Does This Apply to You?" — before the penalty section.
+The Proxy noted in Loop 1 that the strategy addressed product page titles but not blog post title/meta, and specifically called out the EEOC post (1,833 impressions, position 4.16, 0.11% CTR).
 
-**Proposed copy:**
+This is addressed fully in `ia-proposal.md`, but the product-page-level implication is here: the EEOC blog post closing CTA now routes to this product page (among others). The buyer who clicks through on the EEOC post and reads about the Illinois/NYC/Colorado vacuum arrives at a closing section that says:
+
 ```
-[CARD]
-"Colorado's AI Law Takes Effect June 30, 2026. Here's What It Requires."
-Read the plain-language breakdown of every obligation SB 24-205 creates for deployers → 
+Illinois HB3773 is in effect. NYC Local Law 144 is in effect. Colorado SB 24-205 takes effect June 30, 2026.
+The documents these laws require are here.
+
+[Illinois HB3773 Compliance Package — $449 →](/products/illinois-hb3773)
+[NYC Local Law 144 Compliance Package — $399 →](/products/nyc-local-law-144)
+[Colorado SB 24-205 Compliance Package — $449 →](/products/colorado-sb24-205)
+[Not sure which one? Find your state →](/compliance-deadline-by-state)
 ```
 
-**Rationale:** The blog post is at 855 impressions / 0 clicks. Its current single link from a 1,500-word blog post to this product page leaks conversion. The reverse link — from this product page to the blog post — catches the buyer who isn't ready to purchase yet but wants to understand the law first. Capture them in the blog post, then convert them back to the product page via the blog post's in-line product link. This creates a conversion loop rather than a dead end.
-
----
-
-### Section 7: What stays the same
-
-- "What Happens After You Purchase" — clear, specific, good
-- "Statutory Authority" section with citation link — this is credibility
-- Related add-ons (co-appeal-correction-kit, co-ag-reporting-kit) — useful cross-sell
-- ESIGN Act compliance note
-- Document sample preview
-
----
-
-## Summary of structural changes
-
-| Current order | Proposed order |
-|---|---|
-| Hero + status badge | Hero + urgency anchor (penalty at top) |
-| Does This Apply to You? | Does This Apply to You? + blog guide card |
-| Lifestyle image | Penalties section (MOVED UP) |
-| What's Included | What's Included (grouped by compliance area) |
-| Document preview | Document preview |
-| Penalties (buried) | What Happens After You Purchase |
-| What Happens After Purchase | Blog guide card (MOVED UP) |
-| Blog guide card | Add-ons / Related products |
-| Questionnaire | Questionnaire |
-
-The penalty section moves from position 7 to position 3. Everything else in order is preserved.
+This is the new voice applied to the blog → product handoff: no explanation, no "here's what each package contains." Just the law, the product, the price, the link.

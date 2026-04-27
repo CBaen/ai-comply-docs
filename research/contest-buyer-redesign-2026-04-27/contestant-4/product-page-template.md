@@ -1,224 +1,276 @@
-# Product Page Template — Contestant 4
+# Product Page Template — Contestant 4 (v2)
 
-## Product Selected: Colorado SB 24-205
+*(Round 1 version archived as `product-page-template-v1.md`. This version rewrites all marketing-surface copy in the new voice and adds the two-mode urgency frame. Structural changes from v1 carry forward.)*
 
-**Why Colorado:** Of the four options, Colorado has the highest buyer urgency by combination of (1) imminent deadline (June 30, 2026 — approximately 65 days from today), (2) $20,000/violation penalty that scales per affected consumer, (3) no small-business exemption for most obligations, and (4) documented confusion from a prior deadline delay that some buyers may be using as psychological cover for inaction. The buyer who finds the Colorado product page via Google has a real, specific deadline. The current page is not optimized to close that buyer.
+## Product: Colorado SB 24-205 — Deadline Approaching Mode
 
-**Research basis:** Colorado's penalty confirmed at $20,000/violation ([aicerts.ai](https://www.aicerts.ai/news/colorado-ai-law-key-duties-penalties-and-2026-deadline/), [aicompliancedocuments.com/blog](https://aicompliancedocuments.com/blog/colorado-ai-law-91-days-deadline-requirements)). Effective date June 30, 2026 confirmed via [leg.colorado.gov/bills/sb24-205](https://leg.colorado.gov/bills/sb24-205) and SB25B-004. CTR at position 11.14 (current Colorado product page) suggests page-2 ranking — copy and structural improvements are secondary to the ranking problem, but the copy must convert when organic traffic eventually arrives.
-
----
-
-## Proposed Page Structure
-
-The current product page structure is: Hero → Key Stats Bar → Does This Apply / Documents / Preview / Penalties / Post-Purchase / Add-ons / Statutory Authority → Sidebar purchase card.
-
-The problem: "Does This Apply to You?" comes first but uses the generic format. The penalty section comes **after** the 10-document list and after the document preview — buried. For Colorado specifically, the deadline and penalty must be above-the-fold anchors, not discovered after scrolling through document lists.
+**Why this product / why this mode:** Colorado has the most imminent deadline (June 30, 2026 — approximately 64 days from today). It demonstrates the Deadline Approaching urgency mode. The Already Exposed mode is illustrated in the voice-spec.md NYC/Illinois examples and in the urgency panel. The structural changes below apply to all product pages — the urgency mode determines which copy variants fire.
 
 ---
 
-## Revised `<title>` and Meta
+## Metadata (v2)
 
 ### `<title>`
 ```
-Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline | AI Compliance Documents
+Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline
 ```
 
-**Rationale:** Current title: "Colorado SB 24-205 — AI Consumer Protections — Compliance Documents | AI Compliance Documents." The new title replaces the vague "AI Consumer Protections" with the specific deadline date. A buyer searching "Colorado AI law compliance documents" in April 2026 should see the June 30 deadline in the SERP title itself — this is the primary urgency signal that will lift CTR at position 11. Character count: 87.
+**Change from v1:** Identical — the deadline-in-title insight was correct in Round 1. Kept.
 
 ### Meta description
 ```
-Colorado's AI law (SB 24-205) takes effect June 30, 2026. Deployers of high-risk AI systems need impact assessments, a risk management policy, and consumer notices. Get all 8 documents — built from the enacted statute — for $449. Instant download.
+Colorado's AI law takes effect June 30, 2026. Get the 8 documents deployers are required to have — impact assessments, risk policy, consumer notices. Built from statute. $449 instant download.
 ```
 
-**Rationale:** Names the law, states the deadline, names the specific documents required (impact assessment, risk management policy, consumer notice — the three primary obligations under SB24-205), gives the price, and closes with instant download. 247 characters — the first 160 are the most critical and carry the deadline signal.
+**Change from v1:** Shorter. Names the three primary document types (which buyers scan for). Price before "instant download" so the price-sensitive buyer doesn't bounce on a mystery price.
 
 ---
 
-## Section 1: Hero (Above the Fold)
+## Hero (Above the Fold) — v2 Copy
 
-### Breadcrumb and status
-Keep existing: `← All Products | Colorado` and the status badge (EFFECTIVE SOON, amber).
-
-### Add below status badge, above H1:
-
-**Deadline Banner (new element — not in current design):**
+### Deadline Banner (new element — top of hero, full width)
 ```
-June 30, 2026 — 64 days remaining
+June 30, 2026 — Colorado SB 24-205 takes effect in 64 days
 ```
-Red background, white text, inline with status badge row. This is the single most conversion-relevant piece of information on the page.
+Deadline Amber background (`#D97706`), white text, Inter 700. This is the first thing the buyer reads before H1.
 
-**Rationale:** Buyers who arrive at this page already know what SB24-205 is. They need confirmation of the deadline, not a re-explanation. The deadline banner replaces the need to re-read the description to find the date.
+**Already Exposed variant (for NYC, Illinois, Texas product pages):**
+```
+Illinois HB3773 — In Effect Now — Enforcement Active
+```
+Enforcement Red background (`#B91C1C`), white text.
 
 ### H1
-Keep existing: `Colorado SB 24-205 — Consumer Protections for Artificial Intelligence Compliance Documents`
-
-**Actually: propose a small improvement:**
 ```
-Colorado SB 24-205 — Compliance Documents for the June 30, 2026 Deadline
+Colorado SB 24-205. 8 Documents. June 30, 2026.
 ```
 
-**Rationale:** Puts the deadline in the H1 where both Google and the buyer will see it. The current H1 "Colorado SB 24-205 — AI Consumer Protections — Compliance Documents" buries the value proposition. The law's name is already in the breadcrumb; the H1 should carry the deadline.
+**Voice note:** Three declarative fragments. Law name. What you get. Deadline. No qualifying clauses. This is the specialist-at-the-counter voice: you came for the Colorado documents, here's what they are and when you need them.
 
-### Deck (p tag below H1)
+**Change from v1:** v1 proposed "Colorado SB 24-205 — Compliance Documents for the June 30, 2026 Deadline." The v2 version drops "Compliance Documents for the" — the word "Documents" is already implied by the product context, and "for the" is filler. The v2 H1 is 12 words vs. v1's 10 — but punchier because each fragment lands separately.
+
+### Deck
 ```
-Colorado's AI law takes effect June 30, 2026. If you deploy a high-risk AI system — any AI used substantially in decisions about employment, housing, credit, healthcare, or insurance — you need these documents in place before that date. This package covers the full deployer obligation: 8 documents built from the enacted statute text at leg.colorado.gov.
+SB 24-205 requires 8 documents from every deployer. These are them — built from C.R.S. § 6-1-1701 et seq., not a law firm's summary, not an AI-generated overview.
 ```
 
-**Rationale:** Current deck: "Colorado SB 24-205 establishes requirements for deployers..." — this is informational, not urgent. The new deck names the deadline, names the consequence (the obligation is real, not optional), and points directly to the primary source — which is the differentiator from every law firm summary on Google.
+**Change from v1:** v1 deck was 50 words explaining what the law covers. v2 is 30 words naming what the product is and what makes it credible. The buyer already knows the law covers them — they searched for the product page. Skip the re-education.
 
-### Citation link
-Keep: "Read the enacted law: C.R.S. § 6-1-1701 et seq. →" — this is a strong trust signal and should stay.
+### Citation link (keep from existing)
+```
+Read the enacted law: C.R.S. § 6-1-1701 et seq. →
+```
+This stays. It's the strongest trust signal on the page — a direct link to the primary source. Don't move it, don't shrink it.
 
 ### Price block
-Keep: $449, one-time purchase.
+```
+$449   one-time purchase
+```
+Keep existing. No change needed.
 
 ---
 
-## Section 2: Key Stats Bar (Redesigned)
+## Key Stats Bar (v2)
 
-**Current:** Document count | Max penalty | Secure checkout
-
-**Proposed:**
 ```
-8 documents included | $20,000/violation | June 30, 2026 deadline | Secure checkout via Stripe
+8 documents   |   Up to $20,000/violation   |   June 30, 2026   |   Stripe checkout
 ```
 
-**Rationale:** Add the deadline date explicitly in the stats bar. The current stats bar shows "Max penalty: $20,000 per violation" — keep this. Add the date so it appears on scroll even if the buyer missed the hero.
+**Change from v1:** v1 proposed adding the deadline. Done. The four stats now answer: what do I get / what's the risk / when do I need it / is payment safe.
 
 ---
 
-## Section 3: "Does This Apply to You?" (Revised Copy)
+## Section Order (v2 — Updated from v1)
 
-**Current copy is accurate but generic. Proposed revision:**
+v1 proposed moving penalties before the document list. v2 refines the order further:
 
-```
-This law applies to you if ALL of the following are true:
-
-✓  You deploy a high-risk AI system
-   An AI system is "high-risk" if it makes or substantially influences a consequential decision — any decision materially affecting access to employment, housing, credit, healthcare, insurance, education, government services, or legal services. If your AI tool screens job candidates, evaluates creditworthiness, prices insurance, triages patients, or evaluates housing applications — it qualifies.
-
-✓  The system affects Colorado consumers
-   Residency of the consumer, not the business location, determines applicability. If your AI system affects a Colorado resident's access to employment, housing, credit, or the other covered categories — this law covers that deployment, regardless of where your business is headquartered.
-
-✓  Your company is the deployer
-   A deployer is the business that uses the AI system, not the vendor that built it. If you bought or licensed an AI tool and use it in consequential decisions, you are the deployer. The vendor's compliance does not substitute for yours.
-```
-
-**Below the bullets:**
-```
-You have until June 30, 2026. That is 8 weeks. The law does not provide a small-business exemption for deployers. The Attorney General has exclusive enforcement authority and is not required to wait for rulemaking before bringing an action.
-```
-
-**Rationale:** The current "Does This Apply to You?" bullets are accurate but passive. The proposed copy names the specific categories in buyer language, explicitly addresses the "the vendor handles it" rationalization (the #2 buyer objection from research), and closes with the enforcement timeline. The sentence "The AG is not required to wait for rulemaking" directly addresses the psychological cover buyers use to delay ("the rules aren't finalized yet").
+1. Hero (deadline banner, H1, deck, citation, price, CTA)
+2. Key Stats Bar
+3. **Exposure Summary** (new — replaces "Does This Apply to You?")
+4. **Document List** ("The 8 Documents SB 24-205 Requires of Deployers")
+5. **Penalty Section** (moved up from buried position — before document preview)
+6. Document Preview
+7. Post-Purchase walkthrough
+8. Add-ons
+9. Statutory Authority
+10. Sidebar (sticky purchase card)
 
 ---
 
-## Section 4: Urgency Insert (New — Before Document List)
+## Section 3: Exposure Summary (Replaces "Does This Apply to You?")
 
-Before the 8-document list, insert a single-paragraph urgency block:
+**Section header:**
+```
+You're a deployer if all three of these are true
+```
+
+**Voice note:** "Does This Apply to You?" is a question. The buyer came here because they think it does. Confirm it, don't re-ask it. "You're a deployer if all three are true" is declarative, completion-oriented.
+
+**Three bullets (v2 copy):**
 
 ```
-The law requires all of the following from deployers. Without them, each affected consumer is a potential separate violation at up to $20,000. This package gives you all of them. ([C.R.S. § 6-1-1701 et seq.](https://leg.colorado.gov/bills/sb24-205))
+✓ You use a high-risk AI system
+   Any AI that substantially influences a consequential decision — hiring, housing, credit, healthcare, insurance, education, or legal services. If it screens, scores, ranks, or evaluates people in those contexts, it qualifies.
+
+✓ The system affects Colorado residents
+   Residency of the consumer, not your business location, determines applicability. A Chicago-headquartered company with Colorado applicants is a deployer under this law.
+
+✓ You're the one deploying it
+   The compliance obligation falls on the business using the AI, not the vendor who built it. Your vendor's compliance doesn't substitute for yours.
 ```
 
-**Rationale:** The current flow shows documents first, then penalties second. This creates a "shopping" mindset instead of a "I need this" mindset. The urgency insert reframes the document list from a feature catalog to a statutory requirement checklist. The per-consumer scaling note ($20,000 × number of affected consumers) is factually grounded and directly relevant to any business using AI at scale.
+**Below bullets (v2 — replaces generic applicability summary):**
+```
+The June 30, 2026 deadline applies to all three. There is no small-business exemption for deployers. The Attorney General can bring enforcement actions before rulemaking is complete.
+```
+
+**Voice note:** v1 copy was accurate but ended with a softer close. v2 closes with the three facts buyers use as psychological cover for delay — small-business exemption (doesn't exist), rulemaking not complete (irrelevant to enforcement), future date (64 days, not infinite). All three are directly referenced from statute / AG statements verified in Round 1.
 
 ---
 
-## Section 5: Document List (Revised Headers and Explanations)
+## Section 4: Document List (v2 header)
 
-Keep the 8-document format. Revise the section header:
+**Header:**
+```
+The 8 Documents SB 24-205 Requires of Deployers
+```
 
-**Current:** `What's Included (8 Documents)`
+**Voice note:** "Requires" not "Includes." This was in v1. Kept. The word "requires" reframes the list from feature catalog to statutory obligation. Each document entry stays in its existing format (name + explanation) — the DOC_EXPLANATIONS text is already good and doesn't need a voice rewrite.
 
-**Proposed:** `The 8 Documents Colorado SB 24-205 Requires of Deployers`
+**Urgency insert before the list (v2 — shorter than v1):**
+```
+Without these, each affected consumer is a potential separate violation at up to $20,000. ([C.R.S. § 6-1-1701 et seq.](https://leg.colorado.gov/bills/sb24-205))
+```
 
-**Rationale:** The word "Requires" reframes the list from features to legal obligations. "What's Included" is catalog copy. "What Colorado SB 24-205 Requires" names the authority.
-
-Keep the existing DOC_EXPLANATIONS — they are already in buyer language and are strong. The only enhancement: add a statutory note to the Impact Assessment Framework explanation:
-
-**Current Impact Assessment Framework explanation:**
-> "A written evaluation of whether your AI tools could be producing discriminatory outcomes. This is what the state asks for if there's a complaint."
-
-**Revised:**
-> "A written evaluation of whether your AI tools could be producing discriminatory outcomes. Required under SB24-205 for each high-risk system. This is the first document the AG will request if a complaint is filed."
+**Change from v1:** v1 version was 2 sentences. v2 is 1 sentence. The per-consumer scaling fact is the conversion-relevant sentence. Keep it; cut the rest.
 
 ---
 
-## Section 6: Penalties (MOVED — before document preview, not after)
+## Section 5: Penalty Section (v2 copy — moved before document preview)
 
-**Current position:** After document list and document preview.
-
-**Proposed position:** Before document preview, second main section after "Does This Apply?"
-
-**Revised penalty section copy:**
-
+**Header:**
 ```
-What Happens Without Compliance
-
-Colorado SB 24-205 violations are enforced as deceptive trade practices under the Colorado Consumer Protection Act (C.R.S. § 6-1-112). The Attorney General has exclusive authority to bring civil actions.
-
-Civil penalties: up to $20,000 per violation. For consumers age 60 or older, penalties increase to up to $50,000 per violation.
-
-Each affected consumer may constitute a separate violation. A single non-compliant AI deployment affecting 50 employees could create exposure of up to $1,000,000.
-
-There is no small-business exemption for most deployer obligations. There is no private right of action — but AG enforcement does not require a consumer complaint to initiate.
-
-The June 30, 2026 deadline is not expected to change. The 2026 legislative session has not introduced amendments, and the AG has stated it can act without completing rulemaking.
-
-Source: [Colorado SB 24-205 — leg.colorado.gov](https://leg.colorado.gov/bills/sb24-205), [Colorado Consumer Protection Act — C.R.S. § 6-1-112](https://leg.colorado.gov/sites/default/files/2021-02/SB20-012_L.001_0.pdf)
+What you're exposed to without these documents
 ```
 
-**Rationale:** The current penalty section states: "Maximum: $20,000 per violation" with a brief summary. The proposed version adds the per-consumer scaling (which is the actual risk calculation a business owner would do), the 60+ consumer escalation, the lack of a small-business exemption, and the AG's authority to act without completing rulemaking. These are factually accurate (verified against statute and the blog post at aicompliancedocuments.com/blog/colorado-ai-law-91-days-deadline-requirements) and address the psychological loopholes buyers use to delay.
+**Voice note:** v1 header was "What Happens Without Compliance" — informational. v2 is "What you're exposed to" — personal. "Without these documents" ties the penalty directly to the product being sold on this page.
 
-**IMPORTANT:** The $20,000 and $50,000 figures were verified via [aicerts.ai](https://www.aicerts.ai/news/colorado-ai-law-key-duties-penalties-and-2026-deadline/) and the site's own verified blog post. The Colorado Consumer Protection Act enforcement mechanism is per [leg.colorado.gov/bills/sb24-205](https://leg.colorado.gov/bills/sb24-205). Any developer implementing this copy must verify these figures against the current statute text before publishing — the penalty amounts derive from CCPA enforcement and are subject to revision.
+**Body (v2):**
+```
+Colorado SB 24-205 violations are enforced as deceptive trade practices under the Colorado Consumer Protection Act. The Attorney General has exclusive authority.
+
+Civil penalties: up to $20,000 per violation. For consumers age 60 or older, up to $50,000 per violation.
+
+Each affected consumer is a potential separate violation. Fifty employees processed through a non-compliant AI system = up to $1,000,000 in exposure.
+
+No small-business exemption for deployers. No private right of action — AG-only. No rulemaking required before enforcement begins.
+
+Source: [Colorado SB 24-205 — leg.colorado.gov](https://leg.colorado.gov/bills/sb24-205)
+```
+
+**Change from v1:** v1 penalty section was 6 paragraphs. v2 is 4 short blocks. The 50-employee example replaces the abstract "1,000 consumers = $20 million" example — 50 is more relatable to a SMB buyer. The final line removes the lengthy enforcement-mechanism explanation and compresses to three facts (no SMB exemption / AG only / no rulemaking needed) — the three loopholes buyers use to defer.
+
+**Integrity note:** $20,000 and $50,000 figures are sourced from secondary analysis (aicerts.ai, aicompliancedocuments.com/blog) deriving from C.R.S. § 6-1-112. Developer must verify current CCPA ceiling before publishing. This caveat is on every penalty reference in this submission.
 
 ---
 
-## Section 7: Sidebar Purchase Card (Revised Copy)
+## Sidebar Purchase Card (v2)
 
-**Current button:** `Customize Now — $449`
-
-**Proposed button:** `Get Your Colorado Documents — $449`
-
-**Current sub-text:** `vs. thousands at a law firm`
-
-**Proposed:** `vs. $400–$800/hr to have counsel draft these from scratch`
-
-**Rationale:** The current sub-text is vague. The proposed version gives a specific hourly range — consistent with existing FAQ copy ("$400–$800 an hour") — that the buyer can do real math against. 8 documents × attorney hours to draft = the buyer's counterfactual cost.
-
-**Add to sidebar, below verified badge:**
+**Label above price:**
 ```
 June 30, 2026 deadline
+```
+Deadline Amber text. This is the conversion trigger in the sticky card — the buyer sees it every time they scroll.
+
+**Button:**
+```
+Get Your Colorado Documents — $449
+```
+
+**Change from v1:** v1 proposed "Get Your Colorado Documents — $449." Same. Already correct in v1.
+
+**Below button, replacing "vs. thousands at a law firm":**
+```
+vs. $400–$800/hr for counsel to draft these from scratch
+```
+
+**Voice note:** Specific hourly rate (consistent with existing FAQ copy). Buyer can do the math: 8 documents × draft time = real counterfactual cost.
+
+**Verified badge (keep):**
+```
+Verified against enacted statute text
+Source: C.R.S. § 6-1-1701 et seq. →
+```
+No change. Strong trust signal. Already in the right voice.
+
+**Below verified badge (v2 addition):**
+```
 64 days remaining
 ```
-
-**Rationale:** The deadline reinforcement in the purchase card is the final conversion trigger before the buyer clicks. Every high-converting compliance purchase page anchors on the deadline at the point of decision.
-
----
-
-## Section 8: Blog Guide Link (Revised)
-
-**Current text:** "Read our plain-language guide to this law →"
-
-**Proposed:**
-```
-Not sure if you qualify as a deployer under SB 24-205?
-
-Colorado SB 24-205: Who It Covers, What It Requires, and What "High-Risk" Actually Means →
-```
-
-**Rationale:** The current blog guide link is passive. The proposed version names the buyer's specific remaining objection (am I actually covered?) and the specific question the blog post answers. This is more likely to get clicked by someone still in qualification mode — and once they confirm they're covered, the product is the obvious next step.
+Small, Deadline Amber text. Date reinforcement at the point of decision.
 
 ---
 
-## What Stays the Same
+## Blog Guide Link (v2 copy)
 
-- The Questionnaire flow and Stripe checkout
-- Document sample preview
-- Related products section
-- ESIGN Act note
-- Statutory Authority section with primary source link
-- "What Happens After You Purchase" walkthrough
-- Status badge and effective date display
-- Breadcrumb navigation
+**Current:** "Read our plain-language guide to this law →"
+
+**v2:**
+```
+Not sure if SB 24-205 covers your AI system?
+
+What Counts as a "High-Risk AI System" Under Colorado's Law — and Who Qualifies as a Deployer →
+```
+
+**Voice note:** Names the buyer's specific remaining objection (am I actually covered?) and the exact question the blog post answers. The buyer who clicks this link is in qualification mode — once they confirm they're covered, the product is the obvious return.
+
+---
+
+## Already Exposed Mode — Variants for NYC and Illinois
+
+The structural changes above apply to all product pages. The urgency-mode copy shifts for in-force laws:
+
+**NYC Local Law 144 — Already Exposed mode:**
+
+Deadline Banner:
+```
+NYC Local Law 144 — In Effect Since 2023 — DCWP Investigations Increasing in 2026
+```
+
+H1:
+```
+NYC Local Law 144. 7 Documents. DCWP Compliance Required.
+```
+
+Deck:
+```
+Local Law 144 has been in force since July 2023. DCWP investigations are increasing. Here are the 7 documents required — bias audit documentation, candidate notices, public disclosure templates. Built from NYC Admin. Code § 20-870.
+```
+
+Exposure Summary header:
+```
+You're covered by this law if all three are true
+```
+
+Penalty section header:
+```
+What you're currently exposed to
+```
+(Note: "currently" — not "without compliance." The Already Exposed mode frames the buyer as already in the exposure window, not approaching it.)
+
+**Illinois HB3773 — Already Exposed mode:**
+
+Deadline Banner:
+```
+Illinois HB3773 — In Effect Since January 1, 2026 — IDHR Enforcement Active
+```
+
+H1:
+```
+Illinois HB3773. 5 Documents. Required Now.
+```
+
+Deck:
+```
+HB3773 is in effect. If you use AI in hiring, HR, or promotions affecting Illinois employees — you owe these documents. Built from 775 ILCS 5/2-102(L).
+```

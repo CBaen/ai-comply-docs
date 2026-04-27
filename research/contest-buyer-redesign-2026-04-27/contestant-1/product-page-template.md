@@ -1,164 +1,179 @@
-# Product Page Template — Illinois HB3773
+# Product Page Template — Illinois HB3773 (Round 2, new voice)
+## Supersedes Round 1 version (see product-page-template-v1.md for comparison)
 
 **Chosen product:** Illinois HB3773 — AI in Employment Decisions (`/products/illinois-hb3773`)
 
-**Why Illinois:** Illinois HB3773 is the highest buyer-urgency product in the catalog right now. It has been in effect since January 1, 2026 — buyers are already late. The penalties ($16,000–$70,000 per aggrieved person) are the highest per-person amounts of any state. The law applies to any employer with Illinois employees regardless of company headquarters — a wide applicability pool. The target query "Illinois AI hiring law compliance" is a buyer-intent query that the site could own with the right product page structure.
-
 ---
 
-## Metadata Rewrite
+## Metadata
 
 ### `<title>`
-**Current:** `Illinois HB3773 — AI Consumer Protections — Compliance Documents | AI Compliance Documents`
+```
+Illinois HB3773 Compliance Documents — AI Employment Law | AI Compliance Documents
+```
+Change from Round 1: tightened to lead with "Compliance Documents" (the product type the buyer is searching for) and dropped the redundant "Employer Templates" suffix.
 
-**Proposed:** `Illinois HB3773 AI Employment Compliance Documents — Employer Templates | AI Compliance Documents`
-
-**Rationale:** "AI Consumer Protections" is legally wrong framing — HB3773 is an employment law, not a consumer protection law. It also doesn't match what employers search for. "AI Employment Compliance Documents — Employer Templates" matches the buyer query ("Illinois HB3773 employer compliance") and clarifies the law's scope.
-
-### Meta description
-**Current:** (uses the regulation `description` field from regulations.ts — generic)
-
-**Proposed:** `Illinois HB3773 is in effect now. If you use AI in hiring, promotion, or performance reviews in Illinois, you are legally required to notify employees and document your AI systems. Penalties up to $70,000 per violation. Get your compliance package — 7 documents, instant download.`
-
-**Character count:** ~236. Note: the description field in regulations.ts should be updated to a shorter version (~160 chars): `Illinois HB3773 is live. AI in hiring, promotion, or reviews in Illinois requires employee notice and documentation. Penalties up to $70,000 per violation.`
+### Meta description (update `regulations.ts` description field)
+```
+HB3773 is in effect. AI in hiring in Illinois requires employee notices, an AI system inventory, and an impact assessment. 7 documents, $449, instant download.
+```
+155 characters. Offer-shaped: what's required → what we have → price → delivery. No throat-clearing.
 
 ---
 
-## Page Section Order (Proposed)
+## Page Section Order — Full Spec
 
-### 1. Law Identity Block (above fold)
+### Section 1: Identity + Offer (above fold, everything the buyer needs to decide)
+
 ```
-[Status badge: IN EFFECT — January 1, 2026]
+[● IN EFFECT — January 1, 2026]
 
-Illinois HB3773 — AI in Employment Decisions
-(Illinois Human Rights Act, amended by Public Act 103-0804)
+Illinois HB3773
+AI in Employment Decisions
 
-If you have employees or applicants in Illinois and you use AI in hiring, promotion, performance review, or disciplinary decisions — this law applies to you now.
+HB3773 is law. The documents are here.
+
+7 documents. $449. Instant download.
+
+[Get This Package →]
+
+Not sure this applies to you? → One question: do you have employees in Illinois who are screened, 
+scored, or ranked by any software tool? If yes, it applies.
 ```
 
-**Implementation note:** Move the status badge (currently exists in code as `<StatusBadge>`) to be the FIRST element, before the law name, so it's the first thing the buyer's eye hits.
+**Voice note:** "HB3773 is law. The documents are here." is twelve words. It states the situation and the resolution. Nothing else needs to happen above the fold. The buyer either knows they need it (primary CTA) or isn't sure (sub-CTA that answers the question in one sentence rather than routing them to a separate page).
+
+**Implementation:** Status badge first, law name second, offer statement third, price + document count fourth, CTA fifth. The price appears before the document list. In Round 1 the price was below the document list. Moving it up removes the "I have to scroll to find out what this costs" friction.
 
 ---
 
-### 2. Exposure Statement (new — replaces generic description)
+### Section 2: Penalty Callout (compact, statute-exact)
 
-This section does not currently exist. It should appear immediately below the law identity block, before pricing.
-
-**Proposed copy:**
 ```
-What the law requires.
+What happens if you don't have this.
 
-Illinois law says employers must notify employees and applicants when AI is used in decisions that affect them. That notice must be specific about which AI tools you're using and what they're doing. You must also be able to show that your AI tools aren't producing discriminatory outcomes by protected class.
+Up to $16,000 first violation. Up to $42,500 if you've had a prior finding within five years. 
+Up to $70,000 for two or more prior findings within seven years.
 
-The Illinois Department of Human Rights enforces this law. Penalties under the Illinois Human Rights Act are up to $16,000 for a first violation, $42,500 if you've had a prior finding within five years, and $70,000 for two or more prior findings within seven years. Those amounts apply per aggrieved person — not per complaint. (775 ILCS 5/8A-104)
+Those amounts apply per aggrieved person — not per complaint.
+50 applicants processed by your AI tool = up to 50 separate violations.
 
-If your AI hiring platform processed 50 applicants and a complaint leads to a finding, that's 50 separate violations.
+(775 ILCS 5/8A-104)
 ```
 
-**Citation link:** `(775 ILCS 5/8A-104)` → `https://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2266&ChapterID=64`
+**Voice note:** Round 1 buried this in an "Exposure Statement" sub-section with introductory paragraph prose. Round 2 gives it its own section heading and leads with the statute-exact numbers immediately. The math (50 applicants = 50 violations) is the closer — stated once, plainly, without alarm formatting.
 
-**Rationale:** Buyers land on this page and need to know two things before they'll buy: (a) does this law apply to me, and (b) what happens if I ignore it. The current page delivers neither clearly. The proposed section answers both, with statute-exact penalty figures.
+**Citation:** `(775 ILCS 5/8A-104)` links to `https://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2266&ChapterID=64`
+
+**Typography:** Penalty tier numbers in Inter 700. The section number in `font-mono text-sm text-teal-600`. The contrast between the large penalty figures and the small mono citation is itself a design signal: these are real numbers from a real statute.
 
 ---
 
-### 3. Applies To — Current block, keep, sharpen
+### Section 3: Applies To
 
-**Current appliesToSummary:** Fine as-is. Add the plain-language restatement:
+**Heading:**
 ```
-The law applies regardless of where your company is headquartered. If you have employees or applicants in Illinois and your AI tools touch decisions about them — you're in scope.
+Does this apply to you?
 ```
 
-**Current appliesToBullets:** Keep. These are already well-written.
+**Body (Calm Authority — no hedging):**
+```
+Yes, if:
+```
+- You have employees or applicants in Illinois
+- You use any software that screens, scores, ranks, or recommends in hiring, promotion, performance review, or disciplinary decisions
+- The tool substantially assists or replaces human judgment — not just collects data
+
+```
+It doesn't matter where your company is headquartered. Illinois employees = Illinois law.
+```
+
+**What changed from Round 1:** Round 1 kept the existing `appliesToBullets` as-is and added a prose restatement. Round 2 rewrites the entire block in the new voice — shorter, more direct, no redundancy. The "It doesn't matter where your company is headquartered" line is the most important applicability fact and gets its own line.
 
 ---
 
-### 4. Document List with Explanations — Current block, keep
+### Section 4: Document List
 
-The current `DOC_EXPLANATIONS` mapping in `page.tsx` already explains each document in buyer language. This is one of the strongest elements of the current product page. Keep it.
-
-**One addition:** After the document list, add:
-
+**Heading:**
 ```
-These 7 documents give you what the law asks for when a complaint arrives: written notice templates, an AI system inventory, an impact assessment framework, a human oversight protocol, and a compliance checklist. They're built from the actual text of Public Act 103-0804 — not a summary of it.
+What's in the package.
 ```
+
+Seven items, each with the existing `DOC_EXPLANATIONS` text (already in buyer language — keep). No change to the explanations themselves.
+
+**After the list:**
+```
+Seven documents. Each one addresses a specific requirement in Public Act 103-0804.
+When a complaint arrives, these are what the investigator asks for.
+```
+
+Two sentences. No methodology essay. The buyer understands what the documents are for.
 
 ---
 
-### 5. Urgency Bar (new, appears between document list and purchase CTA)
-
-**Proposed:**
+### Section 5: Purchase CTA (repeated — second occurrence)
 
 ```
-[Red background bar]
-HB3773 took effect January 1, 2026. If you're reading this, you may already be out of compliance. 
-Getting documented now is a better position than getting documented after a complaint.
+[Get the Illinois HB3773 Package — $449 →]
+
+Instant download. Fillable PDFs. Built from Public Act 103-0804.
+Questions before buying? info@aicompliancedocuments.com
 ```
 
-**Rationale:** The current page has no urgency signal between the document list and the buy button. Buyers who are almost convinced often need a final nudge that doesn't feel like a sales pitch. The proposed bar is factual — the law IS already in effect — and frames documentation as a defensive move, not a product purchase. This fits the Pragmatic Realist voice.
+**Voice note:** CTA appears twice — once above the fold (Section 1) and once after the document list (Section 5). The buyer who scrolled through the documents needs a purchase path without scrolling back up. The second CTA uses the same text as the first.
 
 ---
 
-### 6. Purchase CTA — Sharpen
+### Section 6: Product FAQ (compact — 4 questions, no accordion header preamble)
 
-**Current CTA label:** (not shown in page.tsx excerpt — likely "Get Your Documents" or similar)
+**Q: What if my company only uses one AI tool for a small part of hiring?**
+> If that tool screens, scores, or ranks candidates and humans act on its output, the notice requirement applies. One tool is enough.
 
-**Proposed CTA:**
-```
-Get the Illinois HB3773 Compliance Package — $[price], instant download
-```
+**Q: What if we're based in Chicago and only hire remotely?**
+> The law follows the employee, not the office. Remote employees in Illinois are covered.
 
-**Sub-copy below button:**
-```
-7 documents. Built from the enacted statute text. Download immediately after purchase.
-Not sure this covers your situation? Email info@aicompliancedocuments.com before buying.
-```
+**Q: Is this legal advice?**
+> No. These are templates built from the statute. Your attorney reviews and applies them to your situation. We give them a starting point instead of a blank page at $400 an hour.
 
-**Rationale:** The current page likely has a generic CTA label. The proposed version names the specific law, price, document count, and the instant-download promise — all the information a buyer needs to click with confidence. The email escape hatch ("Not sure this covers your situation?") addresses the main objection without creating a consultation pathway the site doesn't offer.
+**Q: What if HB3773 changes after I buy?**
+> We update templates when the law changes. The templates you download reflect the statute at the time of purchase. If implementing rules are published by the Illinois Department of Human Rights, we note it.
 
----
-
-### 7. FAQ Accordion (new for product pages — below purchase CTA)
-
-**Proposed questions:**
-
-**Q: What if I only have a few employees in Illinois?**
-> The law doesn't set a minimum employee count for the disclosure requirement. If you have one employee in Illinois and you use AI in any employment decision affecting them, you need to provide notice. The penalties apply per aggrieved person, so the size of your exposure scales with how many people your AI tools affect.
-
-**Q: What counts as "AI in employment decisions"?**
-> Under HB3773, this includes any AI that substantially assists or replaces human judgment in decisions about hiring, promotion, discipline, or performance review. If a software tool screens, scores, ranks, or recommends — and humans rely on that output in their decisions — you're likely covered. Your vendor can tell you whether their tool uses AI.
-
-**Q: Does this apply if our company is based outside Illinois?**
-> Yes. The law applies based on where your employees and applicants are, not where your company is headquartered. If you have employees or applicants in Illinois, the law applies to you.
-
-**Q: What's in the compliance package?**
-> 7 documents: Employee & Applicant AI Notification, AI System Inventory, Impact Assessment Framework, Human Oversight Protocol, Compliance Checklist, Accommodation Request Form, and Risk Management Policy. Each is built from the enacted text of Public Act 103-0804.
+**Voice note:** Round 1 FAQ answers were written in the Realist/Credentialist blog voice. Round 2 answers are shorter, more direct, and occasionally tighter in humor ("one tool is enough"). They answer the objection and stop. No padding.
 
 ---
 
-### 8. Related Laws Bar (bottom of page, keep and expand)
+### Section 7: Related Laws
 
-Add: "Also in force in your industry:" with cards linking to:
-- NYC Local Law 144 (if you hire in NYC)
-- Colorado SB 24-205 (if you operate in Colorado — effective June 30, 2026)
-- Texas TRAIGA (if you operate in Texas)
+**Heading:**
+```
+Also in force where you hire.
+```
 
-**Rationale:** A buyer who came for Illinois may have exposure in multiple states. Cross-selling to related products is both commercially sound and genuinely helpful — the buyer needs to know about all their obligations.
+Three product cards, new card pattern from `visual-direction.md`:
+- NYC Local Law 144 — [● IN EFFECT] — If you hire in New York City
+- Colorado SB 24-205 — [● JUNE 30, 2026] — If you operate in Colorado
+- Texas TRAIGA — [● IN EFFECT] — If you operate in Texas
+
+**Voice note:** "Also in force where you hire" is seven words. It states the reason for showing these products without over-explaining the cross-sell logic.
 
 ---
+
+## What Changes From Round 1
+
+| Round 1 | Round 2 |
+|---------|---------|
+| Price below document list | Price above fold with document count |
+| Exposure Statement section (prose) | Penalty Callout section (numbers first) |
+| "What the law requires" framing | "What happens if you don't have this" framing |
+| Blog-voice FAQ answers | Calm Authority FAQ answers (shorter) |
+| "Law Identity Block" heading prose | "HB3773 is law. The documents are here." |
+| Urgency bar (separate red block) | Penalty callout section replaces urgency bar — calmer, more factual |
 
 ## What Stays the Same
 
-- Status badge component (StatusBadge) — keep, move position
-- Questionnaire component — keep
-- DOC_EXPLANATIONS mapping — keep, add summary paragraph
-- BreadcrumbSchema — keep
-- Citation link to primary statute (citationUrl in regulations.ts) — keep
-
-## What Changes
-
-- Metadata: title + description
-- Law identity block: add exposure statement above pricing
-- Add urgency bar between document list and CTA
-- Sharpen CTA label
-- Add product-page FAQ accordion
-- Add related laws bar
+- StatusBadge component (exists in code — move to top position)
+- DOC_EXPLANATIONS text for each document
+- BreadcrumbSchema component
+- Questionnaire component
+- Primary statute citation link from regulations.ts
+- Price ($449 — locked, do not propose changes)
