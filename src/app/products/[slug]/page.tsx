@@ -274,7 +274,9 @@ export default async function RegulationPage({
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display mb-3 sm:mb-4 leading-tight">
-              {reg.name}
+              {slug === "colorado-sb24-205"
+                ? "Colorado SB 24-205. 8 Documents. June 30, 2026."
+                : reg.name}
             </h1>
             <p className="text-base sm:text-lg text-slate-300 mb-4 max-w-2xl leading-relaxed">
               {reg.description}
