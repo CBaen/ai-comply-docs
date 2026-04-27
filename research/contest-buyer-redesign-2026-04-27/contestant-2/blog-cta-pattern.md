@@ -1,193 +1,191 @@
-# Blog CTA Pattern — Contestant 2
+# Blog CTA Pattern — Contestant 2 (v2 — Transaction-First Declarative voice)
 
-## The Problem Being Solved
-
-The top Colorado blog post (855 impressions at position ~4, 0 clicks) contains exactly **one** link to the Colorado product page in 1,500 words. The EEOC blog post (1,833 impressions, position 4.16, 0.11% CTR) sends almost no buyers to products.
-
-The diagnosis has two parts:
-
-**Part 1 — Zero-click structural problem:** AI Overviews are consuming the answer for informational queries. CTR at position 4 should be ~7.2% (First Page Sage, 2026). The site gets 0.11%. This is not fixable by adding CTAs — the content is serving researchers and AI crawlers, not buyers. CTAs won't help if the reader has already gotten what they came for from the SERP.
-
-**Part 2 — Leaky handoff problem:** For the readers who DO click through, the single link buried at article end is a missed opportunity. This IS fixable.
-
-The CTA pattern addresses Part 2. Part 1 requires the keyword strategy shift (see keyword-strategy.md) and title/meta restructuring.
+*v1 preserved as `blog-cta-pattern-v1.md`*
 
 ---
 
-## CTA Component Specification
+## The Problem (unchanged from v1)
 
-### Component Name: `BlogProductCTA`
+The top Colorado blog post has 1 product link in 1,500 words. It's buried after 800 words of law explanation. The blog is producing impressions and zero sales. The CTA pattern fixes the leaky handoff between the research surface (blog) and the purchase surface (product page).
 
-**File location:** `src/components/BlogProductCTA.tsx` (new component)
+Two-part diagnosis stays from v1:
+- **Part 1 (structural):** AI Overviews consume informational query clicks. CTAs can't fix this. Addressed in keyword-strategy.md and homepage metadata.
+- **Part 2 (handoff):** Readers who do click through find one link at the end. This is fixable. This document fixes it.
 
-**Props:**
+---
+
+## Component: `BlogProductCTA`
+
+**File:** `src/components/BlogProductCTA.tsx`
+
+**Props (unchanged from v1):**
 ```typescript
 interface BlogProductCTAProps {
-  slug: string;           // Product slug from regulations.ts
-  lawName: string;        // e.g. "Colorado SB 24-205"
-  deadline: string;       // e.g. "June 30, 2026"
-  price: number;          // From regulations.ts
-  urgencyLine: string;    // One sentence, Realist voice
+  slug: string;
+  lawName: string;
+  deadline: string;
+  price: number;
+  urgencyLine: string;
 }
 ```
 
-**Rendered output (three placements):**
-
 ---
 
-### Placement 1: After Opening Hook (within first 300 words)
+## Placement 1 — After Opening Hook (within first 300 words)
 
-This is the "am I in the right place?" signal. Appears after paragraph 2-3 of the article body.
+**Purpose:** "Am I in the right place?" confirmation for the buyer who clicked the blog post because of the law name but isn't sure if this site solves their problem.
+
+**v2 copy (Transaction-First Declarative):**
 
 ```jsx
-<div className="my-8 border border-amber-200 bg-amber-50 rounded-lg p-5">
-  <p className="text-sm font-semibold text-amber-900 mb-1">
-    {deadline}: Compliance deadline
+<div className="my-8 border-l-4 border-l-[#dc2626] bg-red-50 rounded-r p-5">
+  <p className="text-xs font-bold uppercase tracking-widest text-red-700 mb-1">
+    {deadline}
   </p>
-  <p className="text-gray-800 text-sm mb-3 leading-relaxed">
+  <p className="text-gray-900 font-bold text-base mb-3">
     {urgencyLine}
   </p>
   <a
     href={`/products/${slug}`}
-    className="inline-flex items-center gap-2 bg-blue-800 text-white px-5 py-3 rounded font-semibold text-sm hover:bg-blue-900 transition"
+    className="inline-flex items-center gap-2 bg-[#1e3a5f] text-white px-5 py-3 rounded font-bold text-sm hover:bg-[#162d4a] transition"
   >
-    Get {lawName} Documents — ${price}
-    <svg className="w-4 h-4" ...arrow icon... />
+    {lawName} Documents — ${price}
+    <svg className="w-4 h-4" ...arrow />
   </a>
   <p className="text-xs text-gray-500 mt-2">
-    Instant download. One-time purchase. Statute-sourced.
+    Instant download. One-time purchase.
   </p>
 </div>
 ```
 
-**Urgency line examples by law:**
-- Colorado: "Colorado SB 24-205 requires documented compliance before June 30, 2026. Documentation takes weeks to implement — not minutes."
-- Texas: "Texas TRAIGA took effect January 1, 2026. If you deploy AI in Texas and have no compliance documentation, you are currently exposed."
-- Illinois: "Illinois HB3773 has been in force since January 1, 2026. Penalties reach up to $70,000 per violation for repeat offenders."
-- NYC: "NYC Local Law 144 has been enforced since July 2023. The DCWP has opened proactive investigations — not just complaint-driven ones."
+**Urgency line copy per law (v2 voice — declarative, no hedging):**
+
+- **Colorado:** `June 30, 2026 is the enforcement date. The documents take time to implement — not just to buy.`
+- **Texas:** `Texas TRAIGA is in force. One uncurable violation: up to $200,000. The documents are ready.`
+- **Illinois:** `Illinois HB3773 has been in force since January 1, 2026. Penalties reach $70,000 per violation for repeat offenders.`
+- **NYC:** `NYC Local Law 144. Enforced since 2023. DCWP opened proactive investigations in 2026 — not just complaint-driven.`
+
+**v1 voice comparison:**
+- v1: "Colorado SB 24-205 requires documented compliance before June 30, 2026. Documentation takes weeks to implement — not minutes."
+- v2: "June 30, 2026 is the enforcement date. The documents take time to implement — not just to buy."
+
+**Change:** v1 named the law first (researcher reflex). v2 leads with the date (buyer anchor). "Not just to buy" is sharper than "not minutes" — it addresses the specific misconception that purchasing = complying.
 
 ---
 
-### Placement 2: After the Penalty Section (mid-article)
+## Placement 2 — After Penalty Section (mid-article)
 
-This is the "I just read the consequences — what do I do?" moment. Place immediately after the section discussing enforcement and penalties.
+**Purpose:** The buyer just read the consequences. This placement names the product at peak anxiety. Highest expected conversion of the three placements.
+
+**Build-order note:** This is the placement to ship first if only one can be built. See homepage-rewrite.md Build Order, item 3.
+
+**v2 copy:**
 
 ```jsx
-<div className="my-8 border-l-4 border-l-blue-600 bg-blue-50 rounded-r-lg p-5">
-  <p className="font-bold text-gray-900 text-sm mb-2">
-    The {lawName} compliance package covers what this article describes.
+<div className="my-8 border border-[#1e3a5f] bg-[#f8fafc] rounded-lg p-5">
+  <p className="text-xs font-bold uppercase tracking-widest text-[#1e3a5f] mb-2">
+    {lawName} Compliance Documents
   </p>
-  <ul className="text-sm text-gray-700 space-y-1 mb-4 list-disc list-inside">
-    {/* Pull 3–4 specific documents from the product's documents array */}
-    <li>Risk Management Policy</li>
-    <li>Impact Assessment</li>
-    <li>Consumer Notification Template</li>
-    <li>Human Oversight Protocol</li>
-    {/* + [N] more documents */}
+  <ul className="text-sm text-gray-700 space-y-1 mb-4">
+    {/* 3 documents from the product, obligation-framed */}
+    <li>Risk Management Policy — required by statute</li>
+    <li>Impact Assessment — required before deploying high-risk AI</li>
+    <li>Consumer Notification Template — required before AI makes decisions about people</li>
+    <li className="text-gray-400 text-xs">+ {remainingCount} more documents</li>
   </ul>
   <a
     href={`/products/${slug}`}
-    className="inline-flex items-center gap-2 bg-blue-800 text-white px-5 py-3 rounded font-semibold text-sm hover:bg-blue-900 transition"
+    className="inline-flex items-center gap-2 bg-[#1e3a5f] text-white px-5 py-3 rounded font-bold text-sm hover:bg-[#162d4a] transition w-full justify-center sm:w-auto sm:justify-start"
   >
-    See What's Included — ${price}
-    <svg ...arrow... />
+    Get the Documents — ${price}
+    <svg className="w-4 h-4" ...arrow />
   </a>
 </div>
 ```
 
-**Why this placement works:** The buyer just finished reading the penalty section. They know what exposure looks like. The mid-article CTA offers the solution at exactly the highest-anxiety moment in the article flow — before they finish reading and decide to "think about it."
+**v1 version:** Used "The law requires" document framing with a "See What's Included" CTA.
+
+**Voice change:** v1 CTA was "See What's Included" — browse signal. v2 CTA is "Get the Documents" — transaction signal. The document list now uses obligation framing ("required by statute," "required before deploying") rather than description framing ("A structured list of every AI tool you use"). The buyer doesn't need to understand what an impact assessment is — they need to know the law requires one and that this package has it.
 
 ---
 
-### Placement 3: End of Article (existing link + enhancement)
+## Placement 3 — End of Article
 
-The current pattern has one product link at the end. Keep it. But strengthen it:
+**Purpose:** Closing purchase opportunity for readers who reached the end without buying. Also the SEO-friendly placement — a visible product link at the end of every post reinforces the blog → product internal link graph.
 
-**Current pattern (from BLOG-STYLE-GUIDE.md example):**
-```
-Our [Illinois HB3773 compliance package](/products/illinois-hb3773) includes ready-to-use notice templates...
-```
-
-**Proposed end-of-article CTA block (after the existing prose link):**
+**v2 copy:**
 
 ```jsx
-<div className="mt-10 p-6 bg-slate-900 text-white rounded-xl">
-  <p className="text-lg font-bold mb-2">
+<div className="mt-10 p-6 bg-[#1e3a5f] text-white rounded-xl">
+  <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-1">
     {lawName} Compliance Documents
   </p>
-  <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-    {documentCount} documents built from the enacted statute text at {citationUrl}.
-    Instant download. ${price}, one-time.
+  <p className="text-2xl font-extrabold mb-1">
+    ${price}
+  </p>
+  <p className="text-slate-300 text-sm mb-4">
+    {documentCount} documents. Instant download. Built from the enacted statute.
   </p>
   <a
     href={`/products/${slug}`}
-    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded font-semibold hover:bg-blue-500 transition"
+    className="inline-flex items-center gap-2 bg-white text-[#1e3a5f] px-6 py-3 rounded font-bold hover:bg-slate-100 transition"
   >
     Get the Documents →
   </a>
-  <p className="text-slate-500 text-xs mt-3">
-    Not sure this applies to you? Read the applicability section on the product page.
+  <p className="text-slate-400 text-xs mt-3">
+    Not sure this applies to you? The product page has the applicability checklist.
   </p>
 </div>
 ```
 
+**v1 version:** Same dark-navy treatment with slightly different copy. Price buried in the description line.
+
+**Voice change:** v2 puts the price as the largest text element after the law name. `text-2xl font-extrabold` for `$449`. The buyer who scrolled 1,500 words to the end needs a transaction anchor, not a description. Price first, then what they get, then the button. The final micro-copy ("Not sure this applies to you?") routes hesitant buyers to the product page's applicability section rather than leaving them to exit.
+
 ---
 
-## Frequency Rules
+## Frequency Rules (unchanged from v1 — voice-agnostic)
 
 | Blog Post Type | Placement 1 | Placement 2 | Placement 3 |
 |---|---|---|---|
-| Law-specific post (e.g., "Colorado SB 24-205: What Businesses Need to Know") | YES — after para 2 | YES — after penalty section | YES — end |
-| Cross-state comparison post (e.g., "AI Compliance Penalties by State") | One per state section | One per state section | YES — link to `/products` index |
-| General/informational post (e.g., "What is an AI Impact Assessment?") | NO — article is researcher-bait; CTA inappropriate until buyer is identified | If post has a clear law anchor, add ONE after the relevant section | YES — link to most relevant product |
-| EEOC/federal guidance post | NO | NO — no federal product directly maps | YES — link to multi-state bundle |
+| Law-specific post (e.g., Colorado SB 24-205) | YES | YES — after penalty section | YES |
+| Cross-state comparison post | One per state section | One per state section | YES — link to `/products` |
+| General/informational post | NO | Add if post has a law anchor | YES — most relevant product |
+| EEOC/federal guidance post | NO | NO | YES — multi-state bundle |
 
-**Maximum CTAs per post:** 3 (one per placement). Never more than 3 — this preserves editorial integrity and avoids the appearance of advertorial content that would undermine the Credentialist voice.
-
----
-
-## Implementation Path
-
-This is a **component addition**, not a template rebuild. The work:
-
-1. Create `src/components/BlogProductCTA.tsx` with the three layout variants
-2. Import into `src/app/blog/[slug]/page.tsx` (or wherever the MDX renderer lives)
-3. Add a `productCTA` field to blog post frontmatter schema:
-   ```yaml
-   productCTA:
-     slug: "colorado-sb24-205"
-     placement: ["after-hook", "after-penalty", "end"]
-   ```
-4. The MDX renderer inserts the component at the correct paragraph count or H2 section marker
-
-**Alternative (simpler):** Use the existing `externalReferences` strip pattern — add a new `productRecommendation` frontmatter field that renders a styled CTA block at the bottom of every qualifying post. This requires one component and one frontmatter field — no paragraph counting.
+**Maximum CTAs per post:** 3. Never more.
 
 ---
 
-## The One-Link Leakage Fix
+## Frontmatter Field (implementation)
 
-The current Colorado blog post has one link: `[impact assessment](/products/colorado-sb24-205)` at ~word 800. The proposed pattern adds:
-- Placement 1 at ~word 150 (after opening hook)
-- Placement 2 at the penalty section (~word 900 in most posts)
-- Placement 3 at the end
+Add to blog post frontmatter schema:
 
-This takes the Colorado blog from 1 product touchpoint to 3, without disrupting the editorial voice — each CTA appears at a natural decision moment. The mid-article CTA is the highest-leverage single addition.
+```yaml
+productCTA:
+  slug: "colorado-sb24-205"
+  lawName: "Colorado SB 24-205"
+  deadline: "June 30, 2026"
+  price: 449
+  documentCount: 8
+  placements:
+    - "after-hook"
+    - "after-penalty"
+    - "end"
+```
+
+The `BlogProductCTA` component reads these props. The MDX renderer inserts the component at the correct position based on `placements`.
+
+For posts without a `productCTA` field: no CTA renders. The component is opt-in per post, not global.
 
 ---
 
-## Anti-Pattern Check
+## Voice Consistency Check
 
-None of the proposed CTAs:
-- Say "Get started in minutes" without specifying what
-- Say "Trusted by X businesses"
-- Link to a newsletter or email capture
-- Say "Schedule a demo"
-- Say "Speak with a compliance expert"
-- Use the phrase "Discover" or "Unlock"
+Every piece of CTA copy in this component must pass three tests:
 
-All CTAs:
-- Name the specific law
-- Name the price
-- Describe what the buyer receives ("8 documents," "instant download")
-- Point to a specific product slug, not a generic `/products` page
-- Use the Realist voice: short, direct, no softening
+1. **Transaction verb test:** Does the primary CTA use a transaction verb (get, download, buy) rather than a browse verb (see, explore, learn, discover)?
+2. **Price visible test:** Is the price visible before the buyer clicks? (Yes — it's in every CTA button label and/or the description line.)
+3. **Obligation frame test:** Does the document list use obligation language ("required by statute") rather than feature language ("helps you demonstrate compliance")?
+
+If any piece of copy fails any of these three tests, it has drifted back toward the Realist/Credentialist voice or toward generic SaaS copy. Reject it.

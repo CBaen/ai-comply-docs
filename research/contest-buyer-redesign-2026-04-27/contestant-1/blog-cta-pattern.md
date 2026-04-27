@@ -100,48 +100,63 @@ The current internal linking rule (BLOG-STYLE-GUIDE.md Section 8) specifies link
 
 ---
 
-## CTA Copy by Product
+## CTA Copy by Product (Round 2 — Calm Authority voice)
 
-These are pre-written CTA components ready to inject. Each matches the voice pattern (Realist heading, Credentialist body, Realist close with specific action).
+*Voice rule: law name + offer + one-line document description. No Realist/Credentialist explanation. The blog article already did the explaining. The CTA's job is to capture the buyer who is now ready.*
 
 ### Illinois HB3773
 ```
-heading: "HB3773 is in effect. Get your compliance documents."
-body: "Illinois requires employee notices, an AI system inventory, and an impact assessment framework. This 7-document package is built from the enacted text of Public Act 103-0804."
-ctaText: "Get the Illinois HB3773 Package"
-ctaHref: "/products/illinois-hb3773"
-price: "$449, instant download"
-lawName: "IN EFFECT — January 1, 2026"
+lawName:  "IN EFFECT — January 1, 2026"
+heading:  "Illinois HB3773. The documents. $449."
+body:     "7 documents from Public Act 103-0804. Employee notices, AI inventory, impact assessment. Instant download."
+ctaText:  "Get the Illinois Package"
+ctaHref:  "/products/illinois-hb3773"
+price:    "$449 · 7 documents · instant download"
+variant:  "single"
 ```
 
 ### Colorado SB 24-205
 ```
-heading: "Colorado's deadline is June 30, 2026."
-body: "Deployers of high-risk AI systems need a risk management program, consumer notices, and annual impact assessments in place before June 30. This 8-document package is built from the enacted statute."
-ctaText: "Get the Colorado SB 24-205 Package"
-ctaHref: "/products/colorado-sb24-205"
-price: "$449, instant download"
-lawName: "EFFECTIVE JUNE 30, 2026"
+lawName:  "EFFECTIVE JUNE 30, 2026"
+heading:  "Colorado SB 24-205. The documents. $449."
+body:     "8 documents from the enacted statute. Risk program, consumer notices, impact assessments. Instant download."
+ctaText:  "Get the Colorado Package"
+ctaHref:  "/products/colorado-sb24-205"
+price:    "$449 · 8 documents · instant download"
+variant:  "single"
 ```
 
 ### NYC Local Law 144
 ```
-heading: "NYC Local Law 144 is active. Bias audit documentation is required."
-body: "If you hire in New York City and use automated screening tools, you need an annual bias audit and public summary. This 7-document package covers the full Local Law 144 requirement."
-ctaText: "Get the NYC Local Law 144 Package"
-ctaHref: "/products/nyc-local-law-144"
-price: "$399, instant download"
-lawName: "IN EFFECT — July 5, 2023"
+lawName:  "IN EFFECT — July 5, 2023"
+heading:  "NYC Local Law 144. The documents. $399."
+body:     "7 documents for the full Local Law 144 requirement. Bias audit report, candidate notices, public summary. Instant download."
+ctaText:  "Get the NYC Package"
+ctaHref:  "/products/nyc-local-law-144"
+price:    "$399 · 7 documents · instant download"
+variant:  "single"
 ```
 
 ### Texas TRAIGA
 ```
-heading: "Texas TRAIGA took effect January 1, 2026."
-body: "Civil penalties up to $200,000 per violation for deployers of high-risk AI systems. This package covers the documentation TRAIGA requires before enforcement catches up."
-ctaText: "Get the Texas TRAIGA Package"
-ctaHref: "/products/texas-traiga"
-price: "$449, instant download"
-lawName: "IN EFFECT — January 1, 2026"
+lawName:  "IN EFFECT — January 1, 2026"
+heading:  "Texas TRAIGA. The documents. $449."
+body:     "In force since January 1. Civil penalties up to $200,000 per violation. [REQUIRES PRIMARY SOURCE VERIFICATION] The package covers TRAIGA's documentation requirements. Instant download."
+ctaText:  "Get the Texas Package"
+ctaHref:  "/products/texas-traiga"
+price:    "$449 · instant download"
+variant:  "single"
+```
+
+### Multi-Law (EEOC post and any multi-jurisdiction post)
+```
+lawName:  "MULTIPLE LAWS IN EFFECT"
+heading:  "Your state has an AI law. Your documents are here."
+body:     "Illinois HB3773 · NYC Local Law 144 · Texas TRAIGA · Colorado (June 30, 2026)"
+ctaText:  "Find My Compliance Documents"
+ctaHref:  "/deadline-checker"
+price:    "$49–$697 · instant download · one-time purchase"
+variant:  "multi"
 ```
 
 ---

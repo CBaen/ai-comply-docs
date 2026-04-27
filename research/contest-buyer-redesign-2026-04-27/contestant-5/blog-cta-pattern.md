@@ -1,130 +1,207 @@
-# Blog CTA Pattern — Contestant 5
+# Blog CTA Pattern — Contestant 5 (v2 — new marketing voice)
 
-## The Problem (Specific, From the Brief)
-
-The top Colorado blog post has 855 impressions, 0 clicks, and contains **exactly one link** to the Colorado product page across 1,500 words. The EEOC blog post has 1,833 impressions at position 4.16 with **0.11% CTR** — position 4 should produce 5–8% CTR (sourced: [First Page Sage CTR by Position 2026](https://firstpagesage.com/reports/google-click-through-rates-ctrs-by-ranking-position/), which shows position 4 at 7.2%). Zero-click AI Overview pressure accounts for some loss, but 0.11% at position 4 suggests structural blog → product leakage beyond just AI Overviews.
-
-The diagnosis: blog posts are information-complete. They answer the question so thoroughly that the reader doesn't need to click further — neither to the product page nor anywhere else. This is good for authority, bad for conversion. The fix is not to make the blog posts less thorough. The fix is to make the conversion moment explicit and timed correctly within the reader's journey through the post.
+*v1 preserved at `blog-cta-pattern-v1.md`. v1 established the three-placement structure (penalty section / requirement list / closing action). v2 rewrites the CTA component copy in the new Calm Hardware Store voice and adds the blog title/meta rewrite spec that the Proxy identified as missing.*
 
 ---
 
-## The CTA Pattern: Three placements, two types, one rule
+## What doesn't change from v1
 
-### Rule
-**One link per 400 words is the minimum density.** A 1,500-word post should have 3–4 product links minimum, not 1. The links must be contextual — placed at the moment the reader is thinking about the specific need the product solves, not in a standalone "buy now" paragraph at the end.
+- Three placements per post (minimum 3 product links per 1,500-word post)
+- Placement timing: after penalties, after requirement list, at closing action section
+- Per-post link table (same mapping of posts to product slugs)
+- Anchor text rules (specific and descriptive, not "click here")
+- Frequency floor: 3 links minimum per post
 
-### Placement 1: Penalty section in-line link (Precise Credentialist moment)
+## What changes from v1
 
-**When:** Immediately after citing penalty amounts with primary source citations.
-**What:** A parenthetical inline link to the product page.
-**Pattern:**
+The CTA copy itself. v1 wrote CTAs in the Pragmatic Realist voice because that was the only voice on the site. v2 applies the new Calm Hardware Store marketing voice — short, offer-forward, no explanation. The Realist/Credentialist voice stays in the surrounding blog body. The CTA component is a different surface: it's marketing, not journalism.
 
-```markdown
-The penalty for a first civil rights violation under [775 ILCS 5/8A-104](https://www.ilga.gov/Documents/legislation/ilcs/documents/077500050K8A-104.htm) 
-is up to $16,000. Repeat violations within five years: up to $42,500. Two or more prior violations within seven years: up to $70,000 — per violation.
+---
 
-If those numbers give you pause, [the Illinois HB3773 compliance package](/products/illinois-hb3773) includes 
-every document the statute requires — $449, instant download.
+## The Three Placements — New Voice Copy
+
+### Placement 1: After the penalty section
+
+**v1 copy (Pragmatic Realist — correct for the blog body, wrong for the CTA):**
+> "If those numbers give you pause, [the Illinois HB3773 compliance package](/products/illinois-hb3773) includes every document the statute requires — $449, instant download."
+
+**v2 copy (new marketing voice):**
+
+```
+The law requires these documents. We have them.
+[Illinois HB3773 Compliance Package — $449, instant download →](/products/illinois-hb3773)
 ```
 
-**Why this placement converts:** The buyer who just read the penalty tiers is at peak anxiety. They are not thinking "I wonder if there's a product for this." They are thinking "what do I do." The inline link appears exactly at that moment. This is the Pragmatic Realist close after the Credentialist penalty section — it moves from fact to action.
+Two lines. First line states the situation. Second line is the offer. No transitional softening ("if those numbers give you pause"). The buyer who just read the penalty tiers doesn't need a conditional — they need the link.
 
----
-
-### Placement 2: Mid-article requirement list inline link (functional anchor)
-
-**When:** When the post lists what documents or actions the law requires.
-**What:** Link the document name directly to the product page using descriptive anchor text.
-**Pattern:**
-
-```markdown
-Colorado SB 24-205 requires deployers to maintain:
-
-- A risk management policy — documented and updated at least annually
-- An impact assessment for each high-risk AI system
-- Consumer notices before consequential decisions are made
-
-Our [Colorado SB 24-205 compliance package](/products/colorado-sb24-205) includes all three, 
-built from the statutory text at [C.R.S. § 6-1-1703](https://leg.colorado.gov/bills/sb24-205).
+**Colorado variant:**
+```
+These are the documents Colorado requires. Built from the statute. $449.
+[Get the Colorado SB 24-205 Compliance Package →](/products/colorado-sb24-205)
 ```
 
-**Why this placement converts:** The reader who just read "the law requires X, Y, Z" immediately wonders "do I have X, Y, Z?" The link answers that before they have to wonder. Descriptive anchor text ("Colorado SB 24-205 compliance package") is both SEO-appropriate and conversion-functional.
-
----
-
-### Placement 3: Closing action section dedicated CTA block
-
-**When:** In the "What to Do Now" / "Where to Start" section at the end of every post.
-**What:** A styled callout block (using the site's existing blue callout / enrichment block pattern) that explicitly presents the product as the next step.
-**Pattern:**
-
-```markdown
-## Where to Start
-
-If you use AI in hiring and you have employees in Illinois, you need three things in place right now: 
-an employee AI notice, an AI system inventory, and a documented zip-code-proxy review. 
-These are not optional best practices — they are the statutory requirements of [775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64).
-
-[Get the Illinois HB3773 Compliance Package — $449, instant download →](/products/illinois-hb3773)
-
-Not sure whether this law applies to your specific situation? Have your attorney review the statute directly: 
-[775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2266&ChapterID=64).
+**NYC variant:**
+```
+Local Law 144 requires an annual bias audit and candidate notice. Here they are.
+[NYC Local Law 144 Compliance Package — $399 →](/products/nyc-local-law-144)
 ```
 
-**Component:** This is a standalone styled block — background-color `bg-blue-50`, border `border-blue-200`, padding, with the product link as a button or prominent text link. The "Have your attorney review" note at the bottom reinforces legal credibility without undermining the product link.
+---
 
-**Why this placement converts:** The closing section is where the reader who has read the whole post and feels convinced of the need makes the decision. This placement catches them at peak readiness. The current pattern has one vague inline link somewhere mid-article — this replaces that with a dedicated conversion moment at the exact decision point.
+### Placement 2: After the requirement list
+
+**v1 copy:**
+> "Our [Colorado SB 24-205 compliance package](/products/colorado-sb24-205) includes all three, built from the statutory text at [C.R.S. § 6-1-1703](https://leg.colorado.gov/bills/sb24-205)."
+
+**v2 copy:**
+
+```
+[Colorado SB 24-205 Compliance Package](/products/colorado-sb24-205) — all of the above. $449, instant download.
+```
+
+One line. The preceding text already listed what the law requires. The CTA line says: we have all of that. Price. Delivery. Done. The statute citation for the requirement list stays in the body text above — it doesn't need to be repeated in the CTA.
+
+**Illinois variant:**
+```
+[Illinois HB3773 Compliance Package](/products/illinois-hb3773) — every document the statute requires. $449.
+```
 
 ---
 
-## Implementation specification
+### Placement 3: Closing action section (styled CTA block)
 
-### Per-post required links table
+This is a standalone block rendered at the end of the blog post's "Where to Start" section. It is NOT a paragraph of prose — it is a visually distinct component using the site's existing `bg-blue-50 border-blue-200` card pattern.
 
-| Post | Penalty section link | Requirement list link | Closing CTA product |
-|------|---------------------|----------------------|---------------------|
-| `colorado-sb-24-205-ai-law-what-businesses-need-to-know` | `/products/colorado-sb24-205` | `/products/colorado-sb24-205` | `/products/colorado-sb24-205` |
-| `colorado-ai-law-91-days-deadline-requirements` | `/products/colorado-sb24-205` | `/products/colorado-sb24-205` | `/products/colorado-sb24-205` |
-| `illinois-hb3773-ai-employment-law-what-employers-need` | `/products/illinois-hb3773` | `/products/illinois-hb3773` | `/products/illinois-hb3773` |
-| `ai-compliance-penalties-by-state` | Multiple (one per state section) | n/a | `/products/` (state-filtered) |
-| `eeoc-ai-guidance-removed-federal-vacuum-2026` | `/products/illinois-hb3773` and `/products/nyc-local-law-144` | Both | Both |
-| `hiring-software-uses-ai-employment-law-compliance` | `/products/illinois-hb3773` | `/products/illinois-hb3773` | `/products/illinois-hb3773` |
-| `what-is-ai-bias-audit-does-your-business-need-one` | `/products/nyc-local-law-144` | `/products/nyc-local-law-144` | `/products/nyc-local-law-144` |
-| `texas-traiga-hb149-ai-law-compliance-guide` | `/products/texas-traiga` | `/products/texas-traiga` | `/products/texas-traiga` |
+**v1 copy (Pragmatic Realist — 3 sentences of context before the link):**
+> "If you use AI in hiring and you have employees in Illinois, you need three things in place right now: an employee AI notice, an AI system inventory, and a documented zip-code-proxy review. These are not optional best practices — they are the statutory requirements of [775 ILCS 5/2-102(L)]. [Get the Illinois HB3773 Compliance Package — $449, instant download →]"
 
-### Anchor text rules
+**v2 copy (new marketing voice — the context lives in the blog body above; the CTA block is offer-only):**
 
-- DO: "the Illinois HB3773 compliance package" — specific, descriptive
-- DO: "Colorado SB 24-205 compliance documents" — law-specific
-- DO: "get these documents" — task-oriented
-- DO NOT: "click here" — generic
-- DO NOT: "our product" — vague
-- DO NOT: "buy now" — premature, before buyer is convinced
+```
+[STYLED BLOCK — bg-blue-50, border-blue-200, padding 24px]
 
-### Frequency floor
+Illinois HB3773 is in effect.
+The documents the law requires are here.
 
-No post with a corresponding product should have fewer than 3 links to that product. Current posts have 0–1. The floor is 3.
+[Get the Illinois HB3773 Compliance Package — $449 →]  ← Signal Blue button
 
-### What does NOT change
+Questions before purchasing? info@aicompliancedocuments.com
+```
 
-- The posts themselves are not shortened or stripped of substance — the authority/depth stays
-- The legal disclaimer renders at page level and does not need to be in the CTAs
-- External `.gov` source links stay — they are part of the credibility signal that makes the product trustworthy
+**Colorado variant:**
+```
+[STYLED BLOCK]
+
+Colorado SB 24-205: June 30, 2026.
+These documents satisfy the law's deployer requirements.
+
+[Get the Colorado SB 24-205 Compliance Package — $449 →]
+```
+
+**Multi-state variant (for posts covering multiple laws, e.g., the EEOC post):**
+```
+[STYLED BLOCK]
+
+Your state has an AI law. We built the documents that comply with it.
+
+[Illinois HB3773 — $449 →]    [NYC Local Law 144 — $399 →]    [Colorado SB 24-205 — $449 →]
+
+Not sure which one applies to you? [Find your state's deadline →](/compliance-deadline-by-state)
+```
+
+**Why the block strips context:** The closing section of the blog post has already done the explaining. The Realist/Credentialist voice has walked the reader through the law, the requirements, the stakes. By the time they reach the closing section, the buyer doesn't need more context — they need the offer, clean and unobstructed. The styled block is a visual break that signals: "this is different, this is action." A wall of Realist prose followed by a link buried in it loses the buyer. A clean styled block with two lines and a button catches them.
 
 ---
 
-## Why the current pattern fails (and what this fixes)
+## Blog Title/Meta Rewrites (new in v2 — addressing the Proxy gap)
 
-The current blog → product funnel has:
-1. One link to the product, somewhere in 1,500 words
-2. No urgency moment tied to the link
-3. No conversion at the closing section — posts end on an educational note, not an action note
+The Proxy identified that v1 fixed product page titles but left blog post titles unchanged. Blog post titles drive SERP CTR. The EEOC post's 0.11% CTR at position 4.16 is the most visible symptom.
 
-This pattern produces information-complete posts that satisfy researchers and inform readers but do not convert buyers. The EEOC post at position 4.16 with 0.11% CTR is the most visible symptom — but even if CTR improves, those readers land on a post that doesn't give them a product link at the moment they're ready to buy.
+New voice rule for blog title/meta: **state the problem AND point toward resolution**. Current titles name the informational event ("EEOC Removes AI Guidance"). New titles name who is affected and what they should do ("EEOC Removed AI Hiring Guidance. Illinois, NYC, and Colorado Filled the Gap.").
 
-The fix is not to reduce information. It is to add conversion moments at the three points in a 1,500-word post where a deadline-anxious buyer is most likely to be ready to act:
-1. After they read the penalty numbers
-2. After they read what the law requires
-3. After they read what they need to do
+This is not the Realist voice — it's the new marketing voice applied to SERP copy: declarative, outcome-adjacent, audience-specific.
 
-Each moment gets one product link. That's the pattern.
+### Priority title/meta rewrites
+
+**Post: `eeoc-ai-guidance-removed-federal-vacuum-2026`**
+
+Current title: (approximately) "EEOC AI Guidance Removed: Federal Vacuum and What It Means for 2026"
+
+New title:
+```
+EEOC Removed AI Hiring Guidance. Illinois, NYC, and Colorado Filled the Gap.
+```
+
+New meta (160 chars):
+```
+No federal AI hiring standard. Illinois HB3773: in effect. NYC Local Law 144: in effect. Colorado: June 30, 2026. Get the compliance documents your state requires.
+```
+(163 chars — trim: "Get the compliance documents your state now requires.")
+
+Final meta:
+```
+No federal AI hiring standard. Illinois HB3773 in effect. NYC Local Law 144 in effect. Colorado: June 30, 2026. Get your state's compliance documents.
+```
+(150 chars)
+
+**Post: `colorado-ai-law-91-days-deadline-requirements`**
+
+Current title: "Colorado's AI Law Takes Effect June 30, 2026. Here's What It Requires."
+
+This title is already close to the new voice. One adjustment — add buyer-audience signal:
+
+New title:
+```
+Colorado AI Law: June 30, 2026 Deadline. What Your Business Must Have Ready.
+```
+
+New meta (current is already good — verify against existing frontmatter):
+```
+Colorado SB 24-205 takes effect June 30, 2026. Risk program, impact assessment, consumer notices required. Get statute-verified documents — $449, instant download.
+```
+(162 chars — trim 2) "Get statute-verified documents: $449 instant download."
+
+**Post: `illinois-hb3773-ai-employment-law-what-employers-need`**
+
+Current title: "Illinois HB3773 Is Live. If You Use AI in Hiring, Here's What the Law Actually Says."
+
+Good — buyer-audience signal present. Voice update:
+
+New title:
+```
+Illinois HB3773 Is in Effect. If You Use AI in Hiring, Here's What You Need.
+```
+
+Change "Here's What the Law Actually Says" → "Here's What You Need." The current ending is journalistic ("what the law says"). The new ending is buyer-facing ("what you need").
+
+**Post: `hiring-software-uses-ai-employment-law-compliance`**
+
+This post targets employers who may not realize their hiring software uses AI. High buyer intent if it ranks. Title should reflect that:
+
+New title:
+```
+Your Hiring Software Uses AI. Here's What Illinois and NYC Require From You.
+```
+
+New meta:
+```
+ATS and HR software use AI by default. If you hire in Illinois or NYC, you have compliance obligations now. Get the documents — starting at $399, instant download.
+```
+
+**Post: `what-is-ai-bias-audit-does-your-business-need-one`**
+
+Currently informational. Buyer-signal adjustment:
+
+New title:
+```
+AI Bias Audit: Does Your Business Need One? (NYC Says Yes If You Hire There.)
+```
+
+---
+
+## Implementation notes for a build instance
+
+1. Blog post title/meta changes are in the MDX frontmatter (`title`, `description` fields). No structural changes to post bodies required beyond adding the three CTA placements.
+2. The styled CTA block (Placement 3) can be a reusable MDX component — call it `<ProductCTA>` with props `slug`, `price`, `lawName`, and optionally `deadline`. The component renders the `bg-blue-50` styled block with a Signal Blue button linking to `/products/{slug}`. This matches what Contestant 2 proposed as `BlogProductCTA` — independent convergence validates the component approach.
+3. Apply all three placements to all 26 blog posts that have a corresponding product. Start with the 5 highest-traffic posts (Colorado 91-day, EEOC vacuum, Illinois HB3773, penalties-by-state, hiring software) before the lower-traffic posts.
+4. Do not change the blog post body voice — the Realist/Credentialist pattern stays in the body. Only the CTA block copy and the title/meta are in the new marketing voice.

@@ -1,0 +1,5 @@
+# ROUND-2-COMPLETE — Contestant 2
+
+## Concept (v2)
+
+The Round 1 frame was right — signal mismatch between what buyers type and what the site's metadata says. Round 2 commits harder to that frame and adds the full brand layer GL asked for: a new Transaction-First Declarative voice for marketing surfaces (short, product-forward, obligation-stating, no explanation of what AI compliance is), a visual direction that reads as a compliance store (deadline-board hero, navy/red palette, dense not airy, real-people imagery with no AI glow), an IA that puts the state selector second on the homepage and demotes blog to Resources in the nav, and ad creative that puts statute names and prices in headlines. The four rewritten files (positioning, homepage, product page, blog CTA) all apply the new voice consistently. The build order added to homepage-rewrite.md gives a developer with uncertain continuity a clear triage: title tags first (30 minutes, affects every SERP impression immediately), H1 visibility second, mid-article blog CTA third — the three changes most likely to produce the first sale before anything else ships.
