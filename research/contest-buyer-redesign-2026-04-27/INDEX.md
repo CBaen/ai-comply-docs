@@ -20,9 +20,9 @@
 | 0. Pre-flight | COMPLETE | BRIEF.md approved by GL with N=5 bump |
 | 0a. Spawn Proxy | COMPLETE | `buyer-redesign-coach` spawned 2026-04-27 |
 | 1. Round 1 (blind) | COMPLETE | All 5 wrote ROUND-1-COMPLETE.md; each cleared 5 of 6 mandatory research gates |
-| 1a. Reflective loops Round 1 | IN PROGRESS | Loop 1 dispatched to Proxy as a batch with 5 tailored perspectives |
-| 2. Field summary | PENDING | |
-| 3. Round 2 (visibility) | PENDING | |
+| 1a. Reflective loops Round 1 | PARTIAL | Loop 1 done (meta-strategy coaching); Loop 2 skipped due to GL scope-pivot |
+| 2. Field summary | COMPLETE | FIELD-AT-ROUND-1.md written + SCOPE-EXPANSION.md issued |
+| 3. Round 2 (expanded scope) | IN PROGRESS | All 5 dispatched in parallel with new mandate |
 | 3a. Reflective loops Round 2 | PENDING | |
 | 4. Mutual peer scoring | PENDING | |
 | 5. Aggregation + top-K | PENDING | |
