@@ -1,11 +1,15 @@
-# Positioning Statement — Contestant 5
+# Positioning Statement — Contestant 5 (v2 — new marketing voice)
 
-**aicompliancedocuments.com** serves small and mid-size business owners — HR directors, operations managers, and founders — who have discovered they use AI in hiring, lending, insurance, or consumer decisions and now face a hard compliance deadline with real dollar penalties attached. These are not researchers looking for frameworks. They are people who got a call from their attorney, found a gap in a vendor due-diligence review, or read the headline and realized Colorado is 60 days away. They are not looking to understand AI governance in the abstract — they need the specific documents state law requires, built from the actual statute text, right now. **aicompliancedocuments.com** delivers exactly that: statute-verified compliance document packages, $49–$697, instant download, built for the person who just found out this is their job — not for the compliance professional who already knows what they're doing.
+*v1 preserved at `positioning-v1.md` for comparison.*
 
-**Who:** Small/mid business owners and operators who use AI in consequential decisions (hiring, lending, insurance, healthcare, consumer-facing) and have no in-house legal or compliance team.
+---
 
-**What:** Statute-sourced compliance document packages covering Colorado SB 24-205 (effective June 30, 2026), Illinois HB3773 (in effect now), NYC Local Law 144 (in effect now), Texas TRAIGA (in effect now), California CCPA ADMT, and 50+ other regulations — instant download, fillable PDFs, ESIGN-compliant.
+Your state has an AI law. If you use AI in hiring, lending, insurance, healthcare, or consumer decisions — it applies to you. Colorado: June 30, 2026. Illinois, Texas, NYC: in effect now. We built the compliance documents these laws require, directly from enacted statute text. From $49, instant download. Your attorney reviews the output. You don't start from scratch.
 
-**Why now:** Colorado's deadline is June 30, 2026 — a single non-compliant AI system affecting 1,000 consumers creates up to $20 million in exposure under C.R.S. § 6-1-112(1)(a). Illinois violations run up to $70,000 each (775 ILCS 5/8A-104). Texas TRAIGA uncurable violations hit up to $200,000 each. These are not hypothetical risks — they are enacted statutes with AG enforcement offices actively building enforcement capacity.
+**The audience in one sentence:** Business owners and HR directors who just found out they have an AI compliance deadline and need the actual documents — today.
 
-**The gap this fills:** Law firm compliance packages cost thousands and take weeks. Platform-based tools (OneTrust, TrustArc) are priced for enterprise. Termly and iubenda handle cookie consent and privacy policies — not AI-specific employment and consumer-decision compliance. This site is the only place a $300/month SMB owner can get statute-accurate AI compliance documents in the same afternoon they discover they have a problem.
+**The gap we fill:** Law firms charge thousands and take weeks. Enterprise platforms (OneTrust, TrustArc) require a sales call and a contract. Termly and iubenda handle cookie consent — not AI-specific employment and consumer-decision compliance. We handle AI compliance, at SMB prices, with statute-exact sourcing, instant download, no subscription.
+
+**The offer in one sentence:** Your state's AI compliance documents — statute-verified, instant download, no subscription.
+
+**What grounds the claim:** Every penalty amount, effective date, and statutory section in our copy traces to an enacted statute fetched from an official .gov source. Colorado penalties: C.R.S. § 6-1-112(1)(a), up to $20,000 per consumer (leg.colorado.gov/bills/sb24-205). Illinois penalties: 775 ILCS 5/8A-104, up to $70,000 per violation. Texas TRAIGA: up to $200,000 per uncurable violation. NYC Local Law 144: active since July 5, 2023.

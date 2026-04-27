@@ -1,8 +1,14 @@
-# Positioning Statement — Contestant 4
+# Positioning Statement — Contestant 4 (v2)
+
+*(Round 1 version archived as `positioning-v1.md`)*
 
 ## Core Positioning
 
-aicompliancedocuments.com serves small and mid-size business owners who use AI in hiring, lending, insurance, healthcare, or consumer-facing decisions and have recently discovered — through counsel, an auditor, a vendor requirement, or their own reading of the news — that a state AI law applies to them now. These owners have no compliance team, no in-house lawyer, and no time for a 200-page enterprise governance platform. They need the specific documents a law requires of them, built from the enacted statute text, available today, for a fraction of what outside counsel charges. Colorado SB 24-205 takes effect June 30, 2026. Illinois HB3773 is in effect now. NYC Local Law 144 is active and enforcement is increasing. The site's job is to get that message to the person who just realized this is their problem, show them exactly what documents they need for their specific state, and give them a path to ownership in under ten minutes.
+aicompliancedocuments.com is a compliance document store for small and mid-size business owners who owe legal documentation under a specific state AI law — now. Not a compliance platform. Not a legal research resource. A store: you need the documents, we have them, here's the price, download in five minutes.
+
+The buyer comes in two modes. **Already Exposed:** Their law is in force — Illinois HB3773 since January 2026, NYC Local Law 144 since July 2023, Texas TRAIGA since 2026. They are currently non-compliant. The urgency is not a future deadline — it is present exposure. Documentation is their first defense. **Deadline Approaching:** Colorado SB 24-205 takes effect June 30, 2026. They have a window. The window is real and closing. Both buyers need the same thing — the specific documents their specific law requires — and both buyers need to get them today.
+
+The site has one competitive position no one else occupies: statute-derived compliance documents for state AI laws, at a fixed one-time price, downloadable in five minutes, with no subscription, no vendor lock-in, and no law firm retainer required. Termly and iubenda sell cookie consent tools. OneTrust sells an enterprise SaaS platform. Law firms sell hours. This site sells the document. That is the position. The marketing voice, the visual design, and every above-the-fold element must make that position legible in three seconds.
 
 ## The Frame That Changes Everything
 

@@ -1,163 +1,295 @@
-# Homepage Rewrite — Contestant 2
+# Homepage Rewrite — Contestant 2 (v2 — Transaction-First Declarative voice)
+
+*v1 preserved as `homepage-rewrite-v1.md`*
+
+---
 
 ## Metadata
 
 ### `<title>` tag
 
-**Proposed:**
+**v2 proposed (unchanged from v1 — still correct):**
 ```
 AI Compliance Templates for Colorado, Texas, Illinois & NYC | Instant Download
 ```
 
-**Current:**
-```
-AI Compliance Documents — Templates for Every State AI Law
-```
-
-**Rationale:** The current title is catalog-shaped. It names the site, not the buyer's problem. The proposed title leads with "AI Compliance Templates" (the exact product type buyers search for), names the four highest-urgency states by name (buyers search by state), and ends with "Instant Download" (converts anxiety into action signal). Research showed buyers type "Colorado AI law compliance template" — the title must match that query pattern. Each state name is also a top-volume keyword anchor. Length: 71 characters — within title tag display limit.
+**Rationale:** Same rationale applies. State names + product noun + action signal. 78 characters. No change needed.
 
 ---
 
 ### Meta Description
 
-**Proposed:**
+**v2 proposed (tightened to new voice):**
 ```
-Colorado AI law takes effect June 30. Texas TRAIGA is already in force. If you use AI in hiring, lending, or consumer decisions, you have obligations now. Statute-sourced compliance documents: answer a questionnaire, download PDFs. $49–$697, one-time.
+Colorado AI law: June 30, 2026 deadline. Texas TRAIGA: in effect now. You deploy AI. You owe documents. $49–$697, instant download, built from statute.
 ```
+(151 characters ✓)
 
-**Current:**
-```
-AI compliance templates for 14+ state laws, the EU AI Act, and federal frameworks. Built from enacted statute text. Instant download.
-```
+**v1 version:** "Colorado AI law takes effect June 30. Texas TRAIGA is already in force. If you use AI in hiring, lending, or consumer decisions, you have obligations now..."
 
-**Rationale:** The current description is a catalog inventory list. It answers "what do you have?" not "why do I need this today?" The proposed description uses the urgency hook first (Colorado deadline), names a second active law (TRAIGA), immediately names who it applies to (hiring, lending, consumer decisions), then delivers the product description in plain language. The price range at the end is a strong click signal — it removes the "I don't know if I can afford this" friction before the click. Length: 248 characters — slightly over 160, recommend trimming to: "Colorado AI law takes effect June 30. Texas TRAIGA is in force now. If you use AI in hiring or consumer decisions, you have obligations. Statute-sourced templates, instant download. $49–$697 one-time." (198 characters — trim further if needed for display).
+**Voice change:** v1 was explanatory ("If you use AI in hiring... you have obligations"). v2 is declarative ("You deploy AI. You owe documents."). Same facts. Half the words. Stronger signal to the buyer who is scanning a SERP result in 2 seconds.
 
 ---
 
-## Above-the-Fold Hero Copy
+## Hero Copy (v2 — new voice)
 
-### H1 (currently rendered as `sr-only` — propose making visible)
+### H1 (make visible — remove `sr-only`)
 
-**Proposed:**
+**v2 proposed:**
 ```
-You use AI in your business. Three states say you owe documentation. Here's it.
+AI in your business. Five states have a law about that.
 ```
 
-**Rationale:** The current H1 is screen-reader-only: "AI Compliance Documents — State AI Compliance Templates." This is a major missed opportunity — the H1 is the loudest copy signal Google reads, and the first thing a visitor with intent encounters. The proposed H1 uses the site's established Pragmatic Realist voice: short sentence, direct address, no softening. "Three states" is a factual claim (Colorado, Texas, Illinois — all active or imminent). "Here's it" closes the loop with a product delivery signal. This is not a welcome headline — it's a condition statement.
+**v1 version:** "You use AI in your business. Three states say you owe documentation. Here's it."
 
-**Implementation note:** The current hero renders via `<ProductCarousel>` inside a `<header>`. The H1 appears before the carousel as `sr-only`. This can be made visible at `text-3xl md:text-5xl font-bold text-white` above the carousel, or positioned as the carousel headline.
+**Voice change:** v1 was three sentences trying to do the work of one. v2 is tighter. "Five states" is accurate (CO/TX/IL/NYC/CA). The implied next sentence — "you need documents" — is handled by the sub-H1 and the deadline sidebar. The H1's job is recognition, not explanation.
+
+**Implementation:** `text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight`
 
 ---
 
-### Sub-H1 (hero deck copy)
+### Eyebrow line (NEW — does not exist in current design)
 
-**Proposed:**
+**v2 proposed:**
 ```
-Colorado SB 24-205 requires documentation from every business deploying AI in consequential decisions — effective June 30, 2026. Texas TRAIGA is already in force. Illinois HB3773 has been active since January 1, 2026. These laws have no small-business exemption.
-
-Each compliance package is built from the enacted statute text, not summaries. You answer a questionnaire. You download PDFs. Your attorney reviews them. You're documented.
+Colorado deadline: June 30, 2026
 ```
 
-**Rationale:** Paragraph 1 names the laws by their actual citations, names the effective dates, and delivers the line that breaks through the most common objection: "these laws have no small-business exemption." This is verified in the statute for TRAIGA and NYC LL144. Paragraph 2 is the product description in four plain sentences — no jargon, no verbs like "leverage" or "implement," no passive voice. Realist opens, Credentialist validates, Realist closes: the site's exact voice pattern.
+Alternates by A/B state: "Texas TRAIGA: In force now" / "Illinois HB3773: Active since January 1"
+
+**Implementation:** `text-sm font-semibold uppercase tracking-widest text-amber-400 mb-3`
+Rendered above the H1. On mobile: same, smaller text size.
 
 ---
 
-### Primary CTA
+### Sub-H1
 
-**Proposed:**
+**v2 proposed:**
+```
+Colorado. Texas. Illinois. NYC. California. Each state has an AI law. Each law requires specific documents. We built them. $49–$697, instant download.
+```
+
+**v1 version:** "Colorado SB 24-205 requires businesses using AI in consequential decisions — hiring, lending, insurance, housing, healthcare — to have a risk management program, impact assessments, and consumer notices. Each compliance package is built from the enacted statute text, not summaries..."
+
+**Voice change:** v1 was 60 words of explanation. v2 is 28 words. The v1 sub-H1 explained what the law requires (journalist voice). The v2 sub-H1 names the states, says "each law requires specific documents," then says "we built them." That sequence — obligation → product → transaction signal — is the entire sales argument in one breath. Price is included so the buyer doesn't have to click to find it.
+
+**Implementation:** `text-lg md:text-xl text-slate-200 leading-relaxed max-w-xl mt-4`
+
+---
+
+### Primary CTA Button
+
+**v2 proposed (unchanged from v1):**
 ```
 Get Your Compliance Documents
 ```
 
-**Current:**
-```
-Browse Products
-```
-
-**Rationale:** "Browse Products" signals shopping. "Get Your Compliance Documents" signals acquisition of something specific you need. The word "Your" is load-bearing: it implies these are customized to the buyer's situation (which they are — questionnaire-driven). This CTA should appear twice above the fold: once in the hero and once in the sub-H1 block.
+**Implementation:** `bg-[#1e3a5f] hover:bg-[#162d4a] text-white px-8 py-4 rounded font-bold text-lg`
 
 ---
 
-### Sub-CTA
+### Price signal (below CTA button — NEW element)
 
-**Proposed:**
+**v2 proposed:**
 ```
-Not sure which law applies to you? →
+$49–$697 · One-time · No subscription
 ```
 
-**Rationale:** The most common SMB question (confirmed in research) is "does this apply to me?" Before they can buy, many buyers need to answer this. The sub-CTA routes them to FAQ or a new `/compliance-deadline-by-state` page (see optional new-page-spec.md) without abandoning the purchase path.
+**Implementation:** `text-sm text-slate-400 mt-2`
 
 ---
 
-## Supporting Headers (above the fold or immediately below)
+### Trust strip (below price — condensed from current trust bar)
 
-### Trust Bar — Revised Copy
+**v2 proposed (3 items, inline):**
+```
+Built from enacted statute  ·  Instant download  ·  Attorney-reviewable
+```
 
-Replace generic trust signals with law-specific ones:
+**v1 version:** 5-item trust bar with icons — "Multi-State Coverage / Instant Download / Built for the person who just found out this is their job / $49–$997 / Stripe."
 
-**Current trust bar items:**
-- Multi-State Coverage
-- Instant Download
-- Built for the person who just found out this is their job
-- $49–$997, one-time purchase
-- Powered by Stripe
+**Voice change:** v1 trust bar was a feature list. v2 is three facts. "Built from enacted statute" is the differentiation claim. "Instant download" is the process. "Attorney-reviewable" is the liability scope answer in one word. The "Built for the person who just found out this is their job" line was excellent Realist voice — correct for the blog style guide, too warm for a trust strip that needs to be scannable in 1 second.
 
-**Proposed trust bar items:**
-- Colorado deadline: June 30, 2026
-- Texas TRAIGA: In force now
-- NYC Local Law 144: Active since 2023
-- Illinois HB3773: In force since January 1, 2026
-- Instant download — no account required
-- $49–$697, one-time
-
-**Rationale:** The current trust bar reads like a feature list. The proposed version reads like a deadline board. Each item is a law with a date — every one of them is a reason to act. A buyer from Colorado who sees their law's deadline in the trust bar has confirmation within 3 seconds that the site is relevant to their situation. This is the fastest possible buyer-identification signal.
+**Implementation:** `text-sm text-slate-400 mt-3 flex gap-4 flex-wrap`
 
 ---
 
-## Pain Section — Proposed Revision
+### Deadline Sidebar (NEW — right column on desktop, strip below CTA on mobile)
 
-### Current H2:
-"What happens if you don't comply?"
-
-### Proposed H2:
-"The penalties are real. The deadlines are not flexible."
-
-**Rationale:** The current H2 is a question — it's softer than the answer. The proposed H2 is a statement. The Realist voice does not ask questions about the stakes. It states them.
-
-### Proposed sub-copy (replaces current paragraph):
+**v2 proposed (right column, 4 law cards):**
 
 ```
-Texas TRAIGA: a single uncurable violation costs between $80,000 and $200,000. Colorado SB 24-205: up to $20,000 per violation. Illinois HB3773: up to $70,000 per violation for repeat offenders. NYC Local Law 144: $500 per first violation, $500–$1,500 per subsequent violation per day — and there is no employee-count threshold. These penalties apply to businesses of every size.
+[RED: IN EFFECT]        NYC Local Law 144
+Automated hiring tools. July 2023.    →
+
+[RED: IN EFFECT]        Texas TRAIGA
+All AI systems. January 1, 2026.      →
+
+[AMBER: JUNE 30]        Colorado SB 24-205
+High-risk AI decisions. June 30, 2026. →
+
+[RED: IN EFFECT]        Illinois HB3773
+AI in hiring. January 1, 2026.        →
 ```
 
-**Rationale:** Current copy says "up to $200,000 per violation" without naming the law. The proposed version names each law with its exact penalty in one sentence each. This is the Precise Credentialist voice doing its job — the reader can look up each number. No editorializing. No hedging. No "could face." These are the statute amounts.
+Each card links to its product page. The "→" is a visible click affordance.
+
+**Implementation:** Right column at `w-64 shrink-0 space-y-3 hidden md:block`. Each card: `bg-white/10 border border-white/20 rounded-lg p-3 hover:bg-white/20 transition cursor-pointer`. Status pill: `text-xs font-bold px-2 py-0.5 rounded` — red for IN EFFECT (`bg-red-500/20 text-red-300`), amber for EFFECTIVE SOON (`bg-amber-500/20 text-amber-300`).
+
+Mobile: collapses to a 2-column grid of cards below the CTA, above the fold. 4 cards, 2 per row, visible without scrolling.
 
 ---
 
-## Final CTA Section — Proposed Revision
+## Homepage Section Order (v2)
 
-### Current H2:
-"Don't wait for a complaint"
+Per `ia-proposal.md`, the homepage restructures from 8 sections to 7. Here is the copy for each:
 
-### Proposed H2:
-"Colorado's deadline is June 30. You need documents before then."
-
-**Rationale:** "Don't wait for a complaint" is true but passive. The proposed H2 names the most imminent hard deadline in the country for AI compliance and tells the buyer what they need. This converts a moral nudge into a specific action requirement.
-
-### Proposed CTA Button:
-```
-Get Colorado Compliance Documents — $449
-```
-
-**Note:** Link to `/products/colorado-sb24-205`. For buyers from other states, secondary CTAs link to TX, IL, NYC products. Price anchor in the CTA button dramatically reduces post-click abandonment — buyer arrives on product page already knowing the price.
+### Section 1: Hero
+Copy above. New deadline-board hero replaces carousel.
 
 ---
 
-## Implementation Notes for Developer
+### Section 2: Find Your State
 
-1. H1 is currently `sr-only` in `src/app/page.tsx` line 193. Make visible with Tailwind classes: `text-3xl md:text-5xl font-bold text-white mb-4`.
-2. Title tag is in `export const metadata` object line 9. Replace the `absolute` title value.
-3. Meta description is line 11. Replace string.
-4. Trust bar items are hardcoded JSX in the `<div className="bg-white border-b...">` block starting line 207. Edit the `<span>` text content for each item.
-5. Pain section H2 is line 349. CTA section H2 is line 506.
-6. All copy changes are JSX text nodes — no component changes required.
+**H2 (or no heading — let the cards speak):**
+```
+Which law applies to you?
+```
+
+**5 state cards + 1 multi-state card:**
+
+Each card format:
+- State/jurisdiction name in bold
+- Law short name
+- Deadline or status in red/amber
+- Price
+- "Get Documents →" button
+
+No paragraph copy between cards. The cards ARE the copy.
+
+---
+
+### Section 3: Product Grid (4 featured products as static cards)
+
+**No heading.** The cards are self-explanatory after the state selector.
+
+If a heading is needed for accessibility: `<h2 class="sr-only">Featured compliance packages</h2>`
+
+---
+
+### Section 4: Why These Documents
+
+**H2 (new voice):**
+```
+Built from the enacted statute. Not a summary.
+```
+
+**3 supporting statements (no bullets, inline paragraphs):**
+
+> Every penalty figure, every deadline, every section number is verified against the primary .gov source — leg.colorado.gov, ilga.gov, capitol.texas.gov, nyc.gov. Not from a compliance platform's interpretation of the law. The law itself.
+
+> Your attorney can review these documents. They're not a black-box output — they're structured templates drafted from statutory language that your legal team can read, verify, and sign off on.
+
+> If implementing rules haven't been published yet, we say so. No false confidence.
+
+**v1 version:** 4-card icon grid ("Read the enacted statute / Verify every citation / Flag what's pending / Templates, not legal opinions").
+
+**Voice change:** v1 was an educational infographic explaining the methodology. v2 is 3 short paragraphs making 3 specific claims. Same facts, different shape. The icon grid is a research-resource pattern — it suggests "learn about us." The paragraphs are a trust-proof pattern — they assert specific things the buyer can verify.
+
+---
+
+### Section 5: Penalty Reality Check
+
+**H2 (new voice):**
+```
+What these laws cost you if you don't have documentation.
+```
+
+**Body (4 law lines, each one sentence):**
+
+> **Texas TRAIGA:** A single uncurable violation: $80,000–$200,000. Continuing violations add $2,000–$40,000 per day. ([HB 149 Sec. 552.105(a)](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
+
+> **Illinois HB3773:** Up to $16,000 for a first violation. Up to $70,000 for repeat offenders within seven years. ([775 ILCS 5/8A-104](https://www.ilga.gov/legislation/ilcs/documents/077500050K8A-104.htm))
+
+> **Colorado SB 24-205:** Up to $20,000 per violation under the Colorado Consumer Protection Act. Up to $50,000 when the affected consumer is 60 or older. ([C.R.S. § 6-1-112](https://leg.colorado.gov/bills/sb24-205))
+
+> **NYC Local Law 144:** $500 first violation. $500–$1,500 per subsequent violation per day. No employee-count threshold. ([NYC Admin. Code § 20-870](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page))
+
+**v1 version:** Paragraph leading with "AI regulations aren't suggestions. They're law, with real enforcement teeth and penalties up to $200,000 per violation..." — then 3 icon cards.
+
+**Voice change:** v1's paragraph was explanatory ("AI regulations aren't suggestions" — the reader already knows this). v2 leads with law names and numbers. No preamble. Each line is one statute and one number. The citations are hyperlinked — the buyer can verify in one click.
+
+---
+
+### Section 6: 4 Inline FAQs
+
+**No accordion. 4 Q/A pairs, plain text.**
+
+```
+Does this apply to my size of business?
+No size exemption. NYC Local Law 144, Texas TRAIGA, and Illinois HB3773 all apply regardless of employee count or revenue.
+
+What do I get when I buy?
+Between 3 and 8 statute-sourced documents depending on the law — risk management policies, impact assessments, consumer notices, bias audit templates. Instant download as PDFs.
+
+Is this legal advice?
+No. Templates drafted from enacted statute text. Your attorney reviews and advises on your specific situation.
+
+What if I operate in multiple states?
+The multi-state package covers 15+ jurisdictions. Or buy individual state packages — there's no overlap in what each law requires.
+```
+
+**v1 version:** 9-question accordion. Research-resource pattern.
+
+**Voice change:** 4 questions, no accordion, in the new voice. Transaction-First Declarative: answer first, no preamble, no "great question."
+
+---
+
+### Section 7: Final CTA
+
+**H2 (new voice):**
+```
+Your compliance deadline doesn't move.
+```
+
+**Body (1 sentence):**
+```
+The documents are ready.
+```
+
+**CTA button:** "Get Your Compliance Documents"
+
+**Below button:** `info@aicompliancedocuments.com` for questions.
+
+**v1 version H2:** "Don't wait for a complaint"
+
+**Voice change:** v1 was a negative imperative (don't do X). v2 is a factual statement (deadline doesn't move) followed by a product availability statement (documents are ready). Same urgency. Less finger-wagging.
+
+---
+
+## Build Order (Proxy-requested addition — Contestant 2 only)
+
+These are the 7 interventions from v1, ranked by impact-per-hour. A build instance with limited continuity should ship in this order:
+
+**1. Title tags on all product pages (30 minutes)**
+Change `${reg.name} — Compliance Documents` pattern to `${reg.name} Compliance Documents — [Deadline] | Instant Download`. This affects every SERP impression immediately. Highest leverage per change.
+
+**2. Make H1 visible on homepage (15 minutes)**
+Remove `sr-only` from the existing H1 or add the new H1 above the carousel. Single line change in `page.tsx` line 193.
+
+**3. Blog CTA component — mid-article placement only (2 hours)**
+Build `BlogProductCTA.tsx` with Placement 2 (after penalty section) only. This is the highest-converting moment in the blog. Add to the 5 highest-traffic posts first. The other placements come after this is proven.
+
+**4. Penalty callout block on Colorado product page (1 hour)**
+Add the visible penalty section with statute citations and per-consumer counting to `/products/colorado-sb24-205`. Colorado has the most imminent deadline and the most SERP presence.
+
+**5. Homepage H1 + sub-H1 copy (1 hour)**
+Update the hero copy to v2 voice. Eyebrow, H1, sub-H1, price signal, trust strip.
+
+**6. FAQ schema on Colorado product page (1 hour)**
+4 Q/A pairs, structured data. Positions the product page for AI Overview citation on "do I need to comply with Colorado AI law" queries.
+
+**7. `/compliance-deadline-by-state` new page (3–4 hours)**
+Highest effort, but also the highest long-term organic value. Build after items 1–6 are shipped. This page is the permanent hub; the earlier items are the immediate wins.
+
+**Star: Ship item 1 first.** Title tag changes affect every impression the site already receives. No new traffic needed. Zero risk. Highest ROI of any change on this list.

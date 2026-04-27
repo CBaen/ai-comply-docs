@@ -21,109 +21,176 @@
 
 ---
 
-## Above-the-Fold: Hero Section
+## Hero Section — Full Spec (Round 2)
 
-### H1
-**Current (screen-reader only):** `AI Compliance Documents — State AI Compliance Templates`
+*Voice: Calm Authority. Every element earns its place or is cut.*
 
-**Proposed (visible, prominent):**
+### Eyebrow
 ```
-Your business uses AI. Six states have passed laws about that. You have deadlines.
+AI LAWS ARE IN EFFECT
 ```
-
-**Rationale:** This is the Pragmatic Realist voice. Short sentences. Direct address. No qualifier. By the end of the H1 the reader knows (a) the site is for them if they use AI, (b) there are laws, (c) time matters. No "discover," no "unlock," no "comprehensive." This is a statement of the reader's situation, not a product description.
-
-Alternative if the above feels too flat for an H1 visual treatment:
-```
-AI laws are in effect. Your compliance documents should be too.
-```
+Small caps, Ember Red (`#DC2626`), `text-xs tracking-widest font-semibold`. This is the first thing the eye hits. It names the situation before the H1 does.
 
 ---
 
-### Sub-H1 (hero sub-headline, displayed below H1)
-**Proposed:**
+### H1 (visible — NOT sr-only)
 ```
-Colorado SB 24-205 takes effect June 30, 2026. Illinois HB3773 is law now. NYC Local Law 144 active since 2023. Texas TRAIGA in force since January 2026. If you use AI in hiring, lending, insurance, or consumer decisions — the documentation requirement is yours to meet.
+Your state passed an AI law. We built the documents.
 ```
 
-**Rationale:** This is the Precise Credentialist voice following the Realist opener. Real law names. Real dates. Real scope (hiring, lending, insurance). No soft qualifiers. The buyer who just found out about a deadline reads their state name and knows they are in the right place. The dates are verified against primary sources in the research log.
+**What changed from Round 1:** Round 1 proposed "Your business uses AI. Six states have passed laws about that. You have deadlines." — three short sentences, Realist voice, correct for blog, wrong for a hero. It reads as a news lede. The Round 2 version is offer-shaped: here is what happened (your state passed a law), here is what we did (we built the documents). Eleven words. No hedging, no education, no "if you're like most businesses."
+
+Implementation: Inter 800, `text-4xl md:text-6xl leading-tight`, Navy (`#1B2D4F`), visible on `bg-slate-50`.
+
+---
+
+### Deadline Pills (inline, tight spacing, below H1)
+```
+[● Colorado — June 30, 2026]   [● Illinois — In Effect]   [● NYC — In Effect]   [● Texas — In Effect]
+```
+Pill styling: Ember Red background for "In Effect" states; Amber background for "June 30" Colorado. `text-xs font-semibold px-3 py-1 rounded-full`. Four pills in a row on desktop, wrapping on mobile.
+
+**Why pills, not sub-headline prose:** The Round 1 sub-headline was 52 words explaining the same four facts. A buyer scanning from the top reads four pills in two seconds and knows whether their state is covered. The information density is identical; the cognitive load is lower.
 
 ---
 
 ### Primary CTA
-**Proposed:** `Get My Compliance Documents`
-
-**Current:** `Browse Products` (in How It Works section)
-
-**Rationale:** "Browse Products" is a catalog verb. It invites exploration, not purchase. "Get My Compliance Documents" is a buyer verb — first person, specific noun, implies they already know they need them. The current site has no prominent primary CTA above the fold at all — the hero is a product carousel with no clear action anchor.
-
-**CTA placement:** Directly below the sub-H1, full-width on mobile, centered on desktop. Links to `/products` filtered by "in-effect" status.
+```
+Get My Compliance Documents →
+```
+Signal Blue (`#2563EB`) filled button, `px-8 py-4 text-lg font-bold`. Full-width on mobile. Links to `/deadline-checker`.
 
 ---
 
 ### Sub-CTA
-**Proposed:** `Not sure which law applies to you? Start here.`
-
-**Rationale:** Addresses the #1 objection from SMB owners who know they have exposure but don't know which state's law is their primary obligation. Links to the `/products` page or a new `/deadline-checker` page (see `new-page-spec.md`). Keeps the primary CTA clean while routing the hesitant buyer.
-
----
-
-## Hero Section — Supporting Copy (Trust Bar, immediately below CTA)
-
-Replace the current generic trust-bar items with deadline-anchored, buyer-specific signals:
-
-| Icon | Text |
-|------|------|
-| Clock | June 30, 2026 — Colorado SB 24-205 deadline |
-| Checkmark | Built from enacted statute text — not summaries |
-| Document | $49–$697, instant download, no subscription |
-| Shield | Verified against .gov primary sources |
-
-**Rationale:** Current trust bar reads "Multi-State Coverage / Instant Download / Built for the person who just found out this is their job." The third item is the only one that speaks to a buyer. The proposed bar anchors on the single most urgent deadline (Colorado) — a buyer from any state sees a specific date and understands this is live-or-die compliance territory, not a research tool.
+```
+Not sure which law applies? → Find yours
+```
+Underlined text link, `text-sm text-navy`. Links to `/deadline-checker`. The primary CTA serves the buyer who knows their state; the sub-CTA serves the buyer who isn't sure yet. Both go to the same place — the deadline checker routes them to the right product.
 
 ---
 
-## Pain Section — Rewrite
+### Trust Strip (three items, immediately below CTAs)
+```
+✓ Built from enacted statute text     ✓ .gov primary sources, verified     ✓ Instant download — no subscription
+```
+Verified Teal (`#0D9488`) checkmarks. `text-sm font-medium`. Horizontal on desktop, stacked on mobile.
 
-**Current H2:** `What happens if you don't comply?`
-
-**Proposed H2:** `This is what non-compliance costs.`
-
-**Rationale:** The current H2 is a question — it softens the content before delivering it. A declarative statement lands harder. The Pragmatic Realist voice doesn't ask what might happen; it tells you what happens.
-
-**Penalty copy (penalty section, proposed):**
-
-> Illinois HB3773 is in effect now. Penalties under the Illinois Human Rights Act run up to $16,000 for a first violation, $42,500 if you've had a prior finding within five years, and $70,000 if you've had two or more findings within seven years. Those penalties apply per aggrieved person. If your AI hiring tool processed 50 applicants in ways that triggered a complaint, that's 50 separate violations. ([775 ILCS 5/8A-104](https://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2266&ChapterID=64))
->
-> Colorado SB 24-205 takes effect June 30, 2026. Violations are treated as deceptive trade practices under the Colorado Consumer Protection Act — up to $20,000 per violation. Per consumer affected. A discriminatory AI hiring tool that processed 100 applicants has a theoretical exposure of $2 million. ([leg.colorado.gov/bills/sb24-205](https://leg.colorado.gov/bills/sb24-205))
->
-> Texas TRAIGA has been in force since January 1, 2026. Civil penalties up to $200,000 per violation, with a continuing penalty for each day after notice that a violation goes uncorrected. ([capitol.texas.gov — HB149](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149))
-
-**Rationale:** The current pain section is vague ("penalties range from $5,000 to $70,000") and doesn't name the compounding math of per-person penalties. The proposed version uses the exact penalty structure — sourced and cited — and does the math for the reader. This is what the Precise Credentialist voice does: it makes the abstract number real.
+**What changed from Round 1:** Round 1 proposed a trust bar with four items including a clock icon and "June 30, 2026 — Colorado SB 24-205 deadline." The deadline is now handled by the pills. The trust strip's job is methodology credibility, not urgency. Three items, tighter.
 
 ---
 
-## How It Works — Keep, Sharpen One Step
+## Section 2: Products by State
 
-Keep the three-step flow. Sharpen Step 1 copy:
+*Replaces current ProductCarousel + "How It Works" sections.*
 
-**Current:** `Choose Your Regulation. Select the state regulation you need to comply with. Answer a short questionnaire about your company and AI systems. Takes about 10 minutes.`
+### Section heading
+```
+Your state. Your documents.
+```
+H2, Inter 700, `text-2xl md:text-3xl`. No padding essay above it.
 
-**Proposed:** `Choose your state's law. Colorado, Illinois, NYC, Texas, California — or multi-state if you operate in several. Answer 8–12 questions about which AI tools you use and what decisions they inform.`
+### Product card grid
+2-column on desktop (4-column on large screens), using the new product card pattern from `visual-direction.md`. Order: Colorado (deadline proximity), Illinois, Texas, NYC, California, multi-state bundles.
 
-**Rationale:** "Choose Your Regulation" sounds like a research task. "Choose your state's law" sounds like a decision the buyer has already made. The specific state list tells buyers immediately whether their jurisdiction is covered.
+### Below grid
+Single inline callout — not a section:
+```
+Choose your state. Answer 8–12 questions about your AI tools. Pay once. Download immediately.
+```
+`text-sm text-gray-600`. This is the entire "How It Works" — compressed to one line. It does not need its own section.
 
 ---
 
-## Final CTA Section — Sharpen
+## Section 3: Penalty Reality
 
-**Current H2:** `Don't wait for a complaint`
+*Replaces current "What happens if you don't comply?" section.*
 
-**Proposed H2:** `Colorado's deadline is June 30. Illinois is already law. Texas is already law.`
+### Section heading
+```
+This is what non-compliance costs.
+```
+H2. Declarative. Not a question. (Round 1 already proposed this — keep it.)
 
-**Proposed sub-copy:**
-> Get your compliance documents today for a fraction of what outside counsel charges. Every template is built from the actual enacted statute — not a summary, not a checklist, not a law firm's interpretation of someone else's interpretation.
+### Penalty columns (three, statute-exact)
 
-**Primary CTA:** `Get My Compliance Documents`
+**Illinois:**
+> Up to $70,000 per aggrieved person. Already in effect.
+> ([775 ILCS 5/8A-104](https://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2266&ChapterID=64))
 
-**Rationale:** The current final section is vague ("AI regulations are in effect now"). The proposed version names the three most urgent situations (Colorado deadline, Illinois active, Texas active) and closes with the credibility signal that distinguishes this site from generic template providers: statute-sourced, not summary-sourced.
+**Colorado:**
+> Up to $20,000 per consumer affected — enforced as a deceptive trade practice under C.R.S. § 6-1-112. Effective June 30.
+> ([SB24-205](https://leg.colorado.gov/bills/sb24-205))
+
+Note: The $20,000 figure derives from the Colorado Consumer Protection Act (C.R.S. § 6-1-112), not from SB24-205 directly. SB24-205 classifies violations as deceptive trade practices; the penalty cap is in the CCPA. This provenance must be accurate in any buyer-facing copy. Credit to Contestant 4 for surfacing this.
+
+**Texas:**
+> Up to $200,000 per violation, plus a continuing daily penalty after notice.
+> ([HB149, TRAIGA](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=89R&Bill=HB149)) [REQUIRES PRIMARY SOURCE VERIFICATION — build instance must read capitol.texas.gov statute text before shipping]
+
+### Below columns
+```
+These amounts apply per violation — not per incident. An AI system that processed 100 applicants has 100 separate violations if a complaint succeeds.
+```
+`text-sm text-gray-700`. The math, stated plainly. No alarm formatting — just arithmetic.
+
+---
+
+## Section 4: How It Works + Methodology (combined)
+
+*Collapsed from two current sections into one compact two-column layout.*
+
+**Left column (process):**
+1. Choose your state's law — or use the deadline checker if you operate in several
+2. Answer 8–12 questions about which AI tools you use and what decisions they inform
+3. Pay once. Download immediately. PDFs, fillable fields, ready to use.
+
+**Right column (methodology — compact):**
+```
+Every template starts with the actual statute text — not a summary of it.
+
+If implementing rules haven't published, we say so. No false confidence.
+
+These are documents, not legal advice. Your attorney reviews; we give them a starting point.
+```
+Three short paragraphs. Verified Teal left border on the right column block. Link: "More about our methodology →" (`/about`).
+
+---
+
+## Section 5: Final CTA
+
+### H2
+```
+June 30 is the next deadline.
+```
+Update as deadlines pass. When Colorado's date passes, next headline becomes "Your state's AI law is already in effect."
+
+### Sub-copy
+```
+One-time purchase. Instant download. Built from the statute — not from a summary of it.
+```
+
+### Primary CTA
+```
+Get My Compliance Documents →
+```
+
+### Below button
+```
+Questions before purchasing? info@aicompliancedocuments.com
+```
+`text-sm text-slate-400`. The escape valve. Not "schedule a consultation" — just an email.
+
+---
+
+## What This Removes From the Current Homepage
+
+| Removed element | Reason |
+|----------------|--------|
+| Product carousel in hero | Signals "browse catalog" — replaced by text hero + product cards in section 2 |
+| Background hero image (opacity-10) | Visual noise; the text IS the hero |
+| FeaturedInBar (post-hero) | "Featured in media" as position 2 signals content company, not compliance store |
+| "How We Build Our Templates" as standalone section | Condensed into Section 4 right column |
+| "How It Works" as standalone 3-step section | Condensed to one inline sentence in Section 2 |
+| Full FAQ accordion on homepage | Moves to product pages and /deadline-checker — objections live nearest the purchase decision |
+| Generic colored-card penalty section | Replaced by statute-exact prose in Section 3 |
