@@ -28,14 +28,27 @@ Colorado SB 24-205 takes effect June 30, 2026. 8 statute-sourced documents: risk
 
 ### H1 (current: `{reg.name}` = "Colorado SB 24-205 — AI Consumer Protections")
 
-**v2 proposed:**
+**v2 proposed (Loop 2 revision — deadline in H1):**
 ```
-Colorado SB 24-205 Compliance Documents
+Colorado SB 24-205 — June 30, 2026
 ```
 
-Plain. Product-forward. The buyer typed "colorado sb 24-205 compliance documents" — the H1 confirms they arrived at the right destination. No subtitle, no category label, no em-dash decoration.
+**Why the date is in the H1:** The SERP title says "Colorado SB 24-205 Compliance Documents — Deadline June 30, 2026." The buyer clicked because of that deadline signal. If the H1 they land on says only "Colorado SB 24-205 Compliance Documents," they've confirmed the law name but haven't yet seen the date that made them click. The deck below the H1 would confirm it — but that's one more read in a scan state. The H1 should close the gap immediately.
 
-**Implementation:** Replace `{reg.name}` rendering in the hero H1 with `{reg.shortName} Compliance Documents` for the page heading. The full `reg.name` can remain in breadcrumb and structured data.
+"Colorado SB 24-205 — June 30, 2026" fulfills the SERP promise at the first element the buyer reads. Law name plus enforcement date. Nothing else. The product description ("compliance documents") is already in the SERP title and the breadcrumb — it doesn't need to appear in the H1 too.
+
+For laws already in effect (Texas TRAIGA, Illinois HB3773, NYC LL144), the H1 pattern becomes:
+```
+Texas TRAIGA — In Effect Since January 1, 2026
+Illinois HB3773 — In Effect Since January 1, 2026
+NYC Local Law 144 — Enforced Since July 2023
+```
+
+**Implementation:** Replace `{reg.name}` rendering in the hero H1 with a new computed string:
+- If `reg.status === "effective-soon"`: `{reg.shortName} — {reg.effectiveDate}` (e.g., "Colorado SB 24-205 — June 30, 2026")
+- If `reg.status === "in-effect"`: `{reg.shortName} — In Effect Since {reg.effectiveDate}` (e.g., "Texas TRAIGA — In Effect Since January 1, 2026")
+
+The full `reg.name` stays in breadcrumb, structured data, and `<title>` tag. The H1 is the human-readable urgency signal, not the canonical name.
 
 ---
 
