@@ -1,8 +1,16 @@
-# Positioning — Contestant 2
+# Positioning — Contestant 2 (v2 — Transaction-First Declarative voice)
 
-## One-Paragraph Positioning Statement
+*v1 preserved as `positioning-v1.md`*
 
-**AI Compliance Documents** is for the small or mid-sized business owner who just found out they're using AI in employment, lending, insurance, or consumer decisions — and needs to show documented compliance before Colorado's June 30, 2026 deadline, Texas TRAIGA enforcement, NYC Local Law 144, or Illinois HB3773 comes for them. Not a compliance platform. Not a law firm. Statute-sourced templates: you answer a questionnaire, download PDFs, hand them to your attorney to review, done. Every number in every document traces back to the enacted law text. $49–$697, one time, no subscription. For the person who has a deadline, not a compliance team.
+## Positioning Statement
+
+**AI Compliance Documents** sells the documents that state AI laws require. Five states have AI compliance laws in effect or effective by June 30, 2026. Those laws name specific documents: risk management policies, impact assessments, consumer notices, bias audits. If you deploy AI in employment, lending, insurance, or consumer decisions in Colorado, Texas, Illinois, New York City, or California, you owe those documents — whether or not you've heard of the law. This is not a compliance platform. This is not legal advice. This is a document store: $49–$697, one-time purchase, instant download, built from the enacted statute text, ready for your attorney to review.
+
+## Voice Change Note (v1 → v2)
+
+v1 positioning used Realist/Credentialist pattern: buyer journey framing, "the person who just found out this is their job," explanatory. Correct voice for blog posts. Wrong for a positioning statement — explains who benefits instead of stating what's for sale.
+
+v2 uses Transaction-First Declarative: names the product ("document store"), names the laws, names the price, states the obligation as fact, clarifies what the product is not. No buyer journey narrated. The buyer reads this and recognizes themselves — or they don't, and they're not the buyer.
 
 ---
 

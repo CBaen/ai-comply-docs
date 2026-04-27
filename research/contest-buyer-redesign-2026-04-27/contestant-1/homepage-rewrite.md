@@ -1,22 +1,23 @@
-# Homepage Rewrite — Contestant 1
+# Homepage Rewrite — Round 2 (new voice)
+## Supersedes Round 1 version (see homepage-rewrite-v1.md for comparison)
+
+---
 
 ## Metadata
 
 ### `<title>` tag
-**Proposed:** `AI Compliance Documents — Colorado, Illinois, NYC, Texas, California Templates`
+**Proposed:** `AI Compliance Documents — Colorado, Illinois, NYC, Texas, California`
 
-**Current:** `AI Compliance Documents — Templates for Every State AI Law`
+**Round 1 was:** `AI Compliance Documents — Colorado, Illinois, NYC, Texas, California Templates`
 
-**Rationale:** The current title is descriptive but not search-discoverable. It doesn't name a single law, state, or buyer situation. Buyers searching "colorado AI law compliance documents" or "Illinois HB3773 template" don't see a match signal in the current title. The proposed title includes five high-intent state signals that match actual buyer queries while preserving the brand name. Tradeoff: loses the "every state" breadth signal. Worth it — breadth is a researcher preference; state specificity is a buyer preference.
+**Round 2 change:** Drop "Templates" — it signals catalog. The brand name + state list is the identity. Buyers searching state-law queries don't need "templates" to know what they're getting; they need to know their state is covered.
 
 ---
 
 ### Meta description
-**Proposed:** `Colorado SB 24-205 takes effect June 30. Illinois HB3773 is in effect now. NYC Local Law 144 active. Texas TRAIGA in force. Get your compliance documents — built from enacted statute text — in 10 minutes.`
+**Proposed:** `Colorado deadline: June 30. Illinois, NYC, Texas: in effect now. The compliance documents your AI law requires — built from statute text, instant download, one-time purchase.`
 
-**Current:** `AI compliance templates for 14+ state laws, the EU AI Act, and federal frameworks. Built from enacted statute text. Instant download.`
-
-**Rationale:** The current description is a catalog summary. It doesn't name a deadline, doesn't address the buyer's situation, doesn't create urgency. The proposed description leads with real deadlines (verified from leg.colorado.gov and ilga.gov), names specific laws that match buyer queries, and closes with the practical promise: 10 minutes to documented. Character count: ~158 — within the 160-character limit.
+**What changed from Round 1:** Round 1 version was journalist-style ("Colorado SB 24-205 takes effect June 30. Illinois HB3773 is in effect now."). Round 2 compresses to the offer shape: deadline → documents → purchase terms. Same facts, faster delivery. Character count: ~153.
 
 ---
 
