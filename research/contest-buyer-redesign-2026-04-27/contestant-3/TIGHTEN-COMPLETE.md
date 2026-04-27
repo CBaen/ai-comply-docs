@@ -1,0 +1,9 @@
+# Tightening Complete — Contestant 3
+
+Four items tightened, stretch goal applied.
+
+**Eyebrow** now names two states instead of one: "COLORADO — JUNE 30, 2026  ·  ILLINOIS & NYC — IN EFFECT NOW" — a buyer arriving from any of the three most-searched laws is confirmed before the H1 lands, not after scrolling past it. **Product selector badge rows** now carry explicit color token names: `[JUN 30 — Deadline Amber]` and `[IN EFFECT — Enforcement Red]` with hex values, so a developer doesn't have to infer the semantic mapping from the palette spec. **Final CTA H2** changed "Illinois penalties start at $16,000" to "Illinois penalties up to $70,000" — consistent with every other surface in the spec, which uses the maximum figure throughout. **Blog nav alternative** is now explicit in the IA proposal: the Resources dropdown shows "Blog — All Articles (/blog)" as the named replacement for the current top-level Blog link, with a developer note that the old Blog nav item must not be removed before this entry is present.
+
+**Stretch goal applied:** Added a Recognition Principle section to product-page-template.md with fully written recognition sentences for Illinois HB3773 (zip-code-as-proxy explicitly named in statute) and NYC Local Law 144 (independent auditor requirement — HR team and AI vendor both disqualified). Each sentence is statute-cited and positioned for Section 1 of its respective product page. Closed with a pattern rule for applying the principle to all remaining product pages, so the Recognition Principle is documented as a system with a repeatable method, not a one-off Colorado insight.
+
+**Held without change:** the Recognition Principle sentence on the Colorado page, the strict semantic color system, pain at section 3, and the hardware store test — all untouched per Proxy instruction.

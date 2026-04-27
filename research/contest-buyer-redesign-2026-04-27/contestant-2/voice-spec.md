@@ -57,6 +57,27 @@ This is the voice of a specialist who already knows you need what they have. No 
 
 ---
 
+## The Two Urgency Modes
+
+The Transaction-First Declarative voice has two registers. Apply the correct mode based on the law's status.
+
+**Mode 1 — Deadline Approaching** (Colorado SB 24-205 and any law with a future effective date)
+The buyer has a window. The window is closing. Forward pressure is appropriate.
+Pattern: `[Law name]. [Deadline date]. [What you owe]. [Price]. Get it now.`
+Example: `Colorado SB 24-205. June 30, 2026. Eight documents. $449. Get them now.`
+
+**Mode 2 — Already Exposed** (NYC Local Law 144, Illinois HB3773, Texas TRAIGA — all in force)
+The deadline passed. The exposure is present and ongoing. Documentation is the buyer's first defense.
+Register: calm, not panicked. "The window for planning closed. The window for acting is open."
+Pattern: `[Law name] is in effect. [Enforcement signal]. [What you owe]. [Price]. Download today.`
+Example: `Illinois HB3773 is in effect. IDHR enforcement is active. Five documents. $397. Download today.`
+
+Both modes stay offer-forward and statute-exact. Neither catastrophizes. Neither soft-pedals.
+
+**Why this matters for product pages:** A Colorado buyer in April 2026 needs countdown pressure. An NYC employer who just discovered Local Law 144 needs a different signal — not "you still have time," but "acting now is correct; documentation is your first defense." Applying Mode 1 copy to an already-exposed buyer is a mismatch. Apply the mode that matches the law's status field in `regulations.ts`.
+
+---
+
 ## Rationale Tied to Buyer Profile
 
 The buyer the brief describes arrives under duress: counsel flagged an issue, a vendor form surfaced a gap, they read a news headline and searched in a panic. They are not browsing — they are triaging. Every word of explainer copy they have to read before finding the product is friction. The Transaction-First Declarative voice removes that friction by starting at the transaction. It assumes the buyer already understands the stakes (because they do — they just searched "Colorado AI law compliance") and skips to the offer. The statute-exact language (law names, section numbers, penalty figures) is not pedantry — it is proof. It proves the site knows what the law actually says, which is the only trust signal that matters to a buyer who is about to spend $299–$697 on compliance documents.

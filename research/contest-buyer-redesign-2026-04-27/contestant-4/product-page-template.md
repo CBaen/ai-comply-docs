@@ -394,3 +394,29 @@ Filter: only include slugs where the referenced regulation has `status === "in-e
 The existing "You May Also Need" Related Products section shows products by category and tier similarity — it's a cross-sell section. The `AlsoExposedStrip` is different in purpose and register: it's not cross-selling, it's cross-alerting. Its message is "you may already be in violation of these other laws." The copy, color, and position are all distinct. It belongs above the document preview (where the buyer is still in evaluation mode) not below the add-ons section (where they are in post-decision mode).
 
 **After July 1, 2026:** The `AlsoExposedStrip` component remains but renders no Deadline Approaching products to link to (since all major laws are now in Already Exposed mode). At that point, the strip can either be hidden (if `CROSS_STATE_EXPOSURE` yields no effective-soon slugs) or repurposed to show "laws with pending rulemaking" or "laws with upcoming amendment reviews." This is a later-stage content decision — the mechanism is sound either way.
+
+---
+
+## Build Order — Ship These First
+
+A developer inheriting this spec under continuity constraints should work in this sequence. Each item is one deployable unit.
+
+**1. Title tag + H1 on the Colorado product page (one atomic step — 30 min)**
+Change `<title>` to `Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline` and make the H1 visible (remove `sr-only`). These must ship together — the title tag creates a deadline expectation; the H1 must fulfill it at first paint. This change affects every impression the Colorado page already receives. No new traffic needed. Highest ROI per minute of the entire spec.
+
+**2. Homepage H1 visible + urgency panel copy (45 min)**
+Remove `sr-only` from the homepage H1 (or replace with the new H1: "Your State Has an AI Law. Here Are the Documents."). Add the two-mode urgency panel copy replacing FeaturedInBar. These two changes together convert the homepage from a research-resource signal to a compliance-store signal without touching any other section.
+
+**3. Penalty section move on Colorado product page (1 hour)**
+Move the penalty section from its current buried position to Section 5 (before document preview). Update the penalty section header and body to v2 copy. Add the provenance integrity note as a developer comment (not buyer-facing). This is the highest-conversion structural change on the product page — it puts the stakes in front of the solution rather than after.
+
+**4. `AlsoExposedStrip` component — Colorado page only (2–3 hours)**
+Build the component, add the `CROSS_STATE_EXPOSURE` mapping for `"colorado-sb24-205"`, filter by `status === "in-effect"`, render after the penalty section. Verify the three linked product pages (Illinois, NYC, Texas) exist and are reachable. This is the spec's most novel build surface — ship it on Colorado first and validate before rolling out cross-product.
+
+**5. `status` flip logic — conditional rendering for Deadline Banner, H1, deck, sidebar (2 hours)**
+Extend the existing `reg.status` conditional pattern (already used in `StatusBadge`) to the Deadline Banner, H1 text, deck text, Key Stats Bar entry, and sidebar label. Use the flip-logic table as the implementation checklist — one row per element, verify before and after. This is what makes every future `status` update to any law automatically propagate through the full page.
+
+**6. `regulations.ts` status update for Colorado on or after June 30, 2026 (5 min)**
+One field change: `status: "effective-soon"` → `status: "in-effect"`. Commit, deploy. All elements wired in step 5 flip automatically. The homepage urgency panel updates. The `AlsoExposedStrip` on other pages drops Colorado from its list. The meta description update in `page.tsx` is the only manual copy change required.
+
+*Items 1–3 are the immediate wins — they ship fast and affect existing traffic. Items 4–6 are the structural completions that make the two-mode frame fully operational.*
