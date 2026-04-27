@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ProductCarousel from "@/components/ProductCarousel";
-import FeaturedInBar from "@/components/FeaturedInBar";
+import UrgencyPanel from "@/components/UrgencyPanel";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Compliance Documents — Templates for Every State AI Law" },
+  title: { absolute: "AI Compliance Documents — Colorado, Illinois, NYC & Texas AI Law Templates" },
   description:
-    "AI compliance templates for 14+ state laws, the EU AI Act, and federal frameworks. Built from enacted statute text. Instant download.",
+    "Colorado SB 24-205 deadline: June 30, 2026. Illinois HB3773 is in effect. Get the documents your state's AI law requires. Built from statute. $49–$697. Instant download.",
   keywords: [
     "ai compliance",
     "ai regulation",
@@ -177,7 +177,7 @@ export default function Home() {
       <WebSiteStructuredData />
       <FAQStructuredData readyCount={readyCount} />
       <Nav />
-      <FeaturedInBar />
+      <UrgencyPanel />
       <main id="main-content">
         {/* Hero Section with Product Carousel */}
         <header className="hero-bg text-white relative overflow-hidden">
@@ -190,7 +190,30 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-900/80" />
           </div>
           <div className="relative z-10">
-          <h1 className="sr-only">AI Compliance Documents — State AI Compliance Templates</h1>
+          <div className="px-4 pt-12 pb-6 max-w-5xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-extrabold font-display text-white leading-tight mb-4">
+              Your State Has an AI Law. Here Are the Documents.
+            </h1>
+            <p className="text-slate-200 text-base md:text-xl mb-6 max-w-2xl">
+              Colorado. Illinois. NYC. California. Texas.<br />
+              The documents the law requires. Built from statute. Instant download.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 mb-8">
+              <a
+                href="/products"
+                className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-7 py-3.5 rounded-lg font-bold text-base transition shadow-md"
+              >
+                Find Your State&apos;s Documents
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+              </a>
+              <a
+                href="/compliance-deadline-by-state"
+                className="inline-flex items-center justify-center gap-2 text-slate-200 hover:text-white text-sm font-medium transition"
+              >
+                Not sure which law applies? See deadlines by state →
+              </a>
+            </div>
+          </div>
           <ProductCarousel
             products={[
               "colorado-sb24-205",
