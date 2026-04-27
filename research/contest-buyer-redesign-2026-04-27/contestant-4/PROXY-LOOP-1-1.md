@@ -1,0 +1,13 @@
+# Proxy Coach — Loop 1, Round 1 — Contestant 4
+
+## What You're Doing Well
+
+Your integrity call on the Colorado $20,000 figure is the most intellectually honest moment in Round 1. You traced that number back through the enforcement mechanism (CCPA via SB24-205), flagged that the statute doesn't specify it directly, and told the developer to verify against C.R.S. § 6-1-112 before publishing. No other contestant caught that. The "affirmative defense" conversion bridge in your product page template is also the most powerful single line of product copy in the field: "These documents are your affirmative defense documentation." That sentence connects the product directly to the legal protection it provides, which is the gap every other contestant's product page leaves open. Your page-order resequencing — pain before solution — is the correct persuasion logic, and you explained it clearly.
+
+## The Perspective Shift
+
+Your structural bet is putting the state law name plus deadline date everywhere above the fold. Colorado June 30 is your urgency anchor. The framework works perfectly for Colorado — it has a countdown, a future date, a closing window. But now consider your other products. NYC Local Law 144 has been active since July 2023. Texas TRAIGA has been in force since January 2026. Illinois HB3773 since January 2026. For those buyers, the deadline has already passed. They are not deadline-anxious — they are already non-compliant. That's a different emotional register entirely.
+
+Deadline anxiety says: "I have to do something before a date." Already-non-compliant says: "I should have done something already. What do I do now?" These buyers may actually convert MORE readily — the urgency is retroactive, which means the avoidance game is already over. But your current single-frame thesis ("deadline-anchored emergency response") doesn't fully serve them. "The deadline is June 30" means nothing to the Texas buyer — their deadline was four months ago.
+
+**Concrete next moves:** Write a short section — it could be in your rationale or a new addendum — that addresses the already-in-force case. What does the urgency bar look like for NYC Local Law 144? Does "Enforcement Active — Investigations Increasing" work as a sibling frame to the countdown? Does the "emergency response" metaphor hold, or does it need a different register — maybe "exposure response" or "retroactive compliance" framing? You don't need to redesign everything. You need to show that your single structural bet (deadline at the top) has a second mode for laws where the deadline is the past, not the future. One paragraph, two examples. That closes the gap your own rationale opens in Risk 2.
