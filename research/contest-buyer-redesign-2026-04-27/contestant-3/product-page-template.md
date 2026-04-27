@@ -204,6 +204,28 @@ Customize Your Colorado Package
 
 ---
 
+## Recognition Principle — Applied to Illinois and NYC Product Pages
+
+The Recognition Principle (one statute-sourced sentence per product page that surfaces what the buyer didn't know to ask) is not unique to Colorado. It applies to every product page. Here are the recognition sentences for the two other highest-urgency laws, ready to drop into Section 1 ("Does This Apply to You?") of each respective page:
+
+**Illinois HB3773 — recognition sentence:**
+```
+If you use zip codes as a proxy for location in any AI employment decision, that practice is explicitly prohibited by name in the statute — not inferred from general anti-discrimination principles. ([775 ILCS 5/2-102(L)](https://www.ilga.gov/legislation/ilcs/documents/077500050K8A-104.htm))
+```
+
+Most Illinois employers on this page know they use AI in hiring. Few know the zip-code-as-proxy prohibition is in the statute by name. The buyer whose ATS filters by zip code just learned something their vendor didn't tell them. That's the hardware store moment.
+
+**NYC Local Law 144 — recognition sentence:**
+```
+The bias audit must be conducted by an independent auditor — your HR team cannot conduct it internally, and your AI vendor cannot conduct it either. These documents are the pre-audit infrastructure the law requires, not the audit itself. ([NYC Admin. Code § 20-871](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page))
+```
+
+Most NYC employers on this page think the bias audit requirement means "we need to review our AI for bias." It means something more specific: an independent third party conducts it, annually, on a defined schedule. Surfacing the independence requirement before purchase sets correct expectations — and pre-empts the post-purchase confusion that generates refund requests.
+
+**Pattern rule for all other product pages:** Before shipping any product page in the new voice, identify the one statutory requirement that is (a) real and specific, (b) not obvious from the law's name or summary, and (c) relevant to at least some buyers on that page. Write one sentence. Cite the section. Place it in Section 1 after the applicability bullets. That sentence is the recognition sentence for that page.
+
+---
+
 ## Blog Guide Card — Revised Copy
 
 Current:

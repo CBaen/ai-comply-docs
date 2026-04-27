@@ -124,6 +124,13 @@ You're a deployer if all three of these are true
 The June 30, 2026 deadline applies to all three. There is no small-business exemption for deployers. The Attorney General can bring enforcement actions before rulemaking is complete.
 ```
 
+**Recognition sentence (one per product page — surfaces what the buyer didn't know to ask):**
+```
+If you also built or substantially modified the AI system you're deploying, SB 24-205 assigns you separate developer obligations on top of these deployer requirements — including disclosure duties to your own downstream deployers. These 8 documents cover the deployer side. (C.R.S. § 6-1-1702)
+```
+
+**Voice note:** This is the statute-sourced insight the buyer who is simultaneously a developer and a deployer didn't know to look for. Most buyers on this page are deployers who bought a third-party tool — they don't need this sentence and will scroll past it. The buyer who built their own AI hiring tool and uses it internally is both a developer and a deployer with two separate obligation sets; finding that distinction here rather than from the AG is the value. One sentence, statute-cited, delivered without announcement. Do not expand it into an explainer. Do not add a link to a developer-obligations product page unless one exists. If it exists, one inline link is appropriate.
+
 **Voice note:** v1 copy was accurate but ended with a softer close. v2 closes with the three facts buyers use as psychological cover for delay — small-business exemption (doesn't exist), rulemaking not complete (irrelevant to enforcement), future date (64 days, not infinite). All three are directly referenced from statute / AG statements verified in Round 1.
 
 ---
@@ -170,7 +177,7 @@ Source: [Colorado SB 24-205 — leg.colorado.gov](https://leg.colorado.gov/bills
 
 **Change from v1:** v1 penalty section was 6 paragraphs. v2 is 4 short blocks. The 50-employee example replaces the abstract "1,000 consumers = $20 million" example — 50 is more relatable to a SMB buyer. The final line removes the lengthy enforcement-mechanism explanation and compresses to three facts (no SMB exemption / AG only / no rulemaking needed) — the three loopholes buyers use to defer.
 
-**Integrity note:** $20,000 and $50,000 figures are sourced from secondary analysis (aicerts.ai, aicompliancedocuments.com/blog) deriving from C.R.S. § 6-1-112. Developer must verify current CCPA ceiling before publishing. This caveat is on every penalty reference in this submission.
+**Integrity note — Colorado penalty provenance (developer must complete before publish):** The $20,000 and $50,000 per-violation figures derive from the Colorado Consumer Protection Act, not directly from SB 24-205. The chain is: SB 24-205 classifies violations as deceptive trade practices → enforcement falls under C.R.S. § 6-1-112 → C.R.S. § 6-1-112(1)(a) sets the $20,000 cap → C.R.S. § 6-1-112(1)(c) sets the $50,000 cap for consumers age 60+. To verify: fetch `https://leg.colorado.gov/sites/default/files/documents/2024A/bills/2024a_205_enr.pdf` and confirm the deceptive trade practice enforcement reference, then fetch `https://leg.colorado.gov/` and locate C.R.S. § 6-1-112 to confirm current penalty ceiling. Secondary sources (aicerts.ai, site blog) are consistent with this chain but the primary read must happen before buyer-facing copy ships.
 
 ---
 

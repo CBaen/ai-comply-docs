@@ -35,16 +35,19 @@ Colorado AI law: June 30, 2026 deadline. Texas TRAIGA: in effect now. You deploy
 
 ### H1 (make visible — remove `sr-only`)
 
-**v2 proposed:**
+**v2 proposed (tightened — Proxy Loop 3):**
 ```
-AI in your business. Five states have a law about that.
+AI in your business.
+Five states have a law.
+Here are the documents.
 ```
 
-**v1 version:** "You use AI in your business. Three states say you owe documentation. Here's it."
+Three lines. Each line does one job: recognition → obligation → offer. The third line is the product — it arrives at the end of the H1, not in the sub-H1. The Proxy identified that "have a law about that" delays the offer: "about that" is a vague antecedent that kicks the can to the next sentence. Replacing it with "Here are the documents" completes the Transaction-First pattern inside the H1 itself.
 
-**Voice change:** v1 was three sentences trying to do the work of one. v2 is tighter. "Five states" is accurate (CO/TX/IL/NYC/CA). The implied next sentence — "you need documents" — is handled by the sub-H1 and the deadline sidebar. The H1's job is recognition, not explanation.
+**v2 pre-tighten version (archived):** "AI in your business. Five states have a law about that." — two sentences, offer handled by sub-H1. The third line is now part of the H1, not the sub-H1 opener.
 
 **Implementation:** `text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight`
+Three lines render naturally at this size on desktop. On mobile (`text-4xl`), each line is one visual unit. No wrapping issues.
 
 ---
 
@@ -133,6 +136,41 @@ AI in hiring. January 1, 2026.        →
 ```
 
 Each card links to its product page. The "→" is a visible click affordance.
+
+**Data model — which `regulations.ts` fields drive each card line:**
+
+```typescript
+// Each sidebar card renders from one Regulation object.
+// No new fields required — all data comes from existing fields.
+
+interface SidebarCard {
+  // Line 1: status pill
+  // Source: reg.status ("in-effect" → "IN EFFECT" / "effective-soon" → deadline date)
+  status: Regulation["status"];
+
+  // Line 2: law name
+  // Source: reg.shortName (e.g. "Colorado SB 24-205")
+  shortName: Regulation["shortName"];
+
+  // Line 3: descriptive tagline — one-line scope + date
+  // Source: reg.appliesToSummary — truncate to first clause before first comma or period,
+  // then append reg.effectiveDate.
+  // Example: appliesToSummary "Any employer or employment agency in NYC using an automated
+  // employment decision tool..." → truncates to "Automated hiring tools." + "July 2023."
+  // Fallback if too long: use reg.category + ". " + reg.effectiveDate
+  appliesToSummary: Regulation["appliesToSummary"]; // truncated
+  effectiveDate: Regulation["effectiveDate"];
+
+  // Line 4 (link arrow)
+  // href: `/products/${reg.slug}`
+  slug: Regulation["slug"];
+}
+
+// The 4 sidebar cards are hardcoded by slug (highest-urgency laws only):
+// ["nyc-local-law-144", "texas-traiga", "colorado-sb24-205", "illinois-hb3773"]
+// Ordered: in-effect first (NYC, TX, IL), deadline-approaching last (CO).
+// When Colorado flips to "in-effect" post-June-30, reorder to match status.
+```
 
 **Implementation:** Right column at `w-64 shrink-0 space-y-3 hidden md:block`. Each card: `bg-white/10 border border-white/20 rounded-lg p-3 hover:bg-white/20 transition cursor-pointer`. Status pill: `text-xs font-bold px-2 py-0.5 rounded` — red for IN EFFECT (`bg-red-500/20 text-red-300`), amber for EFFECTIVE SOON (`bg-amber-500/20 text-amber-300`).
 
@@ -236,7 +274,7 @@ Is this legal advice?
 No. Templates drafted from enacted statute text. Your attorney reviews and advises on your specific situation.
 
 What if I operate in multiple states?
-The multi-state package covers 15+ jurisdictions. Or buy individual state packages — there's no overlap in what each law requires.
+Two options. The Multi-State Profiling Assessment Bundle ($697, slug: `multi-state-profiling-assessment`) covers 15+ state consumer privacy laws in one framework — the right choice if your exposure spans consumer data laws broadly. The Employer AI Disclosure Kit ($449, slug: `multi-state-employer-ai-disclosure`) covers IL/NYC/CO employment-AI disclosure requirements in one package. Or buy individual state packages — no overlap in what each law requires.
 ```
 
 **v1 version:** 9-question accordion. Research-resource pattern.
@@ -278,7 +316,7 @@ Change `${reg.name} — Compliance Documents` pattern to `${reg.name} Compliance
 Remove `sr-only` from the existing H1 or add the new H1 above the carousel. Single line change in `page.tsx` line 193. Note: this is the *homepage* H1 — separate from the product page H1 handled in item 1.
 
 **3. Blog CTA component — mid-article placement only (2 hours)**
-Build `BlogProductCTA.tsx` with Placement 2 (after penalty section) only. This is the highest-converting moment in the blog. Add to the 5 highest-traffic posts first. The other placements come after this is proven.
+Build `BlogProductCTA.tsx` with Placement 2 only: mid-article, inserted immediately after the penalty section in each blog post (see `blog-cta-pattern.md` → "Placement 2 — After Penalty Section" for the exact trigger definition, component props, and urgency-line variants per law). This is the highest-converting moment in the blog. Add to the 5 highest-traffic posts first. The other placements (Placement 1 after hook, Placement 3 at end) come after this is proven.
 
 **4. Penalty callout block on Colorado product page (1 hour)**
 Add the visible penalty section with statute citations and per-consumer counting to `/products/colorado-sb24-205`. Colorado has the most imminent deadline and the most SERP presence.

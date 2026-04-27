@@ -82,10 +82,12 @@ This page (proposed in new-page-spec.md) becomes the core of the "Resources" nav
 ```
 Resources
 ├── Compliance Deadline Tracker (hub page — /compliance-deadline-tracker)
-├── Blog (all posts — /blog)
+├── Blog — All Articles (/blog)
 ├── FAQ (/faq)
 └── About (/about)
 ```
+
+The "Blog — All Articles" entry is the explicit replacement for the current primary-nav "Blog" link. The URL (`/blog`) does not change. The label change ("Blog" → "Blog — All Articles" under Resources) is the only structural nav change needed. A developer removing the top-level Blog nav item must ensure this Resources dropdown entry is present before deploying — otherwise all existing blog traffic loses its navigation path into the site.
 
 The hub page serves buyers who aren't sure which law applies to them. It's the first item under Resources because it answers the most common pre-purchase question ("which of these laws do I need to worry about?"). It routes to product pages via per-law "Get Documents" links.
 

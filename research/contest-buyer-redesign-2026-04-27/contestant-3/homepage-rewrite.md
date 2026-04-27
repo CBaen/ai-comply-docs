@@ -89,13 +89,13 @@ Three rows. No images. No animation. Clean list of the three most urgent product
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  Colorado SB 24-205    [JUN 30]  $449   →           │
-│  Illinois HB3773       [IN EFFECT] $397  →           │
-│  NYC Local Law 144     [IN EFFECT] $399  →           │
+│  Colorado SB 24-205    [JUN 30 — Deadline Amber]  $449   →  │
+│  Illinois HB3773       [IN EFFECT — Enforcement Red] $397  → │
+│  NYC Local Law 144     [IN EFFECT — Enforcement Red] $399  → │
 └─────────────────────────────────────────────────────┘
 ```
 
-Each row: law shortname / status badge (amber for deadline, red for in-effect) / price / arrow link to product page. Border `#E2E8F0`, 6px border-radius, white background. No carousel. Buyers who know their law skip straight to the product page without scrolling.
+Each row: law shortname / status badge / price / arrow link to product page. Badge color tokens are semantic: `Deadline Amber #B45309` for any law with a future effective date; `Enforcement Red #DC2626` for any law already in force. Border `#E2E8F0`, 6px border-radius, white background. No carousel. Buyers who know their law skip straight to the product page without scrolling.
 
 ---
 
@@ -219,7 +219,7 @@ FAQ content is already good. No changes. Correct placement: catches buyers who a
 
 **H2:**
 ```
-Colorado's deadline is June 30. NYC is enforcing now. Illinois penalties start at $16,000.
+Colorado's deadline is June 30. NYC is enforcing now. Illinois penalties up to $70,000.
 ```
 
 **Sub-copy:**
