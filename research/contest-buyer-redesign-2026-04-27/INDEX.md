@@ -24,22 +24,22 @@
 | 2. Field summary | COMPLETE | FIELD-AT-ROUND-1.md written + SCOPE-EXPANSION.md issued |
 | 3. Round 2 (expanded scope) | COMPLETE | All 5 produced 4 new + 4 rewritten deliverables; v1 copies preserved for voice-before/after comparison |
 | 3a. Reflective loops Round 2 | COMPLETE | Loop 2 redesign-focused perspectives applied by all 5; sharp polish across the field |
-| 4. Mutual peer scoring | IN PROGRESS | All 5 dispatched in parallel for peer scoring on 3 dimensions |
-| 5. Aggregation + top-K | PENDING | |
-| 6. Dissent moment | PENDING | |
+| 4. Mutual peer scoring | COMPLETE | All 5 scoring.md written; honesty held (C2 ranked C4 highest while implicitly competing; C3 self-scored 22/30) |
+| 5. Aggregation + top-K | COMPLETE | SCORING-RESULTS.md written. Top-3: C4 (27.25), C3 (26.0), C2 (25.5). Below cut: C1 (24.5), C5 (24.0) |
+| 6. Dissent moment | IN PROGRESS | All 5 dispatched in parallel for Continue / Step Away / Wildcard Pivot |
 | 7. Tightening pass on top-K | PENDING | |
 | 8. Top 2 surface to GL | PENDING | |
 | 9. GL picks winner | PENDING | |
 
 ## Contestant Status
 
-| Contestant | Concept | Round 1 | Round 2 | Score | Dissent | Tightening |
+| Contestant | Final concept | Round 1 | Round 2 | Score | Dissent | Tightening |
 |---|---|---|---|---|---|---|
-| 1 | The Zero-Click Pivot — shift targeting from informational queries (consumed by AI Overviews) to transactional queries that AI Overviews don't absorb | DONE | — | — | — | — |
-| 2 | Three-Tier Routing — three-placement blog CTA + three-tier keyword strategy (deadline anxiety / applicability / action) + new `BlogProductCTA` component | DONE | — | — | — | — |
-| 3 | Surgical Routing — site has right content + right products, only routing copy is broken; minimal-change interventions only; AI Overview citation as opportunity (35% lift if cited) | DONE | — | — | — | — |
-| 4 | Deadline-Anchored Emergency Response — single structural bet: state law name + deadline date in title/meta/H1/urgency bar; everything flows from that one frame | DONE | — | — | — | — |
-| 5 | SERP Representation Fix — position 4.16 / 0.11% CTR diagnosed as a snippet-text problem, not a ranking problem; rewrite titles + metas + move penalties above doc list | DONE | — | — | — | — |
+| 1 | Calm Authority — declarative, offer-shaped voice; eyebrow names all 4 states leading with Texas; single-color urgency band; present-tense H1 | DONE | DONE | 24.5 | pending | below cut |
+| 2 | Transaction-First Declarative — law → deadline → obligation → product; departure-board hero; ranked Build Order with atomic-step pairing | DONE | DONE | 25.5 | pending | TOP-3 |
+| 3 | Hardware Store + Opinionated Minimalism — Recognition Principle (statute-sourced sentence per page); strict semantic color rules; pain-before-product order | DONE | DONE | 26.0 | pending | TOP-3 |
+| 4 | Compliance Specialist + Two-Mode Frame — Deadline Approaching / Already Exposed; flip-logic table; AlsoExposedStrip component; July 1 2026 all-exposed spec | DONE | DONE | **27.25** | pending | TOP-3 (rank 1) |
+| 5 | Calm Hardware Store + Diagnostic Precision — EEOC bridge as plain inline copy (not styled block); 5 priority blog title/meta rewrites | DONE | DONE | 24.0 | pending | below cut |
 
 ## Files in Contest Root
 
