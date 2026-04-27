@@ -26,8 +26,8 @@
 | 3a. Reflective loops Round 2 | COMPLETE | Loop 2 redesign-focused perspectives applied by all 5; sharp polish across the field |
 | 4. Mutual peer scoring | COMPLETE | All 5 scoring.md written; honesty held (C2 ranked C4 highest while implicitly competing; C3 self-scored 22/30) |
 | 5. Aggregation + top-K | COMPLETE | SCORING-RESULTS.md written. Top-3: C4 (27.25), C3 (26.0), C2 (25.5). Below cut: C1 (24.5), C5 (24.0) |
-| 6. Dissent moment | IN PROGRESS | All 5 dispatched in parallel for Continue / Step Away / Wildcard Pivot |
-| 7. Tightening pass on top-K | PENDING | |
+| 6. Dissent moment | COMPLETE | DISSENT-RESULTS.md written. 4 Continue, 0 Step Away, 1 Wildcard Pivot (C5 → synthesis) |
+| 7. Tightening pass on top-K + wildcard | IN PROGRESS | Proxy dispatched for top-3 tightening notes; C5 dispatched for wildcard production |
 | 8. Top 2 surface to GL | PENDING | |
 | 9. GL picks winner | PENDING | |
 
