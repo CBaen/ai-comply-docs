@@ -56,25 +56,37 @@ Short sentences. No throat-clearing. Product mentioned in sentence two.
 
 **Elements in order (top to bottom, left column):**
 
-1. **Eyebrow** — small caps, Ember Red, `text-xs tracking-widest font-semibold uppercase`
-   > "AI LAWS ARE IN EFFECT"
+1. **Eyebrow** — Ember Red (`#DC2626`), Inter 600, `text-sm tracking-wider uppercase`
+   > "TEXAS · ILLINOIS · NYC · COLORADO — AI LAWS ARE IN EFFECT"
 
-2. **H1** — Navy, Inter 800, `text-4xl md:text-6xl leading-tight`
-   > "Your state passed an AI law. We built the documents."
+   **Updated after Proxy Loop 2.** Round 2 eyebrow was `text-xs` and said only "AI LAWS ARE IN EFFECT" — generic urgency with no state names until the urgency band below. A panicked Texas buyer reads the eyebrow first and finds no Texas. One beat of disorientation before confirmation. The fix: eyebrow names all four states, ordered in-effect first (Texas, Illinois, NYC), deadline last (Colorado). `text-xs` → `text-sm` so it catches a fast scan without competing with the H1.
 
-3. **Deadline band** — inline pill-stack, tight spacing. Three pills side by side:
-   - `[● IN EFFECT]` Ember Red background — Illinois, NYC, Texas
-   - `[● JUNE 30, 2026]` Amber background — Colorado
+2. **H1** — Navy (`#1B2D4F`), Inter 800, `text-4xl md:text-6xl leading-tight`
+   > "Your state's AI law is in effect. We built the documents."
 
-4. **Primary CTA** — Signal Blue button, full-width on mobile, auto on desktop
+   **Updated after Proxy Loop 2.** Round 2 H1 was "Your state passed an AI law." — past tense. "Passed" signals enactment (historical). "Is in effect" signals enforcement (present). The Texas restaurant owner at 11pm needs the present-tense fact, not the legislative history.
+
+3. **State Urgency Band** — `text-sm font-bold px-4 py-2 rounded-md`, all Ember Red fill. In-effect states first, deadline state last.
+   ```
+   [■ TEXAS — IN EFFECT]   [■ ILLINOIS — IN EFFECT]   [■ NYC — IN EFFECT]   [■ COLORADO — JUNE 30]
+   ```
+
+   **Updated after Proxy Loop 2.** Round 2 used `text-xs px-3 py-1 rounded-full` pills — too small to catch a panic-state scan. Changes:
+   - Size: `text-sm font-bold px-4 py-2` — larger and bolder. These are the "yes, you're in the right place" confirmation the buyer needs to catch before reading the H1.
+   - Shape: `rounded-md` not `rounded-full`. Badge shape reads "status." Pill shape reads "label."
+   - Order: In-effect states lead. A Texas buyer reads TEXAS first, not Colorado's future deadline.
+   - Color: All four are Ember Red. Round 2 used amber for Colorado (future deadline). One color is simpler to decode at panic speed — the text (IN EFFECT vs JUNE 30) carries the temporal distinction.
+   - Mobile: Two per row — Texas/Illinois on line 1, NYC/Colorado on line 2. Not four in a row (too small) and not vertical stack (wastes above-fold space).
+
+4. **Primary CTA** — Signal Blue (`#2563EB`) filled button, full-width on mobile, auto on desktop
    > "Get My Compliance Documents →"
 
-5. **Sub-CTA** — underlined text link, smaller
+5. **Sub-CTA** — underlined text link, `text-sm text-navy`
    > "Not sure which law applies? → Find yours"
 
-6. **Trust strip** — 3 items in a row, small caps, Verified Teal checkmarks:
+6. **Trust strip** — 3 items in a row, Verified Teal (`#0D9488`) checkmarks, `text-sm font-medium`
    - ✓ Built from enacted statute text
-   - ✓ .gov primary sources
+   - ✓ .gov primary sources, verified
    - ✓ Instant download — no subscription
 
 **What's NOT in the hero:**
@@ -83,7 +95,7 @@ Short sentences. No throat-clearing. Product mentioned in sentence two.
 - No "How We Build Our Templates" section in the hero
 - No FeaturedInBar immediately after hero (move to bottom of page or remove)
 
-**Energy:** Dense but not cluttered. Every element earns its place. The H1 is the biggest thing on the page. The deadline pills create urgency without being alarmist. The CTA is one click.
+**Energy:** The eyebrow catches panic-state buyers by naming their state. The H1 confirms the present-tense enforcement reality and names the offer. The urgency band shows which states are live. The CTA is one click. Nothing above the fold teaches; everything confirms and resolves.
 
 ---
 

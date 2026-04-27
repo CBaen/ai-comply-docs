@@ -274,3 +274,116 @@ Deck:
 ```
 HB3773 is in effect. If you use AI in hiring, HR, or promotions affecting Illinois employees — you owe these documents. Built from 775 ILCS 5/2-102(L).
 ```
+
+---
+
+## Mechanism Spec: The Flip Logic and Cross-Mode Surface
+
+*(Added in Loop 2 in response to Proxy coaching. These two mechanisms are the implementation core of the two-mode frame.)*
+
+### Mechanism 1: The Deadline Approaching → Already Exposed Flip
+
+**The question:** What triggers the mode change on the Colorado product page after June 30, 2026? Is it automatic or manual?
+
+**Answer: Automatic, driven by `status` field in `regulations.ts`.**
+
+The existing data model already has the right field. `Regulation.status` is typed as `"in-effect" | "effective-soon" | "proposed"`. The `StatusBadge` component already reads this field and renders the appropriate badge. The two-mode frame maps onto this existing structure — no new fields required.
+
+**The rule:**
+- `status: "effective-soon"` → Deadline Approaching mode (Deadline Amber palette)
+- `status: "in-effect"` → Already Exposed mode (Enforcement Red palette)
+
+The flip happens when someone updates the Colorado `status` field from `"effective-soon"` to `"in-effect"` in `regulations.ts` on or after June 30, 2026. This is a one-line change, committed to git, deployed via Vercel. No database, no cron job, no server-side date math needed.
+
+**Why not automate the date comparison?** Automating it (`new Date() > new Date("2026-06-30")`) would require either client-side date math (which creates flash-of-wrong-mode on first render) or a server-side computed value (which adds complexity to what is currently a static data file). The manual flip is more reliable, auditable, and consistent with how the site already works. The `effectiveDate` string field already exists and is displayed — it is not used for logic. Keeping logic in one place (the `status` enum, changed manually when the date arrives) is the right call for this codebase.
+
+**What changes in the UI when the flip fires:**
+
+The `status` field drives every urgency-mode-sensitive element. After the flip:
+
+| Element | Before flip (effective-soon) | After flip (in-effect) |
+|---|---|---|
+| Deadline Banner | `June 30, 2026 — Colorado SB 24-205 takes effect in N days` (Amber `#D97706` bg) | `Colorado SB 24-205 — In Effect — AG Enforcement Active` (Red `#B91C1C` bg) |
+| H1 | `Colorado SB 24-205. 8 Documents. June 30, 2026.` | `Colorado SB 24-205. 8 Documents. Required Now.` |
+| Deck | `SB 24-205 requires 8 documents from every deployer. These are them...` | `SB 24-205 is in effect. If you deploy a high-risk AI system affecting Colorado residents, you owe these documents now.` |
+| Status badge | `EFFECTIVE SOON` (amber) | `IN EFFECT` (red) — already implemented in `StatusBadge` component |
+| Key Stats Bar | `June 30, 2026` | `In Effect Now` |
+| Sidebar label | `June 30, 2026 deadline` (Amber) | `In Effect — Act Now` (Red) |
+| Sidebar countdown | `64 days remaining` | *(removed — no countdown for in-force laws)* |
+| Exposure Summary close | `The June 30, 2026 deadline applies to all three.` | `This law is in effect. The AG can bring enforcement actions now.` |
+| Penalty section header | `What you're exposed to without these documents` | `What you're currently exposed to` |
+| Meta description `<title>` | `Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline` | `Colorado SB 24-205 Compliance Documents — In Effect Now` |
+
+**Implementation note for the developer:** The `regulations.ts` update (status field + effectiveDate string) is the single change that drives all of these. The product page JSX renders each urgency-mode-sensitive element conditionally on `reg.status === "in-effect"` vs. `reg.status === "effective-soon"` — the same pattern already used by `StatusBadge`. No new conditional logic is required beyond what already exists; it needs to be extended to the Deadline Banner, H1, deck, Key Stats Bar, and sidebar label elements.
+
+**The July 1, 2026 state of the site:**
+
+After June 30, Colorado flips to `"in-effect"`. At that point, every major US state AI law in the current catalog is in Already Exposed mode: Illinois (January 2026), NYC (July 2023), Texas TRAIGA (2026), Texas TDPSA (July 2024), California CCPA ADMT (active), Virginia CDPA, Connecticut CTDPA, Oregon CPA. The homepage urgency panel becomes all-red. Every deadline banner on every product page is Enforcement Red. The Deadline Approaching mode is temporarily absent from the site — until a new law enters the pipeline with a future effective date.
+
+This is not a design failure — it is the correct representation of reality. The site is a compliance store, not a countdown clock. When all laws are in force, the urgency mode shifts from "you have N days" to "you are currently exposed." The all-red homepage has its own conversion logic: it communicates that there is no safe window left. That is accurate and buyer-relevant.
+
+The only copy change needed at the homepage level: the meta description drops the Colorado deadline reference and substitutes "Multiple state AI laws are in effect. Enforcement is active in Colorado, Illinois, NYC, California, and Texas. Get the documents required. Instant download."
+
+---
+
+### Mechanism 2: Cross-Mode Surface for Multi-State Buyers
+
+**The question:** A buyer arrives on the Colorado product page via organic search. They have not seen the homepage urgency panel. They have Illinois employees — which means they are already in Already Exposed mode for HB3773. Where on the Colorado page do they learn this?
+
+**Answer: A new "Also Required?" strip, positioned after the penalty section and before the document preview.**
+
+**Component: `AlsoExposedStrip`**
+
+This is a horizontally scrollable strip of compact law cards, filtered by category overlap with the current product. It appears only on product pages whose `status` is `"effective-soon"` (Deadline Approaching mode) and shows laws that are:
+1. Already `"in-effect"`
+2. Share a category or applicability overlap with the current product
+
+For the Colorado page (category: "Employment and Consumer AI, multiple domains"), the strip shows:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Also Required If You Operate in These States                               │
+│  These laws are already in effect. No deadline — current exposure.          │
+├──────────────────┬──────────────────┬────────────────────────────────────── │
+│ 🔴 Illinois       │ 🔴 NYC            │ 🔴 Texas                             │
+│ HB3773           │ Local Law 144    │ TRAIGA                               │
+│ In Effect Now    │ In Effect        │ In Effect                            │
+│ AI in hiring     │ AI hiring, bias  │ AI developers                        │
+│ Up to $70K/viol  │ $500–$1,500/day  │ Up to $200K/viol                     │
+│ [Get Documents]  │ [Get Documents]  │ [Get Documents]                      │
+└──────────────────┴──────────────────┴──────────────────────────────────────┘
+```
+
+**Visual spec:**
+- Strip uses Enforcement Red (`#B91C1C`) left border accent
+- Cards are compact: law name, status, one-line applicability note, max penalty, CTA link
+- Horizontally scrollable on mobile; 3-up grid on desktop
+- Strip header: "Also Required If You Operate in These States" — declarative, not a question
+
+**Copy logic for the strip header:**
+- On a Deadline Approaching page: "These laws are already in effect — no deadline to wait for."
+- On an Already Exposed page (e.g., Illinois product page): "Also required if you operate in these states." (Omit the "already" framing since the viewer is already in Already Exposed mode.)
+
+**Category-based filtering logic:**
+
+The `RELATED_ADDONS` object already exists in the product page for add-on products. A similar mapping is needed for the `AlsoExposedStrip`:
+
+```typescript
+const CROSS_STATE_EXPOSURE: Record<string, string[]> = {
+  // Employment AI laws show each other
+  "colorado-sb24-205": ["illinois-hb3773", "nyc-local-law-144", "texas-traiga"],
+  "illinois-hb3773": ["nyc-local-law-144", "colorado-sb24-205"],
+  "nyc-local-law-144": ["illinois-hb3773", "colorado-sb24-205"],
+  // Consumer privacy laws show each other
+  "california-ccpa-admt": ["texas-tdpsa", "virginia-cdpa", "connecticut-ctdpa"],
+  // etc.
+};
+```
+
+Filter: only include slugs where the referenced regulation has `status === "in-effect"`. This means the strip is dynamic — as more laws flip to `"in-effect"`, more entries appear in the strip automatically. On July 1, 2026, when Colorado flips, it disappears from other pages' strips and the strips shrink.
+
+**Why not use the existing Related Products section?**
+
+The existing "You May Also Need" Related Products section shows products by category and tier similarity — it's a cross-sell section. The `AlsoExposedStrip` is different in purpose and register: it's not cross-selling, it's cross-alerting. Its message is "you may already be in violation of these other laws." The copy, color, and position are all distinct. It belongs above the document preview (where the buyer is still in evaluation mode) not below the add-ons section (where they are in post-decision mode).
+
+**After July 1, 2026:** The `AlsoExposedStrip` component remains but renders no Deadline Approaching products to link to (since all major laws are now in Already Exposed mode). At that point, the strip can either be hidden (if `CROSS_STATE_EXPOSURE` yields no effective-soon slugs) or repurposed to show "laws with pending rulemaking" or "laws with upcoming amendment reviews." This is a later-stage content decision — the mechanism is sound either way.

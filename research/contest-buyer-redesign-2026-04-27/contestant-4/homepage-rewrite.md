@@ -239,3 +239,36 @@ Questions before purchasing? info@aicompliancedocuments.com
 | "Everything you need to know before getting started." | "Before you buy." |
 | "If you use AI in hiring and you have employees or applicants in Illinois, NYC, or Colorado — yes." | Same — this was already good. Kept. |
 | "State AI regulations are here. Generate compliance documentation for a fraction of legal fees." (OG description) | Removed from all surfaces |
+
+---
+
+## Post-June-30, 2026 Homepage Variants
+
+*(Added in Loop 2. When Colorado flips from `"effective-soon"` to `"in-effect"`, these two elements update. Everything else on the homepage holds.)*
+
+### Meta description (post-June-30)
+```
+Colorado, Illinois, NYC, California, and Texas AI laws are all in effect. Enforcement is active. Get the compliance documents your state requires — built from statute. $49–$697. Instant download.
+```
+
+Colorado drops out of the meta description as a deadline-specific signal and joins the all-exposed list. The urgency is present-tense rather than countdown-based. Character count: 196 — truncates at 160 in SERP; the truncation point keeps "Colorado, Illinois, NYC, California, and Texas AI laws are all in effect. Enforcement is active. Get the compliance documents" fully visible.
+
+### Final CTA header (post-June-30)
+```
+Every major state AI law is now in effect.
+```
+
+Replaces "The deadline doesn't move." — which was Colorado-specific urgency. After June 30, the Colorado deadline has passed; "The deadline doesn't move" becomes factually stale (the deadline did pass — compliance is now simply overdue). The replacement line is accurate, present-tense, and applies to the full catalog rather than one state.
+
+**Final CTA body (post-June-30):**
+```
+Colorado, Illinois, NYC, California, Texas — enforcement is active in all of them. Your compliance documents are here. Built from statute. One-time purchase. Instant download.
+```
+
+### Urgency panel (post-June-30)
+All three rows shift to Enforcement Red. The amber Colorado row becomes:
+```
+🔴 Colorado SB 24-205   |   In Effect Now   |   Up to $20,000/violation   |   [Get Documents →]
+```
+
+No other homepage element requires a manual update — the product cards, the products grid section headers, and the status badges all derive from `regulations.ts` and update automatically when the `status` field flips.

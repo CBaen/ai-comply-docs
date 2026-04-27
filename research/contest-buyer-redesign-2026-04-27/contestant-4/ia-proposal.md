@@ -156,3 +156,36 @@ The existing `/products` page carries forward as the canonical catalog destinati
 1. **Section headers:** Products are organized into the same two-mode sections: "Already Exposed" and "Deadline Approaching" — matching the homepage grid so buyers who browse the full catalog get the same urgency framing.
 
 2. **State filter:** A simple filter bar at the top: "Filter by: Colorado | Illinois | NYC | California | Texas | All States." This is not a new component — it's a filter on the existing static page that narrows visible cards. Buyers who know their state don't want to scan 57 products; they want to find their state's item directly.
+
+---
+
+## The July 1, 2026 State of the Site
+
+*(Added in Loop 2. The Proxy asked: what does the site look like when every deadline has passed? The two-mode frame gives a concrete answer.)*
+
+On July 1, 2026, Colorado SB 24-205 flips from `"effective-soon"` to `"in-effect"` (a single field update in `regulations.ts`, committed and deployed). At that point, every major US state AI law in the current catalog is in Already Exposed mode. The site changes in two specific ways:
+
+**The homepage urgency panel becomes all-red.**
+
+Before July 1: two red rows (Illinois, NYC), one amber row (Colorado).
+After July 1: all three rows are Enforcement Red. The amber urgency register disappears from the homepage because there are no Deadline Approaching laws with imminent future dates. The panel still shows law names, enforcement statuses, and penalty figures — the urgency is present, just in a different register.
+
+The homepage Section 2 "Products Grid" loses its "Deadline Approaching" subsection header (because no products are in that mode). The full grid becomes a single section: "These laws are in effect. Enforcement is active."
+
+**The meta description updates.**
+
+Before July 1 meta description: "Colorado SB 24-205 deadline: June 30, 2026. Illinois HB3773 is in effect. Get the documents your state's AI law requires..."
+
+After July 1 meta description: "Colorado, Illinois, NYC, California, and Texas AI laws are all in effect. Enforcement is active. Get the compliance documents your state requires. Built from statute. $49–$697. Instant download."
+
+This is a manual update to `page.tsx` metadata, made when Colorado flips. It takes the deadline-specific urgency out of the title and replaces it with the all-exposed signal.
+
+**What this looks like for the buyer:**
+
+A buyer arriving after July 1 who searches "Colorado AI law compliance" finds a site where every surface reads "in effect, enforcement active." The compliance urgency is not a countdown — it is a present-tense statement. "You are currently exposed. Here are the documents." This is not a weaker signal than a countdown; for a buyer who has already missed the deadline, it is a more honest and more actionable signal. There is nothing to wait for. The documents are here.
+
+**The `/compliance-deadline-by-state` page after July 1:**
+
+The page title shifts from "AI Compliance Deadlines by State" to "AI Compliance Laws in Effect by State." The "Deadline Approaching" card section either becomes empty (if no new laws are approaching) or populates with new upcoming laws as they enter the pipeline. The page structure survives unchanged — the urgency mode language in each state card updates automatically when `status` flips in `regulations.ts`.
+
+**The IA frame survives July 1 intact.** The two-mode design was not built around the Colorado countdown — it was built around the distinction between future-deadline urgency and present-exposure urgency. When all laws are in the present-exposure register, the site is a compliance store for buyers who are already exposed, not for buyers who are running out of time. That is still the right product for that buyer. The store does not close when the countdown ends.
