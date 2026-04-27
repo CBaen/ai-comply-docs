@@ -1,6 +1,6 @@
 # Contest Index — buyer-redesign-2026-04-27
 
-**Status:** DISPATCHED — Round 1 in progress. GL approved N=5 standard mode. 5 contestants + Proxy coach running in parallel.
+**Status:** Round 1 complete (all 5 contestants delivered all 8 deliverables + 4 of 5 produced the optional new-page-spec). Phase 1a — reflective loops — in progress.
 
 ## Contest Configuration
 
