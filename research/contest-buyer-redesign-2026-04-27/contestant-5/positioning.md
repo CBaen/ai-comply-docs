@@ -1,0 +1,11 @@
+# Positioning Statement — Contestant 5
+
+**aicompliancedocuments.com** serves small and mid-size business owners — HR directors, operations managers, and founders — who have discovered they use AI in hiring, lending, insurance, or consumer decisions and now face a hard compliance deadline with real dollar penalties attached. These are not researchers looking for frameworks. They are people who got a call from their attorney, found a gap in a vendor due-diligence review, or read the headline and realized Colorado is 60 days away. They are not looking to understand AI governance in the abstract — they need the specific documents state law requires, built from the actual statute text, right now. **aicompliancedocuments.com** delivers exactly that: statute-verified compliance document packages, $49–$697, instant download, built for the person who just found out this is their job — not for the compliance professional who already knows what they're doing.
+
+**Who:** Small/mid business owners and operators who use AI in consequential decisions (hiring, lending, insurance, healthcare, consumer-facing) and have no in-house legal or compliance team.
+
+**What:** Statute-sourced compliance document packages covering Colorado SB 24-205 (effective June 30, 2026), Illinois HB3773 (in effect now), NYC Local Law 144 (in effect now), Texas TRAIGA (in effect now), California CCPA ADMT, and 50+ other regulations — instant download, fillable PDFs, ESIGN-compliant.
+
+**Why now:** Colorado's deadline is June 30, 2026 — a single non-compliant AI system affecting 1,000 consumers creates up to $20 million in exposure under C.R.S. § 6-1-112(1)(a). Illinois violations run up to $70,000 each (775 ILCS 5/8A-104). Texas TRAIGA uncurable violations hit up to $200,000 each. These are not hypothetical risks — they are enacted statutes with AG enforcement offices actively building enforcement capacity.
+
+**The gap this fills:** Law firm compliance packages cost thousands and take weeks. Platform-based tools (OneTrust, TrustArc) are priced for enterprise. Termly and iubenda handle cookie consent and privacy policies — not AI-specific employment and consumer-decision compliance. This site is the only place a $300/month SMB owner can get statute-accurate AI compliance documents in the same afternoon they discover they have a problem.
