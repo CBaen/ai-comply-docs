@@ -8,10 +8,11 @@
 
 ## Current State
 
-**What works (verified live on production 2026-04-24):**
-- Homepage, /about, /blog, 26 `/blog/[slug]` posts (all with question-form H2s + standalone answer paragraphs as of Lodestone session)
-- /products listing + 57 `/products/[slug]` detail pages
-- 4 state landing pages (/colorado-ai-compliance, /illinois-ai-compliance, /texas-ai-compliance, /california-ai-compliance) + hub at /ai-compliance-by-state
+**What works (verified live on production through 2026-04-27):**
+- Homepage with NEW redesign: visible H1 ("Your State Has an AI Law. Here Are the Documents."), 4-state UrgencyPanel above the fold (CO Deadline Approaching + IL/NYC/TX Already Exposed), updated meta title + description (deadline-anchored, price-disclosed). Homepage now reads as a compliance store, not a research resource. Verified live 2026-04-27.
+- /about, /blog, 26 `/blog/[slug]` posts (all with question-form H2s + standalone answer paragraphs as of Lodestone session)
+- /products listing + 57 `/products/[slug]` detail pages — **Colorado product page** has redesigned title ("Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline"), redesigned H1 ("Colorado SB 24-205. 8 Documents. June 30, 2026."), and penalty section moved BEFORE document preview with SHIP-BLOCKERS-corrected copy. Other 56 product pages still on original copy until Steps 4–6 ship.
+- 4 state landing pages (/colorado-ai-compliance, /illinois-ai-compliance, /texas-ai-compliance, /california-ai-compliance) + hub at /ai-compliance-by-state — these still render `<FeaturedInBar />` (homepage was migrated to `<UrgencyPanel />`; state pages were not).
 - /do-i-need-ai-compliance quiz, /faq, /contact, /privacy, /terms
 - Checkout flow (verified working 2026-03-15), live-mode Stripe
 - Account center with customer purchases
@@ -19,7 +20,7 @@
 - Schema: Organization, WebSite+SearchAction, FAQPage, TechArticle (Person author), Product, Dataset, BreadcrumbList
 - GSC verified property + sitemap submitted; Bing Webmaster Tools registered
 - GA4 analytics + server-side purchase tracking via Measurement Protocol
-- NLR credibility bar on homepage + 4 state pages + footer
+- NLR credibility bar on 4 state landing pages + footer (no longer on homepage as of Plumb's redesign)
 
 **What doesn't work yet:**
 - Illinois + Texas state landing pages still "Discovered, not indexed" in GSC — sitemap unfreeze + nav link + homepage body links shipped this session; awaiting Google recrawl (Out-of-hands timing)
