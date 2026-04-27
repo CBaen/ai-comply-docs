@@ -125,60 +125,125 @@ This is not the Realist voice — it's the new marketing voice applied to SERP c
 
 **Post: `eeoc-ai-guidance-removed-federal-vacuum-2026`**
 
-Current title: (approximately) "EEOC AI Guidance Removed: Federal Vacuum and What It Means for 2026"
+Current title (verified by reading actual MDX frontmatter):
+"The Federal Government Quietly Removed Its AI Hiring Guidance. Four States Are Writing Their Own."
+
+Assessment: this title is already buyer-signal adjacent — it names the event (guidance removed) and the consequence (states writing their own). The journalistic "quietly" is the one word to drop. The word "Writing" undersells — they've already written them: Illinois, NYC, Colorado, Texas are in effect now. The new title sharpens the consequence and names the audience:
 
 New title:
 ```
-EEOC Removed AI Hiring Guidance. Illinois, NYC, and Colorado Filled the Gap.
+The Federal Government Removed AI Hiring Guidance. Four States Wrote Their Own Laws.
+```
+(83 chars — within Google's title display range)
+
+Buyer-intent improvement: the original "Four States Are Writing" implies a future state. "Wrote Their Own Laws" confirms completed legislation with present enforcement. A buyer searching "do I need AI hiring compliance" sees this and understands: the laws exist, they apply now.
+
+New meta (150 chars):
+```
+No federal AI hiring standard. Illinois HB3773 in effect. NYC Local Law 144 in effect. Colorado: June 30, 2026. Get your state's compliance documents.
+```
+(150 chars — at limit, no trim needed)
+
+**Mid-article bridge — EEOC post (new, addressing the Proxy's Loop 2 gap):**
+
+The EEOC post's structure (verified by reading the MDX): it covers the EEOC guidance removal first, then transitions to what four states did. The mid-article bridge sits between those two sections — the exact moment the reader has absorbed "the federal manual is gone" and is ready to receive "here's what replaced it."
+
+Bridge copy — new marketing voice:
+```
+Here's what replaced it.
+
+[Illinois HB3773 — in effect →](/products/illinois-hb3773)
+[NYC Local Law 144 — in effect →](/products/nyc-local-law-144)
+[Colorado SB 24-205 — June 30, 2026 →](/products/colorado-sb24-205)
+```
+
+Three words. Three links. "Here's what replaced it" is the exact thesis of the post — the EEOC guidance is gone, state laws filled the gap — applied as a product bridge. The reader who just processed the removal section is primed for this: they're in the "now what?" mental state. The three links answer that in one line each. No explanation needed — the blog body above has already done the explaining.
+
+**Placement in the post structure:** After the section covering the EEOC guidance removal (the deepDive / main body section about what the EEOC removed), before the section covering what each state law says. The bridge is a horizontal rule break (`---`) followed by the styled block, followed by the state law section heading. It is not embedded in prose — it is a visual break between the problem section and the solution section of the post.
+
+**Why "Here's what replaced it" and not something longer:** The Proxy's proposed candidate is exactly right because it mirrors the post's structural logic. The reader's question after absorbing the EEOC removal section is "so what do I do instead?" The bridge answers that question in three words and then presents the answer as three product links. Longer copy would re-explain something the post is about to explain in the next section. Three words + three links is the minimum viable bridge.
+
+**Post: `ai-compliance-cost-small-business-2026`** ← PRIORITY REORDER: title/meta before CTA
+
+Current title (verified by reading actual MDX frontmatter):
+"What Does AI Compliance Actually Cost a Small Business in 2026?"
+
+Assessment: generic. No state named, no penalty anchored, no specific buyer type. With 479 impressions, the post is being found — but the title doesn't signal to the right buyer that this is their page. A buyer searching "Colorado AI compliance cost" or "Illinois AI law cost small business" sees this title and may not click because it reads as an industry overview, not a state-specific answer to their situation.
+
+The Proxy is right: title/meta work comes before CTA work here. A buyer who doesn't click through never sees the CTA.
+
+New title (state-specific + cost-explicit):
+```
+AI Compliance Cost for Small Business: Colorado, Illinois, NYC, Texas — Real Numbers
+```
+(82 chars)
+
+This title does four things the current one doesn't: names the specific states buyers are searching with, signals "real numbers" vs. vague guidance, keeps "small business" as the audience qualifier, and removes the year from the title (2026 dates the title; "real numbers" is durable).
+
+Alternative (if a single-state title converts better for the highest-traffic state):
+```
+Colorado AI Compliance Cost: What SB 24-205 Actually Costs a Small Business
 ```
 
 New meta (160 chars):
 ```
-No federal AI hiring standard. Illinois HB3773: in effect. NYC Local Law 144: in effect. Colorado: June 30, 2026. Get the compliance documents your state requires.
+Law firm quotes, bias audit prices, and statute-verified templates from $49. AI compliance cost for Colorado, Illinois, NYC, and Texas — the honest breakdown.
 ```
-(163 chars — trim: "Get the compliance documents your state now requires.")
+(158 chars)
 
-Final meta:
+**CTA placement for cost post (after title/meta):** The post's structure covers law firm → platform → bias audit → templates in cost tiers. The closing CTA should anchor to the template option as the lowest-cost compliant path. Closing block:
+
 ```
-No federal AI hiring standard. Illinois HB3773 in effect. NYC Local Law 144 in effect. Colorado: June 30, 2026. Get your state's compliance documents.
+[STYLED BLOCK]
+
+The lowest-cost path to compliance: statute-verified documents from $49.
+No law firm. No subscription. Instant download.
+
+[Find My State's Compliance Package →](/compliance-deadline-by-state)
 ```
-(150 chars)
+
+This is the one post where the closing CTA routes to `/compliance-deadline-by-state` rather than a specific product, because the post's entire thesis is that different buyers need different cost options. The routing page lets the buyer find their specific state after reading the cost breakdown.
+
+---
 
 **Post: `colorado-ai-law-91-days-deadline-requirements`**
 
-Current title: "Colorado's AI Law Takes Effect June 30, 2026. Here's What It Requires."
+Current title (verified): "Colorado's AI Law Takes Effect June 30, 2026. Here's What It Requires."
 
-This title is already close to the new voice. One adjustment — add buyer-audience signal:
+Assessment: already close to the new voice. One adjustment — replace "Here's What It Requires" (law-centered) with buyer-centered framing:
 
 New title:
 ```
 Colorado AI Law: June 30, 2026 Deadline. What Your Business Must Have Ready.
 ```
 
-New meta (current is already good — verify against existing frontmatter):
+New meta (current description verified from frontmatter — it already ends with a product offer):
 ```
 Colorado SB 24-205 takes effect June 30, 2026. Risk program, impact assessment, consumer notices required. Get statute-verified documents — $449, instant download.
 ```
-(162 chars — trim 2) "Get statute-verified documents: $449 instant download."
+(162 chars — trim: drop "instant" → "Get statute-verified documents — $449 download.")
+
+Final meta (160 chars):
+```
+Colorado SB 24-205: June 30, 2026. Risk program, impact assessment, consumer notices required. Statute-verified documents — $449, instant download.
+```
+(148 chars)
 
 **Post: `illinois-hb3773-ai-employment-law-what-employers-need`**
 
-Current title: "Illinois HB3773 Is Live. If You Use AI in Hiring, Here's What the Law Actually Says."
+Current title (verified): "Illinois HB3773 Is Live. If You Use AI in Hiring, Here's What the Law Actually Says."
 
-Good — buyer-audience signal present. Voice update:
+Voice update — "Is Live" → "Is in Effect" (more precise), "What the Law Actually Says" → "What You Need" (buyer-facing):
 
 New title:
 ```
 Illinois HB3773 Is in Effect. If You Use AI in Hiring, Here's What You Need.
 ```
 
-Change "Here's What the Law Actually Says" → "Here's What You Need." The current ending is journalistic ("what the law says"). The new ending is buyer-facing ("what you need").
-
 **Post: `hiring-software-uses-ai-employment-law-compliance`**
 
-This post targets employers who may not realize their hiring software uses AI. High buyer intent if it ranks. Title should reflect that:
+High buyer intent — employers who don't realize their ATS uses AI. New title:
 
-New title:
 ```
 Your Hiring Software Uses AI. Here's What Illinois and NYC Require From You.
 ```
@@ -187,10 +252,11 @@ New meta:
 ```
 ATS and HR software use AI by default. If you hire in Illinois or NYC, you have compliance obligations now. Get the documents — starting at $399, instant download.
 ```
+(162 chars — trim 2 chars)
 
 **Post: `what-is-ai-bias-audit-does-your-business-need-one`**
 
-Currently informational. Buyer-signal adjustment:
+Currently informational. Buyer-signal adjustment — adds NYC specificity to the title:
 
 New title:
 ```

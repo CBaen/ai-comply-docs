@@ -27,30 +27,46 @@
 
 ### Eyebrow
 ```
-AI LAWS ARE IN EFFECT
+TEXAS · ILLINOIS · NYC · COLORADO — AI LAWS ARE IN EFFECT
 ```
-Small caps, Ember Red (`#DC2626`), `text-xs tracking-widest font-semibold`. This is the first thing the eye hits. It names the situation before the H1 does.
+Small caps, Ember Red (`#DC2626`), `text-sm tracking-wider font-semibold`. **Upgraded from Round 2 after Proxy Loop 2.**
+
+**What changed and why:** Round 2 eyebrow was "AI LAWS ARE IN EFFECT" — generic urgency, no state specificity until the pills below. The Proxy surfaced the failure: a Texas restaurant owner at 11pm reads the eyebrow first, finds no Texas, and experiences one beat of disorientation before the pills confirm their state. The fix: the eyebrow names all four active-law states, ordered by enforcement status — in-effect states first (Texas, Illinois, NYC), then deadline state (Colorado). The buyer searching "Texas AI compliance" reads TEXAS in the first four characters. They don't have to scan to know they're in the right place.
+
+**Visual size upgrade:** The eyebrow moves from `text-xs` to `text-sm`. Still subordinate to the H1, but large enough to catch a panic-state scan. The state names are the arrival signal; they should not require close reading.
+
+**Static ordering rationale:** Texas leads because it has the highest penalty exposure ($200,000 per violation, [REQUIRES PRIMARY SOURCE VERIFICATION]) and the least buyer awareness — it's the law most likely to produce a panicked 11pm search. Illinois second because it's the most searched. NYC third because it's the longest-active. Colorado last because its deadline is a future event, not a current enforcement reality.
 
 ---
 
 ### H1 (visible — NOT sr-only)
 ```
-Your state passed an AI law. We built the documents.
+Your state's AI law is in effect. We built the documents.
 ```
 
-**What changed from Round 1:** Round 1 proposed "Your business uses AI. Six states have passed laws about that. You have deadlines." — three short sentences, Realist voice, correct for blog, wrong for a hero. It reads as a news lede. The Round 2 version is offer-shaped: here is what happened (your state passed a law), here is what we did (we built the documents). Eleven words. No hedging, no education, no "if you're like most businesses."
+**What changed from Round 2 and why:** Round 2 H1 was "Your state passed an AI law. We built the documents." The Proxy identified the failure: "passed" is past tense. It tells the buyer the law was enacted, not that it is actively enforced against them right now. For the Texas restaurant owner at 11pm, the operative fact is not historical ("the legislature passed it") — it is present ("this law applies to your business tonight"). "Is in effect" collapses past and present into a single enforcement-present statement. Same eleven-word structure. One verb changed. The urgency register shifts.
+
+**What stays:** The second sentence — "We built the documents." — is unchanged. It is the offer. It does not need to be urgent. The first sentence creates the stakes; the second sentence resolves them.
 
 Implementation: Inter 800, `text-4xl md:text-6xl leading-tight`, Navy (`#1B2D4F`), visible on `bg-slate-50`.
 
 ---
 
-### Deadline Pills (inline, tight spacing, below H1)
+### State Urgency Band (replaces Round 2 "Deadline Pills")
 ```
-[● Colorado — June 30, 2026]   [● Illinois — In Effect]   [● NYC — In Effect]   [● Texas — In Effect]
+[■ TEXAS — IN EFFECT]   [■ ILLINOIS — IN EFFECT]   [■ NYC — IN EFFECT]   [■ COLORADO — JUNE 30]
 ```
-Pill styling: Ember Red background for "In Effect" states; Amber background for "June 30" Colorado. `text-xs font-semibold px-3 py-1 rounded-full`. Four pills in a row on desktop, wrapping on mobile.
 
-**Why pills, not sub-headline prose:** The Round 1 sub-headline was 52 words explaining the same four facts. A buyer scanning from the top reads four pills in two seconds and knows whether their state is covered. The information density is identical; the cognitive load is lower.
+**What changed from Round 2 and why:** Round 2 called these "deadline pills" — `text-xs px-3 py-1 rounded-full`. The Proxy named the problem: `text-xs` is too small to catch a panic-state scan. A buyer scanning fast might not read them as the "yes, you're in the right place" confirmation they need. Additionally, Round 2 ordered them Colorado first (by deadline proximity) — wrong order for a Texas buyer who reads Colorado before seeing Texas.
+
+**Round 3 (Loop 2) changes:**
+- Size: `text-sm font-bold px-4 py-2` — larger, bolder. These are not decorative chips; they are the scan target.
+- Shape: Rounded-md not rounded-full. A pill shape reads "label." A badge shape reads "status." The buyer needs status, not a label.
+- Order: In-effect states first (Texas, Illinois, NYC), future deadline last (Colorado). Matches the eyebrow order. A buyer in panic mode scans top-to-bottom; their state should appear early in both the eyebrow AND the urgency band, not after they've read past a different state's deadline.
+- Icon: Square (■) not dot (●). The square reads "status indicator" — it has a harder edge than the soft dot. Panic-state buyers respond to harder visual signals.
+- Color: All four use Ember Red fill. Round 2 used amber for Colorado (future deadline) and red for in-effect states. The color distinction is technically accurate but cognitively complex — the buyer at 11pm doesn't have time to decode "amber means future, red means now." One color (red) means "this is real and it applies to you." The text (IN EFFECT vs JUNE 30) provides the temporal distinction without requiring color decoding.
+
+**Responsive:** On mobile, two bands of two — Texas/Illinois on line 1, NYC/Colorado on line 2. Not four in a row (too small on mobile) and not a vertical stack (wastes vertical real estate above the fold).
 
 ---
 

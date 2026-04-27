@@ -271,11 +271,11 @@ The documents are ready.
 
 These are the 7 interventions from v1, ranked by impact-per-hour. A build instance with limited continuity should ship in this order:
 
-**1. Title tags on all product pages (30 minutes)**
-Change `${reg.name} — Compliance Documents` pattern to `${reg.name} Compliance Documents — [Deadline] | Instant Download`. This affects every SERP impression immediately. Highest leverage per change.
+**1. Title tags + product page H1 (45 minutes — one atomic step)**
+Change `${reg.name} — Compliance Documents` pattern to `${reg.name} Compliance Documents — [Deadline] | Instant Download` in `generateMetadata`. Then immediately update the product page H1 to carry the same deadline: for effective-soon products use `{reg.shortName} — {reg.effectiveDate}` (e.g., "Colorado SB 24-205 — June 30, 2026"); for in-effect products use `{reg.shortName} — In Effect Since {reg.effectiveDate}`. These two changes must ship together — the title tag creates a deadline expectation; the H1 fulfills it in the first element the buyer reads. Shipping the title change without the H1 change creates a half-second gap between the SERP promise and the page delivery. These are not two changes — they are one promise completed in two places.
 
 **2. Make H1 visible on homepage (15 minutes)**
-Remove `sr-only` from the existing H1 or add the new H1 above the carousel. Single line change in `page.tsx` line 193.
+Remove `sr-only` from the existing H1 or add the new H1 above the carousel. Single line change in `page.tsx` line 193. Note: this is the *homepage* H1 — separate from the product page H1 handled in item 1.
 
 **3. Blog CTA component — mid-article placement only (2 hours)**
 Build `BlogProductCTA.tsx` with Placement 2 (after penalty section) only. This is the highest-converting moment in the blog. Add to the 5 highest-traffic posts first. The other placements come after this is proven.

@@ -71,4 +71,23 @@ Apply this test to any proposed marketing copy: "Would a hardware store say it?"
 
 ---
 
+## The Recognition Principle (the guy in the apron extension)
+
+The hardware store person doesn't only point to the aisle. They also say "and if you're replacing that valve, you'll need the pipe tape — it's right next to it." That's not upselling. That's mastery recognizing a pattern the buyer didn't know to ask about.
+
+Every product page should contain one moment of unprompted recognition — one sentence that surfaces something the buyer didn't know was relevant, because the site read the statute closely enough to see it. This is not a sidebar explanation. It is one sentence in the applicability section, delivered in the marketing voice, that tells the buyer: this site knows the stock.
+
+**The recognition sentence for the Colorado product page:**
+> "If you also built or substantially modified the AI tool you're deploying, the statute assigns you separate developer obligations on top of these — including disclosure requirements to your own deployers."
+
+Most buyers landing on this page are deployers who didn't build the tool. But the site surfaces the distinction anyway — because the buyer who is *also* a developer doesn't know to ask, and finding out here instead of from the AG is the value.
+
+**The pattern for other product pages:**
+- Illinois HB3773: "If you use zip codes as a proxy for location in any AI employment decision, that's explicitly prohibited by name in the statute — not inferred from anti-discrimination principles."
+- NYC Local Law 144: "The bias audit must be conducted by an independent auditor — your HR team cannot conduct it internally. These documents are the pre-audit infrastructure, not the audit itself."
+
+One recognition sentence per product page. Statute-sourced. Delivered without explanation. The buyer who needs it will feel seen. The buyer who doesn't need it will scroll past. Either outcome is correct.
+
+---
+
 *Voice designed for: homepage hero, product page above-fold copy, product cards, ad creative, blog-to-product CTA components, nav copy, sidebar purchase card, trust signals. NOT for blog post bodies — those retain the BLOG-STYLE-GUIDE Realist/Credentialist pattern unchanged.*

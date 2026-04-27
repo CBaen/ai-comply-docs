@@ -9,12 +9,18 @@ The new marketing voice for homepage, product pages, ad creative, and navigation
 
 The voice speaks in the second person, present tense, specific nouns. It names laws by their common name without over-explaining what they are — the buyer searching "Illinois HB3773 compliance template" already knows what the law is. They need to know we have what they're looking for. The voice's job is to confirm that, immediately and without friction, and then tell them what to do.
 
+**Loop 2 addition — Calm Authority at different arrival altitudes:**
+
+Calm Authority is one voice, but it has two registers depending on the buyer's state at arrival. Most of the spec describes the *organized buyer* — someone who searched a specific law name and landed ready to evaluate. But a meaningful segment arrives panicked: the restaurant owner in Austin who got a vendor email at 11pm and doesn't know if TRAIGA applies to their hiring software. For the panicked buyer, Calm Authority's job is not to calm them down — it's to catch them first, then steady them.
+
+The catch happens in the visual layer (eyebrow size, state names, urgency band visual weight — see `visual-direction.md`), not in a change to the voice itself. The voice stays declarative throughout. But the *first element* the panicked buyer sees must name their state before the H1 does — otherwise the voice's calm reads as indifference to their specific situation. Calm after confirmation. Not calm instead of it.
+
 ---
 
 ## 5–10 Example Sentences
 
 **Homepage hero:**
-> "Your state passed an AI law. We built the documents."
+> "Your state's AI law is in effect. We built the documents."
 
 **Homepage hero variant:**
 > "AI in your hiring. Colorado says you need these documents by June 30."

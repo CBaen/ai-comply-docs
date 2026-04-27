@@ -102,9 +102,16 @@ Does Colorado SB 24-205 Apply to Your Business?
 - You are the business using the AI — even if you didn't build it, you are a "deployer" under the statute
 - You are not a small deployer (fewer than 50 FTEs) who uses only the developer's unmodified system with the developer's own training data — that's the narrow small-business exemption
 
-**After bullets:**
+**After bullets — the recognition sentence:**
 ```
-No revenue minimum. No employee minimum for most requirements. A 10-person company using an AI hiring tool has the same core obligations as a Fortune 500. ([SB 24-205, C.R.S. § 6-1-1702](https://leg.colorado.gov/bills/sb24-205))
+If you also built or substantially modified the AI tool you're deploying, the statute assigns you separate developer obligations on top of these — including disclosure requirements to your own deployers. These 8 documents cover the deployer side. ([SB 24-205, C.R.S. § 6-1-1702](https://leg.colorado.gov/bills/sb24-205))
+```
+
+This is the one sentence that demonstrates the site read the statute. The deployer/developer distinction is real, statutory, and most buyers on this page don't know to ask about it. A business that built its own AI hiring tool and is also using it to screen candidates is simultaneously a developer and a deployer — with two separate obligation sets. Surfacing that without prompting is the hardware store moment: not an explainer, not a upsell, just visible recognition of a pattern the buyer didn't know was relevant to them. The buyer who reads this sentence knows they're not at a generic compliance template factory.
+
+**After the recognition sentence:**
+```
+No revenue minimum. No employee minimum for most requirements. A 10-person company using an AI hiring tool has the same core obligations as a Fortune 500.
 ```
 
 ### Section 2 — Penalties (moved before "What's Included")
