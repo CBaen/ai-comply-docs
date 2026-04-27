@@ -17,9 +17,9 @@
 
 | Phase | Status | Notes |
 |---|---|---|
-| 0. Pre-flight | IN PROGRESS | BRIEF.md drafted; awaiting GL approval |
-| 0a. Spawn Proxy | PENDING | Post-approval |
-| 1. Round 1 (blind) | PENDING | |
+| 0. Pre-flight | COMPLETE | BRIEF.md approved by GL with N=5 bump |
+| 0a. Spawn Proxy | COMPLETE | `buyer-redesign-coach` spawned 2026-04-27 |
+| 1. Round 1 (blind) | IN PROGRESS | 5 contestants dispatched in parallel |
 | 1a. Reflective loops Round 1 | PENDING | |
 | 2. Field summary | PENDING | |
 | 3. Round 2 (visibility) | PENDING | |
