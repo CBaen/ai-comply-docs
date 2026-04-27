@@ -41,10 +41,10 @@ Colorado deadline: June 30, 2026. NYC enforcing now. Illinois penalties up to $7
 ### Eyebrow (above H1 — Deadline Amber `#B45309`, 12px caps, Inter 600)
 
 ```
-COLORADO SB 24-205 DEADLINE: JUNE 30, 2026
+COLORADO — JUNE 30, 2026  ·  ILLINOIS & NYC — IN EFFECT NOW
 ```
 
-The first thing the buyer reads. Named urgency, not generic urgency. If they came here because of Colorado, they know immediately they're in the right place. If they came for a different state, the urgency signal still lands.
+The first thing the buyer reads. Named urgency, not generic urgency. Colorado buyers see their deadline immediately. Illinois and NYC buyers see their enforcement status in the same line. A buyer arriving from any of the three most-searched laws is confirmed in the eyebrow before the H1 lands.
 
 ### H1 (visible, above fold — Near Black `#0F172A`, 48px / 32px mobile, Inter 700)
 

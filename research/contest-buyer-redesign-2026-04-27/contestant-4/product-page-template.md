@@ -203,11 +203,11 @@ Source: C.R.S. § 6-1-1701 et seq. →
 ```
 No change. Strong trust signal. Already in the right voice.
 
-**Below verified badge (v2 addition):**
+**Below verified badge (v2 addition — dynamically computed):**
 ```
-64 days remaining
+N days remaining
 ```
-Small, Deadline Amber text. Date reinforcement at the point of decision.
+Small, Deadline Amber text. Date reinforcement at the point of decision. This is NOT a hardcoded string. Implementation: `Math.ceil((new Date('2026-06-30') - new Date()) / 86400000)` rendered as a client component (`"use client"` — uses `Date`). After June 30, 2026: element is removed from the sidebar (the flip to `"in-effect"` status removes the countdown per the flip-logic table — sidebar label becomes `In Effect — Act Now` in Enforcement Red). No static string "64 days" should appear in source.
 
 ---
 
@@ -345,12 +345,12 @@ For the Colorado page (category: "Employment and Consumer AI, multiple domains")
 │  Also Required If You Operate in These States                               │
 │  These laws are already in effect. No deadline — current exposure.          │
 ├──────────────────┬──────────────────┬────────────────────────────────────── │
-│ 🔴 Illinois       │ 🔴 NYC            │ 🔴 Texas                             │
-│ HB3773           │ Local Law 144    │ TRAIGA                               │
-│ In Effect Now    │ In Effect        │ In Effect                            │
-│ AI in hiring     │ AI hiring, bias  │ AI developers                        │
-│ Up to $70K/viol  │ $500–$1,500/day  │ Up to $200K/viol                     │
-│ [Get Documents]  │ [Get Documents]  │ [Get Documents]                      │
+│ [Enforcement Red `#B91C1C` pill] Illinois   │ [Enforcement Red `#B91C1C` pill] NYC   │ [Enforcement Red `#B91C1C` pill] Texas   │
+│ HB3773                                      │ Local Law 144                           │ TRAIGA                                   │
+│ In Effect Now                               │ In Effect                               │ In Effect                                │
+│ AI in hiring                                │ AI hiring, bias                         │ AI developers                            │
+│ Up to $70K/viol                             │ $500–$1,500/day                         │ Up to $200K/viol                         │
+│ [Get Documents]                             │ [Get Documents]                         │ [Get Documents]                          │
 └──────────────────┴──────────────────┴──────────────────────────────────────┘
 ```
 

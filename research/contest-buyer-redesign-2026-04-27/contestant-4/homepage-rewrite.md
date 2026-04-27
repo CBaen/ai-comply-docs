@@ -26,10 +26,10 @@ Colorado SB 24-205 deadline: June 30, 2026. Illinois HB3773 is in effect. Get th
 
 ### New H1 (visible — not sr-only)
 ```
-Your State Has an AI Law. Here Are the Documents It Requires.
+Your State Has an AI Law. Here Are the Documents.
 ```
 
-**Voice note:** Short. Declarative. Offer-shaped. Not "AI compliance templates help businesses navigate state AI regulations." No preamble.
+**Voice note:** Short. Declarative. Offer-shaped. Not "AI compliance templates help businesses navigate state AI regulations." No preamble. "It Requires" is removed — it's already implied by the product context and adds three words that slow the landing. The offer is in "Here Are the Documents." That's enough.
 
 ### Sub-H1
 ```
