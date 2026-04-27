@@ -394,6 +394,54 @@ export default async function RegulationPage({
                 </div>
               </section>
 
+              {/* Penalties — Section 5: before document preview so buyers see stakes before solution */}
+              {slug === "colorado-sb24-205" ? (
+                <section>
+                  {/* INTEGRITY NOTE: Colorado $20K and $50K figures derive from C.R.S. § 6-1-112 (CCPA), routed via SB 24-205's deceptive trade practice classification. The chain is: SB 24-205 classifies violations as deceptive trade practices → enforcement falls under C.R.S. § 6-1-112 → § 6-1-112(1)(a) sets the $20,000 cap → § 6-1-112(1)(c) sets the $50,000 cap for consumers age 60+. // VERIFY at build time — Audit 1 found (1)(f) per HB 23-1257; Audit 3 found AG uses (1)(c). Read § 6-1-112 directly before any future copy change. SB25B-004 extends operative date to June 30, 2026: https://leg.colorado.gov/bills/sb25b-004 */}
+                  <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
+                    What you&apos;re exposed to without these documents
+                  </h2>
+                  <div className="bg-red-50 border border-red-100 rounded p-5 border-l-4 border-l-red-400">
+                    <p className="text-gray-700 leading-relaxed mb-3 text-sm">
+                      Colorado SB 24-205 violations are enforced as deceptive trade practices under the Colorado Consumer Protection Act. The Attorney General has exclusive authority.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-3 text-sm">
+                      Civil penalties: up to $20,000 per violation. For consumers age 60 or older, up to $50,000 per violation.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-3 text-sm">
+                      If each affected consumer is treated as a separate violation — the standard CCPA enforcement posture in deceptive trade practice actions — exposure scales accordingly. The Colorado AG&apos;s exclusive enforcement authority extends to all CCPA remedies.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-3 text-sm">
+                      Limited small-deployer exception under § 6-1-1703(6) for deployers under 50 employees that don&apos;t train the system; most deployers covered. No private right of action — AG-only. No rulemaking required before enforcement begins.
+                    </p>
+                    <p className="text-sm">
+                      <a
+                        href="https://leg.colorado.gov/bills/sb24-205"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-700 hover:text-blue-900 underline underline-offset-2 font-medium"
+                      >
+                        Source: Colorado SB 24-205 — leg.colorado.gov →
+                      </a>
+                    </p>
+                  </div>
+                </section>
+              ) : (
+                <section>
+                  <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
+                    What Happens Without Compliance
+                  </h2>
+                  <div className="bg-red-50 border border-red-100 rounded p-5 border-l-4 border-l-red-400">
+                    <p className="text-gray-700 leading-relaxed mb-2 text-sm">
+                      {reg.penaltySummary}
+                    </p>
+                    <p className="font-bold text-red-800">
+                      Maximum: {reg.maxPenalty}
+                    </p>
+                  </div>
+                </section>
+              )}
+
               {/* Dynamic Document Sample Preview */}
               <section>
                 <h2 className="text-2xl font-bold font-display text-gray-900 mb-1">
@@ -439,21 +487,6 @@ export default async function RegulationPage({
                   </a>
                 </section>
               )}
-
-              {/* Penalties — shown after documents so visitors understand what they get before seeing risk */}
-              <section>
-                <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
-                  What Happens Without Compliance
-                </h2>
-                <div className="bg-red-50 border border-red-100 rounded p-5 border-l-4 border-l-red-400">
-                  <p className="text-gray-700 leading-relaxed mb-2 text-sm">
-                    {reg.penaltySummary}
-                  </p>
-                  <p className="font-bold text-red-800">
-                    Maximum: {reg.maxPenalty}
-                  </p>
-                </div>
-              </section>
 
               {/* ESIGN Act note */}
               <div className="flex items-start gap-3 bg-slate-50 border border-gray-200 rounded p-4 text-sm text-gray-600">
