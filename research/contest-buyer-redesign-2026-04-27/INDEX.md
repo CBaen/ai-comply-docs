@@ -19,8 +19,8 @@
 |---|---|---|
 | 0. Pre-flight | COMPLETE | BRIEF.md approved by GL with N=5 bump |
 | 0a. Spawn Proxy | COMPLETE | `buyer-redesign-coach` spawned 2026-04-27 |
-| 1. Round 1 (blind) | IN PROGRESS | 5 contestants dispatched in parallel |
-| 1a. Reflective loops Round 1 | PENDING | |
+| 1. Round 1 (blind) | COMPLETE | All 5 wrote ROUND-1-COMPLETE.md; each cleared 5 of 6 mandatory research gates |
+| 1a. Reflective loops Round 1 | IN PROGRESS | Loop 1 dispatched to Proxy as a batch with 5 tailored perspectives |
 | 2. Field summary | PENDING | |
 | 3. Round 2 (visibility) | PENDING | |
 | 3a. Reflective loops Round 2 | PENDING | |
@@ -35,11 +35,11 @@
 
 | Contestant | Concept | Round 1 | Round 2 | Score | Dissent | Tightening |
 |---|---|---|---|---|---|---|
-| 1 | _TBD_ | — | — | — | — | — |
-| 2 | _TBD_ | — | — | — | — | — |
-| 3 | _TBD_ | — | — | — | — | — |
-| 4 | _TBD_ | — | — | — | — | — |
-| 5 | _TBD_ | — | — | — | — | — |
+| 1 | The Zero-Click Pivot — shift targeting from informational queries (consumed by AI Overviews) to transactional queries that AI Overviews don't absorb | DONE | — | — | — | — |
+| 2 | Three-Tier Routing — three-placement blog CTA + three-tier keyword strategy (deadline anxiety / applicability / action) + new `BlogProductCTA` component | DONE | — | — | — | — |
+| 3 | Surgical Routing — site has right content + right products, only routing copy is broken; minimal-change interventions only; AI Overview citation as opportunity (35% lift if cited) | DONE | — | — | — | — |
+| 4 | Deadline-Anchored Emergency Response — single structural bet: state law name + deadline date in title/meta/H1/urgency bar; everything flows from that one frame | DONE | — | — | — | — |
+| 5 | SERP Representation Fix — position 4.16 / 0.11% CTR diagnosed as a snippet-text problem, not a ranking problem; rewrite titles + metas + move penalties above doc list | DONE | — | — | — | — |
 
 ## Files in Contest Root
 
