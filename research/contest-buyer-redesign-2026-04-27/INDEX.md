@@ -27,8 +27,8 @@
 | 4. Mutual peer scoring | COMPLETE | All 5 scoring.md written; honesty held (C2 ranked C4 highest while implicitly competing; C3 self-scored 22/30) |
 | 5. Aggregation + top-K | COMPLETE | SCORING-RESULTS.md written. Top-3: C4 (27.25), C3 (26.0), C2 (25.5). Below cut: C1 (24.5), C5 (24.0) |
 | 6. Dissent moment | COMPLETE | DISSENT-RESULTS.md written. 4 Continue, 0 Step Away, 1 Wildcard Pivot (C5 → synthesis) |
-| 7. Tightening pass on top-K + wildcard | IN PROGRESS | Proxy dispatched for top-3 tightening notes; C5 dispatched for wildcard production |
-| 8. Top 2 surface to GL | PENDING | |
+| 7. Tightening pass on top-K + wildcard | COMPLETE | Top-3 absorbed peer moves through tightening (C2↔C4 two-mode, C4←C3 recognition + C2 build order). C5 wildcard delivered explicit synthesis with attribution. |
+| 8. Top 2 surface to GL | IN PROGRESS | Presentation drafted; awaiting GL's pick |
 | 9. GL picks winner | PENDING | |
 
 ## Contestant Status
