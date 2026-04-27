@@ -11,7 +11,7 @@
 
 ## The Challenge
 
-Three of you are working in parallel on the same brief. You will produce independent answers. None of you will see the others' work in Round 1. After Round 1, you'll get a field summary and choose whether to refine, sharpen your unique angle, or pivot. A Proxy coach will push each of you through 2–3 perspective shifts per round.
+Five of you are working in parallel on the same brief. You will produce independent answers. None of you will see the others' work in Round 1. After Round 1, you'll get a field summary and choose whether to refine, sharpen your unique angle, or pivot. A Proxy coach will push each of you through 2–3 perspective shifts per round.
 
 You are competing to redesign aicompliancedocuments.com so it stops attracting researchers and starts attracting **buyers** — small/mid business owners with imminent AI compliance deadlines.
 

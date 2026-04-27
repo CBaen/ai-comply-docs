@@ -1,14 +1,14 @@
 # Contest Index — buyer-redesign-2026-04-27
 
-**Status:** PRE-FLIGHT — awaiting GL approval before contestant dispatch.
+**Status:** DISPATCHED — Round 1 in progress. GL approved N=5 standard mode. 5 contestants + Proxy coach running in parallel.
 
 ## Contest Configuration
 
 | Field | Value |
 |---|---|
 | Mode | Standard |
-| Contestants | 3 |
-| Top-K tightening | 2 |
+| Contestants | 5 |
+| Top-K tightening | 3 |
 | Proxy coach | `buyer-redesign-coach` (to be spawned post-approval) |
 | Verification hook | Lightweight: voice-fidelity + integrity-claim check (no Playwright render — copy/strategy contest) |
 | Contest dir | `research/contest-buyer-redesign-2026-04-27/` |
@@ -38,6 +38,8 @@
 | 1 | _TBD_ | — | — | — | — | — |
 | 2 | _TBD_ | — | — | — | — | — |
 | 3 | _TBD_ | — | — | — | — | — |
+| 4 | _TBD_ | — | — | — | — | — |
+| 5 | _TBD_ | — | — | — | — | — |
 
 ## Files in Contest Root
 
