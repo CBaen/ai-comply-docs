@@ -1,7 +1,13 @@
 # AI Compliance Documents — Work Queue
-## Updated: 2026-04-27 (Plumb session — contest end-to-end + Build Steps 1–3 shipped)
+## Updated: 2026-04-29 (Steps 4 + 5 shipped; Step 6 scheduled)
 
 **When an item is DONE: delete it from this file.** Git tracks completion history. Queues are for current work only. Never accumulate completed items.
+
+---
+
+## SCHEDULED ACTIONS (cloud routines)
+
+- **`trig_01LE5ZVLyK7GMmzmKGuDShcj`** — Step 6: Colorado SB 24-205 status flip. Fires once at `2026-06-30T06:00:00Z` (= midnight MDT, June 30, 2026). Manage at https://claude.ai/code/routines/trig_01LE5ZVLyK7GMmzmKGuDShcj. **Blocked on:** GitHub auth not connected for the routine's account — agent will fire but fail to push. Manual fallback in HANDOFF.md.
 
 ---
 
@@ -10,44 +16,36 @@
 - [ ] **Customer account center end-to-end test** — database is now connected. Test a real purchase: webhook fires, download link appears in account center.
 - [ ] Resend domain verification — confirm email delivery is actually working end-to-end. Test with a real purchase.
 - [ ] Split product documents onto separate hidden review pages per product — browser Claude needs to audit the actual generated document content for each of the 57 products individually.
+- [ ] **Connect GitHub for the Step 6 routine.** Run `/web-setup` in claude.ai OR install the Claude GitHub App at https://claude.ai/code/onboarding?magic=github-app-setup. Otherwise the scheduled June 30 status flip will fire but fail to push.
 
-## HIGH (Buyer-Redesign Build — from Plumb's session 2026-04-27)
+## HIGH (Validation — un-run audit prompts)
 
-Steps 1–3 of C4's Build Order are LIVE. Steps 4–6 are queued. Source spec: `research/contest-buyer-redesign-2026-04-27/contestant-4/product-page-template.md`. **Mandatory pre-build read: `research/contest-buyer-redesign-2026-04-27/SHIP-BLOCKERS.md`.**
-
-- [ ] **Verify Step 3 live on production** — curl `https://aicompliancedocuments.com/products/colorado-sb24-205?nocache=$(date +%s%N)` and confirm penalty section appears BEFORE document preview blocks. Step 3 (commit `030515f`) was pushed at session end; Vercel was still deploying.
-- [ ] **Build Step 4 — `AlsoExposedStrip` component on Colorado page.** Most novel build surface. ~2–3h work. Build the component, add the `CROSS_STATE_EXPOSURE` mapping for `"colorado-sb24-205"`, filter by `status === "in-effect"`, render after the penalty section. Verify the three linked product pages (Illinois, NYC, Texas) exist and are reachable. Apply SHIP-BLOCKERS 1–4 + 6 to the IL/NYC/TX strip card copy (NYC must use `§§ 20-870 to 20-874` citation range and `Up to $1,500/violation; each day = separate violation` penalty framing; TX must say `AI developers + deployers` and `$10K–$200K/viol (uncurable max)`; NYC must NOT say "DCWP investigations increasing").
-- [ ] **Build Step 5 — Status flip-logic conditional rendering.** Extend the existing `reg.status === "in-effect"` conditional pattern (already used in `StatusBadge`) to: deadline banner, H1, deck, Key Stats Bar entry, sidebar label, sidebar countdown removal, exposure summary close, penalty section header, meta description. The flip-logic table at `product-page-template.md` lines 311–323 is the implementation checklist.
-- [ ] **Step 6 — `regulations.ts` Colorado status flip on/after June 30, 2026.** One-line change: `status: "effective-soon"` → `status: "in-effect"`. Triggers the full Step-5-wired flip automatically. Also requires `src/app/page.tsx` meta description manual update on July 1, 2026 (per `product-page-template.md` line 332). Schedule a remote agent for this if continuity may not span to July.
-
-## HIGH (SHIP-BLOCKERS that land with their target pages)
-
-These ship-blockers from `SHIP-BLOCKERS.md` only apply when the target product pages get redesigned. Apply during Step 4+ when those pages get touched.
-
-- [ ] **SB-1: NYC product page citation range.** Replace `Built from NYC Admin. Code § 20-870` with `Built from NYC Admin. Code §§ 20-870 to 20-874 (Local Law 144)` on `/products/nyc-local-law-144` and any related copy.
-- [ ] **SB-2: NYC product page penalty framing.** Replace `$500–$1,500/day` with `Up to $1,500/violation; each day = separate violation (§ 20-872)`. The per-violation cap and per-day stacking are different rules; current copy conflates them.
-- [ ] **SB-3: TX product page applicability.** Replace `AI developers` with `AI developers + deployers` (or `Developers, deployers, gov entities`). Statute imposes obligations on all three; current label tells deployer-only buyers the law doesn't apply when it does.
-- [ ] **SB-4: TX product page penalty range.** Replace `Up to $200K/viol` with `$10K–$200K/viol (uncurable max)`. $200K is only the upper end of uncurable band; curable cap is $12K.
-- [ ] **SB-6: NYC + Illinois product pages — DCWP/IDHR enforcement framing.** Replace any `"DCWP investigations are increasing"` with `"DCWP enforcement active since July 5, 2023"` (factual, sourced). The audit found the underlying "increasing" claim contradicts the cited OSC audit which faulted DCWP for under-enforcement.
-- [ ] **CITE-PRECISION: Colorado elderly $50K cap subsection.** Audits disagreed: Audit 1 found `(1)(f)` per HB 23-1257; Audit 3 found `(1)(c)` per a CO AG pleading. The C4 spec uses `(1)(c)`. Read C.R.S. § 6-1-112 directly on `leg.colorado.gov` (statute PDF, not summary pages) before shipping any copy that cites this subsection.
-- [ ] **CITE-PRECISION: Texas TRAIGA bill number.** Spec uses "TRAIGA" without binding to bill number. Original TRAIGA was HB 1709 (88R) and did NOT pass. Operative law is HB 149 (89R), Tex. Bus. & Com. Code Ch. 552. Ensure all TRAIGA links go to `https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149`.
-
-## HIGH (Validation — un-run audit prompts from Plumb's session)
-
-GL ran one of five browser-Opus audit prompts (statute integrity, run 3 times by 3 different instances). The other 4 are queued for next session. Prompts are in the conversation history of Plumb's session and can be regenerated from the C4 spec files.
+The 4 un-run audit prompts are now self-contained and tracked at `research/contest-buyer-redesign-2026-04-27/AUDIT-PROMPTS.md`. Run 2–3× per prompt in parallel by independent browser-Opus instances for higher signal. Steps 4–5 are now live, so audits apply to current site state.
 
 - [ ] **Audit Prompt 2 — Voice + "stop looking like info site"** — role-play deadline-anxious buyer, test if homepage hero passes the 5-second test, identify journalist-explainer drift
 - [ ] **Audit Prompt 3 — End-to-end buyer journey stress test** — three buyer personas (CO HR director / IL employer / multi-state operator), name break-points
 - [ ] **Audit Prompt 4 — Adversarial / red team** — what did the contest miss, weakest assumption, blind spot, biggest 3-month-from-launch failure mode
 - [ ] **Audit Prompt 5 — Visual design hostile review** — palette risk, type pairing, hero pattern, product card at scale, mobile-first failure modes, accessibility, brand identity
 
-These should run BEFORE Step 4–6 ship since visual + voice fixes often affect the same files Steps 4–5 touch.
+## HIGH (SHIP-BLOCKERS that land with their target pages)
+
+These ship-blockers only apply when the target product pages get redesigned. Step 4 was Colorado-only; the NYC/IL/TX product pages were NOT redesigned this round and still carry the original copy. Apply when those pages get touched.
+
+Note: SHIP-BLOCKERS for the AlsoExposedStrip cards (showing IL/NYC/TX previews on the Colorado page) ARE applied — see `src/components/AlsoExposedStrip.tsx` `CARD_OVERRIDES`. But those overrides only fix the cross-state cards; the NYC/IL/TX product pages themselves still need the fixes below.
+
+- [ ] **SB-1: NYC product page citation range.** Replace `Built from NYC Admin. Code § 20-870` with `Built from NYC Admin. Code §§ 20-870 to 20-874 (Local Law 144)` on `/products/nyc-local-law-144` and any related copy.
+- [ ] **SB-2: NYC product page penalty framing.** Replace `$500–$1,500/day` with `Up to $1,500/violation; each day = separate violation (§ 20-872)`. The per-violation cap and per-day stacking are different rules; current copy conflates them. **Also:** `regulations.ts` NYC `penaltySummary` field still has the wrong framing — fix in data file too.
+- [ ] **SB-3: TX product page applicability.** Replace `AI developers` with `AI developers + deployers` (or `Developers, deployers, gov entities`).
+- [ ] **SB-4: TX product page penalty range.** Replace `Up to $200K/viol` with `$10K–$200K/viol (uncurable max)`.
+- [ ] **SB-6: NYC + Illinois product pages — DCWP/IDHR enforcement framing.** Replace any `"DCWP investigations are increasing"` with `"DCWP enforcement active since July 5, 2023"` (factual, sourced). The audit found the underlying "increasing" claim contradicts the cited OSC audit. **Also:** `regulations.ts` NYC `penaltySummary` field has "Proactive DCWP investigations increasing in 2026" — fix.
+- [ ] **CITE-PRECISION: Colorado elderly $50K cap subsection.** Audits disagreed: Audit 1 found `(1)(f)` per HB 23-1257; Audit 3 found `(1)(c)` per a CO AG pleading. Read C.R.S. § 6-1-112 directly on `leg.colorado.gov` (statute PDF) before shipping any copy that cites this subsection. The integrity comment in `[slug]/page.tsx` already flags this.
+- [ ] **CITE-PRECISION: Texas TRAIGA bill number.** Operative law is HB 149 (89R), Tex. Bus. & Com. Code Ch. 552 — NOT HB 1709 (88R, did not pass). Already correct in `regulations.ts`; verify any new copy maintains this.
 
 ## HIGH (Lodestone's still-open items)
 
-- [ ] **Blog hero image sweep via Unsplash.** GL flagged 2026-04-23: every blog hero is currently "laptops in offices with state flag — too corporate." Need lifestyle/location photos: Colorado Rockies trail with hikers / Chicago Riverwalk crowd / Mission District / Austin South Congress / NYC Washington Square / etc. **fal.ai is locked. Use Unsplash (free, commercial-OK).** Hero images live in `public/blog/blog-hero-*.png` — see frontmatter `image:` field of each `.mdx`. ~20 images to swap.
-- [ ] **Google Ads campaigns (Colorado + Texas) via API integration.** Specs in `MARKETING-LAUNCH-CHECKLIST.md` §2 + §2b. **Build OAuth → API integration like Stripe MCP / GSC CLI** — don't ask GL to click through ads.google.com. Existing Google Ads credentials (developer token + customer IDs) at `C:/Users/baenb/.claude/projects/.../memory/reference_google_ads_credentials.md`. `mae v5` Google Cloud project hosts the Ads API credentials. **NEW context:** Steps 1–3 of the redesign are now live, so Google Ads landing pages have refreshed copy to align ad creative with — pull the C4 ad-creative.md spec for headline/description starter language.
-- [ ] **GSC re-measurement.** Now relevant to measure impact of Steps 1–3 (title + H1 changes on Colorado page; homepage H1 + UrgencyPanel). Run `python C:/Users/baenb/.claude/scripts/gsc.py summary aicompliancedocuments.com --days 7` and compare to baselines: pre-redesign Colorado product page 350 impressions / 0.29% CTR / position 11.14 (28-day window). Pre-redesign overall site 0.13% CTR / position 8.28.
+- [ ] **Blog hero image sweep via Unsplash.** Every blog hero is currently "laptops in offices with state flag — too corporate." Need lifestyle/location photos. **fal.ai is locked. Use Unsplash (free, commercial-OK).** Hero images live in `public/blog/blog-hero-*.png` — see frontmatter `image:` field of each `.mdx`. ~20 images to swap.
+- [ ] **Google Ads campaigns (Colorado + Texas) via API integration.** Specs in `MARKETING-LAUNCH-CHECKLIST.md` §2 + §2b. Build OAuth → API integration like Stripe MCP / GSC CLI — don't ask GL to click through ads.google.com. Existing Google Ads credentials at `C:/Users/baenb/.claude/projects/.../memory/reference_google_ads_credentials.md`. **NEW context post-Steps-4-5:** Colorado landing page now has concrete urgency-mode UI (deadline banner + AlsoExposedStrip + countdown) to align ad creative with — pull C4 ad-creative.md spec for headline/description starter language.
+- [ ] **GSC re-measurement (Steps 4 + 5 impact).** Wait for at least 2 weeks of post-Step-5 crawl data before reading. Baseline pre-Step-1: Colorado product page 350 impressions / 0.29% CTR / position 11.14 (28-day). 2026-04-27 28-day overall: 11,513 impressions / 15 clicks / 0.13% CTR / position 7.75 (mostly pre-ship; position improving from Plumb's baseline 8.28).
 - [ ] **Verify Workday blog page H2 propagation on production.** File committed + pushed 2026-04-24; Vercel edge cache was still serving partial build at Lodestone session end. Re-curl `/blog/workday-ai-hiring-lawsuit-employer-liability` — expect all 9 H2s in question form.
 
 ## HIGH (GEO Off-site Signals — from 2026-04-24 audit)
@@ -85,7 +83,7 @@ Off-site GEO scored 8/30 in the audit — the weakest dimension. These are Human
 
 - [ ] **`dateModified` on blog JSON-LD** — currently `dateModified = datePublished` (stale-signals to AI engines that nothing is maintained). Add `updated` frontmatter field to MDX schema; fall back to `date` where absent. Or pull from `git log -1 --format=%cI <file>` at build time.
 - [ ] **HowTo schema on step-by-step sections** — e.g., "What Enforcement-Ready Actually Looks Like" in the new Texas TRAIGA post has 5 numbered steps. Validate via Rich Results Test.
-- [ ] **Glossary page with definition blocks** — "What is a high-risk AI system?" / "What is a bias audit?" / "What is an impact assessment?" — 40-60 word standalone blocks, also embedded on relevant state pages. Definition-seeking queries extract these as paragraph snippets.
+- [ ] **Glossary page with definition blocks** — "What is a high-risk AI system?" / "What is a bias audit?" / "What is an impact assessment?" — 40-60 word standalone blocks, also embedded on relevant state pages.
 - [ ] **FAQ sections on state landing pages** — 5-10 conversational Q&As per state page, FAQPage JSON-LD wrapped. State pages currently have no FAQ section.
 - [ ] **FAQ sections on top 10 blog posts** — same format. Highest-traffic posts first.
 
