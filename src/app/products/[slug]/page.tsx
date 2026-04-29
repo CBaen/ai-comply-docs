@@ -744,6 +744,15 @@ export default async function RegulationPage({
                   </div>
                 </div>
 
+                {slug === "colorado-sb24-205" && reg.status === "effective-soon" && (
+                  <p
+                    className="text-center text-xs font-semibold mt-3"
+                    style={{ color: "#D97706" }}
+                  >
+                    <DaysRemaining targetDate="2026-06-30T00:00:00" />
+                  </p>
+                )}
+
                 {/* Pre-purchase contact */}
                 <p className="text-center text-xs text-gray-600 mt-4">
                   Questions before purchasing?{" "}
