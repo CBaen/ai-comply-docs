@@ -38,9 +38,12 @@ export async function generateMetadata({
   const reg = getRegulation(slug);
   if (!reg) return {};
   return {
-    title: slug === "colorado-sb24-205"
-      ? "Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline"
-      : `${reg.name} — Compliance Documents`,
+    title:
+      slug === "colorado-sb24-205"
+        ? reg.status === "in-effect"
+          ? "Colorado SB 24-205 Compliance Documents — In Effect Now"
+          : "Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline"
+        : `${reg.name} — Compliance Documents`,
     description: reg.description,
     keywords: reg.keywords,
     alternates: {
@@ -252,6 +255,23 @@ export default async function RegulationPage({
         ]}
       />
       <main id="main-content">
+        {/* Deadline Banner — Colorado-specific (drives the two-mode urgency frame).
+            Amber = Deadline Approaching (effective-soon); Red = Already Exposed (in-effect).
+            Other product pages keep their existing hero treatment unchanged. */}
+        {slug === "colorado-sb24-205" && (
+          <div
+            className="text-white text-center py-2.5 sm:py-3 px-4 text-sm sm:text-base font-bold tracking-tight"
+            style={{
+              backgroundColor:
+                reg.status === "in-effect" ? "#B91C1C" : "#D97706",
+            }}
+          >
+            {reg.status === "in-effect"
+              ? "Colorado SB 24-205 — In Effect — AG Enforcement Active"
+              : "June 30, 2026 — Colorado SB 24-205 takes effect"}
+          </div>
+        )}
+
         {/* Hero */}
         <div className="hero-bg text-white py-10 md:py-20 relative overflow-hidden">
           <div className="absolute inset-0">
@@ -277,11 +297,17 @@ export default async function RegulationPage({
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display mb-3 sm:mb-4 leading-tight">
               {slug === "colorado-sb24-205"
-                ? "Colorado SB 24-205. 8 Documents. June 30, 2026."
+                ? reg.status === "in-effect"
+                  ? "Colorado SB 24-205. 8 Documents. Required Now."
+                  : "Colorado SB 24-205. 8 Documents. June 30, 2026."
                 : reg.name}
             </h1>
             <p className="text-base sm:text-lg text-slate-300 mb-4 max-w-2xl leading-relaxed">
-              {reg.description}
+              {slug === "colorado-sb24-205"
+                ? reg.status === "in-effect"
+                  ? "SB 24-205 is in effect. If you deploy a high-risk AI system affecting Colorado residents, you owe these documents now."
+                  : "SB 24-205 requires 8 documents from every deployer. These are them — built from C.R.S. § 6-1-1701 et seq., not a law firm's summary, not an AI-generated overview."
+                : reg.description}
             </p>
             <div className="mb-5 sm:mb-6">
               <a
@@ -353,6 +379,13 @@ export default async function RegulationPage({
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {reg.appliesToSummary}
                 </p>
+                {slug === "colorado-sb24-205" && (
+                  <p className="text-gray-800 text-sm leading-relaxed mt-3 font-medium">
+                    {reg.status === "in-effect"
+                      ? "This law is in effect. The Attorney General can bring enforcement actions now."
+                      : "The June 30, 2026 deadline applies to all three. Limited small-deployer exception under § 6-1-1703(6) for deployers under 50 employees that don't train the system; most deployers covered. The Attorney General can bring enforcement actions before rulemaking is complete."}
+                  </p>
+                )}
               </section>
 
               {/* IDHR implementing rules notice — Illinois HB3773 only */}
@@ -401,7 +434,9 @@ export default async function RegulationPage({
                 <section>
                   {/* INTEGRITY NOTE: Colorado $20K and $50K figures derive from C.R.S. § 6-1-112 (CCPA), routed via SB 24-205's deceptive trade practice classification. The chain is: SB 24-205 classifies violations as deceptive trade practices → enforcement falls under C.R.S. § 6-1-112 → § 6-1-112(1)(a) sets the $20,000 cap → § 6-1-112(1)(c) sets the $50,000 cap for consumers age 60+. // VERIFY at build time — Audit 1 found (1)(f) per HB 23-1257; Audit 3 found AG uses (1)(c). Read § 6-1-112 directly before any future copy change. SB25B-004 extends operative date to June 30, 2026: https://leg.colorado.gov/bills/sb25b-004 */}
                   <h2 className="text-xl font-bold font-display text-gray-900 mb-3">
-                    What you&apos;re exposed to without these documents
+                    {reg.status === "in-effect"
+                      ? "What you’re currently exposed to"
+                      : "What you’re exposed to without these documents"}
                   </h2>
                   <div className="bg-red-50 border border-red-100 rounded p-5 border-l-4 border-l-red-400">
                     <p className="text-gray-700 leading-relaxed mb-3 text-sm">
@@ -443,6 +478,9 @@ export default async function RegulationPage({
                   </div>
                 </section>
               )}
+
+              {/* AlsoExposedStrip — cross-state callout (Colorado-only mapping; component renders null otherwise). */}
+              <AlsoExposedStrip slug={reg.slug} />
 
               {/* Dynamic Document Sample Preview */}
               <section>
@@ -624,6 +662,19 @@ export default async function RegulationPage({
                 id="get-started"
                 className="bg-white border-2 border-blue-800 rounded-xl p-5 sm:p-6 shadow-lg md:sticky md:top-24"
               >
+                {slug === "colorado-sb24-205" && (
+                  <p
+                    className="text-xs font-bold uppercase tracking-wider mb-2"
+                    style={{
+                      color:
+                        reg.status === "in-effect" ? "#B91C1C" : "#D97706",
+                    }}
+                  >
+                    {reg.status === "in-effect"
+                      ? "In Effect — Act Now"
+                      : "June 30, 2026 deadline"}
+                  </p>
+                )}
                 <p className="text-sm font-semibold text-blue-700 uppercase tracking-wider mb-1">
                   Complete Package
                 </p>
