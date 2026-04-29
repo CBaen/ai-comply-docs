@@ -63,71 +63,57 @@ const rows: UrgencyRow[] = [
 
 // Deadline Approaching: Amber — #D97706 (Tailwind amber-600)
 // Already Exposed: Enforcement Red — #B91C1C (Tailwind red-700)
+//
+// Layout: 4 cards in a responsive grid (1 col mobile / 2 col tablet / 4 col desktop).
+// Each card stacks vertically with clean hierarchy — pill, law name, status,
+// penalty, applicability, CTA — and a colored left border carries the mode signal.
 
 export default function UrgencyPanel() {
   return (
     <div className="bg-slate-900 border-b border-slate-700">
-      <div className="max-w-5xl mx-auto px-4 py-3">
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-0 divide-y divide-slate-700 sm:divide-y-0">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {rows.map((row) => {
             const isDeadline = row.mode === "deadline";
             const accentColor = isDeadline ? "#D97706" : "#B91C1C";
+            const accentBg = isDeadline ? "rgba(217,119,6,0.10)" : "rgba(185,28,28,0.10)";
             const modePill = isDeadline ? "Deadline Approaching" : "Already Exposed";
 
             return (
               <a
                 key={row.law}
                 href={row.href}
-                className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 py-2.5 sm:py-2 sm:px-3 sm:flex-1 hover:bg-slate-800 transition-colors group"
-                style={{ borderLeft: `3px solid ${accentColor}`, paddingLeft: "0.75rem" }}
+                className="group flex flex-col gap-1.5 rounded-md p-3.5 bg-slate-800/40 hover:bg-slate-800 transition-colors"
+                style={{ borderLeft: `3px solid ${accentColor}` }}
               >
-                {/* Mode pill */}
                 <span
-                  className="text-xs font-bold uppercase tracking-wide shrink-0 px-1.5 py-0.5 rounded"
-                  style={{
-                    color: accentColor,
-                    backgroundColor: isDeadline ? "rgba(217,119,6,0.12)" : "rgba(185,28,28,0.12)",
-                  }}
+                  className="inline-flex self-start text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded"
+                  style={{ color: accentColor, backgroundColor: accentBg }}
                 >
                   {modePill}
                 </span>
 
-                {/* Law name */}
-                <span className="font-bold text-white text-sm group-hover:underline leading-tight">
+                <p className="font-bold text-white text-sm leading-tight group-hover:underline">
                   {row.law}
-                </span>
+                </p>
 
-                {/* Separator — hidden on mobile */}
-                <span className="hidden sm:inline text-slate-500 text-xs shrink-0" aria-hidden="true">
-                  ·
-                </span>
+                <p className="text-slate-300 text-xs leading-snug">
+                  {row.status}
+                </p>
 
-                {/* Status */}
-                <span className="text-slate-300 text-xs shrink-0">{row.status}</span>
+                <p className="text-slate-100 text-xs font-semibold leading-snug">
+                  {row.penalty}
+                </p>
 
-                {/* Separator — hidden on mobile */}
-                <span className="hidden sm:inline text-slate-500 text-xs shrink-0" aria-hidden="true">
-                  ·
-                </span>
+                <p className="text-slate-400 text-xs leading-snug">
+                  {row.applicability}
+                </p>
 
-                {/* Penalty */}
-                <span className="text-slate-200 text-xs font-medium shrink-0">{row.penalty}</span>
-
-                {/* Separator — hidden on mobile */}
-                <span className="hidden sm:inline text-slate-500 text-xs shrink-0" aria-hidden="true">
-                  ·
-                </span>
-
-                {/* Applicability */}
-                <span className="text-slate-400 text-xs leading-tight">{row.applicability}</span>
-
-                {/* CTA arrow */}
                 <span
-                  className="hidden sm:inline text-xs font-semibold shrink-0 ml-auto whitespace-nowrap"
+                  className="inline-flex self-start text-xs font-semibold mt-0.5 group-hover:underline"
                   style={{ color: accentColor }}
-                  aria-hidden="true"
                 >
-                  Get Documents →
+                  Get Documents &rarr;
                 </span>
               </a>
             );
