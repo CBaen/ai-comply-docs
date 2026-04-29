@@ -90,6 +90,7 @@ All major research directories are under `research/`. Most relevant to current/n
 | `src/app/robots.ts` | Dynamic robots.txt via Next.js App Router (auto-served at /robots.txt). NOT `public/robots.txt`. |
 | `src/app/sitemap.ts` | Dynamic sitemap with `new Date()` lastmod (fixed Lodestone 2026-04-24). |
 | `src/components/BreadcrumbSchema.tsx` | Shared BreadcrumbList JSON-LD helper. Uses children-pattern (JSON string as element children) — avoids the React-escaping security hook. |
+| `src/components/UrgencyPanel.tsx` | Homepage urgency strip replacing FeaturedInBar. 4 state rows (CO Deadline Approaching + IL/NYC/TX Already Exposed) with SHIP-BLOCKERS-corrected copy. Created Plumb 2026-04-27 from C4's redesign spec. |
 | `src/app/blog/[slug]/page.tsx` | Blog detail route. Author is Person (Cameron B. Paul). BreadcrumbList + TechArticle JSON-LD. |
 | `src/app/products/[slug]/page.tsx` | Product detail route. Product + BreadcrumbList JSON-LD. |
 | `public/llms.txt` | LLM-friendly site overview. Must stay in parity with regulations.ts product count. |
@@ -107,7 +108,9 @@ When updating any of these, the other(s) MUST be updated in the same session:
 | FAQPage schema `name` | `src/data/faq.ts` + any inline `"@type": "FAQPage"` in page.tsx files | Visible `<summary>` / `<span>` HTML must match EXACTLY (schema integrity) |
 | Product price | `src/data/regulations.ts` | Stripe dashboard (verify live) + Stripe `Price` object IDs in regulations.ts |
 | Blog post count | `content/blog/*.mdx` directory | `HANDOFF.md`, `sitemap.ts` (auto-generated) |
-| NLR credibility | `FeaturedInBar.tsx` NLR article URL | `src/app/page.tsx` Organization.sameAs, `src/components/Footer.tsx` |
+| NLR credibility | `FeaturedInBar.tsx` NLR article URL | 4 state landing pages render FeaturedInBar; `src/app/page.tsx` Organization.sameAs; `src/components/Footer.tsx`. **Homepage as of 2026-04-27 renders `<UrgencyPanel />` not `<FeaturedInBar />` — NLR signal carried by Footer + state pages, not homepage.** |
+| Homepage above-the-fold component | `src/app/page.tsx` renders `<UrgencyPanel />` | NOT FeaturedInBar. UrgencyPanel state-row copy must apply SHIP-BLOCKERS NYC + TX fixes (see `research/contest-buyer-redesign-2026-04-27/SHIP-BLOCKERS.md`). |
+| Buyer-redesign source-of-truth | `research/contest-buyer-redesign-2026-04-27/contestant-4/` | `WINNER.md` for pick rationale, `SHIP-BLOCKERS.md` for audit-corrected fixes (mandatory pre-build read), `INDEX.md` for phase tracker |
 | State landing pages | 4 pages in `src/app/{state}-ai-compliance/` | `src/app/ai-compliance-by-state/page.tsx` hub cards, `src/components/Nav.tsx` "By State" link |
 
 ---
