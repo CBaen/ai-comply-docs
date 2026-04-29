@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ProductCarousel from "@/components/ProductCarousel";
 import UrgencyPanel from "@/components/UrgencyPanel";
+import FeaturedInBar from "@/components/FeaturedInBar";
 import { regulations } from "@/data/regulations";
 
 export const metadata: Metadata = {
