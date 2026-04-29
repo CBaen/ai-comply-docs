@@ -178,6 +178,7 @@ export default function Home() {
       <WebSiteStructuredData />
       <FAQStructuredData readyCount={readyCount} />
       <Nav />
+      <FeaturedInBar />
       <UrgencyPanel />
       <main id="main-content">
         {/* Hero Section with Product Carousel */}

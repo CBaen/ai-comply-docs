@@ -108,8 +108,8 @@ When updating any of these, the other(s) MUST be updated in the same session:
 | FAQPage schema `name` | `src/data/faq.ts` + any inline `"@type": "FAQPage"` in page.tsx files | Visible `<summary>` / `<span>` HTML must match EXACTLY (schema integrity) |
 | Product price | `src/data/regulations.ts` | Stripe dashboard (verify live) + Stripe `Price` object IDs in regulations.ts |
 | Blog post count | `content/blog/*.mdx` directory | `HANDOFF.md`, `sitemap.ts` (auto-generated) |
-| NLR credibility | `FeaturedInBar.tsx` NLR article URL | 4 state landing pages render FeaturedInBar; `src/app/page.tsx` Organization.sameAs; `src/components/Footer.tsx`. **Homepage as of 2026-04-27 renders `<UrgencyPanel />` not `<FeaturedInBar />` — NLR signal carried by Footer + state pages, not homepage.** |
-| Homepage above-the-fold component | `src/app/page.tsx` renders `<UrgencyPanel />` | NOT FeaturedInBar. UrgencyPanel state-row copy must apply SHIP-BLOCKERS NYC + TX fixes (see `research/contest-buyer-redesign-2026-04-27/SHIP-BLOCKERS.md`). |
+| NLR credibility | `FeaturedInBar.tsx` NLR article URL | Homepage (between Nav and UrgencyPanel, since 2026-04-29 GL pushback); 4 state landing pages render FeaturedInBar; `src/app/page.tsx` Organization.sameAs; `src/components/Footer.tsx`. |
+| Homepage above-the-fold stack | `src/app/page.tsx` | Order: `<Nav />` → `<FeaturedInBar />` (NLR credibility, slate-50 strip) → `<UrgencyPanel />` (4 state cards in responsive grid, slate-900) → `<header className="hero-bg">`. UrgencyPanel state-row copy applies SHIP-BLOCKERS NYC + TX fixes (see `research/contest-buyer-redesign-2026-04-27/SHIP-BLOCKERS.md`). |
 | Buyer-redesign source-of-truth | `research/contest-buyer-redesign-2026-04-27/contestant-4/` | `WINNER.md` for pick rationale, `SHIP-BLOCKERS.md` for audit-corrected fixes (mandatory pre-build read), `INDEX.md` for phase tracker |
 | State landing pages | 4 pages in `src/app/{state}-ai-compliance/` | `src/app/ai-compliance-by-state/page.tsx` hub cards, `src/components/Nav.tsx` "By State" link |
 
