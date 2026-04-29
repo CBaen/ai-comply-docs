@@ -20,6 +20,8 @@ import DocumentSamplePreview from "@/components/DocumentSamplePreview";
 import QuickPurchaseButton from "@/components/QuickPurchaseButton";
 import SoftScrollButton from "@/components/SoftScrollButton";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import AlsoExposedStrip from "@/components/AlsoExposedStrip";
+import DaysRemaining from "@/components/DaysRemaining";
 
 export async function generateStaticParams() {
   // Only generate pages for ready products — non-ready products
