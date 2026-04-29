@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     canonical: "https://aicompliancedocuments.com",
   },
   openGraph: {
-    title: "AI Compliance Documents — Templates for Every State AI Law",
+    title: "AI Compliance Documents — Colorado, Illinois, NYC & Texas AI Law Templates",
     description:
-      "State AI regulations are here. Generate compliance documentation for a fraction of legal fees.",
+      "Colorado SB 24-205 deadline: June 30, 2026. Illinois HB3773 is in effect. Get the documents your state's AI law requires. Built from statute. $49–$697. Instant download.",
     url: "https://aicompliancedocuments.com",
     type: "website",
   },
