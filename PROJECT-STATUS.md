@@ -8,11 +8,11 @@
 
 ## Current State
 
-**What works (verified live on production through 2026-04-27):**
-- Homepage with NEW redesign: visible H1 ("Your State Has an AI Law. Here Are the Documents."), 4-state UrgencyPanel above the fold (CO Deadline Approaching + IL/NYC/TX Already Exposed), updated meta title + description (deadline-anchored, price-disclosed). Homepage now reads as a compliance store, not a research resource. Verified live 2026-04-27.
+**What works (verified live on production through 2026-04-29):**
+- Homepage above-the-fold stack (current): `<Nav />` → `<FeaturedInBar />` (NLR credibility, slate-50 strip, restored 2026-04-29 after GL pushback on Plumb's removal) → `<UrgencyPanel />` (4 state cards in responsive grid: 1 col mobile / 2 col tablet / 4 col desktop, slate-900, layout cleaned up 2026-04-29) → visible H1 ("Your State Has an AI Law. Here Are the Documents."). Meta title + description deadline-anchored + price-disclosed. Reads as a compliance store, not a research resource.
 - /about, /blog, 26 `/blog/[slug]` posts (all with question-form H2s + standalone answer paragraphs as of Lodestone session)
-- /products listing + 57 `/products/[slug]` detail pages — **Colorado product page** has redesigned title ("Colorado SB 24-205 Compliance Documents — June 30, 2026 Deadline"), redesigned H1 ("Colorado SB 24-205. 8 Documents. June 30, 2026."), and penalty section moved BEFORE document preview with SHIP-BLOCKERS-corrected copy. Other 56 product pages still on original copy until Steps 4–6 ship.
-- 4 state landing pages (/colorado-ai-compliance, /illinois-ai-compliance, /texas-ai-compliance, /california-ai-compliance) + hub at /ai-compliance-by-state — these still render `<FeaturedInBar />` (homepage was migrated to `<UrgencyPanel />`; state pages were not).
+- /products listing + 57 `/products/[slug]` detail pages — **Colorado product page** has Steps 1–5 of C4 build order all live: deadline banner above hero, redesigned title + H1 + deck (status-conditional), penalty section moved BEFORE document preview with SHIP-BLOCKERS-corrected copy, AlsoExposedStrip (3 in-effect cross-state cards), exposure-summary close paragraph, sidebar deadline label + days-remaining countdown. All wired so the Step 6 status flip (`effective-soon` → `in-effect`, scheduled for 2026-06-30) propagates automatically. Other 56 product pages still on original copy.
+- 4 state landing pages (/colorado-ai-compliance, /illinois-ai-compliance, /texas-ai-compliance, /california-ai-compliance) + hub at /ai-compliance-by-state — render `<FeaturedInBar />` (same component now also renders on homepage as of 2026-04-29).
 - /do-i-need-ai-compliance quiz, /faq, /contact, /privacy, /terms
 - Checkout flow (verified working 2026-03-15), live-mode Stripe
 - Account center with customer purchases
@@ -20,7 +20,7 @@
 - Schema: Organization, WebSite+SearchAction, FAQPage, TechArticle (Person author), Product, Dataset, BreadcrumbList
 - GSC verified property + sitemap submitted; Bing Webmaster Tools registered
 - GA4 analytics + server-side purchase tracking via Measurement Protocol
-- NLR credibility bar on 4 state landing pages + footer (no longer on homepage as of Plumb's redesign)
+- NLR credibility bar on homepage (restored 2026-04-29 after GL pushback) + 4 state landing pages + footer
 
 **What doesn't work yet:**
 - Illinois + Texas state landing pages still "Discovered, not indexed" in GSC — sitemap unfreeze + nav link + homepage body links shipped this session; awaiting Google recrawl (Out-of-hands timing)
